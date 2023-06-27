@@ -2,15 +2,23 @@
   "extends": "./tsconfig.json",
 
   "compilerOptions": {
-    "outDir": "../../dist/out-tsc"
+    "outDir": "../../dist/out-tsc",
+    "baseUrl": "./",
+    "jsxImportSource": "preact",
+    "skipLibCheck": true,
+    "paths": {
+      "@/*": ["./src/*"],
+      "$/modules/*": ["../../libs/modules/src/*"],
+      "react": ["../../node_modules/preact/compat"],
+      "react-dom": ["../../node_modules/preact/compat"],
+    }
   },
-
-  "include": ["src/**/*"],
   "exclude": [
     "**/*.spec.ts",
     "**/*_spec.ts",
     "**/*.spec.tsx",
     "**/*_spec.tsx",
     "public/*"
-  ]
+  ],
+  "include": ["**/*.ts", "**/*.tsx"]
 }

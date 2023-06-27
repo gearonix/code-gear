@@ -10,29 +10,21 @@ export default defineConfig({
   server: {
     port: 3000,
     host: 'localhost',
+    fs: {
+      strict: false
+    }
   },
 
   preview: {
     port: 4200,
     host: 'localhost',
   },
-
   plugins: [
     preact(),
     viteTsConfigPaths({
       root: '../../',
     }),
   ],
-
-  // Uncomment this if you are using workers.
-  // worker: {
-  //  plugins: [
-  //    viteTsConfigPaths({
-  //      root: '../../',
-  //    }),
-  //  ],
-  // },
-
   test: {
     globals: true,
     cache: {

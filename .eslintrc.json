@@ -2,7 +2,10 @@
   "root": true,
   "ignorePatterns": ["**/*"],
   "plugins": ["@nx"],
+
+  // My custom config
   "extends": ["gearonix"],
+
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
