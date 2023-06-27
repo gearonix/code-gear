@@ -3,10 +3,11 @@ import {
 } from "react-router-dom"
 
 import { Main } from '@/pages/Main'
+import { RoutePaths } from '@/shared/paths'
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: RoutePaths.MAIN,
     element: <Main/>
   }
 ])
