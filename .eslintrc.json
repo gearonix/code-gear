@@ -35,5 +35,8 @@
       "extends": ["plugin:@nx/javascript"],
       "rules": {}
     }
-  ]
+  ],
+  "rules": {
+    "react/react-in-jsx-scope": "off"
+  }
 }

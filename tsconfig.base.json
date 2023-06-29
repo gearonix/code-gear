@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@code-gear/client-shared": ["libs/client-shared/src/index.ts"]
+      "@code-gear/client-shared": ["libs/client-shared/src/index.ts"],
+      "@code-gear/editor": ["libs/editor/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
