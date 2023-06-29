@@ -1,15 +1,17 @@
 import MonacoEditor from '@monaco-editor/react'
 
-import Tabs from './components/Tabs/ui/Tabs'
+import Tabs from '../components/Tabs/ui/Tabs'
+
+import { EditorStoreProvider } from './providers/EditorStore'
 import { useThemeLoader } from './hooks'
 
 
 export const Editor = () => {
   useThemeLoader()
-  const onChange = (value : unknown) => {
+  const onChange = (value : string) => {
     console.log(value)
   }
-  return <>
+  return <EditorStoreProvider>
     <Tabs/>
     <MonacoEditor
       height="90vh"
@@ -17,7 +19,7 @@ export const Editor = () => {
       defaultValue="// some comment"
       theme={'Nord'} onChange={onChange}
     />
-  </>
+  </EditorStoreProvider>
 }
 
 export default Editor

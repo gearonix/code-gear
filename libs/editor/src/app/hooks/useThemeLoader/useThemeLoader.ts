@@ -1,6 +1,6 @@
 import { useEffect } from 'preact/compat'
 
-import { assertThemeObject } from '@/types'
+import { assertThemeObject } from './assertThemeObject'
 import { useMonaco } from '@monaco-editor/react'
 
 import { nodeModulesPath ,THEMES } from './consts'

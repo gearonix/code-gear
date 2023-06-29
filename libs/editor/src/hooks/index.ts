@@ -1,1 +1,1 @@
-export { useThemeLoader } from './useThemeLoader/useThemeLoader'
+export { useActions,useStore } from './useStore'

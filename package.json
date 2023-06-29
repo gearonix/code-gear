@@ -84,6 +84,8 @@
     "@nestjs/platform-express": "^10.0.2",
     "antd": "^5.6.3",
     "axios": "^1.0.0",
+    "mobx": "^6.9.0",
+    "mobx-react-lite": "^3.4.3",
     "monaco-themes": "^0.4.4",
     "preact-compat": "^3.19.0",
     "react": "18.2.0",
