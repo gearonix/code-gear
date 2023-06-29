@@ -1,7 +1,7 @@
 {
-  "name": "modules",
+  "name": "client-shared",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/modules/src",
+  "sourceRoot": "libs/client-shared/src",
   "projectType": "library",
   "tags": [],
   "targets": {
@@ -9,7 +9,7 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/modules/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["libs/client-shared/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "build": {
@@ -17,7 +17,7 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/libs/modules"
+        "outputPath": "dist/libs/client-shared"
       },
       "configurations": {
         "development": {
@@ -30,10 +30,10 @@
     },
     "test": {
       "executor": "@nx/vite:test",
-      "outputs": ["coverage/libs/modules"],
+      "outputs": ["coverage/libs/client-shared"],
       "options": {
         "passWithNoTests": true,
-        "reportsDirectory": "../../coverage/libs/modules"
+        "reportsDirectory": "../../coverage/libs/client-shared"
       }
     }
   }
