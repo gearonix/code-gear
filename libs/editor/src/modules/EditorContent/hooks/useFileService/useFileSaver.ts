@@ -1,6 +1,6 @@
 import { FileData } from '../../types'
 
-import { filePickerOptions } from './consts'
+import { filePickerOptions, NotSupportedError } from './consts'
 
 import { isFunction, Undefinable } from '$/shared'
 
@@ -20,8 +20,7 @@ export const useFileHandler = () => {
         fileHandle: fileHandle
       }
     }
-    else {
-      console.warn('Your browser does not support saving and opening files.')
-    }
+
+    console.warn(NotSupportedError)
   }
 }
