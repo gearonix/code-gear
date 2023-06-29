@@ -1,2 +1,2 @@
 export { default as Editor } from './Editor'
-export { EditorStore, EditorStoreContext } from './providers/EditorStore'
+export { EditorGetters,EditorStore, EditorStoreContext } from './providers/EditorStore'

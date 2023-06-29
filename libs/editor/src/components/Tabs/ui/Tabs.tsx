@@ -32,7 +32,7 @@ const Tabs = observer(() => {
         onChange={onChange}
         activeKey={state.activeKey}
         onEdit={onEdit}
-        items={toJS(state.tabs)}
+        items={toJS(state.content)}
       />
 })
 

@@ -10,7 +10,8 @@
       "@/types": ["src/types/index.ts"],
       "@/app": ["src/app/index.ts"],
       "@/hooks": ["src/hooks/index.ts"],
-      "@/components/*": ["src/components/*"]
+      "@/components/*": ["src/components/*"],
+      "@/modules/*" : ["src/modules/*"]
     }
   },
   "files": [

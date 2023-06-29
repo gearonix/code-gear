@@ -1,1 +1,1 @@
-export { useActions,useStore } from './useStore'
+export { useActions, useGetters,useStore } from './useStore'
