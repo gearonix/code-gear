@@ -1,7 +1,7 @@
 import { makeAutoObservable } from 'mobx'
 
 import { EditorStore } from '@/app'
-import { Tab } from '@/components/Tabs'
+import { ContentTab } from '@/components/Tabs'
 
 
 class EditorGetters{
@@ -12,10 +12,10 @@ class EditorGetters{
     makeAutoObservable(this)
   }
 
-  getActiveTab(): Tab {
+  getActiveTab(key = this.state.activeKey): ContentTab {
     return this.state.content.find((tab) => {
-      return tab.key === this.state.activeKey
-    }) as Tab
+      return tab.key === key
+    }) as ContentTab
   }
 
   getActiveTabText(): string {

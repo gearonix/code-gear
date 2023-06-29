@@ -14,4 +14,4 @@ export const THEMES = [
 
 
 // Needed for dynamic import of code-editor themes
-export const nodeModulesPath = './../../../../../../node_modules'
+export const nodeModulesPath = './../../../../../../../node_modules'

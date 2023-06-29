@@ -1,6 +1,6 @@
 import { makeAutoObservable } from 'mobx'
 
-import { Tab, TabsActions } from '@/components/Tabs'
+import { ContentTab, TabsActions } from '@/components/Tabs'
 import { EditorContentActions } from '@/modules/EditorContent';
 
 import EditorGetters from './editor.getters'
@@ -8,7 +8,7 @@ import EditorGetters from './editor.getters'
 
 class EditorStore{
   activeKey = ''
-  content: Tab[] = []
+  content: ContentTab[] = []
   getters: EditorGetters
   actions
 

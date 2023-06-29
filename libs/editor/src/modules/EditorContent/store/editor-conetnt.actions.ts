@@ -1,6 +1,7 @@
 import { makeAutoObservable } from 'mobx'
 
 import { EditorGetters,EditorStore } from '@/app'
+import { Undefinable } from '$/shared';
 
 class EditorContentActions {
   private state: EditorStore
@@ -12,8 +13,8 @@ class EditorContentActions {
     this.getters = root.getters
   }
 
-  saveContent(content: string) {
-    const activeTab = this.getters.getActiveTab()
+  saveContent(content: string, key?: string) {
+    const activeTab = this.getters.getActiveTab(key)
     activeTab.text = content
   }
 
