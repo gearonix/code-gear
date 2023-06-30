@@ -1,26 +1,23 @@
-import { FileData } from '../../types'
+import { FileHandle } from '@/components/Tabs/types'
+import EditorErrors from '@/shared/errors'
 
-import { filePickerOptions, NotSupportedError } from './consts'
+import { AnyObject, isFunction } from '$/shared'
 
-import { isFunction, Undefinable } from '$/shared'
 
-export const useFileHandler = () => {
-  return async (): Promise<Undefinable<FileData>> => {
-    if ('showOpenFilePicker' in window &&
-      isFunction(window.showOpenFilePicker)
-    ) {
-      // Typescript does not support File System Access API
-      const [fileHandle]: any = await window.showOpenFilePicker(filePickerOptions)
-      const fileData = await fileHandle.getFile()
-      const fileContent: string = await fileData.text()
-      return {
-        name: fileData.name,
-        type: fileData.type,
-        content: fileContent,
-        fileHandle: fileHandle
+export const useFileSaver = () => {
+  return async (fileHandle: FileHandle, text : string) => {
+      if ( 'showSaveFilePicker' in window &&
+        isFunction<AnyObject>(window.showSaveFilePicker)) {
+
+        const handle = fileHandle ?? await window.showSaveFilePicker()
+        if (isFunction(handle.createWritable)){
+          const stream: any = await handle.createWritable()
+          await stream.write(text)
+          await stream.close()
+        }
+        return
       }
-    }
 
-    console.warn(NotSupportedError)
-  }
+      console.warn(EditorErrors.NotSupportedByBrowser())
+    }
 }

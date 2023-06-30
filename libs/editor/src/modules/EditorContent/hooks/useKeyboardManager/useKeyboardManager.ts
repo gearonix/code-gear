@@ -1,9 +1,9 @@
 import { useCallback, useEffect } from 'react'
 
-import { useActions, useGetters, useStore } from '@/hooks'
+import { useActions, useGetters, useStore } from '@/shared/hooks'
 
-import { isFileData } from './../../types'
-import { useAltNavigation, useFileService } from './..'
+import { isFileData } from '../../types'
+import { useAltNavigation, useFileService } from '..'
 
 import { useAltKeyDown } from '$/shared'
 

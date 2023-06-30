@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-import { useActions, useGetters, useStore } from '@/hooks'
+import { useActions, useGetters, useStore } from '@/shared/hooks'
 
 import { useAltKeyDown } from '$/shared'
 

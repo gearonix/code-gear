@@ -2,7 +2,7 @@ import { Tabs as AntdTabs } from 'antd'
 import { toJS } from 'mobx'
 import { observer } from 'mobx-react-lite'
 
-import { useActions,useStore } from '@/hooks'
+import { useActions,useStore } from '@/shared/hooks'
 
 import { TargetKey } from '$/shared'
 

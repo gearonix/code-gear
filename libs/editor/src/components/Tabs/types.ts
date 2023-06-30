@@ -1,3 +1,5 @@
+import { LanguagesValues } from '@/shared/consts'
+
 import { AnyObject, Nullable } from '$/shared'
 
 // Typescript does not support File System Access API
@@ -9,4 +11,5 @@ export interface ContentTab {
   num: number
   text: string
   fileHandle: FileHandle
+  lang: LanguagesValues
 }

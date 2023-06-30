@@ -9,7 +9,7 @@
       "$/shared": ["../client-shared/src/index.ts"],
       "@/types": ["src/types/index.ts"],
       "@/app": ["src/app/index.ts"],
-      "@/hooks": ["src/hooks/index.ts"],
+      "@/shared/*": ["src/shared/*"],
       "@/components/*": ["src/components/*"],
       "@/modules/*" : ["src/modules/*"]
     }

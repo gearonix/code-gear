@@ -1,5 +1,5 @@
-import { useFileSaver } from './useFileHandler'
-import { useFileHandler } from './useFileSaver'
+import { useFileHandler } from './useFileHandler'
+import { useFileSaver } from './useFileSaver'
 
 export const useFileService = () => {
   const open = useFileHandler()

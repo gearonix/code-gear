@@ -2,10 +2,11 @@ import { makeAutoObservable } from 'mobx'
 
 import { EditorStore } from '@/app'
 import { ContentTab } from '@/components/Tabs'
+import { LanguagesValues } from '@/shared/consts';
 
 
 class EditorGetters{
-  state: EditorStore
+  private state: EditorStore
 
   constructor(editorState: EditorStore) {
     this.state = editorState
@@ -26,6 +27,10 @@ class EditorGetters{
     return this.state.content.findIndex((tab) => {
       return tab.key === key
     })
+  }
+
+  getActiveLanguage(): LanguagesValues {
+    return this.getActiveTab()?.lang
   }
 }
 

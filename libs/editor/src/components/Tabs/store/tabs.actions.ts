@@ -43,6 +43,7 @@ class TabsActions {
       key: generateId(),
       num: lastNumber + 1,
       text: fileData?.content ?? '',
+      lang: fileData?.language ?? 'text',
       fileHandle: fileData?.fileHandle ?? null
     }
   }

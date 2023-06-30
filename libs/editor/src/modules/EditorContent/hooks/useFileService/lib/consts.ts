@@ -9,5 +9,3 @@ export const filePickerOptions = {
     }
   ]
 } as const
-
-export const NotSupportedError = 'Your browser does not support saving and opening files.'

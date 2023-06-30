@@ -2,22 +2,24 @@ import { useEffect } from 'react'
 import { toJS } from 'mobx'
 import { observer } from 'mobx-react-lite'
 
-import { useActions, useGetters, useStore } from '@/hooks'
+import { useActions, useGetters, useStore } from '@/shared/hooks'
 import MonacoEditor, { useMonaco } from '@monaco-editor/react'
 
-import { useKeyboardManager,useLanguageChanger,useThemeLoader } from './../hooks'
+import { useKeyboardManager } from '../hooks'
 
 import { isString } from '$/shared'
 
 
 export const EditorContent = observer(() => {
-  useThemeLoader()
   const { editor } = useActions()
   const getters = useGetters()
-  const { activeKey } = useStore()
+  const { theme } = useStore()
+
   const textContent = getters.getActiveTabText()
+  const language = getters.getActiveLanguage()
+
   useKeyboardManager()
-  const changeLang = useLanguageChanger()
+  const monaco = useMonaco()
 
   const onChange = (value: unknown) => {
     if (isString(value)){
@@ -26,13 +28,14 @@ export const EditorContent = observer(() => {
   }
 
   useEffect(() => {
-    changeLang()
-  }, [activeKey])
+    monaco?.editor.setTheme(theme)
+  }, [theme])
 
   return <MonacoEditor
       height="90vh"
-      theme={'Nord'}
+      theme={'vs-dark'}
       onChange={onChange}
+      language={language}
       value={toJS(textContent)}
     />
 })
