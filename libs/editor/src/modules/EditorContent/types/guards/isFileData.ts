@@ -1,8 +1,8 @@
-import { FileData } from './../types'
+import { FileHandlerData } from './../types'
 
 import { isObject } from '$/shared'
 
-export const isFileData = (value : unknown): value is FileData => {
+export const isFileData = (value : unknown): value is FileHandlerData => {
   if (!isObject(value)){
     return false
   }

@@ -2,7 +2,7 @@ import { Select } from 'antd'
 import { observer } from 'mobx-react-lite'
 
 import { LanguagesValues } from '@/shared/consts'
-import { useActions, useGetters, useStore } from '@/shared/hooks'
+import { useActions, useGetters } from '@/shared/hooks'
 
 import { useMappedLanguages } from '../hooks'
 

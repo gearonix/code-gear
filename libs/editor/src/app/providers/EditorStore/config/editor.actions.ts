@@ -8,12 +8,11 @@ import { LanguagesValues, Themes } from '@/shared/consts'
 import EditorStore from './editor.store'
 
 
-
 class EditorActions {
   private state: EditorStore
-  private getters: EditorGetters
-  tabs: TabsActions
-  editor: EditorContentActions
+  private readonly getters: EditorGetters
+  readonly tabs: TabsActions
+  readonly editor: EditorContentActions
 
   constructor(root: EditorStore) {
     makeAutoObservable(this)
@@ -30,6 +29,12 @@ class EditorActions {
   changeLanguage(newLanguage: LanguagesValues){
     const activeTab = this.getters.getActiveTab()
     activeTab.lang = newLanguage
+  }
+
+  changeFileHandle(fileHandle: FileSystemFileHandle){
+    const activeTab = this.getters.getActiveTab()
+    console.log('CHANGE_FILE_HANDLE')
+    activeTab.setFileHandle(fileHandle)
   }
 }
 

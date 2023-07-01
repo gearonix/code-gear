@@ -1,1 +1,1 @@
-export { Display, Ternary } from './common'
+export { Display } from './common'

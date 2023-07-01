@@ -1,21 +1,17 @@
-import { FileHandle } from '@/components/Tabs/types'
 import EditorErrors from '@/shared/errors'
 
-import { AnyObject, isFunction } from '$/shared'
+import { Nullable } from '$/shared'
 
 
 export const useFileSaver = () => {
-  return async (fileHandle: FileHandle, text : string) => {
-      if ( 'showSaveFilePicker' in window &&
-        isFunction<AnyObject>(window.showSaveFilePicker)) {
-
+  return async (fileHandle: Nullable<FileSystemFileHandle>, textContent : string) => {
+      if ('showSaveFilePicker' in window) {
         const handle = fileHandle ?? await window.showSaveFilePicker()
-        if (isFunction(handle.createWritable)){
-          const stream: any = await handle.createWritable()
-          await stream.write(text)
-          await stream.close()
-        }
-        return
+        const stream = await handle.createWritable()
+        await stream.write(textContent)
+        await stream.close()
+
+        return handle
       }
 
       console.warn(EditorErrors.NotSupportedByBrowser())

@@ -13,7 +13,7 @@ import { isString } from '$/shared'
 export const EditorContent = observer(() => {
   const { editor } = useActions()
   const getters = useGetters()
-  const { theme } = useStore()
+  const { theme, content } = useStore()
 
   const textContent = getters.getActiveTabText()
   const language = getters.getActiveLanguage()
@@ -26,6 +26,7 @@ export const EditorContent = observer(() => {
       editor.saveContent(value)
     }
   }
+  console.log(toJS(content))
 
   useEffect(() => {
     monaco?.editor.setTheme(theme)

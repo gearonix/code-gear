@@ -1,6 +1,6 @@
 import { useCallback, useEffect } from 'react'
 
-import { useActions, useGetters, useStore } from '@/shared/hooks'
+import { useActions, useGetters } from '@/shared/hooks'
 
 import { isFileData } from '../../types'
 import { useAltNavigation, useFileService } from '..'
@@ -8,8 +8,7 @@ import { useAltNavigation, useFileService } from '..'
 import { useAltKeyDown } from '$/shared'
 
 export const useKeyboardManager = () => {
-  const { tabs } = useActions()
-  const { activeKey } = useStore()
+  const { tabs, changeFileHandle } = useActions()
   const getters = useGetters()
   const keyboard = useAltKeyDown()
   const fileService = useFileService()
@@ -23,11 +22,24 @@ export const useKeyboardManager = () => {
     }
   }, [])
 
-  const saveFile = useCallback(async () => {
-    const { fileHandle, text } = getters.getActiveTab()
-    fileService.save(fileHandle, text)
+  const saveFile = async () => {
+    const activeTab = getters.getActiveTab()
+    const oldFileHandle = activeTab.getFileHandle()
+    const textContent = activeTab.getContent()
 
-  }, [activeKey])
+    if (!activeTab.wasChanged){
+      return
+    }
+
+    const fileHandle = await fileService.save(oldFileHandle, textContent)
+
+    if (!fileHandle) {
+      return
+    }
+
+    changeFileHandle(fileHandle)
+
+  }
 
   useEffect(() => {
     keyboard.on({

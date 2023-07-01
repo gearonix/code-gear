@@ -1,10 +1,9 @@
-import { FileHandle } from '@/components/Tabs/types'
 import { LanguagesValues } from '@/shared/consts'
 
-export interface FileData{
+export interface FileHandlerData {
   name: string
   type: string
   content: string
-  fileHandle: FileHandle
+  fileHandle: FileSystemFileHandle
   language: LanguagesValues
 }

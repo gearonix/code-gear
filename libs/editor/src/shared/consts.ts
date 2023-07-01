@@ -31,3 +31,6 @@ export const languages = {
 export type LanguagesValues = ValueOf<typeof languages>
 
 export type LanguagesKeys = keyof typeof languages
+
+
+export const maxTabsLength = 9 as const

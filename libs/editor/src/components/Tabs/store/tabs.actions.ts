@@ -1,10 +1,8 @@
 import { makeAutoObservable } from 'mobx'
-import { v4 as generateId } from 'uuid'
 
 import { EditorStore } from '@/app'
-import { FileData } from '@/modules/EditorContent/types'
-
-import { ContentTab } from '../types'
+import { ContentTab, isMaxTabsLength } from '@/components/Tabs/lib'
+import { FileHandlerData } from '@/modules/EditorContent/types'
 
 class TabsActions {
   private state: EditorStore
@@ -14,14 +12,18 @@ class TabsActions {
     this.state = root
   }
 
-  createTab(fileHandle?: FileData): ContentTab {
-    const lastNumber = this.state.content.at(-1)?.num ?? -1
-    const newTab = this.generateNewTab(lastNumber, fileHandle)
+  createTab(fileData?: FileHandlerData): void {
+    const content = this.state.content
 
-    this.state.activeKey = newTab.key
+    if (isMaxTabsLength(content)) {
+      return
+    }
+    const lastNumber = content.at(-1)?.idx
+
+    const newTab = new ContentTab(lastNumber, fileData)
+
+    this.state.activeKey = newTab.getKeyId()
     this.state.content.push(newTab)
-
-    return newTab
   }
 
   removeTab(targetKey?: string): void {
@@ -29,23 +31,14 @@ class TabsActions {
     const lastTab: ContentTab = this.state.content[targetIdx - 1]
 
     this.state.content.splice(targetIdx, 1)
-    this.state.activeKey = lastTab.key
+
+    if (targetKey === this.state.activeKey) {
+      this.state.activeKey = lastTab.getKeyId()
+    }
   }
 
   changeActiveTab(targetKey : string): void {
     this.state.activeKey = targetKey
-  }
-
-  private generateNewTab(lastNumber: number,
-     fileData?: FileData): ContentTab {
-    return {
-      label: fileData?.name ?? 'Untitled',
-      key: generateId(),
-      num: lastNumber + 1,
-      text: fileData?.content ?? '',
-      lang: fileData?.language ?? 'text',
-      fileHandle: fileData?.fileHandle ?? null
-    }
   }
 
 }

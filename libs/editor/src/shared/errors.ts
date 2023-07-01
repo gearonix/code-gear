@@ -2,7 +2,7 @@ import { Themes } from '@/shared/consts'
 
 import { AnyFunction } from '$/shared'
 
-const EditorErrors: Record<string, AnyFunction> = {
+const EditorErrors: Record<string, AnyFunction<string>> = {
   ThemeUpload(theme: Themes){
     return `Unable to upload theme - ${theme}.json`
   },
