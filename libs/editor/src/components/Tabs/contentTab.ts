@@ -30,7 +30,7 @@ export class ContentTab {
 
   public setFileHandle(fileHandle: FileSystemFileHandle){
     this._fileHandle = fileHandle
-    console.log('FILE_HANDLE')
+    this.wasChanged = false
     this.setLabel(fileHandle.name)
   }
 
@@ -47,16 +47,27 @@ export class ContentTab {
   }
 
   private updateLabel() {
+    // TODO: refactor
+
+    if (this._fileHandle){
+      if (!this.wasChanged){
+        this.setLabel(`${this.getLabel()}  •`)
+      }
+      this.wasChanged = true
+
+      return
+    }
     const firstLine = this._content.split('\n')[0].slice(0, 10)
     const cropped = firstLine.replace(' ', '').replace('\n', '')
     const newLabel = `${cropped.length > 1 ? firstLine : 'Untitled'} •`
+    this.wasChanged = true
 
     this.setLabel(newLabel)
   }
 
   public setTabContent(content: string){
     this._content = content
-    this.wasChanged = true
+
     this.updateLabel()
   }
 

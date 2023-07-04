@@ -2,18 +2,18 @@ import { Select } from 'antd'
 import { observer } from 'mobx-react-lite'
 
 import { LanguagesValues } from '@/shared/consts'
-import { useActions, useGetters } from '@/shared/hooks'
+import {  useGetters } from '@/shared/hooks'
 
 import { useMappedLanguages } from '../hooks'
 
 const LanguageSwitcher = observer(() => {
-  const actions = useActions()
   const languages = useMappedLanguages()
   const getters = useGetters()
   const language = getters.getActiveLanguage()
+  const activeTab = getters.getActiveTab()
 
-  const handleChange = (language: LanguagesValues) => {
-    actions.changeLanguage(language)
+  const handleChange = (newLanguage: LanguagesValues) => {
+    activeTab.lang = newLanguage
   }
 
   return <Select

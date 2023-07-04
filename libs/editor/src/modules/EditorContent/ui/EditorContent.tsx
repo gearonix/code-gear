@@ -26,7 +26,6 @@ export const EditorContent = observer(() => {
       editor.saveContent(value)
     }
   }
-  console.log(toJS(content))
 
   useEffect(() => {
     monaco?.editor.setTheme(theme)

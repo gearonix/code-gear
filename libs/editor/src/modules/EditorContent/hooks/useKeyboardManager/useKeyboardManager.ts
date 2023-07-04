@@ -1,5 +1,6 @@
 import { useCallback, useEffect } from 'react'
 
+import { getLanguageFromName } from '@/modules/EditorContent/hooks/useFileService/lib/getLanguageFromName'
 import { useActions, useGetters } from '@/shared/hooks'
 
 import { isFileData } from '../../types'
@@ -8,7 +9,7 @@ import { useAltNavigation, useFileService } from '..'
 import { useAltKeyDown } from '$/shared'
 
 export const useKeyboardManager = () => {
-  const { tabs, changeFileHandle } = useActions()
+  const actions = useActions()
   const getters = useGetters()
   const keyboard = useAltKeyDown()
   const fileService = useFileService()
@@ -18,7 +19,7 @@ export const useKeyboardManager = () => {
     const fileData = await fileService.open()
 
     if (isFileData(fileData)) {
-      tabs.createTab(fileData)
+      actions.tabs.createTab(fileData)
     }
   }, [])
 
@@ -37,16 +38,16 @@ export const useKeyboardManager = () => {
       return
     }
 
-    changeFileHandle(fileHandle)
-
+    activeTab.setFileHandle(fileHandle)
+    activeTab.lang = getLanguageFromName(fileHandle.name)
   }
 
   useEffect(() => {
     keyboard.on({
       'O': openFile,
       'S': saveFile,
-      'N': () => {tabs.createTab()},
-      'T': () => {tabs.removeTab()}
+      'N': () => {actions.tabs.createTab()},
+      'T': () => {actions.tabs.removeTab()}
     })
 
     return () => {
