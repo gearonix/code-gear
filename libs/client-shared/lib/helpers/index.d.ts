@@ -1,0 +1,1 @@
+export { LocalStorageClient } from './localStorage';
