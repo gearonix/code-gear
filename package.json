@@ -5,6 +5,7 @@
   "scripts": {
     "serve": " nx run-many --targets=serve --all",
     "build": " nx run-many --targets=build --all",
+    "lint": " nx run-many --targets=lint --all",
     "dep-graph": "nx dep-graph",
     "client:serve": "nx run client:serve",
     "client:build": "nx run client:build",
