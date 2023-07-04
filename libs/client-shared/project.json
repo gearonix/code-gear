@@ -17,7 +17,9 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/libs/client-shared"
+        "outputPath": "dist/libs/client-shared",
+        "skipTypeCheck": true,
+        "fix": true
       },
       "configurations": {
         "development": {

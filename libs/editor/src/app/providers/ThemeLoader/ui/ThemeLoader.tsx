@@ -1,6 +1,6 @@
 import { useThemeLoader } from './../hooks'
 
-import { Display, WithReactChildren } from '$/shared'
+import { Display, WithReactChildren } from '$/client-shared'
 
 const ThemeLoader = ({ children }: WithReactChildren) => {
   const isLoaded = useThemeLoader()

@@ -7,9 +7,12 @@ import { EditorContent } from '@/modules/EditorContent'
 import { EditorStoreProvider } from './providers/EditorStore'
 import { ThemeLoader } from './providers/ThemeLoader'
 
+import { Page } from '$/client-shared'
+
 
 export const Editor = () => {
-  return <EditorStoreProvider>
+  return <Page>
+    <EditorStoreProvider>
     <ThemeLoader>
       <Tabs/>
       <ThemeSwitcher/>
@@ -17,6 +20,7 @@ export const Editor = () => {
       <EditorContent/>
     </ThemeLoader>
   </EditorStoreProvider>
+  </Page>
 }
 
 export default Editor

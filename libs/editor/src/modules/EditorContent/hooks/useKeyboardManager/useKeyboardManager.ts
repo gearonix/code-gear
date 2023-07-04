@@ -6,7 +6,7 @@ import { useActions, useGetters } from '@/shared/hooks'
 import { isFileData } from '../../types'
 import { useAltNavigation, useFileService } from '..'
 
-import { useAltKeyDown } from '$/shared'
+import { useAltKeyDown } from '$/client-shared'
 
 export const useKeyboardManager = () => {
   const actions = useActions()

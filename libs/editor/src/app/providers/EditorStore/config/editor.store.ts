@@ -1,12 +1,13 @@
 import { makeAutoObservable } from 'mobx'
 
 import { ContentTab } from '@/components/Tabs'
+import { ContentTabInstance } from '@/components/Tabs/types'
 import { Themes } from '@/shared/consts'
 
 import EditorActions from './editor.actions'
 import EditorGetters from './editor.getters'
 
-import { LocalStorageClient } from '$/shared'
+import { LocalStorageClient } from '$/client-shared'
 
 
 class EditorStore{
@@ -26,7 +27,18 @@ class EditorStore{
     const storage = new LocalStorageClient()
     this.theme = storage.get<Themes>('EDITOR_THEME', 'vs-dark')
 
-    this.actions.tabs.createTab()
+    const savedContent = storage.get<ContentTabInstance[]>('EDITOR_CONTENT_DATA', [])
+
+    if (!savedContent.length) {
+      this.actions.tabs.createTab()
+    }
+
+    for (const instance of savedContent) {
+      this.content.push(new ContentTab({ instance }))
+    }
+
+    const firstTab = this.content[0]
+    this.activeKey = firstTab.getKeyId()
   }
 }
 

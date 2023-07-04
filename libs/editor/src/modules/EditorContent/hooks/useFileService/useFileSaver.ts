@@ -1,19 +1,25 @@
 import EditorErrors from '@/shared/errors'
 
-import { Nullable } from '$/shared'
+import { isFunction, Nullable } from '$/client-shared'
 
 
 export const useFileSaver = () => {
   return async (fileHandle: Nullable<FileSystemFileHandle>, textContent : string) => {
-      if ('showSaveFilePicker' in window) {
-        const handle = fileHandle ?? await window.showSaveFilePicker()
-        const stream = await handle.createWritable()
+      try {
+        let handle = fileHandle
+
+        if (!isFunction(fileHandle?.createWritable)) {
+          handle = await window.showSaveFilePicker()
+        }
+
+        const stream = await (handle as FileSystemFileHandle).createWritable()
         await stream.write(textContent)
         await stream.close()
 
         return handle
       }
-
-      console.warn(EditorErrors.NotSupportedByBrowser())
+      catch (e) {
+        console.warn(EditorErrors.NotSupportedByBrowser())
+      }
     }
 }

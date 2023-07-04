@@ -2,9 +2,9 @@
 import * as path from "path"
 import { defineConfig } from "vite"
 import dts from "vite-plugin-dts"
-import viteTsConfigPaths from "vite-tsconfig-paths"
 import dynamicImport from 'vite-plugin-dynamic-import'
 import importDynamicModule from 'vite-plugin-dynamic-import-module'
+import viteTsConfigPaths from "vite-tsconfig-paths"
 
 import react from "@vitejs/plugin-react"
 

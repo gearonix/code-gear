@@ -2,7 +2,7 @@ import { editor } from 'monaco-editor'
 
 import EditorErrors from '@/shared/errors'
 
-import { isObject } from '$/shared'
+import { isObject } from '$/client-shared'
 
 export function assertThemeObject(value: unknown):
   asserts value is editor.IStandaloneThemeData {

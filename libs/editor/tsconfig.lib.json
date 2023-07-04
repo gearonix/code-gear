@@ -6,7 +6,7 @@
     "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
-      "$/shared": ["../client-shared/src/index.ts"],
+      "$/client-shared": ["../client-shared/src/index.ts"],
       "@/types": ["src/types/index.ts"],
       "@/app": ["src/app/index.ts"],
       "@/shared/*": ["src/shared/*"],

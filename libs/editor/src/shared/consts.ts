@@ -1,4 +1,4 @@
-import { ValueOf } from '$/shared'
+import { ValueOf } from '$/client-shared'
 
 // Themes for code-editor
 export const themes = [
@@ -11,8 +11,7 @@ export const themes = [
   "Twilight",
   "IDLE",
   "Eiffel",
-  "Tomorrow",
-  "Dawn"
+  "Tomorrow"
 ] as const
 
 export type Themes = typeof themes[number]

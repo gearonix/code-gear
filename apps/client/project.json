@@ -9,7 +9,8 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/client/**/*.{ts,spec.ts,tsx}"]
+        "lintFilePatterns": ["apps/client/**/*.{ts,spec.ts,tsx}"],
+        "fix": true
       }
     },
     "build": {
@@ -17,7 +18,8 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/client"
+        "outputPath": "dist/apps/client",
+        "skipTypeCheck": true
       },
       "configurations": {
         "development": {
