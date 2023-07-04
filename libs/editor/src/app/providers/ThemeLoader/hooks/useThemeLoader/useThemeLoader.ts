@@ -6,11 +6,11 @@ import { useStore } from '@/shared/hooks'
 import { useMonaco } from '@monaco-editor/react'
 
 import { assertThemeObject } from './assertThemeObject'
-import { nodeModulesPath } from './consts'
 
 import { useBooleanState } from '$/shared'
 
 export const useThemeLoader = () => {
+  // TODO: refactor this
   const monaco = useMonaco()
   const loader = useBooleanState()
   const { theme: selectedTheme } = useStore()
@@ -19,11 +19,11 @@ export const useThemeLoader = () => {
     let processed = 0
     themes.forEach(async (theme) => {
       try{
-        // const json: unknown = await import(`${nodeModulesPath}/monaco-themes/themes/${theme}.json`)
-        //
-        // assertThemeObject(json)
-        //
-        // monaco?.editor.defineTheme(theme, json)
+        const json: unknown = await import(`./themes/${theme}.json`)
+
+        assertThemeObject(json)
+
+        monaco?.editor.defineTheme(theme, json)
       }
       catch (e){
         console.log(EditorErrors.ThemeUpload(theme))

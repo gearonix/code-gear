@@ -11,8 +11,7 @@ export const themes = [
   "Twilight",
   "IDLE",
   "Eiffel",
-  "Tomorrow",
-  "Dawn"
+  "Tomorrow"
 ] as const
 
 export type Themes = typeof themes[number]
