@@ -6,7 +6,7 @@ import { useMappedTabs } from '@/components/Tabs/hooks/useMappedTabs'
 import { maxTabsLength } from '@/shared/consts'
 import { useActions, useStore } from '@/shared/hooks'
 
-import { TargetKey } from '$/shared'
+import { TargetKey } from '$/client-shared'
 
 
 const Tabs = observer(() => {

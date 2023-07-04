@@ -7,7 +7,7 @@ import { Themes } from '@/shared/consts'
 import EditorActions from './editor.actions'
 import EditorGetters from './editor.getters'
 
-import { LocalStorageClient } from '$/shared'
+import { LocalStorageClient } from '$/client-shared'
 
 
 class EditorStore{

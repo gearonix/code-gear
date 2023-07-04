@@ -6,7 +6,7 @@ import { LanguagesValues } from '@/shared/consts'
 
 import { ContentTabInstance } from '../types'
 
-import { Nullable } from '$/shared'
+import { Nullable } from '$/client-shared'
 
 type ContentTabArgs = Partial<{
   lastNumber: number

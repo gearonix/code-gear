@@ -5,8 +5,8 @@ import {
 import { Main } from '@/pages/Main'
 import { NotFound } from '@/pages/NotFound'
 
+import { RoutePaths } from '$/client-shared'
 import { Editor } from '$/editor'
-import { RoutePaths } from '$/shared'
 
 const router = createBrowserRouter([
   {

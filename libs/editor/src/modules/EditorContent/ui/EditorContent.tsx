@@ -7,7 +7,7 @@ import MonacoEditor, { useMonaco } from '@monaco-editor/react'
 
 import { useKeyboardManager } from '../hooks'
 
-import { isString, LocalStorageClient, useDebounce } from '$/shared'
+import { isString, LocalStorageClient, useDebounce } from '$/client-shared'
 
 
 export const EditorContent = observer(() => {

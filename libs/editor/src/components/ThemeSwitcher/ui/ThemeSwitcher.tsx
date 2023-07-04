@@ -4,7 +4,7 @@ import { observer } from 'mobx-react-lite'
 import { Themes, themes } from '@/shared/consts'
 import { useActions, useStore } from '@/shared/hooks'
 
-import { LocalStorageClient } from '$/shared'
+import { LocalStorageClient } from '$/client-shared'
 
 const ThemeSwitcher = observer(() => {
   const actions = useActions()

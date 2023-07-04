@@ -1,6 +1,6 @@
 import { Themes } from '@/shared/consts'
 
-import { AnyFunction } from '$/shared'
+import { AnyFunction } from '$/client-shared'
 
 const EditorErrors: Record<string, AnyFunction<string>> = {
   ThemeUpload(theme: Themes){

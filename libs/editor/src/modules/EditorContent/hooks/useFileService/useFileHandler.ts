@@ -5,7 +5,7 @@ import { FileHandlerData } from '../../types'
 import { filePickerOptions } from './lib/consts'
 import { getLanguageFromName } from './lib/getLanguageFromName'
 
-import { Undefinable } from '$/shared'
+import { Undefinable } from '$/client-shared'
 
 export const useFileHandler = () => {
   return async (): Promise<Undefinable<FileHandlerData>> => {

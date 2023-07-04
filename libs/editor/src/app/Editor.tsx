@@ -7,7 +7,7 @@ import { EditorContent } from '@/modules/EditorContent'
 import { EditorStoreProvider } from './providers/EditorStore'
 import { ThemeLoader } from './providers/ThemeLoader'
 
-import { Page } from '$/shared'
+import { Page } from '$/client-shared'
 
 
 export const Editor = () => {

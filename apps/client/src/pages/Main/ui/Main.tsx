@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-import { Page,RoutePaths } from '$/shared'
+import { Page,RoutePaths } from '$/client-shared'
 
 const Main = () => {
   return <Page>

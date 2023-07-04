@@ -7,7 +7,7 @@ import { useMonaco } from '@monaco-editor/react'
 
 import { assertThemeObject } from './assertThemeObject'
 
-import { useBooleanState } from '$/shared'
+import { useBooleanState } from '$/client-shared'
 
 export const useThemeLoader = () => {
   // TODO: refactor this

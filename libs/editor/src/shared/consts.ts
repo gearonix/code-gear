@@ -1,4 +1,4 @@
-import { ValueOf } from '$/shared'
+import { ValueOf } from '$/client-shared'
 
 // Themes for code-editor
 export const themes = [

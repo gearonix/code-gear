@@ -1,6 +1,6 @@
 import { LanguagesValues } from '@/shared/consts'
 
-import { Nullable } from '$/shared'
+import { Nullable } from '$/client-shared'
 
 export interface ContentTabInstance {
   _key: string

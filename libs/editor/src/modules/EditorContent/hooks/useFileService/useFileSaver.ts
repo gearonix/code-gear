@@ -1,6 +1,6 @@
 import EditorErrors from '@/shared/errors'
 
-import { isFunction, Nullable } from '$/shared'
+import { isFunction, Nullable } from '$/client-shared'
 
 
 export const useFileSaver = () => {
