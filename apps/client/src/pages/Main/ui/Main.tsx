@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom"
 
-const Main = () => {
-  return <div>
-    main
-    <Link to={'/not_found'}>Testing preact router with preact-compat library</Link>
-  </div>
-}
+import { Page,RoutePaths } from '$/shared'
 
+const Main = () => {
+  return <Page>
+    <div>
+    main <br/>
+    <Link to={RoutePaths.EDITOR}>editor</Link>
+  </div>
+  </Page>
+}
 
 export default Main

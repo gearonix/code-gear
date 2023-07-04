@@ -5,7 +5,7 @@ import { isFunction, Nullable } from '$/shared'
 
 export const useFileSaver = () => {
   return async (fileHandle: Nullable<FileSystemFileHandle>, textContent : string) => {
-      try{
+      try {
         let handle = fileHandle
 
         if (!isFunction(fileHandle?.createWritable)) {
