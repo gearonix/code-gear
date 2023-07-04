@@ -38,6 +38,9 @@ export const EditorContent = observer(() => {
       onChange={onChange}
       language={language}
       value={toJS(textContent)}
+      options={{
+        fontSize: 20
+      }}
     />
 })
 
