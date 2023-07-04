@@ -14,6 +14,7 @@
   "devDependencies": {
     "@babel/plugin-transform-react-jsx": "^7.22.5",
     "@babel/plugin-transform-react-jsx-development": "^7.22.5",
+    "@babel/plugin-transform-react-jsx-source": "^7.22.5",
     "@babel/preset-react": "^7.14.5",
     "@nestjs/schematics": "^10.0.1",
     "@nestjs/testing": "^10.0.2",

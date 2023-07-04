@@ -4,11 +4,19 @@ import { v4 as generateId } from 'uuid'
 import { FileHandlerData } from '@/modules/EditorContent/types'
 import { LanguagesValues } from '@/shared/consts'
 
+import { ContentTabInstance } from '../types'
+
 import { Nullable } from '$/shared'
+
+type ContentTabArgs = Partial<{
+  lastNumber: number
+  fileData: FileHandlerData,
+  instance: ContentTabInstance
+}>
 
 
 export class ContentTab {
-  private readonly _key = generateId()
+  private _key = generateId()
   private _fileHandle: Nullable<FileSystemFileHandle> = null
   private _label = 'Untitled'
   private _content = ''
@@ -16,15 +24,18 @@ export class ContentTab {
   public lang: LanguagesValues = 'text'
   public wasChanged = false
 
-  constructor(lastNumber?: number, fileData?: FileHandlerData) {
+  constructor({ lastNumber, fileData, instance }: ContentTabArgs) {
     makeAutoObservable(this)
+
+    if (instance) {
+      this.initUsingInstance(instance)
+    }
+    else if (fileData) {
+      this.initUsingFileData(fileData)
+    }
 
     if (lastNumber){
       this.idx = lastNumber + 1
-    }
-
-    if (fileData) {
-      this.initUsingFileData(fileData)
     }
   }
 
@@ -84,6 +95,16 @@ export class ContentTab {
     this.lang = fileData.language
     this._content = fileData.content
     this._label = fileData.name
+  }
+
+  private initUsingInstance(instance: ContentTabInstance){
+    this._key = instance._key
+    this._label = instance._label
+    this.idx = instance.idx
+    this._content = instance._content
+    this._fileHandle = instance._fileHandle
+    this.wasChanged = instance.wasChanged
+    this.lang = instance.lang
   }
 
 }

@@ -20,7 +20,7 @@ class TabsActions {
     }
     const lastNumber = content.at(-1)?.idx
 
-    const newTab = new ContentTab(lastNumber, fileData)
+    const newTab = new ContentTab({ fileData, lastNumber })
 
     this.state.activeKey = newTab.getKeyId()
     this.state.content.push(newTab)

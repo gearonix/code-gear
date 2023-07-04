@@ -1,4 +1,5 @@
 import { LocalStorage, LocalStorageKeys } from '../../config/localStorage'
+import { isString } from '../../types'
 
 export class LocalStorageClient {
   public get<T>(key: LocalStorageKeys, defaultVal: T): T {
@@ -8,10 +9,14 @@ export class LocalStorageClient {
     }
     return isJson(value) ? JSON.parse(value): value
   }
-  public set<T extends LocalStorageKeys>(key: T, value: string) {
-    if (key in LocalStorage){
-      localStorage.setItem(key, value)
+  public set<T extends LocalStorageKeys>(key: T, value: unknown) {
+    if (!(key in LocalStorage)){
+      return
     }
+    if (isString(value)){
+      return localStorage.setItem(key, value)
+    }
+    localStorage.setItem(key, JSON.stringify(value))
   }
 }
 

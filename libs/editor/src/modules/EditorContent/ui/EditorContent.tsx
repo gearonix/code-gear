@@ -7,13 +7,19 @@ import MonacoEditor, { useMonaco } from '@monaco-editor/react'
 
 import { useKeyboardManager } from '../hooks'
 
-import { isString } from '$/shared'
+import { isString, LocalStorageClient, useDebounce } from '$/shared'
 
 
 export const EditorContent = observer(() => {
   const { editor } = useActions()
   const getters = useGetters()
   const { theme, content } = useStore()
+  const storage = new LocalStorageClient()
+
+  const localSave = useDebounce(() => {
+    console.log('saved to localStorage.')
+    storage.set('EDITOR_CONTENT_DATA', content)
+  }, 1000)
 
   const textContent = getters.getActiveTabText()
   const language = getters.getActiveLanguage()
@@ -24,6 +30,7 @@ export const EditorContent = observer(() => {
   const onChange = (value: unknown) => {
     if (isString(value)){
       editor.saveContent(value)
+      localSave()
     }
   }
 
