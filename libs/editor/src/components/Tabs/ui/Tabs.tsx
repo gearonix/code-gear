@@ -2,14 +2,17 @@ import { Tabs as AntdTabs } from 'antd'
 import { toJS } from 'mobx'
 import { observer } from 'mobx-react-lite'
 
-import { useActions,useStore } from '@/hooks'
+import { useMappedTabs } from '@/components/Tabs/hooks/useMappedTabs'
+import { maxTabsLength } from '@/shared/consts'
+import { useActions, useStore } from '@/shared/hooks'
 
 import { TargetKey } from '$/shared'
 
 
 const Tabs = observer(() => {
-  const state = useStore()
+  const { activeKey, content } = useStore()
   const actions = useActions()
+  const mappedTabs = useMappedTabs(content)
 
   const onEdit = (
     targetKey: TargetKey,
@@ -30,9 +33,10 @@ const Tabs = observer(() => {
   return <AntdTabs
         type="editable-card"
         onChange={onChange}
-        activeKey={state.activeKey}
+        activeKey={activeKey}
         onEdit={onEdit}
-        items={toJS(state.content)}
+        items={toJS(mappedTabs)}
+        hideAdd={content.length >= maxTabsLength}
       />
 })
 

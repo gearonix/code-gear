@@ -1,5 +1,7 @@
 import { editor } from 'monaco-editor'
 
+import EditorErrors from '@/shared/errors'
+
 import { isObject } from '$/shared'
 
 export function assertThemeObject(value: unknown):
@@ -12,5 +14,5 @@ export function assertThemeObject(value: unknown):
     return
   }
 
-  throw new Error('incoming json object should be must be ThemeObject type.')
+  throw new Error(EditorErrors.WrongJsonObject('ThemeObject'))
 }

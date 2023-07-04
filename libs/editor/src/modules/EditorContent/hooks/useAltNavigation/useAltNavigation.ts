@@ -1,10 +1,10 @@
 import { useEffect } from 'react'
 
-import { useActions, useGetters, useStore } from '@/hooks'
+import { useActions, useGetters, useStore } from '@/shared/hooks'
 
 import { useAltKeyDown } from '$/shared'
 
-const keys = ['1', '2', '3', '4', '5', '6', '7', '8', '9'] as const
+const keys = [1, 2, 3, 4, 5, 6, 7, 8, 9] as const
 
 // allows the user to use alt + [number] to navigate tabs
 export const useAltNavigation = () => {
@@ -14,9 +14,11 @@ export const useAltNavigation = () => {
 
   useEffect(() => {
     keyboard.on(Object.fromEntries(keys.map((num) => {
-      const key = content[Number(num) - 1]?.key
+      const contentTab = content[num - 1]
+      const key = contentTab?.getKeyId()
+
       return [
-        num, key ? () => tabs.changeActiveTab(key): null
+        num.toString(), key ? () => tabs.changeActiveTab(key): null
       ]
     })))
 

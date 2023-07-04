@@ -1,24 +1,32 @@
 import { makeAutoObservable } from 'mobx'
 
-import { ContentTab, TabsActions } from '@/components/Tabs'
-import { EditorContentActions } from '@/modules/EditorContent';
+import { ContentTab } from '@/components/Tabs'
+import { Themes } from '@/shared/consts'
 
+import EditorActions from './editor.actions'
 import EditorGetters from './editor.getters'
+
+import { LocalStorageClient } from '$/shared'
 
 
 class EditorStore{
   activeKey = ''
   content: ContentTab[] = []
+  theme: Themes = 'vs-dark'
   getters: EditorGetters
-  actions
+  actions: EditorActions
+
 
   constructor() {
     makeAutoObservable(this)
+
     this.getters = new EditorGetters(this)
-    this.actions = {
-      tabs: new TabsActions(this),
-      editor: new EditorContentActions(this)
-    }
+    this.actions = new EditorActions(this)
+
+    const storage = new LocalStorageClient()
+    this.theme = storage.get<Themes>('EDITOR_THEME', 'vs-dark')
+
+    this.actions.tabs.createTab()
   }
 }
 

@@ -1,1 +1,2 @@
-export {RoutePaths} from './paths'
+export { LocalStorage } from './localStorage'
+export { RoutePaths } from './paths'

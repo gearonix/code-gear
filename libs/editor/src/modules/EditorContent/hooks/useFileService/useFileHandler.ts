@@ -1,24 +1,30 @@
-import { FileHandle } from '@/components/Tabs/types'
+import EditorErrors from '@/shared/errors'
 
-import { NotSupportedError } from './consts'
+import { FileHandlerData } from '../../types'
 
-import { AnyObject, isFunction } from '$/shared'
+import { filePickerOptions } from './lib/consts'
+import { getLanguageFromName } from './lib/getLanguageFromName'
 
+import { Undefinable } from '$/shared'
 
-export const useFileSaver = () => {
-  return async (fileHandle: FileHandle, text : string) => {
-      if ( 'showSaveFilePicker' in window &&
-        isFunction<AnyObject>(window.showSaveFilePicker)) {
+export const useFileHandler = () => {
+  return async (): Promise<Undefinable<FileHandlerData>> => {
+    if ('showOpenFilePicker' in window) {
+      const [fileHandle] = await window.showOpenFilePicker(filePickerOptions)
+      const fileData = await fileHandle.getFile()
+      const fileContent = await fileData.text()
+      const fileLang = getLanguageFromName(fileData.name)
 
-        const handle = fileHandle ?? await window.showSaveFilePicker()
-        if (isFunction(handle.createWritable)){
-          const stream: any = await handle.createWritable()
-          await stream.write(text)
-          await stream.close()
-        }
-        return
+      return {
+        name: fileData.name,
+        type: fileData.type,
+        content: fileContent,
+        fileHandle: fileHandle,
+        language: fileLang
       }
-
-      console.warn(NotSupportedError)
     }
+
+    console.warn(EditorErrors.NotSupportedByBrowser())
+  }
 }
+

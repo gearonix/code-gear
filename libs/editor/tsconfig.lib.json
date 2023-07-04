@@ -2,14 +2,14 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "../../dist/out-tsc",
-    "types": ["node", "vite/client"],
+    "types": ["node", "vite/client", "@types/wicg-file-system-access"],
     "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
       "$/shared": ["../client-shared/src/index.ts"],
       "@/types": ["src/types/index.ts"],
       "@/app": ["src/app/index.ts"],
-      "@/hooks": ["src/hooks/index.ts"],
+      "@/shared/*": ["src/shared/*"],
       "@/components/*": ["src/components/*"],
       "@/modules/*" : ["src/modules/*"]
     }
@@ -28,5 +28,5 @@
     "**/*.spec.jsx",
     "**/*.test.jsx"
   ],
-  "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"]
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
 }

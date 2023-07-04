@@ -1,15 +1,15 @@
 import { useCallback, useEffect } from 'react'
 
-import { useActions, useGetters, useStore } from '@/hooks'
+import { getLanguageFromName } from '@/modules/EditorContent/hooks/useFileService/lib/getLanguageFromName'
+import { useActions, useGetters } from '@/shared/hooks'
 
-import { isFileData } from './../../types'
-import { useAltNavigation, useFileService } from './..'
+import { isFileData } from '../../types'
+import { useAltNavigation, useFileService } from '..'
 
 import { useAltKeyDown } from '$/shared'
 
 export const useKeyboardManager = () => {
-  const { tabs } = useActions()
-  const { activeKey } = useStore()
+  const actions = useActions()
   const getters = useGetters()
   const keyboard = useAltKeyDown()
   const fileService = useFileService()
@@ -19,22 +19,35 @@ export const useKeyboardManager = () => {
     const fileData = await fileService.open()
 
     if (isFileData(fileData)) {
-      tabs.createTab(fileData)
+      actions.tabs.createTab(fileData)
     }
   }, [])
 
-  const saveFile = useCallback(async () => {
-    const { fileHandle, text } = getters.getActiveTab()
-    fileService.save(fileHandle, text)
+  const saveFile = async () => {
+    const activeTab = getters.getActiveTab()
+    const oldFileHandle = activeTab.getFileHandle()
+    const textContent = activeTab.getContent()
 
-  }, [activeKey])
+    if (!activeTab.wasChanged){
+      return
+    }
+
+    const fileHandle = await fileService.save(oldFileHandle, textContent)
+
+    if (!fileHandle) {
+      return
+    }
+
+    activeTab.setFileHandle(fileHandle)
+    activeTab.lang = getLanguageFromName(fileHandle.name)
+  }
 
   useEffect(() => {
     keyboard.on({
       'O': openFile,
       'S': saveFile,
-      'N': () => {tabs.createTab()},
-      'T': () => {tabs.removeTab()}
+      'N': () => {actions.tabs.createTab()},
+      'T': () => {actions.tabs.removeTab()}
     })
 
     return () => {

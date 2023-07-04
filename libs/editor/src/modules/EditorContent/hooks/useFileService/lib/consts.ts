@@ -1,4 +1,4 @@
-export const filePickerOptions = {
+export const filePickerOptions: OpenFilePickerOptions  = {
   types: [
     {
       accept: {
@@ -8,6 +8,4 @@ export const filePickerOptions = {
       description: "Text Files"
     }
   ]
-} as const
-
-export const NotSupportedError = 'Your browser does not support saving and opening files.'
+}
