@@ -9,7 +9,8 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/client/**/*.{ts,spec.ts,tsx}"]
+        "lintFilePatterns": ["apps/client/**/*.{ts,spec.ts,tsx}"],
+        "fix": true
       }
     },
     "build": {

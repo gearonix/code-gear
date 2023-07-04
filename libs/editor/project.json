@@ -9,7 +9,8 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/editor/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["libs/editor/**/*.{ts,tsx,js,jsx}"],
+        "fix": true
       }
     },
     "build": {
