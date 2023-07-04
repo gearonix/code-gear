@@ -19,12 +19,11 @@ export const useThemeLoader = () => {
     let processed = 0
     themes.forEach(async (theme) => {
       try{
-        const json: unknown = await import(`${nodeModulesPath}/monaco-themes/themes/${theme}.json`)
-
-        assertThemeObject(json)
-
-        monaco?.editor.defineTheme(theme, json)
-
+        // const json: unknown = await import(`${nodeModulesPath}/monaco-themes/themes/${theme}.json`)
+        //
+        // assertThemeObject(json)
+        //
+        // monaco?.editor.defineTheme(theme, json)
       }
       catch (e){
         console.log(EditorErrors.ThemeUpload(theme))

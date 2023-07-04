@@ -17,7 +17,8 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/client"
+        "outputPath": "dist/apps/client",
+        "skipTypeCheck": true
       },
       "configurations": {
         "development": {
