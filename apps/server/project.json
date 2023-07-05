@@ -19,7 +19,11 @@
         "webpackConfig": "apps/server/webpack.config.js"
       },
       "configurations": {
-        "development": {},
+        "development": {
+          "envFiles": [
+            ".development.env"
+          ]
+        },
         "production": {}
       }
     },
@@ -42,7 +46,8 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/server/**/*.ts"]
+        "lintFilePatterns": ["apps/server/**/*.ts"],
+        "fix": true
       }
     },
     "test": {

@@ -9,7 +9,9 @@
     "dep-graph": "nx dep-graph",
     "client:serve": "nx run client:serve",
     "client:build": "nx run client:build",
-    "client:preview": "nx run client:preview"
+    "client:preview": "nx run client:preview",
+    "server:serve": "nx run server:serve",
+    "server:build": "nx run serve:build"
   },
   "private": true,
   "devDependencies": {
