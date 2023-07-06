@@ -11,19 +11,17 @@
       "options": {
         "target": "node",
         "compiler": "tsc",
+        "progress": true,
         "outputPath": "dist/apps/server",
         "main": "apps/server/src/main.ts",
+        "buildLibsFromSource": true,
         "tsConfig": "apps/server/tsconfig.app.json",
         "assets": ["apps/server/src/assets"],
         "isolatedConfig": true,
         "webpackConfig": "apps/server/webpack.config.js"
       },
       "configurations": {
-        "development": {
-          "envFiles": [
-            ".development.env"
-          ]
-        },
+        "development": {},
         "production": {}
       }
     },

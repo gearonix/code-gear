@@ -3,6 +3,7 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/services/src",
   "projectType": "library",
+  "global": true,
   "targets": {
     "lint": {
       "executor": "@nx/linter:eslint",

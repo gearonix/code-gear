@@ -1,5 +1,7 @@
-const { composePlugins, withNx } = require("@nx/webpack")
+const { composePlugins, withNx } = require('@nx/webpack')
 
-module.exports = composePlugins(withNx(), (config) => {
+module.exports = composePlugins(withNx({
+  skipTypeChecking: true
+}), (config) => {
   return config
 })
