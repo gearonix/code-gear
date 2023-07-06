@@ -1,5 +1,5 @@
-
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
+import { RunCode } from '@/components/RunCode'
 import Tabs from '@/components/Tabs/ui/Tabs'
 import { ThemeSwitcher } from '@/components/ThemeSwitcher'
 import { EditorContent } from '@/modules/EditorContent'
@@ -17,6 +17,7 @@ export const Editor = () => {
       <Tabs/>
       <ThemeSwitcher/>
       <LanguageSwitcher/>
+      <RunCode/>
       <EditorContent/>
     </ThemeLoader>
   </EditorStoreProvider>

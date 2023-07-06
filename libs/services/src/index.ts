@@ -1,2 +1,2 @@
-export * from './compiler-api'
+export * from './executor-api'
 export { ServicesModule } from './services.module'

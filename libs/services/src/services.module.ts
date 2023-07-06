@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common'
 
-import { ExecutorApiModule } from './compiler-api'
+import { ExecutorApiModule } from './executor-api'
 
 @Module({
   controllers: [],

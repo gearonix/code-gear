@@ -13,7 +13,7 @@ export const useFileHandler = () => {
       const [fileHandle] = await window.showOpenFilePicker(filePickerOptions)
       const fileData = await fileHandle.getFile()
       const fileContent = await fileData.text()
-      const fileLang = getLanguageFromName(fileData.name)
+      const [fileLang] = getLanguageFromName(fileData.name)
 
       return {
         name: fileData.name,

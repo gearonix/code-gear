@@ -1,12 +1,12 @@
 import { Module } from '@nestjs/common'
 import { ConfigModule } from '@nestjs/config'
 
-import { CodeCompilerModule } from './modules/code-compiler-api'
+import { CodeExecutorModule } from './modules/code-executor-api'
 
 @Module({
   imports: [
     ConfigModule.forRoot(),
-    CodeCompilerModule
+    CodeExecutorModule
   ],
   controllers: [],
   providers: []

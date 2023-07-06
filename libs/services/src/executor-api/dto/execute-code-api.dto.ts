@@ -1,12 +1,12 @@
 import { IsIn, IsOptional, IsString } from 'class-validator'
 
-import { ExecutorApiLanguages } from '../lib/types'
+import { ExecutorLanguages, ExecutorLanguagesKeys } from '../lib/types'
 
-export class ExecudeCodeApiDTO {
+export class ExecuteCodeApiDTO {
   @IsString()
   readonly code: string
-  @IsIn(Object.values(ExecutorApiLanguages))
-  readonly language: ExecutorApiLanguages
+  @IsIn(Object.keys(ExecutorLanguages))
+  readonly language: ExecutorLanguagesKeys
   @IsString()
   @IsOptional()
   readonly input?: string

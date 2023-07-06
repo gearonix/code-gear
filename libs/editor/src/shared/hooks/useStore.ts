@@ -13,3 +13,7 @@ export const useStore = () => {
 export const useGetters = () => {
   return useContext(EditorStoreContext).getters
 }
+
+export const useServices = () => {
+  return useContext(EditorStoreContext).services
+}
