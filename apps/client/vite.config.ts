@@ -3,7 +3,7 @@
 import { defineConfig } from 'vite';
 import preact from '@preact/preset-vite';
 import { VitePWA } from 'vite-plugin-pwa'
-import babel from 'vite-plugin-babel';
+import webfontDownload from 'vite-plugin-webfont-dl';
 
 import viteTsConfigPaths from 'vite-tsconfig-paths';
 
@@ -25,6 +25,9 @@ export default defineConfig({
     host: 'localhost',
   },
   plugins: [
+    webfontDownload([
+      'https://fonts.googleapis.com/css2?family=Poppins&display=swap',
+    ]),
     preact(),
     viteTsConfigPaths({
       root: '../../',
