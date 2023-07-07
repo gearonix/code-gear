@@ -35,7 +35,7 @@ class EditorGetters{
   }
 
   isAllowedToExecute() {
-    const lang = this.getActiveLanguage() as string
+    const lang = this.getActiveLanguage()
     return executorAllowedLanguages.includes(lang)
   }
 }

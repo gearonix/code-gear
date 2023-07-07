@@ -3,6 +3,7 @@
 import { defineConfig } from 'vite';
 import preact from '@preact/preset-vite';
 import { VitePWA } from 'vite-plugin-pwa'
+import babel from 'vite-plugin-babel';
 
 import viteTsConfigPaths from 'vite-tsconfig-paths';
 

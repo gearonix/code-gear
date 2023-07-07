@@ -4,6 +4,7 @@
   "sourceRoot": "libs/services/src",
   "projectType": "library",
   "global": true,
+  "frontendProject": "editor",
   "targets": {
     "lint": {
       "executor": "@nx/linter:eslint",

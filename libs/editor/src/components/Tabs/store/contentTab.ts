@@ -1,6 +1,7 @@
 import { makeAutoObservable } from 'mobx'
 import { v4 as generateId } from 'uuid'
 
+import { ExecutorResponse } from '@/components/RunCode'
 import { FileHandlerData } from '@/modules/EditorContent/types'
 import { LanguagesValues } from '@/shared/consts'
 
@@ -19,6 +20,8 @@ export class ContentTab {
   private _key = generateId()
   private _fileHandle: Nullable<FileSystemFileHandle> = null
   private _label = 'Untitled'
+  public executeMessage = ''
+  public isExecuteError = false
   private _content = ''
   public idx = 0
   public lang: LanguagesValues = 'text'
@@ -86,6 +89,16 @@ export class ContentTab {
     return this._content
   }
 
+  public updateExecuteMessage(res: ExecutorResponse){
+    this.isExecuteError = false
+    if (res.error) {
+      const error = res.error.split('^')[1].split('.')[0]
+      this.isExecuteError = true
+      return this.executeMessage = error
+    }
+    this.executeMessage = res.output
+  }
+
   public getKeyId(){
     return this._key
   }
@@ -105,6 +118,8 @@ export class ContentTab {
     this._fileHandle = instance._fileHandle
     this.wasChanged = instance.wasChanged
     this.lang = instance.lang
+    this.executeMessage = instance.executeMessage
+    this.isExecuteError = instance.isExecuteError
   }
 
 }

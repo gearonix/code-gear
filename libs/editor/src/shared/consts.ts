@@ -35,4 +35,4 @@ export type LanguagesKeys = keyof typeof languages
 export const maxTabsLength = 9 as const
 
 export const executorAllowedLanguages = ['java', 'python',
-  'cpp', 'c', 'go', 'cs', 'javascript'] as const
+  'cpp', 'c', 'go', 'cs', 'javascript']

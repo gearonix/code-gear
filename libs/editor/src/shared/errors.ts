@@ -10,7 +10,10 @@ const EditorErrors: Record<string, AnyFunction<string>> = {
     return 'Your browser does not support saving and opening files.'
   },
   WrongJsonObject(type: string){
-    return `incoming json object should be must be ${type} type.`
+    return `Incoming json object should be must be ${type} type.`
+  },
+  WrongResponseType(type: string){
+    return `Incoming response object should be must be ${type} type.`
   }
 }
 

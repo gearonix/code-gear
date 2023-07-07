@@ -1,3 +1,4 @@
+import { EnterFullScreen } from '@/components/EnterFullScreen'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { RunCode } from '@/components/RunCode'
 import Tabs from '@/components/Tabs/ui/Tabs'
@@ -15,6 +16,7 @@ export const Editor = () => {
     <EditorStoreProvider>
     <ThemeLoader>
       <Tabs/>
+      <EnterFullScreen/>
       <ThemeSwitcher/>
       <LanguageSwitcher/>
       <RunCode/>

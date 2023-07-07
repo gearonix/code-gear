@@ -1,6 +1,6 @@
-import { Routes } from '@/config/routes'
 import { BadRequestException, Body, Controller, Post } from '@nestjs/common'
 
+import { EndPoints } from '$/config'
 import {
   ExecuteCodeApiDTO,
   ExecutorApiResponse,
@@ -9,7 +9,7 @@ import {
   isExecutorApiResponse
 } from '$/services'
 
-@Controller(Routes.CODE_EXECUTOR_API)
+@Controller(EndPoints.CODE_EXECUTOR_API)
 export class CodeExecutorController {
   constructor(private executorService: ExecutorApiService) {
   }

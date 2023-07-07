@@ -1,2 +1,2 @@
-export * from './clientConfig'
-export * from './serverConfig'
+export * from './env/client'
+export * from './env/server'

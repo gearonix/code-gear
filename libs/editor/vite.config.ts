@@ -1,6 +1,7 @@
 // / <reference types="vitest" />
 import * as path from 'path'
 import { defineConfig } from 'vite'
+import babel from 'vite-plugin-babel'
 import dts from 'vite-plugin-dts'
 import dynamicImport from 'vite-plugin-dynamic-import'
 import importDynamicModule from 'vite-plugin-dynamic-import-module'

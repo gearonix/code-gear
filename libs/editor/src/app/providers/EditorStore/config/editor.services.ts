@@ -1,10 +1,12 @@
-import axios from 'axios'
 import { makeAutoObservable } from 'mobx'
+
+import { ExecutorRequest, ExecutorResponse } from '@/components/RunCode'
 
 import EditorGetters from './editor.getters'
 import EditorStore from './editor.store'
 
-import { serverUrl } from '$/config'
+import { httpService } from '$/client-shared'
+import { EndPoints } from '$/config'
 
 
 class EditorServices {
@@ -22,17 +24,17 @@ class EditorServices {
     if (!this.getters.isAllowedToExecute()) {
       return
     }
-
     const activeTab = this.getters.getActiveTab()
-    const code = activeTab.getContent()
-    const language = activeTab.lang
 
-    const response = await axios.post(`${serverUrl}/compile`, {
-      code,
-      language
-    })
+    const requestBody: ExecutorRequest = {
+      code: activeTab.getContent(),
+      language: activeTab.lang
+    }
 
-    console.log(response.data)
+    const response = await httpService.post<ExecutorResponse>(
+      EndPoints.CODE_EXECUTOR_API, requestBody)
+
+    activeTab.updateExecuteMessage(response.data)
   }
 }
 
