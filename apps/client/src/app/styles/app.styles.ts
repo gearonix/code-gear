@@ -1,13 +1,15 @@
 import { createGlobalStyle } from 'styled-components'
 
-import { font } from '$/styles'
+import { customScrollbar, font } from '$/styles'
 
 
 export const GlobalStyles = createGlobalStyle`
   body {
     background: ${({ theme }) => theme.default};
     ${font('Poppins')}
+    overflow-x: hidden;
   }
+
   span, p, h2, h3, h4 {
     font-size: ${({ theme }) => theme.fz6};
   }
@@ -15,4 +17,6 @@ export const GlobalStyles = createGlobalStyle`
     font-weight: normal;
     margin: 0;
   }
+
+  ${customScrollbar('body')}
 `

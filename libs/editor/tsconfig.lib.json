@@ -14,7 +14,8 @@
       "@/components/*": ["src/components/*"],
       "@/modules/*" : ["src/modules/*"],
       "@/public/*" : ["public/*"],
-      "$/styles" : ["../client-shared/src/styles/index.ts"]
+      "$/styles" : ["../client-shared/src/styles/index.ts"],
+      "$/icons" : ["../client-shared/src/lib/components/icons.ts"]
     }
   },
   "files": [

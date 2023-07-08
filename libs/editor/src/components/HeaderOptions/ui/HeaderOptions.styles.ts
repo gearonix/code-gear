@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
-import { flex, testBorder, wh } from '$/styles'
+import { flex, wh } from '$/styles'
 
 export const HeaderOptionsStyles = styled.div`
-  ${wh('240px', '28px')}
+  ${wh('23%', '28px')}
   ${flex('flex-start', 'center')}
   gap: 23px;
 `

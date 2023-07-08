@@ -1,21 +1,24 @@
-import { BsArrowsFullscreen,BsSearch } from 'react-icons/bs'
-import { GoTerminal } from 'react-icons/go'
-import { SlSizeFullscreen } from 'react-icons/sl'
-import { TfiSettings } from 'react-icons/tfi'
-
 import { AsideStyles, Icon } from './Aside.styles'
 
+import { useFullScreen } from '$/client-shared'
+import { BsSearch, GoTerminal, LuTestTube2, SlSizeFullscreen,TfiSettings } from '$/icons'
+
 const Aside = () => {
+  const toggleFullscreen = useFullScreen()
+
   return <AsideStyles>
     <div>
       <Icon>
         <BsSearch/>
       </Icon>
-      <Icon>
+      <Icon onClick={toggleFullscreen}>
         <SlSizeFullscreen/>
       </Icon>
       <Icon>
         <GoTerminal/>
+      </Icon>
+      <Icon>
+        <LuTestTube2/>
       </Icon>
     </div>
     <div>

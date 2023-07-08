@@ -1,8 +1,8 @@
-import { Tabs as AntdTabs } from 'antd'
 import { toJS } from 'mobx'
 import { observer } from 'mobx-react-lite'
 
 import { useMappedTabs } from '@/components/Tabs/hooks/useMappedTabs'
+import { TabsStyles } from '@/components/Tabs/ui/Tabs.styles'
 import { maxTabsLength } from '@/shared/consts'
 import { useActions, useStore } from '@/shared/hooks'
 
@@ -30,7 +30,7 @@ const Tabs = observer(() => {
     actions.tabs.changeActiveTab(activeKey)
   }
 
-  return <AntdTabs
+  return <TabsStyles
         type="editable-card"
         onChange={onChange}
         activeKey={activeKey}

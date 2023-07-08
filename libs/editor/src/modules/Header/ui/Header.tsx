@@ -1,15 +1,22 @@
+import { observer } from 'mobx-react-lite'
+
 import { HeaderOptions } from '@/components/HeaderOptions'
+import { HeaderRightSection } from '@/components/HeaderRightSection'
+import { useGetters } from '@/shared/hooks'
 
 import { FileName, HeaderStyles } from './Header.styles'
 
 
-const Header = () => {
+const Header = observer(() => {
+  const getters = useGetters()
+  const activeTab = getters.getActiveTab()
+
   return <HeaderStyles>
     <HeaderOptions/>
-    <FileName>README.md - API Docs - CodeGear</FileName>
-    <div style={{ width: '240px', height:'100%' }}></div>
+    <FileName>${activeTab.getLabel()} - CodeGear</FileName>
+    <HeaderRightSection/>
   </HeaderStyles>
-}
+})
 
 
 export default Header

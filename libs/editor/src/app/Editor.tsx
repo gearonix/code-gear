@@ -24,11 +24,6 @@ export const Editor = () => {
           <Aside/>
           <EditorContent/>
         </EditorWrapper>
-        <Tabs/>
-        <EnterFullScreen/>
-        <ThemeSwitcher/>
-        <LanguageSwitcher/>
-        <RunCode/>
       </EditorStyles>
     </ThemeLoader>
   </EditorStoreProvider>
