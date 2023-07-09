@@ -8,5 +8,6 @@ declare class EditorGetters {
     getActiveTabText(): string;
     getTabIndex(key?: string): number;
     getActiveLanguage(): LanguagesValues;
+    isAllowedToExecute(): boolean;
 }
 export default EditorGetters;

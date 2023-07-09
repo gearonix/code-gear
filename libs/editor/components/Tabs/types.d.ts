@@ -8,4 +8,6 @@ export interface ContentTabInstance {
     idx: number;
     lang: LanguagesValues;
     wasChanged: boolean;
+    executeMessage: string;
+    isExecuteError: boolean;
 }

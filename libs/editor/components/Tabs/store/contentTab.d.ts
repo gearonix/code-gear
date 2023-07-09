@@ -1,3 +1,4 @@
+import { ExecutorResponse } from '@/components/RunCode';
 import { FileHandlerData } from '@/modules/EditorContent/types';
 import { LanguagesValues } from '@/shared/consts';
 import { ContentTabInstance } from '../types';
@@ -11,6 +12,8 @@ export declare class ContentTab {
     private _key;
     private _fileHandle;
     private _label;
+    executeMessage: string;
+    isExecuteError: boolean;
     private _content;
     idx: number;
     lang: LanguagesValues;
@@ -23,6 +26,7 @@ export declare class ContentTab {
     private updateLabel;
     setTabContent(content: string): void;
     getContent(): string;
+    updateExecuteMessage(res: ExecutorResponse): any;
     getKeyId(): string;
     private initUsingFileData;
     private initUsingInstance;

@@ -14,3 +14,4 @@ export declare const languages: {
 export type LanguagesValues = ValueOf<typeof languages>;
 export type LanguagesKeys = keyof typeof languages;
 export declare const maxTabsLength: 9;
+export declare const executorAllowedLanguages: string[];
