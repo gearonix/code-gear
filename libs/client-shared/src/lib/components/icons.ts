@@ -1,6 +1,7 @@
+export { AiOutlineInfoCircle } from 'react-icons/ai'
 export { BsSearch } from 'react-icons/bs'
 export { GoTerminal } from 'react-icons/go'
 export { LuTestTube2 } from 'react-icons/lu'
-export { SlSizeFullscreen } from 'react-icons/sl'
+export { SlSizeFullscreen, SlInfo } from 'react-icons/sl'
 export { TfiSettings } from 'react-icons/tfi'
 export { VscPlay } from 'react-icons/vsc'

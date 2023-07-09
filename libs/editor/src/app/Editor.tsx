@@ -1,8 +1,4 @@
-import { EnterFullScreen } from '@/components/EnterFullScreen'
-import { LanguageSwitcher } from '@/components/LanguageSwitcher'
-import { RunCode } from '@/components/RunCode'
-import Tabs from '@/components/Tabs/ui/Tabs'
-import { ThemeSwitcher } from '@/components/ThemeSwitcher'
+import { Terminal } from '@/components/Terminal'
 import { Aside } from '@/modules/Aside'
 import { EditorContent } from '@/modules/EditorContent'
 import { Header } from '@/modules/Header'
@@ -23,6 +19,7 @@ export const Editor = () => {
         <EditorWrapper>
           <Aside/>
           <EditorContent/>
+          <Terminal/>
         </EditorWrapper>
       </EditorStyles>
     </ThemeLoader>

@@ -1,7 +1,8 @@
 import { AsideStyles, Icon } from './Aside.styles'
 
 import { useFullScreen } from '$/client-shared'
-import { BsSearch, GoTerminal, LuTestTube2, SlSizeFullscreen,TfiSettings } from '$/icons'
+import { BsSearch, GoTerminal, LuTestTube2, SlSizeFullscreen,
+  TfiSettings, SlInfo } from '$/icons'
 
 const Aside = () => {
   const toggleFullscreen = useFullScreen()
@@ -24,6 +25,9 @@ const Aside = () => {
     <div>
       <Icon>
         <TfiSettings/>
+      </Icon>
+      <Icon>
+        <SlInfo/>
       </Icon>
     </div>
   </AsideStyles>
