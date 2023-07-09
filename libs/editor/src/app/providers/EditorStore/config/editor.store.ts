@@ -6,6 +6,7 @@ import { Themes } from '@/shared/consts'
 
 import EditorActions from './editor.actions'
 import EditorGetters from './editor.getters'
+import EditorServices from './editor.services'
 
 import { LocalStorageClient } from '$/client-shared'
 
@@ -16,6 +17,7 @@ class EditorStore{
   theme: Themes = 'vs-dark'
   getters: EditorGetters
   actions: EditorActions
+  services: EditorServices
 
 
   constructor() {
@@ -23,6 +25,7 @@ class EditorStore{
 
     this.getters = new EditorGetters(this)
     this.actions = new EditorActions(this)
+    this.services = new EditorServices(this)
 
     const storage = new LocalStorageClient()
     this.theme = storage.get<Themes>('EDITOR_THEME', 'vs-dark')

@@ -16,7 +16,10 @@
     "baseUrl": ".",
     "paths": {
       "@code-gear/client-shared": ["libs/client-shared/src/index.ts"],
-      "@code-gear/editor": ["libs/editor/src/index.ts"]
+      "@code-gear/config": ["libs/config/src/index.ts"],
+      "@code-gear/editor": ["libs/editor/src/index.ts"],
+      "@code-gear/services": ["libs/services/src/index.ts"],
+      "@code-gear/services-webpack": ["libs/services-webpack/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

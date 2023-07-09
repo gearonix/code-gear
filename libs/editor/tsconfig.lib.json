@@ -7,11 +7,15 @@
     "baseUrl": ".",
     "paths": {
       "$/client-shared": ["../client-shared/src/index.ts"],
+      "$/config": ["../config/src/index.ts"],
       "@/types": ["src/types/index.ts"],
       "@/app": ["src/app/index.ts"],
       "@/shared/*": ["src/shared/*"],
       "@/components/*": ["src/components/*"],
-      "@/modules/*" : ["src/modules/*"]
+      "@/modules/*" : ["src/modules/*"],
+      "@/public/*" : ["public/*"],
+      "$/styles" : ["../client-shared/src/styles/index.ts"],
+      "$/icons" : ["../client-shared/src/lib/components/icons.ts"]
     }
   },
   "files": [

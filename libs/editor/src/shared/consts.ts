@@ -2,16 +2,16 @@ import { ValueOf } from '$/client-shared'
 
 // Themes for code-editor
 export const themes = [
-  "vs-dark",
-  "Monokai",
-  "Dracula",
-  "Dreamweaver",
-  "GitHub",
-  "Nord",
-  "Twilight",
-  "IDLE",
-  "Eiffel",
-  "Tomorrow"
+  'vs-dark',
+  'Monokai',
+  'Dracula',
+  'Dreamweaver',
+  'GitHub',
+  'Nord',
+  'Twilight',
+  'IDLE',
+  'Eiffel',
+  'Tomorrow'
 ] as const
 
 export type Themes = typeof themes[number]
@@ -33,3 +33,6 @@ export type LanguagesKeys = keyof typeof languages
 
 
 export const maxTabsLength = 9 as const
+
+export const executorAllowedLanguages = ['java', 'python',
+  'cpp', 'c', 'go', 'cs', 'javascript']

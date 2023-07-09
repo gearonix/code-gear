@@ -9,6 +9,7 @@
     "paths": {
       "@/*": ["./src/*"],
       "$/client-shared": ["../../libs/client-shared/src/index.ts"],
+      "$/styles": ["../../libs/client-shared/src/styles/index.ts"],
       "$/editor": ["../../libs/editor/src/app/index.ts"],
       "react": ["../../node_modules/preact/compat"],
       "react-dom": ["../../node_modules/preact/compat"],
