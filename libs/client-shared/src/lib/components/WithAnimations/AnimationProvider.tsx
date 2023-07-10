@@ -1,11 +1,9 @@
 import { createContext, useContext, useEffect, useMemo, useRef } from 'react'
 
 import { useBooleanState } from '../../../hooks'
-import { WithReactChildren } from '../../../types'
+import { GestureType, SpringType, WithReactChildren } from '../../../types'
 import { Display } from '../common'
 
-type SpringType = typeof import('@react-spring/web')
-type GestureType = typeof import('@use-gesture/react')
 
 type AnimationContextPayload = Partial<{
   Gesture: GestureType

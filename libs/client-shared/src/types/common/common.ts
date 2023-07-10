@@ -5,6 +5,8 @@ export type AnyObject = Record<string, unknown>
 
 export type AnyFunction<T = void> = (...args: any[]) => T
 
+export type VoidFunction = () => void
+
 export type WithChildren<T extends AnyObject = AnyObject> = T & {
   children: ComponentChildren
 }

@@ -8,6 +8,8 @@ export const AntdConfig : ThemeConfig = {
   token: {
     colorBgBase: DarkThemePalette.grey,
     colorTextBase : DarkThemePalette.light,
-    colorBorder: DarkThemePalette.lightGrey
+    colorBorder: DarkThemePalette.lightGrey,
+    colorBgTextHover: DarkThemePalette.light,
+    colorBgTextActive: DarkThemePalette.light
   }
 }

@@ -5,5 +5,10 @@ export const editorConfig: editor.IStandaloneEditorConstructionOptions = {
   glyphMargin: false,
   lineNumbersMinChars: 3,
   lineDecorationsWidth: 0,
-  minimap: { enabled: false }
+  minimap: {
+    enabled: false
+  },
+  scrollbar: {
+    verticalScrollbarSize: 6
+  }
 }

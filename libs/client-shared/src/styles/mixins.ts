@@ -1,4 +1,4 @@
-import { css } from 'styled-components'
+import { css, DefaultTheme } from 'styled-components'
 
 export const wh = (w = '100%', h = w) => css`
   width: ${w};
@@ -47,4 +47,25 @@ export const customScrollbar = (elem : string) => css`
   ${elem}::-webkit-scrollbar-thumb {
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   }
+`
+
+export const color = (color: string) => css`
+  ${({ theme }) => theme[color]}
+`
+
+type AbsoluteProps = Partial<{
+  left: string
+  top: string
+  right: string
+  bottom: string
+}>
+
+export const absolute = (props: AbsoluteProps) => css`
+  position: absolute;
+  ${Object.entries(props).map(([key, value]) => `${key}: ${value};`).join('\n')}
+`
+
+export const margin = (left: number, top: number) => css`
+  margin-left: ${left}px;
+  margin-top: ${top}px;
 `
