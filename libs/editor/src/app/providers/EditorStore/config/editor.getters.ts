@@ -2,7 +2,7 @@ import { makeAutoObservable } from 'mobx'
 
 import { EditorStore } from '@/app'
 import { ContentTab } from '@/components/Tabs'
-import { executorAllowedLanguages, LanguagesValues } from '@/shared/consts';
+import { executorAllowedLanguages, LanguagesValues } from '@/shared/consts'
 
 
 class EditorGetters{

@@ -8,6 +8,6 @@ export interface ExecutorResponse {
   status: number
   output: string
   error: string
-  language: string,
+  language: string
   info: string
 }

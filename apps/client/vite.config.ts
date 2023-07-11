@@ -1,11 +1,11 @@
-/// <reference types="vitest" />
-/// <reference types="vite-plugin-pwa/client" />
-import { defineConfig } from 'vite';
-import preact from '@preact/preset-vite';
+// / <reference types="vitest" />
+// / <reference types="vite-plugin-pwa/client" />
+import { defineConfig } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
-import webfontDownload from 'vite-plugin-webfont-dl';
+import webfontDownload from 'vite-plugin-webfont-dl'
+import viteTsConfigPaths from 'vite-tsconfig-paths'
 
-import viteTsConfigPaths from 'vite-tsconfig-paths';
+import preact from '@preact/preset-vite'
 
 export default defineConfig({
   cacheDir: '../../node_modules/.vite/client',
@@ -22,18 +22,18 @@ export default defineConfig({
 
   preview: {
     port: 4200,
-    host: 'localhost',
+    host: 'localhost'
   },
   plugins: [
     webfontDownload([
-      'https://fonts.googleapis.com/css2?family=Poppins&display=swap',
+      'https://fonts.googleapis.com/css2?family=Poppins&display=swap'
     ]),
     preact(),
     viteTsConfigPaths({
-      root: '../../',
+      root: '../../'
     }),
     VitePWA({
-      registerType: "autoUpdate",
+      registerType: 'autoUpdate',
       injectRegister: 'auto',
       strategies: 'injectManifest',
       srcDir: 'public',
@@ -47,16 +47,16 @@ export default defineConfig({
         enabled: false
       },
       includeAssets: [
-        "**/*",
+        '**/*'
       ]
     })
   ],
   test: {
     globals: true,
     cache: {
-      dir: '../../node_modules/.vitest',
+      dir: '../../node_modules/.vitest'
     },
     environment: 'jsdom',
-    include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
-  },
-});
+    include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}']
+  }
+})

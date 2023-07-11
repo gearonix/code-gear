@@ -20,4 +20,5 @@ export const Icon = styled.div`
   }
   margin-top: 20px;
   cursor: pointer;
+  user-select: none;
 `

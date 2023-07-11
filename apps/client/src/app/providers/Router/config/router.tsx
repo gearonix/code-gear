@@ -1,7 +1,8 @@
 import {
   createBrowserRouter
-} from "react-router-dom"
+} from 'react-router-dom'
 
+import { About } from '@/pages/About'
 import { Main } from '@/pages/Main'
 import { NotFound } from '@/pages/NotFound'
 
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: RoutePaths.EDITOR,
     element: <Editor/>
+  },
+  {
+    path: RoutePaths.ABOUT,
+    element: <About/>
   },
   {
     path: '*',

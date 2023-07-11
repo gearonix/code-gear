@@ -32,7 +32,8 @@ export default defineConfig({
       formats: ['es', 'cjs']
     },
     rollupOptions: {
-      external: ['react', 'react-dom', 'react/jsx-runtime', 'antd']
+      external: ['react', 'react-dom', 'react/jsx-runtime',
+        'antd', 'react-router-dom']
     }
   },
   test: {

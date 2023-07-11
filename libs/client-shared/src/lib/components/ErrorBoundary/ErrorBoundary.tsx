@@ -1,10 +1,10 @@
 import { useErrorBoundary } from 'preact/hooks'
 
-import { WithChildren } from '../../../types'
+import { WithPreactChildren } from '../../../types'
 
 import ErrorTemplate from './ui/ErrorTemplate'
 
-const ErrorBoundary = ({ children }: WithChildren) => {
+const ErrorBoundary = ({ children }: WithPreactChildren) => {
   const [error] = useErrorBoundary()
 
   console.error(error)

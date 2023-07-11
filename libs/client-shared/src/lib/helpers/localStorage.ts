@@ -18,6 +18,12 @@ export class LocalStorageClient {
     }
     localStorage.setItem(key, JSON.stringify(value))
   }
+  public clear(key?: LocalStorageKeys): void {
+    if (key) {
+      return localStorage.removeItem(key)
+    }
+    localStorage.clear()
+  }
 }
 
 const isJson = (value: string) => {
