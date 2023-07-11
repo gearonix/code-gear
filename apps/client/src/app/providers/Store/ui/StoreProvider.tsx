@@ -2,11 +2,11 @@ import { createContext } from 'react'
 
 import RootStore from '../config/store'
 
-import { WithChildren } from '$/client-shared'
+import { WithPreactChildren } from '$/client-shared'
 
 export const StoreContext = createContext<RootStore>({} as RootStore)
 
-export const StoreProvider = ({ children }: WithChildren) => {
+export const StoreProvider = ({ children }: WithPreactChildren) => {
   const root = new RootStore()
 
   return <StoreContext.Provider value={root}>

@@ -18,6 +18,6 @@ export interface ExecutorApiResponse {
   status: HttpStatus
   output: string
   error: string
-  language: ExecutorLanguagesValues,
+  language: ExecutorLanguagesValues
   info: string
 }

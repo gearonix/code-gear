@@ -1,0 +1,1 @@
+export { useTerminalOutputAnimations } from './useTerminalOutputAnimations'
