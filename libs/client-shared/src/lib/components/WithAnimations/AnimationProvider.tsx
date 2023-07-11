@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useMemo, useRef } from 'react'
 
 import { useBooleanState } from '../../../hooks'
-import { GestureType, SpringType, WithReactChildren } from '../../../types'
+import { GestureType, SpringType, WithChildren } from '../../../types'
 import { Display } from '../common'
 
 
@@ -20,7 +20,7 @@ const getAnimationModules = async () => {
   ])
 }
 
-const AnimationProvider = ({ children }: WithReactChildren) => {
+const AnimationProvider = ({ children }: WithChildren) => {
   const SpringRef = useRef<SpringType>()
   const GestureRef = useRef<GestureType>()
   const loader = useBooleanState()

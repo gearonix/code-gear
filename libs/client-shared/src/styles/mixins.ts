@@ -35,13 +35,13 @@ export const font = (font : Font) => css`
 
 export const antdColor = (color: string) => ({ theme } : any) => `${theme[color]} !important;`
 
-export const customScrollbar = (elem : string) => css`
+export const customScrollbar = (elem = '&') => css`
   ${elem}::-webkit-scrollbar {
     width: 10px;
   }
 
   ${elem}::-webkit-scrollbar-track {
-    background-color: ${({ theme }) => theme.greyDark};
+    background-color: ${({ theme }) => theme.lightGrey};
   }
 
   ${elem}::-webkit-scrollbar-thumb {

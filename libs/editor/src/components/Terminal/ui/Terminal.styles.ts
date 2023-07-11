@@ -1,14 +1,13 @@
 import { Tabs } from 'antd'
 import styled from 'styled-components'
 
-import { AnimatedDiv } from '$/client-shared'
-import { absolute, antdColor, color, hover, margin, wh } from '$/styles'
+import { absolute, antdColor, color, flex, hover, margin, wh } from '$/styles'
 
 interface TerminalStylesProps{
   readonly $bottom: number
 }
 
-export const createTerminalStyles = (div: AnimatedDiv) => styled(div)<TerminalStylesProps>`
+export const TerminalStyles = styled.div<TerminalStylesProps>`
   padding-left: 28px;
   z-index: 15;
   position: fixed;
@@ -25,15 +24,21 @@ export const createTerminalStyles = (div: AnimatedDiv) => styled(div)<TerminalSt
   user-select: none;
 `
 
-export const CloseButton = styled.div`
+export const TerminalButtons = styled.div`
   ${absolute({
-    right: '34px',
+    right: '44px',
     top: '23px'
   })}
-  ${wh('21px')};
+  ${flex('flex-end')};
+  gap: 23px;
+  ${wh('100px','22px')};
   cursor: pointer;
   svg {
-    ${wh()}
+    path {
+      stroke: ${color('secondaryGrey')};
+      ${({ theme }) => hover(theme.light)};
+    }
+    ${wh('22px')}
     color: ${color('secondaryGrey')};
     ${({ theme }) => hover(theme.light)}
   }
@@ -59,21 +64,4 @@ export const Navigation = styled(Tabs)`
   }
 
   font-size: ${({ theme }) => theme.fz6};
-`
-
-export const Output = styled.p`
-  color: ${color('light')};
-  font-size: ${({ theme }) => theme.fz7};
-  margin-top: 4px;
-  font-weight: normal;
-
-  span {
-    display: block;
-    margin-top: 17px;
-    font-size: ${({ theme }) => theme.fz7};
-  }
-
-  span:first-child {
-    margin-top: 22px;
-  }
 `

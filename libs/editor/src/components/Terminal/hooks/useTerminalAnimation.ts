@@ -1,7 +1,7 @@
 import { useAnimations, VoidFunction } from '$/client-shared'
 
 export const useTerminalAnimation = (closeCallback: VoidFunction) => {
-  const terminalHeight = 260
+  const terminalHeight = 300
   const { Spring, Gesture } = useAnimations()
   const [{ y }, api] = Spring.useSpring(() => ({ y: terminalHeight }))
 

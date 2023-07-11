@@ -4,9 +4,9 @@ import { ThemeProvider as StyledThemeProvider } from 'styled-components'
 import { AntdConfig } from '../config/antdConfig'
 import { DarkThemePalette } from '../config/themes'
 
-import { WithChildren } from '$/client-shared'
+import { WithPreactChildren } from '$/client-shared'
 
-const ThemeProvider = ({ children }: WithChildren) => {
+const ThemeProvider = ({ children }: WithPreactChildren) => {
   return  <AntdConfigProvider theme={AntdConfig}>
     <StyledThemeProvider theme={DarkThemePalette}>
     {children}

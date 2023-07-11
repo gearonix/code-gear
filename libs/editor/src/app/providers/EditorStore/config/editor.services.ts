@@ -2,6 +2,7 @@ import { makeAutoObservable } from 'mobx'
 
 import { ExecutorRequest, ExecutorResponse } from '@/components/HeaderRightSection'
 
+import EditorActions from './editor.actions'
 import EditorGetters from './editor.getters'
 import EditorStore from './editor.store'
 
@@ -12,12 +13,14 @@ import { EndPoints } from '$/config'
 class EditorServices {
   private state: EditorStore
   private getters: EditorGetters
+  private actions: EditorActions
 
   constructor(root: EditorStore) {
     makeAutoObservable(this)
 
     this.state = root
     this.getters = root.getters
+    this.actions = root.actions
   }
 
   async requestCodeExecution() {
@@ -31,10 +34,10 @@ class EditorServices {
       language: activeTab.lang
     }
 
-    const response = await httpService.post<ExecutorResponse>(
+    const res = await httpService.post<ExecutorResponse>(
       EndPoints.CODE_EXECUTOR_API, requestBody)
 
-    activeTab.updateExecuteMessage(response.data)
+    this.actions.addExecuteMessage(res.data)
   }
 }
 

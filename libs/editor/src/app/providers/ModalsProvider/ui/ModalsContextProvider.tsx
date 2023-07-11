@@ -2,12 +2,12 @@ import { createContext, useMemo, useReducer } from 'react'
 
 import { ModalsPayload, ModalsState } from '../types'
 
-import { WithReactChildren } from '$/client-shared'
+import { WithChildren } from '$/client-shared'
 
 
 export const ModalsContext = createContext<ModalsPayload>({})
 
-const ModalsContextProvider = ({ children }: WithReactChildren) => {
+const ModalsContextProvider = ({ children }: WithChildren) => {
   const initialState: ModalsState = useMemo(() => ({
     isSettingsOpened: false,
     isTerminalOpened: false

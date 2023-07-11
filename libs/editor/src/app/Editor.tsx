@@ -2,6 +2,8 @@ import { Terminal } from '@/components/Terminal'
 import { Aside } from '@/modules/Aside'
 import { EditorContent } from '@/modules/EditorContent'
 import { Header } from '@/modules/Header'
+import { useEditor } from '@/shared/hooks/useEditor'
+import { useMonaco } from '@monaco-editor/react'
 
 import { EditorStoreProvider } from './providers/EditorStore'
 import { ModalsContextProvider } from './providers/ModalsProvider'

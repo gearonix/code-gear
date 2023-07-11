@@ -23,7 +23,6 @@ export const EditorContent = observer(() => {
   const storage = new LocalStorageClient()
 
   const localSave = useDebounce(() => {
-    console.log('saved to localStorage.')
     storage.set('EDITOR_CONTENT_DATA', content)
   }, 1000)
 

@@ -1,23 +1,30 @@
 import { useModalsContext } from '@/shared/hooks'
 
+import { useEditorActions } from '../hooks/useEditorActions'
+
 import { AsideStyles, Icon } from './Aside.styles'
 
 import { useFullScreen } from '$/client-shared'
-import { BsSearch, GoTerminal, LuTestTube2, SlInfo,SlSizeFullscreen,
-  TfiSettings } from '$/icons'
+import { BsJournals, BsSearch, GoTerminal, LuTestTube2,
+  SlInfo, SlSizeFullscreen, TfiSettings } from '$/icons'
 
 const Aside = () => {
   const toggleFullscreen = useFullScreen()
   const modalsContext = useModalsContext()
+  const editorActions = useEditorActions()
 
   const toggleTerminal = () => {
     modalsContext.toggle('isTerminalOpened')
   }
 
+
   return <AsideStyles>
     <div>
-      <Icon>
+      <Icon onClick={editorActions.find}>
         <BsSearch/>
+      </Icon>
+      <Icon onClick={editorActions.replace}>
+        <BsJournals/>
       </Icon>
       <Icon onClick={toggleFullscreen}>
         <SlSizeFullscreen/>

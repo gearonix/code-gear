@@ -1,43 +1,61 @@
-import React, { useEffect } from 'react'
+import { useCallback, useEffect, useRef } from 'react'
 import { observer } from 'mobx-react-lite'
 
-import { useTerminalAnimation } from '@/components/Terminal/hooks'
-import { CloseButton, createTerminalStyles, Navigation, Output } from '@/components/Terminal/ui/Terminal.styles'
-import { useGetters, useModalsContext } from '@/shared/hooks'
+import { useTerminalAnimation, useTerminalTabs } from '@/components/Terminal/hooks'
+import { TerminalOutput, TerminalOutputHandle } from '@/components/TerminalOutput'
+import { useActions, useModalsContext } from '@/shared/hooks'
 
-import { AnimationProvider } from '$/client-shared'
-import { AiOutlineClose } from '$/icons'
+import { TabsKeys } from '../hooks/useTerminalTabs'
 
+import { Navigation, TerminalButtons, TerminalStyles } from './Terminal.styles'
+
+import { AnimationProvider, Display } from '$/client-shared'
+import { AiOutlineClose, GrClear } from '$/icons'
 
 const Terminal = observer(() => {
   const modalsContext = useModalsContext()
   const { isTerminalOpened } = modalsContext.state
-  const getters = useGetters()
-  const activeTab = getters.getActiveTab()
+  const terminalTabs = useTerminalTabs()
+  const actions = useActions()
+  const terminalOutputRef = useRef<TerminalOutputHandle>()
 
-  const closeTerminal = () => {
-    modalsContext.update({ isTerminalOpened: false })
+  const onTabChange = (newActiveKey: string) => {
+    terminalTabs.set(newActiveKey as TabsKeys)
   }
 
+  const closeTerminal = useCallback(() => {
+    modalsContext.update({ isTerminalOpened: false })
+  }, [])
+
+  const clearTerminal = async () => {
+    await terminalOutputRef.current?.close()
+    actions.clearExecuteMessages()
+  }
 
   const motion = useTerminalAnimation(closeTerminal)
-  const TerminalStyles = createTerminalStyles(motion.div)
 
   useEffect(() => {
-      motion.toggle(isTerminalOpened)
+    motion.toggle(isTerminalOpened)
   }, [isTerminalOpened])
 
   return <TerminalStyles $bottom={motion.terminalHeight}
-                {...motion.bind()} style={motion.springs}>
-    <Navigation items={[{ label: 'Terminal', key: '1' },
-      { label: 'Test cases', key: '2' }]} size={'large'}/>
-    <Output>
-      CodeGear output console.
-      <span>[User] [16:05] &gt; <em>{activeTab.executeMessage}</em></span>
-    </Output>
-    <CloseButton onClick={closeTerminal}>
-      <AiOutlineClose/>
-    </CloseButton>
+                {...motion.bind()} style={motion.springs}
+                as={motion.div}>
+    <Navigation items={terminalTabs.val}
+      size={'large'} onChange={onTabChange} activeKey={terminalTabs.key}/>
+
+    <Display when={terminalTabs.key === 'terminal'}>
+      <TerminalOutput ref={terminalOutputRef}/>
+    </Display>
+    <Display when={terminalTabs.key === 'test_cases'}>
+      test cases
+    </Display>
+
+    <TerminalButtons>
+      <GrClear onClick={clearTerminal}/>
+      <AiOutlineClose onClick={closeTerminal}/>
+    </TerminalButtons>
+
       </TerminalStyles>
 })
 
