@@ -1,8 +1,12 @@
+import { Link } from 'react-router-dom'
+
 import { useFileService } from '@/modules/EditorContent/hooks'
 import logo from '@/public/logo.svg'
 import { useActions, useServices } from '@/shared/hooks'
 
-import { HeaderOptionsStyles, Logo, Option } from './HeaderOptions.styles'
+import { HeaderOptionsStyles, Option } from './HeaderOptions.styles'
+
+import { RoutePaths } from '$/client-shared'
 
 const HeaderOptions = () => {
   const services = useServices()
@@ -17,7 +21,9 @@ const HeaderOptions = () => {
   }
 
   return <HeaderOptionsStyles>
-      <Logo src={logo}/>
+    <Link to={RoutePaths.MAIN}>
+      <img src={logo}/>
+    </Link>
     <Option onClick={openFile}>Open</Option>
     <Option onClick={saveFile}>Save</Option>
     <Option onClick={createTab}>New</Option>

@@ -27,7 +27,7 @@ const TerminalOutput = observer<TerminalOutputHandle, void>((_, preparedRef) => 
     outputRef.current?.scrollToBottom()
   }, [executeMessages.length, isTerminalOpened])
 
-  return <BottomScroll  ref={outputRef}>
+  return <BottomScroll ref={outputRef}>
     CodeGear output console.
     <SpringDiv style={{ ...spring }}>
       {executeMessages.map((msg, idx) => {

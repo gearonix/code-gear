@@ -5,7 +5,7 @@ import { useTerminalAnimation, useTerminalTabs } from '@/components/Terminal/hoo
 import { TerminalOutput, TerminalOutputHandle } from '@/components/TerminalOutput'
 import { useActions, useModalsContext } from '@/shared/hooks'
 
-import { TabsKeys } from '../hooks/useTerminalTabs'
+import { TerminalTabKeys } from '../../hooks/useTerminalTabs'
 
 import { Navigation, TerminalButtons, TerminalStyles } from './Terminal.styles'
 
@@ -20,7 +20,7 @@ const Terminal = observer(() => {
   const terminalOutputRef = useRef<TerminalOutputHandle>()
 
   const onTabChange = (newActiveKey: string) => {
-    terminalTabs.set(newActiveKey as TabsKeys)
+    terminalTabs.set(newActiveKey as TerminalTabKeys)
   }
 
   const closeTerminal = useCallback(() => {
@@ -29,7 +29,7 @@ const Terminal = observer(() => {
 
   const clearTerminal = async () => {
     await terminalOutputRef.current?.close()
-    actions.clearExecuteMessages()
+    actions.terminal.clearExecuteMessages()
   }
 
   const motion = useTerminalAnimation(closeTerminal)

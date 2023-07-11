@@ -8,9 +8,10 @@ import { WithChildren } from '$/client-shared'
 export const ModalsContext = createContext<ModalsPayload>({})
 
 const ModalsContextProvider = ({ children }: WithChildren) => {
-  const initialState: ModalsState = useMemo(() => ({
+  const initialState : ModalsState = useMemo<ModalsState>(() => ({
     isSettingsOpened: false,
-    isTerminalOpened: false
+    isTerminalOpened: false,
+    selectedTerminalTab: 'terminal'
   }), [])
 
   const modalsReducer = (prev: ModalsState, next: Partial<ModalsState>) => {

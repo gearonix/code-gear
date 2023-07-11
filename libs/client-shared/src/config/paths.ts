@@ -1,9 +1,11 @@
 enum AppRoutes {
   MAIN = 'MAIN',
-  EDITOR = 'EDITOR'
+  EDITOR = 'EDITOR',
+  ABOUT = 'ABOUT'
 }
 
 export const RoutePaths: Record<AppRoutes, string> = {
   [AppRoutes.MAIN]: '/',
-  [AppRoutes.EDITOR]: '/edit'
+  [AppRoutes.EDITOR]: '/edit',
+  [AppRoutes.ABOUT]: '/about'
 }

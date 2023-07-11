@@ -37,7 +37,7 @@ class EditorServices {
     const res = await httpService.post<ExecutorResponse>(
       EndPoints.CODE_EXECUTOR_API, requestBody)
 
-    this.actions.addExecuteMessage(res.data)
+    this.actions.terminal.addExecuteMessage(res.data)
   }
 }
 

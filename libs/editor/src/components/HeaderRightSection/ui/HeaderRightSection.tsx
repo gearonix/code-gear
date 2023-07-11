@@ -19,7 +19,8 @@ const HeaderRightSection = observer(() => {
 
     await services.requestCodeExecution()
     modalsContext.update({
-      isTerminalOpened: true
+      isTerminalOpened: true,
+      selectedTerminalTab: 'terminal'
     })
   }
 

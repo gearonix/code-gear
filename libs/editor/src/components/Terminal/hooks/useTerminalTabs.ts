@@ -1,10 +1,11 @@
-import { useState } from 'react'
+import { useCallback, useState } from 'react';
+import { useModalsContext } from '@/shared/hooks';
 
-export type TabsKeys = 'terminal' | 'test_cases'
+export type TerminalTabKeys = 'terminal' | 'test_cases'
 
 interface TerminalTab {
   label: string
-  key: TabsKeys
+  key: TerminalTabKeys
 }
 
 const terminalTabs: TerminalTab[] = [
@@ -13,7 +14,14 @@ const terminalTabs: TerminalTab[] = [
 ]
 
 export const useTerminalTabs = () => {
-  const [activeKey, setActiveKey] = useState<TabsKeys>(terminalTabs[0].key)
+  const modalsContext = useModalsContext()
+  const activeKey = modalsContext.state.selectedTerminalTab
+
+  const setActiveKey = useCallback((key: TerminalTabKeys) => {
+    modalsContext.update({
+      selectedTerminalTab: key
+    })
+  }, [])
 
   return {
     key: activeKey,

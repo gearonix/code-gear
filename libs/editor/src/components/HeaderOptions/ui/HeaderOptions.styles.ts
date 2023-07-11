@@ -13,6 +13,3 @@ export const Option = styled.span`
   cursor: pointer;
 `
 
-export const Logo = styled.img`
-  margin-bottom: 5px;
-`
