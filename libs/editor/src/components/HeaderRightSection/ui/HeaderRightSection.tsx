@@ -1,6 +1,6 @@
 import { observer } from 'mobx-react-lite'
 
-import { useActions, useGetters, useModalsContext, useServices } from '@/shared/hooks'
+import { useGetters, useModalsContext, useServices } from '@/shared/hooks'
 
 import { HeaderIcon, RightSection } from './HeaderRightSection.styles'
 

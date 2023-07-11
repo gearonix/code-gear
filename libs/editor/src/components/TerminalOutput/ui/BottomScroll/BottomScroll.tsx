@@ -2,7 +2,7 @@ import { forwardRef, useImperativeHandle, useRef } from 'react'
 
 import { Output } from '../TerminalOutput.styles'
 
-import { WithChildren } from '$/client-shared'
+import { VoidFunction, WithChildren } from '$/client-shared'
 
 export interface BottomScrollHandle {
   scrollToBottom: VoidFunction

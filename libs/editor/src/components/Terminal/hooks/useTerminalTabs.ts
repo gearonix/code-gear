@@ -1,5 +1,6 @@
-import { useCallback, useState } from 'react';
-import { useModalsContext } from '@/shared/hooks';
+import { useCallback } from 'react'
+
+import { useModalsContext } from '@/shared/hooks'
 
 export type TerminalTabKeys = 'terminal' | 'test_cases'
 

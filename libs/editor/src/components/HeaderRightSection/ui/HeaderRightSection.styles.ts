@@ -11,7 +11,7 @@ export const RightSection = styled.div`
 
 
 interface HeaderIconProps {
-  readonly $disabled: boolean;
+  readonly $disabled: boolean
 }
 
 export const HeaderIcon = styled(Icon)<HeaderIconProps>`

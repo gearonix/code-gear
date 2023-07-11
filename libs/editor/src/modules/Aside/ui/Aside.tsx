@@ -7,7 +7,7 @@ import { useEditorActions } from '../hooks/useEditorActions'
 
 import { AsideStyles, Icon } from './Aside.styles'
 
-import { RoutePaths, useFullScreen } from '$/client-shared';
+import { RoutePaths, useFullScreen } from '$/client-shared'
 import { BsJournals, BsSearch, GoTerminal, LuTestTube2,
   SlInfo, SlSizeFullscreen, TfiSettings } from '$/icons'
 
