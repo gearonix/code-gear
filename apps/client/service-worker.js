@@ -343,7 +343,7 @@ class de {
     })), this._db;
   }
 }
-class fe {
+class _e {
   /**
    * To construct a new CacheExpiration instance you must provide at least
    * one of the `config` properties.
@@ -416,12 +416,12 @@ const d = {
   prefix: "workbox",
   runtime: "runtime",
   suffix: typeof registration < "u" ? registration.scope : ""
-}, U = (n) => [d.prefix, n, d.suffix].filter((e) => e && e.length > 0).join("-"), _e = (n) => {
+}, U = (n) => [d.prefix, n, d.suffix].filter((e) => e && e.length > 0).join("-"), fe = (n) => {
   for (const e of Object.keys(d))
     n(e);
-}, b = {
+}, T = {
   updateDetails: (n) => {
-    _e((e) => {
+    fe((e) => {
       typeof n[e] == "string" && (d[e] = n[e]);
     });
   },
@@ -474,10 +474,10 @@ class me {
    * @private
    */
   _getCacheExpiration(e) {
-    if (e === b.getRuntimeName())
+    if (e === T.getRuntimeName())
       throw new h("expire-custom-caches-only");
     let t = this._cacheExpirations.get(e);
-    return t || (t = new fe(e, this._config), this._cacheExpirations.set(e, t)), t;
+    return t || (t = new _e(e, this._config), this._cacheExpirations.set(e, t)), t;
   }
   /**
    * @param {Response} cachedResponse
@@ -579,7 +579,7 @@ class we {
     };
   }
 }
-class Ee {
+class be {
   constructor({ precacheController: e }) {
     this.cacheKeyWillBeUsed = async ({ request: t, params: s }) => {
       const r = (s == null ? void 0 : s.cacheKey) || this._precacheController.getCacheKeyForURL(t.url);
@@ -588,7 +588,7 @@ class Ee {
   }
 }
 let R;
-function ye() {
+function Ee() {
   if (R === void 0) {
     const n = new Response("");
     if ("body" in n)
@@ -601,7 +601,7 @@ function ye() {
   }
   return R;
 }
-async function Te(n, e) {
+async function ye(n, e) {
   let t = null;
   if (n.url && (t = new URL(n.url).origin), t !== self.location.origin)
     throw new h("cross-origin-copy-response", { origin: t });
@@ -609,7 +609,7 @@ async function Te(n, e) {
     headers: new Headers(s.headers),
     status: s.status,
     statusText: s.statusText
-  }, a = e ? e(r) : r, o = ye() ? s.body : await s.blob();
+  }, a = e ? e(r) : r, o = Ee() ? s.body : await s.blob();
   return new Response(o, a);
 }
 function v(n, e) {
@@ -618,7 +618,7 @@ function v(n, e) {
     t.searchParams.delete(s);
   return t.href;
 }
-async function be(n, e, t, s) {
+async function Te(n, e, t, s) {
   const r = v(e.url, t);
   if (e.url === r)
     return n.match(e, s);
@@ -650,7 +650,7 @@ try {
   self["workbox:strategies:7.0.0"] && _();
 } catch {
 }
-function y(n) {
+function E(n) {
   return typeof n == "string" ? new Request(n) : n;
 }
 class Oe {
@@ -691,7 +691,7 @@ class Oe {
    */
   async fetch(e) {
     const { event: t } = this;
-    let s = y(e);
+    let s = E(e);
     if (s.mode === "navigate" && t instanceof FetchEvent && t.preloadResponse) {
       const o = await t.preloadResponse;
       if (o)
@@ -754,7 +754,7 @@ class Oe {
    * @return {Promise<Response|undefined>} A matching response, if found.
    */
   async cacheMatch(e) {
-    const t = y(e);
+    const t = E(e);
     let s;
     const { cacheName: r, matchOptions: a } = this._strategy, o = await this.getCacheKey(t, "read"), i = Object.assign(Object.assign({}, a), { cacheName: r });
     s = await caches.match(o, i);
@@ -784,7 +784,7 @@ class Oe {
    * not be cached, and `true` otherwise.
    */
   async cachePut(e, t) {
-    const s = y(e);
+    const s = E(e);
     await Ie(0);
     const r = await this.getCacheKey(s, "write");
     if (!t)
@@ -794,7 +794,7 @@ class Oe {
     const a = await this._ensureResponseSafeToCache(t);
     if (!a)
       return !1;
-    const { cacheName: o, matchOptions: i } = this._strategy, c = await self.caches.open(o), l = this.hasCallback("cacheDidUpdate"), m = l ? await be(
+    const { cacheName: o, matchOptions: i } = this._strategy, c = await self.caches.open(o), l = this.hasCallback("cacheDidUpdate"), m = l ? await Te(
       // TODO(philipwalton): the `__WB_REVISION__` param is a precaching
       // feature. Consider into ways to only add this behavior if using
       // precaching.
@@ -835,7 +835,7 @@ class Oe {
     if (!this._cacheKeys[s]) {
       let r = e;
       for (const a of this.iterateCallbacks("cacheKeyWillBeUsed"))
-        r = y(await a({
+        r = E(await a({
           mode: t,
           request: r,
           event: this.event,
@@ -983,7 +983,7 @@ class C {
    * for any `cache.match()` or `cache.put()` calls made by this strategy.
    */
   constructor(e = {}) {
-    this.cacheName = b.getRuntimeName(e.cacheName), this.plugins = e.plugins || [], this.fetchOptions = e.fetchOptions, this.matchOptions = e.matchOptions;
+    this.cacheName = T.getRuntimeName(e.cacheName), this.plugins = e.plugins || [], this.fetchOptions = e.fetchOptions, this.matchOptions = e.matchOptions;
   }
   /**
    * Perform a request strategy and returns a `Promise` that will resolve with
@@ -1100,7 +1100,7 @@ class p extends C {
    * get the response from the network if there's a precache miss.
    */
   constructor(e = {}) {
-    e.cacheName = b.getPrecacheName(e.cacheName), super(e), this._fallbackToNetwork = e.fallbackToNetwork !== !1, this.plugins.push(p.copyRedirectedCacheableResponsesPlugin);
+    e.cacheName = T.getPrecacheName(e.cacheName), super(e), this._fallbackToNetwork = e.fallbackToNetwork !== !1, this.plugins.push(p.copyRedirectedCacheableResponsesPlugin);
   }
   /**
    * @private
@@ -1179,7 +1179,7 @@ p.defaultPrecacheCacheabilityPlugin = {
 };
 p.copyRedirectedCacheableResponsesPlugin = {
   async cacheWillUpdate({ response: n }) {
-    return n.redirected ? await Te(n) : n;
+    return n.redirected ? await ye(n) : n;
   }
 };
 class Ae {
@@ -1195,10 +1195,10 @@ class Ae {
    */
   constructor({ cacheName: e, plugins: t = [], fallbackToNetwork: s = !0 } = {}) {
     this._urlsToCacheKeys = /* @__PURE__ */ new Map(), this._urlsToCacheModes = /* @__PURE__ */ new Map(), this._cacheKeysToIntegrities = /* @__PURE__ */ new Map(), this._strategy = new p({
-      cacheName: b.getPrecacheName(e),
+      cacheName: T.getPrecacheName(e),
       plugins: [
         ...t,
-        new Ee({ precacheController: this })
+        new be({ precacheController: this })
       ],
       fallbackToNetwork: s
     }), this.install = this.install.bind(this), this.activate = this.activate.bind(this);
@@ -1385,8 +1385,8 @@ try {
   self["workbox:routing:7.0.0"] && _();
 } catch {
 }
-const q = "GET", T = (n) => n && typeof n == "object" ? n : { handle: n };
-class E {
+const q = "GET", y = (n) => n && typeof n == "object" ? n : { handle: n };
+class b {
   /**
    * Constructor for Route class.
    *
@@ -1399,7 +1399,7 @@ class E {
    * against.
    */
   constructor(e, t, s = q) {
-    this.handler = T(t), this.match = e, this.method = s;
+    this.handler = y(t), this.match = e, this.method = s;
   }
   /**
    *
@@ -1407,10 +1407,10 @@ class E {
    * function that returns a Promise resolving to a Response
    */
   setCatchHandler(e) {
-    this.catchHandler = T(e);
+    this.catchHandler = y(e);
   }
 }
-class Ue extends E {
+class Ue extends b {
   /**
    * If the regular expression contains
    * [capture groups]{@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#grouping-back-references},
@@ -1578,7 +1578,7 @@ class De {
    * default handler. Each method has its own default.
    */
   setDefaultHandler(e, t = q) {
-    this._defaultHandlerMap.set(t, T(e));
+    this._defaultHandlerMap.set(t, y(e));
   }
   /**
    * If a Route throws an error while handling a request, this `handler`
@@ -1588,7 +1588,7 @@ class De {
    * function that returns a Promise resulting in a Response.
    */
   setCatchHandler(e) {
-    this._catchHandler = T(e);
+    this._catchHandler = y(e);
   }
   /**
    * Registers a route with the router.
@@ -1621,12 +1621,12 @@ function N(n, e, t) {
   let s;
   if (typeof n == "string") {
     const a = new URL(n, location.href), o = ({ url: i }) => i.href === a.href;
-    s = new E(o, e, t);
+    s = new b(o, e, t);
   } else if (n instanceof RegExp)
     s = new Ue(n, e, t);
   else if (typeof n == "function")
-    s = new E(n, e, t);
-  else if (n instanceof E)
+    s = new b(n, e, t);
+  else if (n instanceof b)
     s = n;
   else
     throw new h("unsupported-route-type", {
@@ -1659,7 +1659,7 @@ function* Le(n, { ignoreURLParametersMatching: e = [/^utm_/, /^fbclid$/], direct
       yield c.href;
   }
 }
-class ke extends E {
+class ke extends b {
   /**
    * @param {PrecacheController} precacheController A `PrecacheController`
    * instance used to both match requests and respond to fetch events.
@@ -1868,7 +1868,7 @@ class Ke extends C {
     return r;
   }
 }
-He([{"revision":null,"url":"assets/Dracula-e98fc9aa.js"},{"revision":null,"url":"assets/Dreamweaver-15561dbd.js"},{"revision":null,"url":"assets/Eiffel-64ee1523.js"},{"revision":null,"url":"assets/GitHub-06a37610.js"},{"revision":null,"url":"assets/IDLE-cb87b507.js"},{"revision":null,"url":"assets/index-61cc8628.js"},{"revision":null,"url":"assets/index-9d9ae4af.css"},{"revision":null,"url":"assets/Monokai-65cda70f.js"},{"revision":null,"url":"assets/Nord-e5536575.js"},{"revision":null,"url":"assets/react-spring_web.modern-eca2870c.js"},{"revision":null,"url":"assets/Tomorrow-33c61db8.js"},{"revision":null,"url":"assets/Twilight-ab8a64b1.js"},{"revision":null,"url":"assets/use-gesture-react.esm-d09ae1bd.js"},{"revision":null,"url":"assets/workbox-window.prod.es5-a7b12eab.js"},{"revision":"963fa78ff70cb65c3e1ae6cf73530607","url":"index.html"},{"revision":"f2513dbc34ba877ca158e280672da925","url":"favicon.svg"},{"revision":"cee54b05544743f05877544d24b768e4","url":"manifest.json"},{"revision":"ad20c3b578a498dfc023c86cd4c0707f","url":"service-worker.js"},{"revision":"33dbdd0177549353eeeb785d02c294af","url":"logo/logo192.png"},{"revision":"917515db74ea8d1aee6a246cfbcc0b45","url":"logo/logo512.png"},{"revision":"82472dd6a04460bf23af25a2fcbdbe95","url":"manifest.webmanifest"}]);
+He([{"revision":null,"url":"assets/Dracula-e98fc9aa.js"},{"revision":null,"url":"assets/Dreamweaver-15561dbd.js"},{"revision":null,"url":"assets/Eiffel-64ee1523.js"},{"revision":null,"url":"assets/GitHub-06a37610.js"},{"revision":null,"url":"assets/IDLE-cb87b507.js"},{"revision":null,"url":"assets/index-7ee1c27f.js"},{"revision":null,"url":"assets/index-9d9ae4af.css"},{"revision":null,"url":"assets/Monokai-65cda70f.js"},{"revision":null,"url":"assets/Nord-e5536575.js"},{"revision":null,"url":"assets/react-spring_web.modern-67a9d41a.js"},{"revision":null,"url":"assets/Tomorrow-33c61db8.js"},{"revision":null,"url":"assets/Twilight-ab8a64b1.js"},{"revision":null,"url":"assets/use-gesture-react.esm-35d64101.js"},{"revision":null,"url":"assets/workbox-window.prod.es5-a7b12eab.js"},{"revision":"b85bfeaa9fec78663c53fbdddabbbbe5","url":"index.html"},{"revision":"f2513dbc34ba877ca158e280672da925","url":"favicon.svg"},{"revision":"cee54b05544743f05877544d24b768e4","url":"manifest.json"},{"revision":"ad20c3b578a498dfc023c86cd4c0707f","url":"service-worker.js"},{"revision":"33dbdd0177549353eeeb785d02c294af","url":"logo/logo192.png"},{"revision":"917515db74ea8d1aee6a246cfbcc0b45","url":"logo/logo512.png"},{"revision":"82472dd6a04460bf23af25a2fcbdbe95","url":"manifest.webmanifest"}]);
 self.addEventListener("message", (n) => {
   n.data && n.data.type === "SKIP_WAITING" && self.skipWaiting();
 });

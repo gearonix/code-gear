@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import { WithChildren } from '$/client-shared';
+import { VoidFunction, WithChildren } from '$/client-shared';
 export interface BottomScrollHandle {
     scrollToBottom: VoidFunction;
 }
