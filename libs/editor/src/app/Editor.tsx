@@ -1,3 +1,4 @@
+import { Settings } from '@/components/Settings'
 import { Terminal } from '@/components/Terminal'
 import { Aside } from '@/modules/Aside'
 import { EditorContent } from '@/modules/EditorContent'
@@ -25,6 +26,7 @@ export const Editor = () => {
             <EditorContent/>
             <Terminal/>
           </EditorWrapper>
+          <Settings/>
         </EditorStyles>
       </ModalsContextProvider>
     </ThemeLoader>

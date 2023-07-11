@@ -9,7 +9,7 @@ export const ModalsContext = createContext<ModalsPayload>({})
 
 const ModalsContextProvider = ({ children }: WithChildren) => {
   const initialState : ModalsState = useMemo<ModalsState>(() => ({
-    isSettingsOpened: false,
+    isSettingsOpened: true,
     isTerminalOpened: false,
     selectedTerminalTab: 'terminal'
   }), [])

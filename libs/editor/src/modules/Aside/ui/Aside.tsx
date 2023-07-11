@@ -27,6 +27,9 @@ const Aside = () => {
     })
   }
 
+  const toggleSettings = () => {
+    modalsContext.toggle('isSettingsOpened')
+  }
 
   return <AsideStyles>
     <div>
@@ -47,7 +50,7 @@ const Aside = () => {
       </Icon>
     </div>
     <div>
-      <Icon>
+      <Icon onClick={toggleSettings}>
         <TfiSettings/>
       </Icon>
       <Icon>

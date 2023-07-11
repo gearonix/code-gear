@@ -8,6 +8,7 @@ export const GlobalStyles = createGlobalStyle`
     background: ${({ theme }) => theme.default};
     ${font('Poppins')}
     overflow-x: hidden;
+    user-select: none;
   }
 
   span, p, h2, h3, h4 {
