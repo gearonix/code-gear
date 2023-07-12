@@ -48,3 +48,12 @@ export const tabSizes = [4, 2] as const
 
 export type TabSizes = Keys<typeof tabSizes>
 
+export enum KeyBuildings {
+  O = 'O',
+  S = 'S',
+  N = 'N',
+  T = 'T',
+  P = 'P',
+  J = 'J',
+  Q = 'Q'
+}

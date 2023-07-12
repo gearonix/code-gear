@@ -14,7 +14,6 @@ import { Hex, LocalStorageClient } from '$/client-shared'
 class EditorActions {
   private state: EditorStore
   private readonly getters: EditorGetters
-  private readonly storage: LocalStorageClient
   readonly tabs: TabsActions
   readonly editor: EditorContentActions
   readonly terminal: TerminalActions
@@ -26,33 +25,35 @@ class EditorActions {
     this.tabs = new TabsActions(root)
     this.editor = new EditorContentActions(root)
     this.terminal = new TerminalActions(root)
-
-    this.storage = new LocalStorageClient()
   }
 
   changeTheme(theme: Themes) {
     this.state.theme = theme
-    this.storage.set('EDITOR_THEME', theme)
+    this.state.storage.set('EDITOR_THEME', theme)
   }
 
   changeFontSize(fontSize: FontSizes) {
     this.state.fontSize = fontSize
-    this.storage.set('EDITOR_FONT_SIZE', fontSize)
+    this.state.storage.set('EDITOR_FONT_SIZE', fontSize)
   }
 
   changeTabSize(tabSize: TabSizes) {
     this.state.tabSize = tabSize
-    this.storage.set('EDITOR_TAB_SIZE', tabSize)
+    this.state.storage.set('EDITOR_TAB_SIZE', tabSize)
   }
 
   changeCustomBackground(hex: Hex) {
     this.state.customBackground = hex
-    this.storage.set('EDITOR_CUSTOM_BACKGROUND', hex)
+    this.state.storage.set('EDITOR_CUSTOM_BACKGROUND', hex)
   }
 
   changeCustomColor(hex: Hex) {
     this.state.customColor = hex
-    this.storage.set('EDITOR_CUSTOM_COLOR', hex)
+    this.state.storage.set('EDITOR_CUSTOM_COLOR', hex)
+  }
+
+  setIsLocalStorageDisabled(isDisabled: boolean) {
+    this.state.storage = new LocalStorageClient(isDisabled)
   }
 }
 

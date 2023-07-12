@@ -1,17 +1,18 @@
-import { ColorPicker } from 'antd'
+import { ColorPicker, Switch } from 'antd'
 import { observer } from 'mobx-react-lite'
 
 import { FontSizeSwitcher } from '@/components/FontSizeSwitcher'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
+import { useColorCallback } from '@/components/Settings/hooks'
 import { TabSizeSwitcher } from '@/components/TabSizeSwitcher'
 import { ThemeSwitcher } from '@/components/ThemeSwitcher'
-import { CUSTOM_THEME } from '@/shared/consts'
 import { useActions, useModalsContext, useStore } from '@/shared/hooks'
 
-import { Separator, SettingsItem, SettingsText } from './Settings.styles'
+import KeyBuildings from '../KeyBuildings/KeyBuildings'
 
-import { Hex, Modal, useDebounce } from '$/client-shared'
-import { useColorCallback } from '@/components/Settings/hooks';
+import { Separator, SettingsItem, SettingsText, Title } from './Settings.styles'
+
+import { Modal } from '$/client-shared'
 
 const Settings = observer(() => {
   const modalsContext = useModalsContext()
@@ -30,10 +31,15 @@ const Settings = observer(() => {
   })
 
   const onColorChange = useColorCallback((hex) => {
-    actions.changeCustomBackground(hex)
+    actions.changeCustomColor(hex)
   })
 
-  return <Modal isOpen={isOpen} onClose={closeSettings} title={'Editor settings'}>
+  const onSwitchChange = (isChecked: boolean) => {
+    actions.setIsLocalStorageDisabled(!isChecked)
+  }
+
+  return <Modal isOpen={isOpen} onClose={closeSettings}>
+    <Title>Editor settings</Title>
     <SettingsItem>
       <SettingsText>
         <h4>Editor  Theme</h4>
@@ -73,14 +79,29 @@ const Settings = observer(() => {
     </SettingsItem>
     <SettingsItem>
       <SettingsText>
-        <h4>Custom Editor Background</h4>
-        <p>Change custom background for code editor</p>
+        <h4>Custom Editor Color</h4>
+        <p>Change custom color for code editor</p>
       </SettingsText>
       <ColorPicker onChange={onColorChange} value={customColor}
                    showText size={'large'} />
     </SettingsItem>
+    <Separator/>
+    <SettingsItem>
+      <SettingsText>
+        <h4>Save editor settings to Local Storage</h4>
+        <p>All your next changes will be stored in localStorage</p>
+      </SettingsText>
+      <Switch defaultChecked
+              onChange={onSwitchChange}
+              style={{ marginRight: 15, marginTop: 0 }}
+      />
+    </SettingsItem>
+    <Title>Key buildings</Title>
+    <KeyBuildings/>
+    <Separator/>
   </Modal>
 })
+
 
 
 export default Settings

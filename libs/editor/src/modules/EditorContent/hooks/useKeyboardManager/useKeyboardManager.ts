@@ -1,5 +1,6 @@
-import { useCallback, useEffect } from 'react';
+import { useCallback, useEffect } from 'react'
 
+import { KeyBuildings } from '@/shared/consts'
 import { useActions, useModalsContext, useModalToggle } from '@/shared/hooks'
 
 import { useAltNavigation, useFileService } from '..'
@@ -14,19 +15,19 @@ export const useKeyboardManager = () => {
   const toggle = useModalToggle('isTerminalOpened')
   const modalContext = useModalsContext()
 
-  const test = useCallback(() => {
+  const toggleSettings = useCallback(() => {
     modalContext.toggle('isSettingsOpened')
   }, [modalContext])
 
   useEffect(() => {
     keyboard.on({
-      'O': openFile,
-      'S': saveFile,
-      'N': () => {actions.tabs.createTab()},
-      'T': () => {actions.tabs.removeTab()},
-      'P': toggle('terminal'),
-      'J': toggle('test_cases'),
-      'Q': test
+      [KeyBuildings.O] : openFile,
+      [KeyBuildings.S] : saveFile,
+      [KeyBuildings.N] : () => {actions.tabs.createTab()},
+      [KeyBuildings.T] : () => {actions.tabs.removeTab()},
+      [KeyBuildings.P] : toggle('terminal'),
+      [KeyBuildings.J] : toggle('test_cases'),
+      [KeyBuildings.Q] : toggleSettings
     })
 
     return () => {

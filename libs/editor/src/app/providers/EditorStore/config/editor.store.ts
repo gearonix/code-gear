@@ -19,20 +19,23 @@ class EditorStore{
   tabSize: TabSizes = 4
   customBackground: Hex = '#3d3d3d'
   customColor: Hex = '#3d3d3d'
+  isStorageDisabled: boolean = false
   executeMessages: ExecuteMessage[] = []
-  getters: EditorGetters
-  actions: EditorActions
-  services: EditorServices
+  readonly getters: EditorGetters
+  readonly actions: EditorActions
+  readonly services: EditorServices
+  storage: LocalStorageClient
 
 
   constructor() {
     makeAutoObservable(this)
+    const storage = new LocalStorageClient(this.isStorageDisabled)
+    this.storage = storage
 
     this.getters = new EditorGetters(this)
     this.actions = new EditorActions(this)
     this.services = new EditorServices(this)
 
-    const storage = new LocalStorageClient()
     this.theme = storage.get<Themes>('EDITOR_THEME', 'vs-dark')
     this.fontSize = Number(storage.get<FontSizes>('EDITOR_FONT_SIZE', 20)) as FontSizes
     this.tabSize = Number(storage.get<TabSizes>('EDITOR_TAB_SIZE', 4)) as TabSizes

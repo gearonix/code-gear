@@ -2,19 +2,19 @@ import { useEffect } from 'react'
 import { toJS } from 'mobx'
 import { observer } from 'mobx-react-lite'
 
+import { useCustomTheme } from '@/app'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { Tabs } from '@/components/Tabs'
 import { ThemeSwitcher } from '@/components/ThemeSwitcher'
-import { useActions, useGetters, useStore } from '@/shared/hooks'
+import { useActions, useGetters, useStorage, useStore } from '@/shared/hooks'
 import MonacoEditor, { useMonaco } from '@monaco-editor/react'
 
-import { useCustomTheme } from '@/app'
 import { editorConfig } from '../config/editorConfig'
 import { useKeyboardManager } from '../hooks'
 
 import { EditorContentStyles, TabsSelects, TabsWrapper } from './EditorContent.styles'
 
-import { isString, LocalStorageClient, useDebounce } from '$/client-shared'
+import { isString, useDebounce } from '$/client-shared'
 
 
 export const EditorContent = observer(() => {
@@ -22,7 +22,7 @@ export const EditorContent = observer(() => {
   const getters = useGetters()
   const { theme, content, fontSize,
     tabSize, customBackground, customColor } = useStore()
-  const storage = new LocalStorageClient()
+  const storage = useStorage()
   const defineCustomTheme = useCustomTheme()
 
   const localSave = useDebounce(() => {

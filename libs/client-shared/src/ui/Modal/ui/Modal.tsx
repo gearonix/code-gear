@@ -7,15 +7,14 @@ import { AnimationProvider, Display, useAnimations } from '../../../lib/componen
 import { WithChildren } from '../../../types'
 import { useModalTransitions } from '../hooks/useModalTransitions'
 
-import { ModalBackground, ModalContainer, ModalStyles, ModalTitle } from './Modal.styles'
+import { ModalBackground, ModalContainer, ModalStyles } from './Modal.styles'
 
 type ModalProps = WithChildren<{
   isOpen: boolean
   onClose: () => void
-  title: string
 }>
 
-export const Modal = ({ onClose, isOpen, children, title }: ModalProps) => {
+export const Modal = ({ onClose, isOpen, children }: ModalProps) => {
   const { Spring, Gesture } = useAnimations()
   const { opacity, transform } = useModalTransitions()
 
@@ -65,7 +64,6 @@ export const Modal = ({ onClose, isOpen, children, title }: ModalProps) => {
                                 syncCallbacks={true}
                                 alwaysShowTracks={true}>
                       <ModalContainer>
-                        <ModalTitle>{title}</ModalTitle>
                         {children}
                       </ModalContainer>
                      </Scrollbar>

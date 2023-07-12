@@ -12,7 +12,6 @@ const ThemeSwitcher = observer(() => {
     actions.changeTheme(theme)
   }
 
-
   return <Select
           size={'middle'}
           defaultValue="vs-dark"
@@ -24,7 +23,6 @@ const ThemeSwitcher = observer(() => {
             label: theme
           }))}
         />
-
 })
 
 export default ThemeSwitcher
