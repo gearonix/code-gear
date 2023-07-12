@@ -1,5 +1,5 @@
 import { EditorStore } from '@/app';
-import { ExecutorResponse } from '@/components/HeaderRightSection';
+import { ExecutorResponse } from '@/modules/Header';
 declare class TerminalActions {
     private state;
     private readonly getters;

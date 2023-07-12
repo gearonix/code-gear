@@ -1,2 +1,9 @@
 import { editor } from 'monaco-editor';
-export declare const editorConfig: editor.IStandaloneEditorConstructionOptions;
+import { FontSizes, TabSizes } from '@/shared/consts';
+interface EditorConfigPayload {
+    fontSize: FontSizes;
+    tabSize: TabSizes;
+}
+type EditorConfig = (payload: EditorConfigPayload) => editor.IStandaloneEditorConstructionOptions;
+export declare const editorConfig: EditorConfig;
+export {};

@@ -11,3 +11,7 @@ export interface ExecutorResponse {
     language: string;
     info: string;
 }
+export interface NotificationMessage {
+    isError: boolean;
+    message: string;
+}

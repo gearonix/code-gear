@@ -1,1 +1,1 @@
-export declare const useDebounce: <T>(callback: (...args: T[]) => void, delay: number) => (...args: T[]) => void;
+export declare const useDebounce: (callback: (...args: any[]) => void, delay: number) => (...args: any[]) => void;

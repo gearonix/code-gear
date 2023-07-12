@@ -16,4 +16,5 @@ type AbsoluteProps = Partial<{
 }>;
 export declare const absolute: (props: AbsoluteProps) => import("styled-components").FlattenSimpleInterpolation;
 export declare const margin: (left: number, top: number) => import("styled-components").FlattenSimpleInterpolation;
+export declare const shadow: import("styled-components").FlattenSimpleInterpolation;
 export {};
