@@ -4,18 +4,13 @@ import { observer } from 'mobx-react-lite'
 import { Themes, themes } from '@/shared/consts'
 import { useActions, useStore } from '@/shared/hooks'
 
-import { LocalStorageClient } from '$/client-shared'
-
 const ThemeSwitcher = observer(() => {
   const actions = useActions()
   const { theme } = useStore()
-  const storage = new LocalStorageClient()
 
   const handleChange = (theme: Themes) => {
-    storage.set('EDITOR_THEME', theme)
     actions.changeTheme(theme)
   }
-
 
   return <Select
           size={'middle'}
@@ -28,7 +23,6 @@ const ThemeSwitcher = observer(() => {
             label: theme
           }))}
         />
-
 })
 
 export default ThemeSwitcher

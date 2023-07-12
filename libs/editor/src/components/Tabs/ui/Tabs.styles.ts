@@ -1,4 +1,4 @@
-import { Tabs as AntdTabs } from 'antd'
+import { Popconfirm, Tabs as AntdTabs } from 'antd';
 import styled from 'styled-components'
 
 import { antdColor } from '$/styles'

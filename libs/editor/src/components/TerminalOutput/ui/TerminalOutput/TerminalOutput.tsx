@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { forwardRef, useEffect, useRef } from 'react'
 import { observer } from 'mobx-react-lite'
 
 import { useModalContextState, useStore } from '@/shared/hooks'
@@ -11,7 +11,7 @@ export interface TerminalOutputHandle {
   close: () => Promise<void>
 }
 
-const TerminalOutput = observer<TerminalOutputHandle, void>((_, preparedRef) => {
+const TerminalOutput = observer<TerminalOutputHandle, void>(forwardRef((_, preparedRef) => {
   const outputRef = useRef<BottomScrollHandle>(null)
   const scrollEndRef = useRef<HTMLDivElement>(null)
   const { isTerminalOpened } = useModalContextState()
@@ -41,7 +41,7 @@ const TerminalOutput = observer<TerminalOutputHandle, void>((_, preparedRef) => 
     </SpringDiv>
   </BottomScroll>
 
-}, { forwardRef: true })
+}))
 
 
 export default TerminalOutput

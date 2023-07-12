@@ -14,5 +14,6 @@ declare module 'styled-components' {
     white: string
     fz6: string
     fz7: string
+    f10: string
   }
 }
