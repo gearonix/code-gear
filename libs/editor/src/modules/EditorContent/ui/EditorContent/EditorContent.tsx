@@ -1,5 +1,4 @@
 import { useEffect } from 'react'
-import { toJS } from 'mobx'
 import { observer } from 'mobx-react-lite'
 
 import { useCustomTheme } from '@/app'
@@ -7,30 +6,26 @@ import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { Tabs } from '@/components/Tabs'
 import { ThemeSwitcher } from '@/components/ThemeSwitcher'
 import { useActions, useGetters, useStorage, useStore } from '@/shared/hooks'
-import MonacoEditor, { useMonaco } from '@monaco-editor/react'
+import { useMonaco } from '@monaco-editor/react'
 
-import { editorConfig } from '../config/editorConfig'
-import { useKeyboardManager } from '../hooks'
+import { useKeyboardManager } from '../../hooks'
+import EditorCore from '../EditorCore/EditorCore'
 
 import { EditorContentStyles, TabsSelects, TabsWrapper } from './EditorContent.styles'
 
-import { isString, useDebounce } from '$/client-shared'
+import { AnimationProvider, isString, useDebounce } from '$/client-shared'
 
 
 export const EditorContent = observer(() => {
   const actions = useActions()
   const getters = useGetters()
-  const { theme, content, fontSize,
-    tabSize, customBackground, customColor } = useStore()
+  const { theme, content, customBackground, customColor } = useStore()
   const storage = useStorage()
   const defineCustomTheme = useCustomTheme()
 
   const localSave = useDebounce(() => {
     storage.set('EDITOR_CONTENT_DATA', content)
   }, 1000)
-
-  const textContent = getters.getActiveTabText()
-  const language = getters.getActiveLanguage()
 
   useKeyboardManager()
   const monaco = useMonaco()
@@ -62,17 +57,9 @@ export const EditorContent = observer(() => {
         <LanguageSwitcher/>
       </TabsSelects>
     </TabsWrapper>
-    <MonacoEditor
-      height="90vh"
-      theme={'vs-dark'}
-      onChange={onChange}
-      language={language}
-      value={toJS(textContent)}
-      options={editorConfig({
-        fontSize,
-        tabSize
-      })}
-    />
+    <AnimationProvider>
+      <EditorCore onChange={onChange}/>
+    </AnimationProvider>
     </EditorContentStyles>
 })
 

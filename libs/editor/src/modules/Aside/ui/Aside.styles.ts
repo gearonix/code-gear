@@ -6,9 +6,10 @@ export const AsideStyles = styled.div`
   background: ${({ theme }) => theme.grey};
   border-right: 2px solid ${({ theme }) => theme.lightGrey};
   box-sizing: border-box;
-  ${wh('60px', '100%')};
+  ${wh('52px', '100%')};
   ${flex('space-between', 'center', 'column')};
   padding-bottom: 15px;
+  z-index: 3;
 `
 
 export const Icon = styled.div`

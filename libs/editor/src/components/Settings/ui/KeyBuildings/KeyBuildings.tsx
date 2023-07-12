@@ -1,13 +1,19 @@
 import { Typography } from 'antd'
 
-import { KeyBuildingStyles, SettingsText } from '@/components/Settings/ui/Settings/Settings.styles'
 import { KeyBuildings as Keys } from '@/shared/consts'
+
+import { KeyBuildingStyles, SettingsText } from '../Settings/Settings.styles'
 
 import { WithChildren } from '$/client-shared'
 
-const KeyBuilding = ({ keyCode, children }: WithChildren<{keyCode: string}>) => {
+type KeyBuildingProps = WithChildren<{
+  keyCode: string
+  experimental: boolean
+}>
+
+const KeyBuilding = ({ keyCode, children, experimental }: KeyBuildingProps) => {
   return <KeyBuildingStyles>
-    <Typography.Text keyboard>Alt + {keyCode}</Typography.Text>
+    <Typography.Text keyboard>{experimental && '🧪'} Alt + {keyCode}</Typography.Text>
     <SettingsText style={{ justifyContent: 'space-around' }}>
       <p>{children}</p>
     </SettingsText>
@@ -16,10 +22,10 @@ const KeyBuilding = ({ keyCode, children }: WithChildren<{keyCode: string}>) => 
 
 const KeyBuildings = () => {
   return <>
-    <KeyBuilding keyCode={Keys.O}>
-    Open a file on your OS
+    <KeyBuilding keyCode={Keys.O} experimental>
+      Open a file on your OS
   </KeyBuilding>
-  <KeyBuilding keyCode={Keys.S}>
+  <KeyBuilding keyCode={Keys.S} experimental>
     Save a file on your OS
   </KeyBuilding>
   <KeyBuilding keyCode={Keys.N}>

@@ -4,9 +4,9 @@ import { useGetters } from '@/shared/hooks'
 
 import { useCodeRunner } from '../../hooks'
 
-import { HeaderIcon, RightSection } from './HeaderRightSection.styles'
+import { RightSection } from './HeaderRightSection.styles'
 
-import { VscPlay } from '$/icons'
+import { ColorButton } from '$/client-shared'
 
 const HeaderRightSection = observer(() => {
   const getters = useGetters()
@@ -14,11 +14,12 @@ const HeaderRightSection = observer(() => {
   const runCode = useCodeRunner()
 
   return  <RightSection>
-    <HeaderIcon onClick={runCode}  $disabled={isDisabled}>
-      <VscPlay/>
-    </HeaderIcon>
+    <ColorButton type="primary" onClick={runCode}
+                 disabled={isDisabled}
+                 override={'#38a886'}>
+      Run Code
+    </ColorButton>
   </RightSection>
 })
-
 
 export default HeaderRightSection

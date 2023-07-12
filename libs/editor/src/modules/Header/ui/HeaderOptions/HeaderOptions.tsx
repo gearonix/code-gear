@@ -1,3 +1,4 @@
+import { Button } from 'antd'
 import { Link } from 'react-router-dom'
 
 import { useFileService } from '@/modules/EditorContent/hooks'
@@ -22,10 +23,10 @@ const HeaderOptions = () => {
     <Link to={RoutePaths.MAIN}>
       <img src={logo}/>
     </Link>
-    <Option onClick={openFile}>Open</Option>
-    <Option onClick={saveFile}>Save</Option>
-    <Option onClick={createTab}>New</Option>
-    <Option onClick={runCode}>Run</Option>
+    <Button type="dashed" size={'small'} onClick={openFile}>Open</Button>
+    <Button type="dashed" size={'small'} onClick={saveFile}>Save</Button>
+    <Button type="dashed" size={'small'} onClick={createTab}>New</Button>
+    <Button type="dashed" size={'small'} onClick={runCode}>Run</Button>
   </HeaderOptionsStyles>
 }
 
