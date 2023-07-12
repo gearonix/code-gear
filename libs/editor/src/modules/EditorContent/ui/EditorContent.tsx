@@ -6,9 +6,9 @@ import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { Tabs } from '@/components/Tabs'
 import { ThemeSwitcher } from '@/components/ThemeSwitcher'
 import { useActions, useGetters, useStore } from '@/shared/hooks'
-import { useEditor } from '@/shared/hooks/useEditor'
 import MonacoEditor, { useMonaco } from '@monaco-editor/react'
 
+import { useCustomTheme } from '@/app'
 import { editorConfig } from '../config/editorConfig'
 import { useKeyboardManager } from '../hooks'
 
@@ -20,8 +20,10 @@ import { isString, LocalStorageClient, useDebounce } from '$/client-shared'
 export const EditorContent = observer(() => {
   const actions = useActions()
   const getters = useGetters()
-  const { theme, content, fontSize, tabSize } = useStore()
+  const { theme, content, fontSize,
+    tabSize, customBackground, customColor } = useStore()
   const storage = new LocalStorageClient()
+  const defineCustomTheme = useCustomTheme()
 
   const localSave = useDebounce(() => {
     storage.set('EDITOR_CONTENT_DATA', content)
@@ -44,6 +46,13 @@ export const EditorContent = observer(() => {
   useEffect(() => {
     monaco?.editor.setTheme(theme)
   }, [theme])
+
+  useEffect(() => {
+    defineCustomTheme({
+      background: customBackground,
+      color: customColor })
+
+  }, [customBackground, customColor])
 
   return <EditorContentStyles>
     <TabsWrapper>

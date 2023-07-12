@@ -1,4 +1,6 @@
-import { Keys, ValueOf } from '$/client-shared';
+import { Keys, ValueOf } from '$/client-shared'
+
+export const CUSTOM_THEME = 'Custom' as const
 
 // Themes for code-editor
 export const themes = [
@@ -11,7 +13,8 @@ export const themes = [
   'Twilight',
   'IDLE',
   'Eiffel',
-  'Tomorrow'
+  'Tomorrow',
+  CUSTOM_THEME
 ] as const
 
 export type Themes = typeof themes[number]
@@ -44,3 +47,4 @@ export type FontSizes = Keys<typeof fontSizes>
 export const tabSizes = [4, 2] as const
 
 export type TabSizes = Keys<typeof tabSizes>
+

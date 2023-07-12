@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { absolute, br, color, customScrollbar, flex, shadow, wh } from '../../../styles';
+import { absolute, br, color, customScrollbar, flex, shadow, wh } from '../../../styles'
 
 export const ModalBackground = styled.div`
   ${flex('center', 'center')};
@@ -22,15 +22,16 @@ export const ModalStyles = styled.div`
   min-height: 300px;
   border-radius: 6px;
   cursor: grab;
-  padding-top: 18px;
   ${shadow};
   touch-action: none;
   overflow-y: auto;
+  scroll-behavior: smooth;
   ${customScrollbar()};
 `
 
 export const ModalContainer = styled.div`
   margin: 0 auto;
+  margin-top: 18px;
   ${wh('60%','100%')}
   & > * {
     cursor: initial;

@@ -4,11 +4,11 @@ import { EditorGetters } from '@/app'
 import { TabsActions } from '@/components/Tabs'
 import { TerminalActions } from '@/components/Terminal'
 import { EditorContentActions } from '@/modules/EditorContent'
-import { FontSizes, TabSizes, Themes } from '@/shared/consts';
+import { FontSizes, TabSizes, Themes } from '@/shared/consts'
 
 import EditorStore from './editor.store'
 
-import { LocalStorageClient } from '$/client-shared'
+import { Hex, LocalStorageClient } from '$/client-shared'
 
 
 class EditorActions {
@@ -43,6 +43,16 @@ class EditorActions {
   changeTabSize(tabSize: TabSizes) {
     this.state.tabSize = tabSize
     this.storage.set('EDITOR_TAB_SIZE', tabSize)
+  }
+
+  changeCustomBackground(hex: Hex) {
+    this.state.customBackground = hex
+    this.storage.set('EDITOR_CUSTOM_BACKGROUND', hex)
+  }
+
+  changeCustomColor(hex: Hex) {
+    this.state.customColor = hex
+    this.storage.set('EDITOR_CUSTOM_COLOR', hex)
   }
 }
 

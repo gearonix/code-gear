@@ -13,7 +13,7 @@ const Header = observer(() => {
 
   return <HeaderStyles>
     <HeaderOptions/>
-    <FileName>${activeTab.getLabel()} - CodeGear</FileName>
+    <FileName>{activeTab.getLabel()} - CodeGear</FileName>
     <HeaderRightSection/>
   </HeaderStyles>
 })

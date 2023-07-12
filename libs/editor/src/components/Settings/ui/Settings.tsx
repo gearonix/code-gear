@@ -1,21 +1,37 @@
+import { ColorPicker } from 'antd'
+import { observer } from 'mobx-react-lite'
+
+import { FontSizeSwitcher } from '@/components/FontSizeSwitcher'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
-import { SettingsItem, SettingsText } from '@/components/Settings/ui/Settings.styles'
+import { TabSizeSwitcher } from '@/components/TabSizeSwitcher'
 import { ThemeSwitcher } from '@/components/ThemeSwitcher'
-import { useModalsContext } from '@/shared/hooks'
+import { CUSTOM_THEME } from '@/shared/consts'
+import { useActions, useModalsContext, useStore } from '@/shared/hooks'
 
-import { Modal } from '$/client-shared'
-import { FontSizeSwitcher } from '@/components/FontSizeSwitcher';
-import { TabSizeSwitcher } from '@/components/TabSizeSwitcher';
+import { Separator, SettingsItem, SettingsText } from './Settings.styles'
 
-const Settings = () => {
+import { Hex, Modal, useDebounce } from '$/client-shared'
+import { useColorCallback } from '@/components/Settings/hooks';
+
+const Settings = observer(() => {
   const modalsContext = useModalsContext()
   const isOpen = modalsContext.state.isSettingsOpened
+  const actions = useActions()
+  const { customBackground, customColor } = useStore()
 
   const closeSettings = () => {
     modalsContext.update({
       isSettingsOpened: false
     })
   }
+
+  const onBackgroundChange = useColorCallback((hex) => {
+    actions.changeCustomBackground(hex)
+  })
+
+  const onColorChange = useColorCallback((hex) => {
+    actions.changeCustomBackground(hex)
+  })
 
   return <Modal isOpen={isOpen} onClose={closeSettings} title={'Editor settings'}>
     <SettingsItem>
@@ -46,8 +62,25 @@ const Settings = () => {
       </SettingsText>
       <TabSizeSwitcher/>
     </SettingsItem>
+    <Separator/>
+    <SettingsItem>
+      <SettingsText>
+        <h4>Custom Editor Background</h4>
+        <p>Change custom background for code editor</p>
+      </SettingsText>
+      <ColorPicker onChange={onBackgroundChange} value={customBackground}
+                   showText size={'large'} />
+    </SettingsItem>
+    <SettingsItem>
+      <SettingsText>
+        <h4>Custom Editor Background</h4>
+        <p>Change custom background for code editor</p>
+      </SettingsText>
+      <ColorPicker onChange={onColorChange} value={customColor}
+                   showText size={'large'} />
+    </SettingsItem>
   </Modal>
-}
+})
 
 
 export default Settings

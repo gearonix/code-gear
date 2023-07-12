@@ -5,6 +5,8 @@ import EditorErrors from '@/shared/errors'
 import { useStore } from '@/shared/hooks'
 import { useMonaco } from '@monaco-editor/react'
 
+import { useCustomTheme } from '../useCustomTheme/useCustomTheme'
+
 import { assertThemeObject } from './assertThemeObject'
 
 import { useBooleanState } from '$/client-shared'
@@ -13,7 +15,8 @@ export const useThemeLoader = () => {
   // TODO: refactor this
   const monaco = useMonaco()
   const loader = useBooleanState()
-  const { theme: selectedTheme } = useStore()
+  const { theme: selectedTheme, customBackground, customColor } = useStore()
+  const defineCustomTheme = useCustomTheme()
 
   useEffect(() => {
     let processed = 0
@@ -32,7 +35,9 @@ export const useThemeLoader = () => {
       processed += 1
 
       if (processed === themes.length){
+        defineCustomTheme({ background: customBackground, color: customColor })
         monaco?.editor.setTheme(selectedTheme)
+
         loader.on()
       }
     })

@@ -24,3 +24,5 @@ export type Undefinable<T> = T | undefined
 export type ValueOf<T> = T[keyof T];
 
 export type Keys<T extends readonly unknown[]> = T[number]
+
+export type Hex = `#${string}`;

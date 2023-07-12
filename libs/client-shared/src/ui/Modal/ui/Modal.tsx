@@ -1,4 +1,5 @@
 import { MouseEvent } from 'react'
+import Scrollbar from 'react-smooth-scrollbar'
 
 import { Portal } from '@reach/portal'
 
@@ -6,7 +7,7 @@ import { AnimationProvider, Display, useAnimations } from '../../../lib/componen
 import { WithChildren } from '../../../types'
 import { useModalTransitions } from '../hooks/useModalTransitions'
 
-import { ModalBackground, ModalContainer, ModalStyles, ModalTitle } from './Modal.styles';
+import { ModalBackground, ModalContainer, ModalStyles, ModalTitle } from './Modal.styles'
 
 type ModalProps = WithChildren<{
   isOpen: boolean
@@ -60,10 +61,14 @@ export const Modal = ({ onClose, isOpen, children, title }: ModalProps) => {
                   onClick={onClose} as={Spring.a.div}>
                   <ModalStyles style={{ ...modalStyle, x, y, scale }} {...bind()}
                                onClick={stopPropagation} as={Spring.a.div}>
-                    <ModalContainer>
-                      <ModalTitle>{title}</ModalTitle>
-                      {children}
-                    </ModalContainer>
+                     <Scrollbar damping={0.05}
+                                syncCallbacks={true}
+                                alwaysShowTracks={true}>
+                      <ModalContainer>
+                        <ModalTitle>{title}</ModalTitle>
+                        {children}
+                      </ModalContainer>
+                     </Scrollbar>
                   </ModalStyles>
                 </ModalBackground>
             </Portal>

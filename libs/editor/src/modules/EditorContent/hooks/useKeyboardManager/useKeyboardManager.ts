@@ -1,6 +1,6 @@
-import { useEffect } from 'react'
+import { useCallback, useEffect } from 'react';
 
-import { useActions } from '@/shared/hooks'
+import { useActions, useModalsContext, useModalToggle } from '@/shared/hooks'
 
 import { useAltNavigation, useFileService } from '..'
 
@@ -11,18 +11,26 @@ export const useKeyboardManager = () => {
   const keyboard = useAltKeyDown()
   const { openFile, saveFile } = useFileService()
   useAltNavigation()
+  const toggle = useModalToggle('isTerminalOpened')
+  const modalContext = useModalsContext()
 
+  const test = useCallback(() => {
+    modalContext.toggle('isSettingsOpened')
+  }, [modalContext])
 
   useEffect(() => {
     keyboard.on({
       'O': openFile,
       'S': saveFile,
       'N': () => {actions.tabs.createTab()},
-      'T': () => {actions.tabs.removeTab()}
+      'T': () => {actions.tabs.removeTab()},
+      'P': toggle('terminal'),
+      'J': toggle('test_cases'),
+      'Q': test
     })
 
     return () => {
       keyboard.clear()
     }
-  }, [])
+  }, [modalContext.state.isSettingsOpened])
 }
