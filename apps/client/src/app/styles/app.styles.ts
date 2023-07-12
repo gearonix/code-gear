@@ -20,4 +20,8 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   ${customScrollbar('body')}
+
+  .ant-popconfirm {
+    z-index: 2;
+  }
 `
