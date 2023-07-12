@@ -1,6 +1,6 @@
 import { makeAutoObservable } from 'mobx'
 
-import { ExecutorRequest, ExecutorResponse } from '@/components/HeaderRightSection'
+import { ExecutorRequest, ExecutorResponse } from '@/modules/Header'
 
 import EditorActions from './editor.actions'
 import EditorGetters from './editor.getters'

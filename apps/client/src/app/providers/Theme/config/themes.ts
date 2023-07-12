@@ -8,6 +8,9 @@ export const DarkThemePalette = {
   lightGrey: '#3C3C4A',
   secondaryGrey: '#9099AC',
   darkBlue: '#1F2228',
+  fz5: '14px',
   fz6: '16px',
-  fz7: '18px'
+  fz7: '18px',
+  fz8: '19px',
+  f10: '30px'
 }

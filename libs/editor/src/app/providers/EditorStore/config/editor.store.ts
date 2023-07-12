@@ -3,7 +3,7 @@ import { makeAutoObservable } from 'mobx'
 import { ContentTab } from '@/components/Tabs'
 import { ContentTabInstance } from '@/components/Tabs/types'
 import { ExecuteMessage } from '@/components/Terminal'
-import { Themes } from '@/shared/consts'
+import { FontSizes, TabSizes, Themes } from '@/shared/consts'
 
 import EditorActions from './editor.actions'
 import EditorGetters from './editor.getters'
@@ -15,6 +15,8 @@ class EditorStore{
   activeKey = ''
   content: ContentTab[] = []
   theme: Themes = 'vs-dark'
+  fontSize: FontSizes = 20
+  tabSize: TabSizes = 4
   executeMessages: ExecuteMessage[] = []
   getters: EditorGetters
   actions: EditorActions
@@ -30,6 +32,8 @@ class EditorStore{
 
     const storage = new LocalStorageClient()
     this.theme = storage.get<Themes>('EDITOR_THEME', 'vs-dark')
+    this.fontSize = Number(storage.get<FontSizes>('EDITOR_FONT_SIZE', 20)) as FontSizes
+    this.tabSize = Number(storage.get<TabSizes>('EDITOR_TAB_SIZE', 4)) as TabSizes
 
     const savedContent = storage.get<ContentTabInstance[]>('EDITOR_CONTENT_DATA', [])
     this.executeMessages = storage.get<ExecuteMessage[]>('EDITOR_EXECUTE_MESSAGES', [])

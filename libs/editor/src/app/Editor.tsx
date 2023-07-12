@@ -9,7 +9,7 @@ import { ModalsContextProvider } from './providers/ModalsProvider'
 import { ThemeLoader } from './providers/ThemeLoader'
 import { EditorStyles, EditorWrapper } from './styles/Editor.styles'
 
-import { Page, useOverflow } from '$/client-shared'
+import { NotificationsProvider, Page, useOverflow } from '$/client-shared'
 
 
 export const Editor = () => {
@@ -19,15 +19,17 @@ export const Editor = () => {
     <EditorStoreProvider>
     <ThemeLoader>
       <ModalsContextProvider>
-        <EditorStyles>
-          <Header/>
-          <EditorWrapper>
-            <Aside/>
-            <EditorContent/>
-            <Terminal/>
-          </EditorWrapper>
-          <Settings/>
-        </EditorStyles>
+        <NotificationsProvider>
+          <EditorStyles>
+            <Header/>
+            <EditorWrapper>
+              <Aside/>
+              <EditorContent/>
+              <Terminal/>
+            </EditorWrapper>
+            <Settings/>
+          </EditorStyles>
+        </NotificationsProvider>
       </ModalsContextProvider>
     </ThemeLoader>
   </EditorStoreProvider>

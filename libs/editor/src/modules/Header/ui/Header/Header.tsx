@@ -1,9 +1,9 @@
 import { observer } from 'mobx-react-lite'
 
-import { HeaderOptions } from '@/components/HeaderOptions'
-import { HeaderRightSection } from '@/components/HeaderRightSection'
 import { useGetters } from '@/shared/hooks'
 
+import HeaderOptions from './../HeaderOptions/HeaderOptions'
+import HeaderRightSection from './../HeaderRightSection/HeaderRightSection'
 import { FileName, HeaderStyles } from './Header.styles'
 
 

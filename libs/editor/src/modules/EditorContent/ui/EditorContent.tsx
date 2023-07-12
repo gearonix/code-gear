@@ -6,6 +6,7 @@ import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { Tabs } from '@/components/Tabs'
 import { ThemeSwitcher } from '@/components/ThemeSwitcher'
 import { useActions, useGetters, useStore } from '@/shared/hooks'
+import { useEditor } from '@/shared/hooks/useEditor'
 import MonacoEditor, { useMonaco } from '@monaco-editor/react'
 
 import { editorConfig } from '../config/editorConfig'
@@ -17,9 +18,9 @@ import { isString, LocalStorageClient, useDebounce } from '$/client-shared'
 
 
 export const EditorContent = observer(() => {
-  const { editor } = useActions()
+  const actions = useActions()
   const getters = useGetters()
-  const { theme, content } = useStore()
+  const { theme, content, fontSize, tabSize } = useStore()
   const storage = new LocalStorageClient()
 
   const localSave = useDebounce(() => {
@@ -34,7 +35,7 @@ export const EditorContent = observer(() => {
 
   const onChange = (value: unknown) => {
     if (isString(value)){
-      editor.saveContent(value)
+      actions.editor.saveContent(value)
       localSave()
     }
   }
@@ -58,7 +59,10 @@ export const EditorContent = observer(() => {
       onChange={onChange}
       language={language}
       value={toJS(textContent)}
-      options={editorConfig}
+      options={editorConfig({
+        fontSize,
+        tabSize
+      })}
     />
     </EditorContentStyles>
 })

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 
 import { useFileService } from '@/modules/EditorContent/hooks'
+import { useCodeRunner } from '@/modules/Header/hooks'
 import logo from '@/public/logo.svg'
 import { useActions, useServices } from '@/shared/hooks'
 
@@ -9,13 +10,10 @@ import { HeaderOptionsStyles, Option } from './HeaderOptions.styles'
 import { RoutePaths } from '$/client-shared'
 
 const HeaderOptions = () => {
-  const services = useServices()
   const actions = useActions()
   const { openFile, saveFile } = useFileService()
+  const runCode = useCodeRunner()
 
-  const runCode = async () => {
-    await services.requestCodeExecution()
-  }
   const createTab = () => {
     actions.tabs.createTab()
   }

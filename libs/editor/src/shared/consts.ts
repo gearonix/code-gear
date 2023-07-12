@@ -1,4 +1,4 @@
-import { ValueOf } from '$/client-shared'
+import { Keys, ValueOf } from '$/client-shared';
 
 // Themes for code-editor
 export const themes = [
@@ -36,3 +36,11 @@ export const maxTabsLength = 9 as const
 
 export const executorAllowedLanguages = ['java', 'python',
   'cpp', 'c', 'go', 'cs', 'javascript']
+
+export const fontSizes = [14, 16, 18, 20, 22, 24, 26] as const
+
+export type FontSizes = Keys<typeof fontSizes>
+
+export const tabSizes = [4, 2] as const
+
+export type TabSizes = Keys<typeof tabSizes>

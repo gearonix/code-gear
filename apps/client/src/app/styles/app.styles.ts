@@ -11,10 +11,10 @@ export const GlobalStyles = createGlobalStyle`
     user-select: none;
   }
 
-  span, p, h2, h3, h4 {
+  p, h2, h3, h4 {
     font-size: ${({ theme }) => theme.fz6};
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4, h5, h6, p {
     font-weight: normal;
     margin: 0;
   }

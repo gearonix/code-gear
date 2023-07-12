@@ -4,7 +4,7 @@ import { EditorGetters } from '@/app'
 import { TabsActions } from '@/components/Tabs'
 import { TerminalActions } from '@/components/Terminal'
 import { EditorContentActions } from '@/modules/EditorContent'
-import { Themes } from '@/shared/consts'
+import { FontSizes, TabSizes, Themes } from '@/shared/consts';
 
 import EditorStore from './editor.store'
 
@@ -30,8 +30,19 @@ class EditorActions {
     this.storage = new LocalStorageClient()
   }
 
-  changeTheme(newTheme: Themes) {
-    this.state.theme = newTheme
+  changeTheme(theme: Themes) {
+    this.state.theme = theme
+    this.storage.set('EDITOR_THEME', theme)
+  }
+
+  changeFontSize(fontSize: FontSizes) {
+    this.state.fontSize = fontSize
+    this.storage.set('EDITOR_FONT_SIZE', fontSize)
+  }
+
+  changeTabSize(tabSize: TabSizes) {
+    this.state.tabSize = tabSize
+    this.storage.set('EDITOR_TAB_SIZE', tabSize)
   }
 }
 

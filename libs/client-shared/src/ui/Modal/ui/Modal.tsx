@@ -6,14 +6,15 @@ import { AnimationProvider, Display, useAnimations } from '../../../lib/componen
 import { WithChildren } from '../../../types'
 import { useModalTransitions } from '../hooks/useModalTransitions'
 
-import { ModalContainer, ModalStyles } from './Modal.styles'
+import { ModalBackground, ModalContainer, ModalStyles, ModalTitle } from './Modal.styles';
 
 type ModalProps = WithChildren<{
   isOpen: boolean
   onClose: () => void
+  title: string
 }>
 
-export const Modal = ({ onClose, isOpen, children }: ModalProps) => {
+export const Modal = ({ onClose, isOpen, children, title }: ModalProps) => {
   const { Spring, Gesture } = useAnimations()
   const { opacity, transform } = useModalTransitions()
 
@@ -54,16 +55,17 @@ export const Modal = ({ onClose, isOpen, children }: ModalProps) => {
         (spring, item) =>
           <Display when={item}>
             <Portal>
-                <ModalContainer
+                <ModalBackground
                   style={spring}
                   onClick={onClose} as={Spring.a.div}>
                   <ModalStyles style={{ ...modalStyle, x, y, scale }} {...bind()}
                                onClick={stopPropagation} as={Spring.a.div}>
-                    <h1>Modal</h1>
-                    {children}
-                    <button onClick={onClose}>Close</button>
+                    <ModalContainer>
+                      <ModalTitle>{title}</ModalTitle>
+                      {children}
+                    </ModalContainer>
                   </ModalStyles>
-                </ModalContainer>
+                </ModalBackground>
             </Portal>
           </Display>)
       }

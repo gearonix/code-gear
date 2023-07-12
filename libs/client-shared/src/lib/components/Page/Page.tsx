@@ -1,6 +1,6 @@
-import { WithChildren } from '@code-gear/client-shared'
+import { ErrorBoundary } from '../../../providers'
+import { WithChildren } from '../../../types'
 
-import { ErrorBoundary } from '../ErrorBoundary'
 
 
 const Page = ({ children }: WithChildren) => {

@@ -1,9 +1,19 @@
 import { editor } from 'monaco-editor'
 
-export const editorConfig: editor.IStandaloneEditorConstructionOptions = {
-  fontSize: 20,
+import { FontSizes, TabSizes } from '@/shared/consts'
+
+interface EditorConfigPayload {
+  fontSize: FontSizes
+  tabSize: TabSizes
+}
+
+type EditorConfig = (payload: EditorConfigPayload) => editor.IStandaloneEditorConstructionOptions
+
+export const editorConfig: EditorConfig = ({ fontSize, tabSize }) => ({
+  fontSize,
+  tabSize,
   glyphMargin: false,
-  lineNumbersMinChars: 3,
+  lineNumbersMinChars: 2,
   lineDecorationsWidth: 0,
   minimap: {
     enabled: false
@@ -11,4 +21,4 @@ export const editorConfig: editor.IStandaloneEditorConstructionOptions = {
   scrollbar: {
     verticalScrollbarSize: 6
   }
-}
+})

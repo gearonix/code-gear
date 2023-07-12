@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
-import { absolute, br, color, flex, wh } from '../../../styles'
+import { absolute, br, color, customScrollbar, flex, shadow, wh } from '../../../styles';
 
-export const ModalContainer = styled.div`
+export const ModalBackground = styled.div`
   ${flex('center', 'center')};
   ${absolute({
     left: '0',
@@ -16,13 +16,32 @@ export const ModalContainer = styled.div`
 export const ModalStyles = styled.div`
   display: grid;
   position: relative;
-  ${wh('60vw','70vh')};
+  ${wh('50vw','60vh')};
   background: ${color('grey')};
   border: 2px solid ${color('lightGrey')};
+  min-height: 300px;
   border-radius: 6px;
   cursor: grab;
-  align-items: center;
-  justify-items: center;
-  font-family: sans-serif;
-  color: white;
+  padding-top: 18px;
+  ${shadow};
+  touch-action: none;
+  overflow-y: auto;
+  ${customScrollbar()};
+`
+
+export const ModalContainer = styled.div`
+  margin: 0 auto;
+  ${wh('60%','100%')}
+  & > * {
+    cursor: initial;
+    color: ${color('light')};
+  }
+`
+
+export const ModalTitle = styled.h1`
+  text-align: center;
+  padding-bottom: 18px;
+  margin-bottom: 30px;
+  font-size: ${({ theme }) => theme.fz10};
+  border-bottom: ${br} ${color('lightGrey')};
 `

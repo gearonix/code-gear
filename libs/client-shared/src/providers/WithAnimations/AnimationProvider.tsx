@@ -1,8 +1,8 @@
 import { createContext, useContext, useEffect, useMemo, useRef } from 'react'
 
-import { useBooleanState } from '../../../hooks'
-import { GestureType, SpringType, WithChildren } from '../../../types'
-import { Display } from '../common'
+import { useBooleanState } from '../../hooks'
+import { Display } from '../../lib/components'
+import { GestureType, SpringType, WithChildren } from '../../types'
 
 
 type AnimationContextPayload = Partial<{

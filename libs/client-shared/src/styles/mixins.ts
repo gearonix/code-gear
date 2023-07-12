@@ -69,3 +69,9 @@ export const margin = (left: number, top: number) => css`
   margin-left: ${left}px;
   margin-top: ${top}px;
 `
+
+export const shadow = css`
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+`
