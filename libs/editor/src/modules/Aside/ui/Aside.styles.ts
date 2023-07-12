@@ -19,6 +19,10 @@ export const Icon = styled.div`
     color: ${({ theme }) => theme.secondaryGrey};
     ${({ theme }) => hover(theme.light)}
   }
+  transition: transform 200ms;
+  &:hover {
+    transform: scale(1.1);
+  }
   margin-top: 20px;
   cursor: pointer;
   user-select: none;
