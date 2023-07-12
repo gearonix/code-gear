@@ -33,7 +33,7 @@ export default defineConfig({
     },
     rollupOptions: {
       external: ['react', 'react-dom', 'react/jsx-runtime',
-        'antd', 'react-router-dom']
+        'antd', 'react-router-dom', 'react-smooth-scrollbar']
     }
   },
   test: {

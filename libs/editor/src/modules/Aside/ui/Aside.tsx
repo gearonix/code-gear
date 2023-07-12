@@ -1,34 +1,28 @@
 import { Link } from 'react-router-dom'
 
-import { TerminalTabKeys } from '@/components/Terminal'
-import { useModalsContext } from '@/shared/hooks'
+import { useModalsContext, useModalToggle } from '@/shared/hooks'
 
 import { useEditorActions } from '../hooks/useEditorActions'
 
 import { AsideStyles, Icon } from './Aside.styles'
 
-import { RoutePaths, useFullScreen } from '$/client-shared'
-import { BsJournals, BsSearch, GoTerminal, LuTestTube2,
-  SlInfo, SlSizeFullscreen, TfiSettings } from '$/icons'
+import { AnimationProvider, RoutePaths, useAnimations, useFullScreen } from '$/client-shared'
+import { BsJournals, BsSearch, GoTerminal, LuTestTube2, SlInfo, SlSizeFullscreen, TfiSettings } from '$/icons'
+import { useAsideAnimation } from '@/modules/Aside/hooks/useAsideAnimation';
 
 const Aside = () => {
   const toggleFullscreen = useFullScreen()
   const modalsContext = useModalsContext()
   const editorActions = useEditorActions()
-  const terminalTab = modalsContext.state.selectedTerminalTab
+  const toggle = useModalToggle('isTerminalOpened')
+  const { spring, animatedDiv } = useAsideAnimation()
 
-  const toggleTerminal = (key: TerminalTabKeys) => () => {
-    if (terminalTab === key) {
-      return modalsContext.toggle('isTerminalOpened')
-    }
-    modalsContext.update({
-      selectedTerminalTab: key,
-      isTerminalOpened: true
-    })
+  const toggleSettings = () => {
+    modalsContext.toggle('isSettingsOpened')
   }
 
 
-  return <AsideStyles>
+  return <AsideStyles as={animatedDiv} style={spring}>
     <div>
       <Icon onClick={editorActions.find}>
         <BsSearch/>
@@ -39,15 +33,15 @@ const Aside = () => {
       <Icon onClick={toggleFullscreen}>
         <SlSizeFullscreen/>
       </Icon>
-      <Icon onClick={toggleTerminal('terminal')}>
+      <Icon onClick={toggle('terminal')}>
         <GoTerminal/>
       </Icon>
-      <Icon onClick={toggleTerminal('test_cases')}>
+      <Icon onClick={toggle('test_cases')}>
         <LuTestTube2/>
       </Icon>
     </div>
     <div>
-      <Icon>
+      <Icon onClick={toggleSettings}>
         <TfiSettings/>
       </Icon>
       <Icon>
@@ -60,4 +54,8 @@ const Aside = () => {
 }
 
 
-export default Aside
+export default () => {
+  return <AnimationProvider>
+    <Aside/>
+  </AnimationProvider>
+}

@@ -2,10 +2,10 @@ import { useRef } from 'react'
 
 type Timeout = ReturnType<typeof setTimeout>
 
-export const useDebounce = <T>(callback: (...args: T[]) => void, delay: number) => {
+export const useDebounce = (callback: (...args: any[]) => void, delay: number) => {
   const debounceRef = useRef<Timeout>()
 
-  return (...args: T[]) => {
+  return (...args: any[]) => {
     if (debounceRef.current) {
       clearTimeout(debounceRef.current)
     }

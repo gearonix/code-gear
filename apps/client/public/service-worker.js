@@ -25,18 +25,18 @@ registerRoute(
 
 
 
-// registerRoute(
-//   /https:\/\/jsonplaceholder\.typicode\.com/,
-//   new NetworkFirst({
-//     cacheName: 'dynamic',
-//     plugins: [
-//       new ExpirationPlugin({
-//         maxEntries: 20,
-//         maxAgeSeconds: 10 * 24 * 60 * 60 // 10 дней
-//       })
-//     ]
-//   })
-// )
+registerRoute(
+  /http:\/\/localhost\/:6868/,
+  new NetworkFirst({
+    cacheName: 'dynamic',
+    plugins: [
+      new ExpirationPlugin({
+        maxEntries: 20,
+        maxAgeSeconds: 10 * 24 * 60 * 60 // 10 days
+      })
+    ]
+  })
+)
 
 registerRoute(
   ({ request }) =>

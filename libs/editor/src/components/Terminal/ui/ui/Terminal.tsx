@@ -5,7 +5,7 @@ import { useTerminalAnimation, useTerminalTabs } from '@/components/Terminal/hoo
 import { TerminalOutput, TerminalOutputHandle } from '@/components/TerminalOutput'
 import { useActions, useModalsContext } from '@/shared/hooks'
 
-import { TerminalTabKeys } from '../../hooks/useTerminalTabs'
+import { TerminalTabKeys } from '@/components/Terminal'
 
 import { Navigation, TerminalButtons, TerminalStyles } from './Terminal.styles'
 

@@ -13,7 +13,7 @@ export const TerminalStyles = styled.div<TerminalStylesProps>`
   position: fixed;
   right: 0;
   height: calc(100vh + 100px);
-  width: calc(100% - 59px);
+  width: calc(100% - 54px);
   border-radius: 6px 6px 0;
   background: ${color('darkBlue')};
   border-top: 2px solid ${color('lightGrey')};

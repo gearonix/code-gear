@@ -2,7 +2,7 @@ import { makeAutoObservable } from 'mobx'
 import moment from 'moment'
 
 import { EditorGetters, EditorStore } from '@/app'
-import { ExecutorResponse } from '@/components/HeaderRightSection'
+import { ExecutorResponse } from '@/modules/Header'
 
 import { LocalStorageClient } from '$/client-shared'
 
@@ -17,7 +17,7 @@ class TerminalActions {
     this.state = root
     this.getters = root.getters
 
-    this.storage = new LocalStorageClient()
+    this.storage = root.storage
   }
 
   addExecuteMessage(res: ExecutorResponse) {

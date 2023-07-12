@@ -1,7 +1,9 @@
 name: CodeGear CI
 on:
+  push:
+    branches: [ master ]
   pull_request:
-    branches: [ master, develop ]
+    branches: [ develop ]
 permissions:
   contents: write
 jobs:

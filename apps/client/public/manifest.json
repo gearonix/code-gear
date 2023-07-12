@@ -10,12 +10,12 @@
   "description": "Fast online text editor",
   "icons": [
     {
-      "src": "/logo/logo192.png",
+      "src": "/manifest-logo/logo192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/logo/logo512.png",
+      "src": "/manifest-logo/logo512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
