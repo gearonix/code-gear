@@ -1,1 +1,1 @@
-export { default as HtmlPreview } from './ui/HtmlPreview'
+export { default as HtmlPreview } from './ui/HtmlPreview/HtmlPreview'

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { color } from '../../../styles'
+import { color, customScrollbar } from '../../../styles';
 
 interface PopoverStylesProps {
   readonly $bottom: number
@@ -20,5 +20,6 @@ export const PopoverStyles = styled.div<PopoverStylesProps>`
   bottom: ${({ $bottom }) => `calc(-100vh + ${$bottom - 100}px)`};
   overflow-y: auto;
   box-sizing: border-box;
-  user-select: none;
+  scroll-behavior: smooth;
+  ${customScrollbar()};
 `

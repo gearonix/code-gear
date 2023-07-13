@@ -17,10 +17,15 @@ export const useModalToggle = (modalType: keyof ModalsState) => {
 
   return (key: TerminalTabKeys) => () => {
     if (terminalTab === key) {
-      return modalsContext.toggle(modalType)
+      modalsContext.toggle(modalType)
+      modalsContext.update({
+        isHtmlPreviewOpened: false
+      })
+      return
     }
     modalsContext.update({
       selectedTerminalTab: key,
+      isHtmlPreviewOpened: false,
       [modalType]: true
     })
   }

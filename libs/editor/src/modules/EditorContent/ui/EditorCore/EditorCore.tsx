@@ -1,11 +1,11 @@
 import { toJS } from 'mobx'
 import { observer } from 'mobx-react-lite'
 
-import { editorConfig } from '@/modules/EditorContent/config/editorConfig'
+import { editorConfig } from '@/shared/editorConfig'
 import { useGetters, useStore } from '@/shared/hooks'
 import MonacoEditor from '@monaco-editor/react'
 
-import { useAnimations, WithChildren } from '$/client-shared';
+import { useAnimations, WithChildren } from '$/client-shared'
 
 interface EditorCoreProps {
   onChange: (val: unknown) => void
