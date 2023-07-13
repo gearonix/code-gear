@@ -1,14 +1,23 @@
 import { Link } from 'react-router-dom'
 
+import { useAsideAnimation } from '@/modules/Aside/hooks/useAsideAnimation'
 import { useModalsContext, useModalToggle } from '@/shared/hooks'
 
 import { useEditorActions } from '../hooks/useEditorActions'
 
 import { AsideStyles, Icon } from './Aside.styles'
 
-import { AnimationProvider, RoutePaths, useAnimations, useFullScreen } from '$/client-shared'
-import { BsJournals, BsSearch, GoTerminal, LuTestTube2, SlInfo, SlSizeFullscreen, TfiSettings } from '$/icons'
-import { useAsideAnimation } from '@/modules/Aside/hooks/useAsideAnimation';
+import { AnimationProvider, RoutePaths, useFullScreen } from '$/client-shared'
+import {
+  AiOutlineHtml5,
+  BsJournals,
+  BsSearch,
+  GoTerminal,
+  LuTestTube2,
+  SlInfo,
+  SlSizeFullscreen,
+  TfiSettings
+} from '$/icons'
 
 const Aside = () => {
   const toggleFullscreen = useFullScreen()
@@ -19,6 +28,10 @@ const Aside = () => {
 
   const toggleSettings = () => {
     modalsContext.toggle('isSettingsOpened')
+  }
+
+  const toggleHtmlPreview = () => {
+    modalsContext.toggle('isHtmlPreviewOpened')
   }
 
 
@@ -38,6 +51,9 @@ const Aside = () => {
       </Icon>
       <Icon onClick={toggle('test_cases')}>
         <LuTestTube2/>
+      </Icon>
+      <Icon onClick={toggleHtmlPreview}>
+        <AiOutlineHtml5 />
       </Icon>
     </div>
     <div>

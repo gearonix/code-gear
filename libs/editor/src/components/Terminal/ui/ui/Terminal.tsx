@@ -1,15 +1,14 @@
-import { useCallback, useEffect, useRef } from 'react'
+import { useCallback, useRef } from 'react'
 import { observer } from 'mobx-react-lite'
 
-import { useTerminalAnimation, useTerminalTabs } from '@/components/Terminal/hooks'
+import { TerminalTabKeys } from '@/components/Terminal'
+import { useTerminalTabs } from '@/components/Terminal/hooks'
 import { TerminalOutput, TerminalOutputHandle } from '@/components/TerminalOutput'
 import { useActions, useModalsContext } from '@/shared/hooks'
 
-import { TerminalTabKeys } from '@/components/Terminal'
+import { Navigation, TerminalButtons } from './Terminal.styles'
 
-import { Navigation, TerminalButtons, TerminalStyles } from './Terminal.styles'
-
-import { AnimationProvider, Display } from '$/client-shared'
+import { Display, Popover } from '$/client-shared'
 import { AiOutlineClose, GrClear } from '$/icons'
 
 const Terminal = observer(() => {
@@ -32,15 +31,7 @@ const Terminal = observer(() => {
     actions.terminal.clearExecuteMessages()
   }
 
-  const motion = useTerminalAnimation(closeTerminal)
-
-  useEffect(() => {
-    motion.toggle(isTerminalOpened)
-  }, [isTerminalOpened])
-
-  return <TerminalStyles $bottom={motion.terminalHeight}
-                {...motion.bind()} style={motion.springs}
-                as={motion.div}>
+  return <Popover onClose={closeTerminal} isOpen={isTerminalOpened} height={300}>
     <Navigation items={terminalTabs.val}
       size={'large'} onChange={onTabChange} activeKey={terminalTabs.key}/>
 
@@ -55,14 +46,7 @@ const Terminal = observer(() => {
       <GrClear onClick={clearTerminal}/>
       <AiOutlineClose onClick={closeTerminal}/>
     </TerminalButtons>
-
-      </TerminalStyles>
+      </Popover>
 })
 
-const TerminalWrapper = () => {
-  return <AnimationProvider>
-    <Terminal/>
-  </AnimationProvider>
-}
-
-export default TerminalWrapper
+export default Terminal

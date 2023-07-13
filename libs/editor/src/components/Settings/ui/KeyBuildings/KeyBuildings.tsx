@@ -8,12 +8,12 @@ import { WithChildren } from '$/client-shared'
 
 type KeyBuildingProps = WithChildren<{
   keyCode: string
-  experimental: boolean
+  experimental?: boolean
 }>
 
 const KeyBuilding = ({ keyCode, children, experimental }: KeyBuildingProps) => {
   return <KeyBuildingStyles>
-    <Typography.Text keyboard>{experimental && '🧪'} Alt + {keyCode}</Typography.Text>
+    <Typography.Text keyboard>{experimental ? '🧪' : '✌️'} Alt + {keyCode}</Typography.Text>
     <SettingsText style={{ justifyContent: 'space-around' }}>
       <p>{children}</p>
     </SettingsText>

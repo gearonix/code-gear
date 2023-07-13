@@ -5,6 +5,7 @@ import { ReducerPayload } from '$/client-shared'
 export interface ModalsState {
   isTerminalOpened: boolean
   isSettingsOpened: boolean
+  isHtmlPreviewOpened: boolean
   selectedTerminalTab: TerminalTabKeys
 }
 

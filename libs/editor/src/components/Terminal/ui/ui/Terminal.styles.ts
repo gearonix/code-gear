@@ -3,27 +3,6 @@ import styled from 'styled-components'
 
 import { absolute, antdColor, color, flex, hover, margin, wh } from '$/styles'
 
-interface TerminalStylesProps{
-  readonly $bottom: number
-}
-
-export const TerminalStyles = styled.div<TerminalStylesProps>`
-  padding-left: 28px;
-  z-index: 15;
-  position: fixed;
-  right: 0;
-  height: calc(100vh + 100px);
-  width: calc(100% - 54px);
-  border-radius: 6px 6px 0;
-  background: ${color('darkBlue')};
-  border-top: 2px solid ${color('lightGrey')};
-  touch-action: none;
-  bottom: ${({ $bottom }) => `calc(-100vh + ${$bottom - 100}px)`};
-  overflow-y: auto;
-  box-sizing: border-box;
-  user-select: none;
-`
-
 export const TerminalButtons = styled.div`
   ${absolute({
     right: '44px',

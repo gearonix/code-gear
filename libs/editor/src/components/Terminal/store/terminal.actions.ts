@@ -21,12 +21,13 @@ class TerminalActions {
   }
 
   addExecuteMessage(res: ExecutorResponse) {
+    console.log(res)
     const activeTab = this.getters.getActiveTab()
 
     let message = res.output
 
     if (res.error){
-      message = res.error.split('^')[1].split('.')[0]
+      message = res.error.split('^')[1].split('at')[0]
     }
 
     this.state.executeMessages.push({

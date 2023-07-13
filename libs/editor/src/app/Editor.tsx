@@ -10,6 +10,7 @@ import { ThemeLoader } from './providers/ThemeLoader'
 import { EditorStyles, EditorWrapper } from './styles/Editor.styles'
 
 import { NotificationsProvider, Page, useOverflow } from '$/client-shared'
+import { HtmlPreview } from '@/components/HtmlPreivew';
 
 
 export const Editor = () => {
@@ -26,6 +27,7 @@ export const Editor = () => {
               <Aside/>
               <EditorContent/>
               <Terminal/>
+              <HtmlPreview/>
             </EditorWrapper>
             <Settings/>
           </EditorStyles>

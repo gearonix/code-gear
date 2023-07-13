@@ -1,4 +1,4 @@
-export { AiOutlineClose,AiOutlineInfoCircle } from 'react-icons/ai'
+export { AiOutlineClose,AiOutlineInfoCircle, AiOutlineHtml5 } from 'react-icons/ai'
 export { BsJournals,BsSearch } from 'react-icons/bs'
 export { GoTerminal } from 'react-icons/go'
 export { GrClear } from 'react-icons/gr'
