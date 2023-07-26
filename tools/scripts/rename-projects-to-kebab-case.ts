@@ -1,20 +1,6 @@
 // This script can be dangerous!
 
-import { join } from 'path'
-import { Project } from 'ts-morph'
-
-const resolveRoot = () => join(__dirname, '..', '..')
-
-const project = new Project({
-  tsConfigFilePath: join(resolveRoot(), 'tsconfig.base.json')
-})
-
-project.addSourceFilesAtPaths('../../libs/**/*.ts')
-project.addSourceFilesAtPaths('../../libs/**/*.tsx')
-project.addSourceFilesAtPaths('../../apps/**/*.ts')
-project.addSourceFilesAtPaths('../../apps/**/*.tsx')
-
-const files = project.getSourceFiles()
+import { runProjectFiles } from './lib/helpers';
 
 const toKebabCase = (str) => {
   return str
@@ -25,7 +11,7 @@ const toKebabCase = (str) => {
     : str
 }
 
-files.forEach(async (sourceFile) => {
+runProjectFiles(async (sourceFile) => {
   const importDeclarations = sourceFile.getImportDeclarations()
   const exportDeclarations = sourceFile.getExportDeclarations()
 
@@ -53,6 +39,7 @@ files.forEach(async (sourceFile) => {
   console.log(`FILENAME: ${newFileName}`)
 
   const newFile = await sourceFile.copy(newFileName)
-  await Promise.all([newFile.save(), sourceFile.deleteImmediately()]);
+  await Promise.all([newFile.save(), sourceFile.deleteImmediately()])
 })
 
+console.log('Done.')
