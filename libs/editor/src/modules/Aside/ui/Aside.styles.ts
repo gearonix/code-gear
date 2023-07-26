@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { flex, hover,wh } from '$/styles'
+import { flex, hover, wh } from '$/styles'
 
 export const AsideStyles = styled.div`
   background: ${({ theme }) => theme.grey};

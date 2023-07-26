@@ -2,7 +2,7 @@ import { Select } from 'antd'
 import { observer } from 'mobx-react-lite'
 
 import { LanguagesValues } from '@/shared/consts'
-import {  useGetters } from '@/shared/hooks'
+import { useGetters } from '@/shared/hooks'
 
 import { useMappedLanguages } from '../hooks'
 
@@ -16,14 +16,15 @@ const LanguageSwitcher = observer(() => {
     activeTab.lang = newLanguage
   }
 
-  return <Select
-    size={'middle'}
-    onChange={handleChange}
-    value={language}
-    style={{ width: 200 }}
-    options={languages}
-  />
-
+  return (
+    <Select
+      size="middle"
+      onChange={handleChange}
+      value={language}
+      style={{ width: 200 }}
+      options={languages}
+    />
+  )
 })
 
 export default LanguageSwitcher

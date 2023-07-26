@@ -11,7 +11,7 @@ import EditorServices from './editor.services'
 
 import { Hex, LocalStorageClient } from '$/client-shared'
 
-class EditorStore{
+class EditorStore {
   activeKey = ''
   content: ContentTab[] = []
   theme: Themes = 'vs-dark'
@@ -19,13 +19,12 @@ class EditorStore{
   tabSize: TabSizes = 4
   customBackground: Hex = '#3d3d3d'
   customColor: Hex = '#3d3d3d'
-  isStorageDisabled: boolean = false
+  isStorageDisabled = false
   executeMessages: ExecuteMessage[] = []
   readonly getters: EditorGetters
   readonly actions: EditorActions
   readonly services: EditorServices
   storage: LocalStorageClient
-
 
   constructor() {
     makeAutoObservable(this)
@@ -37,15 +36,28 @@ class EditorStore{
     this.services = new EditorServices(this)
 
     this.theme = storage.get<Themes>('EDITOR_THEME', 'vs-dark')
-    this.fontSize = Number(storage.get<FontSizes>('EDITOR_FONT_SIZE', 20)) as FontSizes
-    this.tabSize = Number(storage.get<TabSizes>('EDITOR_TAB_SIZE', 4)) as TabSizes
-    this.customBackground = storage.get<Hex>('EDITOR_CUSTOM_BACKGROUND', '#3d3d3d')
+    this.fontSize = Number(
+      storage.get<FontSizes>('EDITOR_FONT_SIZE', 20)
+    ) as FontSizes
+    this.tabSize = Number(
+      storage.get<TabSizes>('EDITOR_TAB_SIZE', 4)
+    ) as TabSizes
+    this.customBackground = storage.get<Hex>(
+      'EDITOR_CUSTOM_BACKGROUND',
+      '#3d3d3d'
+    )
     this.customColor = storage.get<Hex>('EDITOR_CUSTOM_COLOR', '#3d3d3d')
 
-    const savedContent = storage.get<ContentTabInstance[]>('EDITOR_CONTENT_DATA', [])
-    this.executeMessages = storage.get<ExecuteMessage[]>('EDITOR_EXECUTE_MESSAGES', [])
+    const savedContent = storage.get<ContentTabInstance[]>(
+      'EDITOR_CONTENT_DATA',
+      []
+    )
+    this.executeMessages = storage.get<ExecuteMessage[]>(
+      'EDITOR_EXECUTE_MESSAGES',
+      []
+    )
 
-    if (!savedContent.length) {
+    if (savedContent.length === 0) {
       this.actions.tabs.createTab()
     }
 
@@ -57,6 +69,5 @@ class EditorStore{
     this.activeKey = firstTab.getKeyId()
   }
 }
-
 
 export default EditorStore

@@ -8,12 +8,12 @@ import 'normalize.css'
 
 function App() {
   return (
-      <StoreProvider>
-        <ThemeProvider>
-          <RouterProvider />
-          <GlobalStyles />
-        </ThemeProvider>
-      </StoreProvider>
+    <StoreProvider>
+      <ThemeProvider>
+        <RouterProvider />
+        <GlobalStyles />
+      </ThemeProvider>
+    </StoreProvider>
   )
 }
 

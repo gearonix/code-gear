@@ -8,21 +8,21 @@ export interface BottomScrollHandle {
   scrollToBottom: VoidFunction
 }
 
-export const BottomScroll = forwardRef<BottomScrollHandle, WithChildren>(({ children }, ref) => {
-  const outputRef = useRef<HTMLDivElement>(null)
+export const BottomScroll = forwardRef<BottomScrollHandle, WithChildren>(
+  ({ children }, ref) => {
+    const outputRef = useRef<HTMLDivElement>(null)
 
-  const scrollToBottom = () => {
-    outputRef.current?.scrollTo(0, outputRef.current.scrollHeight)
-  }
-
-  useImperativeHandle(ref, () => ({
-    scrollToBottom: () => {
-      scrollToBottom()
-      setTimeout(scrollToBottom, 50)
+    const scrollToBottom = () => {
+      outputRef.current.scrollTo(0, outputRef.current.scrollHeight)
     }
-  }))
 
-  return <Output ref={outputRef}>
-    {children}
-  </Output>
-})
+    useImperativeHandle(ref, () => ({
+      scrollToBottom: () => {
+        scrollToBottom()
+        setTimeout(scrollToBottom, 50)
+      }
+    }))
+
+    return <Output ref={outputRef}>{children}</Output>
+  }
+)

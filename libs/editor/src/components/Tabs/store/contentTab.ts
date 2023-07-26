@@ -14,7 +14,6 @@ type ContentTabArgs = Partial<{
   instance: ContentTabInstance
 }>
 
-
 export class ContentTab {
   private _key = generateId()
   private _fileHandle: Nullable<FileSystemFileHandle> = null
@@ -29,23 +28,22 @@ export class ContentTab {
 
     if (instance) {
       this.initUsingInstance(instance)
-    }
-    else if (fileData) {
+    } else if (fileData) {
       this.initUsingFileData(fileData)
     }
 
-    if (lastNumber){
+    if (lastNumber) {
       this.idx = lastNumber + 1
     }
   }
 
-  public setFileHandle(fileHandle: FileSystemFileHandle){
+  public setFileHandle(fileHandle: FileSystemFileHandle) {
     this._fileHandle = fileHandle
     this.wasChanged = false
     this.setLabel(fileHandle.name)
   }
 
-  public getFileHandle(){
+  public getFileHandle() {
     return this._fileHandle
   }
 
@@ -60,8 +58,8 @@ export class ContentTab {
   private updateLabel() {
     // TODO: refactor
 
-    if (this._fileHandle){
-      if (!this.wasChanged){
+    if (this._fileHandle) {
+      if (!this.wasChanged) {
         this.setLabel(`${this.getLabel()}  •`)
       }
       this.wasChanged = true
@@ -76,28 +74,28 @@ export class ContentTab {
     this.setLabel(newLabel)
   }
 
-  public setTabContent(content: string){
+  public setTabContent(content: string) {
     this._content = content
 
     this.updateLabel()
   }
 
-  public getContent(){
+  public getContent() {
     return this._content
   }
 
-  public getKeyId(){
+  public getKeyId() {
     return this._key
   }
 
-  private initUsingFileData(fileData: FileHandlerData){
+  private initUsingFileData(fileData: FileHandlerData) {
     this._fileHandle = fileData.fileHandle
     this.lang = fileData.language
     this._content = fileData.content
     this._label = fileData.name
   }
 
-  private initUsingInstance(instance: ContentTabInstance){
+  private initUsingInstance(instance: ContentTabInstance) {
     this._key = instance._key
     this._label = instance._label
     this.idx = instance.idx
@@ -106,5 +104,4 @@ export class ContentTab {
     this.wasChanged = instance.wasChanged
     this.lang = instance.lang
   }
-
 }

@@ -1,6 +1,6 @@
-import { useGetters, useModalsContext, useServices } from '@/shared/hooks';
+import { useGetters, useModalsContext, useServices } from '@/shared/hooks'
 
-import { useNotifications } from '$/client-shared';
+import { useNotifications } from '$/client-shared'
 
 export const useCodeRunner = () => {
   const { codeRunner } = useServices()

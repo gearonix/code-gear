@@ -4,8 +4,7 @@ import { EditorStore } from '@/app'
 import { ContentTab } from '@/components/Tabs'
 import { executorAllowedLanguages, LanguagesValues } from '@/shared/consts'
 
-
-class EditorGetters{
+class EditorGetters {
   private state: EditorStore
 
   constructor(editorState: EditorStore) {
@@ -39,6 +38,5 @@ class EditorGetters{
     return executorAllowedLanguages.includes(lang)
   }
 }
-
 
 export default EditorGetters

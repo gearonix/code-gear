@@ -19,7 +19,7 @@ export const useFileHandler = () => {
         name: fileData.name,
         type: fileData.type,
         content: fileContent,
-        fileHandle: fileHandle,
+        fileHandle,
         language: fileLang
       }
     }
@@ -27,4 +27,3 @@ export const useFileHandler = () => {
     console.warn(EditorErrors.NotSupportedByBrowser())
   }
 }
-

@@ -18,23 +18,26 @@ const HtmlPreview = () => {
     modalsContext.update({ isHtmlPreviewOpened: false })
   }, [])
 
-  return <Popover isOpen={isHtmlPreviewOpened}
-                  onClose={closeHtmlPreview} height={750}>
-    <HtmlPreviewProvider>
-      <PreviewWrapper>
-        <EditorBlock>
-          <PreviewEditor lang={'html'} />
-          <PreviewEditor lang={'css'} />
-          <PreviewEditor lang={'javascript'} />
-        </EditorBlock>
+  return (
+    <Popover
+      isOpen={isHtmlPreviewOpened}
+      onClose={closeHtmlPreview}
+      height={750}>
+      <HtmlPreviewProvider>
+        <PreviewWrapper>
+          <EditorBlock>
+            <PreviewEditor lang="html" />
+            <PreviewEditor lang="css" />
+            <PreviewEditor lang="javascript" />
+          </EditorBlock>
 
-        <PreviewBlock>
-          <IFrame />
-        </PreviewBlock>
-      </PreviewWrapper>
-    </HtmlPreviewProvider>
-  </Popover>
+          <PreviewBlock>
+            <IFrame />
+          </PreviewBlock>
+        </PreviewWrapper>
+      </HtmlPreviewProvider>
+    </Popover>
+  )
 }
-
 
 export default HtmlPreview

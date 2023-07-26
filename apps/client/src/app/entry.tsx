@@ -11,7 +11,4 @@ const updateSW = registerSW({
   }
 })
 
-
-render(<App />, document.getElementById('root')!)
-
-
+render(<App />, document.querySelector('#root')!)

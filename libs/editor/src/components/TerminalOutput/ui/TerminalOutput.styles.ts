@@ -15,7 +15,6 @@ export const Output = styled.div`
   span:first-child {
     margin-top: 22px;
   }
-
 `
 
 interface OutputLineProps {
@@ -29,9 +28,8 @@ export const OutputLine = styled.span<OutputLineProps>`
   cursor: pointer;
   font-size: ${({ theme }) => theme.fz7};
   em {
-    color: ${({ $isError }) => $isError ? 'red': color('light')};
+    color: ${({ $isError }) => ($isError ? 'red' : color('light'))};
     font-weight: bold;
     font-style: italic;
   }
 `
-

@@ -12,6 +12,7 @@ export const useEditorActions = () => {
   }
 
   return {
-    find, replace
+    find,
+    replace
   }
 }

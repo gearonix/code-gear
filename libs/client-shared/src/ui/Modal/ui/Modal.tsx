@@ -3,7 +3,11 @@ import Scrollbar from 'react-smooth-scrollbar'
 
 import { Portal } from '@reach/portal'
 
-import { AnimationProvider, Display, useAnimations } from '../../../lib/components'
+import {
+  AnimationProvider,
+  Display,
+  useAnimations
+} from '../../../lib/components'
 import { WithChildren } from '../../../types'
 import { useModalTransitions } from '../hooks/useModalTransitions'
 
@@ -41,7 +45,12 @@ export const Modal = ({ onClose, isOpen, children }: ModalProps) => {
 
   const bind = Gesture.useDrag(
     ({ offset: [ox, oy], down }) => {
-      api.start({ y: down ? oy : 0, immediate: false, x: down ? ox : 0, scale: down ? 1.07 : 1 })
+      api.start({
+        y: down ? oy : 0,
+        immediate: false,
+        x: down ? ox : 0,
+        scale: down ? 1.07 : 1
+      })
     },
     { from: () => [0, 0], filterTaps: true, rubberband: true, delay: 200 }
   )
@@ -50,35 +59,38 @@ export const Modal = ({ onClose, isOpen, children }: ModalProps) => {
     e.stopPropagation()
   }
 
-  return <>
-      {containerTransition(
-        (spring, item) =>
-          <Display when={item}>
-            <Portal>
-                <ModalBackground
-                  style={spring}
-                  onClick={onClose} as={Spring.a.div}>
-                  <ModalStyles style={{ ...modalStyle, x, y, scale }} {...bind()}
-                               onClick={stopPropagation} as={Spring.a.div}>
-                     <Scrollbar damping={0.05}
-                                syncCallbacks={true}
-                                alwaysShowTracks={true}>
-                      <ModalContainer>
-                        {children}
-                      </ModalContainer>
-                     </Scrollbar>
-                  </ModalStyles>
-                </ModalBackground>
-            </Portal>
-          </Display>)
-      }
+  return (
+    <>
+      {containerTransition((spring, item) => (
+        <Display when={item}>
+          <Portal>
+            <ModalBackground style={spring} onClick={onClose} as={Spring.a.div}>
+              <ModalStyles
+                style={{ ...modalStyle, x, y, scale }}
+                {...bind()}
+                onClick={stopPropagation}
+                as={Spring.a.div}>
+                <Scrollbar
+                  damping={0.05}
+                  syncCallbacks={true}
+                  alwaysShowTracks={true}>
+                  <ModalContainer>{children}</ModalContainer>
+                </Scrollbar>
+              </ModalStyles>
+            </ModalBackground>
+          </Portal>
+        </Display>
+      ))}
     </>
+  )
 }
 
 const ModalWrapper = (props: ModalProps) => {
-  return <AnimationProvider>
-    <Modal {...props} />
-  </AnimationProvider>
+  return (
+    <AnimationProvider>
+      <Modal {...props} />
+    </AnimationProvider>
+  )
 }
 
 export default ModalWrapper

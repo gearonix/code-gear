@@ -21,13 +21,17 @@ export const useKeyboardManager = () => {
 
   useEffect(() => {
     keyboard.on({
-      [KeyBuildings.O] : openFile,
-      [KeyBuildings.S] : saveFile,
-      [KeyBuildings.N] : () => {actions.tabs.createTab()},
-      [KeyBuildings.T] : () => {actions.tabs.removeTab()},
-      [KeyBuildings.P] : toggle('terminal'),
-      [KeyBuildings.J] : toggle('test_cases'),
-      [KeyBuildings.Q] : toggleSettings
+      [KeyBuildings.O]: openFile,
+      [KeyBuildings.S]: saveFile,
+      [KeyBuildings.N]: () => {
+        actions.tabs.createTab()
+      },
+      [KeyBuildings.T]: () => {
+        actions.tabs.removeTab()
+      },
+      [KeyBuildings.P]: toggle('terminal'),
+      [KeyBuildings.J]: toggle('test_cases'),
+      [KeyBuildings.Q]: toggleSettings
     })
 
     return () => {

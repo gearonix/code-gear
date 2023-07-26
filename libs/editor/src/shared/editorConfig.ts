@@ -7,7 +7,9 @@ interface EditorConfigPayload {
   tabSize: TabSizes
 }
 
-type EditorConfig = (payload: EditorConfigPayload) => editor.IStandaloneEditorConstructionOptions
+type EditorConfig = (
+  payload: EditorConfigPayload,
+) => editor.IStandaloneEditorConstructionOptions
 
 export const editorConfig: EditorConfig = ({ fontSize, tabSize }) => ({
   fontSize,
@@ -20,5 +22,5 @@ export const editorConfig: EditorConfig = ({ fontSize, tabSize }) => ({
   },
   scrollbar: {
     verticalScrollbarSize: 6
-  }
+  },
 })

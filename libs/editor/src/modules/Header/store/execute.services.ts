@@ -1,13 +1,12 @@
 import { makeAutoObservable } from 'mobx'
 
-import { EditorActions,EditorGetters, EditorStore } from '@/app'
+import { EditorActions, EditorGetters, EditorStore } from '@/app'
 import { ExecutorRequest, ExecutorResponse } from '@/modules/Header'
 import { CodeExecutionErrors } from '@/modules/Header/errors'
 import { NotificationMessage } from '@/modules/Header/types'
 
 import { httpService } from '$/client-shared'
 import { EndPoints } from '$/config'
-
 
 class ExecuteServices {
   private state: EditorStore
@@ -22,7 +21,8 @@ class ExecuteServices {
   }
 
   async requestCodeExecution(): Promise<NotificationMessage> {
-    const { NOT_SUPPORTED, ERRORS_IN_CODE, SUCCESS, NETWORK_ERROR } = CodeExecutionErrors
+    const { NOT_SUPPORTED, ERRORS_IN_CODE, SUCCESS, NETWORK_ERROR } =
+      CodeExecutionErrors
 
     if (!this.getters.isAllowedToExecute()) {
       return NOT_SUPPORTED
@@ -37,20 +37,19 @@ class ExecuteServices {
 
     try {
       const res = await httpService.post<ExecutorResponse>(
-        EndPoints.CODE_EXECUTOR_API, requestBody)
+        EndPoints.CODE_EXECUTOR_API,
+        requestBody
+      )
 
       this.actions.terminal.addExecuteMessage(res.data)
 
       const isError = res.data.error
 
       return isError ? ERRORS_IN_CODE : SUCCESS
-    }
-
-    catch (e) {
+    } catch (error) {
       return NETWORK_ERROR
     }
   }
 }
-
 
 export default ExecuteServices

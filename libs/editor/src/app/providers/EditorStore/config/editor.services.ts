@@ -6,7 +6,6 @@ import EditorActions from './editor.actions'
 import EditorGetters from './editor.getters'
 import EditorStore from './editor.store'
 
-
 class EditorServices {
   private state: EditorStore
   private readonly getters: EditorGetters
@@ -22,6 +21,5 @@ class EditorServices {
     this.codeRunner = new ExecuteServices(root)
   }
 }
-
 
 export default EditorServices

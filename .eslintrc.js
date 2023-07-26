@@ -7,7 +7,8 @@ module.exports = configure({
   presets: [
     presets.node(),
     presets.prettier({
-      singleQuote: true
+      singleQuote: true,
+      trailingComma: "none"
     }),
     presets.typescript({
       root: './',
@@ -27,7 +28,8 @@ module.exports = configure({
       "quotes": [2, "single", { "avoidEscape": true }],
       "@typescript-eslint/no-namespace": "off",
       "@typescript-eslint/member-delimiter-style": ["error",  {"multiline" : {"delimiter": "none"}}],
-      "import/no-unresolved": "off"
+      "import/no-unresolved": "off",
+      "@typescript-eslint/no-unnecessary-condition": "off"
     }
   }
 })

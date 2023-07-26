@@ -1,7 +1,10 @@
 import { useAnimations } from '../../../providers/WithAnimations/AnimationProvider'
 import { VoidFunction } from '../../../types'
 
-export const usePopoverAnimation = (closeCallback: VoidFunction, height: number) => {
+export const usePopoverAnimation = (
+  closeCallback: VoidFunction,
+  height: number
+) => {
   const { Spring, Gesture } = useAnimations()
   const [{ y }, api] = Spring.useSpring(() => ({ y: height }))
 
@@ -11,7 +14,11 @@ export const usePopoverAnimation = (closeCallback: VoidFunction, height: number)
 
   const close = (velocity = 0) => {
     closeCallback()
-    api.start({ y: height, immediate: false, config: { ...Spring.config.stiff, velocity } })
+    api.start({
+      y: height,
+      immediate: false,
+      config: { ...Spring.config.stiff, velocity }
+    })
   }
 
   const bind = Gesture.useDrag(
@@ -19,18 +26,22 @@ export const usePopoverAnimation = (closeCallback: VoidFunction, height: number)
       if (oy < -70) cancel()
       if (last) {
         oy > height * 0.5 || (vy > 0.5 && dy === 1) ? close(vy) : open()
-      }
-      else api.start({ y: oy, immediate: dy === -1 })
+      } else api.start({ y: oy, immediate: dy === -1 })
     },
-    { from: () => [0, y.get()], filterTaps: true, bounds: { top: 0 }, rubberband: true }
+    {
+      from: () => [0, y.get()],
+      filterTaps: true,
+      bounds: { top: 0 },
+      rubberband: true
+    }
   )
 
   const display = y.to((py) => (py < height ? 'block' : 'none'))
 
-  const toggle = (isOpened : boolean) => {
+  const toggle = (isOpened: boolean) => {
     if (isOpened) {
       open()
-    } else{
+    } else {
       close()
     }
   }
@@ -42,6 +53,6 @@ export const usePopoverAnimation = (closeCallback: VoidFunction, height: number)
     springs: {
       display,
       y
-    }
+    },
   }
 }

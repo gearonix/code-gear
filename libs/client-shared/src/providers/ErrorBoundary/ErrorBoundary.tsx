@@ -13,9 +13,7 @@ const ErrorBoundary = ({ children }: WithPreactChildren) => {
     return <ErrorTemplate errorInfo={error} />
   }
 
-  return <>
-    {children}
-  </>
+  return <>{children}</>
 }
 
 export default ErrorBoundary

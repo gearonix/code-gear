@@ -10,11 +10,11 @@ export const CodeExecutionErrors: Record<string, NotificationMessage> = {
     message: 'It looks like there are some errors in your code.'
   },
   SUCCESS: {
-    isError: false ,
+    isError: false,
     message: 'Code completed successfully!'
   },
   NETWORK_ERROR: {
     isError: true,
     message: 'Something went wrong'
-  }
+  },
 }

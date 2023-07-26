@@ -17,9 +17,10 @@ const EditorCore = observer(({ onChange }: EditorCoreProps) => {
   const textContent = getters.getActiveTabText()
   const language = getters.getActiveLanguage()
 
-  return <MonacoEditor
+  return (
+    <MonacoEditor
       height="90vh"
-      theme={'vs-dark'}
+      theme="vs-dark"
       onChange={onChange}
       language={language}
       value={toJS(textContent)}
@@ -28,8 +29,8 @@ const EditorCore = observer(({ onChange }: EditorCoreProps) => {
         tabSize
       })}
     />
+  )
 })
-
 
 const WithAnimations = ({ children }: WithChildren) => {
   const { Spring } = useAnimations()
@@ -45,13 +46,13 @@ const WithAnimations = ({ children }: WithChildren) => {
     config: Spring.config.stiff
   })
 
-  return  <Spring.a.div style={{ ...spring }}>
-    {children}
-  </Spring.a.div>
+  return <Spring.a.div style={{ ...spring }}>{children}</Spring.a.div>
 }
 
 export default (props: EditorCoreProps) => {
-  return <WithAnimations>
-    <EditorCore {...props} />
-  </WithAnimations>
+  return (
+    <WithAnimations>
+      <EditorCore {...props} />
+    </WithAnimations>
+  )
 }

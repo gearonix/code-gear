@@ -18,4 +18,3 @@ export const Option = styled.span`
   color: ${({ theme }) => theme.light};
   cursor: pointer;
 `
-

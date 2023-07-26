@@ -13,13 +13,17 @@ const HeaderRightSection = observer(() => {
   const isDisabled = !getters.isAllowedToExecute()
   const runCode = useCodeRunner()
 
-  return  <RightSection>
-    <ColorButton type="primary" onClick={runCode}
-                 disabled={isDisabled}
-                 override={'#38a886'}>
-      Run Code
-    </ColorButton>
-  </RightSection>
+  return (
+    <RightSection>
+      <ColorButton
+        type="primary"
+        onClick={runCode}
+        disabled={isDisabled}
+        override="#38a886">
+        Run Code
+      </ColorButton>
+    </RightSection>
+  )
 })
 
 export default HeaderRightSection

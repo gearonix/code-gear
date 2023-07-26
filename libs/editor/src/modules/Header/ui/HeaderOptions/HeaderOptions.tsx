@@ -19,16 +19,25 @@ const HeaderOptions = () => {
     actions.tabs.createTab()
   }
 
-  return <HeaderOptionsStyles>
-    <Link to={RoutePaths.MAIN}>
-      <img src={logo}/>
-    </Link>
-    <Button type="dashed" size={'small'} onClick={openFile}>Open</Button>
-    <Button type="dashed" size={'small'} onClick={saveFile}>Save</Button>
-    <Button type="dashed" size={'small'} onClick={createTab}>New</Button>
-    <Button type="dashed" size={'small'} onClick={runCode}>Run</Button>
-  </HeaderOptionsStyles>
+  return (
+    <HeaderOptionsStyles>
+      <Link to={RoutePaths.MAIN}>
+        <img src={logo} />
+      </Link>
+      <Button type="dashed" size="small" onClick={openFile}>
+        Open
+      </Button>
+      <Button type="dashed" size="small" onClick={saveFile}>
+        Save
+      </Button>
+      <Button type="dashed" size="small" onClick={createTab}>
+        New
+      </Button>
+      <Button type="dashed" size="small" onClick={runCode}>
+        Run
+      </Button>
+    </HeaderOptionsStyles>
+  )
 }
-
 
 export default HeaderOptions

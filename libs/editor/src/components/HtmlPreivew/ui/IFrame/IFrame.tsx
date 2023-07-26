@@ -9,7 +9,6 @@ import { createHtmlTemplate } from '../../lib/createHtmlTemplate'
 import { useDebounce } from '$/client-shared'
 import { AiOutlineSwap } from '$/icons'
 
-
 const IFrame = () => {
   const { state } = usePreview()
   const [srcDoc, setSrcDoc] = useState('')
@@ -24,19 +23,21 @@ const IFrame = () => {
     updateIframe()
   }, [state])
 
-
-  return <>
-    <EditorTitle><AiOutlineSwap/> Result</EditorTitle>
-    <iframe
-    srcDoc={srcDoc}
-    title={'output'}
-    frameBorder="0"
-    width="100%"
-    height="100%"
-    sandbox="allow-forms allow-popups allow-scripts allow-same-origin allow-modals"
-  />
+  return (
+    <>
+      <EditorTitle>
+        <AiOutlineSwap /> Result
+      </EditorTitle>
+      <iframe
+        srcDoc={srcDoc}
+        title="output"
+        frameBorder="0"
+        width="100%"
+        height="100%"
+        sandbox="allow-forms allow-popups allow-scripts allow-same-origin allow-modals"
+      />
     </>
+  )
 }
-
 
 export default IFrame

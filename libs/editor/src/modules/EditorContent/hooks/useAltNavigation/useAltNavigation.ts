@@ -13,14 +13,16 @@ export const useAltNavigation = () => {
   const { content } = useStore()
 
   useEffect(() => {
-    keyboard.on(Object.fromEntries(keys.map((num) => {
-      const contentTab = content[num - 1]
-      const key = contentTab?.getKeyId()
+    keyboard.on(
+      Object.fromEntries(
+        keys.map((num) => {
+          const contentTab = content[num - 1]
+          const key = contentTab?.getKeyId()
 
-      return [
-        num.toString(), key ? () => tabs.changeActiveTab(key): null
-      ]
-    })))
+          return [num.toString(), key ? () => tabs.changeActiveTab(key) : null]
+        })
+      ),
+    )
 
     return () => {
       keyboard.clear()

@@ -1,4 +1,4 @@
-import { EventHandler, KeyboardEvent,useState } from 'react'
+import { EventHandler, KeyboardEvent, useState } from 'react'
 
 import { Nullable } from '../types'
 
@@ -12,7 +12,7 @@ export const useAltKeyDown = () => {
         const subscriber = (e: KeyboardEvent) => {
           if (e.altKey && e.key === key.toLowerCase()) {
             e.preventDefault()
-            handler?.()
+            handler()
             return false
           }
         }
@@ -25,6 +25,5 @@ export const useAltKeyDown = () => {
         document.removeEventListener('keydown', sub)
       })
     }
-
   }
 }

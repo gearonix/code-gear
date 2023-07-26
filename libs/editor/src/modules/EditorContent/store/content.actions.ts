@@ -16,8 +16,6 @@ class ContentActions {
     const activeTab = this.getters.getActiveTab(key)
     activeTab.setTabContent(content)
   }
-
 }
-
 
 export default ContentActions

@@ -21,22 +21,21 @@ export const useThemeLoader = () => {
   useEffect(() => {
     let processed = 0
     themes.forEach(async (theme) => {
-      try{
+      try {
         const json: unknown = await import(`./themes/${theme}.json`)
 
         assertThemeObject(json)
 
-        monaco?.editor.defineTheme(theme, json)
-      }
-      catch (e){
+        monaco.editor.defineTheme(theme, json)
+      } catch (error) {
         console.log(EditorErrors.ThemeUpload(theme))
       }
 
       processed += 1
 
-      if (processed === themes.length){
+      if (processed === themes.length) {
         defineCustomTheme({ background: customBackground, color: customColor })
-        monaco?.editor.setTheme(selectedTheme)
+        monaco.editor.setTheme(selectedTheme)
 
         loader.on()
       }

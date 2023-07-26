@@ -1,6 +1,4 @@
-import {
-  createBrowserRouter
-} from 'react-router-dom'
+import { createBrowserRouter } from 'react-router-dom'
 
 import { About } from '@/pages/About'
 import { Main } from '@/pages/Main'
@@ -12,21 +10,20 @@ import { Editor } from '$/editor'
 const router = createBrowserRouter([
   {
     path: RoutePaths.MAIN,
-    element: <Main/>
+    element: <Main />
   },
   {
     path: RoutePaths.EDITOR,
-    element: <Editor/>
+    element: <Editor />
   },
   {
     path: RoutePaths.ABOUT,
-    element: <About/>
+    element: <About />
   },
   {
     path: '*',
-    element: <NotFound/>
-  }
+    element: <NotFound />
+  },
 ])
-
 
 export default router

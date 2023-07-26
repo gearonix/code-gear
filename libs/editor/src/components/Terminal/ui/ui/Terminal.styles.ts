@@ -10,7 +10,7 @@ export const TerminalButtons = styled.div`
   })}
   ${flex('flex-end')};
   gap: 23px;
-  ${wh('100px','22px')};
+  ${wh('100px', '22px')};
   cursor: pointer;
   svg {
     path {
@@ -26,16 +26,17 @@ export const TerminalButtons = styled.div`
 export const Navigation = styled(Tabs)`
   ${margin(0, 6)};
 
-  .ant-tabs-nav::before{
+  .ant-tabs-nav::before {
     border-bottom: none;
   }
-  .ant-tabs-tab-active div{
+  .ant-tabs-tab-active div {
     color: ${antdColor('light')};
   }
-  .ant-tabs-tab:hover, .ant-tabs-tab:active{
+  .ant-tabs-tab:hover,
+  .ant-tabs-tab:active {
     color: ${color('light')};
   }
-  .ant-tabs-ink-bar{
+  .ant-tabs-ink-bar {
     background: ${color('light')};
   }
   .ant-tabs-tab {

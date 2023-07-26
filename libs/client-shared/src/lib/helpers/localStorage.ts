@@ -14,22 +14,24 @@ export class LocalStorageClient {
 
     const value = localStorage.getItem(key) as string
 
-    if (!value){
+    if (!value) {
       return defaultVal
     }
 
-    return isJson(value) ? JSON.parse(value): value
+    return isJson(value) ? JSON.parse(value) : value
   }
+
   public set<T extends LocalStorageKeys>(key: T, value: unknown) {
     if (this.isDisabled || !(key in LocalStorage)) {
       return
     }
 
-    if (isString(value)){
+    if (isString(value)) {
       return localStorage.setItem(key, value)
     }
     localStorage.setItem(key, JSON.stringify(value))
   }
+
   public clear(key?: LocalStorageKeys): void {
     if (key) {
       return localStorage.removeItem(key)
@@ -41,7 +43,7 @@ export class LocalStorageClient {
 const isJson = (value: string) => {
   try {
     JSON.parse(value)
-  } catch (e) {
+  } catch (error) {
     return false
   }
   return true

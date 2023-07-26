@@ -15,14 +15,14 @@ export type WithChildren<T extends AnyObject = AnyObject> = T & {
   children: ReactElement | ReactNode
 }
 
-export type TargetKey = MouseEvent | KeyboardEvent | string;
+export type TargetKey = MouseEvent | KeyboardEvent | string
 
 export type Nullable<T> = T | null
 
 export type Undefinable<T> = T | undefined
 
-export type ValueOf<T> = T[keyof T];
+export type ValueOf<T> = T[keyof T]
 
 export type Keys<T extends readonly unknown[]> = T[number]
 
-export type Hex = `#${string}`;
+export type Hex = `#${string}`

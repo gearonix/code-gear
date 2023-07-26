@@ -1,2 +1,5 @@
-export type { ModalsPayload,ModalsState } from './types'
-export { ModalsContext, default as ModalsContextProvider } from './ui/ModalsContextProvider'
+export type { ModalsPayload, ModalsState } from './types'
+export {
+  ModalsContext,
+  default as ModalsContextProvider
+} from './ui/ModalsContextProvider'

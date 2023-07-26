@@ -11,7 +11,7 @@ export const EditorTitle = styled.h4`
   &:first-letter {
     text-transform: capitalize;
   }
-  svg{
+  svg {
     margin-bottom: -3px;
   }
   color: ${color('light')};

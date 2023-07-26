@@ -21,4 +21,3 @@ export const useServices = () => {
 export const useStorage = () => {
   return useContext(EditorStoreContext).storage
 }
-

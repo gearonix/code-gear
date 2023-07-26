@@ -10,7 +10,6 @@ import EditorStore from './editor.store'
 
 import { Hex, LocalStorageClient } from '$/client-shared'
 
-
 class EditorActions {
   private state: EditorStore
   private readonly getters: EditorGetters
@@ -56,6 +55,5 @@ class EditorActions {
     this.state.storage = new LocalStorageClient(isDisabled)
   }
 }
-
 
 export default EditorActions

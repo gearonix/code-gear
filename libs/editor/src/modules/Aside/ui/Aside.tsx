@@ -34,44 +34,46 @@ const Aside = () => {
     modalsContext.toggle('isHtmlPreviewOpened')
   }
 
-
-  return <AsideStyles as={animatedDiv} style={spring}>
-    <div>
-      <Icon onClick={editorActions.find}>
-        <BsSearch/>
-      </Icon>
-      <Icon onClick={editorActions.replace}>
-        <BsJournals/>
-      </Icon>
-      <Icon onClick={toggleFullscreen}>
-        <SlSizeFullscreen/>
-      </Icon>
-      <Icon onClick={toggle('terminal')}>
-        <GoTerminal/>
-      </Icon>
-      <Icon onClick={toggle('test_cases')}>
-        <LuTestTube2/>
-      </Icon>
-      <Icon onClick={toggleHtmlPreview}>
-        <AiOutlineHtml5 />
-      </Icon>
-    </div>
-    <div>
-      <Icon onClick={toggleSettings}>
-        <TfiSettings/>
-      </Icon>
-      <Icon>
-        <Link to={RoutePaths.ABOUT}>
-          <SlInfo/>
-        </Link>
-      </Icon>
-    </div>
-  </AsideStyles>
+  return (
+    <AsideStyles as={animatedDiv} style={spring}>
+      <div>
+        <Icon onClick={editorActions.find}>
+          <BsSearch />
+        </Icon>
+        <Icon onClick={editorActions.replace}>
+          <BsJournals />
+        </Icon>
+        <Icon onClick={toggleFullscreen}>
+          <SlSizeFullscreen />
+        </Icon>
+        <Icon onClick={toggle('terminal')}>
+          <GoTerminal />
+        </Icon>
+        <Icon onClick={toggle('test_cases')}>
+          <LuTestTube2 />
+        </Icon>
+        <Icon onClick={toggleHtmlPreview}>
+          <AiOutlineHtml5 />
+        </Icon>
+      </div>
+      <div>
+        <Icon onClick={toggleSettings}>
+          <TfiSettings />
+        </Icon>
+        <Icon>
+          <Link to={RoutePaths.ABOUT}>
+            <SlInfo />
+          </Link>
+        </Icon>
+      </div>
+    </AsideStyles>
+  )
 }
 
-
 export default () => {
-  return <AnimationProvider>
-    <Aside/>
-  </AnimationProvider>
+  return (
+    <AnimationProvider>
+      <Aside />
+    </AnimationProvider>
+  )
 }

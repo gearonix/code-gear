@@ -26,7 +26,7 @@ export const useFileService = () => {
     const oldFileHandle = activeTab.getFileHandle()
     const textContent = activeTab.getContent()
 
-    if (!activeTab.wasChanged){
+    if (!activeTab.wasChanged) {
       return
     }
 
@@ -41,6 +41,7 @@ export const useFileService = () => {
   }
 
   return {
-    openFile, saveFile
+    openFile,
+    saveFile
   }
 }

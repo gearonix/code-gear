@@ -11,4 +11,5 @@ export const LocalStorage = {
 
 export type LocalStorageKeys = keyof typeof LocalStorage
 
-export type LocalStorageValue<T extends LocalStorageKeys> = typeof LocalStorage[T]
+export type LocalStorageValue<T extends LocalStorageKeys> =
+  (typeof LocalStorage)[T]

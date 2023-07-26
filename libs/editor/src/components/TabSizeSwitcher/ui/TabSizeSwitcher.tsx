@@ -12,17 +12,18 @@ const TabSizeSwitcher = observer(() => {
     actions.changeTabSize(tabSize)
   }
 
-  return <Select
-    size={'middle'}
-    onChange={handleChange}
-    value={tabSize}
-    style={{ width: 200 }}
-    options={tabSizes.map((value) => ({
-      value,
-      label: value
-    }))}
-  />
-
+  return (
+    <Select
+      size="middle"
+      onChange={handleChange}
+      value={tabSize}
+      style={{ width: 200 }}
+      options={tabSizes.map((value) => ({
+        value,
+        label: value
+      }))}
+    />
+  )
 })
 
 export default TabSizeSwitcher

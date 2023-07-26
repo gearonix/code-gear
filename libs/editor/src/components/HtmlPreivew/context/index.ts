@@ -1,1 +1,4 @@
-export { default as HtmlPreviewProvider, usePreview } from './HtmlPreviewProvider'
+export {
+  default as HtmlPreviewProvider,
+  usePreview
+} from './HtmlPreviewProvider'

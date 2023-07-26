@@ -3,7 +3,10 @@ import { observer } from 'mobx-react-lite'
 
 import { TerminalTabKeys } from '@/components/Terminal'
 import { useTerminalTabs } from '@/components/Terminal/hooks'
-import { TerminalOutput, TerminalOutputHandle } from '@/components/TerminalOutput'
+import {
+  TerminalOutput,
+  TerminalOutputHandle
+} from '@/components/TerminalOutput'
 import { useActions, useModalsContext } from '@/shared/hooks'
 
 import { Navigation, TerminalButtons } from './Terminal.styles'
@@ -31,22 +34,26 @@ const Terminal = observer(() => {
     actions.terminal.clearExecuteMessages()
   }
 
-  return <Popover onClose={closeTerminal} isOpen={isTerminalOpened} height={300}>
-    <Navigation items={terminalTabs.val}
-      size={'large'} onChange={onTabChange} activeKey={terminalTabs.key}/>
+  return (
+    <Popover onClose={closeTerminal} isOpen={isTerminalOpened} height={300}>
+      <Navigation
+        items={terminalTabs.val}
+        size="large"
+        onChange={onTabChange}
+        activeKey={terminalTabs.key}
+      />
 
-    <Display when={terminalTabs.key === 'terminal'}>
-      <TerminalOutput ref={terminalOutputRef}/>
-    </Display>
-    <Display when={terminalTabs.key === 'test_cases'}>
-      test cases
-    </Display>
+      <Display when={terminalTabs.key === 'terminal'}>
+        <TerminalOutput ref={terminalOutputRef} />
+      </Display>
+      <Display when={terminalTabs.key === 'test_cases'}>test cases</Display>
 
-    <TerminalButtons>
-      <GrClear onClick={clearTerminal}/>
-      <AiOutlineClose onClick={closeTerminal}/>
-    </TerminalButtons>
-      </Popover>
+      <TerminalButtons>
+        <GrClear onClick={clearTerminal} />
+        <AiOutlineClose onClick={closeTerminal} />
+      </TerminalButtons>
+    </Popover>
+  )
 })
 
 export default Terminal

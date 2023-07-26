@@ -11,10 +11,13 @@ import { useMonaco } from '@monaco-editor/react'
 import { useKeyboardManager } from '../../hooks'
 import EditorCore from '../EditorCore/EditorCore'
 
-import { EditorContentStyles, TabsSelects, TabsWrapper } from './EditorContent.styles'
+import {
+  EditorContentStyles,
+  TabsSelects,
+  TabsWrapper
+} from './EditorContent.styles'
 
 import { AnimationProvider, isString, useDebounce } from '$/client-shared'
-
 
 export const EditorContent = observer(() => {
   const actions = useActions()
@@ -31,36 +34,37 @@ export const EditorContent = observer(() => {
   const monaco = useMonaco()
 
   const onChange = (value: unknown) => {
-    if (isString(value)){
+    if (isString(value)) {
       actions.editor.saveContent(value)
       localSave()
     }
   }
 
-
   useEffect(() => {
-    monaco?.editor.setTheme(theme)
+    monaco.editor.setTheme(theme)
   }, [theme])
 
   useEffect(() => {
     defineCustomTheme({
       background: customBackground,
-      color: customColor })
-
+      color: customColor
+    })
   }, [customBackground, customColor])
 
-  return <EditorContentStyles>
-    <TabsWrapper>
-      <Tabs/>
-      <TabsSelects>
-        <ThemeSwitcher/>
-        <LanguageSwitcher/>
-      </TabsSelects>
-    </TabsWrapper>
-    <AnimationProvider>
-      <EditorCore onChange={onChange}/>
-    </AnimationProvider>
+  return (
+    <EditorContentStyles>
+      <TabsWrapper>
+        <Tabs />
+        <TabsSelects>
+          <ThemeSwitcher />
+          <LanguageSwitcher />
+        </TabsSelects>
+      </TabsWrapper>
+      <AnimationProvider>
+        <EditorCore onChange={onChange} />
+      </AnimationProvider>
     </EditorContentStyles>
+  )
 })
 
 export default EditorContent

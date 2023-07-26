@@ -4,7 +4,6 @@ import { useBooleanState } from '../../hooks'
 import { Display } from '../../lib/components'
 import { GestureType, SpringType, WithChildren } from '../../types'
 
-
 type AnimationContextPayload = Partial<{
   Gesture: GestureType
   Spring: SpringType
@@ -36,17 +35,20 @@ const AnimationProvider = ({ children }: WithChildren) => {
     loadLibraries()
   }, [])
 
-  const animationPayload: AnimationContextPayload = useMemo(() => ({
-    Spring: SpringRef.current,
-    Gesture: GestureRef.current,
-    isLoaded: loader.val
-  }), [loader.val])
+  const animationPayload: AnimationContextPayload = useMemo(
+    () => ({
+      Spring: SpringRef.current,
+      Gesture: GestureRef.current,
+      isLoaded: loader.val
+    }),
+    [loader.val]
+  )
 
-  return <AnimationContext.Provider value={animationPayload}>
-    <Display when={loader.val}>
-      {children}
-    </Display>
-  </AnimationContext.Provider>
+  return (
+    <AnimationContext.Provider value={animationPayload}>
+      <Display when={loader.val}>{children}</Display>
+    </AnimationContext.Provider>
+  )
 }
 
 export const useAnimations = () => {

@@ -18,7 +18,7 @@ export default defineConfig({
     react(),
     viteTsConfigPaths({
       root: '../../'
-    })
+    }),
   ],
 
   // Uncomment this if you are using workers.
@@ -44,8 +44,12 @@ export default defineConfig({
     },
     rollupOptions: {
       // External packages that should not be bundled into your library.
-      external: ['react', 'react-dom',
-        'react/jsx-runtime', 'react-smooth-scrollbar']
+      external: [
+        'react',
+        'react-dom',
+        'react/jsx-runtime',
+        'react-smooth-scrollbar'
+      ],
     }
   },
 
@@ -56,5 +60,5 @@ export default defineConfig({
     },
     environment: 'jsdom',
     include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}']
-  }
+  },
 })

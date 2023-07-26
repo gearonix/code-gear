@@ -19,16 +19,21 @@ const Popover = ({ children, onClose, isOpen, height }: PopoverProps) => {
     motion.toggle(isOpen)
   }, [isOpen])
 
-  return <PopoverStyles $bottom={height}
-                        {...motion.bind()} style={motion.springs}
-                        as={motion.div}>
-    {children}
-  </PopoverStyles>
+  return (
+    <PopoverStyles
+      $bottom={height}
+      {...motion.bind()}
+      style={motion.springs}
+      as={motion.div}>
+      {children}
+    </PopoverStyles>
+  )
 }
 
-
 export default (props: PopoverProps) => {
-  return <AnimationProvider>
-    <Popover {...props} />
-  </AnimationProvider>
+  return (
+    <AnimationProvider>
+      <Popover {...props} />
+    </AnimationProvider>
+  )
 }

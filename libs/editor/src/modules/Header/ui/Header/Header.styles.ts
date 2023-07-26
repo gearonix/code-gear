@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 import { flex, hPadding, wh } from '$/styles'
 
-
 export const HeaderStyles = styled.div`
   background: ${({ theme }) => theme.grey};
   border-bottom: 2px solid ${({ theme }) => theme.lightGrey};
@@ -13,5 +12,5 @@ export const HeaderStyles = styled.div`
 `
 
 export const FileName = styled.h2`
-  color: ${({ theme }) => theme.light}
+  color: ${({ theme }) => theme.light};
 `

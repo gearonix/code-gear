@@ -3,7 +3,6 @@ import { message } from 'antd'
 
 import { WithChildren } from '../../../types'
 
-
 interface UserMessage {
   type?: 'success' | 'info' | 'error'
   message: string
@@ -13,7 +12,9 @@ interface NotificationsPayload {
   open: (args: UserMessage) => void
 }
 
-export const NotificationsContext = createContext<NotificationsPayload>({} as NotificationsPayload)
+export const NotificationsContext = createContext<NotificationsPayload>(
+  {} as NotificationsPayload
+)
 
 const NotificationsProvider = ({ children }: WithChildren) => {
   const [messageApi, contextHolder] = message.useMessage()
@@ -26,14 +27,14 @@ const NotificationsProvider = ({ children }: WithChildren) => {
     })
   }
 
-  return <>
-    {contextHolder}
-    <NotificationsContext.Provider value={{ open }}>
-      {children}
-    </NotificationsContext.Provider>
-  </>
+  return (
+    <>
+      {contextHolder}
+      <NotificationsContext.Provider value={{ open }}>
+        {children}
+      </NotificationsContext.Provider>
+    </>
+  )
 }
-
-
 
 export default NotificationsProvider

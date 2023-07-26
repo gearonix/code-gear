@@ -12,17 +12,19 @@ const ThemeSwitcher = observer(() => {
     actions.changeTheme(theme)
   }
 
-  return <Select
-          size={'middle'}
-          defaultValue="vs-dark"
-          onChange={handleChange}
-          value={theme}
-          style={{ width: 200 }}
-          options={themes.map((theme) => ({
-            value: theme,
-            label: theme
-          }))}
-        />
+  return (
+    <Select
+      size="middle"
+      defaultValue="vs-dark"
+      onChange={handleChange}
+      value={theme}
+      style={{ width: 200 }}
+      options={themes.map((theme) => ({
+        value: theme,
+        label: theme
+      }))}
+    />
+  )
 })
 
 export default ThemeSwitcher

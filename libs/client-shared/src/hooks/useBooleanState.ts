@@ -8,6 +8,9 @@ export const useBooleanState = (initialValue = false) => {
   const toggle = () => setValue(!val)
 
   return {
-    off, on, toggle, val
+    off,
+    on,
+    toggle,
+    val
   }
 }

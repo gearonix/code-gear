@@ -37,11 +37,9 @@ class TabsActions {
     }
   }
 
-  changeActiveTab(targetKey : string): void {
+  changeActiveTab(targetKey: string): void {
     this.state.activeKey = targetKey
   }
-
 }
-
 
 export default TabsActions

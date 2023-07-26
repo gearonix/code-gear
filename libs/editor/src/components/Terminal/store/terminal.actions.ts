@@ -6,7 +6,6 @@ import { ExecutorResponse } from '@/modules/Header'
 
 import { LocalStorageClient } from '$/client-shared'
 
-
 class TerminalActions {
   private state: EditorStore
   private readonly getters: EditorGetters
@@ -26,7 +25,7 @@ class TerminalActions {
 
     let message = res.output
 
-    if (res.error){
+    if (res.error) {
       message = res.error.split('^')[1].split('at')[0]
     }
 
@@ -45,6 +44,5 @@ class TerminalActions {
     this.storage.clear('EDITOR_EXECUTE_MESSAGES')
   }
 }
-
 
 export default TerminalActions
