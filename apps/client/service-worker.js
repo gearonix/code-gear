@@ -566,7 +566,7 @@ function Re(n) {
     url: r.href
   };
 }
-class Ee {
+class be {
   constructor() {
     this.updatedURLs = [], this.notUpdatedURLs = [], this.handlerWillStart = async ({ request: e, state: t }) => {
       t && (t.originalRequest = e);
@@ -579,7 +579,7 @@ class Ee {
     };
   }
 }
-class ye {
+class Ee {
   constructor({ precacheController: e }) {
     this.cacheKeyWillBeUsed = async ({ request: t, params: s }) => {
       const r = (s == null ? void 0 : s.cacheKey) || this._precacheController.getCacheKeyForURL(t.url);
@@ -588,7 +588,7 @@ class ye {
   }
 }
 let w;
-function be() {
+function ye() {
   if (w === void 0) {
     const n = new Response("");
     if ("body" in n)
@@ -609,7 +609,7 @@ async function Te(n, e) {
     headers: new Headers(s.headers),
     status: s.status,
     statusText: s.statusText
-  }, a = e ? e(r) : r, o = be() ? s.body : await s.blob();
+  }, a = e ? e(r) : r, o = ye() ? s.body : await s.blob();
   return new Response(o, a);
 }
 function v(n, e) {
@@ -650,7 +650,7 @@ try {
   self["workbox:strategies:7.0.0"] && _();
 } catch {
 }
-function b(n) {
+function y(n) {
   return typeof n == "string" ? new Request(n) : n;
 }
 class Ae {
@@ -691,7 +691,7 @@ class Ae {
    */
   async fetch(e) {
     const { event: t } = this;
-    let s = b(e);
+    let s = y(e);
     if (s.mode === "navigate" && t instanceof FetchEvent && t.preloadResponse) {
       const o = await t.preloadResponse;
       if (o)
@@ -754,7 +754,7 @@ class Ae {
    * @return {Promise<Response|undefined>} A matching response, if found.
    */
   async cacheMatch(e) {
-    const t = b(e);
+    const t = y(e);
     let s;
     const { cacheName: r, matchOptions: a } = this._strategy, o = await this.getCacheKey(t, "read"), i = Object.assign(Object.assign({}, a), { cacheName: r });
     s = await caches.match(o, i);
@@ -784,7 +784,7 @@ class Ae {
    * not be cached, and `true` otherwise.
    */
   async cachePut(e, t) {
-    const s = b(e);
+    const s = y(e);
     await Oe(0);
     const r = await this.getCacheKey(s, "write");
     if (!t)
@@ -835,7 +835,7 @@ class Ae {
     if (!this._cacheKeys[s]) {
       let r = e;
       for (const a of this.iterateCallbacks("cacheKeyWillBeUsed"))
-        r = b(await a({
+        r = y(await a({
           mode: t,
           request: r,
           event: this.event,
@@ -1198,7 +1198,7 @@ class Ue {
       cacheName: C.getPrecacheName(e),
       plugins: [
         ...t,
-        new ye({ precacheController: this })
+        new Ee({ precacheController: this })
       ],
       fallbackToNetwork: s
     }), this.install = this.install.bind(this), this.activate = this.activate.bind(this);
@@ -1266,7 +1266,7 @@ This is generally NOT safe. Learn more at https://bit.ly/wb-precache`;
    */
   install(e) {
     return K(e, async () => {
-      const t = new Ee();
+      const t = new be();
       this.strategy.plugins.push(t);
       for (const [a, o] of this._urlsToCacheKeys) {
         const i = this._cacheKeysToIntegrities.get(o), c = this._urlsToCacheModes.get(a), l = new Request(a, {
@@ -1386,7 +1386,7 @@ try {
 } catch {
 }
 const Y = "GET", T = (n) => n && typeof n == "object" ? n : { handle: n };
-class E {
+class b {
   /**
    * Constructor for Route class.
    *
@@ -1410,7 +1410,7 @@ class E {
     this.catchHandler = T(e);
   }
 }
-class De extends E {
+class De extends b {
   /**
    * If the regular expression contains
    * [capture groups]{@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#grouping-back-references},
@@ -1617,16 +1617,16 @@ class xe {
 }
 let R;
 const Pe = () => (R || (R = new xe(), R.addFetchListener(), R.addCacheListener()), R);
-function y(n, e, t) {
+function E(n, e, t) {
   let s;
   if (typeof n == "string") {
     const a = new URL(n, location.href), o = ({ url: i }) => i.href === a.href;
-    s = new E(o, e, t);
+    s = new b(o, e, t);
   } else if (n instanceof RegExp)
     s = new De(n, e, t);
   else if (typeof n == "function")
-    s = new E(n, e, t);
-  else if (n instanceof E)
+    s = new b(n, e, t);
+  else if (n instanceof b)
     s = n;
   else
     throw new h("unsupported-route-type", {
@@ -1659,7 +1659,7 @@ function* ke(n, { ignoreURLParametersMatching: e = [/^utm_/, /^fbclid$/], direct
       yield c.href;
   }
 }
-class Se extends E {
+class Se extends b {
   /**
    * @param {PrecacheController} precacheController A `PrecacheController`
    * instance used to both match requests and respond to fetch events.
@@ -1692,7 +1692,7 @@ class Se extends E {
 }
 function Ge(n) {
   const e = q(), t = new Se(e, n);
-  y(t);
+  E(t);
 }
 function He(n) {
   q().precache(n);
@@ -1868,11 +1868,11 @@ class Ke extends N {
     return r;
   }
 }
-Me([{"revision":null,"url":"assets/Dracula-e98fc9aa.js"},{"revision":null,"url":"assets/Dreamweaver-15561dbd.js"},{"revision":null,"url":"assets/Eiffel-64ee1523.js"},{"revision":null,"url":"assets/GitHub-06a37610.js"},{"revision":null,"url":"assets/IDLE-cb87b507.js"},{"revision":null,"url":"assets/index-9d9ae4af.css"},{"revision":null,"url":"assets/index-cece87c5.js"},{"revision":null,"url":"assets/Monokai-65cda70f.js"},{"revision":null,"url":"assets/Nord-e5536575.js"},{"revision":null,"url":"assets/Tomorrow-33c61db8.js"},{"revision":null,"url":"assets/Twilight-ab8a64b1.js"},{"revision":null,"url":"assets/use-gesture-react.esm-446a97ab.js"},{"revision":null,"url":"assets/workbox-window.prod.es5-a7b12eab.js"},{"revision":"7df718c779a84e7d80440c60df1a6b60","url":"index.html"},{"revision":"f2513dbc34ba877ca158e280672da925","url":"favicon.svg"},{"revision":"2916883dd6259679afe0d684fe5b1f3a","url":"manifest.json"},{"revision":"b058215323dce09358ec4624356fc761","url":"service-worker.js"},{"revision":"7018b9b752b4b15aedb35eee44e811b6","url":"manifest-logo/logo192.png"},{"revision":"1860ffb4107fe6ba101275eb0900e63e","url":"manifest-logo/logo512.png"},{"revision":"82472dd6a04460bf23af25a2fcbdbe95","url":"manifest.webmanifest"}]);
+Me([{"revision":null,"url":"assets/Dracula-e98fc9aa.js"},{"revision":null,"url":"assets/Dreamweaver-15561dbd.js"},{"revision":null,"url":"assets/Eiffel-64ee1523.js"},{"revision":null,"url":"assets/GitHub-06a37610.js"},{"revision":null,"url":"assets/IDLE-cb87b507.js"},{"revision":null,"url":"assets/index-9d9ae4af.css"},{"revision":null,"url":"assets/index-d743a6fd.js"},{"revision":null,"url":"assets/Monokai-65cda70f.js"},{"revision":null,"url":"assets/Nord-e5536575.js"},{"revision":null,"url":"assets/Tomorrow-33c61db8.js"},{"revision":null,"url":"assets/Twilight-ab8a64b1.js"},{"revision":null,"url":"assets/use-gesture-react.esm-ec0a4896.js"},{"revision":null,"url":"assets/workbox-window.prod.es5-a7b12eab.js"},{"revision":"75769c237414ba53b011ed0a660351c8","url":"index.html"},{"revision":"f2513dbc34ba877ca158e280672da925","url":"favicon.svg"},{"revision":"2916883dd6259679afe0d684fe5b1f3a","url":"manifest.json"},{"revision":"b058215323dce09358ec4624356fc761","url":"service-worker.js"},{"revision":"7018b9b752b4b15aedb35eee44e811b6","url":"manifest-logo/logo192.png"},{"revision":"1860ffb4107fe6ba101275eb0900e63e","url":"manifest-logo/logo512.png"},{"revision":"82472dd6a04460bf23af25a2fcbdbe95","url":"manifest.webmanifest"}]);
 self.addEventListener("message", (n) => {
   n.data && n.data.type === "SKIP_WAITING" && self.skipWaiting();
 });
-y(
+E(
   ({ request: n }) => n.mode === "navigate",
   new $({
     cacheName: "pages",
@@ -1883,7 +1883,7 @@ y(
     ]
   })
 );
-y(
+E(
   /http:\/\/localhost\/:6868/,
   new $({
     cacheName: "dynamic",
@@ -1896,7 +1896,7 @@ y(
     ]
   })
 );
-y(
+E(
   ({ request: n }) => n.destination === "style" || n.destination === "script" || n.destination === "worker",
   new Ke({
     cacheName: "assets",
@@ -1907,7 +1907,7 @@ y(
     ]
   })
 );
-y(
+E(
   ({ request: n }) => n.destination === "image",
   new Be({
     cacheName: "images",
