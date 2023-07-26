@@ -1,4 +1,4 @@
-import { css, DefaultTheme } from 'styled-components'
+import { css } from 'styled-components'
 
 export const wh = (w = '100%', h = w) => css`
   width: ${w};
@@ -23,17 +23,20 @@ export const flex = (jc = 'flex-start', ai = 'stretch', dir = 'row') => css`
 export const hover = (color: string) => css`
   transition: color 200ms;
   &:hover {
-    color: ${color}
+    color: ${color};
   }
 `
 
 type Font = 'Poppins' | 'Consolas'
 
-export const font = (font : Font) => css`
+export const font = (font: Font) => css`
   font-family: '${font}', sans-serif;
 `
 
-export const antdColor = (color: string) => ({ theme } : any) => `${theme[color]} !important;`
+export const antdColor =
+  (color: string) =>
+  ({ theme }: any) =>
+    `${theme[color]} !important;`
 
 export const customScrollbar = (elem = '&') => css`
   ${elem}::-webkit-scrollbar {
@@ -62,7 +65,9 @@ type AbsoluteProps = Partial<{
 
 export const absolute = (props: AbsoluteProps) => css`
   position: absolute;
-  ${Object.entries(props).map(([key, value]) => `${key}: ${value};`).join('\n')}
+  ${Object.entries(props)
+    .map(([key, value]) => `${key}: ${value};`)
+    .join('\n')}
 `
 
 export const margin = (left: number, top: number) => css`
