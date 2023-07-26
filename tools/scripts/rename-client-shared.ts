@@ -1,7 +1,7 @@
-import { runProjectFiles } from './lib/helpers';
+import { runProjectFiles } from './lib/helpers'
 
 const isClientSharedPath = (value: string) => {
-  const matcher = value.split("/")
+  const matcher = value.split('/')
   return matcher[0] === '$' && matcher[1] === 'shared'
 }
 
@@ -10,8 +10,8 @@ runProjectFiles((sourceFile) => {
   importDeclarations.forEach((declaration) => {
     const importPath = declaration.getModuleSpecifierValue()
 
-    if (isClientSharedPath(importPath)){
-      declaration.setModuleSpecifier(`$/client-shared`)
+    if (isClientSharedPath(importPath)) {
+      declaration.setModuleSpecifier('$/client-shared')
     }
   })
 }).then((project) => {

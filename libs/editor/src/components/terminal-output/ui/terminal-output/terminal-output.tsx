@@ -4,7 +4,10 @@ import { observer } from 'mobx-react-lite'
 import { useModalContextState, useStore } from '@/shared/hooks'
 
 import { useTerminalOutputAnimations } from '../../hooks'
-import { BottomScroll, BottomScrollHandle } from '../bottom-scroll/bottom-scroll'
+import {
+  BottomScroll,
+  BottomScrollHandle
+} from '../bottom-scroll/bottom-scroll'
 import { OutputLine } from '../terminal-output.styles'
 
 export interface TerminalOutputHandle {

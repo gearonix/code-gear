@@ -1,8 +1,4 @@
-interface ErrorTemplateProps {
-  errorInfo: string
-}
-
-const ErrorTemplate = ({ errorInfo }: ErrorTemplateProps) => {
+const ErrorTemplate = () => {
   return (
     <div>
       Custom Error Boundary. <br />

@@ -1,4 +1,4 @@
-import { useGetters, useModalsContext, useServices } from '@/shared/hooks'
+import { useModalsContext, useServices } from '@/shared/hooks'
 
 import { useNotifications } from '$/client-shared'
 

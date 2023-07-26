@@ -18,20 +18,22 @@ export class ExecutorApiService {
     Logger.log('Request to execute custom code...')
 
     try {
-      const response = await this.httpService.post<ExecutorApiResponse>(compilerApiUrl,
-        stringify(transformLanguage(args)),
-        {
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
+      const response = await this.httpService
+        .post<ExecutorApiResponse>(
+          compilerApiUrl,
+          stringify(transformLanguage(args)),
+          {
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded'
+            }
           }
-        }
-      ).toPromise()
+        )
+        .toPromise()
 
       return response?.data
-    }
-    catch (e: unknown) {
-      if (axios.isAxiosError(e)){
-        Logger.warn(FailedToFetchError(e.status))
+    } catch (error: unknown) {
+      if (axios.isAxiosError(error)) {
+        Logger.warn(FailedToFetchError(error.status))
       }
     }
     return null

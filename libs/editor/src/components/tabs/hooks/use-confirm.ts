@@ -7,7 +7,7 @@ export const useConfirm = () => {
 
   return {
     protect(callback: AnyFunction) {
-      return (...args: any[]) => {
+      return (...args: unknown[]) => {
         if (confirmKey) {
           return
         }

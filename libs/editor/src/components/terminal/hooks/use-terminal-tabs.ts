@@ -18,11 +18,14 @@ export const useTerminalTabs = () => {
   const modalsContext = useModalsContext()
   const activeKey = modalsContext.state.selectedTerminalTab
 
-  const setActiveKey = useCallback((key: TerminalTabKeys) => {
-    modalsContext.update({
-      selectedTerminalTab: key
-    })
-  }, [])
+  const setActiveKey = useCallback(
+    (key: TerminalTabKeys) => {
+      modalsContext.update({
+        selectedTerminalTab: key
+      })
+    },
+    [modalsContext]
+  )
 
   return {
     key: activeKey,

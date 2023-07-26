@@ -21,7 +21,7 @@ const IFrame = () => {
 
   useEffect(() => {
     updateIframe()
-  }, [state])
+  }, [state, updateIframe])
 
   return (
     <>

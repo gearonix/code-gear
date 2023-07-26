@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { br, color, flex, testBorder, wh } from '$/styles'
+import { br, color, flex, wh } from '$/styles'
 
 export const SettingsItem = styled.div`
   ${wh('100%', '70px')};

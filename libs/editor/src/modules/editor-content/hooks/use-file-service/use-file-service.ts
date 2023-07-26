@@ -19,7 +19,7 @@ export const useFileService = () => {
     if (isFileData(fileData)) {
       actions.tabs.createTab(fileData)
     }
-  }, [])
+  }, [actions.tabs, open])
 
   const saveFile = async () => {
     const activeTab = getters.getActiveTab()

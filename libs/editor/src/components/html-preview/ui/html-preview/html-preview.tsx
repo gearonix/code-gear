@@ -20,7 +20,7 @@ const HtmlPreview = () => {
 
   const closeHtmlPreview = useCallback(() => {
     modalsContext.update({ isHtmlPreviewOpened: false })
-  }, [])
+  }, [modalsContext])
 
   return (
     <Popover

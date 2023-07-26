@@ -5,7 +5,7 @@ import { useCustomTheme } from '@/app'
 import { LanguageSwitcher } from '@/components/language-switcher'
 import { Tabs } from '@/components/tabs'
 import { ThemeSwitcher } from '@/components/theme-switcher'
-import { useActions, useGetters, useStorage, useStore } from '@/shared/hooks'
+import { useActions, useStorage, useStore } from '@/shared/hooks'
 import { useMonaco } from '@monaco-editor/react'
 
 import { useKeyboardManager } from '../../hooks'
@@ -21,7 +21,6 @@ import { AnimationProvider, isString, useDebounce } from '$/client-shared'
 
 export const EditorContent = observer(() => {
   const actions = useActions()
-  const getters = useGetters()
   const { theme, content, customBackground, customColor } = useStore()
   const storage = useStorage()
   const defineCustomTheme = useCustomTheme()

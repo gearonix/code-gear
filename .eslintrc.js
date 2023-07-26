@@ -9,7 +9,8 @@ module.exports = configure({
     presets.node(),
     presets.prettier({
       singleQuote: true,
-      trailingComma: "none"
+      trailingComma: "none",
+      endOfLine: "auto"
     }),
     presets.typescript({
       root: './',
@@ -30,7 +31,10 @@ module.exports = configure({
       "@typescript-eslint/member-delimiter-style": ["error",  {"multiline" : {"delimiter": "none"}}],
       "import/no-unresolved": "off",
       "@typescript-eslint/no-unnecessary-condition": "off",
-      "import/extensions": "off"
+      "import/extensions": "off",
+      "react-hooks/exhaustive-deps": "warn",
+      "react/no-array-index-key": "warn",
+      "@typescript-eslint/no-explicit-any": "warn"
     }
   }
 })

@@ -1,4 +1,4 @@
-import { css, DefaultTheme } from 'styled-components'
+import { css } from 'styled-components'
 
 export const wh = (w = '100%', h = w) => css`
   width: ${w};

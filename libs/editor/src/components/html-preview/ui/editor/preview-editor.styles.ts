@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { color, testBorder, wh } from '$/styles'
+import { color, wh } from '$/styles'
 
 export const EditorContainer = styled.div`
   ${wh('33%', '100%')};

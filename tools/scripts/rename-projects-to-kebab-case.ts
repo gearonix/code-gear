@@ -1,13 +1,13 @@
 // This script can be dangerous!
 
-import { runProjectFiles } from './lib/helpers';
+import { runProjectFiles } from './lib/helpers'
 
 const toKebabCase = (str) => {
   return str
     ? str
-      .replace(/([a-z])([A-Z])/g, '$1-$2')
-      .replace(/[\s_]+/g, '-')
-      .toLowerCase()
+        .replace(/([a-z])([A-Z])/g, '$1-$2')
+        .replace(/[\s_]+/g, '-')
+        .toLowerCase()
     : str
 }
 
