@@ -11,10 +11,11 @@ import {
 
 @Controller(EndPoints.CODE_EXECUTOR_API)
 export class CodeExecutorController {
-  constructor(private executorService: ExecutorApiService) {
-  }
+  constructor(private executorService: ExecutorApiService) {}
   @Post()
-  async executeCode(@Body() args: ExecuteCodeApiDTO): Promise<ExecutorApiResponse> {
+  async executeCode(
+    @Body() args: ExecuteCodeApiDTO
+  ): Promise<ExecutorApiResponse> {
     const response = await this.executorService.fetchCodeToExecute(args)
 
     if (!isExecutorApiResponse(response)) {

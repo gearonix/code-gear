@@ -1,1 +1,1 @@
-export { LocalStorageClient } from './localStorage'
+export { LocalStorageClient } from './local-storage'

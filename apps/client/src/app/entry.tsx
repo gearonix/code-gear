@@ -1,7 +1,7 @@
 import { render } from 'preact'
 import { registerSW } from 'virtual:pwa-register'
 
-import App from './App'
+import App from './app'
 
 const updateSW = registerSW({
   onNeedRefresh() {
@@ -11,7 +11,4 @@ const updateSW = registerSW({
   }
 })
 
-
-render(<App />, document.getElementById('root')!)
-
-
+render(<App />, document.querySelector('#root')!)
