@@ -1,7 +1,7 @@
 enum AppRoutes {
   MAIN = 'MAIN',
   EDITOR = 'EDITOR',
-  ABOUT = 'ABOUT',
+  ABOUT = 'ABOUT'
 }
 
 export const RoutePaths: Record<AppRoutes, string> = {

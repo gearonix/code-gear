@@ -4,6 +4,7 @@ const { configure, presets } = require('eslint-kit')
 module.exports = configure({
   mode: 'only-errors',
   allowDebug: process.env.NODE_ENV !== "production",
+  root: __dirname,
   presets: [
     presets.node(),
     presets.prettier({
@@ -16,7 +17,6 @@ module.exports = configure({
     }),
     presets.react(),
   ],
-    root: __dirname,
   extend: {
     root: true,
     ignorePatterns: ["**/*"],

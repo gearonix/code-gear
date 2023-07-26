@@ -19,7 +19,7 @@ export const useCustomTheme = () => {
       colors: {
         'editor.background': background,
         'editor.foreground': color
-      },
+      }
     })
   }
 }

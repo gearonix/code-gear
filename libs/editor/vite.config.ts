@@ -39,8 +39,8 @@ export default defineConfig({
         'antd',
         'react-router-dom',
         'react-smooth-scrollbar'
-      ],
-    },
+      ]
+    }
   },
   test: {
     globals: true,
@@ -49,5 +49,5 @@ export default defineConfig({
     },
     environment: 'jsdom',
     include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}']
-  },
+  }
 })

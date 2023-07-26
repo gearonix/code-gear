@@ -61,5 +61,5 @@ export enum KeyBuildings {
   T = 'T',
   P = 'P',
   J = 'J',
-  Q = 'Q',
+  Q = 'Q'
 }

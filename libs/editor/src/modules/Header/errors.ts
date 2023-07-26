@@ -16,5 +16,5 @@ export const CodeExecutionErrors: Record<string, NotificationMessage> = {
   NETWORK_ERROR: {
     isError: true,
     message: 'Something went wrong'
-  },
+  }
 }

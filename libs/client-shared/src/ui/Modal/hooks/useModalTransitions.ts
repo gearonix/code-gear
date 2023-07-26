@@ -14,7 +14,7 @@ export const useModalTransitions = () => {
           ? 'scale(1.0) rotate(0deg)'
           : 'scale(0.9) rotate(8deg)',
         x: isOpen ? 0 : -150
-      }),
+      })
     }
   }
 }

@@ -21,7 +21,7 @@ export const useAltNavigation = () => {
 
           return [num.toString(), key ? () => tabs.changeActiveTab(key) : null]
         })
-      ),
+      )
     )
 
     return () => {

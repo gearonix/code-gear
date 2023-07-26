@@ -17,7 +17,7 @@ export default defineConfig({
     host: 'localhost',
     fs: {
       strict: false
-    },
+    }
   },
 
   preview: {
@@ -47,7 +47,7 @@ export default defineConfig({
         enabled: false
       },
       includeAssets: ['**/*']
-    }),
+    })
   ],
   test: {
     globals: true,
@@ -56,5 +56,5 @@ export default defineConfig({
     },
     environment: 'jsdom',
     include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}']
-  },
+  }
 })

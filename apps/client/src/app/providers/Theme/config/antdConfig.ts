@@ -12,5 +12,5 @@ export const AntdConfig: ThemeConfig = {
     colorBgTextHover: DarkThemePalette.light,
     colorBgTextActive: DarkThemePalette.light,
     colorPrimary: DarkThemePalette.light
-  },
+  }
 }

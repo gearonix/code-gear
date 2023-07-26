@@ -2,7 +2,7 @@ export {
   AiOutlineClose,
   AiOutlineHtml5,
   AiOutlineInfoCircle,
-  AiOutlineSwap,
+  AiOutlineSwap
 } from 'react-icons/ai'
 export { BsJournals, BsSearch } from 'react-icons/bs'
 export { GoTerminal } from 'react-icons/go'

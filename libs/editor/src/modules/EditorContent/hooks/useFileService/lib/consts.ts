@@ -12,9 +12,9 @@ export const filePickerOptions: OpenFilePickerOptions = {
           '.py',
           '.yaml',
           '.yml'
-        ],
+        ]
       },
       description: 'Text Files'
-    },
-  ],
+    }
+  ]
 }
