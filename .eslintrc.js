@@ -29,7 +29,8 @@ module.exports = configure({
       "@typescript-eslint/no-namespace": "off",
       "@typescript-eslint/member-delimiter-style": ["error",  {"multiline" : {"delimiter": "none"}}],
       "import/no-unresolved": "off",
-      "@typescript-eslint/no-unnecessary-condition": "off"
+      "@typescript-eslint/no-unnecessary-condition": "off",
+      "import/extensions": "off"
     }
   }
 })

@@ -8,8 +8,5 @@
       "import": "./index.mjs",
       "require": "./index.js"
     }
-  },
-  "devDependencies": {
-    "eslint-config-gearonix": "^1.0.2"
   }
 }
