@@ -6,7 +6,7 @@ import { Injectable, Logger } from '@nestjs/common'
 
 import { ExecuteCodeApiDTO } from './dto/execute-code-api.dto'
 import { FailedToFetchError } from './lib/errors'
-import { transformLanguage } from './lib/helpers/transformLanguage'
+import { transformLanguage } from './lib/helpers/transform-language'
 import { ExecutorApiResponse } from './lib/types'
 
 import { compilerApiUrl } from '$/config'

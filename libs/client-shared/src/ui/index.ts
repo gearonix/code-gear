@@ -1,3 +1,3 @@
-export { default as ColorButton } from './ColorButton/ColorButton'
-export { Modal } from './Modal'
-export { Popover } from './Popover'
+export { default as ColorButton } from './color-button/color-button'
+export { Modal } from './modal'
+export { Popover } from './popover'

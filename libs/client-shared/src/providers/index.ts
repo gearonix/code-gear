@@ -1,6 +1,6 @@
-export { default as ErrorBoundary } from './ErrorBoundary/ErrorBoundary'
+export { default as ErrorBoundary } from './error-boundary/error-boundary'
 export {
   NotificationsContext,
   default as NotificationsProvider
-} from './Notifications/ui/NotificationsProvider'
-export { default as AnimationProvider } from './WithAnimations/AnimationProvider'
+} from './notifications/ui/notifications-provider'
+export { default as AnimationProvider } from './with-animations/animation-provider'
