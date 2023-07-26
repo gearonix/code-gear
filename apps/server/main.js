@@ -40,7 +40,7 @@ module.exports = require("tslib");
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.clientUrl = void 0;
-exports.clientUrl = process.env['CLIENT_URL'] ?? 'http://localhost:3000';
+exports.clientUrl = process.env.CLIENT_URL ?? 'http://localhost:3000';
 
 
 /***/ }),
@@ -50,10 +50,10 @@ exports.clientUrl = process.env['CLIENT_URL'] ?? 'http://localhost:3000';
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.EndPoints = exports.serverUrl = exports.compilerApiUrl = exports.serverPort = exports.serverPrefix = void 0;
-exports.serverPrefix = process.env['SERVER_PREFIX'] ?? '';
-exports.serverPort = process.env['SERVER_PORT'] ?? 6868;
-exports.compilerApiUrl = process.env['CODE_COMPILER_API_URL'] ?? 'https://api.codex.jaagrav.in';
-exports.serverUrl = process.env['SERVER_URL'] ?? 'http://localhost:6868';
+exports.serverPrefix = process.env.SERVER_PREFIX ?? '';
+exports.serverPort = process.env.SERVER_PORT ?? 6868;
+exports.compilerApiUrl = process.env.CODE_COMPILER_API_URL ?? 'https://api.codex.jaagrav.in';
+exports.serverUrl = process.env.SERVER_URL ?? 'http://localhost:6868';
 exports.EndPoints = {
     CODE_EXECUTOR_API: 'execute'
 };
@@ -85,9 +85,7 @@ let HttpExceptionFilter = exports.HttpExceptionFilter = class HttpExceptionFilte
         const response = ctx.getResponse();
         const request = ctx.getRequest();
         const status = exception.getStatus();
-        response
-            .status(status)
-            .json({
+        response.status(status).json({
             statusCode: status,
             timestamp: new Date().toISOString(),
             path: request.url,
@@ -120,8 +118,8 @@ const common_1 = __webpack_require__(8);
 let ValidationPipe = exports.ValidationPipe = class ValidationPipe {
     async transform(value, metadata) {
         const validationErrors = await (0, class_validator_1.validate)((0, class_transformer_1.plainToClass)(metadata.metatype, value));
-        if (validationErrors.length) {
-            const messages = validationErrors.map(err => {
+        if (validationErrors.length > 0) {
+            const messages = validationErrors.map((err) => {
                 return `${err.property} - ${Object.values(err.constraints).join(', ')}`;
             });
             throw new common_1.BadRequestException(messages.join('. '));
@@ -167,10 +165,7 @@ let AppModule = exports.AppModule = class AppModule {
 };
 exports.AppModule = AppModule = tslib_1.__decorate([
     (0, common_1.Module)({
-        imports: [
-            config_1.ConfigModule.forRoot(),
-            code_executor_api_1.CodeExecutorModule
-        ],
+        imports: [config_1.ConfigModule.forRoot(), code_executor_api_1.CodeExecutorModule],
         controllers: [],
         providers: []
     })
@@ -281,8 +276,8 @@ var executor_api_service_1 = __webpack_require__(24);
 Object.defineProperty(exports, "ExecutorApiService", ({ enumerable: true, get: function () { return executor_api_service_1.ExecutorApiService; } }));
 var errors_1 = __webpack_require__(27);
 Object.defineProperty(exports, "FailedToFetchError", ({ enumerable: true, get: function () { return errors_1.FailedToFetchError; } }));
-var typeGuards_1 = __webpack_require__(29);
-Object.defineProperty(exports, "isExecutorApiResponse", ({ enumerable: true, get: function () { return typeGuards_1.isExecutorApiResponse; } }));
+var type_guards_1 = __webpack_require__(29);
+Object.defineProperty(exports, "isExecutorApiResponse", ({ enumerable: true, get: function () { return type_guards_1.isExecutorApiResponse; } }));
 var types_1 = __webpack_require__(21);
 Object.defineProperty(exports, "ExecutorApiResponse", ({ enumerable: true, get: function () { return types_1.ExecutorApiResponse; } }));
 Object.defineProperty(exports, "ExecutorLanguages", ({ enumerable: true, get: function () { return types_1.ExecutorLanguages; } }));
@@ -377,7 +372,7 @@ const qs_stringify_1 = tslib_1.__importDefault(__webpack_require__(26));
 const axios_2 = __webpack_require__(23);
 const common_1 = __webpack_require__(8);
 const errors_1 = __webpack_require__(27);
-const transformLanguage_1 = __webpack_require__(28);
+const transform_language_1 = __webpack_require__(28);
 const config_1 = __webpack_require__(2);
 let ExecutorApiService = exports.ExecutorApiService = class ExecutorApiService {
     constructor(httpService) {
@@ -386,16 +381,18 @@ let ExecutorApiService = exports.ExecutorApiService = class ExecutorApiService {
     async fetchCodeToExecute(args) {
         common_1.Logger.log('Request to execute custom code...');
         try {
-            const response = await this.httpService.post(config_1.compilerApiUrl, (0, qs_stringify_1.default)((0, transformLanguage_1.transformLanguage)(args)), {
+            const response = await this.httpService
+                .post(config_1.compilerApiUrl, (0, qs_stringify_1.default)((0, transform_language_1.transformLanguage)(args)), {
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 }
-            }).toPromise();
+            })
+                .toPromise();
             return response?.data;
         }
-        catch (e) {
-            if (axios_1.default.isAxiosError(e)) {
-                common_1.Logger.warn((0, errors_1.FailedToFetchError)(e.status));
+        catch (error) {
+            if (axios_1.default.isAxiosError(error)) {
+                common_1.Logger.warn((0, errors_1.FailedToFetchError)(error.status));
             }
         }
         return null;
@@ -460,9 +457,12 @@ const isExecutorApiResponse = (res) => {
     if (typeof res !== 'object' || res === null) {
         return false;
     }
-    if ('timeStamp' in res && typeof res.timeStamp === 'number' &&
-        'output' in res && typeof res.output === 'string' &&
-        'language' in res && typeof res.language === 'string') {
+    if ('timeStamp' in res &&
+        typeof res.timeStamp === 'number' &&
+        'output' in res &&
+        typeof res.output === 'string' &&
+        'language' in res &&
+        typeof res.language === 'string') {
         return true;
     }
     return false;
