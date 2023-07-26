@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react'
 
+import { EditorTitle } from '@/components/HtmlPreivew/ui/Editor/PreviewEditor.styles'
 import { useStorage } from '@/shared/hooks'
 
 import { usePreview } from '../../context'
 import { createHtmlTemplate } from '../../lib/createHtmlTemplate'
 
 import { useDebounce } from '$/client-shared'
+import { AiOutlineSwap } from '$/icons'
 
 
 const IFrame = () => {
@@ -23,14 +25,17 @@ const IFrame = () => {
   }, [state])
 
 
-  return <iframe
+  return <>
+    <EditorTitle><AiOutlineSwap/> Result</EditorTitle>
+    <iframe
     srcDoc={srcDoc}
     title={'output'}
-    sandbox="allow-scripts"
     frameBorder="0"
     width="100%"
     height="100%"
+    sandbox="allow-forms allow-popups allow-scripts allow-same-origin allow-modals"
   />
+    </>
 }
 
 

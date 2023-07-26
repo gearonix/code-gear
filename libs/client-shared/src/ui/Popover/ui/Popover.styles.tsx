@@ -7,7 +7,7 @@ interface PopoverStylesProps {
 }
 
 export const PopoverStyles = styled.div<PopoverStylesProps>`
-  padding-left: 28px;
+  padding-left: 15px;
   z-index: 15;
   position: fixed;
   right: 0;

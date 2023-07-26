@@ -1,12 +1,13 @@
 import { observer } from 'mobx-react-lite'
 
-import { usePreview } from '../../context'
-import { EditorContainer } from './PreviewEditor.styles'
 import { editorConfig } from '@/shared/editorConfig'
 import { useStore } from '@/shared/hooks'
 import MonacoEditor from '@monaco-editor/react'
 
+import { usePreview } from '../../context'
 import { PreviewLanguages } from '../../types'
+
+import { EditorContainer, EditorTitle } from './PreviewEditor.styles'
 
 import { isString } from '$/client-shared'
 
@@ -28,10 +29,12 @@ const PreviewEditor = observer(({ lang }: PreviewEditorProps) => {
   }
 
   return <EditorContainer>
+    <EditorTitle>{lang}</EditorTitle>
     <MonacoEditor
     theme={theme}
     onChange={onChange}
     language={lang}
+    height={'300px'}
     value={preview.state[lang]}
     options={editorConfig({
       fontSize,

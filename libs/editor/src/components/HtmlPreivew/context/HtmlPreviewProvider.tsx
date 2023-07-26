@@ -13,9 +13,9 @@ const HtmlPreviewProvider = ({ children }: WithChildren) => {
   const storage = useStorage()
 
   const initialState : PreviewState = storage.get('EDITOR_HTML_PREVIEW', {
-    html: '',
-    css: '',
-    javascript: ''
+    html: '<h2>Hi! This is a realtime HTML editor.</h2>',
+    css: 'h2 {color: #C4CBDA;}',
+    javascript: '// 😀'
   })
 
   const modalsReducer = (prev: PreviewState, next: Partial<PreviewState>) => {

@@ -1,4 +1,4 @@
-export { AiOutlineClose,AiOutlineInfoCircle, AiOutlineHtml5 } from 'react-icons/ai'
+export { AiOutlineClose,AiOutlineInfoCircle, AiOutlineHtml5, AiOutlineSwap } from 'react-icons/ai'
 export { BsJournals,BsSearch } from 'react-icons/bs'
 export { GoTerminal } from 'react-icons/go'
 export { GrClear } from 'react-icons/gr'
@@ -7,3 +7,4 @@ export { MdFindReplace } from 'react-icons/md'
 export { SlInfo,SlSizeFullscreen } from 'react-icons/sl'
 export { TfiSettings } from 'react-icons/tfi'
 export { VscPlay } from 'react-icons/vsc'
+

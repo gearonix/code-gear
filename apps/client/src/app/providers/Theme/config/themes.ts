@@ -12,5 +12,6 @@ export const DarkThemePalette = {
   fz6: '16px',
   fz7: '18px',
   fz8: '19px',
+  fz9: '21px',
   f10: '28px'
 }
