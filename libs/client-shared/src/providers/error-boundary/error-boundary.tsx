@@ -1,6 +1,6 @@
 import { useErrorBoundary } from 'preact/hooks'
 
-import { WithPreactChildren } from '../../types'
+import { WithPreactChildren } from '@/types'
 
 import ErrorTemplate from './ui/error-template'
 

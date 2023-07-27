@@ -1,4 +1,4 @@
-import { LanguagesValues } from '@/shared/consts'
+import { LanguagesValues } from '@/shared/consts/languages'
 
 export const defaultCodeTemplate = `// Hello World! Here you can edit the code in 10 different languages. 😎
 

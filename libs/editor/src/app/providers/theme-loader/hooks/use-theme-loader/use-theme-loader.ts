@@ -1,7 +1,7 @@
 import { useEffect } from 'preact/compat'
 
-import { themes } from '@/shared/consts'
-import EditorErrors from '@/shared/errors'
+import { themes } from '@/shared/consts/themes'
+import EditorErrors from '@/shared/exceptions'
 import { useStore } from '@/shared/hooks'
 import { useMonaco } from '@monaco-editor/react'
 

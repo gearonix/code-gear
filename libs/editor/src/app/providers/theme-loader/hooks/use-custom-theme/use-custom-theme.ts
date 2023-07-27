@@ -1,4 +1,4 @@
-import { CUSTOM_THEME } from '@/shared/consts'
+import { CUSTOM_THEME } from '@/shared/consts/themes'
 import { useMonaco } from '@monaco-editor/react'
 
 import { Hex } from '$/client-shared'

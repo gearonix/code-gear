@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 
 import { ModalsContext, ModalsPayload, ModalsState } from '@/app'
-import { TerminalTabKeys } from '@/components/terminal'
+import { TerminalTabKeys } from '@/components/../../widgets/terminal'
 
 export const useModalsContext = () => {
   return useContext(ModalsContext) as Required<ModalsPayload>

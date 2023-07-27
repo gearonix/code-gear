@@ -1,13 +1,6 @@
 import styled from 'styled-components'
 
-import {
-  absolute,
-  color,
-  customScrollbar,
-  flex,
-  shadow,
-  wh
-} from '../../../styles'
+import { absolute, color, customScrollbar, flex, shadow, wh } from '@/styles'
 
 export const ModalBackground = styled.div`
   ${flex('center', 'center')};

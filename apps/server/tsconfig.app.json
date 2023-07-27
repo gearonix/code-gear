@@ -10,7 +10,7 @@
     "paths": {
       "$/config": ["../../libs/config/src/index.ts"],
       "$/services": ["../../libs/services/src/index.ts"],
-      "@/*": ["src/*"],
+      "@/*": ["src/*"]
     }
   },
   "exclude": ["jest.config.ts", "src/**/*.spec.ts", "src/**/*.test.ts"],

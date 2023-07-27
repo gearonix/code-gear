@@ -1,6 +1,6 @@
 import { editor } from 'monaco-editor'
 
-import EditorErrors from '@/shared/errors'
+import EditorErrors from '@/shared/exceptions'
 
 import { isObject } from '$/client-shared'
 
