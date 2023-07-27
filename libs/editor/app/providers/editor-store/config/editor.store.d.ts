@@ -1,6 +1,7 @@
-import { ContentTab } from '@/components/tabs';
-import { ExecuteMessage } from '@/components/terminal';
-import { FontSizes, TabSizes, Themes } from '@/shared/consts';
+import { FontSizes, TabSizes } from '@/shared/consts/font-sizes';
+import { Themes } from '@/shared/consts/themes';
+import { ContentTab } from '@/widgets/tabs';
+import { ExecuteMessage } from '@/widgets/terminal';
 import EditorActions from './editor.actions';
 import EditorGetters from './editor.getters';
 import EditorServices from './editor.services';

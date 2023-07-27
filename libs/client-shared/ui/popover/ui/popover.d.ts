@@ -1,4 +1,4 @@
-import { VoidFunction, WithChildren } from '../../../types';
+import { VoidFunction, WithChildren } from '@/types';
 type PopoverProps = WithChildren<{
     onClose: VoidFunction;
     isOpen: boolean;

@@ -1,4 +1,4 @@
-import { WithChildren } from '../../../types';
+import { WithChildren } from '@/types';
 type ModalProps = WithChildren<{
     isOpen: boolean;
     onClose: () => void;

@@ -1,4 +1,4 @@
-import { TerminalTabKeys } from '@/components/terminal';
+import { TerminalTabKeys } from '@/components/../../../widgets/terminal';
 import { ReducerPayload } from '$/client-shared';
 export interface ModalsState {
     isTerminalOpened: boolean;

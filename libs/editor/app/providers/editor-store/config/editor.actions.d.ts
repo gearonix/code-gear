@@ -1,7 +1,8 @@
-import { TabsActions } from '@/components/tabs';
-import { TerminalActions } from '@/components/terminal';
-import { EditorContentActions } from '@/modules/editor-content';
-import { FontSizes, TabSizes, Themes } from '@/shared/consts';
+import { FontSizes, TabSizes } from '@/shared/consts/font-sizes';
+import { Themes } from '@/shared/consts/themes';
+import { EditorContentActions } from '@/widgets/editor-content';
+import { TabsActions } from '@/widgets/tabs';
+import { TerminalActions } from '@/widgets/terminal';
 import EditorStore from './editor.store';
 import { Hex } from '$/client-shared';
 declare class EditorActions {

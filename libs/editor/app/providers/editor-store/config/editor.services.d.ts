@@ -1,4 +1,4 @@
-import { ExecuteServices } from '@/modules/header';
+import { ExecuteServices } from '@/widgets/header';
 import EditorStore from './editor.store';
 declare class EditorServices {
     private state;

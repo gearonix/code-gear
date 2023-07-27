@@ -1,6 +1,6 @@
 import { EditorStore } from '@/app';
-import { ContentTab } from '@/components/tabs';
-import { LanguagesValues } from '@/shared/consts';
+import { LanguagesValues } from '@/shared/consts/languages';
+import { ContentTab } from '@/widgets/tabs';
 declare class EditorGetters {
     private state;
     constructor(editorState: EditorStore);
