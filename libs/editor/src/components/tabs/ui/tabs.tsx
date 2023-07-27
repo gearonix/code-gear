@@ -21,6 +21,9 @@ const Tabs = observer(() => {
       if (action === 'add') {
         actions.tabs.createTab()
       } else {
+        if (content.length === 1) {
+          return
+        }
         confirm.on(targetKey as string)
       }
     }

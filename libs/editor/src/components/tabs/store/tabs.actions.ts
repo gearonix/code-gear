@@ -3,6 +3,7 @@ import { makeAutoObservable } from 'mobx'
 import { EditorStore } from '@/app'
 import { ContentTab, isMaxTabsLength } from '@/components/tabs/lib'
 import { FileHandlerData } from '@/modules/editor-content/types'
+import { Nullable } from '$/client-shared';
 
 class TabsActions {
   private state: EditorStore
@@ -12,11 +13,11 @@ class TabsActions {
     this.state = root
   }
 
-  createTab(fileData?: FileHandlerData): void {
+  createTab(fileData?: FileHandlerData): Nullable<ContentTab> {
     const content = this.state.content
 
     if (isMaxTabsLength(content)) {
-      return
+      return null
     }
     const lastNumber = content.at(-1)?.idx
 
@@ -24,6 +25,8 @@ class TabsActions {
 
     this.state.activeKey = newTab.getKeyId()
     this.state.content.push(newTab)
+
+    return newTab
   }
 
   removeTab(targetKey?: string): void {

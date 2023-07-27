@@ -9,7 +9,7 @@ import {
 } from '@/components/terminal-output'
 import { useActions, useModalsContext } from '@/shared/hooks'
 
-import { Navigation, TerminalButtons } from './terminal.styles'
+import { Navigation, TerminalButtons, TerminalTitle } from './terminal.styles'
 
 import { Display, Popover } from '$/client-shared'
 import { AiOutlineClose, GrClear } from '$/icons'
@@ -46,7 +46,9 @@ const Terminal = observer(() => {
       <Display when={terminalTabs.key === 'terminal'}>
         <TerminalOutput ref={terminalOutputRef} />
       </Display>
-      <Display when={terminalTabs.key === 'test_cases'}>test cases</Display>
+      <Display when={terminalTabs.key === 'test_cases'}>
+        <TerminalTitle>Test cases are not supported yet.</TerminalTitle>
+      </Display>
 
       <TerminalButtons>
         <GrClear onClick={clearTerminal} />

@@ -12,7 +12,7 @@ export const useCustomTheme = () => {
   const monaco = useMonaco()
 
   return ({ background, color }: CustomTheme) => {
-    monaco.editor.defineTheme(CUSTOM_THEME, {
+    monaco?.editor.defineTheme(CUSTOM_THEME, {
       base: 'vs',
       inherit: true,
       rules: [],

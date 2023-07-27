@@ -45,3 +45,9 @@ export const Navigation = styled(Tabs)`
 
   font-size: ${({ theme }) => theme.fz6};
 `
+
+export const TerminalTitle = styled.h3`
+  color: ${color('light')};
+  font-size: ${({ theme }) => theme.fz7};
+
+`

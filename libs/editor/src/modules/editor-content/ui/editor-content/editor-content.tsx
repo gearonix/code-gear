@@ -40,7 +40,7 @@ export const EditorContent = observer(() => {
   }
 
   useEffect(() => {
-    monaco.editor.setTheme(theme)
+    monaco?.editor.setTheme(theme)
   }, [theme])
 
   useEffect(() => {

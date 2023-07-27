@@ -10,6 +10,7 @@ import EditorGetters from './editor.getters'
 import EditorServices from './editor.services'
 
 import { Hex, LocalStorageClient } from '$/client-shared'
+import { defaultCodeLang, defaultCodeTemplate } from '../lib/default-code-template';
 
 class EditorStore {
   activeKey = ''
@@ -58,7 +59,9 @@ class EditorStore {
     )
 
     if (savedContent.length === 0) {
-      this.actions.tabs.createTab()
+      const newTab = this.actions.tabs.createTab()
+      newTab!.lang = defaultCodeLang
+      newTab?.setTabContent(defaultCodeTemplate)
     }
 
     for (const instance of savedContent) {

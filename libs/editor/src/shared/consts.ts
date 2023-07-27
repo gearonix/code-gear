@@ -27,7 +27,12 @@ export const languages = {
   html: 'html',
   htm: 'html',
   txt: 'text',
-  css: 'css'
+  css: 'css',
+  py: 'python',
+  cpp: 'cpp',
+  go: 'go',
+  c: 'c',
+  java: 'java'
 } as const
 
 export type LanguagesValues = ValueOf<typeof languages>
@@ -36,13 +41,12 @@ export type LanguagesKeys = keyof typeof languages
 
 export const maxTabsLength = 9 as const
 
-export const executorAllowedLanguages = [
+export const executorAllowedLanguages: LanguagesValues[] = [
   'java',
   'python',
   'cpp',
   'c',
   'go',
-  'cs',
   'javascript'
 ]
 
