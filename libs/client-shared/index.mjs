@@ -15250,7 +15250,7 @@ function hC(e) {
 }
 const mC = ({ children: e, override: t, ...n }) => /* @__PURE__ */ ct(rc, { theme: {
   token: { colorPrimary: t }
-}, children: /* @__PURE__ */ ct(j1, { ...n, children: e }) });
+}, children: /* @__PURE__ */ ct(j1, { ...n, style: { minWidth: "85px" }, children: e }) });
 /**
   * @reach/utils v0.18.0
   *

@@ -1,6 +1,9 @@
-/// <reference types="react" />
+import { ReactElement } from 'react';
 import { ModalsPayload } from '../types';
-import { WithChildren } from '$/client-shared';
+import { AnyObject, WithChildren } from '$/client-shared';
 export declare const ModalsContext: import("react").Context<ModalsPayload>;
-declare const ModalsContextProvider: ({ children }: WithChildren) => import("react/jsx-runtime").JSX.Element;
+type ModalsContextPayload = WithChildren<{
+    SignIn: (props: AnyObject) => ReactElement;
+}>;
+declare const ModalsContextProvider: ({ children, SignIn }: ModalsContextPayload) => import("react/jsx-runtime").JSX.Element;
 export default ModalsContextProvider;
