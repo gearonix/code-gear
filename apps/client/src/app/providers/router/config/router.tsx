@@ -1,13 +1,11 @@
-import { Suspense } from 'react'
 import { createBrowserRouter } from 'react-router-dom'
 
 import { About } from '@/pages/about'
+import { EditPage } from '@/pages/edit'
 import { Main } from '@/pages/main'
 import { NotFound } from '@/pages/not-found'
-import { SignInModal } from '@/widgets/sign-in-modal'
 
 import { RoutePaths } from '$/client-shared'
-import { Editor } from '$/editor'
 
 const router = createBrowserRouter([
   {
@@ -16,11 +14,7 @@ const router = createBrowserRouter([
   },
   {
     path: RoutePaths.EDITOR,
-    element: (
-      <Suspense fallback={null}>
-        <Editor SignIn={SignInModal} />
-      </Suspense>
-    )
+    element: <EditPage />
   },
   {
     path: RoutePaths.ABOUT,

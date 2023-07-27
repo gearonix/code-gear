@@ -1,4 +1,7 @@
+import { observer } from 'mobx-react-lite'
+
 import { SignInModalTemplate } from '@/entities/sign-in-modal-template'
+import { useStore } from '@/shared/hooks'
 import { SignInForm } from '@/widgets/sign-in-modal/types'
 
 import { Modal, VoidFunction } from '$/client-shared'
@@ -8,9 +11,11 @@ interface SignInModalProps {
   onClose: VoidFunction
 }
 
-export const SignInModal = ({ isOpen, onClose }: SignInModalProps) => {
+export const SignInModal = observer(({ isOpen, onClose }: SignInModalProps) => {
+  const auth = useStore('auth')
+
   const onSubmit = (data: SignInForm) => {
-    console.log(data)
+    auth.services.signIn(data)
   }
 
   return (
@@ -18,4 +23,4 @@ export const SignInModal = ({ isOpen, onClose }: SignInModalProps) => {
       <SignInModalTemplate<SignInForm> onSubmit={onSubmit} />
     </Modal>
   )
-}
+})
