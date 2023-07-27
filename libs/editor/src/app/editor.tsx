@@ -1,9 +1,11 @@
-import { HtmlPreview } from '@/components/html-preview'
-import { Settings } from '@/components/settings'
-import { Terminal } from '@/components/terminal'
-import { Aside } from '@/modules/aside'
-import { EditorContent } from '@/modules/editor-content'
-import { Header } from '@/modules/header'
+import { ReactElement, Suspense } from 'react'
+
+import { Aside } from '@/widgets/aside'
+import { EditorContent } from '@/widgets/editor-content'
+import { Header } from '@/widgets/header'
+import { HtmlPreview } from '@/widgets/html-preview'
+import { Settings } from '@/widgets/settings'
+import { Terminal } from '@/widgets/terminal'
 
 import { EditorStoreProvider } from './providers/editor-store'
 import { ModalsContextProvider } from './providers/modals-provider'
@@ -12,14 +14,18 @@ import { EditorStyles, EditorWrapper } from './styles/editor.styles'
 
 import { NotificationsProvider, Page, useOverflow } from '$/client-shared'
 
-export const Editor = () => {
+interface EditorProps {
+  SignIn: () => ReactElement
+}
+
+export const Editor = ({ SignIn }: EditorProps) => {
   useOverflow()
 
   return (
     <Page>
       <EditorStoreProvider>
         <ThemeLoader>
-          <ModalsContextProvider>
+          <ModalsContextProvider SignIn={SignIn}>
             <NotificationsProvider>
               <EditorStyles>
                 <Header />
@@ -29,7 +35,9 @@ export const Editor = () => {
                   <Terminal />
                   <HtmlPreview />
                 </EditorWrapper>
-                <Settings />
+                <Suspense fallback={null}>
+                  <Settings />
+                </Suspense>
               </EditorStyles>
             </NotificationsProvider>
           </ModalsContextProvider>

@@ -1,6 +1,6 @@
 import { makeAutoObservable } from 'mobx'
 
-import { ExecuteServices } from '@/modules/header'
+import { ExecuteServices } from '@/widgets/header'
 
 import EditorActions from './editor.actions'
 import EditorGetters from './editor.getters'

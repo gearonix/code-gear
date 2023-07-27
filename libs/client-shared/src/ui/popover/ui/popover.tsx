@@ -1,7 +1,8 @@
 import { useEffect } from 'react'
 
-import { AnimationProvider } from '../../../providers'
-import { VoidFunction, WithChildren } from '../../../types'
+import { AnimationProvider } from '@/providers'
+import { VoidFunction, WithChildren } from '@/types'
+
 import { usePopoverAnimation } from '../hooks'
 
 import { PopoverStyles } from './popover.styles'

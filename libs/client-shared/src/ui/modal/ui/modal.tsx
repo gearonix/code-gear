@@ -1,14 +1,10 @@
 import { MouseEvent } from 'react'
 import Scrollbar from 'react-smooth-scrollbar'
 
+import { AnimationProvider, Display, useAnimations } from '@/lib/components'
+import { WithChildren } from '@/types'
 import { Portal } from '@reach/portal'
 
-import {
-  AnimationProvider,
-  Display,
-  useAnimations
-} from '../../../lib/components'
-import { WithChildren } from '../../../types'
 import { useModalTransitions } from '../hooks/use-modal-transitions'
 
 import { ModalBackground, ModalContainer, ModalStyles } from './modal.styles'

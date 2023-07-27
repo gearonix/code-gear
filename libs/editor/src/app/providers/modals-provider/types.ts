@@ -1,12 +1,18 @@
-import { TerminalTabKeys } from '@/components/terminal'
+import { ReactElement } from 'react'
 
-import { ReducerPayload } from '$/client-shared'
+import { TerminalTabKeys } from '@/widgets/terminal'
+
+import { AnyObject, ReducerPayload } from '$/client-shared'
 
 export interface ModalsState {
   isTerminalOpened: boolean
   isSettingsOpened: boolean
   isHtmlPreviewOpened: boolean
+  isSignInOpened: boolean
   selectedTerminalTab: TerminalTabKeys
+  ModalComponents: {
+    SignIn: (props: AnyObject) => ReactElement
+  }
 }
 
 export interface ModalsPayload extends ReducerPayload<ModalsState> {

@@ -1,7 +1,7 @@
 import { useEffect } from 'preact/compat'
 
-import { themes } from '@/shared/consts'
-import EditorErrors from '@/shared/errors'
+import { themes } from '@/shared/consts/themes'
+import EditorErrors from '@/shared/exceptions'
 import { useStore } from '@/shared/hooks'
 import { useMonaco } from '@monaco-editor/react'
 
@@ -26,7 +26,7 @@ export const useThemeLoader = () => {
 
         assertThemeObject(json)
 
-        monaco.editor.defineTheme(theme, json)
+        monaco?.editor.defineTheme(theme, json)
       } catch (error) {
         console.log(EditorErrors.ThemeUpload(theme))
       }
@@ -35,7 +35,7 @@ export const useThemeLoader = () => {
 
       if (processed === themes.length) {
         defineCustomTheme({ background: customBackground, color: customColor })
-        monaco.editor.setTheme(selectedTheme)
+        monaco?.editor.setTheme(selectedTheme)
 
         loader.on()
       }

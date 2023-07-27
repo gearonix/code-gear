@@ -1,6 +1,6 @@
 import { editor } from 'monaco-editor'
 
-import { FontSizes, TabSizes } from '@/shared/consts'
+import { FontSizes, TabSizes } from '@/shared/consts/font-sizes'
 
 interface EditorConfigPayload {
   fontSize: FontSizes

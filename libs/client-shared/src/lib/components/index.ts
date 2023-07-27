@@ -1,6 +1,6 @@
 export {
   default as AnimationProvider,
   useAnimations
-} from '../../providers/with-animations/animation-provider'
-export { Display } from './common'
-export { default as Page } from './page/page'
+} from '../../providers/animation-provider'
+export { Display } from './Display'
+export { default as Page } from './Page'

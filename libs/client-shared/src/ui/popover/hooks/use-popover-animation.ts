@@ -1,5 +1,5 @@
-import { useAnimations } from '../../../providers/with-animations/animation-provider'
-import { VoidFunction } from '../../../types'
+import { useAnimations } from '@/providers/animation-provider'
+import { VoidFunction } from '@/types'
 
 export const usePopoverAnimation = (
   closeCallback: VoidFunction,
