@@ -1,16 +1,20 @@
 import { makeAutoObservable } from 'mobx'
 
-import { ContentTab } from '@/components/tabs'
-import { ContentTabInstance } from '@/components/tabs/types'
-import { ExecuteMessage } from '@/components/terminal'
-import { FontSizes, TabSizes, Themes } from '@/shared/consts'
+import { FontSizes, TabSizes } from '@/shared/consts/font-sizes'
+import { Themes } from '@/shared/consts/themes'
+import { ContentTab } from '@/widgets/tabs'
+import { ExecuteMessage } from '@/widgets/terminal'
+
+import {
+  defaultCodeLang,
+  defaultCodeTemplate
+} from '../lib/default-code-template'
 
 import EditorActions from './editor.actions'
 import EditorGetters from './editor.getters'
 import EditorServices from './editor.services'
 
 import { Hex, LocalStorageClient } from '$/client-shared'
-import { defaultCodeLang, defaultCodeTemplate } from '../lib/default-code-template';
 
 class EditorStore {
   activeKey = ''
@@ -49,27 +53,21 @@ class EditorStore {
     )
     this.customColor = storage.get<Hex>('EDITOR_CUSTOM_COLOR', '#3d3d3d')
 
-    const savedContent = storage.get<ContentTabInstance[]>(
-      'EDITOR_CONTENT_DATA',
-      []
-    )
+    const savedContent = storage.get<ContentTab[]>('EDITOR_CONTENT_DATA', [])
     this.executeMessages = storage.get<ExecuteMessage[]>(
       'EDITOR_EXECUTE_MESSAGES',
       []
     )
 
     if (savedContent.length === 0) {
-      const newTab = this.actions.tabs.createTab()
-      newTab!.lang = defaultCodeLang
-      newTab?.setTabContent(defaultCodeTemplate)
+      this.actions.tabs.createTab()
+      const newTab = this.content[0]
+      newTab.lang = defaultCodeLang
+      newTab.content = defaultCodeTemplate
     }
 
-    for (const instance of savedContent) {
-      this.content.push(new ContentTab({ instance }))
-    }
-
-    const firstTab = this.content[0]
-    this.activeKey = firstTab.getKeyId()
+    this.content = [...this.content, ...savedContent]
+    this.activeKey = this.content[0].key
   }
 }
 

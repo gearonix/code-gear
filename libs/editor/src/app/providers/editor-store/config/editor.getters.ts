@@ -1,8 +1,11 @@
 import { makeAutoObservable } from 'mobx'
 
 import { EditorStore } from '@/app'
-import { ContentTab } from '@/components/tabs'
-import { executorAllowedLanguages, LanguagesValues } from '@/shared/consts'
+import {
+  executorAllowedLanguages,
+  LanguagesValues
+} from '@/shared/consts/languages'
+import { ContentTab } from '@/widgets/tabs'
 
 class EditorGetters {
   private state: EditorStore
@@ -14,18 +17,18 @@ class EditorGetters {
 
   getActiveTab(key = this.state.activeKey): ContentTab {
     return this.state.content.find((tab) => {
-      return tab.getKeyId() === key
+      return tab.key === key
     }) as ContentTab
   }
 
   getActiveTabText(): string {
     const activeTab = this.getActiveTab()
-    return activeTab?.getContent()
+    return activeTab.content
   }
 
   getTabIndex(key = this.state.activeKey): number {
     return this.state.content.findIndex((tab) => {
-      return tab.getKeyId() === key
+      return tab.key === key
     })
   }
 

@@ -9,8 +9,8 @@
     "baseUrl": ".",
     "paths": {
       "$/config": ["../../libs/config/src/index.ts"],
-      "$/services": ["../../libs/services/src/index.ts"],
-      "@/*": ["src/*"],
+      "$/services": ["../../libs/nest-services/src/index.ts"],
+      "@/*": ["src/*"]
     }
   },
   "exclude": ["jest.config.ts", "src/**/*.spec.ts", "src/**/*.test.ts"],

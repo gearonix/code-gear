@@ -1,6 +1,6 @@
 import { EventHandler, KeyboardEvent, useState } from 'react'
 
-import { Nullable } from '../types'
+import { Nullable } from '@/types'
 
 type Handlers = Record<string, Nullable<() => void>>
 
@@ -12,7 +12,7 @@ export const useAltKeyDown = () => {
         const subscriber = (e: KeyboardEvent) => {
           if (e.altKey && e.key === key.toLowerCase()) {
             e.preventDefault()
-            handler()
+            handler?.()
             return false
           }
         }
