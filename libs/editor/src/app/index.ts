@@ -1,4 +1,9 @@
-export { default as Editor } from './editor'
+import { lazy } from 'react'
+
+const Editor = lazy(() => import('./editor'))
+
+export { Editor }
+
 export {
   EditorActions,
   EditorGetters,

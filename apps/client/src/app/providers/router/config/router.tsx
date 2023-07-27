@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import { createBrowserRouter } from 'react-router-dom'
 
 import { About } from '@/pages/about'
@@ -14,7 +15,11 @@ const router = createBrowserRouter([
   },
   {
     path: RoutePaths.EDITOR,
-    element: <Editor />
+    element: (
+      <Suspense fallback={null}>
+        <Editor />
+      </Suspense>
+    )
   },
   {
     path: RoutePaths.ABOUT,

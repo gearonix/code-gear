@@ -1,9 +1,11 @@
-import { HtmlPreview } from '@/components/../widgets/html-preview'
-import { Settings } from '@/components/../widgets/settings'
-import { Terminal } from '@/components/../widgets/terminal'
-import { Aside } from '@/modules/../widgets/aside'
-import { EditorContent } from '@/modules/../widgets/editor-content'
-import { Header } from '@/modules/../widgets/header'
+import { Suspense } from 'react'
+
+import { Aside } from '@/widgets/aside'
+import { EditorContent } from '@/widgets/editor-content'
+import { Header } from '@/widgets/header'
+import { HtmlPreview } from '@/widgets/html-preview'
+import { Settings } from '@/widgets/settings'
+import { Terminal } from '@/widgets/terminal'
 
 import { EditorStoreProvider } from './providers/editor-store'
 import { ModalsContextProvider } from './providers/modals-provider'
@@ -29,7 +31,9 @@ export const Editor = () => {
                   <Terminal />
                   <HtmlPreview />
                 </EditorWrapper>
-                <Settings />
+                <Suspense fallback={null}>
+                  <Settings />
+                </Suspense>
               </EditorStyles>
             </NotificationsProvider>
           </ModalsContextProvider>
