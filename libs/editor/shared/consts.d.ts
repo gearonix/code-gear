@@ -11,11 +11,16 @@ export declare const languages: {
     readonly htm: "html";
     readonly txt: "text";
     readonly css: "css";
+    readonly py: "python";
+    readonly cpp: "cpp";
+    readonly go: "go";
+    readonly c: "c";
+    readonly java: "java";
 };
 export type LanguagesValues = ValueOf<typeof languages>;
 export type LanguagesKeys = keyof typeof languages;
 export declare const maxTabsLength: 9;
-export declare const executorAllowedLanguages: string[];
+export declare const executorAllowedLanguages: LanguagesValues[];
 export declare const fontSizes: readonly [14, 16, 18, 20, 22, 24, 26];
 export type FontSizes = Keys<typeof fontSizes>;
 export declare const tabSizes: readonly [4, 2];

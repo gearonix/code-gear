@@ -20,7 +20,6 @@ export declare class ContentTab {
     getFileHandle(): Nullable<FileSystemFileHandle>;
     setLabel(newLabel: string): void;
     getLabel(): string;
-    private updateLabel;
     setTabContent(content: string): void;
     getContent(): string;
     getKeyId(): string;
