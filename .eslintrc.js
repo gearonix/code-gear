@@ -34,7 +34,8 @@ module.exports = configure({
       "import/extensions": "off",
       "react-hooks/exhaustive-deps": "warn",
       "react/no-array-index-key": "warn",
-      "@typescript-eslint/no-explicit-any": "warn"
+      "@typescript-eslint/no-explicit-any": "warn",
+      "dot-notation": "off"
     }
   }
 })

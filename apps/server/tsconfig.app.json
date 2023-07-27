@@ -9,7 +9,7 @@
     "baseUrl": ".",
     "paths": {
       "$/config": ["../../libs/config/src/index.ts"],
-      "$/services": ["../../libs/services/src/index.ts"],
+      "$/services": ["../../libs/nest-services/src/index.ts"],
       "@/*": ["src/*"]
     }
   },
