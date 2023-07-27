@@ -1,15 +1,16 @@
+import { useEffect } from 'react'
 import { observer } from 'mobx-react-lite'
 
 import { HeaderOptions } from '@/entities/header-options'
 import { HeaderRightSection } from '@/entities/header-right-section'
-import { useActions, useGetters } from '@/shared/hooks'
+import { useActions, useGetters, useModalsContext } from '@/shared/hooks'
 import { useFileService } from '@/widgets/editor-content/hooks'
 
 import { useCodeRunner, useHeaderAnimation } from '../hooks'
 
 import { FileName, HeaderStyles } from './header.styles'
 
-import { AnimationProvider } from '$/client-shared'
+import { AnimationProvider, Display } from '$/client-shared'
 
 const Header = observer(() => {
   const getters = useGetters()
@@ -20,9 +21,17 @@ const Header = observer(() => {
   const { openFile, saveFile } = useFileService()
   const runCode = useCodeRunner()
   const isDisabled = !getters.isAllowedToExecute()
+  const modalsContext = useModalsContext()
+  const { isSignInOpened, ModalComponents } = modalsContext.state
 
   const createTab = () => {
     actions.tabs.createTab()
+  }
+
+  const toggleSignIn = (isOpen: boolean) => () => {
+    modalsContext.update({
+      isSignInOpened: isOpen
+    })
   }
 
   return (
@@ -34,7 +43,15 @@ const Header = observer(() => {
         saveFile={saveFile}
       />
       <FileName>{activeTab.label} - CodeGear</FileName>
-      <HeaderRightSection isDisabled={isDisabled} runCode={runCode} />
+      <HeaderRightSection
+        isDisabled={isDisabled}
+        runCode={runCode}
+        openSignIn={toggleSignIn(true)}
+      />
+      <ModalComponents.SignIn
+        isOpen={isSignInOpened}
+        onClose={toggleSignIn(false)}
+      />
     </HeaderStyles>
   )
 })

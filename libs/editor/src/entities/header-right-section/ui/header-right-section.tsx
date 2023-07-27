@@ -1,8 +1,5 @@
 import { observer } from 'mobx-react-lite'
-
-import { useGetters } from '@/shared/hooks'
-
-import { useCodeRunner } from '../../../widgets/header/hooks'
+import { useTheme } from 'styled-components'
 
 import { RightSection } from './header-right-section.styles'
 
@@ -10,11 +7,13 @@ import { ColorButton } from '$/client-shared'
 
 interface HeaderRightSectionProps {
   runCode: () => void
+  openSignIn: () => void
   isDisabled: boolean
 }
 
 const HeaderRightSection = observer(
-  ({ isDisabled, runCode }: HeaderRightSectionProps) => {
+  ({ isDisabled, runCode, openSignIn }: HeaderRightSectionProps) => {
+    const theme = useTheme()
     return (
       <RightSection>
         <ColorButton
@@ -23,6 +22,12 @@ const HeaderRightSection = observer(
           disabled={isDisabled}
           override="#38a886">
           Run Code
+        </ColorButton>
+        <ColorButton
+          type="primary"
+          override={theme.secondaryGrey}
+          onClick={openSignIn}>
+          Sign in
         </ColorButton>
       </RightSection>
     )

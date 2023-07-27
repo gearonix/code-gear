@@ -4,6 +4,7 @@ import { createBrowserRouter } from 'react-router-dom'
 import { About } from '@/pages/about'
 import { Main } from '@/pages/main'
 import { NotFound } from '@/pages/not-found'
+import { SignInModal } from '@/widgets/sign-in-modal'
 
 import { RoutePaths } from '$/client-shared'
 import { Editor } from '$/editor'
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
     path: RoutePaths.EDITOR,
     element: (
       <Suspense fallback={null}>
-        <Editor />
+        <Editor SignIn={SignInModal} />
       </Suspense>
     )
   },

@@ -1,4 +1,4 @@
-import { Suspense } from 'react'
+import { ReactElement, Suspense } from 'react'
 
 import { Aside } from '@/widgets/aside'
 import { EditorContent } from '@/widgets/editor-content'
@@ -14,14 +14,18 @@ import { EditorStyles, EditorWrapper } from './styles/editor.styles'
 
 import { NotificationsProvider, Page, useOverflow } from '$/client-shared'
 
-export const Editor = () => {
+interface EditorProps {
+  SignIn: () => ReactElement
+}
+
+export const Editor = ({ SignIn }: EditorProps) => {
   useOverflow()
 
   return (
     <Page>
       <EditorStoreProvider>
         <ThemeLoader>
-          <ModalsContextProvider>
+          <ModalsContextProvider SignIn={SignIn}>
             <NotificationsProvider>
               <EditorStyles>
                 <Header />
