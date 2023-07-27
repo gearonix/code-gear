@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { observer } from 'mobx-react-lite'
 
 import { HeaderOptions } from '@/entities/header-options'
@@ -10,7 +9,7 @@ import { useCodeRunner, useHeaderAnimation } from '../hooks'
 
 import { FileName, HeaderStyles } from './header.styles'
 
-import { AnimationProvider, Display } from '$/client-shared'
+import { AnimationProvider } from '$/client-shared'
 
 const Header = observer(() => {
   const getters = useGetters()
