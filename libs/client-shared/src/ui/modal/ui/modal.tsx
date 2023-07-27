@@ -12,9 +12,17 @@ import { ModalBackground, ModalContainer, ModalStyles } from './modal.styles'
 type ModalProps = WithChildren<{
   isOpen: boolean
   onClose: () => void
+  width?: number
+  height?: number
 }>
 
-export const Modal = ({ onClose, isOpen, children }: ModalProps) => {
+export const Modal = ({
+  onClose,
+  isOpen,
+  children,
+  width,
+  height
+}: ModalProps) => {
   const { Spring, Gesture } = useAnimations()
   const { opacity, transform } = useModalTransitions()
 
@@ -65,7 +73,9 @@ export const Modal = ({ onClose, isOpen, children }: ModalProps) => {
                 style={{ ...modalStyle, x, y, scale }}
                 {...bind()}
                 onClick={stopPropagation}
-                as={Spring.a.div}>
+                as={Spring.a.div}
+                $width={width}
+                $height={height}>
                 <Scrollbar
                   damping={0.05}
                   syncCallbacks={true}

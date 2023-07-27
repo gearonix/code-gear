@@ -18,6 +18,7 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
   }
 
+
   ${customScrollbar('body')}
 
   .ant-popconfirm {

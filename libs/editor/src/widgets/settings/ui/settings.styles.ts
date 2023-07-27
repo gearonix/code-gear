@@ -30,17 +30,3 @@ export const SettingsText = styled.div`
   }
 `
 
-export const Separator = styled.div`
-  background: ${color('lightGrey')};
-  ${wh('100%', '2px')};
-  margin-bottom: 30px;
-  margin-top: -8px;
-`
-
-export const Title = styled.h1`
-  text-align: center;
-  padding-bottom: 18px;
-  margin-bottom: 30px;
-  font-size: ${({ theme }) => theme.fz10};
-  border-bottom: ${br} ${color('lightGrey')};
-`

@@ -10,9 +10,9 @@ import { useActions, useModalsContext, useStore } from '@/shared/hooks'
 
 import { useColorCallback } from '../hooks'
 
-import { Separator, SettingsItem, SettingsText, Title } from './settings.styles'
+import { SettingsItem, SettingsText } from './settings.styles'
 
-import { Modal } from '$/client-shared'
+import { ModalSeparator, ModalTitle, Modal } from '$/client-shared'
 
 const Settings = observer(() => {
   const modalsContext = useModalsContext()
@@ -40,7 +40,7 @@ const Settings = observer(() => {
 
   return (
     <Modal isOpen={isOpen} onClose={closeSettings}>
-      <Title>Editor settings</Title>
+      <ModalTitle>Editor settings</ModalTitle>
       <SettingsItem>
         <SettingsText>
           <h4>Editor Theme</h4>
@@ -69,7 +69,7 @@ const Settings = observer(() => {
         </SettingsText>
         <TabSizeSwitcher />
       </SettingsItem>
-      <Separator />
+      <ModalSeparator />
       <SettingsItem>
         <SettingsText>
           <h4>Custom Editor Background</h4>
@@ -94,7 +94,7 @@ const Settings = observer(() => {
           size="large"
         />
       </SettingsItem>
-      <Separator />
+      <ModalSeparator />
       <SettingsItem>
         <SettingsText>
           <h4>Save editor settings to Local Storage</h4>
@@ -106,9 +106,9 @@ const Settings = observer(() => {
           style={{ marginRight: 15, marginTop: 0 }}
         />
       </SettingsItem>
-      <Title>Key buildings</Title>
+      <ModalTitle>Key buildings</ModalTitle>
       <KeyBuildings />
-      <Separator />
+      <ModalSeparator />
     </Modal>
   )
 })

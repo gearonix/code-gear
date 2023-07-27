@@ -1,6 +1,14 @@
 import styled from 'styled-components'
 
-import { absolute, color, customScrollbar, flex, shadow, wh } from '@/styles'
+import {
+  absolute,
+  br,
+  color,
+  customScrollbar,
+  flex,
+  shadow,
+  wh
+} from '@/styles'
 
 export const ModalBackground = styled.div`
   ${flex('center', 'center')};
@@ -13,10 +21,16 @@ export const ModalBackground = styled.div`
   z-index: 100;
 `
 
-export const ModalStyles = styled.div`
+interface ModalStylesProps {
+  readonly $width?: number
+  readonly $height?: number
+}
+
+export const ModalStyles = styled.div<ModalStylesProps>`
   display: grid;
   position: relative;
-  ${wh('50vw', '60vh')};
+  width: ${({ $width }) => $width ?? 50}vw;
+  height: ${({ $height }) => $height ?? 60}vh;
   background: ${color('grey')};
   border: 2px solid ${color('lightGrey')};
   min-height: 300px;
@@ -37,4 +51,19 @@ export const ModalContainer = styled.div`
     cursor: initial;
     color: ${color('light')};
   }
+`
+
+export const ModalTitle = styled.h1`
+  text-align: center;
+  padding-bottom: 18px;
+  margin-bottom: 30px;
+  font-size: ${({ theme }) => theme.fz10};
+  border-bottom: ${br} ${color('lightGrey')};
+`
+
+export const ModalSeparator = styled.div`
+  background: ${color('lightGrey')};
+  ${wh('100%', '2px')};
+  margin-bottom: 30px;
+  margin-top: -8px;
 `
