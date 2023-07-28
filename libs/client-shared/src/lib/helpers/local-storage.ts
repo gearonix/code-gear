@@ -1,5 +1,7 @@
-import { LocalStorage, LocalStorageKeys } from '../../config/local-storage'
-import { isString } from '../../types'
+import { LocalStorage, LocalStorageKeys } from '@/config/local-storage'
+import { isString } from '@/types'
+
+import { appName } from '$/config'
 
 export class LocalStorageClient {
   isDisabled = false
@@ -12,7 +14,7 @@ export class LocalStorageClient {
       return defaultVal
     }
 
-    const value = localStorage.getItem(key) as string
+    const value = localStorage.getItem(`${appName}_${key}`) as string
 
     if (!value) {
       return defaultVal
@@ -29,7 +31,7 @@ export class LocalStorageClient {
     if (isString(value)) {
       return localStorage.setItem(key, value)
     }
-    localStorage.setItem(key, JSON.stringify(value))
+    localStorage.setItem(`${appName}_${key}`, JSON.stringify(value))
   }
 
   public clear(key?: LocalStorageKeys): void {

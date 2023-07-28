@@ -61,6 +61,18 @@
           "codeCoverage": true
         }
       }
+    },
+    "migrate:dev": {
+      "command": "node prisma/concat-prisma-files.js && dotenv -e ../../.serve.env -- npx prisma migrate dev",
+      "options": {
+        "cwd": "apps/server"
+      }
+    },
+    "migrate:prod": {
+      "command": "node prisma/concat-prisma-files.js && dotenv -e ../../.build.env -- npx prisma migrate deploy",
+      "options": {
+        "cwd": "apps/server"
+      }
     }
   },
   "tags": []
