@@ -21,7 +21,7 @@ module.exports = configure({
   extend: {
     root: true,
     ignorePatterns: ["**/*"],
-    plugins: ["@nx"],
+    plugins: ["@nx", "prefer-arrow"],
     // My custom config
     extends: ["gearonix"],
     rules: {
@@ -35,7 +35,9 @@ module.exports = configure({
       "react-hooks/exhaustive-deps": "warn",
       "react/no-array-index-key": "warn",
       "@typescript-eslint/no-explicit-any": "warn",
-      "dot-notation": "off"
+      "dot-notation": "off",
+      "prefer-arrow/prefer-arrow-functions": "error",
+      "@typescript-eslint/no-unused-vars": "warn"
     }
   }
 })

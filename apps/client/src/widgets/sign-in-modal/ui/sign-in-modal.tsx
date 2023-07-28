@@ -19,7 +19,7 @@ export const SignInModal = observer(({ isOpen, onClose }: SignInModalProps) => {
   }
 
   return (
-    <Modal isOpen={isOpen} onClose={onClose} width={37}>
+    <Modal isOpen={isOpen} onClose={onClose} width={37} height={53}>
       <SignInModalTemplate<SignInForm> onSubmit={onSubmit} />
     </Modal>
   )

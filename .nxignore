@@ -1,0 +1,2 @@
+# Added to avoid causing additional problems when serving nestjs applications.
+_schema.gql

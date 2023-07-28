@@ -1,0 +1,21 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type User {
+  username: String!
+  avatarUrl: String!
+}
+
+type Query {
+  sayHello: String!
+}
+
+type Mutation {
+  signIn(_graphql: SignIn!): User!
+}
+
+input SignIn {
+  username: String!
+  password: String!
+}
