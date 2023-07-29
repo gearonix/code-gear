@@ -2,6 +2,6 @@
 
 model users {
   username  String  @id @database.VarChar(14)
-  password  String  @database.VarChar(14)
+  password  String  @database.VarChar(150)
   avatarUrl String? @database.VarChar(100)
 }

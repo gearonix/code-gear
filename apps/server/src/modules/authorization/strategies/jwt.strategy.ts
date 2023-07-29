@@ -12,11 +12,13 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
   constructor(private readonly usersService: UsersService) {
     super({
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
+      ignoreExpiration: false,
       secretOrKey: jwtSecret
     })
   }
 
-  validate(payload: SignIn) {
-    return this.usersService.getUserByUsername(payload.username)
+  validate(payload: { payload: { username: string } }) {
+    console.log(payload)
+    return this.usersService.getUserByUsername(payload.payload.username)
   }
 }

@@ -17,11 +17,9 @@ export class HttpExceptionFilter implements ExceptionFilter {
     const request = ctx.getRequest<Request>()
     const status = exception.getStatus()
 
-    if (graphqlArg in response) {
-      return
-    }
+    console.log(response)
 
-    response.status(status).json({
+    response.status?.(status).json({
       statusCode: status,
       timestamp: new Date().toISOString(),
       path: request.url,

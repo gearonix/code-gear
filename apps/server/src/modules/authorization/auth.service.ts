@@ -17,15 +17,13 @@ export class AuthService {
     const user = await this.usersService.getUserByUsername(payload.username)
 
     if (!user) {
-      return null
+      return this.registerUser(payload)
     }
 
-    // const isPasswordEquals = await bcrypt.compare(
-    //   payload.password,
-    //   user.password
-    // )
-
-    const isPasswordEquals = payload.password === user.password
+    const isPasswordEquals = await bcrypt.compare(
+      payload.password,
+      user.password
+    )
 
     if (!isPasswordEquals) {
       return null
@@ -34,19 +32,13 @@ export class AuthService {
     return user
   }
 
-  async login(payload: SignIn) {
-    return this.generateToken(payload.username)
-  }
-
   async registerUser(payload: SignIn) {
     const hashPassword = await bcrypt.hash(payload.password, 5)
 
-    await this.usersService.createUser({
+    return this.usersService.createUser({
       ...payload,
       password: hashPassword
     })
-
-    return this.generateToken(payload.username)
   }
 
   async generateToken(username: string) {

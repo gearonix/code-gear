@@ -15,7 +15,7 @@ import { jwtSecret } from '$/config'
   controllers: [],
   providers: [
     AuthResolver,
-    // JwtStrategy,
+    JwtStrategy,
     LocalStrategy,
     AuthService,
     SessionSerializer
