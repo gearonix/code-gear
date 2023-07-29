@@ -1,4 +1,4 @@
-import { IsString, MaxLength, MinLength } from 'class-validator';
+import { IsString, MaxLength, MinLength } from 'class-validator'
 
 import { applyDecorators } from '@nestjs/common'
 import { Field } from '@nestjs/graphql'

@@ -9,6 +9,7 @@ datasource database {
 // Users model
 
 model users {
-  username String @id @database.VarChar(14)
-  password String @database.VarChar(14)
+  username  String  @id @database.VarChar(14)
+  password  String  @database.VarChar(14)
+  avatarUrl String? @database.VarChar(100)
 }

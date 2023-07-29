@@ -7,7 +7,7 @@ export class User {
   @ApiProperty({ description: 'Username (used as userId)' })
   username: string
 
-  @Field()
+  @Field({ nullable: true })
   @ApiProperty({ description: 'User avatar location' })
-  avatarUrl: string
+  avatarUrl?: string
 }

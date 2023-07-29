@@ -5,5 +5,5 @@ export interface SignInForm {
 
 export interface SignInResponse {
   username: string
-  avatarUrl: string
+  avatarUrl: string | null
 }
