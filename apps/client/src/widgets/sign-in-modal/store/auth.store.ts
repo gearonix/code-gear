@@ -9,6 +9,7 @@ export class AuthStore {
 
   constructor() {
     makeAutoObservable(this)
-    this.services = new AuthServices()
+
+    this.services = new AuthServices(this)
   }
 }

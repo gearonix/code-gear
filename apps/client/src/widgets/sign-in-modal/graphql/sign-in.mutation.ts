@@ -1,13 +1,12 @@
 import { gql } from '@apollo/react-hooks'
 
-import { ApolloMutation } from '$/client-shared'
+import { ApolloOperation } from '$/client-shared'
 
-export const SignInMutation: ApolloMutation = {
+export const SignInMutation: ApolloOperation = {
   gql: gql`
     mutation SignIn($payload: SignIn!) {
       signIn(_graphql: $payload) {
-        username
-        avatarUrl
+        accessToken
       }
     }
   `,

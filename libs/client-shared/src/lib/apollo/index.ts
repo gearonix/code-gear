@@ -1,1 +1,1 @@
-export { mutate } from './mutate'
+export { ApolloMiddleware } from './apollo-middleware'

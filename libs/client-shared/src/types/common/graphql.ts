@@ -1,6 +1,6 @@
 import { DocumentNode } from 'graphql/language'
 
-export interface ApolloMutation {
+export interface ApolloOperation {
   gql: DocumentNode
   method: string
 }

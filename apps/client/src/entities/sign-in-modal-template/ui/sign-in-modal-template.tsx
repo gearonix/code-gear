@@ -9,7 +9,7 @@ import {
 } from './sign-in-modal-template.styles'
 
 import { Logo } from '$/assets'
-import { ModalTitle } from '$/client-shared'
+import { ColoredButton, ModalTitle } from '$/client-shared'
 
 interface SignInModalTemplateProps<T> {
   onSubmit: (data: T) => void
@@ -38,7 +38,11 @@ export const SignInModalTemplate = <T,>({
         />
       </Form.Item>
 
-      <SubmitButton override="#38a886" type="primary" htmlType="submit">
+      <SubmitButton
+        override="#38a886"
+        type="primary"
+        htmlType="submit"
+        as={ColoredButton}>
         Sign In
       </SubmitButton>
     </SignInModalStyles>

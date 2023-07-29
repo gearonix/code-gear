@@ -4,6 +4,7 @@ import { About } from '@/pages/about'
 import { EditPage } from '@/pages/edit'
 import { Main } from '@/pages/main'
 import { NotFound } from '@/pages/not-found'
+import { ProfilePage } from '@/pages/profile'
 
 import { RoutePaths } from '$/client-shared'
 
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: RoutePaths.ABOUT,
     element: <About />
+  },
+  {
+    path: `${RoutePaths.PROFILE}/:username`,
+    element: <ProfilePage />
   },
   {
     path: '*',
