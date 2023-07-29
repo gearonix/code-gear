@@ -6,7 +6,6 @@ import { AuthGuard } from '@nestjs/passport'
 export class GqlLocalAuthGuard extends AuthGuard('local') {
   async canActivate(context: ExecutionContext): Promise<boolean> {
     const ctxRequest = GqlExecutionContext.create(context).getContext().req
-    console.log(ctxRequest)
     return Boolean(ctxRequest)
   }
 }

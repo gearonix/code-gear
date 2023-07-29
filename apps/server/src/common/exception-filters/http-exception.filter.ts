@@ -7,8 +7,6 @@ import {
   HttpException
 } from '@nestjs/common'
 
-import { graphqlArg } from '$/config'
-
 @Catch(HttpException)
 export class HttpExceptionFilter implements ExceptionFilter {
   catch(exception: HttpException, host: ArgumentsHost) {

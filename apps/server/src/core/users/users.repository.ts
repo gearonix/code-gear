@@ -1,10 +1,10 @@
-import { SignIn } from '@/modules/authorization/dto'
+import { SignIn } from '@/auth/inputs/sign-in.input'
 import { Injectable } from '@nestjs/common'
 
 import { PrismaService } from '$/services'
 
 @Injectable()
-export class UsersService {
+export class UsersRepository {
   constructor(private prisma: PrismaService) {}
 
   public getUserByUsername(username: string) {

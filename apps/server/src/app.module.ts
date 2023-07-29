@@ -1,14 +1,12 @@
 import { join } from 'path'
 
-import { AuthModule } from '@/modules/authorization'
+import { AuthModule } from '@/auth'
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo'
 import { Module } from '@nestjs/common'
 import { ConfigModule } from '@nestjs/config'
 import { GraphQLModule } from '@nestjs/graphql'
 
-import { CodeExecutorModule } from './modules/code-executor-api'
-
-import { clientUrl } from '$/config'
+import { CodeExecutorModule } from './core/code-executor-api'
 
 @Module({
   imports: [

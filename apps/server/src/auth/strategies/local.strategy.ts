@@ -1,6 +1,5 @@
 import { Strategy } from 'passport-local'
 
-import { SignIn } from '@/modules/authorization/dto'
 import {
   Injectable,
   InternalServerErrorException,
@@ -10,13 +9,15 @@ import { PassportStrategy } from '@nestjs/passport'
 
 import { AuthService } from '../auth.service'
 
+import { UserResponse } from './../responses'
+
 @Injectable()
 export class LocalStrategy extends PassportStrategy(Strategy) {
   constructor(private readonly authService: AuthService) {
     super({ usernameField: 'username', passwordField: 'password' })
   }
 
-  async validate(username: string, password: string) {
+  async validate(username: string, password: string): Promise<UserResponse> {
     try {
       const user = await this.authService.validate({
         username,

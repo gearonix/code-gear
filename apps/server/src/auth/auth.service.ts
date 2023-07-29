@@ -1,19 +1,21 @@
 import * as bcrypt from 'bcryptjs'
 
-import { UsersService } from '@/modules/users'
-import { HttpException, HttpStatus, Injectable } from '@nestjs/common'
+import { UsersRepository } from '@/core/users'
+import { Injectable } from '@nestjs/common'
 import { JwtService } from '@nestjs/jwt'
 
-import { SignIn } from './dto'
+import { SignIn } from './inputs/sign-in.input'
+import { AccessToken, UserResponse } from './responses'
+import { JwtTokenPayload } from './types'
 
 @Injectable()
 export class AuthService {
   constructor(
     private readonly jwtService: JwtService,
-    private readonly usersService: UsersService
+    private readonly usersService: UsersRepository
   ) {}
 
-  async validate(payload: SignIn) {
+  public async validate(payload: SignIn): Promise<UserResponse | null> {
     const user = await this.usersService.getUserByUsername(payload.username)
 
     if (!user) {
@@ -32,19 +34,19 @@ export class AuthService {
     return user
   }
 
-  async registerUser(payload: SignIn) {
-    const hashPassword = await bcrypt.hash(payload.password, 5)
+  public async registerUser(user: SignIn): Promise<UserResponse> {
+    const hashPassword = await bcrypt.hash(user.password, 5)
 
     return this.usersService.createUser({
-      ...payload,
+      ...user,
       password: hashPassword
     })
   }
 
-  async generateToken(username: string) {
+  public async generateToken(username: string): Promise<AccessToken> {
     const accessToken = this.jwtService.sign({
-      payload: { username }
-    })
+      username
+    } satisfies JwtTokenPayload)
 
     return { accessToken }
   }

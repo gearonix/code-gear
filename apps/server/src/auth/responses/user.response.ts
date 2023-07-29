@@ -2,7 +2,7 @@ import { Field, ObjectType } from '@nestjs/graphql'
 import { ApiProperty } from '@nestjs/swagger'
 
 @ObjectType()
-export class User {
+export class UserResponse {
   @Field()
   @ApiProperty({ description: 'Username (used as userId)' })
   username: string

@@ -36,8 +36,7 @@ module.exports = configure({
       "react/no-array-index-key": "warn",
       "@typescript-eslint/no-explicit-any": "warn",
       "dot-notation": "off",
-      "prefer-arrow/prefer-arrow-functions": "error",
-      "@typescript-eslint/no-unused-vars": "warn"
+      "prefer-arrow/prefer-arrow-functions": "error"
     }
   }
 })
