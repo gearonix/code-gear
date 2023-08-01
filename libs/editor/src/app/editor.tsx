@@ -12,7 +12,7 @@ import { ModalsContextProvider } from './providers/modals-provider'
 import { ThemeLoader } from './providers/theme-loader'
 import { EditorStyles, EditorWrapper } from './styles/editor.styles'
 
-import { NotificationsProvider, Page, useOverflow } from '$/client-shared'
+import { NotificationsProvider, useOverflow } from '$/client-shared'
 
 interface EditorProps {
   SignIn: () => ReactElement
@@ -22,28 +22,26 @@ export const Editor = ({ SignIn }: EditorProps) => {
   useOverflow()
 
   return (
-    <Page>
-      <EditorStoreProvider>
-        <ThemeLoader>
-          <ModalsContextProvider SignIn={SignIn}>
-            <NotificationsProvider>
-              <EditorStyles>
-                <Header />
-                <EditorWrapper>
-                  <Aside />
-                  <EditorContent />
-                  <Terminal />
-                  <HtmlPreview />
-                </EditorWrapper>
-                <Suspense fallback={null}>
-                  <Settings />
-                </Suspense>
-              </EditorStyles>
-            </NotificationsProvider>
-          </ModalsContextProvider>
-        </ThemeLoader>
-      </EditorStoreProvider>
-    </Page>
+    <EditorStoreProvider>
+      <ThemeLoader>
+        <ModalsContextProvider SignIn={SignIn}>
+          <NotificationsProvider>
+            <EditorStyles>
+              <Header />
+              <EditorWrapper>
+                <Aside />
+                <EditorContent />
+                <Terminal />
+                <HtmlPreview />
+              </EditorWrapper>
+              <Suspense fallback={null}>
+                <Settings />
+              </Suspense>
+            </EditorStyles>
+          </NotificationsProvider>
+        </ModalsContextProvider>
+      </ThemeLoader>
+    </EditorStoreProvider>
   )
 }
 

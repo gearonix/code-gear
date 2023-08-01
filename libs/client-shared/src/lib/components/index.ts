@@ -3,4 +3,3 @@ export {
   useAnimations
 } from '../../providers/animation-provider'
 export { Display } from './Display'
-export { default as Page } from './Page'

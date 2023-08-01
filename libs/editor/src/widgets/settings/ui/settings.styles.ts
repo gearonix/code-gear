@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { br, color, flex, wh } from '$/styles'
+import { color, flex, wh } from '$/styles'
 
 export const SettingsItem = styled.div`
   ${wh('100%', '70px')};
@@ -28,19 +28,4 @@ export const SettingsText = styled.div`
     font-size: ${({ theme }) => theme.fz5};
     margin-top: 10px;
   }
-`
-
-export const Separator = styled.div`
-  background: ${color('lightGrey')};
-  ${wh('100%', '2px')};
-  margin-bottom: 30px;
-  margin-top: -8px;
-`
-
-export const Title = styled.h1`
-  text-align: center;
-  padding-bottom: 18px;
-  margin-bottom: 30px;
-  font-size: ${({ theme }) => theme.fz10};
-  border-bottom: ${br} ${color('lightGrey')};
 `

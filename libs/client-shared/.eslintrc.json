@@ -1,4 +1,4 @@
 {
   "extends": ["plugin:@nx/react", "../../.eslintrc.js"],
-  "ignorePatterns": ["!**/*"]
+  "ignorePatterns": ["!**/*", "env.d.ts"]
 }

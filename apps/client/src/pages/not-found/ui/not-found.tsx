@@ -1,5 +1,7 @@
+import { Page } from '@/shared/lib'
+
 const NotFound = () => {
-  return <div>not found</div>
+  return <Page>not found</Page>
 }
 
 export default NotFound

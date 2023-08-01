@@ -6,3 +6,7 @@ This generator creates a module using the
 --- 
 
 - new (General case)
+
+### Run
+
+`hygen fsd-module [method]`

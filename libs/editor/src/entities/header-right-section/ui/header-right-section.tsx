@@ -3,7 +3,7 @@ import { useTheme } from 'styled-components'
 
 import { RightSection } from './header-right-section.styles'
 
-import { ColorButton } from '$/client-shared'
+import { ColoredButton } from '$/client-shared'
 
 interface HeaderRightSectionProps {
   runCode: () => void
@@ -16,19 +16,19 @@ const HeaderRightSection = observer(
     const theme = useTheme()
     return (
       <RightSection>
-        <ColorButton
+        <ColoredButton
           type="primary"
           onClick={runCode}
           disabled={isDisabled}
           override="#38a886">
           Run Code
-        </ColorButton>
-        <ColorButton
+        </ColoredButton>
+        <ColoredButton
           type="primary"
           override={theme.secondaryGrey}
           onClick={openSignIn}>
           Sign in
-        </ColorButton>
+        </ColoredButton>
       </RightSection>
     )
   }

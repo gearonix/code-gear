@@ -4,6 +4,7 @@ import EditorErrors from '@/shared/exceptions'
 
 import { isObject } from '$/client-shared'
 
+// eslint-disable-next-line prefer-arrow/prefer-arrow-functions
 export function assertThemeObject(
   value: unknown
 ): asserts value is editor.IStandaloneThemeData {
