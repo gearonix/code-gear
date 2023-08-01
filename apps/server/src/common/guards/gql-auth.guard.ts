@@ -5,6 +5,7 @@ import { AuthGuard } from '@nestjs/passport'
 import { graphqlArg } from '$/config'
 
 export class GqlAuthGuard extends AuthGuard('local') {
+  // eslint-disable-next-line @typescript-eslint/no-useless-constructor
   constructor() {
     super()
   }

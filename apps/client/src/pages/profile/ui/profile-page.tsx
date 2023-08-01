@@ -1,4 +1,4 @@
-import { Page } from '$/client-shared'
+import { Page } from '@/shared/lib'
 
 const ProfilePage = () => {
   return <Page>profile</Page>

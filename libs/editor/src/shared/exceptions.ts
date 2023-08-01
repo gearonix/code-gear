@@ -3,16 +3,16 @@ import { Themes } from '@/shared/consts/themes'
 import { AnyFunction } from '$/client-shared'
 
 const EditorErrors: Record<string, AnyFunction<string>> = {
-  ThemeUpload(theme: Themes) {
+  ThemeUpload: (theme: Themes) => {
     return `Unable to upload theme - ${theme}.json`
   },
-  NotSupportedByBrowser() {
+  NotSupportedByBrowser: () => {
     return 'Your browser does not support saving and opening files.'
   },
-  WrongJsonObject(type: string) {
+  WrongJsonObject: (type: string) => {
     return `Incoming json object should be must be ${type} type.`
   },
-  WrongResponseType(type: string) {
+  WrongResponseType: (type: string) => {
     return `Incoming response object should be must be ${type} type.`
   }
 }

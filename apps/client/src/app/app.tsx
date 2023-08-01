@@ -6,7 +6,7 @@ import { StoreProvider } from './providers/store'
 
 import 'normalize.css'
 
-function App() {
+const App = () => {
   return (
     <StoreProvider>
       <ThemeProvider>

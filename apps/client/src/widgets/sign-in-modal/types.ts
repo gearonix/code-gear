@@ -2,7 +2,7 @@ interface WithUsername {
   username: string
 }
 
-export interface SignInForm extends WithUsername{
+export interface SignInForm extends WithUsername {
   password: string
 }
 

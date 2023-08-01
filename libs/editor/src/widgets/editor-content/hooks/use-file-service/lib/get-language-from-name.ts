@@ -14,6 +14,7 @@ export const getLanguageFromName = (
   return ['text', ext]
 }
 
+// eslint-disable-next-line prefer-arrow/prefer-arrow-functions
 function isInLanguagesKeys(ext: string): ext is LanguagesKeys {
   if (ext in languages) {
     return true

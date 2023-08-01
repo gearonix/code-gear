@@ -1,7 +1,6 @@
 import { Form } from 'antd'
 import styled from 'styled-components'
 
-import { ColoredButton } from '$/client-shared'
 import { wh } from '$/styles'
 
 export const SignInModalStyles = styled(Form)`

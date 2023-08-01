@@ -6,7 +6,7 @@ export const useConfirm = () => {
   const [confirmKey, setConfirmKey] = useState<Nullable<string>>(null)
 
   return {
-    protect(callback: AnyFunction) {
+    protect: (callback: AnyFunction) => {
       return (...args: unknown[]) => {
         if (confirmKey) {
           return
@@ -14,10 +14,10 @@ export const useConfirm = () => {
         callback(...args)
       }
     },
-    off() {
+    off: () => {
       setConfirmKey(null)
     },
-    on(key: string) {
+    on: (key: string) => {
       setConfirmKey(key)
     },
     val: confirmKey

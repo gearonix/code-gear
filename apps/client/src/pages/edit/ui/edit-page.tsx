@@ -1,8 +1,8 @@
 import { Suspense } from 'react'
 
+import { Page } from '@/shared/lib'
 import { SignInModal } from '@/widgets/sign-in-modal'
 
-import { Page } from '$/client-shared'
 import { Editor } from '$/editor'
 
 const EditPage = () => {

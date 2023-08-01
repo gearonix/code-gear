@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { br, color, flex, wh } from '$/styles'
+import { color, flex, wh } from '$/styles'
 
 export const SettingsItem = styled.div`
   ${wh('100%', '70px')};
@@ -29,4 +29,3 @@ export const SettingsText = styled.div`
     margin-top: 10px;
   }
 `
-

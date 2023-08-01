@@ -1,1 +1,1 @@
-export { default as EditPage } from './ui/EditPage'
+export { default as EditPage } from './ui/edit-page'
