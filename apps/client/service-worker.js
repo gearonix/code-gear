@@ -588,7 +588,7 @@ class ye {
   }
 }
 let w;
-function Te() {
+function be() {
   if (w === void 0) {
     const n = new Response("");
     if ("body" in n)
@@ -601,7 +601,7 @@ function Te() {
   }
   return w;
 }
-async function be(n, e) {
+async function Te(n, e) {
   let t = null;
   if (n.url && (t = new URL(n.url).origin), t !== self.location.origin)
     throw new h("cross-origin-copy-response", { origin: t });
@@ -609,7 +609,7 @@ async function be(n, e) {
     headers: new Headers(s.headers),
     status: s.status,
     statusText: s.statusText
-  }, a = e ? e(r) : r, o = Te() ? s.body : await s.blob();
+  }, a = e ? e(r) : r, o = be() ? s.body : await s.blob();
   return new Response(o, a);
 }
 function v(n, e) {
@@ -650,7 +650,7 @@ try {
   self["workbox:strategies:7.0.0"] && _();
 } catch {
 }
-function T(n) {
+function b(n) {
   return typeof n == "string" ? new Request(n) : n;
 }
 class Ae {
@@ -691,7 +691,7 @@ class Ae {
    */
   async fetch(e) {
     const { event: t } = this;
-    let s = T(e);
+    let s = b(e);
     if (s.mode === "navigate" && t instanceof FetchEvent && t.preloadResponse) {
       const o = await t.preloadResponse;
       if (o)
@@ -754,7 +754,7 @@ class Ae {
    * @return {Promise<Response|undefined>} A matching response, if found.
    */
   async cacheMatch(e) {
-    const t = T(e);
+    const t = b(e);
     let s;
     const { cacheName: r, matchOptions: a } = this._strategy, o = await this.getCacheKey(t, "read"), i = Object.assign(Object.assign({}, a), { cacheName: r });
     s = await caches.match(o, i);
@@ -784,7 +784,7 @@ class Ae {
    * not be cached, and `true` otherwise.
    */
   async cachePut(e, t) {
-    const s = T(e);
+    const s = b(e);
     await Oe(0);
     const r = await this.getCacheKey(s, "write");
     if (!t)
@@ -835,7 +835,7 @@ class Ae {
     if (!this._cacheKeys[s]) {
       let r = e;
       for (const a of this.iterateCallbacks("cacheKeyWillBeUsed"))
-        r = T(await a({
+        r = b(await a({
           mode: t,
           request: r,
           event: this.event,
@@ -1179,7 +1179,7 @@ p.defaultPrecacheCacheabilityPlugin = {
 };
 p.copyRedirectedCacheableResponsesPlugin = {
   async cacheWillUpdate({ response: n }) {
-    return n.redirected ? await be(n) : n;
+    return n.redirected ? await Te(n) : n;
   }
 };
 class Ue {
@@ -1385,7 +1385,7 @@ try {
   self["workbox:routing:7.0.0"] && _();
 } catch {
 }
-const Y = "GET", b = (n) => n && typeof n == "object" ? n : { handle: n };
+const Y = "GET", T = (n) => n && typeof n == "object" ? n : { handle: n };
 class E {
   /**
    * Constructor for Route class.
@@ -1399,7 +1399,7 @@ class E {
    * against.
    */
   constructor(e, t, s = Y) {
-    this.handler = b(t), this.match = e, this.method = s;
+    this.handler = T(t), this.match = e, this.method = s;
   }
   /**
    *
@@ -1407,7 +1407,7 @@ class E {
    * function that returns a Promise resolving to a Response
    */
   setCatchHandler(e) {
-    this.catchHandler = b(e);
+    this.catchHandler = T(e);
   }
 }
 class De extends E {
@@ -1578,7 +1578,7 @@ class xe {
    * default handler. Each method has its own default.
    */
   setDefaultHandler(e, t = Y) {
-    this._defaultHandlerMap.set(t, b(e));
+    this._defaultHandlerMap.set(t, T(e));
   }
   /**
    * If a Route throws an error while handling a request, this `handler`
@@ -1588,7 +1588,7 @@ class xe {
    * function that returns a Promise resulting in a Response.
    */
   setCatchHandler(e) {
-    this._catchHandler = b(e);
+    this._catchHandler = T(e);
   }
   /**
    * Registers a route with the router.
@@ -1868,7 +1868,7 @@ class Ke extends N {
     return r;
   }
 }
-Me([{"revision":null,"url":"assets/Dracula-e98fc9aa.js"},{"revision":null,"url":"assets/Dreamweaver-15561dbd.js"},{"revision":null,"url":"assets/editor-48360721.js"},{"revision":null,"url":"assets/Eiffel-64ee1523.js"},{"revision":null,"url":"assets/GitHub-06a37610.js"},{"revision":null,"url":"assets/IDLE-cb87b507.js"},{"revision":null,"url":"assets/index-9d9ae4af.css"},{"revision":null,"url":"assets/index-f21be42c.js"},{"revision":null,"url":"assets/Monokai-65cda70f.js"},{"revision":null,"url":"assets/Nord-e5536575.js"},{"revision":null,"url":"assets/settings-2b174832.js"},{"revision":null,"url":"assets/Tomorrow-33c61db8.js"},{"revision":null,"url":"assets/Twilight-ab8a64b1.js"},{"revision":null,"url":"assets/use-gesture-react.esm-98535753.js"},{"revision":null,"url":"assets/workbox-window.prod.es5-a7b12eab.js"},{"revision":"2856c80396436f760365de31b4284e5f","url":"index.html"},{"revision":"f2513dbc34ba877ca158e280672da925","url":"favicon.svg"},{"revision":"2916883dd6259679afe0d684fe5b1f3a","url":"manifest.json"},{"revision":"b058215323dce09358ec4624356fc761","url":"service-worker.js"},{"revision":"7018b9b752b4b15aedb35eee44e811b6","url":"manifest-logo/logo192.png"},{"revision":"1860ffb4107fe6ba101275eb0900e63e","url":"manifest-logo/logo512.png"},{"revision":"82472dd6a04460bf23af25a2fcbdbe95","url":"manifest.webmanifest"}]);
+Me([{"revision":null,"url":"assets/Dracula-e98fc9aa.js"},{"revision":null,"url":"assets/Dreamweaver-15561dbd.js"},{"revision":null,"url":"assets/editor-3d26a823.js"},{"revision":null,"url":"assets/Eiffel-64ee1523.js"},{"revision":null,"url":"assets/GitHub-06a37610.js"},{"revision":null,"url":"assets/IDLE-cb87b507.js"},{"revision":null,"url":"assets/index-9d9ae4af.css"},{"revision":null,"url":"assets/index-eff63c02.js"},{"revision":null,"url":"assets/Monokai-65cda70f.js"},{"revision":null,"url":"assets/Nord-e5536575.js"},{"revision":null,"url":"assets/settings-f7ff2b88.js"},{"revision":null,"url":"assets/Tomorrow-33c61db8.js"},{"revision":null,"url":"assets/Twilight-ab8a64b1.js"},{"revision":null,"url":"assets/use-gesture-react.esm-97421ef2.js"},{"revision":null,"url":"assets/workbox-window.prod.es5-a7b12eab.js"},{"revision":"2bb7f2b424cbf6e4e5f1ae73742ce6ab","url":"index.html"},{"revision":"f2513dbc34ba877ca158e280672da925","url":"favicon.svg"},{"revision":"2916883dd6259679afe0d684fe5b1f3a","url":"manifest.json"},{"revision":"b058215323dce09358ec4624356fc761","url":"service-worker.js"},{"revision":"7018b9b752b4b15aedb35eee44e811b6","url":"manifest-logo/logo192.png"},{"revision":"1860ffb4107fe6ba101275eb0900e63e","url":"manifest-logo/logo512.png"},{"revision":"82472dd6a04460bf23af25a2fcbdbe95","url":"manifest.webmanifest"}]);
 self.addEventListener("message", (n) => {
   n.data && n.data.type === "SKIP_WAITING" && self.skipWaiting();
 });
