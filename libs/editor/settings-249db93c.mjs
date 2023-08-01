@@ -1,7 +1,7 @@
 import { jsx as e, Fragment as M, jsxs as n } from "react/jsx-runtime";
 import { Typography as N, ColorPicker as x, Switch as U } from "antd";
-import { A as $, c as H, D as J, y as Q, z as R, B as W, K as h, o as k, C as y, a as C, S as z, J as G, L as V, m as X, O, d as q, Q as v, V as Y, W as Z, X as T } from "./index-5b606b5d.mjs";
-import { K as _, S as l, a as u } from "./editor-26064666.mjs";
+import { A as $, c as H, D as J, x as Q, y as R, z as W, K as h, o as k, B as y, a as C, S as z, C as G, J as V, m as q, L as O, d as X, O as v, Q as Y, V as Z, W as T } from "./index-b46f6a1f.mjs";
+import { K as _, S as l, a as u } from "./editor-aa0f6072.mjs";
 import * as p from "react";
 import { useState as ee, useCallback as te, useLayoutEffect as oe, useEffect as re } from "react";
 import ne from "react-smooth-scrollbar";
@@ -171,9 +171,9 @@ const de = () => ({
   );
 }), E = (t) => {
   const { theme: a } = C(), o = y();
-  return X((r, s) => (a !== O && o.changeTheme(O), t(s)), 300);
+  return q((r, s) => (a !== O && o.changeTheme(O), t(s)), 300);
 }, xe = k(() => {
-  const t = q(), a = t.state.isSettingsOpened, o = y(), { customBackground: r, customColor: s } = C(), c = () => {
+  const t = X(), a = t.state.isSettingsOpened, o = y(), { customBackground: r, customColor: s } = C(), c = () => {
     t.update({
       isSettingsOpened: !1
     });

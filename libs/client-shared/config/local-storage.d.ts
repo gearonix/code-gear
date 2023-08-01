@@ -7,6 +7,7 @@ export declare const LocalStorage: {
     readonly EDITOR_CUSTOM_BACKGROUND: "EDITOR_CUSTOM_BACKGROUND";
     readonly EDITOR_CUSTOM_COLOR: "EDITOR_CUSTOM_COLOR";
     readonly EDITOR_HTML_PREVIEW: "EDITOR_HTML_PREVIEW";
+    readonly AUTH_TOKEN: "AUTH_TOKEN";
 };
 export type LocalStorageKeys = keyof typeof LocalStorage;
 export type LocalStorageValue<T extends LocalStorageKeys> = (typeof LocalStorage)[T];
