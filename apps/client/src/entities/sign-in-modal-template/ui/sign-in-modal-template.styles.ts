@@ -1,7 +1,7 @@
 import { Form } from 'antd'
 import styled from 'styled-components'
 
-import { ColorButton } from '$/client-shared'
+import { ColoredButton } from '$/client-shared'
 import { wh } from '$/styles'
 
 export const SignInModalStyles = styled(Form)`
@@ -9,7 +9,7 @@ export const SignInModalStyles = styled(Form)`
   margin: 0 auto;
 `
 
-export const SubmitButton = styled(ColorButton)`
+export const SubmitButton = styled.button`
   height: 40px;
   width: 100%;
   cursor: pointer;

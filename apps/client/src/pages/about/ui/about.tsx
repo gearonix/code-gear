@@ -1,5 +1,7 @@
+import { Page } from '$/client-shared';
+
 const About = () => {
-  return <div>about page</div>
+  return <Page>about page</Page>
 }
 
 export default About

@@ -8,9 +8,14 @@ export const compilerApiUrl =
 export const serverUrl = process.env['SERVER_URL'] ?? 'http://localhost:6868'
 
 export const EndPoints = {
-  CODE_EXECUTOR_API: 'execute'
+  CODE_EXECUTOR_API: 'execute',
+  _GRAPHQL: 'graphql'
 } as const
 
 export const serverAppName = 'CodeGear API'
 
 export const serverDocsPrefix = 'docs'
+
+export const graphqlArg = '_graphql'
+
+export const jwtSecret = process.env['JWT_SECRET']

@@ -10,7 +10,8 @@ import preact from '@preact/preset-vite'
 export default defineConfig({
   cacheDir: '../../node_modules/.vite/client',
   define: {
-    'process.env': process.env
+    'process.env': process.env,
+    _isDev_: process.env.NODE_ENV === 'development'
   },
   server: {
     port: 3000,
