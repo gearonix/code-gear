@@ -1,4 +1,11 @@
 {
   "name": "@code-gear/config",
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "exports": {
+    ".": {
+      "import": "./src/index.ts",
+      "require": "./src/index.ts"
+    }
+  }
 }
