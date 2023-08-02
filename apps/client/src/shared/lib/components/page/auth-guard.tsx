@@ -3,14 +3,13 @@ import { observer } from 'mobx-react-lite'
 import { useLocation, useNavigate } from 'react-router-dom'
 
 import { useStore } from '@/shared/hooks'
-
 import {
   PrivatePaths,
   RoutePaths,
   useAsyncEffect,
   useBooleanState,
   WithChildren
-} from '$/client-shared'
+} from '@code-gear/client-shared'
 
 const AuthGuard = observer(({ children }: WithChildren) => {
   const { isAuthorized, services } = useStore('auth')
