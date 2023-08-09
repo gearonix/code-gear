@@ -84,7 +84,7 @@
     "@nx/node": "16.4.0",
     "@nx/react": "^16.4.0",
     "@nx/vite": "16.4.0",
-    "@nx/webpack": "16.4.0",
+    "@nx/webpack": "16.6.0",
     "@nx/workspace": "16.4.0",
     "@nxext/preact": "^16.2.0",
     "@preact/preset-vite": "^2.5.0",

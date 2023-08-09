@@ -2065,7 +2065,7 @@ __metadata:
     "@nx/node": 16.4.0
     "@nx/react": ^16.4.0
     "@nx/vite": 16.4.0
-    "@nx/webpack": 16.4.0
+    "@nx/webpack": 16.6.0
     "@nx/workspace": 16.4.0
     "@nxext/preact": ^16.2.0
     "@preact/preset-vite": ^2.5.0
@@ -3788,12 +3788,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nrwl/webpack@npm:16.4.0":
-  version: 16.4.0
-  resolution: "@nrwl/webpack@npm:16.4.0"
+"@nrwl/webpack@npm:16.6.0":
+  version: 16.6.0
+  resolution: "@nrwl/webpack@npm:16.6.0"
   dependencies:
-    "@nx/webpack": 16.4.0
-  checksum: 80805a5898a091b4a724b6a1513d392cfa447fffe1b81c82bfe23a755ec42a0799918dc09e305b5996d931ff7ae33a61ab6d6fbe83bfdf2f14edca3cde34420a
+    "@nx/webpack": 16.6.0
+  checksum: 5d9603a748fb8d83b2f7a524d972002165611fa4169ea99d1e936b24f5983642f86a7dc20e1d15df33864dea86dc76aece110979f18d964daf0374cebed89abe
   languageName: node
   linkType: hard
 
@@ -4304,14 +4304,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nx/webpack@npm:16.4.0":
-  version: 16.4.0
-  resolution: "@nx/webpack@npm:16.4.0"
+"@nx/webpack@npm:16.6.0":
+  version: 16.6.0
+  resolution: "@nx/webpack@npm:16.6.0"
   dependencies:
-    "@babel/core": ^7.15.0
-    "@nrwl/webpack": 16.4.0
-    "@nx/devkit": 16.4.0
-    "@nx/js": 16.4.0
+    "@babel/core": ^7.22.9
+    "@nrwl/webpack": 16.6.0
+    "@nx/devkit": 16.6.0
+    "@nx/js": 16.6.0
     autoprefixer: ^10.4.9
     babel-loader: ^9.1.2
     browserslist: ^4.21.4
@@ -4321,7 +4321,6 @@ __metadata:
     css-loader: ^6.4.0
     css-minimizer-webpack-plugin: ^5.0.0
     dotenv: ~10.0.0
-    file-loader: ^6.2.0
     fork-ts-checker-webpack-plugin: 7.2.13
     ignore: ^5.0.4
     less: 4.1.3
@@ -4342,15 +4341,13 @@ __metadata:
     stylus-loader: ^7.1.0
     terser-webpack-plugin: ^5.3.3
     ts-loader: ^9.3.1
-    ts-node: 10.9.1
-    tsconfig-paths: ^4.1.2
     tsconfig-paths-webpack-plugin: 4.0.0
     tslib: ^2.3.0
     webpack: ^5.80.0
     webpack-dev-server: ^4.9.3
     webpack-node-externals: ^3.0.0
     webpack-subresource-integrity: ^5.1.0
-  checksum: c829b60f1f2d9703086b1f9f6f0b0da2cda838544a724e0768367bb5ca1e9cc53a3a760a789482be749be3030908abd1ff9e616fbeb518e9b00b6a2221521102
+  checksum: 8ed74d962ce270b81e8321dbbc851a00b1d7b426b4f36c8b47f1122d36ab472ca6426a79b065b783dee0afafd894f110e547a9f6bdebfe9b1c1790f4bacfe4a3
   languageName: node
   linkType: hard
 
