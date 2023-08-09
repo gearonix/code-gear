@@ -1,7 +1,7 @@
 import { render } from 'preact'
 import { registerSW } from 'virtual:pwa-register'
 
-import App from './app'
+import App from './application'
 
 const updateSW = registerSW({
   onNeedRefresh: () => {

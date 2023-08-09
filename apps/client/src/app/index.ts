@@ -1,2 +1,2 @@
-export { default as App } from './app'
+export { default as App } from './entrypoint/application'
 export { RootStore, StoreContext } from './providers/store'

@@ -1,7 +1,6 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "strict": false,
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "node",

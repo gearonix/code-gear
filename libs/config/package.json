@@ -1,6 +1,6 @@
 {
-  "name": "@code-gear/client-shared",
-  "version": "0.0.1",
+  "name": "@code-gear/config",
+  "version": "1.0.0",
   "main": "src/index.ts",
   "exports": {
     ".": {
