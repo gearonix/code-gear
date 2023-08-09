@@ -1,6 +1,6 @@
 {
   "name": "@code-gear/source",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "license": "MIT",
   "packageManager": "yarn@3.6.0",
   "engines": {
@@ -27,7 +27,41 @@
     "lint": "nx run-many --targets=lint --all",
     "dep-graph": "nx dep-graph",
     "preinstall": "node -e \"if(process.env.npm_execpath.indexOf('yarn') === -1) throw new Error('You must use Yarn to install, not NPM')\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "release": "release-it"
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore: release v${version}"
+    },
+    "github": {
+      "release": true
+    },
+    "npm": {
+      "publish": false
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "infile": "CHANGELOG.md",
+        "preset": {
+          "name": "conventionalcommits",
+          "types": [
+            {
+              "type": "feat",
+              "section": "Features"
+            },
+            {
+              "type": "fix",
+              "section": "Bug Fixes"
+            },
+            {
+              "type": "chore",
+              "section": "Configurations"
+            }
+          ]
+        }
+      }
+    }
   },
   "private": true,
   "devDependencies": {
@@ -36,6 +70,8 @@
     "@babel/plugin-transform-react-jsx-source": "^7.22.5",
     "@babel/preset-react": "^7.22.5",
     "@code-gear/config": "workspace:*",
+    "@commitlint/cli": "^17.7.0",
+    "@commitlint/config-conventional": "^17.7.0",
     "@nestjs/schematics": "^10.0.1",
     "@nestjs/testing": "^10.0.2",
     "@nx/cypress": "16.4.0",
@@ -51,6 +87,7 @@
     "@nx/workspace": "16.4.0",
     "@nxext/preact": "^16.2.0",
     "@preact/preset-vite": "^2.5.0",
+    "@release-it/conventional-changelog": "^7.0.0",
     "@testing-library/preact": "^3.2.3",
     "@testing-library/react": "14.0.0",
     "@types/antd": "^1.0.0",
@@ -104,6 +141,7 @@
     "preact": "^10.15.1",
     "prettier": "^3.0.0",
     "prisma": "^5.0.0",
+    "release-it": "^16.1.4",
     "ts-jest": "^29.1.0",
     "ts-morph": "^19.0.0",
     "ts-node": "10.9.1",
