@@ -1,4 +1,8 @@
 {
   "name": "client",
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "packageManager": "yarn@3.6.0",
+  "dependencies": {
+    "@code-gear/client-shared": "workspace:*"
+  }
 }
