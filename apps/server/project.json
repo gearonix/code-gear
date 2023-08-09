@@ -5,7 +5,7 @@
   "projectType": "application",
   "targets": {
     "prisma:generate": {
-      "command": "npx prisma generate",
+      "command": "yarn dlx prisma generate",
       "options": {
         "cwd": "apps/server"
       }
@@ -17,7 +17,7 @@
       }
     },
     "migrate:dev": {
-      "command": "npx prisma migrate dev",
+      "command": "yarn dlx prisma migrate dev",
       "options": {
         "cwd": "apps/server",
         "envFile": ".serve.env"
@@ -25,7 +25,7 @@
       "dependsOn": ["concat-prisma-files"]
     },
     "migrate:prod": {
-      "command": "npx prisma migrate deploy",
+      "command": "yarn dlx prisma migrate deploy",
       "options": {
         "cwd": "apps/server",
         "envFile": ".build.env"
@@ -33,7 +33,7 @@
       "dependsOn": ["concat-prisma-files"]
     },
     "generate-prisma-types": {
-      "command": "npx @kalissaac/prisma-typegen ./src/common/types/_prisma.ts ./prisma/schema.prisma",
+      "command": "yarn dlx @kalissaac/prisma-typegen ./src/common/types/_prisma.ts ./prisma/schema.prisma",
       "options": {
         "cwd": "apps/server"
       },
