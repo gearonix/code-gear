@@ -1,4 +1,4 @@
-import { runProjectFiles } from './lib/helpers'
+import { runProjectFiles } from '../lib/helpers'
 
 runProjectFiles((sourceFile) => {
   const name = sourceFile.getBaseName()

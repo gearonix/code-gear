@@ -1,6 +1,6 @@
 // This script can be dangerous!
 
-import { runProjectFiles } from './lib/helpers'
+import { runProjectFiles } from '../lib/helpers'
 
 const toKebabCase = (str) => {
   return str
