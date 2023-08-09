@@ -2062,7 +2062,7 @@ __metadata:
     "@nx/js": 16.4.0
     "@nx/linter": 16.4.0
     "@nx/nest": ^16.4.0
-    "@nx/node": 16.4.0
+    "@nx/node": 16.6.0
     "@nx/react": ^16.4.0
     "@nx/vite": 16.4.0
     "@nx/webpack": 16.4.0
@@ -3711,15 +3711,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nrwl/node@npm:16.4.0":
-  version: 16.4.0
-  resolution: "@nrwl/node@npm:16.4.0"
-  dependencies:
-    "@nx/node": 16.4.0
-  checksum: f97b426447c3920c5495f051a1bf814a449b5083737736b72082a8aa228578cbdca6c22978ef9de9b553e276572ce1e5f661207f218500105550ba0cd0f89828
-  languageName: node
-  linkType: hard
-
 "@nrwl/node@npm:16.6.0":
   version: 16.6.0
   resolution: "@nrwl/node@npm:16.6.0"
@@ -4077,21 +4068,6 @@ __metadata:
     semver: 7.5.3
     tslib: ^2.3.0
   checksum: 90df7ff00d2af69518ebe8686ad914d6c2ac94036426cd5f43cafe801692ff8c5361e8aa4113dab89da2d45006241934166ef7ac021ef0d71cac81d3b82bdbbf
-  languageName: node
-  linkType: hard
-
-"@nx/node@npm:16.4.0":
-  version: 16.4.0
-  resolution: "@nx/node@npm:16.4.0"
-  dependencies:
-    "@nrwl/node": 16.4.0
-    "@nx/devkit": 16.4.0
-    "@nx/jest": 16.4.0
-    "@nx/js": 16.4.0
-    "@nx/linter": 16.4.0
-    "@nx/workspace": 16.4.0
-    tslib: ^2.3.0
-  checksum: 3a249c538109de0da9d05628402414000ec398ef4824aa7521d51ce54e16cf8ac092b6389c644b36f4f6b8a3d311d309375c3352371141a48f43fed5df4660b7
   languageName: node
   linkType: hard
 
