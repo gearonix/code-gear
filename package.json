@@ -72,6 +72,7 @@
     "@code-gear/config": "workspace:*",
     "@commitlint/cli": "^17.7.0",
     "@commitlint/config-conventional": "^17.7.0",
+    "@kalissaac/prisma-typegen": "^0.0.7",
     "@nestjs/schematics": "^10.0.1",
     "@nestjs/testing": "^10.0.2",
     "@nx/cypress": "16.4.0",
