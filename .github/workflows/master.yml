@@ -13,7 +13,7 @@ jobs:
     steps:
       # Node.js and pnpm setup
       - uses: actions/checkout@v3
-      - name: Installing Node.js 16.x
+      - name: Installing Node.js 19.x
         uses: actions/setup-node@v3
         with:
           node-version: 19.x
@@ -29,7 +29,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         # Node.js and pnpm setup
-      - name: Installing Node.js 16.x
+      - name: Installing Node.js 19.x
         uses: actions/setup-node@v3
         with:
           node-version: 19.x
