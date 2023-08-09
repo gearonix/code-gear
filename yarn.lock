@@ -2133,7 +2133,7 @@ __metadata:
     moment: ^2.29.4
     monaco-editor: ^0.39.0
     normalize.css: ^8.0.1
-    nx: 16.4.0
+    nx: 16.6.0
     nx-cloud: latest
     passport: ^0.6.0
     passport-jwt: ^4.0.1

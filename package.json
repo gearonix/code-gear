@@ -137,7 +137,7 @@
     "jsdom": "~22.1.0",
     "lint-staged": "^13.2.3",
     "monaco-editor": "^0.39.0",
-    "nx": "16.4.0",
+    "nx": "16.6.0",
     "nx-cloud": "latest",
     "preact": "^10.15.1",
     "prettier": "^3.0.0",
