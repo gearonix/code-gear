@@ -1,7 +1,7 @@
 import { jsx as t, jsxs as l, Fragment as H } from "react/jsx-runtime";
 import { useEffect as b, createContext as k, useReducer as P, useMemo as j, useContext as $, useState as L, useCallback as A, lazy as B, Suspense as D } from "react";
 import { Link as O } from "react-router-dom";
-import { G as m, i as v, E as y, U as C, u as I, a as T, b as _, p as F, t as w, D as R, c as V, A as G, d as z, e as W, f as U, I as i, g as q, R as N, h as E, s as c, w as h, j as g, o as Z, F as J, k as K, l as Q, m as X, n as Y, P as e0, q as t0, r as o0, M as r0, N as s0, H as n0, v as c0, T as a0 } from "./index-dc0c8d1d.mjs";
+import { G as m, i as v, E as y, U as C, u as I, a as T, b as _, p as F, t as w, D as R, c as V, A as G, d as z, e as W, f as U, I as i, g as q, R as N, h as E, s as c, w as h, j as g, o as Z, F as J, k as K, l as Q, m as X, n as Y, P as e0, q as t0, r as o0, M as r0, N as s0, H as n0, v as c0, T as a0 } from "./index-a70b18f6.mjs";
 import "antd";
 import "react-smooth-scrollbar";
 const i0 = () => () => {
@@ -276,7 +276,7 @@ const b0 = ({ children: e }) => {
     font-size: ${({ theme: e }) => e.fz5};
     margin-top: 10px;
   }
-`, D0 = B(() => import("./settings-f7089496.mjs")), O0 = c.div`
+`, D0 = B(() => import("./settings-1ee0290e.mjs")), O0 = c.div`
   ${h("100vw", "100vh")}
 `, I0 = c.div`
   ${h("100%", "calc(100% - 45px)")};
