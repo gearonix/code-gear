@@ -3249,7 +3249,7 @@ const Dv = {
   EDITOR_CUSTOM_COLOR: "EDITOR_CUSTOM_COLOR",
   EDITOR_HTML_PREVIEW: "EDITOR_HTML_PREVIEW",
   AUTH_TOKEN: "AUTH_TOKEN"
-}, Gv = (e) => typeof e == "object" && e !== null, Mp = (e) => typeof e == "string", Uv = (e) => typeof e == "function", Cv = "code_gear", kp = { GITHUB_STATE: "/home/runner/work/_temp/_runner_file_commands/save_state_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", STATS_TRP: "true", DEPLOYMENT_BASEPATH: "/opt/runner", DOTNET_NOLOGO: "1", USER: "runner", npm_config_user_agent: "yarn/3.6.0 npm/? node/v19.9.0 linux x64", CI: "true", RUNNER_ENVIRONMENT: "github-hosted", GITHUB_ENV: "/home/runner/work/_temp/_runner_file_commands/set_env_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", PIPX_HOME: "/opt/pipx", npm_node_execpath: "/tmp/xfs-fd9c0d9a/node", JAVA_HOME_8_X64: "/usr/lib/jvm/temurin-8-jdk-amd64", SHLVL: "1", HOME: "/home/runner", RUNNER_TEMP: "/home/runner/work/_temp", GITHUB_EVENT_PATH: "/home/runner/work/_temp/_github_workflow/event.json", npm_package_json: "/home/runner/work/CodeGear/CodeGear/package.json", JAVA_HOME_11_X64: "/usr/lib/jvm/temurin-11-jdk-amd64", PIPX_BIN_DIR: "/opt/pipx_bin", GITHUB_REPOSITORY_OWNER: "Gearonix", GRADLE_HOME: "/usr/share/gradle-8.2.1", ANDROID_NDK_LATEST_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", STATS_RDCL: "true", GITHUB_RETENTION_DAYS: "90", GITHUB_REPOSITORY_OWNER_ID: "74734213", POWERSHELL_DISTRIBUTION_CHANNEL: "GitHub-Actions-ubuntu22", AZURE_EXTENSION_DIR: "/opt/az/azcliextensions", GITHUB_HEAD_REF: "dependabot/npm_and_yarn/nestjs/swagger-7.1.8", SYSTEMD_EXEC_PID: "661", GITHUB_GRAPHQL_URL: "https://api.github.com/graphql", GOROOT_1_20_X64: "/opt/hostedtoolcache/go/1.20.7/x64", NVM_DIR: "/home/runner/.nvm", DOTNET_SKIP_FIRST_TIME_EXPERIENCE: "1", JAVA_HOME_17_X64: "/usr/lib/jvm/temurin-17-jdk-amd64", ImageVersion: "20230806.1.0", RUNNER_OS: "Linux", GITHUB_API_URL: "https://api.github.com", SWIFT_PATH: "/usr/share/swift/usr/bin", RUNNER_USER: "runner", STATS_V3PS: "true", CHROMEWEBDRIVER: "/usr/local/share/chromedriver-linux64", JOURNAL_STREAM: "8:16887", GITHUB_WORKFLOW: "CodeGear CI", _: "/usr/local/bin/yarn", GITHUB_RUN_ID: "5857686565", GITHUB_REF_TYPE: "branch", BOOTSTRAP_HASKELL_NONINTERACTIVE: "1", GITHUB_WORKFLOW_SHA: "1b6e722e064233ec22350ae0797378b62015862a", GITHUB_BASE_REF: "master", ImageOS: "ubuntu22", GITHUB_WORKFLOW_REF: "Gearonix/CodeGear/.github/workflows/master.yml@refs/pull/26/merge", PERFLOG_LOCATION_SETTING: "RUNNER_PERFLOG", GOROOT_1_18_X64: "/opt/hostedtoolcache/go/1.18.10/x64", GITHUB_ACTION_REPOSITORY: "", PATH: "/tmp/xfs-fd9c0d9a:/opt/hostedtoolcache/node/19.9.0/x64/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/snap/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin", ANT_HOME: "/usr/share/ant", DOTNET_MULTILEVEL_LOOKUP: "0", RUNNER_TRACKING_ID: "github_42379ef8-726b-4879-99cf-d480782cc240", INVOCATION_ID: "4e7e0124e3ca48c1bb3b7bdb982409b1", RUNNER_TOOL_CACHE: "/opt/hostedtoolcache", GOROOT_1_19_X64: "/opt/hostedtoolcache/go/1.19.12/x64", npm_package_name: "@code-gear/source", GITHUB_ACTION: "__run_2", GITHUB_RUN_NUMBER: "59", GITHUB_TRIGGERING_ACTOR: "dependabot[bot]", RUNNER_ARCH: "X64", XDG_RUNTIME_DIR: "/run/user/1001", AGENT_TOOLSDIRECTORY: "/opt/hostedtoolcache", LANG: "C.UTF-8", VCPKG_INSTALLATION_ROOT: "/usr/local/share/vcpkg", CONDA: "/usr/share/miniconda", RUNNER_NAME: "GitHub Actions 6", XDG_CONFIG_HOME: "/home/runner/.config", STATS_VMD: "true", GITHUB_REF_NAME: "26/merge", GITHUB_REPOSITORY: "Gearonix/CodeGear", STATS_UE: "true", ANDROID_NDK_ROOT: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_ACTION_REF: "", DEBIAN_FRONTEND: "noninteractive", PROJECT_CWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_REPOSITORY_ID: "659143083", GITHUB_ACTIONS: "true", STATS_NM: "true", npm_package_version: "1.1.0", npm_lifecycle_event: "build", GITHUB_REF_PROTECTED: "false", GITHUB_WORKSPACE: "/home/runner/work/CodeGear/CodeGear", ACCEPT_EULA: "Y", GITHUB_JOB: "building", RUNNER_PERFLOG: "/home/runner/perflog", GITHUB_SHA: "1b6e722e064233ec22350ae0797378b62015862a", GITHUB_RUN_ATTEMPT: "1", GITHUB_REF: "refs/pull/26/merge", GITHUB_ACTOR: "dependabot[bot]", ANDROID_SDK_ROOT: "/usr/local/lib/android/sdk", LEIN_HOME: "/usr/local/lib/lein", GITHUB_PATH: "/home/runner/work/_temp/_runner_file_commands/add_path_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", JAVA_HOME: "/usr/lib/jvm/temurin-11-jdk-amd64", PWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_ACTOR_ID: "49699333", RUNNER_WORKSPACE: "/home/runner/work/CodeGear", BERRY_BIN_FOLDER: "/tmp/xfs-fd9c0d9a", npm_execpath: "/tmp/xfs-fd9c0d9a/yarn", HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS: "3650", STATS_TIS: "mining", GITHUB_EVENT_NAME: "pull_request", HOMEBREW_NO_AUTO_UPDATE: "1", ANDROID_HOME: "/usr/local/lib/android/sdk", GITHUB_SERVER_URL: "https://github.com", GECKOWEBDRIVER: "/usr/local/share/gecko_driver", LEIN_JAR: "/usr/local/lib/lein/self-installs/leiningen-2.10.0-standalone.jar", GHCUP_INSTALL_BASE_PREFIX: "/usr/local", GITHUB_OUTPUT: "/home/runner/work/_temp/_runner_file_commands/set_output_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", EDGEWEBDRIVER: "/usr/local/share/edge_driver", STATS_EXT: "true", ANDROID_NDK: "/usr/local/lib/android/sdk/ndk/25.2.9519653", SGX_AESM_ADDR: "1", CHROME_BIN: "/usr/bin/google-chrome", SELENIUM_JAR_PATH: "/usr/share/java/selenium-server.jar", STATS_EXTP: "https://provjobdsettingscdn.blob.core.windows.net/settings/provjobdsettings-0.5.154/provjobd.data", ANDROID_NDK_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_STEP_SUMMARY: "/home/runner/work/_temp/_runner_file_commands/step_summary_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", INIT_CWD: "/home/runner/work/CodeGear/CodeGear", NX_CLI_SET: "true", NX_LOAD_DOT_ENV_FILES: "true", NX_INVOKED_BY_RUNNER: "true", NX_WORKSPACE_ROOT: "/home/runner/work/CodeGear/CodeGear", NX_TERMINAL_OUTPUT_PATH: "/home/runner/work/CodeGear/CodeGear/node_modules/.cache/nx/terminalOutputs/4251781990744259245", NX_TASK_TARGET_PROJECT: "editor", NX_TASK_TARGET_TARGET: "build", NX_TASK_TARGET_CONFIGURATION: "production", NX_TASK_HASH: "4251781990744259245", LERNA_PACKAGE_NAME: "editor", NODE_ENV: "production" }.SERVER_URL ?? "http://localhost:6868", Lp = {
+}, Gv = (e) => typeof e == "object" && e !== null, Mp = (e) => typeof e == "string", Uv = (e) => typeof e == "function", Cv = "code_gear", kp = { GITHUB_STATE: "/home/runner/work/_temp/_runner_file_commands/save_state_c948b54a-3b52-46ae-9672-dd773199b98d", STATS_TRP: "true", DEPLOYMENT_BASEPATH: "/opt/runner", DOTNET_NOLOGO: "1", USER: "runner", npm_config_user_agent: "yarn/3.6.0 npm/? node/v19.9.0 linux x64", CI: "true", RUNNER_ENVIRONMENT: "github-hosted", GITHUB_ENV: "/home/runner/work/_temp/_runner_file_commands/set_env_c948b54a-3b52-46ae-9672-dd773199b98d", PIPX_HOME: "/opt/pipx", npm_node_execpath: "/tmp/xfs-1f91c0b8/node", JAVA_HOME_8_X64: "/usr/lib/jvm/temurin-8-jdk-amd64", SHLVL: "1", HOME: "/home/runner", RUNNER_TEMP: "/home/runner/work/_temp", GITHUB_EVENT_PATH: "/home/runner/work/_temp/_github_workflow/event.json", npm_package_json: "/home/runner/work/CodeGear/CodeGear/package.json", JAVA_HOME_11_X64: "/usr/lib/jvm/temurin-11-jdk-amd64", PIPX_BIN_DIR: "/opt/pipx_bin", GITHUB_REPOSITORY_OWNER: "Gearonix", GRADLE_HOME: "/usr/share/gradle-8.2.1", ANDROID_NDK_LATEST_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", STATS_RDCL: "true", GITHUB_RETENTION_DAYS: "90", GITHUB_REPOSITORY_OWNER_ID: "74734213", POWERSHELL_DISTRIBUTION_CHANNEL: "GitHub-Actions-ubuntu22", AZURE_EXTENSION_DIR: "/opt/az/azcliextensions", GITHUB_HEAD_REF: "dependabot/npm_and_yarn/antd-5.8.3", SYSTEMD_EXEC_PID: "666", GITHUB_GRAPHQL_URL: "https://api.github.com/graphql", GOROOT_1_20_X64: "/opt/hostedtoolcache/go/1.20.7/x64", NVM_DIR: "/home/runner/.nvm", DOTNET_SKIP_FIRST_TIME_EXPERIENCE: "1", JAVA_HOME_17_X64: "/usr/lib/jvm/temurin-17-jdk-amd64", ImageVersion: "20230806.1.0", RUNNER_OS: "Linux", GITHUB_API_URL: "https://api.github.com", SWIFT_PATH: "/usr/share/swift/usr/bin", RUNNER_USER: "runner", STATS_V3PS: "true", CHROMEWEBDRIVER: "/usr/local/share/chromedriver-linux64", JOURNAL_STREAM: "8:16227", GITHUB_WORKFLOW: "CodeGear CI", _: "/usr/local/bin/yarn", GITHUB_RUN_ID: "5857695202", GITHUB_REF_TYPE: "branch", BOOTSTRAP_HASKELL_NONINTERACTIVE: "1", GITHUB_WORKFLOW_SHA: "794542bdb9ca368867c787a1c3a0147692ead798", GITHUB_BASE_REF: "master", ImageOS: "ubuntu22", GITHUB_WORKFLOW_REF: "Gearonix/CodeGear/.github/workflows/master.yml@refs/pull/27/merge", PERFLOG_LOCATION_SETTING: "RUNNER_PERFLOG", GOROOT_1_18_X64: "/opt/hostedtoolcache/go/1.18.10/x64", GITHUB_ACTION_REPOSITORY: "", PATH: "/tmp/xfs-1f91c0b8:/opt/hostedtoolcache/node/19.9.0/x64/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/snap/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin", ANT_HOME: "/usr/share/ant", DOTNET_MULTILEVEL_LOOKUP: "0", RUNNER_TRACKING_ID: "github_153a3452-30cc-4454-9622-778ab305a577", INVOCATION_ID: "0e376e8c469b49bbb1c1d40a32129571", RUNNER_TOOL_CACHE: "/opt/hostedtoolcache", GOROOT_1_19_X64: "/opt/hostedtoolcache/go/1.19.12/x64", npm_package_name: "@code-gear/source", GITHUB_ACTION: "__run_2", GITHUB_RUN_NUMBER: "60", GITHUB_TRIGGERING_ACTOR: "dependabot[bot]", RUNNER_ARCH: "X64", XDG_RUNTIME_DIR: "/run/user/1001", AGENT_TOOLSDIRECTORY: "/opt/hostedtoolcache", LANG: "C.UTF-8", VCPKG_INSTALLATION_ROOT: "/usr/local/share/vcpkg", CONDA: "/usr/share/miniconda", RUNNER_NAME: "GitHub Actions 9", XDG_CONFIG_HOME: "/home/runner/.config", STATS_VMD: "true", GITHUB_REF_NAME: "27/merge", GITHUB_REPOSITORY: "Gearonix/CodeGear", STATS_UE: "true", ANDROID_NDK_ROOT: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_ACTION_REF: "", DEBIAN_FRONTEND: "noninteractive", PROJECT_CWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_REPOSITORY_ID: "659143083", GITHUB_ACTIONS: "true", STATS_NM: "true", npm_package_version: "1.1.0", npm_lifecycle_event: "build", GITHUB_REF_PROTECTED: "false", GITHUB_WORKSPACE: "/home/runner/work/CodeGear/CodeGear", ACCEPT_EULA: "Y", GITHUB_JOB: "building", RUNNER_PERFLOG: "/home/runner/perflog", GITHUB_SHA: "794542bdb9ca368867c787a1c3a0147692ead798", GITHUB_RUN_ATTEMPT: "1", GITHUB_REF: "refs/pull/27/merge", GITHUB_ACTOR: "dependabot[bot]", ANDROID_SDK_ROOT: "/usr/local/lib/android/sdk", LEIN_HOME: "/usr/local/lib/lein", GITHUB_PATH: "/home/runner/work/_temp/_runner_file_commands/add_path_c948b54a-3b52-46ae-9672-dd773199b98d", JAVA_HOME: "/usr/lib/jvm/temurin-11-jdk-amd64", PWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_ACTOR_ID: "49699333", RUNNER_WORKSPACE: "/home/runner/work/CodeGear", BERRY_BIN_FOLDER: "/tmp/xfs-1f91c0b8", npm_execpath: "/tmp/xfs-1f91c0b8/yarn", HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS: "3650", STATS_TIS: "mining", GITHUB_EVENT_NAME: "pull_request", HOMEBREW_NO_AUTO_UPDATE: "1", ANDROID_HOME: "/usr/local/lib/android/sdk", GITHUB_SERVER_URL: "https://github.com", GECKOWEBDRIVER: "/usr/local/share/gecko_driver", LEIN_JAR: "/usr/local/lib/lein/self-installs/leiningen-2.10.0-standalone.jar", GHCUP_INSTALL_BASE_PREFIX: "/usr/local", GITHUB_OUTPUT: "/home/runner/work/_temp/_runner_file_commands/set_output_c948b54a-3b52-46ae-9672-dd773199b98d", EDGEWEBDRIVER: "/usr/local/share/edge_driver", STATS_EXT: "true", ANDROID_NDK: "/usr/local/lib/android/sdk/ndk/25.2.9519653", SGX_AESM_ADDR: "1", CHROME_BIN: "/usr/bin/google-chrome", SELENIUM_JAR_PATH: "/usr/share/java/selenium-server.jar", STATS_EXTP: "https://provjobdsettingscdn.blob.core.windows.net/settings/provjobdsettings-0.5.154/provjobd.data", ANDROID_NDK_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_STEP_SUMMARY: "/home/runner/work/_temp/_runner_file_commands/step_summary_c948b54a-3b52-46ae-9672-dd773199b98d", INIT_CWD: "/home/runner/work/CodeGear/CodeGear", NX_CLI_SET: "true", NX_LOAD_DOT_ENV_FILES: "true", NX_INVOKED_BY_RUNNER: "true", NX_WORKSPACE_ROOT: "/home/runner/work/CodeGear/CodeGear", NX_TERMINAL_OUTPUT_PATH: "/home/runner/work/CodeGear/CodeGear/node_modules/.cache/nx/terminalOutputs/3943693735773211070", NX_TASK_TARGET_PROJECT: "editor", NX_TASK_TARGET_TARGET: "build", NX_TASK_TARGET_CONFIGURATION: "production", NX_TASK_HASH: "3943693735773211070", LERNA_PACKAGE_NAME: "editor", NODE_ENV: "production" }.SERVER_URL ?? "http://localhost:6868", Lp = {
   CODE_EXECUTOR_API: "execute",
   _GRAPHQL: "graphql"
 };
@@ -11761,7 +11761,7 @@ function wf(e) {
 function Xl(e) {
   return e && typeof e.styledComponentId == "string";
 }
-var Jn = typeof process < "u" && ({ GITHUB_STATE: "/home/runner/work/_temp/_runner_file_commands/save_state_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", STATS_TRP: "true", DEPLOYMENT_BASEPATH: "/opt/runner", DOTNET_NOLOGO: "1", USER: "runner", npm_config_user_agent: "yarn/3.6.0 npm/? node/v19.9.0 linux x64", CI: "true", RUNNER_ENVIRONMENT: "github-hosted", GITHUB_ENV: "/home/runner/work/_temp/_runner_file_commands/set_env_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", PIPX_HOME: "/opt/pipx", npm_node_execpath: "/tmp/xfs-fd9c0d9a/node", JAVA_HOME_8_X64: "/usr/lib/jvm/temurin-8-jdk-amd64", SHLVL: "1", HOME: "/home/runner", RUNNER_TEMP: "/home/runner/work/_temp", GITHUB_EVENT_PATH: "/home/runner/work/_temp/_github_workflow/event.json", npm_package_json: "/home/runner/work/CodeGear/CodeGear/package.json", JAVA_HOME_11_X64: "/usr/lib/jvm/temurin-11-jdk-amd64", PIPX_BIN_DIR: "/opt/pipx_bin", GITHUB_REPOSITORY_OWNER: "Gearonix", GRADLE_HOME: "/usr/share/gradle-8.2.1", ANDROID_NDK_LATEST_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", STATS_RDCL: "true", GITHUB_RETENTION_DAYS: "90", GITHUB_REPOSITORY_OWNER_ID: "74734213", POWERSHELL_DISTRIBUTION_CHANNEL: "GitHub-Actions-ubuntu22", AZURE_EXTENSION_DIR: "/opt/az/azcliextensions", GITHUB_HEAD_REF: "dependabot/npm_and_yarn/nestjs/swagger-7.1.8", SYSTEMD_EXEC_PID: "661", GITHUB_GRAPHQL_URL: "https://api.github.com/graphql", GOROOT_1_20_X64: "/opt/hostedtoolcache/go/1.20.7/x64", NVM_DIR: "/home/runner/.nvm", DOTNET_SKIP_FIRST_TIME_EXPERIENCE: "1", JAVA_HOME_17_X64: "/usr/lib/jvm/temurin-17-jdk-amd64", ImageVersion: "20230806.1.0", RUNNER_OS: "Linux", GITHUB_API_URL: "https://api.github.com", SWIFT_PATH: "/usr/share/swift/usr/bin", RUNNER_USER: "runner", STATS_V3PS: "true", CHROMEWEBDRIVER: "/usr/local/share/chromedriver-linux64", JOURNAL_STREAM: "8:16887", GITHUB_WORKFLOW: "CodeGear CI", _: "/usr/local/bin/yarn", GITHUB_RUN_ID: "5857686565", GITHUB_REF_TYPE: "branch", BOOTSTRAP_HASKELL_NONINTERACTIVE: "1", GITHUB_WORKFLOW_SHA: "1b6e722e064233ec22350ae0797378b62015862a", GITHUB_BASE_REF: "master", ImageOS: "ubuntu22", GITHUB_WORKFLOW_REF: "Gearonix/CodeGear/.github/workflows/master.yml@refs/pull/26/merge", PERFLOG_LOCATION_SETTING: "RUNNER_PERFLOG", GOROOT_1_18_X64: "/opt/hostedtoolcache/go/1.18.10/x64", GITHUB_ACTION_REPOSITORY: "", PATH: "/tmp/xfs-fd9c0d9a:/opt/hostedtoolcache/node/19.9.0/x64/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/snap/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin", ANT_HOME: "/usr/share/ant", DOTNET_MULTILEVEL_LOOKUP: "0", RUNNER_TRACKING_ID: "github_42379ef8-726b-4879-99cf-d480782cc240", INVOCATION_ID: "4e7e0124e3ca48c1bb3b7bdb982409b1", RUNNER_TOOL_CACHE: "/opt/hostedtoolcache", GOROOT_1_19_X64: "/opt/hostedtoolcache/go/1.19.12/x64", npm_package_name: "@code-gear/source", GITHUB_ACTION: "__run_2", GITHUB_RUN_NUMBER: "59", GITHUB_TRIGGERING_ACTOR: "dependabot[bot]", RUNNER_ARCH: "X64", XDG_RUNTIME_DIR: "/run/user/1001", AGENT_TOOLSDIRECTORY: "/opt/hostedtoolcache", LANG: "C.UTF-8", VCPKG_INSTALLATION_ROOT: "/usr/local/share/vcpkg", CONDA: "/usr/share/miniconda", RUNNER_NAME: "GitHub Actions 6", XDG_CONFIG_HOME: "/home/runner/.config", STATS_VMD: "true", GITHUB_REF_NAME: "26/merge", GITHUB_REPOSITORY: "Gearonix/CodeGear", STATS_UE: "true", ANDROID_NDK_ROOT: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_ACTION_REF: "", DEBIAN_FRONTEND: "noninteractive", PROJECT_CWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_REPOSITORY_ID: "659143083", GITHUB_ACTIONS: "true", STATS_NM: "true", npm_package_version: "1.1.0", npm_lifecycle_event: "build", GITHUB_REF_PROTECTED: "false", GITHUB_WORKSPACE: "/home/runner/work/CodeGear/CodeGear", ACCEPT_EULA: "Y", GITHUB_JOB: "building", RUNNER_PERFLOG: "/home/runner/perflog", GITHUB_SHA: "1b6e722e064233ec22350ae0797378b62015862a", GITHUB_RUN_ATTEMPT: "1", GITHUB_REF: "refs/pull/26/merge", GITHUB_ACTOR: "dependabot[bot]", ANDROID_SDK_ROOT: "/usr/local/lib/android/sdk", LEIN_HOME: "/usr/local/lib/lein", GITHUB_PATH: "/home/runner/work/_temp/_runner_file_commands/add_path_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", JAVA_HOME: "/usr/lib/jvm/temurin-11-jdk-amd64", PWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_ACTOR_ID: "49699333", RUNNER_WORKSPACE: "/home/runner/work/CodeGear", BERRY_BIN_FOLDER: "/tmp/xfs-fd9c0d9a", npm_execpath: "/tmp/xfs-fd9c0d9a/yarn", HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS: "3650", STATS_TIS: "mining", GITHUB_EVENT_NAME: "pull_request", HOMEBREW_NO_AUTO_UPDATE: "1", ANDROID_HOME: "/usr/local/lib/android/sdk", GITHUB_SERVER_URL: "https://github.com", GECKOWEBDRIVER: "/usr/local/share/gecko_driver", LEIN_JAR: "/usr/local/lib/lein/self-installs/leiningen-2.10.0-standalone.jar", GHCUP_INSTALL_BASE_PREFIX: "/usr/local", GITHUB_OUTPUT: "/home/runner/work/_temp/_runner_file_commands/set_output_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", EDGEWEBDRIVER: "/usr/local/share/edge_driver", STATS_EXT: "true", ANDROID_NDK: "/usr/local/lib/android/sdk/ndk/25.2.9519653", SGX_AESM_ADDR: "1", CHROME_BIN: "/usr/bin/google-chrome", SELENIUM_JAR_PATH: "/usr/share/java/selenium-server.jar", STATS_EXTP: "https://provjobdsettingscdn.blob.core.windows.net/settings/provjobdsettings-0.5.154/provjobd.data", ANDROID_NDK_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_STEP_SUMMARY: "/home/runner/work/_temp/_runner_file_commands/step_summary_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", INIT_CWD: "/home/runner/work/CodeGear/CodeGear", NX_CLI_SET: "true", NX_LOAD_DOT_ENV_FILES: "true", NX_INVOKED_BY_RUNNER: "true", NX_WORKSPACE_ROOT: "/home/runner/work/CodeGear/CodeGear", NX_TERMINAL_OUTPUT_PATH: "/home/runner/work/CodeGear/CodeGear/node_modules/.cache/nx/terminalOutputs/4251781990744259245", NX_TASK_TARGET_PROJECT: "editor", NX_TASK_TARGET_TARGET: "build", NX_TASK_TARGET_CONFIGURATION: "production", NX_TASK_HASH: "4251781990744259245", LERNA_PACKAGE_NAME: "editor", NODE_ENV: "production" }.REACT_APP_SC_ATTR || { GITHUB_STATE: "/home/runner/work/_temp/_runner_file_commands/save_state_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", STATS_TRP: "true", DEPLOYMENT_BASEPATH: "/opt/runner", DOTNET_NOLOGO: "1", USER: "runner", npm_config_user_agent: "yarn/3.6.0 npm/? node/v19.9.0 linux x64", CI: "true", RUNNER_ENVIRONMENT: "github-hosted", GITHUB_ENV: "/home/runner/work/_temp/_runner_file_commands/set_env_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", PIPX_HOME: "/opt/pipx", npm_node_execpath: "/tmp/xfs-fd9c0d9a/node", JAVA_HOME_8_X64: "/usr/lib/jvm/temurin-8-jdk-amd64", SHLVL: "1", HOME: "/home/runner", RUNNER_TEMP: "/home/runner/work/_temp", GITHUB_EVENT_PATH: "/home/runner/work/_temp/_github_workflow/event.json", npm_package_json: "/home/runner/work/CodeGear/CodeGear/package.json", JAVA_HOME_11_X64: "/usr/lib/jvm/temurin-11-jdk-amd64", PIPX_BIN_DIR: "/opt/pipx_bin", GITHUB_REPOSITORY_OWNER: "Gearonix", GRADLE_HOME: "/usr/share/gradle-8.2.1", ANDROID_NDK_LATEST_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", STATS_RDCL: "true", GITHUB_RETENTION_DAYS: "90", GITHUB_REPOSITORY_OWNER_ID: "74734213", POWERSHELL_DISTRIBUTION_CHANNEL: "GitHub-Actions-ubuntu22", AZURE_EXTENSION_DIR: "/opt/az/azcliextensions", GITHUB_HEAD_REF: "dependabot/npm_and_yarn/nestjs/swagger-7.1.8", SYSTEMD_EXEC_PID: "661", GITHUB_GRAPHQL_URL: "https://api.github.com/graphql", GOROOT_1_20_X64: "/opt/hostedtoolcache/go/1.20.7/x64", NVM_DIR: "/home/runner/.nvm", DOTNET_SKIP_FIRST_TIME_EXPERIENCE: "1", JAVA_HOME_17_X64: "/usr/lib/jvm/temurin-17-jdk-amd64", ImageVersion: "20230806.1.0", RUNNER_OS: "Linux", GITHUB_API_URL: "https://api.github.com", SWIFT_PATH: "/usr/share/swift/usr/bin", RUNNER_USER: "runner", STATS_V3PS: "true", CHROMEWEBDRIVER: "/usr/local/share/chromedriver-linux64", JOURNAL_STREAM: "8:16887", GITHUB_WORKFLOW: "CodeGear CI", _: "/usr/local/bin/yarn", GITHUB_RUN_ID: "5857686565", GITHUB_REF_TYPE: "branch", BOOTSTRAP_HASKELL_NONINTERACTIVE: "1", GITHUB_WORKFLOW_SHA: "1b6e722e064233ec22350ae0797378b62015862a", GITHUB_BASE_REF: "master", ImageOS: "ubuntu22", GITHUB_WORKFLOW_REF: "Gearonix/CodeGear/.github/workflows/master.yml@refs/pull/26/merge", PERFLOG_LOCATION_SETTING: "RUNNER_PERFLOG", GOROOT_1_18_X64: "/opt/hostedtoolcache/go/1.18.10/x64", GITHUB_ACTION_REPOSITORY: "", PATH: "/tmp/xfs-fd9c0d9a:/opt/hostedtoolcache/node/19.9.0/x64/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/snap/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin", ANT_HOME: "/usr/share/ant", DOTNET_MULTILEVEL_LOOKUP: "0", RUNNER_TRACKING_ID: "github_42379ef8-726b-4879-99cf-d480782cc240", INVOCATION_ID: "4e7e0124e3ca48c1bb3b7bdb982409b1", RUNNER_TOOL_CACHE: "/opt/hostedtoolcache", GOROOT_1_19_X64: "/opt/hostedtoolcache/go/1.19.12/x64", npm_package_name: "@code-gear/source", GITHUB_ACTION: "__run_2", GITHUB_RUN_NUMBER: "59", GITHUB_TRIGGERING_ACTOR: "dependabot[bot]", RUNNER_ARCH: "X64", XDG_RUNTIME_DIR: "/run/user/1001", AGENT_TOOLSDIRECTORY: "/opt/hostedtoolcache", LANG: "C.UTF-8", VCPKG_INSTALLATION_ROOT: "/usr/local/share/vcpkg", CONDA: "/usr/share/miniconda", RUNNER_NAME: "GitHub Actions 6", XDG_CONFIG_HOME: "/home/runner/.config", STATS_VMD: "true", GITHUB_REF_NAME: "26/merge", GITHUB_REPOSITORY: "Gearonix/CodeGear", STATS_UE: "true", ANDROID_NDK_ROOT: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_ACTION_REF: "", DEBIAN_FRONTEND: "noninteractive", PROJECT_CWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_REPOSITORY_ID: "659143083", GITHUB_ACTIONS: "true", STATS_NM: "true", npm_package_version: "1.1.0", npm_lifecycle_event: "build", GITHUB_REF_PROTECTED: "false", GITHUB_WORKSPACE: "/home/runner/work/CodeGear/CodeGear", ACCEPT_EULA: "Y", GITHUB_JOB: "building", RUNNER_PERFLOG: "/home/runner/perflog", GITHUB_SHA: "1b6e722e064233ec22350ae0797378b62015862a", GITHUB_RUN_ATTEMPT: "1", GITHUB_REF: "refs/pull/26/merge", GITHUB_ACTOR: "dependabot[bot]", ANDROID_SDK_ROOT: "/usr/local/lib/android/sdk", LEIN_HOME: "/usr/local/lib/lein", GITHUB_PATH: "/home/runner/work/_temp/_runner_file_commands/add_path_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", JAVA_HOME: "/usr/lib/jvm/temurin-11-jdk-amd64", PWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_ACTOR_ID: "49699333", RUNNER_WORKSPACE: "/home/runner/work/CodeGear", BERRY_BIN_FOLDER: "/tmp/xfs-fd9c0d9a", npm_execpath: "/tmp/xfs-fd9c0d9a/yarn", HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS: "3650", STATS_TIS: "mining", GITHUB_EVENT_NAME: "pull_request", HOMEBREW_NO_AUTO_UPDATE: "1", ANDROID_HOME: "/usr/local/lib/android/sdk", GITHUB_SERVER_URL: "https://github.com", GECKOWEBDRIVER: "/usr/local/share/gecko_driver", LEIN_JAR: "/usr/local/lib/lein/self-installs/leiningen-2.10.0-standalone.jar", GHCUP_INSTALL_BASE_PREFIX: "/usr/local", GITHUB_OUTPUT: "/home/runner/work/_temp/_runner_file_commands/set_output_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", EDGEWEBDRIVER: "/usr/local/share/edge_driver", STATS_EXT: "true", ANDROID_NDK: "/usr/local/lib/android/sdk/ndk/25.2.9519653", SGX_AESM_ADDR: "1", CHROME_BIN: "/usr/bin/google-chrome", SELENIUM_JAR_PATH: "/usr/share/java/selenium-server.jar", STATS_EXTP: "https://provjobdsettingscdn.blob.core.windows.net/settings/provjobdsettings-0.5.154/provjobd.data", ANDROID_NDK_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_STEP_SUMMARY: "/home/runner/work/_temp/_runner_file_commands/step_summary_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", INIT_CWD: "/home/runner/work/CodeGear/CodeGear", NX_CLI_SET: "true", NX_LOAD_DOT_ENV_FILES: "true", NX_INVOKED_BY_RUNNER: "true", NX_WORKSPACE_ROOT: "/home/runner/work/CodeGear/CodeGear", NX_TERMINAL_OUTPUT_PATH: "/home/runner/work/CodeGear/CodeGear/node_modules/.cache/nx/terminalOutputs/4251781990744259245", NX_TASK_TARGET_PROJECT: "editor", NX_TASK_TARGET_TARGET: "build", NX_TASK_TARGET_CONFIGURATION: "production", NX_TASK_HASH: "4251781990744259245", LERNA_PACKAGE_NAME: "editor", NODE_ENV: "production" }.SC_ATTR) || "data-styled", Yl = typeof window < "u" && "HTMLElement" in window, Dy = !!(typeof SC_DISABLE_SPEEDY == "boolean" ? SC_DISABLE_SPEEDY : typeof process < "u" && { GITHUB_STATE: "/home/runner/work/_temp/_runner_file_commands/save_state_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", STATS_TRP: "true", DEPLOYMENT_BASEPATH: "/opt/runner", DOTNET_NOLOGO: "1", USER: "runner", npm_config_user_agent: "yarn/3.6.0 npm/? node/v19.9.0 linux x64", CI: "true", RUNNER_ENVIRONMENT: "github-hosted", GITHUB_ENV: "/home/runner/work/_temp/_runner_file_commands/set_env_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", PIPX_HOME: "/opt/pipx", npm_node_execpath: "/tmp/xfs-fd9c0d9a/node", JAVA_HOME_8_X64: "/usr/lib/jvm/temurin-8-jdk-amd64", SHLVL: "1", HOME: "/home/runner", RUNNER_TEMP: "/home/runner/work/_temp", GITHUB_EVENT_PATH: "/home/runner/work/_temp/_github_workflow/event.json", npm_package_json: "/home/runner/work/CodeGear/CodeGear/package.json", JAVA_HOME_11_X64: "/usr/lib/jvm/temurin-11-jdk-amd64", PIPX_BIN_DIR: "/opt/pipx_bin", GITHUB_REPOSITORY_OWNER: "Gearonix", GRADLE_HOME: "/usr/share/gradle-8.2.1", ANDROID_NDK_LATEST_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", STATS_RDCL: "true", GITHUB_RETENTION_DAYS: "90", GITHUB_REPOSITORY_OWNER_ID: "74734213", POWERSHELL_DISTRIBUTION_CHANNEL: "GitHub-Actions-ubuntu22", AZURE_EXTENSION_DIR: "/opt/az/azcliextensions", GITHUB_HEAD_REF: "dependabot/npm_and_yarn/nestjs/swagger-7.1.8", SYSTEMD_EXEC_PID: "661", GITHUB_GRAPHQL_URL: "https://api.github.com/graphql", GOROOT_1_20_X64: "/opt/hostedtoolcache/go/1.20.7/x64", NVM_DIR: "/home/runner/.nvm", DOTNET_SKIP_FIRST_TIME_EXPERIENCE: "1", JAVA_HOME_17_X64: "/usr/lib/jvm/temurin-17-jdk-amd64", ImageVersion: "20230806.1.0", RUNNER_OS: "Linux", GITHUB_API_URL: "https://api.github.com", SWIFT_PATH: "/usr/share/swift/usr/bin", RUNNER_USER: "runner", STATS_V3PS: "true", CHROMEWEBDRIVER: "/usr/local/share/chromedriver-linux64", JOURNAL_STREAM: "8:16887", GITHUB_WORKFLOW: "CodeGear CI", _: "/usr/local/bin/yarn", GITHUB_RUN_ID: "5857686565", GITHUB_REF_TYPE: "branch", BOOTSTRAP_HASKELL_NONINTERACTIVE: "1", GITHUB_WORKFLOW_SHA: "1b6e722e064233ec22350ae0797378b62015862a", GITHUB_BASE_REF: "master", ImageOS: "ubuntu22", GITHUB_WORKFLOW_REF: "Gearonix/CodeGear/.github/workflows/master.yml@refs/pull/26/merge", PERFLOG_LOCATION_SETTING: "RUNNER_PERFLOG", GOROOT_1_18_X64: "/opt/hostedtoolcache/go/1.18.10/x64", GITHUB_ACTION_REPOSITORY: "", PATH: "/tmp/xfs-fd9c0d9a:/opt/hostedtoolcache/node/19.9.0/x64/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/snap/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin", ANT_HOME: "/usr/share/ant", DOTNET_MULTILEVEL_LOOKUP: "0", RUNNER_TRACKING_ID: "github_42379ef8-726b-4879-99cf-d480782cc240", INVOCATION_ID: "4e7e0124e3ca48c1bb3b7bdb982409b1", RUNNER_TOOL_CACHE: "/opt/hostedtoolcache", GOROOT_1_19_X64: "/opt/hostedtoolcache/go/1.19.12/x64", npm_package_name: "@code-gear/source", GITHUB_ACTION: "__run_2", GITHUB_RUN_NUMBER: "59", GITHUB_TRIGGERING_ACTOR: "dependabot[bot]", RUNNER_ARCH: "X64", XDG_RUNTIME_DIR: "/run/user/1001", AGENT_TOOLSDIRECTORY: "/opt/hostedtoolcache", LANG: "C.UTF-8", VCPKG_INSTALLATION_ROOT: "/usr/local/share/vcpkg", CONDA: "/usr/share/miniconda", RUNNER_NAME: "GitHub Actions 6", XDG_CONFIG_HOME: "/home/runner/.config", STATS_VMD: "true", GITHUB_REF_NAME: "26/merge", GITHUB_REPOSITORY: "Gearonix/CodeGear", STATS_UE: "true", ANDROID_NDK_ROOT: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_ACTION_REF: "", DEBIAN_FRONTEND: "noninteractive", PROJECT_CWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_REPOSITORY_ID: "659143083", GITHUB_ACTIONS: "true", STATS_NM: "true", npm_package_version: "1.1.0", npm_lifecycle_event: "build", GITHUB_REF_PROTECTED: "false", GITHUB_WORKSPACE: "/home/runner/work/CodeGear/CodeGear", ACCEPT_EULA: "Y", GITHUB_JOB: "building", RUNNER_PERFLOG: "/home/runner/perflog", GITHUB_SHA: "1b6e722e064233ec22350ae0797378b62015862a", GITHUB_RUN_ATTEMPT: "1", GITHUB_REF: "refs/pull/26/merge", GITHUB_ACTOR: "dependabot[bot]", ANDROID_SDK_ROOT: "/usr/local/lib/android/sdk", LEIN_HOME: "/usr/local/lib/lein", GITHUB_PATH: "/home/runner/work/_temp/_runner_file_commands/add_path_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", JAVA_HOME: "/usr/lib/jvm/temurin-11-jdk-amd64", PWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_ACTOR_ID: "49699333", RUNNER_WORKSPACE: "/home/runner/work/CodeGear", BERRY_BIN_FOLDER: "/tmp/xfs-fd9c0d9a", npm_execpath: "/tmp/xfs-fd9c0d9a/yarn", HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS: "3650", STATS_TIS: "mining", GITHUB_EVENT_NAME: "pull_request", HOMEBREW_NO_AUTO_UPDATE: "1", ANDROID_HOME: "/usr/local/lib/android/sdk", GITHUB_SERVER_URL: "https://github.com", GECKOWEBDRIVER: "/usr/local/share/gecko_driver", LEIN_JAR: "/usr/local/lib/lein/self-installs/leiningen-2.10.0-standalone.jar", GHCUP_INSTALL_BASE_PREFIX: "/usr/local", GITHUB_OUTPUT: "/home/runner/work/_temp/_runner_file_commands/set_output_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", EDGEWEBDRIVER: "/usr/local/share/edge_driver", STATS_EXT: "true", ANDROID_NDK: "/usr/local/lib/android/sdk/ndk/25.2.9519653", SGX_AESM_ADDR: "1", CHROME_BIN: "/usr/bin/google-chrome", SELENIUM_JAR_PATH: "/usr/share/java/selenium-server.jar", STATS_EXTP: "https://provjobdsettingscdn.blob.core.windows.net/settings/provjobdsettings-0.5.154/provjobd.data", ANDROID_NDK_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_STEP_SUMMARY: "/home/runner/work/_temp/_runner_file_commands/step_summary_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", INIT_CWD: "/home/runner/work/CodeGear/CodeGear", NX_CLI_SET: "true", NX_LOAD_DOT_ENV_FILES: "true", NX_INVOKED_BY_RUNNER: "true", NX_WORKSPACE_ROOT: "/home/runner/work/CodeGear/CodeGear", NX_TERMINAL_OUTPUT_PATH: "/home/runner/work/CodeGear/CodeGear/node_modules/.cache/nx/terminalOutputs/4251781990744259245", NX_TASK_TARGET_PROJECT: "editor", NX_TASK_TARGET_TARGET: "build", NX_TASK_TARGET_CONFIGURATION: "production", NX_TASK_HASH: "4251781990744259245", LERNA_PACKAGE_NAME: "editor", NODE_ENV: "production" }.REACT_APP_SC_DISABLE_SPEEDY !== void 0 && { GITHUB_STATE: "/home/runner/work/_temp/_runner_file_commands/save_state_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", STATS_TRP: "true", DEPLOYMENT_BASEPATH: "/opt/runner", DOTNET_NOLOGO: "1", USER: "runner", npm_config_user_agent: "yarn/3.6.0 npm/? node/v19.9.0 linux x64", CI: "true", RUNNER_ENVIRONMENT: "github-hosted", GITHUB_ENV: "/home/runner/work/_temp/_runner_file_commands/set_env_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", PIPX_HOME: "/opt/pipx", npm_node_execpath: "/tmp/xfs-fd9c0d9a/node", JAVA_HOME_8_X64: "/usr/lib/jvm/temurin-8-jdk-amd64", SHLVL: "1", HOME: "/home/runner", RUNNER_TEMP: "/home/runner/work/_temp", GITHUB_EVENT_PATH: "/home/runner/work/_temp/_github_workflow/event.json", npm_package_json: "/home/runner/work/CodeGear/CodeGear/package.json", JAVA_HOME_11_X64: "/usr/lib/jvm/temurin-11-jdk-amd64", PIPX_BIN_DIR: "/opt/pipx_bin", GITHUB_REPOSITORY_OWNER: "Gearonix", GRADLE_HOME: "/usr/share/gradle-8.2.1", ANDROID_NDK_LATEST_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", STATS_RDCL: "true", GITHUB_RETENTION_DAYS: "90", GITHUB_REPOSITORY_OWNER_ID: "74734213", POWERSHELL_DISTRIBUTION_CHANNEL: "GitHub-Actions-ubuntu22", AZURE_EXTENSION_DIR: "/opt/az/azcliextensions", GITHUB_HEAD_REF: "dependabot/npm_and_yarn/nestjs/swagger-7.1.8", SYSTEMD_EXEC_PID: "661", GITHUB_GRAPHQL_URL: "https://api.github.com/graphql", GOROOT_1_20_X64: "/opt/hostedtoolcache/go/1.20.7/x64", NVM_DIR: "/home/runner/.nvm", DOTNET_SKIP_FIRST_TIME_EXPERIENCE: "1", JAVA_HOME_17_X64: "/usr/lib/jvm/temurin-17-jdk-amd64", ImageVersion: "20230806.1.0", RUNNER_OS: "Linux", GITHUB_API_URL: "https://api.github.com", SWIFT_PATH: "/usr/share/swift/usr/bin", RUNNER_USER: "runner", STATS_V3PS: "true", CHROMEWEBDRIVER: "/usr/local/share/chromedriver-linux64", JOURNAL_STREAM: "8:16887", GITHUB_WORKFLOW: "CodeGear CI", _: "/usr/local/bin/yarn", GITHUB_RUN_ID: "5857686565", GITHUB_REF_TYPE: "branch", BOOTSTRAP_HASKELL_NONINTERACTIVE: "1", GITHUB_WORKFLOW_SHA: "1b6e722e064233ec22350ae0797378b62015862a", GITHUB_BASE_REF: "master", ImageOS: "ubuntu22", GITHUB_WORKFLOW_REF: "Gearonix/CodeGear/.github/workflows/master.yml@refs/pull/26/merge", PERFLOG_LOCATION_SETTING: "RUNNER_PERFLOG", GOROOT_1_18_X64: "/opt/hostedtoolcache/go/1.18.10/x64", GITHUB_ACTION_REPOSITORY: "", PATH: "/tmp/xfs-fd9c0d9a:/opt/hostedtoolcache/node/19.9.0/x64/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/snap/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin", ANT_HOME: "/usr/share/ant", DOTNET_MULTILEVEL_LOOKUP: "0", RUNNER_TRACKING_ID: "github_42379ef8-726b-4879-99cf-d480782cc240", INVOCATION_ID: "4e7e0124e3ca48c1bb3b7bdb982409b1", RUNNER_TOOL_CACHE: "/opt/hostedtoolcache", GOROOT_1_19_X64: "/opt/hostedtoolcache/go/1.19.12/x64", npm_package_name: "@code-gear/source", GITHUB_ACTION: "__run_2", GITHUB_RUN_NUMBER: "59", GITHUB_TRIGGERING_ACTOR: "dependabot[bot]", RUNNER_ARCH: "X64", XDG_RUNTIME_DIR: "/run/user/1001", AGENT_TOOLSDIRECTORY: "/opt/hostedtoolcache", LANG: "C.UTF-8", VCPKG_INSTALLATION_ROOT: "/usr/local/share/vcpkg", CONDA: "/usr/share/miniconda", RUNNER_NAME: "GitHub Actions 6", XDG_CONFIG_HOME: "/home/runner/.config", STATS_VMD: "true", GITHUB_REF_NAME: "26/merge", GITHUB_REPOSITORY: "Gearonix/CodeGear", STATS_UE: "true", ANDROID_NDK_ROOT: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_ACTION_REF: "", DEBIAN_FRONTEND: "noninteractive", PROJECT_CWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_REPOSITORY_ID: "659143083", GITHUB_ACTIONS: "true", STATS_NM: "true", npm_package_version: "1.1.0", npm_lifecycle_event: "build", GITHUB_REF_PROTECTED: "false", GITHUB_WORKSPACE: "/home/runner/work/CodeGear/CodeGear", ACCEPT_EULA: "Y", GITHUB_JOB: "building", RUNNER_PERFLOG: "/home/runner/perflog", GITHUB_SHA: "1b6e722e064233ec22350ae0797378b62015862a", GITHUB_RUN_ATTEMPT: "1", GITHUB_REF: "refs/pull/26/merge", GITHUB_ACTOR: "dependabot[bot]", ANDROID_SDK_ROOT: "/usr/local/lib/android/sdk", LEIN_HOME: "/usr/local/lib/lein", GITHUB_PATH: "/home/runner/work/_temp/_runner_file_commands/add_path_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", JAVA_HOME: "/usr/lib/jvm/temurin-11-jdk-amd64", PWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_ACTOR_ID: "49699333", RUNNER_WORKSPACE: "/home/runner/work/CodeGear", BERRY_BIN_FOLDER: "/tmp/xfs-fd9c0d9a", npm_execpath: "/tmp/xfs-fd9c0d9a/yarn", HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS: "3650", STATS_TIS: "mining", GITHUB_EVENT_NAME: "pull_request", HOMEBREW_NO_AUTO_UPDATE: "1", ANDROID_HOME: "/usr/local/lib/android/sdk", GITHUB_SERVER_URL: "https://github.com", GECKOWEBDRIVER: "/usr/local/share/gecko_driver", LEIN_JAR: "/usr/local/lib/lein/self-installs/leiningen-2.10.0-standalone.jar", GHCUP_INSTALL_BASE_PREFIX: "/usr/local", GITHUB_OUTPUT: "/home/runner/work/_temp/_runner_file_commands/set_output_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", EDGEWEBDRIVER: "/usr/local/share/edge_driver", STATS_EXT: "true", ANDROID_NDK: "/usr/local/lib/android/sdk/ndk/25.2.9519653", SGX_AESM_ADDR: "1", CHROME_BIN: "/usr/bin/google-chrome", SELENIUM_JAR_PATH: "/usr/share/java/selenium-server.jar", STATS_EXTP: "https://provjobdsettingscdn.blob.core.windows.net/settings/provjobdsettings-0.5.154/provjobd.data", ANDROID_NDK_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_STEP_SUMMARY: "/home/runner/work/_temp/_runner_file_commands/step_summary_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", INIT_CWD: "/home/runner/work/CodeGear/CodeGear", NX_CLI_SET: "true", NX_LOAD_DOT_ENV_FILES: "true", NX_INVOKED_BY_RUNNER: "true", NX_WORKSPACE_ROOT: "/home/runner/work/CodeGear/CodeGear", NX_TERMINAL_OUTPUT_PATH: "/home/runner/work/CodeGear/CodeGear/node_modules/.cache/nx/terminalOutputs/4251781990744259245", NX_TASK_TARGET_PROJECT: "editor", NX_TASK_TARGET_TARGET: "build", NX_TASK_TARGET_CONFIGURATION: "production", NX_TASK_HASH: "4251781990744259245", LERNA_PACKAGE_NAME: "editor", NODE_ENV: "production" }.REACT_APP_SC_DISABLE_SPEEDY !== "" ? { GITHUB_STATE: "/home/runner/work/_temp/_runner_file_commands/save_state_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", STATS_TRP: "true", DEPLOYMENT_BASEPATH: "/opt/runner", DOTNET_NOLOGO: "1", USER: "runner", npm_config_user_agent: "yarn/3.6.0 npm/? node/v19.9.0 linux x64", CI: "true", RUNNER_ENVIRONMENT: "github-hosted", GITHUB_ENV: "/home/runner/work/_temp/_runner_file_commands/set_env_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", PIPX_HOME: "/opt/pipx", npm_node_execpath: "/tmp/xfs-fd9c0d9a/node", JAVA_HOME_8_X64: "/usr/lib/jvm/temurin-8-jdk-amd64", SHLVL: "1", HOME: "/home/runner", RUNNER_TEMP: "/home/runner/work/_temp", GITHUB_EVENT_PATH: "/home/runner/work/_temp/_github_workflow/event.json", npm_package_json: "/home/runner/work/CodeGear/CodeGear/package.json", JAVA_HOME_11_X64: "/usr/lib/jvm/temurin-11-jdk-amd64", PIPX_BIN_DIR: "/opt/pipx_bin", GITHUB_REPOSITORY_OWNER: "Gearonix", GRADLE_HOME: "/usr/share/gradle-8.2.1", ANDROID_NDK_LATEST_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", STATS_RDCL: "true", GITHUB_RETENTION_DAYS: "90", GITHUB_REPOSITORY_OWNER_ID: "74734213", POWERSHELL_DISTRIBUTION_CHANNEL: "GitHub-Actions-ubuntu22", AZURE_EXTENSION_DIR: "/opt/az/azcliextensions", GITHUB_HEAD_REF: "dependabot/npm_and_yarn/nestjs/swagger-7.1.8", SYSTEMD_EXEC_PID: "661", GITHUB_GRAPHQL_URL: "https://api.github.com/graphql", GOROOT_1_20_X64: "/opt/hostedtoolcache/go/1.20.7/x64", NVM_DIR: "/home/runner/.nvm", DOTNET_SKIP_FIRST_TIME_EXPERIENCE: "1", JAVA_HOME_17_X64: "/usr/lib/jvm/temurin-17-jdk-amd64", ImageVersion: "20230806.1.0", RUNNER_OS: "Linux", GITHUB_API_URL: "https://api.github.com", SWIFT_PATH: "/usr/share/swift/usr/bin", RUNNER_USER: "runner", STATS_V3PS: "true", CHROMEWEBDRIVER: "/usr/local/share/chromedriver-linux64", JOURNAL_STREAM: "8:16887", GITHUB_WORKFLOW: "CodeGear CI", _: "/usr/local/bin/yarn", GITHUB_RUN_ID: "5857686565", GITHUB_REF_TYPE: "branch", BOOTSTRAP_HASKELL_NONINTERACTIVE: "1", GITHUB_WORKFLOW_SHA: "1b6e722e064233ec22350ae0797378b62015862a", GITHUB_BASE_REF: "master", ImageOS: "ubuntu22", GITHUB_WORKFLOW_REF: "Gearonix/CodeGear/.github/workflows/master.yml@refs/pull/26/merge", PERFLOG_LOCATION_SETTING: "RUNNER_PERFLOG", GOROOT_1_18_X64: "/opt/hostedtoolcache/go/1.18.10/x64", GITHUB_ACTION_REPOSITORY: "", PATH: "/tmp/xfs-fd9c0d9a:/opt/hostedtoolcache/node/19.9.0/x64/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/snap/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin", ANT_HOME: "/usr/share/ant", DOTNET_MULTILEVEL_LOOKUP: "0", RUNNER_TRACKING_ID: "github_42379ef8-726b-4879-99cf-d480782cc240", INVOCATION_ID: "4e7e0124e3ca48c1bb3b7bdb982409b1", RUNNER_TOOL_CACHE: "/opt/hostedtoolcache", GOROOT_1_19_X64: "/opt/hostedtoolcache/go/1.19.12/x64", npm_package_name: "@code-gear/source", GITHUB_ACTION: "__run_2", GITHUB_RUN_NUMBER: "59", GITHUB_TRIGGERING_ACTOR: "dependabot[bot]", RUNNER_ARCH: "X64", XDG_RUNTIME_DIR: "/run/user/1001", AGENT_TOOLSDIRECTORY: "/opt/hostedtoolcache", LANG: "C.UTF-8", VCPKG_INSTALLATION_ROOT: "/usr/local/share/vcpkg", CONDA: "/usr/share/miniconda", RUNNER_NAME: "GitHub Actions 6", XDG_CONFIG_HOME: "/home/runner/.config", STATS_VMD: "true", GITHUB_REF_NAME: "26/merge", GITHUB_REPOSITORY: "Gearonix/CodeGear", STATS_UE: "true", ANDROID_NDK_ROOT: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_ACTION_REF: "", DEBIAN_FRONTEND: "noninteractive", PROJECT_CWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_REPOSITORY_ID: "659143083", GITHUB_ACTIONS: "true", STATS_NM: "true", npm_package_version: "1.1.0", npm_lifecycle_event: "build", GITHUB_REF_PROTECTED: "false", GITHUB_WORKSPACE: "/home/runner/work/CodeGear/CodeGear", ACCEPT_EULA: "Y", GITHUB_JOB: "building", RUNNER_PERFLOG: "/home/runner/perflog", GITHUB_SHA: "1b6e722e064233ec22350ae0797378b62015862a", GITHUB_RUN_ATTEMPT: "1", GITHUB_REF: "refs/pull/26/merge", GITHUB_ACTOR: "dependabot[bot]", ANDROID_SDK_ROOT: "/usr/local/lib/android/sdk", LEIN_HOME: "/usr/local/lib/lein", GITHUB_PATH: "/home/runner/work/_temp/_runner_file_commands/add_path_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", JAVA_HOME: "/usr/lib/jvm/temurin-11-jdk-amd64", PWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_ACTOR_ID: "49699333", RUNNER_WORKSPACE: "/home/runner/work/CodeGear", BERRY_BIN_FOLDER: "/tmp/xfs-fd9c0d9a", npm_execpath: "/tmp/xfs-fd9c0d9a/yarn", HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS: "3650", STATS_TIS: "mining", GITHUB_EVENT_NAME: "pull_request", HOMEBREW_NO_AUTO_UPDATE: "1", ANDROID_HOME: "/usr/local/lib/android/sdk", GITHUB_SERVER_URL: "https://github.com", GECKOWEBDRIVER: "/usr/local/share/gecko_driver", LEIN_JAR: "/usr/local/lib/lein/self-installs/leiningen-2.10.0-standalone.jar", GHCUP_INSTALL_BASE_PREFIX: "/usr/local", GITHUB_OUTPUT: "/home/runner/work/_temp/_runner_file_commands/set_output_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", EDGEWEBDRIVER: "/usr/local/share/edge_driver", STATS_EXT: "true", ANDROID_NDK: "/usr/local/lib/android/sdk/ndk/25.2.9519653", SGX_AESM_ADDR: "1", CHROME_BIN: "/usr/bin/google-chrome", SELENIUM_JAR_PATH: "/usr/share/java/selenium-server.jar", STATS_EXTP: "https://provjobdsettingscdn.blob.core.windows.net/settings/provjobdsettings-0.5.154/provjobd.data", ANDROID_NDK_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_STEP_SUMMARY: "/home/runner/work/_temp/_runner_file_commands/step_summary_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", INIT_CWD: "/home/runner/work/CodeGear/CodeGear", NX_CLI_SET: "true", NX_LOAD_DOT_ENV_FILES: "true", NX_INVOKED_BY_RUNNER: "true", NX_WORKSPACE_ROOT: "/home/runner/work/CodeGear/CodeGear", NX_TERMINAL_OUTPUT_PATH: "/home/runner/work/CodeGear/CodeGear/node_modules/.cache/nx/terminalOutputs/4251781990744259245", NX_TASK_TARGET_PROJECT: "editor", NX_TASK_TARGET_TARGET: "build", NX_TASK_TARGET_CONFIGURATION: "production", NX_TASK_HASH: "4251781990744259245", LERNA_PACKAGE_NAME: "editor", NODE_ENV: "production" }.REACT_APP_SC_DISABLE_SPEEDY !== "false" && { GITHUB_STATE: "/home/runner/work/_temp/_runner_file_commands/save_state_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", STATS_TRP: "true", DEPLOYMENT_BASEPATH: "/opt/runner", DOTNET_NOLOGO: "1", USER: "runner", npm_config_user_agent: "yarn/3.6.0 npm/? node/v19.9.0 linux x64", CI: "true", RUNNER_ENVIRONMENT: "github-hosted", GITHUB_ENV: "/home/runner/work/_temp/_runner_file_commands/set_env_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", PIPX_HOME: "/opt/pipx", npm_node_execpath: "/tmp/xfs-fd9c0d9a/node", JAVA_HOME_8_X64: "/usr/lib/jvm/temurin-8-jdk-amd64", SHLVL: "1", HOME: "/home/runner", RUNNER_TEMP: "/home/runner/work/_temp", GITHUB_EVENT_PATH: "/home/runner/work/_temp/_github_workflow/event.json", npm_package_json: "/home/runner/work/CodeGear/CodeGear/package.json", JAVA_HOME_11_X64: "/usr/lib/jvm/temurin-11-jdk-amd64", PIPX_BIN_DIR: "/opt/pipx_bin", GITHUB_REPOSITORY_OWNER: "Gearonix", GRADLE_HOME: "/usr/share/gradle-8.2.1", ANDROID_NDK_LATEST_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", STATS_RDCL: "true", GITHUB_RETENTION_DAYS: "90", GITHUB_REPOSITORY_OWNER_ID: "74734213", POWERSHELL_DISTRIBUTION_CHANNEL: "GitHub-Actions-ubuntu22", AZURE_EXTENSION_DIR: "/opt/az/azcliextensions", GITHUB_HEAD_REF: "dependabot/npm_and_yarn/nestjs/swagger-7.1.8", SYSTEMD_EXEC_PID: "661", GITHUB_GRAPHQL_URL: "https://api.github.com/graphql", GOROOT_1_20_X64: "/opt/hostedtoolcache/go/1.20.7/x64", NVM_DIR: "/home/runner/.nvm", DOTNET_SKIP_FIRST_TIME_EXPERIENCE: "1", JAVA_HOME_17_X64: "/usr/lib/jvm/temurin-17-jdk-amd64", ImageVersion: "20230806.1.0", RUNNER_OS: "Linux", GITHUB_API_URL: "https://api.github.com", SWIFT_PATH: "/usr/share/swift/usr/bin", RUNNER_USER: "runner", STATS_V3PS: "true", CHROMEWEBDRIVER: "/usr/local/share/chromedriver-linux64", JOURNAL_STREAM: "8:16887", GITHUB_WORKFLOW: "CodeGear CI", _: "/usr/local/bin/yarn", GITHUB_RUN_ID: "5857686565", GITHUB_REF_TYPE: "branch", BOOTSTRAP_HASKELL_NONINTERACTIVE: "1", GITHUB_WORKFLOW_SHA: "1b6e722e064233ec22350ae0797378b62015862a", GITHUB_BASE_REF: "master", ImageOS: "ubuntu22", GITHUB_WORKFLOW_REF: "Gearonix/CodeGear/.github/workflows/master.yml@refs/pull/26/merge", PERFLOG_LOCATION_SETTING: "RUNNER_PERFLOG", GOROOT_1_18_X64: "/opt/hostedtoolcache/go/1.18.10/x64", GITHUB_ACTION_REPOSITORY: "", PATH: "/tmp/xfs-fd9c0d9a:/opt/hostedtoolcache/node/19.9.0/x64/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/snap/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin", ANT_HOME: "/usr/share/ant", DOTNET_MULTILEVEL_LOOKUP: "0", RUNNER_TRACKING_ID: "github_42379ef8-726b-4879-99cf-d480782cc240", INVOCATION_ID: "4e7e0124e3ca48c1bb3b7bdb982409b1", RUNNER_TOOL_CACHE: "/opt/hostedtoolcache", GOROOT_1_19_X64: "/opt/hostedtoolcache/go/1.19.12/x64", npm_package_name: "@code-gear/source", GITHUB_ACTION: "__run_2", GITHUB_RUN_NUMBER: "59", GITHUB_TRIGGERING_ACTOR: "dependabot[bot]", RUNNER_ARCH: "X64", XDG_RUNTIME_DIR: "/run/user/1001", AGENT_TOOLSDIRECTORY: "/opt/hostedtoolcache", LANG: "C.UTF-8", VCPKG_INSTALLATION_ROOT: "/usr/local/share/vcpkg", CONDA: "/usr/share/miniconda", RUNNER_NAME: "GitHub Actions 6", XDG_CONFIG_HOME: "/home/runner/.config", STATS_VMD: "true", GITHUB_REF_NAME: "26/merge", GITHUB_REPOSITORY: "Gearonix/CodeGear", STATS_UE: "true", ANDROID_NDK_ROOT: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_ACTION_REF: "", DEBIAN_FRONTEND: "noninteractive", PROJECT_CWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_REPOSITORY_ID: "659143083", GITHUB_ACTIONS: "true", STATS_NM: "true", npm_package_version: "1.1.0", npm_lifecycle_event: "build", GITHUB_REF_PROTECTED: "false", GITHUB_WORKSPACE: "/home/runner/work/CodeGear/CodeGear", ACCEPT_EULA: "Y", GITHUB_JOB: "building", RUNNER_PERFLOG: "/home/runner/perflog", GITHUB_SHA: "1b6e722e064233ec22350ae0797378b62015862a", GITHUB_RUN_ATTEMPT: "1", GITHUB_REF: "refs/pull/26/merge", GITHUB_ACTOR: "dependabot[bot]", ANDROID_SDK_ROOT: "/usr/local/lib/android/sdk", LEIN_HOME: "/usr/local/lib/lein", GITHUB_PATH: "/home/runner/work/_temp/_runner_file_commands/add_path_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", JAVA_HOME: "/usr/lib/jvm/temurin-11-jdk-amd64", PWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_ACTOR_ID: "49699333", RUNNER_WORKSPACE: "/home/runner/work/CodeGear", BERRY_BIN_FOLDER: "/tmp/xfs-fd9c0d9a", npm_execpath: "/tmp/xfs-fd9c0d9a/yarn", HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS: "3650", STATS_TIS: "mining", GITHUB_EVENT_NAME: "pull_request", HOMEBREW_NO_AUTO_UPDATE: "1", ANDROID_HOME: "/usr/local/lib/android/sdk", GITHUB_SERVER_URL: "https://github.com", GECKOWEBDRIVER: "/usr/local/share/gecko_driver", LEIN_JAR: "/usr/local/lib/lein/self-installs/leiningen-2.10.0-standalone.jar", GHCUP_INSTALL_BASE_PREFIX: "/usr/local", GITHUB_OUTPUT: "/home/runner/work/_temp/_runner_file_commands/set_output_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", EDGEWEBDRIVER: "/usr/local/share/edge_driver", STATS_EXT: "true", ANDROID_NDK: "/usr/local/lib/android/sdk/ndk/25.2.9519653", SGX_AESM_ADDR: "1", CHROME_BIN: "/usr/bin/google-chrome", SELENIUM_JAR_PATH: "/usr/share/java/selenium-server.jar", STATS_EXTP: "https://provjobdsettingscdn.blob.core.windows.net/settings/provjobdsettings-0.5.154/provjobd.data", ANDROID_NDK_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_STEP_SUMMARY: "/home/runner/work/_temp/_runner_file_commands/step_summary_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", INIT_CWD: "/home/runner/work/CodeGear/CodeGear", NX_CLI_SET: "true", NX_LOAD_DOT_ENV_FILES: "true", NX_INVOKED_BY_RUNNER: "true", NX_WORKSPACE_ROOT: "/home/runner/work/CodeGear/CodeGear", NX_TERMINAL_OUTPUT_PATH: "/home/runner/work/CodeGear/CodeGear/node_modules/.cache/nx/terminalOutputs/4251781990744259245", NX_TASK_TARGET_PROJECT: "editor", NX_TASK_TARGET_TARGET: "build", NX_TASK_TARGET_CONFIGURATION: "production", NX_TASK_HASH: "4251781990744259245", LERNA_PACKAGE_NAME: "editor", NODE_ENV: "production" }.REACT_APP_SC_DISABLE_SPEEDY : typeof process < "u" && { GITHUB_STATE: "/home/runner/work/_temp/_runner_file_commands/save_state_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", STATS_TRP: "true", DEPLOYMENT_BASEPATH: "/opt/runner", DOTNET_NOLOGO: "1", USER: "runner", npm_config_user_agent: "yarn/3.6.0 npm/? node/v19.9.0 linux x64", CI: "true", RUNNER_ENVIRONMENT: "github-hosted", GITHUB_ENV: "/home/runner/work/_temp/_runner_file_commands/set_env_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", PIPX_HOME: "/opt/pipx", npm_node_execpath: "/tmp/xfs-fd9c0d9a/node", JAVA_HOME_8_X64: "/usr/lib/jvm/temurin-8-jdk-amd64", SHLVL: "1", HOME: "/home/runner", RUNNER_TEMP: "/home/runner/work/_temp", GITHUB_EVENT_PATH: "/home/runner/work/_temp/_github_workflow/event.json", npm_package_json: "/home/runner/work/CodeGear/CodeGear/package.json", JAVA_HOME_11_X64: "/usr/lib/jvm/temurin-11-jdk-amd64", PIPX_BIN_DIR: "/opt/pipx_bin", GITHUB_REPOSITORY_OWNER: "Gearonix", GRADLE_HOME: "/usr/share/gradle-8.2.1", ANDROID_NDK_LATEST_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", STATS_RDCL: "true", GITHUB_RETENTION_DAYS: "90", GITHUB_REPOSITORY_OWNER_ID: "74734213", POWERSHELL_DISTRIBUTION_CHANNEL: "GitHub-Actions-ubuntu22", AZURE_EXTENSION_DIR: "/opt/az/azcliextensions", GITHUB_HEAD_REF: "dependabot/npm_and_yarn/nestjs/swagger-7.1.8", SYSTEMD_EXEC_PID: "661", GITHUB_GRAPHQL_URL: "https://api.github.com/graphql", GOROOT_1_20_X64: "/opt/hostedtoolcache/go/1.20.7/x64", NVM_DIR: "/home/runner/.nvm", DOTNET_SKIP_FIRST_TIME_EXPERIENCE: "1", JAVA_HOME_17_X64: "/usr/lib/jvm/temurin-17-jdk-amd64", ImageVersion: "20230806.1.0", RUNNER_OS: "Linux", GITHUB_API_URL: "https://api.github.com", SWIFT_PATH: "/usr/share/swift/usr/bin", RUNNER_USER: "runner", STATS_V3PS: "true", CHROMEWEBDRIVER: "/usr/local/share/chromedriver-linux64", JOURNAL_STREAM: "8:16887", GITHUB_WORKFLOW: "CodeGear CI", _: "/usr/local/bin/yarn", GITHUB_RUN_ID: "5857686565", GITHUB_REF_TYPE: "branch", BOOTSTRAP_HASKELL_NONINTERACTIVE: "1", GITHUB_WORKFLOW_SHA: "1b6e722e064233ec22350ae0797378b62015862a", GITHUB_BASE_REF: "master", ImageOS: "ubuntu22", GITHUB_WORKFLOW_REF: "Gearonix/CodeGear/.github/workflows/master.yml@refs/pull/26/merge", PERFLOG_LOCATION_SETTING: "RUNNER_PERFLOG", GOROOT_1_18_X64: "/opt/hostedtoolcache/go/1.18.10/x64", GITHUB_ACTION_REPOSITORY: "", PATH: "/tmp/xfs-fd9c0d9a:/opt/hostedtoolcache/node/19.9.0/x64/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/snap/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin", ANT_HOME: "/usr/share/ant", DOTNET_MULTILEVEL_LOOKUP: "0", RUNNER_TRACKING_ID: "github_42379ef8-726b-4879-99cf-d480782cc240", INVOCATION_ID: "4e7e0124e3ca48c1bb3b7bdb982409b1", RUNNER_TOOL_CACHE: "/opt/hostedtoolcache", GOROOT_1_19_X64: "/opt/hostedtoolcache/go/1.19.12/x64", npm_package_name: "@code-gear/source", GITHUB_ACTION: "__run_2", GITHUB_RUN_NUMBER: "59", GITHUB_TRIGGERING_ACTOR: "dependabot[bot]", RUNNER_ARCH: "X64", XDG_RUNTIME_DIR: "/run/user/1001", AGENT_TOOLSDIRECTORY: "/opt/hostedtoolcache", LANG: "C.UTF-8", VCPKG_INSTALLATION_ROOT: "/usr/local/share/vcpkg", CONDA: "/usr/share/miniconda", RUNNER_NAME: "GitHub Actions 6", XDG_CONFIG_HOME: "/home/runner/.config", STATS_VMD: "true", GITHUB_REF_NAME: "26/merge", GITHUB_REPOSITORY: "Gearonix/CodeGear", STATS_UE: "true", ANDROID_NDK_ROOT: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_ACTION_REF: "", DEBIAN_FRONTEND: "noninteractive", PROJECT_CWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_REPOSITORY_ID: "659143083", GITHUB_ACTIONS: "true", STATS_NM: "true", npm_package_version: "1.1.0", npm_lifecycle_event: "build", GITHUB_REF_PROTECTED: "false", GITHUB_WORKSPACE: "/home/runner/work/CodeGear/CodeGear", ACCEPT_EULA: "Y", GITHUB_JOB: "building", RUNNER_PERFLOG: "/home/runner/perflog", GITHUB_SHA: "1b6e722e064233ec22350ae0797378b62015862a", GITHUB_RUN_ATTEMPT: "1", GITHUB_REF: "refs/pull/26/merge", GITHUB_ACTOR: "dependabot[bot]", ANDROID_SDK_ROOT: "/usr/local/lib/android/sdk", LEIN_HOME: "/usr/local/lib/lein", GITHUB_PATH: "/home/runner/work/_temp/_runner_file_commands/add_path_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", JAVA_HOME: "/usr/lib/jvm/temurin-11-jdk-amd64", PWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_ACTOR_ID: "49699333", RUNNER_WORKSPACE: "/home/runner/work/CodeGear", BERRY_BIN_FOLDER: "/tmp/xfs-fd9c0d9a", npm_execpath: "/tmp/xfs-fd9c0d9a/yarn", HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS: "3650", STATS_TIS: "mining", GITHUB_EVENT_NAME: "pull_request", HOMEBREW_NO_AUTO_UPDATE: "1", ANDROID_HOME: "/usr/local/lib/android/sdk", GITHUB_SERVER_URL: "https://github.com", GECKOWEBDRIVER: "/usr/local/share/gecko_driver", LEIN_JAR: "/usr/local/lib/lein/self-installs/leiningen-2.10.0-standalone.jar", GHCUP_INSTALL_BASE_PREFIX: "/usr/local", GITHUB_OUTPUT: "/home/runner/work/_temp/_runner_file_commands/set_output_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", EDGEWEBDRIVER: "/usr/local/share/edge_driver", STATS_EXT: "true", ANDROID_NDK: "/usr/local/lib/android/sdk/ndk/25.2.9519653", SGX_AESM_ADDR: "1", CHROME_BIN: "/usr/bin/google-chrome", SELENIUM_JAR_PATH: "/usr/share/java/selenium-server.jar", STATS_EXTP: "https://provjobdsettingscdn.blob.core.windows.net/settings/provjobdsettings-0.5.154/provjobd.data", ANDROID_NDK_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_STEP_SUMMARY: "/home/runner/work/_temp/_runner_file_commands/step_summary_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", INIT_CWD: "/home/runner/work/CodeGear/CodeGear", NX_CLI_SET: "true", NX_LOAD_DOT_ENV_FILES: "true", NX_INVOKED_BY_RUNNER: "true", NX_WORKSPACE_ROOT: "/home/runner/work/CodeGear/CodeGear", NX_TERMINAL_OUTPUT_PATH: "/home/runner/work/CodeGear/CodeGear/node_modules/.cache/nx/terminalOutputs/4251781990744259245", NX_TASK_TARGET_PROJECT: "editor", NX_TASK_TARGET_TARGET: "build", NX_TASK_TARGET_CONFIGURATION: "production", NX_TASK_HASH: "4251781990744259245", LERNA_PACKAGE_NAME: "editor", NODE_ENV: "production" }.SC_DISABLE_SPEEDY !== void 0 && { GITHUB_STATE: "/home/runner/work/_temp/_runner_file_commands/save_state_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", STATS_TRP: "true", DEPLOYMENT_BASEPATH: "/opt/runner", DOTNET_NOLOGO: "1", USER: "runner", npm_config_user_agent: "yarn/3.6.0 npm/? node/v19.9.0 linux x64", CI: "true", RUNNER_ENVIRONMENT: "github-hosted", GITHUB_ENV: "/home/runner/work/_temp/_runner_file_commands/set_env_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", PIPX_HOME: "/opt/pipx", npm_node_execpath: "/tmp/xfs-fd9c0d9a/node", JAVA_HOME_8_X64: "/usr/lib/jvm/temurin-8-jdk-amd64", SHLVL: "1", HOME: "/home/runner", RUNNER_TEMP: "/home/runner/work/_temp", GITHUB_EVENT_PATH: "/home/runner/work/_temp/_github_workflow/event.json", npm_package_json: "/home/runner/work/CodeGear/CodeGear/package.json", JAVA_HOME_11_X64: "/usr/lib/jvm/temurin-11-jdk-amd64", PIPX_BIN_DIR: "/opt/pipx_bin", GITHUB_REPOSITORY_OWNER: "Gearonix", GRADLE_HOME: "/usr/share/gradle-8.2.1", ANDROID_NDK_LATEST_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", STATS_RDCL: "true", GITHUB_RETENTION_DAYS: "90", GITHUB_REPOSITORY_OWNER_ID: "74734213", POWERSHELL_DISTRIBUTION_CHANNEL: "GitHub-Actions-ubuntu22", AZURE_EXTENSION_DIR: "/opt/az/azcliextensions", GITHUB_HEAD_REF: "dependabot/npm_and_yarn/nestjs/swagger-7.1.8", SYSTEMD_EXEC_PID: "661", GITHUB_GRAPHQL_URL: "https://api.github.com/graphql", GOROOT_1_20_X64: "/opt/hostedtoolcache/go/1.20.7/x64", NVM_DIR: "/home/runner/.nvm", DOTNET_SKIP_FIRST_TIME_EXPERIENCE: "1", JAVA_HOME_17_X64: "/usr/lib/jvm/temurin-17-jdk-amd64", ImageVersion: "20230806.1.0", RUNNER_OS: "Linux", GITHUB_API_URL: "https://api.github.com", SWIFT_PATH: "/usr/share/swift/usr/bin", RUNNER_USER: "runner", STATS_V3PS: "true", CHROMEWEBDRIVER: "/usr/local/share/chromedriver-linux64", JOURNAL_STREAM: "8:16887", GITHUB_WORKFLOW: "CodeGear CI", _: "/usr/local/bin/yarn", GITHUB_RUN_ID: "5857686565", GITHUB_REF_TYPE: "branch", BOOTSTRAP_HASKELL_NONINTERACTIVE: "1", GITHUB_WORKFLOW_SHA: "1b6e722e064233ec22350ae0797378b62015862a", GITHUB_BASE_REF: "master", ImageOS: "ubuntu22", GITHUB_WORKFLOW_REF: "Gearonix/CodeGear/.github/workflows/master.yml@refs/pull/26/merge", PERFLOG_LOCATION_SETTING: "RUNNER_PERFLOG", GOROOT_1_18_X64: "/opt/hostedtoolcache/go/1.18.10/x64", GITHUB_ACTION_REPOSITORY: "", PATH: "/tmp/xfs-fd9c0d9a:/opt/hostedtoolcache/node/19.9.0/x64/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/snap/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin", ANT_HOME: "/usr/share/ant", DOTNET_MULTILEVEL_LOOKUP: "0", RUNNER_TRACKING_ID: "github_42379ef8-726b-4879-99cf-d480782cc240", INVOCATION_ID: "4e7e0124e3ca48c1bb3b7bdb982409b1", RUNNER_TOOL_CACHE: "/opt/hostedtoolcache", GOROOT_1_19_X64: "/opt/hostedtoolcache/go/1.19.12/x64", npm_package_name: "@code-gear/source", GITHUB_ACTION: "__run_2", GITHUB_RUN_NUMBER: "59", GITHUB_TRIGGERING_ACTOR: "dependabot[bot]", RUNNER_ARCH: "X64", XDG_RUNTIME_DIR: "/run/user/1001", AGENT_TOOLSDIRECTORY: "/opt/hostedtoolcache", LANG: "C.UTF-8", VCPKG_INSTALLATION_ROOT: "/usr/local/share/vcpkg", CONDA: "/usr/share/miniconda", RUNNER_NAME: "GitHub Actions 6", XDG_CONFIG_HOME: "/home/runner/.config", STATS_VMD: "true", GITHUB_REF_NAME: "26/merge", GITHUB_REPOSITORY: "Gearonix/CodeGear", STATS_UE: "true", ANDROID_NDK_ROOT: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_ACTION_REF: "", DEBIAN_FRONTEND: "noninteractive", PROJECT_CWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_REPOSITORY_ID: "659143083", GITHUB_ACTIONS: "true", STATS_NM: "true", npm_package_version: "1.1.0", npm_lifecycle_event: "build", GITHUB_REF_PROTECTED: "false", GITHUB_WORKSPACE: "/home/runner/work/CodeGear/CodeGear", ACCEPT_EULA: "Y", GITHUB_JOB: "building", RUNNER_PERFLOG: "/home/runner/perflog", GITHUB_SHA: "1b6e722e064233ec22350ae0797378b62015862a", GITHUB_RUN_ATTEMPT: "1", GITHUB_REF: "refs/pull/26/merge", GITHUB_ACTOR: "dependabot[bot]", ANDROID_SDK_ROOT: "/usr/local/lib/android/sdk", LEIN_HOME: "/usr/local/lib/lein", GITHUB_PATH: "/home/runner/work/_temp/_runner_file_commands/add_path_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", JAVA_HOME: "/usr/lib/jvm/temurin-11-jdk-amd64", PWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_ACTOR_ID: "49699333", RUNNER_WORKSPACE: "/home/runner/work/CodeGear", BERRY_BIN_FOLDER: "/tmp/xfs-fd9c0d9a", npm_execpath: "/tmp/xfs-fd9c0d9a/yarn", HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS: "3650", STATS_TIS: "mining", GITHUB_EVENT_NAME: "pull_request", HOMEBREW_NO_AUTO_UPDATE: "1", ANDROID_HOME: "/usr/local/lib/android/sdk", GITHUB_SERVER_URL: "https://github.com", GECKOWEBDRIVER: "/usr/local/share/gecko_driver", LEIN_JAR: "/usr/local/lib/lein/self-installs/leiningen-2.10.0-standalone.jar", GHCUP_INSTALL_BASE_PREFIX: "/usr/local", GITHUB_OUTPUT: "/home/runner/work/_temp/_runner_file_commands/set_output_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", EDGEWEBDRIVER: "/usr/local/share/edge_driver", STATS_EXT: "true", ANDROID_NDK: "/usr/local/lib/android/sdk/ndk/25.2.9519653", SGX_AESM_ADDR: "1", CHROME_BIN: "/usr/bin/google-chrome", SELENIUM_JAR_PATH: "/usr/share/java/selenium-server.jar", STATS_EXTP: "https://provjobdsettingscdn.blob.core.windows.net/settings/provjobdsettings-0.5.154/provjobd.data", ANDROID_NDK_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_STEP_SUMMARY: "/home/runner/work/_temp/_runner_file_commands/step_summary_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", INIT_CWD: "/home/runner/work/CodeGear/CodeGear", NX_CLI_SET: "true", NX_LOAD_DOT_ENV_FILES: "true", NX_INVOKED_BY_RUNNER: "true", NX_WORKSPACE_ROOT: "/home/runner/work/CodeGear/CodeGear", NX_TERMINAL_OUTPUT_PATH: "/home/runner/work/CodeGear/CodeGear/node_modules/.cache/nx/terminalOutputs/4251781990744259245", NX_TASK_TARGET_PROJECT: "editor", NX_TASK_TARGET_TARGET: "build", NX_TASK_TARGET_CONFIGURATION: "production", NX_TASK_HASH: "4251781990744259245", LERNA_PACKAGE_NAME: "editor", NODE_ENV: "production" }.SC_DISABLE_SPEEDY !== "" && { GITHUB_STATE: "/home/runner/work/_temp/_runner_file_commands/save_state_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", STATS_TRP: "true", DEPLOYMENT_BASEPATH: "/opt/runner", DOTNET_NOLOGO: "1", USER: "runner", npm_config_user_agent: "yarn/3.6.0 npm/? node/v19.9.0 linux x64", CI: "true", RUNNER_ENVIRONMENT: "github-hosted", GITHUB_ENV: "/home/runner/work/_temp/_runner_file_commands/set_env_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", PIPX_HOME: "/opt/pipx", npm_node_execpath: "/tmp/xfs-fd9c0d9a/node", JAVA_HOME_8_X64: "/usr/lib/jvm/temurin-8-jdk-amd64", SHLVL: "1", HOME: "/home/runner", RUNNER_TEMP: "/home/runner/work/_temp", GITHUB_EVENT_PATH: "/home/runner/work/_temp/_github_workflow/event.json", npm_package_json: "/home/runner/work/CodeGear/CodeGear/package.json", JAVA_HOME_11_X64: "/usr/lib/jvm/temurin-11-jdk-amd64", PIPX_BIN_DIR: "/opt/pipx_bin", GITHUB_REPOSITORY_OWNER: "Gearonix", GRADLE_HOME: "/usr/share/gradle-8.2.1", ANDROID_NDK_LATEST_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", STATS_RDCL: "true", GITHUB_RETENTION_DAYS: "90", GITHUB_REPOSITORY_OWNER_ID: "74734213", POWERSHELL_DISTRIBUTION_CHANNEL: "GitHub-Actions-ubuntu22", AZURE_EXTENSION_DIR: "/opt/az/azcliextensions", GITHUB_HEAD_REF: "dependabot/npm_and_yarn/nestjs/swagger-7.1.8", SYSTEMD_EXEC_PID: "661", GITHUB_GRAPHQL_URL: "https://api.github.com/graphql", GOROOT_1_20_X64: "/opt/hostedtoolcache/go/1.20.7/x64", NVM_DIR: "/home/runner/.nvm", DOTNET_SKIP_FIRST_TIME_EXPERIENCE: "1", JAVA_HOME_17_X64: "/usr/lib/jvm/temurin-17-jdk-amd64", ImageVersion: "20230806.1.0", RUNNER_OS: "Linux", GITHUB_API_URL: "https://api.github.com", SWIFT_PATH: "/usr/share/swift/usr/bin", RUNNER_USER: "runner", STATS_V3PS: "true", CHROMEWEBDRIVER: "/usr/local/share/chromedriver-linux64", JOURNAL_STREAM: "8:16887", GITHUB_WORKFLOW: "CodeGear CI", _: "/usr/local/bin/yarn", GITHUB_RUN_ID: "5857686565", GITHUB_REF_TYPE: "branch", BOOTSTRAP_HASKELL_NONINTERACTIVE: "1", GITHUB_WORKFLOW_SHA: "1b6e722e064233ec22350ae0797378b62015862a", GITHUB_BASE_REF: "master", ImageOS: "ubuntu22", GITHUB_WORKFLOW_REF: "Gearonix/CodeGear/.github/workflows/master.yml@refs/pull/26/merge", PERFLOG_LOCATION_SETTING: "RUNNER_PERFLOG", GOROOT_1_18_X64: "/opt/hostedtoolcache/go/1.18.10/x64", GITHUB_ACTION_REPOSITORY: "", PATH: "/tmp/xfs-fd9c0d9a:/opt/hostedtoolcache/node/19.9.0/x64/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/snap/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin", ANT_HOME: "/usr/share/ant", DOTNET_MULTILEVEL_LOOKUP: "0", RUNNER_TRACKING_ID: "github_42379ef8-726b-4879-99cf-d480782cc240", INVOCATION_ID: "4e7e0124e3ca48c1bb3b7bdb982409b1", RUNNER_TOOL_CACHE: "/opt/hostedtoolcache", GOROOT_1_19_X64: "/opt/hostedtoolcache/go/1.19.12/x64", npm_package_name: "@code-gear/source", GITHUB_ACTION: "__run_2", GITHUB_RUN_NUMBER: "59", GITHUB_TRIGGERING_ACTOR: "dependabot[bot]", RUNNER_ARCH: "X64", XDG_RUNTIME_DIR: "/run/user/1001", AGENT_TOOLSDIRECTORY: "/opt/hostedtoolcache", LANG: "C.UTF-8", VCPKG_INSTALLATION_ROOT: "/usr/local/share/vcpkg", CONDA: "/usr/share/miniconda", RUNNER_NAME: "GitHub Actions 6", XDG_CONFIG_HOME: "/home/runner/.config", STATS_VMD: "true", GITHUB_REF_NAME: "26/merge", GITHUB_REPOSITORY: "Gearonix/CodeGear", STATS_UE: "true", ANDROID_NDK_ROOT: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_ACTION_REF: "", DEBIAN_FRONTEND: "noninteractive", PROJECT_CWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_REPOSITORY_ID: "659143083", GITHUB_ACTIONS: "true", STATS_NM: "true", npm_package_version: "1.1.0", npm_lifecycle_event: "build", GITHUB_REF_PROTECTED: "false", GITHUB_WORKSPACE: "/home/runner/work/CodeGear/CodeGear", ACCEPT_EULA: "Y", GITHUB_JOB: "building", RUNNER_PERFLOG: "/home/runner/perflog", GITHUB_SHA: "1b6e722e064233ec22350ae0797378b62015862a", GITHUB_RUN_ATTEMPT: "1", GITHUB_REF: "refs/pull/26/merge", GITHUB_ACTOR: "dependabot[bot]", ANDROID_SDK_ROOT: "/usr/local/lib/android/sdk", LEIN_HOME: "/usr/local/lib/lein", GITHUB_PATH: "/home/runner/work/_temp/_runner_file_commands/add_path_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", JAVA_HOME: "/usr/lib/jvm/temurin-11-jdk-amd64", PWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_ACTOR_ID: "49699333", RUNNER_WORKSPACE: "/home/runner/work/CodeGear", BERRY_BIN_FOLDER: "/tmp/xfs-fd9c0d9a", npm_execpath: "/tmp/xfs-fd9c0d9a/yarn", HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS: "3650", STATS_TIS: "mining", GITHUB_EVENT_NAME: "pull_request", HOMEBREW_NO_AUTO_UPDATE: "1", ANDROID_HOME: "/usr/local/lib/android/sdk", GITHUB_SERVER_URL: "https://github.com", GECKOWEBDRIVER: "/usr/local/share/gecko_driver", LEIN_JAR: "/usr/local/lib/lein/self-installs/leiningen-2.10.0-standalone.jar", GHCUP_INSTALL_BASE_PREFIX: "/usr/local", GITHUB_OUTPUT: "/home/runner/work/_temp/_runner_file_commands/set_output_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", EDGEWEBDRIVER: "/usr/local/share/edge_driver", STATS_EXT: "true", ANDROID_NDK: "/usr/local/lib/android/sdk/ndk/25.2.9519653", SGX_AESM_ADDR: "1", CHROME_BIN: "/usr/bin/google-chrome", SELENIUM_JAR_PATH: "/usr/share/java/selenium-server.jar", STATS_EXTP: "https://provjobdsettingscdn.blob.core.windows.net/settings/provjobdsettings-0.5.154/provjobd.data", ANDROID_NDK_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_STEP_SUMMARY: "/home/runner/work/_temp/_runner_file_commands/step_summary_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", INIT_CWD: "/home/runner/work/CodeGear/CodeGear", NX_CLI_SET: "true", NX_LOAD_DOT_ENV_FILES: "true", NX_INVOKED_BY_RUNNER: "true", NX_WORKSPACE_ROOT: "/home/runner/work/CodeGear/CodeGear", NX_TERMINAL_OUTPUT_PATH: "/home/runner/work/CodeGear/CodeGear/node_modules/.cache/nx/terminalOutputs/4251781990744259245", NX_TASK_TARGET_PROJECT: "editor", NX_TASK_TARGET_TARGET: "build", NX_TASK_TARGET_CONFIGURATION: "production", NX_TASK_HASH: "4251781990744259245", LERNA_PACKAGE_NAME: "editor", NODE_ENV: "production" }.SC_DISABLE_SPEEDY !== "false" && { GITHUB_STATE: "/home/runner/work/_temp/_runner_file_commands/save_state_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", STATS_TRP: "true", DEPLOYMENT_BASEPATH: "/opt/runner", DOTNET_NOLOGO: "1", USER: "runner", npm_config_user_agent: "yarn/3.6.0 npm/? node/v19.9.0 linux x64", CI: "true", RUNNER_ENVIRONMENT: "github-hosted", GITHUB_ENV: "/home/runner/work/_temp/_runner_file_commands/set_env_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", PIPX_HOME: "/opt/pipx", npm_node_execpath: "/tmp/xfs-fd9c0d9a/node", JAVA_HOME_8_X64: "/usr/lib/jvm/temurin-8-jdk-amd64", SHLVL: "1", HOME: "/home/runner", RUNNER_TEMP: "/home/runner/work/_temp", GITHUB_EVENT_PATH: "/home/runner/work/_temp/_github_workflow/event.json", npm_package_json: "/home/runner/work/CodeGear/CodeGear/package.json", JAVA_HOME_11_X64: "/usr/lib/jvm/temurin-11-jdk-amd64", PIPX_BIN_DIR: "/opt/pipx_bin", GITHUB_REPOSITORY_OWNER: "Gearonix", GRADLE_HOME: "/usr/share/gradle-8.2.1", ANDROID_NDK_LATEST_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", STATS_RDCL: "true", GITHUB_RETENTION_DAYS: "90", GITHUB_REPOSITORY_OWNER_ID: "74734213", POWERSHELL_DISTRIBUTION_CHANNEL: "GitHub-Actions-ubuntu22", AZURE_EXTENSION_DIR: "/opt/az/azcliextensions", GITHUB_HEAD_REF: "dependabot/npm_and_yarn/nestjs/swagger-7.1.8", SYSTEMD_EXEC_PID: "661", GITHUB_GRAPHQL_URL: "https://api.github.com/graphql", GOROOT_1_20_X64: "/opt/hostedtoolcache/go/1.20.7/x64", NVM_DIR: "/home/runner/.nvm", DOTNET_SKIP_FIRST_TIME_EXPERIENCE: "1", JAVA_HOME_17_X64: "/usr/lib/jvm/temurin-17-jdk-amd64", ImageVersion: "20230806.1.0", RUNNER_OS: "Linux", GITHUB_API_URL: "https://api.github.com", SWIFT_PATH: "/usr/share/swift/usr/bin", RUNNER_USER: "runner", STATS_V3PS: "true", CHROMEWEBDRIVER: "/usr/local/share/chromedriver-linux64", JOURNAL_STREAM: "8:16887", GITHUB_WORKFLOW: "CodeGear CI", _: "/usr/local/bin/yarn", GITHUB_RUN_ID: "5857686565", GITHUB_REF_TYPE: "branch", BOOTSTRAP_HASKELL_NONINTERACTIVE: "1", GITHUB_WORKFLOW_SHA: "1b6e722e064233ec22350ae0797378b62015862a", GITHUB_BASE_REF: "master", ImageOS: "ubuntu22", GITHUB_WORKFLOW_REF: "Gearonix/CodeGear/.github/workflows/master.yml@refs/pull/26/merge", PERFLOG_LOCATION_SETTING: "RUNNER_PERFLOG", GOROOT_1_18_X64: "/opt/hostedtoolcache/go/1.18.10/x64", GITHUB_ACTION_REPOSITORY: "", PATH: "/tmp/xfs-fd9c0d9a:/opt/hostedtoolcache/node/19.9.0/x64/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/snap/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin", ANT_HOME: "/usr/share/ant", DOTNET_MULTILEVEL_LOOKUP: "0", RUNNER_TRACKING_ID: "github_42379ef8-726b-4879-99cf-d480782cc240", INVOCATION_ID: "4e7e0124e3ca48c1bb3b7bdb982409b1", RUNNER_TOOL_CACHE: "/opt/hostedtoolcache", GOROOT_1_19_X64: "/opt/hostedtoolcache/go/1.19.12/x64", npm_package_name: "@code-gear/source", GITHUB_ACTION: "__run_2", GITHUB_RUN_NUMBER: "59", GITHUB_TRIGGERING_ACTOR: "dependabot[bot]", RUNNER_ARCH: "X64", XDG_RUNTIME_DIR: "/run/user/1001", AGENT_TOOLSDIRECTORY: "/opt/hostedtoolcache", LANG: "C.UTF-8", VCPKG_INSTALLATION_ROOT: "/usr/local/share/vcpkg", CONDA: "/usr/share/miniconda", RUNNER_NAME: "GitHub Actions 6", XDG_CONFIG_HOME: "/home/runner/.config", STATS_VMD: "true", GITHUB_REF_NAME: "26/merge", GITHUB_REPOSITORY: "Gearonix/CodeGear", STATS_UE: "true", ANDROID_NDK_ROOT: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_ACTION_REF: "", DEBIAN_FRONTEND: "noninteractive", PROJECT_CWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_REPOSITORY_ID: "659143083", GITHUB_ACTIONS: "true", STATS_NM: "true", npm_package_version: "1.1.0", npm_lifecycle_event: "build", GITHUB_REF_PROTECTED: "false", GITHUB_WORKSPACE: "/home/runner/work/CodeGear/CodeGear", ACCEPT_EULA: "Y", GITHUB_JOB: "building", RUNNER_PERFLOG: "/home/runner/perflog", GITHUB_SHA: "1b6e722e064233ec22350ae0797378b62015862a", GITHUB_RUN_ATTEMPT: "1", GITHUB_REF: "refs/pull/26/merge", GITHUB_ACTOR: "dependabot[bot]", ANDROID_SDK_ROOT: "/usr/local/lib/android/sdk", LEIN_HOME: "/usr/local/lib/lein", GITHUB_PATH: "/home/runner/work/_temp/_runner_file_commands/add_path_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", JAVA_HOME: "/usr/lib/jvm/temurin-11-jdk-amd64", PWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_ACTOR_ID: "49699333", RUNNER_WORKSPACE: "/home/runner/work/CodeGear", BERRY_BIN_FOLDER: "/tmp/xfs-fd9c0d9a", npm_execpath: "/tmp/xfs-fd9c0d9a/yarn", HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS: "3650", STATS_TIS: "mining", GITHUB_EVENT_NAME: "pull_request", HOMEBREW_NO_AUTO_UPDATE: "1", ANDROID_HOME: "/usr/local/lib/android/sdk", GITHUB_SERVER_URL: "https://github.com", GECKOWEBDRIVER: "/usr/local/share/gecko_driver", LEIN_JAR: "/usr/local/lib/lein/self-installs/leiningen-2.10.0-standalone.jar", GHCUP_INSTALL_BASE_PREFIX: "/usr/local", GITHUB_OUTPUT: "/home/runner/work/_temp/_runner_file_commands/set_output_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", EDGEWEBDRIVER: "/usr/local/share/edge_driver", STATS_EXT: "true", ANDROID_NDK: "/usr/local/lib/android/sdk/ndk/25.2.9519653", SGX_AESM_ADDR: "1", CHROME_BIN: "/usr/bin/google-chrome", SELENIUM_JAR_PATH: "/usr/share/java/selenium-server.jar", STATS_EXTP: "https://provjobdsettingscdn.blob.core.windows.net/settings/provjobdsettings-0.5.154/provjobd.data", ANDROID_NDK_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_STEP_SUMMARY: "/home/runner/work/_temp/_runner_file_commands/step_summary_c1c23e0d-2034-4ab1-bc50-164c1fc178b3", INIT_CWD: "/home/runner/work/CodeGear/CodeGear", NX_CLI_SET: "true", NX_LOAD_DOT_ENV_FILES: "true", NX_INVOKED_BY_RUNNER: "true", NX_WORKSPACE_ROOT: "/home/runner/work/CodeGear/CodeGear", NX_TERMINAL_OUTPUT_PATH: "/home/runner/work/CodeGear/CodeGear/node_modules/.cache/nx/terminalOutputs/4251781990744259245", NX_TASK_TARGET_PROJECT: "editor", NX_TASK_TARGET_TARGET: "build", NX_TASK_TARGET_CONFIGURATION: "production", NX_TASK_HASH: "4251781990744259245", LERNA_PACKAGE_NAME: "editor", NODE_ENV: "production" }.SC_DISABLE_SPEEDY);
+var Jn = typeof process < "u" && ({ GITHUB_STATE: "/home/runner/work/_temp/_runner_file_commands/save_state_c948b54a-3b52-46ae-9672-dd773199b98d", STATS_TRP: "true", DEPLOYMENT_BASEPATH: "/opt/runner", DOTNET_NOLOGO: "1", USER: "runner", npm_config_user_agent: "yarn/3.6.0 npm/? node/v19.9.0 linux x64", CI: "true", RUNNER_ENVIRONMENT: "github-hosted", GITHUB_ENV: "/home/runner/work/_temp/_runner_file_commands/set_env_c948b54a-3b52-46ae-9672-dd773199b98d", PIPX_HOME: "/opt/pipx", npm_node_execpath: "/tmp/xfs-1f91c0b8/node", JAVA_HOME_8_X64: "/usr/lib/jvm/temurin-8-jdk-amd64", SHLVL: "1", HOME: "/home/runner", RUNNER_TEMP: "/home/runner/work/_temp", GITHUB_EVENT_PATH: "/home/runner/work/_temp/_github_workflow/event.json", npm_package_json: "/home/runner/work/CodeGear/CodeGear/package.json", JAVA_HOME_11_X64: "/usr/lib/jvm/temurin-11-jdk-amd64", PIPX_BIN_DIR: "/opt/pipx_bin", GITHUB_REPOSITORY_OWNER: "Gearonix", GRADLE_HOME: "/usr/share/gradle-8.2.1", ANDROID_NDK_LATEST_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", STATS_RDCL: "true", GITHUB_RETENTION_DAYS: "90", GITHUB_REPOSITORY_OWNER_ID: "74734213", POWERSHELL_DISTRIBUTION_CHANNEL: "GitHub-Actions-ubuntu22", AZURE_EXTENSION_DIR: "/opt/az/azcliextensions", GITHUB_HEAD_REF: "dependabot/npm_and_yarn/antd-5.8.3", SYSTEMD_EXEC_PID: "666", GITHUB_GRAPHQL_URL: "https://api.github.com/graphql", GOROOT_1_20_X64: "/opt/hostedtoolcache/go/1.20.7/x64", NVM_DIR: "/home/runner/.nvm", DOTNET_SKIP_FIRST_TIME_EXPERIENCE: "1", JAVA_HOME_17_X64: "/usr/lib/jvm/temurin-17-jdk-amd64", ImageVersion: "20230806.1.0", RUNNER_OS: "Linux", GITHUB_API_URL: "https://api.github.com", SWIFT_PATH: "/usr/share/swift/usr/bin", RUNNER_USER: "runner", STATS_V3PS: "true", CHROMEWEBDRIVER: "/usr/local/share/chromedriver-linux64", JOURNAL_STREAM: "8:16227", GITHUB_WORKFLOW: "CodeGear CI", _: "/usr/local/bin/yarn", GITHUB_RUN_ID: "5857695202", GITHUB_REF_TYPE: "branch", BOOTSTRAP_HASKELL_NONINTERACTIVE: "1", GITHUB_WORKFLOW_SHA: "794542bdb9ca368867c787a1c3a0147692ead798", GITHUB_BASE_REF: "master", ImageOS: "ubuntu22", GITHUB_WORKFLOW_REF: "Gearonix/CodeGear/.github/workflows/master.yml@refs/pull/27/merge", PERFLOG_LOCATION_SETTING: "RUNNER_PERFLOG", GOROOT_1_18_X64: "/opt/hostedtoolcache/go/1.18.10/x64", GITHUB_ACTION_REPOSITORY: "", PATH: "/tmp/xfs-1f91c0b8:/opt/hostedtoolcache/node/19.9.0/x64/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/snap/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin", ANT_HOME: "/usr/share/ant", DOTNET_MULTILEVEL_LOOKUP: "0", RUNNER_TRACKING_ID: "github_153a3452-30cc-4454-9622-778ab305a577", INVOCATION_ID: "0e376e8c469b49bbb1c1d40a32129571", RUNNER_TOOL_CACHE: "/opt/hostedtoolcache", GOROOT_1_19_X64: "/opt/hostedtoolcache/go/1.19.12/x64", npm_package_name: "@code-gear/source", GITHUB_ACTION: "__run_2", GITHUB_RUN_NUMBER: "60", GITHUB_TRIGGERING_ACTOR: "dependabot[bot]", RUNNER_ARCH: "X64", XDG_RUNTIME_DIR: "/run/user/1001", AGENT_TOOLSDIRECTORY: "/opt/hostedtoolcache", LANG: "C.UTF-8", VCPKG_INSTALLATION_ROOT: "/usr/local/share/vcpkg", CONDA: "/usr/share/miniconda", RUNNER_NAME: "GitHub Actions 9", XDG_CONFIG_HOME: "/home/runner/.config", STATS_VMD: "true", GITHUB_REF_NAME: "27/merge", GITHUB_REPOSITORY: "Gearonix/CodeGear", STATS_UE: "true", ANDROID_NDK_ROOT: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_ACTION_REF: "", DEBIAN_FRONTEND: "noninteractive", PROJECT_CWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_REPOSITORY_ID: "659143083", GITHUB_ACTIONS: "true", STATS_NM: "true", npm_package_version: "1.1.0", npm_lifecycle_event: "build", GITHUB_REF_PROTECTED: "false", GITHUB_WORKSPACE: "/home/runner/work/CodeGear/CodeGear", ACCEPT_EULA: "Y", GITHUB_JOB: "building", RUNNER_PERFLOG: "/home/runner/perflog", GITHUB_SHA: "794542bdb9ca368867c787a1c3a0147692ead798", GITHUB_RUN_ATTEMPT: "1", GITHUB_REF: "refs/pull/27/merge", GITHUB_ACTOR: "dependabot[bot]", ANDROID_SDK_ROOT: "/usr/local/lib/android/sdk", LEIN_HOME: "/usr/local/lib/lein", GITHUB_PATH: "/home/runner/work/_temp/_runner_file_commands/add_path_c948b54a-3b52-46ae-9672-dd773199b98d", JAVA_HOME: "/usr/lib/jvm/temurin-11-jdk-amd64", PWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_ACTOR_ID: "49699333", RUNNER_WORKSPACE: "/home/runner/work/CodeGear", BERRY_BIN_FOLDER: "/tmp/xfs-1f91c0b8", npm_execpath: "/tmp/xfs-1f91c0b8/yarn", HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS: "3650", STATS_TIS: "mining", GITHUB_EVENT_NAME: "pull_request", HOMEBREW_NO_AUTO_UPDATE: "1", ANDROID_HOME: "/usr/local/lib/android/sdk", GITHUB_SERVER_URL: "https://github.com", GECKOWEBDRIVER: "/usr/local/share/gecko_driver", LEIN_JAR: "/usr/local/lib/lein/self-installs/leiningen-2.10.0-standalone.jar", GHCUP_INSTALL_BASE_PREFIX: "/usr/local", GITHUB_OUTPUT: "/home/runner/work/_temp/_runner_file_commands/set_output_c948b54a-3b52-46ae-9672-dd773199b98d", EDGEWEBDRIVER: "/usr/local/share/edge_driver", STATS_EXT: "true", ANDROID_NDK: "/usr/local/lib/android/sdk/ndk/25.2.9519653", SGX_AESM_ADDR: "1", CHROME_BIN: "/usr/bin/google-chrome", SELENIUM_JAR_PATH: "/usr/share/java/selenium-server.jar", STATS_EXTP: "https://provjobdsettingscdn.blob.core.windows.net/settings/provjobdsettings-0.5.154/provjobd.data", ANDROID_NDK_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_STEP_SUMMARY: "/home/runner/work/_temp/_runner_file_commands/step_summary_c948b54a-3b52-46ae-9672-dd773199b98d", INIT_CWD: "/home/runner/work/CodeGear/CodeGear", NX_CLI_SET: "true", NX_LOAD_DOT_ENV_FILES: "true", NX_INVOKED_BY_RUNNER: "true", NX_WORKSPACE_ROOT: "/home/runner/work/CodeGear/CodeGear", NX_TERMINAL_OUTPUT_PATH: "/home/runner/work/CodeGear/CodeGear/node_modules/.cache/nx/terminalOutputs/3943693735773211070", NX_TASK_TARGET_PROJECT: "editor", NX_TASK_TARGET_TARGET: "build", NX_TASK_TARGET_CONFIGURATION: "production", NX_TASK_HASH: "3943693735773211070", LERNA_PACKAGE_NAME: "editor", NODE_ENV: "production" }.REACT_APP_SC_ATTR || { GITHUB_STATE: "/home/runner/work/_temp/_runner_file_commands/save_state_c948b54a-3b52-46ae-9672-dd773199b98d", STATS_TRP: "true", DEPLOYMENT_BASEPATH: "/opt/runner", DOTNET_NOLOGO: "1", USER: "runner", npm_config_user_agent: "yarn/3.6.0 npm/? node/v19.9.0 linux x64", CI: "true", RUNNER_ENVIRONMENT: "github-hosted", GITHUB_ENV: "/home/runner/work/_temp/_runner_file_commands/set_env_c948b54a-3b52-46ae-9672-dd773199b98d", PIPX_HOME: "/opt/pipx", npm_node_execpath: "/tmp/xfs-1f91c0b8/node", JAVA_HOME_8_X64: "/usr/lib/jvm/temurin-8-jdk-amd64", SHLVL: "1", HOME: "/home/runner", RUNNER_TEMP: "/home/runner/work/_temp", GITHUB_EVENT_PATH: "/home/runner/work/_temp/_github_workflow/event.json", npm_package_json: "/home/runner/work/CodeGear/CodeGear/package.json", JAVA_HOME_11_X64: "/usr/lib/jvm/temurin-11-jdk-amd64", PIPX_BIN_DIR: "/opt/pipx_bin", GITHUB_REPOSITORY_OWNER: "Gearonix", GRADLE_HOME: "/usr/share/gradle-8.2.1", ANDROID_NDK_LATEST_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", STATS_RDCL: "true", GITHUB_RETENTION_DAYS: "90", GITHUB_REPOSITORY_OWNER_ID: "74734213", POWERSHELL_DISTRIBUTION_CHANNEL: "GitHub-Actions-ubuntu22", AZURE_EXTENSION_DIR: "/opt/az/azcliextensions", GITHUB_HEAD_REF: "dependabot/npm_and_yarn/antd-5.8.3", SYSTEMD_EXEC_PID: "666", GITHUB_GRAPHQL_URL: "https://api.github.com/graphql", GOROOT_1_20_X64: "/opt/hostedtoolcache/go/1.20.7/x64", NVM_DIR: "/home/runner/.nvm", DOTNET_SKIP_FIRST_TIME_EXPERIENCE: "1", JAVA_HOME_17_X64: "/usr/lib/jvm/temurin-17-jdk-amd64", ImageVersion: "20230806.1.0", RUNNER_OS: "Linux", GITHUB_API_URL: "https://api.github.com", SWIFT_PATH: "/usr/share/swift/usr/bin", RUNNER_USER: "runner", STATS_V3PS: "true", CHROMEWEBDRIVER: "/usr/local/share/chromedriver-linux64", JOURNAL_STREAM: "8:16227", GITHUB_WORKFLOW: "CodeGear CI", _: "/usr/local/bin/yarn", GITHUB_RUN_ID: "5857695202", GITHUB_REF_TYPE: "branch", BOOTSTRAP_HASKELL_NONINTERACTIVE: "1", GITHUB_WORKFLOW_SHA: "794542bdb9ca368867c787a1c3a0147692ead798", GITHUB_BASE_REF: "master", ImageOS: "ubuntu22", GITHUB_WORKFLOW_REF: "Gearonix/CodeGear/.github/workflows/master.yml@refs/pull/27/merge", PERFLOG_LOCATION_SETTING: "RUNNER_PERFLOG", GOROOT_1_18_X64: "/opt/hostedtoolcache/go/1.18.10/x64", GITHUB_ACTION_REPOSITORY: "", PATH: "/tmp/xfs-1f91c0b8:/opt/hostedtoolcache/node/19.9.0/x64/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/snap/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin", ANT_HOME: "/usr/share/ant", DOTNET_MULTILEVEL_LOOKUP: "0", RUNNER_TRACKING_ID: "github_153a3452-30cc-4454-9622-778ab305a577", INVOCATION_ID: "0e376e8c469b49bbb1c1d40a32129571", RUNNER_TOOL_CACHE: "/opt/hostedtoolcache", GOROOT_1_19_X64: "/opt/hostedtoolcache/go/1.19.12/x64", npm_package_name: "@code-gear/source", GITHUB_ACTION: "__run_2", GITHUB_RUN_NUMBER: "60", GITHUB_TRIGGERING_ACTOR: "dependabot[bot]", RUNNER_ARCH: "X64", XDG_RUNTIME_DIR: "/run/user/1001", AGENT_TOOLSDIRECTORY: "/opt/hostedtoolcache", LANG: "C.UTF-8", VCPKG_INSTALLATION_ROOT: "/usr/local/share/vcpkg", CONDA: "/usr/share/miniconda", RUNNER_NAME: "GitHub Actions 9", XDG_CONFIG_HOME: "/home/runner/.config", STATS_VMD: "true", GITHUB_REF_NAME: "27/merge", GITHUB_REPOSITORY: "Gearonix/CodeGear", STATS_UE: "true", ANDROID_NDK_ROOT: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_ACTION_REF: "", DEBIAN_FRONTEND: "noninteractive", PROJECT_CWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_REPOSITORY_ID: "659143083", GITHUB_ACTIONS: "true", STATS_NM: "true", npm_package_version: "1.1.0", npm_lifecycle_event: "build", GITHUB_REF_PROTECTED: "false", GITHUB_WORKSPACE: "/home/runner/work/CodeGear/CodeGear", ACCEPT_EULA: "Y", GITHUB_JOB: "building", RUNNER_PERFLOG: "/home/runner/perflog", GITHUB_SHA: "794542bdb9ca368867c787a1c3a0147692ead798", GITHUB_RUN_ATTEMPT: "1", GITHUB_REF: "refs/pull/27/merge", GITHUB_ACTOR: "dependabot[bot]", ANDROID_SDK_ROOT: "/usr/local/lib/android/sdk", LEIN_HOME: "/usr/local/lib/lein", GITHUB_PATH: "/home/runner/work/_temp/_runner_file_commands/add_path_c948b54a-3b52-46ae-9672-dd773199b98d", JAVA_HOME: "/usr/lib/jvm/temurin-11-jdk-amd64", PWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_ACTOR_ID: "49699333", RUNNER_WORKSPACE: "/home/runner/work/CodeGear", BERRY_BIN_FOLDER: "/tmp/xfs-1f91c0b8", npm_execpath: "/tmp/xfs-1f91c0b8/yarn", HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS: "3650", STATS_TIS: "mining", GITHUB_EVENT_NAME: "pull_request", HOMEBREW_NO_AUTO_UPDATE: "1", ANDROID_HOME: "/usr/local/lib/android/sdk", GITHUB_SERVER_URL: "https://github.com", GECKOWEBDRIVER: "/usr/local/share/gecko_driver", LEIN_JAR: "/usr/local/lib/lein/self-installs/leiningen-2.10.0-standalone.jar", GHCUP_INSTALL_BASE_PREFIX: "/usr/local", GITHUB_OUTPUT: "/home/runner/work/_temp/_runner_file_commands/set_output_c948b54a-3b52-46ae-9672-dd773199b98d", EDGEWEBDRIVER: "/usr/local/share/edge_driver", STATS_EXT: "true", ANDROID_NDK: "/usr/local/lib/android/sdk/ndk/25.2.9519653", SGX_AESM_ADDR: "1", CHROME_BIN: "/usr/bin/google-chrome", SELENIUM_JAR_PATH: "/usr/share/java/selenium-server.jar", STATS_EXTP: "https://provjobdsettingscdn.blob.core.windows.net/settings/provjobdsettings-0.5.154/provjobd.data", ANDROID_NDK_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_STEP_SUMMARY: "/home/runner/work/_temp/_runner_file_commands/step_summary_c948b54a-3b52-46ae-9672-dd773199b98d", INIT_CWD: "/home/runner/work/CodeGear/CodeGear", NX_CLI_SET: "true", NX_LOAD_DOT_ENV_FILES: "true", NX_INVOKED_BY_RUNNER: "true", NX_WORKSPACE_ROOT: "/home/runner/work/CodeGear/CodeGear", NX_TERMINAL_OUTPUT_PATH: "/home/runner/work/CodeGear/CodeGear/node_modules/.cache/nx/terminalOutputs/3943693735773211070", NX_TASK_TARGET_PROJECT: "editor", NX_TASK_TARGET_TARGET: "build", NX_TASK_TARGET_CONFIGURATION: "production", NX_TASK_HASH: "3943693735773211070", LERNA_PACKAGE_NAME: "editor", NODE_ENV: "production" }.SC_ATTR) || "data-styled", Yl = typeof window < "u" && "HTMLElement" in window, Dy = !!(typeof SC_DISABLE_SPEEDY == "boolean" ? SC_DISABLE_SPEEDY : typeof process < "u" && { GITHUB_STATE: "/home/runner/work/_temp/_runner_file_commands/save_state_c948b54a-3b52-46ae-9672-dd773199b98d", STATS_TRP: "true", DEPLOYMENT_BASEPATH: "/opt/runner", DOTNET_NOLOGO: "1", USER: "runner", npm_config_user_agent: "yarn/3.6.0 npm/? node/v19.9.0 linux x64", CI: "true", RUNNER_ENVIRONMENT: "github-hosted", GITHUB_ENV: "/home/runner/work/_temp/_runner_file_commands/set_env_c948b54a-3b52-46ae-9672-dd773199b98d", PIPX_HOME: "/opt/pipx", npm_node_execpath: "/tmp/xfs-1f91c0b8/node", JAVA_HOME_8_X64: "/usr/lib/jvm/temurin-8-jdk-amd64", SHLVL: "1", HOME: "/home/runner", RUNNER_TEMP: "/home/runner/work/_temp", GITHUB_EVENT_PATH: "/home/runner/work/_temp/_github_workflow/event.json", npm_package_json: "/home/runner/work/CodeGear/CodeGear/package.json", JAVA_HOME_11_X64: "/usr/lib/jvm/temurin-11-jdk-amd64", PIPX_BIN_DIR: "/opt/pipx_bin", GITHUB_REPOSITORY_OWNER: "Gearonix", GRADLE_HOME: "/usr/share/gradle-8.2.1", ANDROID_NDK_LATEST_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", STATS_RDCL: "true", GITHUB_RETENTION_DAYS: "90", GITHUB_REPOSITORY_OWNER_ID: "74734213", POWERSHELL_DISTRIBUTION_CHANNEL: "GitHub-Actions-ubuntu22", AZURE_EXTENSION_DIR: "/opt/az/azcliextensions", GITHUB_HEAD_REF: "dependabot/npm_and_yarn/antd-5.8.3", SYSTEMD_EXEC_PID: "666", GITHUB_GRAPHQL_URL: "https://api.github.com/graphql", GOROOT_1_20_X64: "/opt/hostedtoolcache/go/1.20.7/x64", NVM_DIR: "/home/runner/.nvm", DOTNET_SKIP_FIRST_TIME_EXPERIENCE: "1", JAVA_HOME_17_X64: "/usr/lib/jvm/temurin-17-jdk-amd64", ImageVersion: "20230806.1.0", RUNNER_OS: "Linux", GITHUB_API_URL: "https://api.github.com", SWIFT_PATH: "/usr/share/swift/usr/bin", RUNNER_USER: "runner", STATS_V3PS: "true", CHROMEWEBDRIVER: "/usr/local/share/chromedriver-linux64", JOURNAL_STREAM: "8:16227", GITHUB_WORKFLOW: "CodeGear CI", _: "/usr/local/bin/yarn", GITHUB_RUN_ID: "5857695202", GITHUB_REF_TYPE: "branch", BOOTSTRAP_HASKELL_NONINTERACTIVE: "1", GITHUB_WORKFLOW_SHA: "794542bdb9ca368867c787a1c3a0147692ead798", GITHUB_BASE_REF: "master", ImageOS: "ubuntu22", GITHUB_WORKFLOW_REF: "Gearonix/CodeGear/.github/workflows/master.yml@refs/pull/27/merge", PERFLOG_LOCATION_SETTING: "RUNNER_PERFLOG", GOROOT_1_18_X64: "/opt/hostedtoolcache/go/1.18.10/x64", GITHUB_ACTION_REPOSITORY: "", PATH: "/tmp/xfs-1f91c0b8:/opt/hostedtoolcache/node/19.9.0/x64/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/snap/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin", ANT_HOME: "/usr/share/ant", DOTNET_MULTILEVEL_LOOKUP: "0", RUNNER_TRACKING_ID: "github_153a3452-30cc-4454-9622-778ab305a577", INVOCATION_ID: "0e376e8c469b49bbb1c1d40a32129571", RUNNER_TOOL_CACHE: "/opt/hostedtoolcache", GOROOT_1_19_X64: "/opt/hostedtoolcache/go/1.19.12/x64", npm_package_name: "@code-gear/source", GITHUB_ACTION: "__run_2", GITHUB_RUN_NUMBER: "60", GITHUB_TRIGGERING_ACTOR: "dependabot[bot]", RUNNER_ARCH: "X64", XDG_RUNTIME_DIR: "/run/user/1001", AGENT_TOOLSDIRECTORY: "/opt/hostedtoolcache", LANG: "C.UTF-8", VCPKG_INSTALLATION_ROOT: "/usr/local/share/vcpkg", CONDA: "/usr/share/miniconda", RUNNER_NAME: "GitHub Actions 9", XDG_CONFIG_HOME: "/home/runner/.config", STATS_VMD: "true", GITHUB_REF_NAME: "27/merge", GITHUB_REPOSITORY: "Gearonix/CodeGear", STATS_UE: "true", ANDROID_NDK_ROOT: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_ACTION_REF: "", DEBIAN_FRONTEND: "noninteractive", PROJECT_CWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_REPOSITORY_ID: "659143083", GITHUB_ACTIONS: "true", STATS_NM: "true", npm_package_version: "1.1.0", npm_lifecycle_event: "build", GITHUB_REF_PROTECTED: "false", GITHUB_WORKSPACE: "/home/runner/work/CodeGear/CodeGear", ACCEPT_EULA: "Y", GITHUB_JOB: "building", RUNNER_PERFLOG: "/home/runner/perflog", GITHUB_SHA: "794542bdb9ca368867c787a1c3a0147692ead798", GITHUB_RUN_ATTEMPT: "1", GITHUB_REF: "refs/pull/27/merge", GITHUB_ACTOR: "dependabot[bot]", ANDROID_SDK_ROOT: "/usr/local/lib/android/sdk", LEIN_HOME: "/usr/local/lib/lein", GITHUB_PATH: "/home/runner/work/_temp/_runner_file_commands/add_path_c948b54a-3b52-46ae-9672-dd773199b98d", JAVA_HOME: "/usr/lib/jvm/temurin-11-jdk-amd64", PWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_ACTOR_ID: "49699333", RUNNER_WORKSPACE: "/home/runner/work/CodeGear", BERRY_BIN_FOLDER: "/tmp/xfs-1f91c0b8", npm_execpath: "/tmp/xfs-1f91c0b8/yarn", HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS: "3650", STATS_TIS: "mining", GITHUB_EVENT_NAME: "pull_request", HOMEBREW_NO_AUTO_UPDATE: "1", ANDROID_HOME: "/usr/local/lib/android/sdk", GITHUB_SERVER_URL: "https://github.com", GECKOWEBDRIVER: "/usr/local/share/gecko_driver", LEIN_JAR: "/usr/local/lib/lein/self-installs/leiningen-2.10.0-standalone.jar", GHCUP_INSTALL_BASE_PREFIX: "/usr/local", GITHUB_OUTPUT: "/home/runner/work/_temp/_runner_file_commands/set_output_c948b54a-3b52-46ae-9672-dd773199b98d", EDGEWEBDRIVER: "/usr/local/share/edge_driver", STATS_EXT: "true", ANDROID_NDK: "/usr/local/lib/android/sdk/ndk/25.2.9519653", SGX_AESM_ADDR: "1", CHROME_BIN: "/usr/bin/google-chrome", SELENIUM_JAR_PATH: "/usr/share/java/selenium-server.jar", STATS_EXTP: "https://provjobdsettingscdn.blob.core.windows.net/settings/provjobdsettings-0.5.154/provjobd.data", ANDROID_NDK_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_STEP_SUMMARY: "/home/runner/work/_temp/_runner_file_commands/step_summary_c948b54a-3b52-46ae-9672-dd773199b98d", INIT_CWD: "/home/runner/work/CodeGear/CodeGear", NX_CLI_SET: "true", NX_LOAD_DOT_ENV_FILES: "true", NX_INVOKED_BY_RUNNER: "true", NX_WORKSPACE_ROOT: "/home/runner/work/CodeGear/CodeGear", NX_TERMINAL_OUTPUT_PATH: "/home/runner/work/CodeGear/CodeGear/node_modules/.cache/nx/terminalOutputs/3943693735773211070", NX_TASK_TARGET_PROJECT: "editor", NX_TASK_TARGET_TARGET: "build", NX_TASK_TARGET_CONFIGURATION: "production", NX_TASK_HASH: "3943693735773211070", LERNA_PACKAGE_NAME: "editor", NODE_ENV: "production" }.REACT_APP_SC_DISABLE_SPEEDY !== void 0 && { GITHUB_STATE: "/home/runner/work/_temp/_runner_file_commands/save_state_c948b54a-3b52-46ae-9672-dd773199b98d", STATS_TRP: "true", DEPLOYMENT_BASEPATH: "/opt/runner", DOTNET_NOLOGO: "1", USER: "runner", npm_config_user_agent: "yarn/3.6.0 npm/? node/v19.9.0 linux x64", CI: "true", RUNNER_ENVIRONMENT: "github-hosted", GITHUB_ENV: "/home/runner/work/_temp/_runner_file_commands/set_env_c948b54a-3b52-46ae-9672-dd773199b98d", PIPX_HOME: "/opt/pipx", npm_node_execpath: "/tmp/xfs-1f91c0b8/node", JAVA_HOME_8_X64: "/usr/lib/jvm/temurin-8-jdk-amd64", SHLVL: "1", HOME: "/home/runner", RUNNER_TEMP: "/home/runner/work/_temp", GITHUB_EVENT_PATH: "/home/runner/work/_temp/_github_workflow/event.json", npm_package_json: "/home/runner/work/CodeGear/CodeGear/package.json", JAVA_HOME_11_X64: "/usr/lib/jvm/temurin-11-jdk-amd64", PIPX_BIN_DIR: "/opt/pipx_bin", GITHUB_REPOSITORY_OWNER: "Gearonix", GRADLE_HOME: "/usr/share/gradle-8.2.1", ANDROID_NDK_LATEST_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", STATS_RDCL: "true", GITHUB_RETENTION_DAYS: "90", GITHUB_REPOSITORY_OWNER_ID: "74734213", POWERSHELL_DISTRIBUTION_CHANNEL: "GitHub-Actions-ubuntu22", AZURE_EXTENSION_DIR: "/opt/az/azcliextensions", GITHUB_HEAD_REF: "dependabot/npm_and_yarn/antd-5.8.3", SYSTEMD_EXEC_PID: "666", GITHUB_GRAPHQL_URL: "https://api.github.com/graphql", GOROOT_1_20_X64: "/opt/hostedtoolcache/go/1.20.7/x64", NVM_DIR: "/home/runner/.nvm", DOTNET_SKIP_FIRST_TIME_EXPERIENCE: "1", JAVA_HOME_17_X64: "/usr/lib/jvm/temurin-17-jdk-amd64", ImageVersion: "20230806.1.0", RUNNER_OS: "Linux", GITHUB_API_URL: "https://api.github.com", SWIFT_PATH: "/usr/share/swift/usr/bin", RUNNER_USER: "runner", STATS_V3PS: "true", CHROMEWEBDRIVER: "/usr/local/share/chromedriver-linux64", JOURNAL_STREAM: "8:16227", GITHUB_WORKFLOW: "CodeGear CI", _: "/usr/local/bin/yarn", GITHUB_RUN_ID: "5857695202", GITHUB_REF_TYPE: "branch", BOOTSTRAP_HASKELL_NONINTERACTIVE: "1", GITHUB_WORKFLOW_SHA: "794542bdb9ca368867c787a1c3a0147692ead798", GITHUB_BASE_REF: "master", ImageOS: "ubuntu22", GITHUB_WORKFLOW_REF: "Gearonix/CodeGear/.github/workflows/master.yml@refs/pull/27/merge", PERFLOG_LOCATION_SETTING: "RUNNER_PERFLOG", GOROOT_1_18_X64: "/opt/hostedtoolcache/go/1.18.10/x64", GITHUB_ACTION_REPOSITORY: "", PATH: "/tmp/xfs-1f91c0b8:/opt/hostedtoolcache/node/19.9.0/x64/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/snap/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin", ANT_HOME: "/usr/share/ant", DOTNET_MULTILEVEL_LOOKUP: "0", RUNNER_TRACKING_ID: "github_153a3452-30cc-4454-9622-778ab305a577", INVOCATION_ID: "0e376e8c469b49bbb1c1d40a32129571", RUNNER_TOOL_CACHE: "/opt/hostedtoolcache", GOROOT_1_19_X64: "/opt/hostedtoolcache/go/1.19.12/x64", npm_package_name: "@code-gear/source", GITHUB_ACTION: "__run_2", GITHUB_RUN_NUMBER: "60", GITHUB_TRIGGERING_ACTOR: "dependabot[bot]", RUNNER_ARCH: "X64", XDG_RUNTIME_DIR: "/run/user/1001", AGENT_TOOLSDIRECTORY: "/opt/hostedtoolcache", LANG: "C.UTF-8", VCPKG_INSTALLATION_ROOT: "/usr/local/share/vcpkg", CONDA: "/usr/share/miniconda", RUNNER_NAME: "GitHub Actions 9", XDG_CONFIG_HOME: "/home/runner/.config", STATS_VMD: "true", GITHUB_REF_NAME: "27/merge", GITHUB_REPOSITORY: "Gearonix/CodeGear", STATS_UE: "true", ANDROID_NDK_ROOT: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_ACTION_REF: "", DEBIAN_FRONTEND: "noninteractive", PROJECT_CWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_REPOSITORY_ID: "659143083", GITHUB_ACTIONS: "true", STATS_NM: "true", npm_package_version: "1.1.0", npm_lifecycle_event: "build", GITHUB_REF_PROTECTED: "false", GITHUB_WORKSPACE: "/home/runner/work/CodeGear/CodeGear", ACCEPT_EULA: "Y", GITHUB_JOB: "building", RUNNER_PERFLOG: "/home/runner/perflog", GITHUB_SHA: "794542bdb9ca368867c787a1c3a0147692ead798", GITHUB_RUN_ATTEMPT: "1", GITHUB_REF: "refs/pull/27/merge", GITHUB_ACTOR: "dependabot[bot]", ANDROID_SDK_ROOT: "/usr/local/lib/android/sdk", LEIN_HOME: "/usr/local/lib/lein", GITHUB_PATH: "/home/runner/work/_temp/_runner_file_commands/add_path_c948b54a-3b52-46ae-9672-dd773199b98d", JAVA_HOME: "/usr/lib/jvm/temurin-11-jdk-amd64", PWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_ACTOR_ID: "49699333", RUNNER_WORKSPACE: "/home/runner/work/CodeGear", BERRY_BIN_FOLDER: "/tmp/xfs-1f91c0b8", npm_execpath: "/tmp/xfs-1f91c0b8/yarn", HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS: "3650", STATS_TIS: "mining", GITHUB_EVENT_NAME: "pull_request", HOMEBREW_NO_AUTO_UPDATE: "1", ANDROID_HOME: "/usr/local/lib/android/sdk", GITHUB_SERVER_URL: "https://github.com", GECKOWEBDRIVER: "/usr/local/share/gecko_driver", LEIN_JAR: "/usr/local/lib/lein/self-installs/leiningen-2.10.0-standalone.jar", GHCUP_INSTALL_BASE_PREFIX: "/usr/local", GITHUB_OUTPUT: "/home/runner/work/_temp/_runner_file_commands/set_output_c948b54a-3b52-46ae-9672-dd773199b98d", EDGEWEBDRIVER: "/usr/local/share/edge_driver", STATS_EXT: "true", ANDROID_NDK: "/usr/local/lib/android/sdk/ndk/25.2.9519653", SGX_AESM_ADDR: "1", CHROME_BIN: "/usr/bin/google-chrome", SELENIUM_JAR_PATH: "/usr/share/java/selenium-server.jar", STATS_EXTP: "https://provjobdsettingscdn.blob.core.windows.net/settings/provjobdsettings-0.5.154/provjobd.data", ANDROID_NDK_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_STEP_SUMMARY: "/home/runner/work/_temp/_runner_file_commands/step_summary_c948b54a-3b52-46ae-9672-dd773199b98d", INIT_CWD: "/home/runner/work/CodeGear/CodeGear", NX_CLI_SET: "true", NX_LOAD_DOT_ENV_FILES: "true", NX_INVOKED_BY_RUNNER: "true", NX_WORKSPACE_ROOT: "/home/runner/work/CodeGear/CodeGear", NX_TERMINAL_OUTPUT_PATH: "/home/runner/work/CodeGear/CodeGear/node_modules/.cache/nx/terminalOutputs/3943693735773211070", NX_TASK_TARGET_PROJECT: "editor", NX_TASK_TARGET_TARGET: "build", NX_TASK_TARGET_CONFIGURATION: "production", NX_TASK_HASH: "3943693735773211070", LERNA_PACKAGE_NAME: "editor", NODE_ENV: "production" }.REACT_APP_SC_DISABLE_SPEEDY !== "" ? { GITHUB_STATE: "/home/runner/work/_temp/_runner_file_commands/save_state_c948b54a-3b52-46ae-9672-dd773199b98d", STATS_TRP: "true", DEPLOYMENT_BASEPATH: "/opt/runner", DOTNET_NOLOGO: "1", USER: "runner", npm_config_user_agent: "yarn/3.6.0 npm/? node/v19.9.0 linux x64", CI: "true", RUNNER_ENVIRONMENT: "github-hosted", GITHUB_ENV: "/home/runner/work/_temp/_runner_file_commands/set_env_c948b54a-3b52-46ae-9672-dd773199b98d", PIPX_HOME: "/opt/pipx", npm_node_execpath: "/tmp/xfs-1f91c0b8/node", JAVA_HOME_8_X64: "/usr/lib/jvm/temurin-8-jdk-amd64", SHLVL: "1", HOME: "/home/runner", RUNNER_TEMP: "/home/runner/work/_temp", GITHUB_EVENT_PATH: "/home/runner/work/_temp/_github_workflow/event.json", npm_package_json: "/home/runner/work/CodeGear/CodeGear/package.json", JAVA_HOME_11_X64: "/usr/lib/jvm/temurin-11-jdk-amd64", PIPX_BIN_DIR: "/opt/pipx_bin", GITHUB_REPOSITORY_OWNER: "Gearonix", GRADLE_HOME: "/usr/share/gradle-8.2.1", ANDROID_NDK_LATEST_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", STATS_RDCL: "true", GITHUB_RETENTION_DAYS: "90", GITHUB_REPOSITORY_OWNER_ID: "74734213", POWERSHELL_DISTRIBUTION_CHANNEL: "GitHub-Actions-ubuntu22", AZURE_EXTENSION_DIR: "/opt/az/azcliextensions", GITHUB_HEAD_REF: "dependabot/npm_and_yarn/antd-5.8.3", SYSTEMD_EXEC_PID: "666", GITHUB_GRAPHQL_URL: "https://api.github.com/graphql", GOROOT_1_20_X64: "/opt/hostedtoolcache/go/1.20.7/x64", NVM_DIR: "/home/runner/.nvm", DOTNET_SKIP_FIRST_TIME_EXPERIENCE: "1", JAVA_HOME_17_X64: "/usr/lib/jvm/temurin-17-jdk-amd64", ImageVersion: "20230806.1.0", RUNNER_OS: "Linux", GITHUB_API_URL: "https://api.github.com", SWIFT_PATH: "/usr/share/swift/usr/bin", RUNNER_USER: "runner", STATS_V3PS: "true", CHROMEWEBDRIVER: "/usr/local/share/chromedriver-linux64", JOURNAL_STREAM: "8:16227", GITHUB_WORKFLOW: "CodeGear CI", _: "/usr/local/bin/yarn", GITHUB_RUN_ID: "5857695202", GITHUB_REF_TYPE: "branch", BOOTSTRAP_HASKELL_NONINTERACTIVE: "1", GITHUB_WORKFLOW_SHA: "794542bdb9ca368867c787a1c3a0147692ead798", GITHUB_BASE_REF: "master", ImageOS: "ubuntu22", GITHUB_WORKFLOW_REF: "Gearonix/CodeGear/.github/workflows/master.yml@refs/pull/27/merge", PERFLOG_LOCATION_SETTING: "RUNNER_PERFLOG", GOROOT_1_18_X64: "/opt/hostedtoolcache/go/1.18.10/x64", GITHUB_ACTION_REPOSITORY: "", PATH: "/tmp/xfs-1f91c0b8:/opt/hostedtoolcache/node/19.9.0/x64/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/snap/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin", ANT_HOME: "/usr/share/ant", DOTNET_MULTILEVEL_LOOKUP: "0", RUNNER_TRACKING_ID: "github_153a3452-30cc-4454-9622-778ab305a577", INVOCATION_ID: "0e376e8c469b49bbb1c1d40a32129571", RUNNER_TOOL_CACHE: "/opt/hostedtoolcache", GOROOT_1_19_X64: "/opt/hostedtoolcache/go/1.19.12/x64", npm_package_name: "@code-gear/source", GITHUB_ACTION: "__run_2", GITHUB_RUN_NUMBER: "60", GITHUB_TRIGGERING_ACTOR: "dependabot[bot]", RUNNER_ARCH: "X64", XDG_RUNTIME_DIR: "/run/user/1001", AGENT_TOOLSDIRECTORY: "/opt/hostedtoolcache", LANG: "C.UTF-8", VCPKG_INSTALLATION_ROOT: "/usr/local/share/vcpkg", CONDA: "/usr/share/miniconda", RUNNER_NAME: "GitHub Actions 9", XDG_CONFIG_HOME: "/home/runner/.config", STATS_VMD: "true", GITHUB_REF_NAME: "27/merge", GITHUB_REPOSITORY: "Gearonix/CodeGear", STATS_UE: "true", ANDROID_NDK_ROOT: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_ACTION_REF: "", DEBIAN_FRONTEND: "noninteractive", PROJECT_CWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_REPOSITORY_ID: "659143083", GITHUB_ACTIONS: "true", STATS_NM: "true", npm_package_version: "1.1.0", npm_lifecycle_event: "build", GITHUB_REF_PROTECTED: "false", GITHUB_WORKSPACE: "/home/runner/work/CodeGear/CodeGear", ACCEPT_EULA: "Y", GITHUB_JOB: "building", RUNNER_PERFLOG: "/home/runner/perflog", GITHUB_SHA: "794542bdb9ca368867c787a1c3a0147692ead798", GITHUB_RUN_ATTEMPT: "1", GITHUB_REF: "refs/pull/27/merge", GITHUB_ACTOR: "dependabot[bot]", ANDROID_SDK_ROOT: "/usr/local/lib/android/sdk", LEIN_HOME: "/usr/local/lib/lein", GITHUB_PATH: "/home/runner/work/_temp/_runner_file_commands/add_path_c948b54a-3b52-46ae-9672-dd773199b98d", JAVA_HOME: "/usr/lib/jvm/temurin-11-jdk-amd64", PWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_ACTOR_ID: "49699333", RUNNER_WORKSPACE: "/home/runner/work/CodeGear", BERRY_BIN_FOLDER: "/tmp/xfs-1f91c0b8", npm_execpath: "/tmp/xfs-1f91c0b8/yarn", HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS: "3650", STATS_TIS: "mining", GITHUB_EVENT_NAME: "pull_request", HOMEBREW_NO_AUTO_UPDATE: "1", ANDROID_HOME: "/usr/local/lib/android/sdk", GITHUB_SERVER_URL: "https://github.com", GECKOWEBDRIVER: "/usr/local/share/gecko_driver", LEIN_JAR: "/usr/local/lib/lein/self-installs/leiningen-2.10.0-standalone.jar", GHCUP_INSTALL_BASE_PREFIX: "/usr/local", GITHUB_OUTPUT: "/home/runner/work/_temp/_runner_file_commands/set_output_c948b54a-3b52-46ae-9672-dd773199b98d", EDGEWEBDRIVER: "/usr/local/share/edge_driver", STATS_EXT: "true", ANDROID_NDK: "/usr/local/lib/android/sdk/ndk/25.2.9519653", SGX_AESM_ADDR: "1", CHROME_BIN: "/usr/bin/google-chrome", SELENIUM_JAR_PATH: "/usr/share/java/selenium-server.jar", STATS_EXTP: "https://provjobdsettingscdn.blob.core.windows.net/settings/provjobdsettings-0.5.154/provjobd.data", ANDROID_NDK_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_STEP_SUMMARY: "/home/runner/work/_temp/_runner_file_commands/step_summary_c948b54a-3b52-46ae-9672-dd773199b98d", INIT_CWD: "/home/runner/work/CodeGear/CodeGear", NX_CLI_SET: "true", NX_LOAD_DOT_ENV_FILES: "true", NX_INVOKED_BY_RUNNER: "true", NX_WORKSPACE_ROOT: "/home/runner/work/CodeGear/CodeGear", NX_TERMINAL_OUTPUT_PATH: "/home/runner/work/CodeGear/CodeGear/node_modules/.cache/nx/terminalOutputs/3943693735773211070", NX_TASK_TARGET_PROJECT: "editor", NX_TASK_TARGET_TARGET: "build", NX_TASK_TARGET_CONFIGURATION: "production", NX_TASK_HASH: "3943693735773211070", LERNA_PACKAGE_NAME: "editor", NODE_ENV: "production" }.REACT_APP_SC_DISABLE_SPEEDY !== "false" && { GITHUB_STATE: "/home/runner/work/_temp/_runner_file_commands/save_state_c948b54a-3b52-46ae-9672-dd773199b98d", STATS_TRP: "true", DEPLOYMENT_BASEPATH: "/opt/runner", DOTNET_NOLOGO: "1", USER: "runner", npm_config_user_agent: "yarn/3.6.0 npm/? node/v19.9.0 linux x64", CI: "true", RUNNER_ENVIRONMENT: "github-hosted", GITHUB_ENV: "/home/runner/work/_temp/_runner_file_commands/set_env_c948b54a-3b52-46ae-9672-dd773199b98d", PIPX_HOME: "/opt/pipx", npm_node_execpath: "/tmp/xfs-1f91c0b8/node", JAVA_HOME_8_X64: "/usr/lib/jvm/temurin-8-jdk-amd64", SHLVL: "1", HOME: "/home/runner", RUNNER_TEMP: "/home/runner/work/_temp", GITHUB_EVENT_PATH: "/home/runner/work/_temp/_github_workflow/event.json", npm_package_json: "/home/runner/work/CodeGear/CodeGear/package.json", JAVA_HOME_11_X64: "/usr/lib/jvm/temurin-11-jdk-amd64", PIPX_BIN_DIR: "/opt/pipx_bin", GITHUB_REPOSITORY_OWNER: "Gearonix", GRADLE_HOME: "/usr/share/gradle-8.2.1", ANDROID_NDK_LATEST_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", STATS_RDCL: "true", GITHUB_RETENTION_DAYS: "90", GITHUB_REPOSITORY_OWNER_ID: "74734213", POWERSHELL_DISTRIBUTION_CHANNEL: "GitHub-Actions-ubuntu22", AZURE_EXTENSION_DIR: "/opt/az/azcliextensions", GITHUB_HEAD_REF: "dependabot/npm_and_yarn/antd-5.8.3", SYSTEMD_EXEC_PID: "666", GITHUB_GRAPHQL_URL: "https://api.github.com/graphql", GOROOT_1_20_X64: "/opt/hostedtoolcache/go/1.20.7/x64", NVM_DIR: "/home/runner/.nvm", DOTNET_SKIP_FIRST_TIME_EXPERIENCE: "1", JAVA_HOME_17_X64: "/usr/lib/jvm/temurin-17-jdk-amd64", ImageVersion: "20230806.1.0", RUNNER_OS: "Linux", GITHUB_API_URL: "https://api.github.com", SWIFT_PATH: "/usr/share/swift/usr/bin", RUNNER_USER: "runner", STATS_V3PS: "true", CHROMEWEBDRIVER: "/usr/local/share/chromedriver-linux64", JOURNAL_STREAM: "8:16227", GITHUB_WORKFLOW: "CodeGear CI", _: "/usr/local/bin/yarn", GITHUB_RUN_ID: "5857695202", GITHUB_REF_TYPE: "branch", BOOTSTRAP_HASKELL_NONINTERACTIVE: "1", GITHUB_WORKFLOW_SHA: "794542bdb9ca368867c787a1c3a0147692ead798", GITHUB_BASE_REF: "master", ImageOS: "ubuntu22", GITHUB_WORKFLOW_REF: "Gearonix/CodeGear/.github/workflows/master.yml@refs/pull/27/merge", PERFLOG_LOCATION_SETTING: "RUNNER_PERFLOG", GOROOT_1_18_X64: "/opt/hostedtoolcache/go/1.18.10/x64", GITHUB_ACTION_REPOSITORY: "", PATH: "/tmp/xfs-1f91c0b8:/opt/hostedtoolcache/node/19.9.0/x64/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/snap/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin", ANT_HOME: "/usr/share/ant", DOTNET_MULTILEVEL_LOOKUP: "0", RUNNER_TRACKING_ID: "github_153a3452-30cc-4454-9622-778ab305a577", INVOCATION_ID: "0e376e8c469b49bbb1c1d40a32129571", RUNNER_TOOL_CACHE: "/opt/hostedtoolcache", GOROOT_1_19_X64: "/opt/hostedtoolcache/go/1.19.12/x64", npm_package_name: "@code-gear/source", GITHUB_ACTION: "__run_2", GITHUB_RUN_NUMBER: "60", GITHUB_TRIGGERING_ACTOR: "dependabot[bot]", RUNNER_ARCH: "X64", XDG_RUNTIME_DIR: "/run/user/1001", AGENT_TOOLSDIRECTORY: "/opt/hostedtoolcache", LANG: "C.UTF-8", VCPKG_INSTALLATION_ROOT: "/usr/local/share/vcpkg", CONDA: "/usr/share/miniconda", RUNNER_NAME: "GitHub Actions 9", XDG_CONFIG_HOME: "/home/runner/.config", STATS_VMD: "true", GITHUB_REF_NAME: "27/merge", GITHUB_REPOSITORY: "Gearonix/CodeGear", STATS_UE: "true", ANDROID_NDK_ROOT: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_ACTION_REF: "", DEBIAN_FRONTEND: "noninteractive", PROJECT_CWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_REPOSITORY_ID: "659143083", GITHUB_ACTIONS: "true", STATS_NM: "true", npm_package_version: "1.1.0", npm_lifecycle_event: "build", GITHUB_REF_PROTECTED: "false", GITHUB_WORKSPACE: "/home/runner/work/CodeGear/CodeGear", ACCEPT_EULA: "Y", GITHUB_JOB: "building", RUNNER_PERFLOG: "/home/runner/perflog", GITHUB_SHA: "794542bdb9ca368867c787a1c3a0147692ead798", GITHUB_RUN_ATTEMPT: "1", GITHUB_REF: "refs/pull/27/merge", GITHUB_ACTOR: "dependabot[bot]", ANDROID_SDK_ROOT: "/usr/local/lib/android/sdk", LEIN_HOME: "/usr/local/lib/lein", GITHUB_PATH: "/home/runner/work/_temp/_runner_file_commands/add_path_c948b54a-3b52-46ae-9672-dd773199b98d", JAVA_HOME: "/usr/lib/jvm/temurin-11-jdk-amd64", PWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_ACTOR_ID: "49699333", RUNNER_WORKSPACE: "/home/runner/work/CodeGear", BERRY_BIN_FOLDER: "/tmp/xfs-1f91c0b8", npm_execpath: "/tmp/xfs-1f91c0b8/yarn", HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS: "3650", STATS_TIS: "mining", GITHUB_EVENT_NAME: "pull_request", HOMEBREW_NO_AUTO_UPDATE: "1", ANDROID_HOME: "/usr/local/lib/android/sdk", GITHUB_SERVER_URL: "https://github.com", GECKOWEBDRIVER: "/usr/local/share/gecko_driver", LEIN_JAR: "/usr/local/lib/lein/self-installs/leiningen-2.10.0-standalone.jar", GHCUP_INSTALL_BASE_PREFIX: "/usr/local", GITHUB_OUTPUT: "/home/runner/work/_temp/_runner_file_commands/set_output_c948b54a-3b52-46ae-9672-dd773199b98d", EDGEWEBDRIVER: "/usr/local/share/edge_driver", STATS_EXT: "true", ANDROID_NDK: "/usr/local/lib/android/sdk/ndk/25.2.9519653", SGX_AESM_ADDR: "1", CHROME_BIN: "/usr/bin/google-chrome", SELENIUM_JAR_PATH: "/usr/share/java/selenium-server.jar", STATS_EXTP: "https://provjobdsettingscdn.blob.core.windows.net/settings/provjobdsettings-0.5.154/provjobd.data", ANDROID_NDK_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_STEP_SUMMARY: "/home/runner/work/_temp/_runner_file_commands/step_summary_c948b54a-3b52-46ae-9672-dd773199b98d", INIT_CWD: "/home/runner/work/CodeGear/CodeGear", NX_CLI_SET: "true", NX_LOAD_DOT_ENV_FILES: "true", NX_INVOKED_BY_RUNNER: "true", NX_WORKSPACE_ROOT: "/home/runner/work/CodeGear/CodeGear", NX_TERMINAL_OUTPUT_PATH: "/home/runner/work/CodeGear/CodeGear/node_modules/.cache/nx/terminalOutputs/3943693735773211070", NX_TASK_TARGET_PROJECT: "editor", NX_TASK_TARGET_TARGET: "build", NX_TASK_TARGET_CONFIGURATION: "production", NX_TASK_HASH: "3943693735773211070", LERNA_PACKAGE_NAME: "editor", NODE_ENV: "production" }.REACT_APP_SC_DISABLE_SPEEDY : typeof process < "u" && { GITHUB_STATE: "/home/runner/work/_temp/_runner_file_commands/save_state_c948b54a-3b52-46ae-9672-dd773199b98d", STATS_TRP: "true", DEPLOYMENT_BASEPATH: "/opt/runner", DOTNET_NOLOGO: "1", USER: "runner", npm_config_user_agent: "yarn/3.6.0 npm/? node/v19.9.0 linux x64", CI: "true", RUNNER_ENVIRONMENT: "github-hosted", GITHUB_ENV: "/home/runner/work/_temp/_runner_file_commands/set_env_c948b54a-3b52-46ae-9672-dd773199b98d", PIPX_HOME: "/opt/pipx", npm_node_execpath: "/tmp/xfs-1f91c0b8/node", JAVA_HOME_8_X64: "/usr/lib/jvm/temurin-8-jdk-amd64", SHLVL: "1", HOME: "/home/runner", RUNNER_TEMP: "/home/runner/work/_temp", GITHUB_EVENT_PATH: "/home/runner/work/_temp/_github_workflow/event.json", npm_package_json: "/home/runner/work/CodeGear/CodeGear/package.json", JAVA_HOME_11_X64: "/usr/lib/jvm/temurin-11-jdk-amd64", PIPX_BIN_DIR: "/opt/pipx_bin", GITHUB_REPOSITORY_OWNER: "Gearonix", GRADLE_HOME: "/usr/share/gradle-8.2.1", ANDROID_NDK_LATEST_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", STATS_RDCL: "true", GITHUB_RETENTION_DAYS: "90", GITHUB_REPOSITORY_OWNER_ID: "74734213", POWERSHELL_DISTRIBUTION_CHANNEL: "GitHub-Actions-ubuntu22", AZURE_EXTENSION_DIR: "/opt/az/azcliextensions", GITHUB_HEAD_REF: "dependabot/npm_and_yarn/antd-5.8.3", SYSTEMD_EXEC_PID: "666", GITHUB_GRAPHQL_URL: "https://api.github.com/graphql", GOROOT_1_20_X64: "/opt/hostedtoolcache/go/1.20.7/x64", NVM_DIR: "/home/runner/.nvm", DOTNET_SKIP_FIRST_TIME_EXPERIENCE: "1", JAVA_HOME_17_X64: "/usr/lib/jvm/temurin-17-jdk-amd64", ImageVersion: "20230806.1.0", RUNNER_OS: "Linux", GITHUB_API_URL: "https://api.github.com", SWIFT_PATH: "/usr/share/swift/usr/bin", RUNNER_USER: "runner", STATS_V3PS: "true", CHROMEWEBDRIVER: "/usr/local/share/chromedriver-linux64", JOURNAL_STREAM: "8:16227", GITHUB_WORKFLOW: "CodeGear CI", _: "/usr/local/bin/yarn", GITHUB_RUN_ID: "5857695202", GITHUB_REF_TYPE: "branch", BOOTSTRAP_HASKELL_NONINTERACTIVE: "1", GITHUB_WORKFLOW_SHA: "794542bdb9ca368867c787a1c3a0147692ead798", GITHUB_BASE_REF: "master", ImageOS: "ubuntu22", GITHUB_WORKFLOW_REF: "Gearonix/CodeGear/.github/workflows/master.yml@refs/pull/27/merge", PERFLOG_LOCATION_SETTING: "RUNNER_PERFLOG", GOROOT_1_18_X64: "/opt/hostedtoolcache/go/1.18.10/x64", GITHUB_ACTION_REPOSITORY: "", PATH: "/tmp/xfs-1f91c0b8:/opt/hostedtoolcache/node/19.9.0/x64/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/snap/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin", ANT_HOME: "/usr/share/ant", DOTNET_MULTILEVEL_LOOKUP: "0", RUNNER_TRACKING_ID: "github_153a3452-30cc-4454-9622-778ab305a577", INVOCATION_ID: "0e376e8c469b49bbb1c1d40a32129571", RUNNER_TOOL_CACHE: "/opt/hostedtoolcache", GOROOT_1_19_X64: "/opt/hostedtoolcache/go/1.19.12/x64", npm_package_name: "@code-gear/source", GITHUB_ACTION: "__run_2", GITHUB_RUN_NUMBER: "60", GITHUB_TRIGGERING_ACTOR: "dependabot[bot]", RUNNER_ARCH: "X64", XDG_RUNTIME_DIR: "/run/user/1001", AGENT_TOOLSDIRECTORY: "/opt/hostedtoolcache", LANG: "C.UTF-8", VCPKG_INSTALLATION_ROOT: "/usr/local/share/vcpkg", CONDA: "/usr/share/miniconda", RUNNER_NAME: "GitHub Actions 9", XDG_CONFIG_HOME: "/home/runner/.config", STATS_VMD: "true", GITHUB_REF_NAME: "27/merge", GITHUB_REPOSITORY: "Gearonix/CodeGear", STATS_UE: "true", ANDROID_NDK_ROOT: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_ACTION_REF: "", DEBIAN_FRONTEND: "noninteractive", PROJECT_CWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_REPOSITORY_ID: "659143083", GITHUB_ACTIONS: "true", STATS_NM: "true", npm_package_version: "1.1.0", npm_lifecycle_event: "build", GITHUB_REF_PROTECTED: "false", GITHUB_WORKSPACE: "/home/runner/work/CodeGear/CodeGear", ACCEPT_EULA: "Y", GITHUB_JOB: "building", RUNNER_PERFLOG: "/home/runner/perflog", GITHUB_SHA: "794542bdb9ca368867c787a1c3a0147692ead798", GITHUB_RUN_ATTEMPT: "1", GITHUB_REF: "refs/pull/27/merge", GITHUB_ACTOR: "dependabot[bot]", ANDROID_SDK_ROOT: "/usr/local/lib/android/sdk", LEIN_HOME: "/usr/local/lib/lein", GITHUB_PATH: "/home/runner/work/_temp/_runner_file_commands/add_path_c948b54a-3b52-46ae-9672-dd773199b98d", JAVA_HOME: "/usr/lib/jvm/temurin-11-jdk-amd64", PWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_ACTOR_ID: "49699333", RUNNER_WORKSPACE: "/home/runner/work/CodeGear", BERRY_BIN_FOLDER: "/tmp/xfs-1f91c0b8", npm_execpath: "/tmp/xfs-1f91c0b8/yarn", HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS: "3650", STATS_TIS: "mining", GITHUB_EVENT_NAME: "pull_request", HOMEBREW_NO_AUTO_UPDATE: "1", ANDROID_HOME: "/usr/local/lib/android/sdk", GITHUB_SERVER_URL: "https://github.com", GECKOWEBDRIVER: "/usr/local/share/gecko_driver", LEIN_JAR: "/usr/local/lib/lein/self-installs/leiningen-2.10.0-standalone.jar", GHCUP_INSTALL_BASE_PREFIX: "/usr/local", GITHUB_OUTPUT: "/home/runner/work/_temp/_runner_file_commands/set_output_c948b54a-3b52-46ae-9672-dd773199b98d", EDGEWEBDRIVER: "/usr/local/share/edge_driver", STATS_EXT: "true", ANDROID_NDK: "/usr/local/lib/android/sdk/ndk/25.2.9519653", SGX_AESM_ADDR: "1", CHROME_BIN: "/usr/bin/google-chrome", SELENIUM_JAR_PATH: "/usr/share/java/selenium-server.jar", STATS_EXTP: "https://provjobdsettingscdn.blob.core.windows.net/settings/provjobdsettings-0.5.154/provjobd.data", ANDROID_NDK_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_STEP_SUMMARY: "/home/runner/work/_temp/_runner_file_commands/step_summary_c948b54a-3b52-46ae-9672-dd773199b98d", INIT_CWD: "/home/runner/work/CodeGear/CodeGear", NX_CLI_SET: "true", NX_LOAD_DOT_ENV_FILES: "true", NX_INVOKED_BY_RUNNER: "true", NX_WORKSPACE_ROOT: "/home/runner/work/CodeGear/CodeGear", NX_TERMINAL_OUTPUT_PATH: "/home/runner/work/CodeGear/CodeGear/node_modules/.cache/nx/terminalOutputs/3943693735773211070", NX_TASK_TARGET_PROJECT: "editor", NX_TASK_TARGET_TARGET: "build", NX_TASK_TARGET_CONFIGURATION: "production", NX_TASK_HASH: "3943693735773211070", LERNA_PACKAGE_NAME: "editor", NODE_ENV: "production" }.SC_DISABLE_SPEEDY !== void 0 && { GITHUB_STATE: "/home/runner/work/_temp/_runner_file_commands/save_state_c948b54a-3b52-46ae-9672-dd773199b98d", STATS_TRP: "true", DEPLOYMENT_BASEPATH: "/opt/runner", DOTNET_NOLOGO: "1", USER: "runner", npm_config_user_agent: "yarn/3.6.0 npm/? node/v19.9.0 linux x64", CI: "true", RUNNER_ENVIRONMENT: "github-hosted", GITHUB_ENV: "/home/runner/work/_temp/_runner_file_commands/set_env_c948b54a-3b52-46ae-9672-dd773199b98d", PIPX_HOME: "/opt/pipx", npm_node_execpath: "/tmp/xfs-1f91c0b8/node", JAVA_HOME_8_X64: "/usr/lib/jvm/temurin-8-jdk-amd64", SHLVL: "1", HOME: "/home/runner", RUNNER_TEMP: "/home/runner/work/_temp", GITHUB_EVENT_PATH: "/home/runner/work/_temp/_github_workflow/event.json", npm_package_json: "/home/runner/work/CodeGear/CodeGear/package.json", JAVA_HOME_11_X64: "/usr/lib/jvm/temurin-11-jdk-amd64", PIPX_BIN_DIR: "/opt/pipx_bin", GITHUB_REPOSITORY_OWNER: "Gearonix", GRADLE_HOME: "/usr/share/gradle-8.2.1", ANDROID_NDK_LATEST_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", STATS_RDCL: "true", GITHUB_RETENTION_DAYS: "90", GITHUB_REPOSITORY_OWNER_ID: "74734213", POWERSHELL_DISTRIBUTION_CHANNEL: "GitHub-Actions-ubuntu22", AZURE_EXTENSION_DIR: "/opt/az/azcliextensions", GITHUB_HEAD_REF: "dependabot/npm_and_yarn/antd-5.8.3", SYSTEMD_EXEC_PID: "666", GITHUB_GRAPHQL_URL: "https://api.github.com/graphql", GOROOT_1_20_X64: "/opt/hostedtoolcache/go/1.20.7/x64", NVM_DIR: "/home/runner/.nvm", DOTNET_SKIP_FIRST_TIME_EXPERIENCE: "1", JAVA_HOME_17_X64: "/usr/lib/jvm/temurin-17-jdk-amd64", ImageVersion: "20230806.1.0", RUNNER_OS: "Linux", GITHUB_API_URL: "https://api.github.com", SWIFT_PATH: "/usr/share/swift/usr/bin", RUNNER_USER: "runner", STATS_V3PS: "true", CHROMEWEBDRIVER: "/usr/local/share/chromedriver-linux64", JOURNAL_STREAM: "8:16227", GITHUB_WORKFLOW: "CodeGear CI", _: "/usr/local/bin/yarn", GITHUB_RUN_ID: "5857695202", GITHUB_REF_TYPE: "branch", BOOTSTRAP_HASKELL_NONINTERACTIVE: "1", GITHUB_WORKFLOW_SHA: "794542bdb9ca368867c787a1c3a0147692ead798", GITHUB_BASE_REF: "master", ImageOS: "ubuntu22", GITHUB_WORKFLOW_REF: "Gearonix/CodeGear/.github/workflows/master.yml@refs/pull/27/merge", PERFLOG_LOCATION_SETTING: "RUNNER_PERFLOG", GOROOT_1_18_X64: "/opt/hostedtoolcache/go/1.18.10/x64", GITHUB_ACTION_REPOSITORY: "", PATH: "/tmp/xfs-1f91c0b8:/opt/hostedtoolcache/node/19.9.0/x64/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/snap/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin", ANT_HOME: "/usr/share/ant", DOTNET_MULTILEVEL_LOOKUP: "0", RUNNER_TRACKING_ID: "github_153a3452-30cc-4454-9622-778ab305a577", INVOCATION_ID: "0e376e8c469b49bbb1c1d40a32129571", RUNNER_TOOL_CACHE: "/opt/hostedtoolcache", GOROOT_1_19_X64: "/opt/hostedtoolcache/go/1.19.12/x64", npm_package_name: "@code-gear/source", GITHUB_ACTION: "__run_2", GITHUB_RUN_NUMBER: "60", GITHUB_TRIGGERING_ACTOR: "dependabot[bot]", RUNNER_ARCH: "X64", XDG_RUNTIME_DIR: "/run/user/1001", AGENT_TOOLSDIRECTORY: "/opt/hostedtoolcache", LANG: "C.UTF-8", VCPKG_INSTALLATION_ROOT: "/usr/local/share/vcpkg", CONDA: "/usr/share/miniconda", RUNNER_NAME: "GitHub Actions 9", XDG_CONFIG_HOME: "/home/runner/.config", STATS_VMD: "true", GITHUB_REF_NAME: "27/merge", GITHUB_REPOSITORY: "Gearonix/CodeGear", STATS_UE: "true", ANDROID_NDK_ROOT: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_ACTION_REF: "", DEBIAN_FRONTEND: "noninteractive", PROJECT_CWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_REPOSITORY_ID: "659143083", GITHUB_ACTIONS: "true", STATS_NM: "true", npm_package_version: "1.1.0", npm_lifecycle_event: "build", GITHUB_REF_PROTECTED: "false", GITHUB_WORKSPACE: "/home/runner/work/CodeGear/CodeGear", ACCEPT_EULA: "Y", GITHUB_JOB: "building", RUNNER_PERFLOG: "/home/runner/perflog", GITHUB_SHA: "794542bdb9ca368867c787a1c3a0147692ead798", GITHUB_RUN_ATTEMPT: "1", GITHUB_REF: "refs/pull/27/merge", GITHUB_ACTOR: "dependabot[bot]", ANDROID_SDK_ROOT: "/usr/local/lib/android/sdk", LEIN_HOME: "/usr/local/lib/lein", GITHUB_PATH: "/home/runner/work/_temp/_runner_file_commands/add_path_c948b54a-3b52-46ae-9672-dd773199b98d", JAVA_HOME: "/usr/lib/jvm/temurin-11-jdk-amd64", PWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_ACTOR_ID: "49699333", RUNNER_WORKSPACE: "/home/runner/work/CodeGear", BERRY_BIN_FOLDER: "/tmp/xfs-1f91c0b8", npm_execpath: "/tmp/xfs-1f91c0b8/yarn", HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS: "3650", STATS_TIS: "mining", GITHUB_EVENT_NAME: "pull_request", HOMEBREW_NO_AUTO_UPDATE: "1", ANDROID_HOME: "/usr/local/lib/android/sdk", GITHUB_SERVER_URL: "https://github.com", GECKOWEBDRIVER: "/usr/local/share/gecko_driver", LEIN_JAR: "/usr/local/lib/lein/self-installs/leiningen-2.10.0-standalone.jar", GHCUP_INSTALL_BASE_PREFIX: "/usr/local", GITHUB_OUTPUT: "/home/runner/work/_temp/_runner_file_commands/set_output_c948b54a-3b52-46ae-9672-dd773199b98d", EDGEWEBDRIVER: "/usr/local/share/edge_driver", STATS_EXT: "true", ANDROID_NDK: "/usr/local/lib/android/sdk/ndk/25.2.9519653", SGX_AESM_ADDR: "1", CHROME_BIN: "/usr/bin/google-chrome", SELENIUM_JAR_PATH: "/usr/share/java/selenium-server.jar", STATS_EXTP: "https://provjobdsettingscdn.blob.core.windows.net/settings/provjobdsettings-0.5.154/provjobd.data", ANDROID_NDK_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_STEP_SUMMARY: "/home/runner/work/_temp/_runner_file_commands/step_summary_c948b54a-3b52-46ae-9672-dd773199b98d", INIT_CWD: "/home/runner/work/CodeGear/CodeGear", NX_CLI_SET: "true", NX_LOAD_DOT_ENV_FILES: "true", NX_INVOKED_BY_RUNNER: "true", NX_WORKSPACE_ROOT: "/home/runner/work/CodeGear/CodeGear", NX_TERMINAL_OUTPUT_PATH: "/home/runner/work/CodeGear/CodeGear/node_modules/.cache/nx/terminalOutputs/3943693735773211070", NX_TASK_TARGET_PROJECT: "editor", NX_TASK_TARGET_TARGET: "build", NX_TASK_TARGET_CONFIGURATION: "production", NX_TASK_HASH: "3943693735773211070", LERNA_PACKAGE_NAME: "editor", NODE_ENV: "production" }.SC_DISABLE_SPEEDY !== "" && { GITHUB_STATE: "/home/runner/work/_temp/_runner_file_commands/save_state_c948b54a-3b52-46ae-9672-dd773199b98d", STATS_TRP: "true", DEPLOYMENT_BASEPATH: "/opt/runner", DOTNET_NOLOGO: "1", USER: "runner", npm_config_user_agent: "yarn/3.6.0 npm/? node/v19.9.0 linux x64", CI: "true", RUNNER_ENVIRONMENT: "github-hosted", GITHUB_ENV: "/home/runner/work/_temp/_runner_file_commands/set_env_c948b54a-3b52-46ae-9672-dd773199b98d", PIPX_HOME: "/opt/pipx", npm_node_execpath: "/tmp/xfs-1f91c0b8/node", JAVA_HOME_8_X64: "/usr/lib/jvm/temurin-8-jdk-amd64", SHLVL: "1", HOME: "/home/runner", RUNNER_TEMP: "/home/runner/work/_temp", GITHUB_EVENT_PATH: "/home/runner/work/_temp/_github_workflow/event.json", npm_package_json: "/home/runner/work/CodeGear/CodeGear/package.json", JAVA_HOME_11_X64: "/usr/lib/jvm/temurin-11-jdk-amd64", PIPX_BIN_DIR: "/opt/pipx_bin", GITHUB_REPOSITORY_OWNER: "Gearonix", GRADLE_HOME: "/usr/share/gradle-8.2.1", ANDROID_NDK_LATEST_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", STATS_RDCL: "true", GITHUB_RETENTION_DAYS: "90", GITHUB_REPOSITORY_OWNER_ID: "74734213", POWERSHELL_DISTRIBUTION_CHANNEL: "GitHub-Actions-ubuntu22", AZURE_EXTENSION_DIR: "/opt/az/azcliextensions", GITHUB_HEAD_REF: "dependabot/npm_and_yarn/antd-5.8.3", SYSTEMD_EXEC_PID: "666", GITHUB_GRAPHQL_URL: "https://api.github.com/graphql", GOROOT_1_20_X64: "/opt/hostedtoolcache/go/1.20.7/x64", NVM_DIR: "/home/runner/.nvm", DOTNET_SKIP_FIRST_TIME_EXPERIENCE: "1", JAVA_HOME_17_X64: "/usr/lib/jvm/temurin-17-jdk-amd64", ImageVersion: "20230806.1.0", RUNNER_OS: "Linux", GITHUB_API_URL: "https://api.github.com", SWIFT_PATH: "/usr/share/swift/usr/bin", RUNNER_USER: "runner", STATS_V3PS: "true", CHROMEWEBDRIVER: "/usr/local/share/chromedriver-linux64", JOURNAL_STREAM: "8:16227", GITHUB_WORKFLOW: "CodeGear CI", _: "/usr/local/bin/yarn", GITHUB_RUN_ID: "5857695202", GITHUB_REF_TYPE: "branch", BOOTSTRAP_HASKELL_NONINTERACTIVE: "1", GITHUB_WORKFLOW_SHA: "794542bdb9ca368867c787a1c3a0147692ead798", GITHUB_BASE_REF: "master", ImageOS: "ubuntu22", GITHUB_WORKFLOW_REF: "Gearonix/CodeGear/.github/workflows/master.yml@refs/pull/27/merge", PERFLOG_LOCATION_SETTING: "RUNNER_PERFLOG", GOROOT_1_18_X64: "/opt/hostedtoolcache/go/1.18.10/x64", GITHUB_ACTION_REPOSITORY: "", PATH: "/tmp/xfs-1f91c0b8:/opt/hostedtoolcache/node/19.9.0/x64/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/snap/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin", ANT_HOME: "/usr/share/ant", DOTNET_MULTILEVEL_LOOKUP: "0", RUNNER_TRACKING_ID: "github_153a3452-30cc-4454-9622-778ab305a577", INVOCATION_ID: "0e376e8c469b49bbb1c1d40a32129571", RUNNER_TOOL_CACHE: "/opt/hostedtoolcache", GOROOT_1_19_X64: "/opt/hostedtoolcache/go/1.19.12/x64", npm_package_name: "@code-gear/source", GITHUB_ACTION: "__run_2", GITHUB_RUN_NUMBER: "60", GITHUB_TRIGGERING_ACTOR: "dependabot[bot]", RUNNER_ARCH: "X64", XDG_RUNTIME_DIR: "/run/user/1001", AGENT_TOOLSDIRECTORY: "/opt/hostedtoolcache", LANG: "C.UTF-8", VCPKG_INSTALLATION_ROOT: "/usr/local/share/vcpkg", CONDA: "/usr/share/miniconda", RUNNER_NAME: "GitHub Actions 9", XDG_CONFIG_HOME: "/home/runner/.config", STATS_VMD: "true", GITHUB_REF_NAME: "27/merge", GITHUB_REPOSITORY: "Gearonix/CodeGear", STATS_UE: "true", ANDROID_NDK_ROOT: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_ACTION_REF: "", DEBIAN_FRONTEND: "noninteractive", PROJECT_CWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_REPOSITORY_ID: "659143083", GITHUB_ACTIONS: "true", STATS_NM: "true", npm_package_version: "1.1.0", npm_lifecycle_event: "build", GITHUB_REF_PROTECTED: "false", GITHUB_WORKSPACE: "/home/runner/work/CodeGear/CodeGear", ACCEPT_EULA: "Y", GITHUB_JOB: "building", RUNNER_PERFLOG: "/home/runner/perflog", GITHUB_SHA: "794542bdb9ca368867c787a1c3a0147692ead798", GITHUB_RUN_ATTEMPT: "1", GITHUB_REF: "refs/pull/27/merge", GITHUB_ACTOR: "dependabot[bot]", ANDROID_SDK_ROOT: "/usr/local/lib/android/sdk", LEIN_HOME: "/usr/local/lib/lein", GITHUB_PATH: "/home/runner/work/_temp/_runner_file_commands/add_path_c948b54a-3b52-46ae-9672-dd773199b98d", JAVA_HOME: "/usr/lib/jvm/temurin-11-jdk-amd64", PWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_ACTOR_ID: "49699333", RUNNER_WORKSPACE: "/home/runner/work/CodeGear", BERRY_BIN_FOLDER: "/tmp/xfs-1f91c0b8", npm_execpath: "/tmp/xfs-1f91c0b8/yarn", HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS: "3650", STATS_TIS: "mining", GITHUB_EVENT_NAME: "pull_request", HOMEBREW_NO_AUTO_UPDATE: "1", ANDROID_HOME: "/usr/local/lib/android/sdk", GITHUB_SERVER_URL: "https://github.com", GECKOWEBDRIVER: "/usr/local/share/gecko_driver", LEIN_JAR: "/usr/local/lib/lein/self-installs/leiningen-2.10.0-standalone.jar", GHCUP_INSTALL_BASE_PREFIX: "/usr/local", GITHUB_OUTPUT: "/home/runner/work/_temp/_runner_file_commands/set_output_c948b54a-3b52-46ae-9672-dd773199b98d", EDGEWEBDRIVER: "/usr/local/share/edge_driver", STATS_EXT: "true", ANDROID_NDK: "/usr/local/lib/android/sdk/ndk/25.2.9519653", SGX_AESM_ADDR: "1", CHROME_BIN: "/usr/bin/google-chrome", SELENIUM_JAR_PATH: "/usr/share/java/selenium-server.jar", STATS_EXTP: "https://provjobdsettingscdn.blob.core.windows.net/settings/provjobdsettings-0.5.154/provjobd.data", ANDROID_NDK_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_STEP_SUMMARY: "/home/runner/work/_temp/_runner_file_commands/step_summary_c948b54a-3b52-46ae-9672-dd773199b98d", INIT_CWD: "/home/runner/work/CodeGear/CodeGear", NX_CLI_SET: "true", NX_LOAD_DOT_ENV_FILES: "true", NX_INVOKED_BY_RUNNER: "true", NX_WORKSPACE_ROOT: "/home/runner/work/CodeGear/CodeGear", NX_TERMINAL_OUTPUT_PATH: "/home/runner/work/CodeGear/CodeGear/node_modules/.cache/nx/terminalOutputs/3943693735773211070", NX_TASK_TARGET_PROJECT: "editor", NX_TASK_TARGET_TARGET: "build", NX_TASK_TARGET_CONFIGURATION: "production", NX_TASK_HASH: "3943693735773211070", LERNA_PACKAGE_NAME: "editor", NODE_ENV: "production" }.SC_DISABLE_SPEEDY !== "false" && { GITHUB_STATE: "/home/runner/work/_temp/_runner_file_commands/save_state_c948b54a-3b52-46ae-9672-dd773199b98d", STATS_TRP: "true", DEPLOYMENT_BASEPATH: "/opt/runner", DOTNET_NOLOGO: "1", USER: "runner", npm_config_user_agent: "yarn/3.6.0 npm/? node/v19.9.0 linux x64", CI: "true", RUNNER_ENVIRONMENT: "github-hosted", GITHUB_ENV: "/home/runner/work/_temp/_runner_file_commands/set_env_c948b54a-3b52-46ae-9672-dd773199b98d", PIPX_HOME: "/opt/pipx", npm_node_execpath: "/tmp/xfs-1f91c0b8/node", JAVA_HOME_8_X64: "/usr/lib/jvm/temurin-8-jdk-amd64", SHLVL: "1", HOME: "/home/runner", RUNNER_TEMP: "/home/runner/work/_temp", GITHUB_EVENT_PATH: "/home/runner/work/_temp/_github_workflow/event.json", npm_package_json: "/home/runner/work/CodeGear/CodeGear/package.json", JAVA_HOME_11_X64: "/usr/lib/jvm/temurin-11-jdk-amd64", PIPX_BIN_DIR: "/opt/pipx_bin", GITHUB_REPOSITORY_OWNER: "Gearonix", GRADLE_HOME: "/usr/share/gradle-8.2.1", ANDROID_NDK_LATEST_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", STATS_RDCL: "true", GITHUB_RETENTION_DAYS: "90", GITHUB_REPOSITORY_OWNER_ID: "74734213", POWERSHELL_DISTRIBUTION_CHANNEL: "GitHub-Actions-ubuntu22", AZURE_EXTENSION_DIR: "/opt/az/azcliextensions", GITHUB_HEAD_REF: "dependabot/npm_and_yarn/antd-5.8.3", SYSTEMD_EXEC_PID: "666", GITHUB_GRAPHQL_URL: "https://api.github.com/graphql", GOROOT_1_20_X64: "/opt/hostedtoolcache/go/1.20.7/x64", NVM_DIR: "/home/runner/.nvm", DOTNET_SKIP_FIRST_TIME_EXPERIENCE: "1", JAVA_HOME_17_X64: "/usr/lib/jvm/temurin-17-jdk-amd64", ImageVersion: "20230806.1.0", RUNNER_OS: "Linux", GITHUB_API_URL: "https://api.github.com", SWIFT_PATH: "/usr/share/swift/usr/bin", RUNNER_USER: "runner", STATS_V3PS: "true", CHROMEWEBDRIVER: "/usr/local/share/chromedriver-linux64", JOURNAL_STREAM: "8:16227", GITHUB_WORKFLOW: "CodeGear CI", _: "/usr/local/bin/yarn", GITHUB_RUN_ID: "5857695202", GITHUB_REF_TYPE: "branch", BOOTSTRAP_HASKELL_NONINTERACTIVE: "1", GITHUB_WORKFLOW_SHA: "794542bdb9ca368867c787a1c3a0147692ead798", GITHUB_BASE_REF: "master", ImageOS: "ubuntu22", GITHUB_WORKFLOW_REF: "Gearonix/CodeGear/.github/workflows/master.yml@refs/pull/27/merge", PERFLOG_LOCATION_SETTING: "RUNNER_PERFLOG", GOROOT_1_18_X64: "/opt/hostedtoolcache/go/1.18.10/x64", GITHUB_ACTION_REPOSITORY: "", PATH: "/tmp/xfs-1f91c0b8:/opt/hostedtoolcache/node/19.9.0/x64/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/snap/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin", ANT_HOME: "/usr/share/ant", DOTNET_MULTILEVEL_LOOKUP: "0", RUNNER_TRACKING_ID: "github_153a3452-30cc-4454-9622-778ab305a577", INVOCATION_ID: "0e376e8c469b49bbb1c1d40a32129571", RUNNER_TOOL_CACHE: "/opt/hostedtoolcache", GOROOT_1_19_X64: "/opt/hostedtoolcache/go/1.19.12/x64", npm_package_name: "@code-gear/source", GITHUB_ACTION: "__run_2", GITHUB_RUN_NUMBER: "60", GITHUB_TRIGGERING_ACTOR: "dependabot[bot]", RUNNER_ARCH: "X64", XDG_RUNTIME_DIR: "/run/user/1001", AGENT_TOOLSDIRECTORY: "/opt/hostedtoolcache", LANG: "C.UTF-8", VCPKG_INSTALLATION_ROOT: "/usr/local/share/vcpkg", CONDA: "/usr/share/miniconda", RUNNER_NAME: "GitHub Actions 9", XDG_CONFIG_HOME: "/home/runner/.config", STATS_VMD: "true", GITHUB_REF_NAME: "27/merge", GITHUB_REPOSITORY: "Gearonix/CodeGear", STATS_UE: "true", ANDROID_NDK_ROOT: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_ACTION_REF: "", DEBIAN_FRONTEND: "noninteractive", PROJECT_CWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_REPOSITORY_ID: "659143083", GITHUB_ACTIONS: "true", STATS_NM: "true", npm_package_version: "1.1.0", npm_lifecycle_event: "build", GITHUB_REF_PROTECTED: "false", GITHUB_WORKSPACE: "/home/runner/work/CodeGear/CodeGear", ACCEPT_EULA: "Y", GITHUB_JOB: "building", RUNNER_PERFLOG: "/home/runner/perflog", GITHUB_SHA: "794542bdb9ca368867c787a1c3a0147692ead798", GITHUB_RUN_ATTEMPT: "1", GITHUB_REF: "refs/pull/27/merge", GITHUB_ACTOR: "dependabot[bot]", ANDROID_SDK_ROOT: "/usr/local/lib/android/sdk", LEIN_HOME: "/usr/local/lib/lein", GITHUB_PATH: "/home/runner/work/_temp/_runner_file_commands/add_path_c948b54a-3b52-46ae-9672-dd773199b98d", JAVA_HOME: "/usr/lib/jvm/temurin-11-jdk-amd64", PWD: "/home/runner/work/CodeGear/CodeGear", GITHUB_ACTOR_ID: "49699333", RUNNER_WORKSPACE: "/home/runner/work/CodeGear", BERRY_BIN_FOLDER: "/tmp/xfs-1f91c0b8", npm_execpath: "/tmp/xfs-1f91c0b8/yarn", HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS: "3650", STATS_TIS: "mining", GITHUB_EVENT_NAME: "pull_request", HOMEBREW_NO_AUTO_UPDATE: "1", ANDROID_HOME: "/usr/local/lib/android/sdk", GITHUB_SERVER_URL: "https://github.com", GECKOWEBDRIVER: "/usr/local/share/gecko_driver", LEIN_JAR: "/usr/local/lib/lein/self-installs/leiningen-2.10.0-standalone.jar", GHCUP_INSTALL_BASE_PREFIX: "/usr/local", GITHUB_OUTPUT: "/home/runner/work/_temp/_runner_file_commands/set_output_c948b54a-3b52-46ae-9672-dd773199b98d", EDGEWEBDRIVER: "/usr/local/share/edge_driver", STATS_EXT: "true", ANDROID_NDK: "/usr/local/lib/android/sdk/ndk/25.2.9519653", SGX_AESM_ADDR: "1", CHROME_BIN: "/usr/bin/google-chrome", SELENIUM_JAR_PATH: "/usr/share/java/selenium-server.jar", STATS_EXTP: "https://provjobdsettingscdn.blob.core.windows.net/settings/provjobdsettings-0.5.154/provjobd.data", ANDROID_NDK_HOME: "/usr/local/lib/android/sdk/ndk/25.2.9519653", GITHUB_STEP_SUMMARY: "/home/runner/work/_temp/_runner_file_commands/step_summary_c948b54a-3b52-46ae-9672-dd773199b98d", INIT_CWD: "/home/runner/work/CodeGear/CodeGear", NX_CLI_SET: "true", NX_LOAD_DOT_ENV_FILES: "true", NX_INVOKED_BY_RUNNER: "true", NX_WORKSPACE_ROOT: "/home/runner/work/CodeGear/CodeGear", NX_TERMINAL_OUTPUT_PATH: "/home/runner/work/CodeGear/CodeGear/node_modules/.cache/nx/terminalOutputs/3943693735773211070", NX_TASK_TARGET_PROJECT: "editor", NX_TASK_TARGET_TARGET: "build", NX_TASK_TARGET_CONFIGURATION: "production", NX_TASK_HASH: "3943693735773211070", LERNA_PACKAGE_NAME: "editor", NODE_ENV: "production" }.SC_DISABLE_SPEEDY);
 function Go(e) {
   for (var t = arguments.length, r = new Array(t > 1 ? t - 1 : 0), n = 1; n < t; n++)
     r[n - 1] = arguments[n];
@@ -12091,11 +12091,11 @@ var Qy = function() {
   return e.prototype.getName = function(t) {
     return t === void 0 && (t = Gc), this.name + t.hash;
   }, e;
-}(), Zy = /([A-Z])/, e0 = /([A-Z])/g, t0 = /^ms-/, r0 = function(e) {
+}(), Zy = /([A-Z])/, eS = /([A-Z])/g, tS = /^ms-/, rS = function(e) {
   return "-" + e.toLowerCase();
 };
 function Mf(e) {
-  return Zy.test(e) ? e.replace(e0, r0).replace(t0, "-ms-") : e;
+  return Zy.test(e) ? e.replace(eS, rS).replace(tS, "-ms-") : e;
 }
 var kf = function(e) {
   return e == null || e === !1 || e === "";
@@ -12132,13 +12132,13 @@ function xt(e) {
     r[n - 1] = arguments[n];
   return eo(e) || Sc(e) ? Lf(Qn(Cf($a, [e].concat(r)))) : r.length === 0 && e.length === 1 && typeof e[0] == "string" ? e : Lf(Qn(Cf(e, r)));
 }
-var n0 = function(e, t, r) {
+var nS = function(e, t, r) {
   return r === void 0 && (r = kr), e.theme !== r.theme && e.theme || t || r.theme;
-}, i0 = /[!"#$%&'()*+,./:;<=>?@[\\\]^`{|}~-]+/g, o0 = /(^-|-$)/g;
+}, iS = /[!"#$%&'()*+,./:;<=>?@[\\\]^`{|}~-]+/g, oS = /(^-|-$)/g;
 function Su(e) {
-  return e.replace(i0, "-").replace(o0, "");
+  return e.replace(iS, "-").replace(oS, "");
 }
-var a0 = function(e) {
+var aS = function(e) {
   return Dc(mT(e) >>> 0);
 };
 function zo(e) {
@@ -12146,10 +12146,10 @@ function zo(e) {
 }
 var Uc = function(e) {
   return typeof e == "function" || typeof e == "object" && e !== null && !Array.isArray(e);
-}, s0 = function(e) {
+}, sS = function(e) {
   return e !== "__proto__" && e !== "constructor" && e !== "prototype";
 };
-function u0(e, t, r) {
+function uS(e, t, r) {
   var n = e[r];
   Uc(t) && Uc(n) ? OT(n, t) : e[r] = t;
 }
@@ -12160,7 +12160,7 @@ function OT(e) {
     var a = o[i];
     if (Uc(a))
       for (var s in a)
-        s0(s) && u0(e, a[s], s);
+        sS(s) && uS(e, a[s], s);
   }
   return e;
 }
@@ -12171,7 +12171,7 @@ function bT(e, t, r) {
   var n = Xl(e), i = !zo(e), o = t.attrs, a = o === void 0 ? $a : o, s = t.componentId, u = s === void 0 ? function(T, E) {
     var R = typeof T != "string" ? "sc" : Su(T);
     Du[R] = (Du[R] || 0) + 1;
-    var b = R + "-" + a0("5.3.6" + R + Du[R]);
+    var b = R + "-" + aS("5.3.6" + R + Du[R]);
     return E ? E + "-" + b : b;
   }(t.displayName, t.parentComponentId) : s, c = t.displayName, _ = c === void 0 ? function(T) {
     return zo(T) ? "styled." + T : "Styled(" + wf(T) + ")";
@@ -12189,7 +12189,7 @@ function bT(e, t, r) {
           for (ve in eo(at) && (at = at(w)), at)
             w[ve] = Ee[ve] = ve === "className" ? (ee = Ee[ve], Ye = at[ve], ee && Ye ? ee + " " + Ye : ee || Ye) : at[ve];
         }), [w, Ee];
-      }(n0(b, ot(Kl), G) || kr, b, C), Q = H[0], ue = H[1], ie = function(V, v, ne, w) {
+      }(nS(b, ot(Kl), G) || kr, b, C), Q = H[0], ue = H[1], ie = function(V, v, ne, w) {
         var Ee = qy(), ce = Jy(), ve = v ? V.generateAndInjectStyles(kr, Ee, ce) : V.generateAndInjectStyles(ne, Ee, ce);
         return ve;
       }(D, I, Q), Se = N, Be = ue.$as || b.$as || ue.as || b.as || x, Ae = zo(Be), U = ue !== b ? or({}, b, {}, ue) : b, L = {};
@@ -12233,7 +12233,7 @@ var Cc = function(e) {
 ["a", "abbr", "address", "area", "article", "aside", "audio", "b", "base", "bdi", "bdo", "big", "blockquote", "body", "br", "button", "canvas", "caption", "cite", "code", "col", "colgroup", "data", "datalist", "dd", "del", "details", "dfn", "dialog", "div", "dl", "dt", "em", "embed", "fieldset", "figcaption", "figure", "footer", "form", "h1", "h2", "h3", "h4", "h5", "h6", "head", "header", "hgroup", "hr", "html", "i", "iframe", "img", "input", "ins", "kbd", "keygen", "label", "legend", "li", "link", "main", "map", "mark", "marquee", "menu", "menuitem", "meta", "meter", "nav", "noscript", "object", "ol", "optgroup", "option", "output", "p", "param", "picture", "pre", "progress", "q", "rp", "rt", "ruby", "s", "samp", "script", "section", "select", "small", "source", "span", "strong", "style", "sub", "summary", "sup", "table", "tbody", "td", "textarea", "tfoot", "th", "thead", "time", "title", "tr", "track", "u", "ul", "var", "video", "wbr", "circle", "clipPath", "defs", "ellipse", "foreignObject", "g", "image", "line", "linearGradient", "marker", "mask", "path", "pattern", "polygon", "polyline", "radialGradient", "rect", "stop", "svg", "text", "textPath", "tspan"].forEach(function(e) {
   Cc[e] = Cc(e);
 });
-var c0 = function() {
+var cS = function() {
   return ot(Kl);
 };
 const we = Cc, Nt = (e = "100%", t = e) => xt`
@@ -12243,7 +12243,7 @@ const we = Cc, Nt = (e = "100%", t = e) => xt`
 xt`
   border: 1px solid red;
 `;
-const l0 = (e) => xt`
+const lS = (e) => xt`
   padding-left: ${e}px;
   padding-right: ${e}px;
 `, _n = (e = "flex-start", t = "stretch", r = "row") => xt`
@@ -12274,14 +12274,14 @@ const l0 = (e) => xt`
   position: absolute;
   ${Object.entries(e).map(([t, r]) => `${t}: ${r};`).join(`
 `)}
-`, _0 = (e, t) => xt`
+`, _S = (e, t) => xt`
   margin-left: ${e}px;
   margin-top: ${t}px;
-`, d0 = xt`
+`, dS = xt`
   -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
   -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
   box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
-`, f0 = "1px solid", ww = we.div`
+`, fS = "1px solid", ww = we.div`
   ${_n("center", "center")};
   ${RT({
   left: "0",
@@ -12300,7 +12300,7 @@ const l0 = (e) => xt`
   min-height: 300px;
   border-radius: 6px;
   cursor: grab;
-  ${d0};
+  ${dS};
   touch-action: none;
   overflow-y: auto;
   scroll-behavior: smooth;
@@ -12318,13 +12318,13 @@ const l0 = (e) => xt`
   padding-bottom: 18px;
   margin-bottom: 30px;
   font-size: ${({ theme: e }) => e.fz10};
-  border-bottom: ${f0} ${it("lightGrey")};
+  border-bottom: ${fS} ${it("lightGrey")};
 `, kw = we.div`
   background: ${it("lightGrey")};
   ${Nt("100%", "2px")};
   margin-bottom: 30px;
   margin-top: -8px;
-`, h0 = (e, t) => {
+`, hS = (e, t) => {
   const { Spring: r, Gesture: n } = Ss(), [{ y: i }, o] = r.useSpring(() => ({ y: t })), a = () => {
     o.start({ y: 0, immediate: !1, config: r.config.gentle });
   }, s = (l = 0) => {
@@ -12355,7 +12355,7 @@ const l0 = (e) => xt`
       y: i
     }
   };
-}, p0 = we.div`
+}, pS = we.div`
   padding-left: 15px;
   z-index: 15;
   position: fixed;
@@ -12371,12 +12371,12 @@ const l0 = (e) => xt`
   box-sizing: border-box;
   scroll-behavior: smooth;
   ${$l()};
-`, m0 = ({ children: e, onClose: t, isOpen: r, height: n }) => {
-  const i = h0(t, n);
+`, mS = ({ children: e, onClose: t, isOpen: r, height: n }) => {
+  const i = hS(t, n);
   return Le(() => {
     i.toggle(r);
   }, [r]), /* @__PURE__ */ K(
-    p0,
+    pS,
     {
       $bottom: n,
       ...i.bind(),
@@ -12385,7 +12385,7 @@ const l0 = (e) => xt`
       children: e
     }
   );
-}, T0 = (e) => /* @__PURE__ */ K(Bl, { children: /* @__PURE__ */ K(m0, { ...e }) }), vT = ({
+}, TS = (e) => /* @__PURE__ */ K(Bl, { children: /* @__PURE__ */ K(mS, { ...e }) }), vT = ({
   onChange: e,
   value: t,
   options: r,
@@ -12400,7 +12400,7 @@ const l0 = (e) => xt`
     options: r,
     defaultValue: n
   }
-), E0 = mr(({ onChange: e }) => {
+), ES = mr(({ onChange: e }) => {
   const { fontSize: t, tabSize: r } = ni(), n = ds(), i = n.getActiveTabText(), o = n.getActiveLanguage();
   return /* @__PURE__ */ K(
     Sv,
@@ -12416,7 +12416,7 @@ const l0 = (e) => xt`
       })
     }
   );
-}), O0 = ({ children: e }) => {
+}), OS = ({ children: e }) => {
   const { Spring: t } = Ss(), r = t.useSpring({
     from: {
       opacity: 0,
@@ -12429,7 +12429,7 @@ const l0 = (e) => xt`
     config: t.config.stiff
   });
   return /* @__PURE__ */ K(t.a.div, { style: { ...r }, children: e });
-}, b0 = (e) => /* @__PURE__ */ K(O0, { children: /* @__PURE__ */ K(E0, { ...e }) }), zl = {
+}, bS = (e) => /* @__PURE__ */ K(OS, { children: /* @__PURE__ */ K(ES, { ...e }) }), zl = {
   js: "javascript",
   ts: "typescript",
   tsx: "typescript",
@@ -12443,18 +12443,18 @@ const l0 = (e) => xt`
   go: "go",
   c: "c",
   java: "java"
-}, R0 = [
+}, RS = [
   "java",
   "python",
   "cpp",
   "c",
   "go",
   "javascript"
-], v0 = () => [...new Set(Object.values(zl))].map((t) => ({
+], vS = () => [...new Set(Object.values(zl))].map((t) => ({
   value: t,
   label: t
-})), g0 = mr(() => {
-  const e = v0(), t = ds(), r = t.getActiveLanguage(), n = t.getActiveTab();
+})), gS = mr(() => {
+  const e = vS(), t = ds(), r = t.getActiveLanguage(), n = t.getActiveTab();
   return /* @__PURE__ */ K(
     vT,
     {
@@ -12465,7 +12465,7 @@ const l0 = (e) => xt`
       options: e
     }
   );
-}), gT = "Custom", I0 = [
+}), gT = "Custom", IS = [
   "vs-dark",
   "Monokai",
   "Dracula",
@@ -12477,7 +12477,7 @@ const l0 = (e) => xt`
   "Eiffel",
   "Tomorrow",
   gT
-], N0 = mr(() => {
+], NS = mr(() => {
   const e = $r(), { theme: t } = ni();
   return /* @__PURE__ */ K(
     vT,
@@ -12487,7 +12487,7 @@ const l0 = (e) => xt`
         e.changeTheme(n);
       },
       value: t,
-      options: I0.map((n) => ({
+      options: IS.map((n) => ({
         value: n,
         label: n
       }))
@@ -12495,35 +12495,35 @@ const l0 = (e) => xt`
   );
 });
 let qo;
-const A0 = new Uint8Array(16);
-function y0() {
+const AS = new Uint8Array(16);
+function yS() {
   if (!qo && (qo = typeof crypto < "u" && crypto.getRandomValues && crypto.getRandomValues.bind(crypto), !qo))
     throw new Error("crypto.getRandomValues() not supported. See https://github.com/uuidjs/uuid#getrandomvalues-not-supported");
-  return qo(A0);
+  return qo(AS);
 }
 const qe = [];
 for (let e = 0; e < 256; ++e)
   qe.push((e + 256).toString(16).slice(1));
-function S0(e, t = 0) {
+function SS(e, t = 0) {
   return (qe[e[t + 0]] + qe[e[t + 1]] + qe[e[t + 2]] + qe[e[t + 3]] + "-" + qe[e[t + 4]] + qe[e[t + 5]] + "-" + qe[e[t + 6]] + qe[e[t + 7]] + "-" + qe[e[t + 8]] + qe[e[t + 9]] + "-" + qe[e[t + 10]] + qe[e[t + 11]] + qe[e[t + 12]] + qe[e[t + 13]] + qe[e[t + 14]] + qe[e[t + 15]]).toLowerCase();
 }
-const D0 = typeof crypto < "u" && crypto.randomUUID && crypto.randomUUID.bind(crypto), Bf = {
-  randomUUID: D0
+const DS = typeof crypto < "u" && crypto.randomUUID && crypto.randomUUID.bind(crypto), Bf = {
+  randomUUID: DS
 };
-function G0(e, t, r) {
+function GS(e, t, r) {
   if (Bf.randomUUID && !t && !e)
     return Bf.randomUUID();
   e = e || {};
-  const n = e.random || (e.rng || y0)();
+  const n = e.random || (e.rng || yS)();
   if (n[6] = n[6] & 15 | 64, n[8] = n[8] & 63 | 128, t) {
     r = r || 0;
     for (let i = 0; i < 16; ++i)
       t[r + i] = n[i];
     return t;
   }
-  return S0(n);
+  return SS(n);
 }
-const U0 = ({
+const US = ({
   fileData: e,
   lastNumber: t
 }) => ({
@@ -12532,18 +12532,18 @@ const U0 = ({
   label: e?.name ?? "Untitled",
   lang: e?.language ?? "text",
   idx: t ? t + 1 : 0,
-  key: G0(),
+  key: GS(),
   wasChanged: !1
-}), IT = 9, Lw = [14, 16, 18, 20, 22, 24, 26], Bw = [4, 2], C0 = (e) => e.length >= IT;
-class w0 {
+}), IT = 9, Lw = [14, 16, 18, 20, 22, 24, 26], Bw = [4, 2], CS = (e) => e.length >= IT;
+class wS {
   constructor(t) {
     Xr(this), this.state = t;
   }
   createTab(t) {
     const r = this.state.content;
-    if (C0(r))
+    if (CS(r))
       return null;
-    const n = r.at(-1)?.idx, i = U0({ fileData: t, lastNumber: n });
+    const n = r.at(-1)?.idx, i = US({ fileData: t, lastNumber: n });
     return this.state.activeKey = i.key, this.state.content.push(i), i;
   }
   removeTab(t) {
@@ -12554,7 +12554,7 @@ class w0 {
     this.state.activeKey = t;
   }
 }
-const P0 = () => {
+const PS = () => {
   const [e, t] = ft(null);
   return {
     protect: (r) => (...n) => {
@@ -12568,10 +12568,10 @@ const P0 = () => {
     },
     val: e
   };
-}, H0 = (e) => e.map((t) => ({
+}, HS = (e) => e.map((t) => ({
   label: t.label,
   key: t.key
-})), M0 = we(yh)`
+})), MS = we(yh)`
   color: ${ba("secondaryGrey")};
   height: 50px;
   margin: 12px;
@@ -12588,8 +12588,8 @@ const P0 = () => {
   .ant-tabs-tab-btn {
     color: ${ba("secondaryGrey")};
   }
-`, k0 = mr(() => {
-  const { activeKey: e, content: t } = ni(), r = $r(), n = H0(t), i = P0(), o = i.protect(
+`, kS = mr(() => {
+  const { activeKey: e, content: t } = ni(), r = $r(), n = HS(t), i = PS(), o = i.protect(
     (u, c) => {
       if (c === "add")
         r.tabs.createTab();
@@ -12616,7 +12616,7 @@ const P0 = () => {
       onCancel: i.off,
       arrow: !1,
       children: /* @__PURE__ */ K(
-        M0,
+        MS,
         {
           type: "editable-card",
           onChange: a,
@@ -12628,11 +12628,11 @@ const P0 = () => {
       )
     }
   ) });
-}), L0 = [1, 2, 3, 4, 5, 6, 7, 8, 9], B0 = () => {
+}), LS = [1, 2, 3, 4, 5, 6, 7, 8, 9], BS = () => {
   const e = Km(), { tabs: t } = $r(), { content: r } = ni();
   Le(() => (e.on(
     Object.fromEntries(
-      L0.map((n) => {
+      LS.map((n) => {
         const o = r[n - 1]?.key;
         return [n.toString(), o ? () => t.changeActiveTab(o) : null];
       })
@@ -12640,11 +12640,11 @@ const P0 = () => {
   ), () => {
     e.clear();
   }), [r.length]);
-}, x0 = (e) => Gv(e) ? "name" in e && typeof e.name == "string" && "type" in e && typeof e.type == "string" && "content" in e && typeof e.content == "string" : !1, NT = (e) => {
+}, xS = (e) => Gv(e) ? "name" in e && typeof e.name == "string" && "type" in e && typeof e.type == "string" && "content" in e && typeof e.content == "string" : !1, NT = (e) => {
   const t = e.split(".").at(-1);
-  return F0(t) ? [zl[t], t] : ["text", t];
+  return FS(t) ? [zl[t], t] : ["text", t];
 };
-function F0(e) {
+function FS(e) {
   return e in zl;
 }
 const AT = {
@@ -12652,7 +12652,7 @@ const AT = {
   NotSupportedByBrowser: () => "Your browser does not support saving and opening files.",
   WrongJsonObject: (e) => `Incoming json object should be must be ${e} type.`,
   WrongResponseType: (e) => `Incoming response object should be must be ${e} type.`
-}, j0 = {
+}, jS = {
   types: [
     {
       accept: {
@@ -12671,9 +12671,9 @@ const AT = {
       description: "Text Files"
     }
   ]
-}, V0 = () => async () => {
+}, VS = () => async () => {
   if ("showOpenFilePicker" in window) {
-    const [e] = await window.showOpenFilePicker(j0), t = await e.getFile(), r = await t.text(), [n] = NT(t.name);
+    const [e] = await window.showOpenFilePicker(jS), t = await e.getFile(), r = await t.text(), [n] = NT(t.name);
     return {
       name: t.name,
       type: t.type,
@@ -12683,7 +12683,7 @@ const AT = {
     };
   }
   console.warn(AT.NotSupportedByBrowser());
-}, W0 = () => async (e, t) => {
+}, WS = () => async (e, t) => {
   try {
     let r = e;
     Uv(e?.createWritable) || (r = await window.showSaveFilePicker());
@@ -12693,11 +12693,11 @@ const AT = {
     console.warn(AT.NotSupportedByBrowser());
   }
 }, yT = () => {
-  const e = V0(), t = W0(), r = $r(), n = ds();
+  const e = VS(), t = WS(), r = $r(), n = ds();
   return {
     openFile: xr(async () => {
       const a = await e();
-      x0(a) && r.tabs.createTab(a);
+      xS(a) && r.tabs.createTab(a);
     }, [r.tabs, e]),
     saveFile: async () => {
       const a = n.getActiveTab(), s = a.fileHandle, u = a.content;
@@ -12709,9 +12709,9 @@ const AT = {
   };
 };
 var gr = /* @__PURE__ */ ((e) => (e.O = "O", e.S = "S", e.N = "N", e.T = "T", e.P = "P", e.J = "J", e.Q = "Q", e))(gr || {});
-const X0 = () => {
+const XS = () => {
   const e = $r(), t = Km(), { openFile: r, saveFile: n } = yT();
-  B0();
+  BS();
   const i = OR("isTerminalOpened"), o = cn(), a = xr(() => {
     o.toggle("isSettingsOpened");
   }, [o]);
@@ -12730,13 +12730,13 @@ const X0 = () => {
   }), () => {
     t.clear();
   }), [o.state.isSettingsOpened]);
-}, Y0 = we.div`
+}, YS = we.div`
   width: 100%;
-`, K0 = we.div`
+`, KS = we.div`
   ${_n("space-between")}
   ${Nt("100%", "48px")}
   margin-bottom: 10px;
-`, $0 = we.div`
+`, $S = we.div`
   width: 30%;
   display: flex;
   gap: 30px;
@@ -12745,7 +12745,7 @@ const X0 = () => {
   const e = $r(), { theme: t, content: r, customBackground: n, customColor: i } = ni(), o = RR(), a = lw(), s = qA(() => {
     o.set("EDITOR_CONTENT_DATA", r);
   }, 1e3);
-  X0();
+  XS();
   const u = Hp(), c = (_) => {
     Mp(_) && (e.editor.saveContent(_), s());
   };
@@ -12756,18 +12756,18 @@ const X0 = () => {
       background: n,
       color: i
     });
-  }, [n, i]), /* @__PURE__ */ mt(Y0, { children: [
-    /* @__PURE__ */ mt(K0, { children: [
-      /* @__PURE__ */ K(k0, {}),
-      /* @__PURE__ */ mt($0, { children: [
-        /* @__PURE__ */ K(N0, {}),
-        /* @__PURE__ */ K(g0, {})
+  }, [n, i]), /* @__PURE__ */ mt(YS, { children: [
+    /* @__PURE__ */ mt(KS, { children: [
+      /* @__PURE__ */ K(kS, {}),
+      /* @__PURE__ */ mt($S, { children: [
+        /* @__PURE__ */ K(NS, {}),
+        /* @__PURE__ */ K(gS, {})
       ] })
     ] }),
-    /* @__PURE__ */ K(Bl, { children: /* @__PURE__ */ K(b0, { onChange: c }) })
+    /* @__PURE__ */ K(Bl, { children: /* @__PURE__ */ K(bS, { onChange: c }) })
   ] });
 });
-function z0(e) {
+function zS(e) {
   throw new Error('Could not dynamically require "' + e + '". Please configure the dynamicRequireTargets or/and ignoreDynamicRequires option of @rollup/plugin-commonjs appropriately for this require call to work.');
 }
 //! moment.js
@@ -12779,7 +12779,7 @@ var ST;
 function B() {
   return ST.apply(null, arguments);
 }
-function q0(e) {
+function qS(e) {
   ST = e;
 }
 function kt(e) {
@@ -12823,7 +12823,7 @@ function Gr(e, t) {
 function Zt(e, t, r, n) {
   return ZT(e, t, r, n, !0).utc();
 }
-function J0() {
+function JS() {
   return {
     empty: !1,
     unusedTokens: [],
@@ -12844,7 +12844,7 @@ function J0() {
   };
 }
 function te(e) {
-  return e._pf == null && (e._pf = J0()), e._pf;
+  return e._pf == null && (e._pf = JS()), e._pf;
 }
 var Pc;
 Array.prototype.some ? Pc = Array.prototype.some : Pc = function(e) {
@@ -12921,7 +12921,7 @@ B.deprecationHandler = null;
 function er(e) {
   return typeof Function < "u" && e instanceof Function || Object.prototype.toString.call(e) === "[object Function]";
 }
-function Q0(e) {
+function QS(e) {
   var t, r;
   for (r in e)
     pe(e, r) && (t = e[r], er(t) ? this[r] = t : this["_" + r] = t);
@@ -12947,7 +12947,7 @@ Object.keys ? Mc = Object.keys : Mc = function(e) {
     pe(e, t) && r.push(t);
   return r;
 };
-var Z0 = {
+var ZS = {
   sameDay: "[Today at] LT",
   nextDay: "[Tomorrow at] LT",
   nextWeek: "dddd [at] LT",
@@ -13482,19 +13482,19 @@ function Z1(e, t, r) {
       return n;
   }
 }
-function eS(e) {
+function e0(e) {
   if (!this.isValid())
     return e != null ? this : NaN;
   var t = this._isUTC ? this._d.getUTCDay() : this._d.getDay();
   return e != null ? (e = j1(e, this.localeData()), this.add(e - t, "d")) : t;
 }
-function tS(e) {
+function t0(e) {
   if (!this.isValid())
     return e != null ? this : NaN;
   var t = (this.day() + 7 - this.localeData()._week.dow) % 7;
   return e == null ? t : this.add(e - t, "d");
 }
-function rS(e) {
+function r0(e) {
   if (!this.isValid())
     return e != null ? this : NaN;
   if (e != null) {
@@ -13503,13 +13503,13 @@ function rS(e) {
   } else
     return this.day() || 7;
 }
-function nS(e) {
+function n0(e) {
   return this._weekdaysParseExact ? (pe(this, "_weekdaysRegex") || o_.call(this), e ? this._weekdaysStrictRegex : this._weekdaysRegex) : (pe(this, "_weekdaysRegex") || (this._weekdaysRegex = Y1), this._weekdaysStrictRegex && e ? this._weekdaysStrictRegex : this._weekdaysRegex);
 }
-function iS(e) {
+function i0(e) {
   return this._weekdaysParseExact ? (pe(this, "_weekdaysRegex") || o_.call(this), e ? this._weekdaysShortStrictRegex : this._weekdaysShortRegex) : (pe(this, "_weekdaysShortRegex") || (this._weekdaysShortRegex = K1), this._weekdaysShortStrictRegex && e ? this._weekdaysShortStrictRegex : this._weekdaysShortRegex);
 }
-function oS(e) {
+function o0(e) {
   return this._weekdaysParseExact ? (pe(this, "_weekdaysRegex") || o_.call(this), e ? this._weekdaysMinStrictRegex : this._weekdaysMinRegex) : (pe(this, "_weekdaysMinRegex") || (this._weekdaysMinRegex = $1), this._weekdaysMinStrictRegex && e ? this._weekdaysMinStrictRegex : this._weekdaysMinRegex);
 }
 function o_() {
@@ -13533,12 +13533,12 @@ function o_() {
 function a_() {
   return this.hours() % 12 || 12;
 }
-function aS() {
+function a0() {
   return this.hours() || 24;
 }
 W("H", ["HH", 2], 0, "hour");
 W("h", ["hh", 2], 0, a_);
-W("k", ["kk", 2], 0, aS);
+W("k", ["kk", 2], 0, a0);
 W("hmm", 0, 0, function() {
   return "" + a_.apply(this) + qt(this.minutes(), 2);
 });
@@ -13606,15 +13606,15 @@ Ne("Hmmss", function(e, t, r) {
   var n = e.length - 4, i = e.length - 2;
   t[Fe] = oe(e.substr(0, n)), t[Ct] = oe(e.substr(n, 2)), t[sr] = oe(e.substr(i));
 });
-function sS(e) {
+function s0(e) {
   return (e + "").toLowerCase().charAt(0) === "p";
 }
-var uS = /[ap]\.?m?\.?/i, cS = si("Hours", !0);
-function lS(e, t, r) {
+var u0 = /[ap]\.?m?\.?/i, c0 = si("Hours", !0);
+function l0(e, t, r) {
   return e > 11 ? r ? "pm" : "PM" : r ? "am" : "AM";
 }
 var zT = {
-  calendar: Z0,
+  calendar: ZS,
   longDateFormat: n1,
   invalidDate: o1,
   ordinal: s1,
@@ -13626,9 +13626,9 @@ var zT = {
   weekdays: W1,
   weekdaysMin: X1,
   weekdaysShort: YT,
-  meridiemParse: uS
+  meridiemParse: u0
 }, Ue = {}, bi = {}, no;
-function _S(e, t) {
+function _0(e, t) {
   var r, n = Math.min(e.length, t.length);
   for (r = 0; r < n; r += 1)
     if (e[r] !== t[r])
@@ -13638,12 +13638,12 @@ function _S(e, t) {
 function jf(e) {
   return e && e.toLowerCase().replace("_", "-");
 }
-function dS(e) {
+function d0(e) {
   for (var t = 0, r, n, i, o; t < e.length; ) {
     for (o = jf(e[t]).split("-"), r = o.length, n = jf(e[t + 1]), n = n ? n.split("-") : null; r > 0; ) {
       if (i = Ls(o.slice(0, r).join("-")), i)
         return i;
-      if (n && n.length >= r && _S(o, n) >= r - 1)
+      if (n && n.length >= r && _0(o, n) >= r - 1)
         break;
       r--;
     }
@@ -13651,14 +13651,14 @@ function dS(e) {
   }
   return no;
 }
-function fS(e) {
+function f0(e) {
   return e.match("^[^/\\\\]*$") != null;
 }
 function Ls(e) {
   var t = null, r;
-  if (Ue[e] === void 0 && typeof module < "u" && module && module.exports && fS(e))
+  if (Ue[e] === void 0 && typeof module < "u" && module && module.exports && f0(e))
     try {
-      t = no._abbr, r = z0, r("./locale/" + e), Lr(t);
+      t = no._abbr, r = zS, r("./locale/" + e), Lr(t);
     } catch {
       Ue[e] = null;
     }
@@ -13694,7 +13694,7 @@ function s_(e, t) {
   } else
     return delete Ue[e], null;
 }
-function hS(e, t) {
+function h0(e, t) {
   if (t != null) {
     var r, n, i = zT;
     Ue[e] != null && Ue[e].parentLocale != null ? Ue[e].set(Hc(Ue[e]._config, t)) : (n = Ls(e), n != null && (i = n._config), t = Hc(i, t), n == null && (t.abbr = e), r = new Zl(t), r.parentLocale = Ue[e], Ue[e] = r), Lr(e);
@@ -13711,16 +13711,16 @@ function Tr(e) {
       return t;
     e = [e];
   }
-  return dS(e);
+  return d0(e);
 }
-function pS() {
+function p0() {
   return Mc(Ue);
 }
 function u_(e) {
   var t, r = e._a;
   return r && te(e).overflow === -2 && (t = r[ar] < 0 || r[ar] > 11 ? ar : r[Vt] < 1 || r[Vt] > ks(r[Ze], r[ar]) ? Vt : r[Fe] < 0 || r[Fe] > 24 || r[Fe] === 24 && (r[Ct] !== 0 || r[sr] !== 0 || r[Jr] !== 0) ? Fe : r[Ct] < 0 || r[Ct] > 59 ? Ct : r[sr] < 0 || r[sr] > 59 ? sr : r[Jr] < 0 || r[Jr] > 999 ? Jr : -1, te(e)._overflowDayOfYear && (t < Ze || t > Vt) && (t = Vt), te(e)._overflowWeeks && t === -1 && (t = R1), te(e)._overflowWeekday && t === -1 && (t = v1), te(e).overflow = t), e;
 }
-var mS = /^\s*((?:[+-]\d{6}|\d{4})-(?:\d\d-\d\d|W\d\d-\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?::\d\d(?::\d\d(?:[.,]\d+)?)?)?)([+-]\d\d(?::?\d\d)?|\s*Z)?)?$/, TS = /^\s*((?:[+-]\d{6}|\d{4})(?:\d\d\d\d|W\d\d\d|W\d\d|\d\d\d|\d\d|))(?:(T| )(\d\d(?:\d\d(?:\d\d(?:[.,]\d+)?)?)?)([+-]\d\d(?::?\d\d)?|\s*Z)?)?$/, ES = /Z|[+-]\d\d(?::?\d\d)?/, Qo = [
+var m0 = /^\s*((?:[+-]\d{6}|\d{4})-(?:\d\d-\d\d|W\d\d-\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?::\d\d(?::\d\d(?:[.,]\d+)?)?)?)([+-]\d\d(?::?\d\d)?|\s*Z)?)?$/, T0 = /^\s*((?:[+-]\d{6}|\d{4})(?:\d\d\d\d|W\d\d\d|W\d\d|\d\d\d|\d\d|))(?:(T| )(\d\d(?:\d\d(?:\d\d(?:[.,]\d+)?)?)?)([+-]\d\d(?::?\d\d)?|\s*Z)?)?$/, E0 = /Z|[+-]\d\d(?::?\d\d)?/, Qo = [
   ["YYYYYY-MM-DD", /[+-]\d{6}-\d\d-\d\d/],
   ["YYYY-MM-DD", /\d{4}-\d\d-\d\d/],
   ["GGGG-[W]WW-E", /\d{4}-W\d\d-\d/],
@@ -13744,7 +13744,7 @@ var mS = /^\s*((?:[+-]\d{6}|\d{4})-(?:\d\d-\d\d|W\d\d-\d|W\d\d|\d\d\d|\d\d))(?:(
   ["HHmmss", /\d\d\d\d\d\d/],
   ["HHmm", /\d\d\d\d/],
   ["HH", /\d\d/]
-], OS = /^\/?Date\((-?\d+)/i, bS = /^(?:(Mon|Tue|Wed|Thu|Fri|Sat|Sun),?\s)?(\d{1,2})\s(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s(\d{2,4})\s(\d\d):(\d\d)(?::(\d\d))?\s(?:(UT|GMT|[ECMP][SD]T)|([Zz])|([+-]\d{4}))$/, RS = {
+], O0 = /^\/?Date\((-?\d+)/i, b0 = /^(?:(Mon|Tue|Wed|Thu|Fri|Sat|Sun),?\s)?(\d{1,2})\s(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s(\d{2,4})\s(\d\d):(\d\d)(?::(\d\d))?\s(?:(UT|GMT|[ECMP][SD]T)|([Zz])|([+-]\d{4}))$/, R0 = {
   UT: 0,
   GMT: 0,
   EDT: -4 * 60,
@@ -13757,7 +13757,7 @@ var mS = /^\s*((?:[+-]\d{6}|\d{4})-(?:\d\d-\d\d|W\d\d-\d|W\d\d|\d\d\d|\d\d))(?:(
   PST: -8 * 60
 };
 function qT(e) {
-  var t, r, n = e._i, i = mS.exec(n) || TS.exec(n), o, a, s, u, c = Qo.length, _ = Cu.length;
+  var t, r, n = e._i, i = m0.exec(n) || T0.exec(n), o, a, s, u, c = Qo.length, _ = Cu.length;
   if (i) {
     for (te(e).iso = !0, t = 0, r = c; t < r; t++)
       if (Qo[t][1].exec(i[1])) {
@@ -13784,7 +13784,7 @@ function qT(e) {
       return;
     }
     if (i[4])
-      if (ES.exec(i[4]))
+      if (E0.exec(i[4]))
         u = "Z";
       else {
         e._isValid = !1;
@@ -13794,9 +13794,9 @@ function qT(e) {
   } else
     e._isValid = !1;
 }
-function vS(e, t, r, n, i, o) {
+function v0(e, t, r, n, i, o) {
   var a = [
-    gS(e),
+    g0(e),
     BT.indexOf(t),
     parseInt(r, 10),
     parseInt(n, 10),
@@ -13804,14 +13804,14 @@ function vS(e, t, r, n, i, o) {
   ];
   return o && a.push(parseInt(o, 10)), a;
 }
-function gS(e) {
+function g0(e) {
   var t = parseInt(e, 10);
   return t <= 49 ? 2e3 + t : t <= 999 ? 1900 + t : t;
 }
-function IS(e) {
+function I0(e) {
   return e.replace(/\([^()]*\)|[\n\t]/g, " ").replace(/(\s\s+)/g, " ").replace(/^\s\s*/, "").replace(/\s\s*$/, "");
 }
-function NS(e, t, r) {
+function N0(e, t, r) {
   if (e) {
     var n = YT.indexOf(e), i = new Date(
       t[0],
@@ -13823,32 +13823,32 @@ function NS(e, t, r) {
   }
   return !0;
 }
-function AS(e, t, r) {
+function A0(e, t, r) {
   if (e)
-    return RS[e];
+    return R0[e];
   if (t)
     return 0;
   var n = parseInt(r, 10), i = n % 100, o = (n - i) / 100;
   return o * 60 + i;
 }
 function JT(e) {
-  var t = bS.exec(IS(e._i)), r;
+  var t = b0.exec(I0(e._i)), r;
   if (t) {
-    if (r = vS(
+    if (r = v0(
       t[4],
       t[3],
       t[2],
       t[5],
       t[6],
       t[7]
-    ), !NS(t[1], r, e))
+    ), !N0(t[1], r, e))
       return;
-    e._a = r, e._tzm = AS(t[8], t[9], t[10]), e._d = to.apply(null, e._a), e._d.setUTCMinutes(e._d.getUTCMinutes() - e._tzm), te(e).rfc2822 = !0;
+    e._a = r, e._tzm = A0(t[8], t[9], t[10]), e._d = to.apply(null, e._a), e._d.setUTCMinutes(e._d.getUTCMinutes() - e._tzm), te(e).rfc2822 = !0;
   } else
     e._isValid = !1;
 }
-function yS(e) {
-  var t = OS.exec(e._i);
+function y0(e) {
+  var t = O0.exec(e._i);
   if (t !== null) {
     e._d = /* @__PURE__ */ new Date(+t[1]);
     return;
@@ -13872,7 +13872,7 @@ B.createFromInputFallback = yt(
 function Rn(e, t, r) {
   return e ?? t ?? r;
 }
-function SS(e) {
+function S0(e) {
   var t = new Date(B.now());
   return e._useUTC ? [
     t.getUTCFullYear(),
@@ -13883,7 +13883,7 @@ function SS(e) {
 function c_(e) {
   var t, r, n = [], i, o, a;
   if (!e._d) {
-    for (i = SS(e), e._w && e._a[Vt] == null && e._a[ar] == null && DS(e), e._dayOfYear != null && (a = Rn(e._a[Ze], i[Ze]), (e._dayOfYear > Li(a) || e._dayOfYear === 0) && (te(e)._overflowDayOfYear = !0), r = to(a, 0, e._dayOfYear), e._a[ar] = r.getUTCMonth(), e._a[Vt] = r.getUTCDate()), t = 0; t < 3 && e._a[t] == null; ++t)
+    for (i = S0(e), e._w && e._a[Vt] == null && e._a[ar] == null && D0(e), e._dayOfYear != null && (a = Rn(e._a[Ze], i[Ze]), (e._dayOfYear > Li(a) || e._dayOfYear === 0) && (te(e)._overflowDayOfYear = !0), r = to(a, 0, e._dayOfYear), e._a[ar] = r.getUTCMonth(), e._a[Vt] = r.getUTCDate()), t = 0; t < 3 && e._a[t] == null; ++t)
       e._a[t] = n[t] = i[t];
     for (; t < 7; t++)
       e._a[t] = n[t] = e._a[t] == null ? t === 2 ? 1 : 0 : e._a[t];
@@ -13893,7 +13893,7 @@ function c_(e) {
     ), o = e._useUTC ? e._d.getUTCDay() : e._d.getDay(), e._tzm != null && e._d.setUTCMinutes(e._d.getUTCMinutes() - e._tzm), e._nextDay && (e._a[Fe] = 24), e._w && typeof e._w.d < "u" && e._w.d !== o && (te(e).weekdayMismatch = !0);
   }
 }
-function DS(e) {
+function D0(e) {
   var t, r, n, i, o, a, s, u, c;
   t = e._w, t.GG != null || t.W != null || t.E != null ? (o = 1, a = 4, r = Rn(
     t.GG,
@@ -13920,17 +13920,17 @@ function l_(e) {
     o = i[r], n = (t.match(E1(o, e)) || [])[0], n && (a = t.substr(0, t.indexOf(n)), a.length > 0 && te(e).unusedInput.push(a), t = t.slice(
       t.indexOf(n) + n.length
     ), u += n.length), Pn[o] ? (n ? te(e).empty = !1 : te(e).unusedTokens.push(o), b1(o, n, e)) : e._strict && !n && te(e).unusedTokens.push(o);
-  te(e).charsLeftOver = s - u, t.length > 0 && te(e).unusedInput.push(t), e._a[Fe] <= 12 && te(e).bigHour === !0 && e._a[Fe] > 0 && (te(e).bigHour = void 0), te(e).parsedDateParts = e._a.slice(0), te(e).meridiem = e._meridiem, e._a[Fe] = GS(
+  te(e).charsLeftOver = s - u, t.length > 0 && te(e).unusedInput.push(t), e._a[Fe] <= 12 && te(e).bigHour === !0 && e._a[Fe] > 0 && (te(e).bigHour = void 0), te(e).parsedDateParts = e._a.slice(0), te(e).meridiem = e._meridiem, e._a[Fe] = G0(
     e._locale,
     e._a[Fe],
     e._meridiem
   ), c = te(e).era, c !== null && (e._a[Ze] = e._locale.erasConvertYear(c, e._a[Ze])), c_(e), u_(e);
 }
-function GS(e, t, r) {
+function G0(e, t, r) {
   var n;
   return r == null ? t : e.meridiemHour != null ? e.meridiemHour(t, r) : (e.isPM != null && (n = e.isPM(r), n && t < 12 && (t += 12), !n && t === 12 && (t = 0)), t);
 }
-function US(e) {
+function U0(e) {
   var t, r, n, i, o, a, s = !1, u = e._f.length;
   if (u === 0) {
     te(e).invalidFormat = !0, e._d = /* @__PURE__ */ new Date(NaN);
@@ -13940,7 +13940,7 @@ function US(e) {
     o = 0, a = !1, t = Ql({}, e), e._useUTC != null && (t._useUTC = e._useUTC), t._f = e._f[i], l_(t), Jl(t) && (a = !0), o += te(t).charsLeftOver, o += te(t).unusedTokens.length * 10, te(t).score = o, s ? o < n && (n = o, r = t) : (n == null || o < n || a) && (n = o, r = t, a && (s = !0));
   Gr(e, r || t);
 }
-function CS(e) {
+function C0(e) {
   if (!e._d) {
     var t = t_(e._i), r = t.day === void 0 ? t.date : t.day;
     e._a = DT(
@@ -13951,34 +13951,34 @@ function CS(e) {
     ), c_(e);
   }
 }
-function wS(e) {
+function w0(e) {
   var t = new Co(u_(QT(e)));
   return t._nextDay && (t.add(1, "d"), t._nextDay = void 0), t;
 }
 function QT(e) {
   var t = e._i, r = e._f;
-  return e._locale = e._locale || Tr(e._l), t === null || r === void 0 && t === "" ? Gs({ nullInput: !0 }) : (typeof t == "string" && (e._i = t = e._locale.preparse(t)), Lt(t) ? new Co(u_(t)) : (Uo(t) ? e._d = t : kt(r) ? US(e) : r ? l_(e) : PS(e), Jl(e) || (e._d = null), e));
+  return e._locale = e._locale || Tr(e._l), t === null || r === void 0 && t === "" ? Gs({ nullInput: !0 }) : (typeof t == "string" && (e._i = t = e._locale.preparse(t)), Lt(t) ? new Co(u_(t)) : (Uo(t) ? e._d = t : kt(r) ? U0(e) : r ? l_(e) : P0(e), Jl(e) || (e._d = null), e));
 }
-function PS(e) {
+function P0(e) {
   var t = e._i;
-  st(t) ? e._d = new Date(B.now()) : Uo(t) ? e._d = new Date(t.valueOf()) : typeof t == "string" ? yS(e) : kt(t) ? (e._a = DT(t.slice(0), function(r) {
+  st(t) ? e._d = new Date(B.now()) : Uo(t) ? e._d = new Date(t.valueOf()) : typeof t == "string" ? y0(e) : kt(t) ? (e._a = DT(t.slice(0), function(r) {
     return parseInt(r, 10);
-  }), c_(e)) : tn(t) ? CS(e) : hr(t) ? e._d = new Date(t) : B.createFromInputFallback(e);
+  }), c_(e)) : tn(t) ? C0(e) : hr(t) ? e._d = new Date(t) : B.createFromInputFallback(e);
 }
 function ZT(e, t, r, n, i) {
   var o = {};
-  return (t === !0 || t === !1) && (n = t, t = void 0), (r === !0 || r === !1) && (n = r, r = void 0), (tn(e) && ql(e) || kt(e) && e.length === 0) && (e = void 0), o._isAMomentObject = !0, o._useUTC = o._isUTC = i, o._l = r, o._i = e, o._f = t, o._strict = n, wS(o);
+  return (t === !0 || t === !1) && (n = t, t = void 0), (r === !0 || r === !1) && (n = r, r = void 0), (tn(e) && ql(e) || kt(e) && e.length === 0) && (e = void 0), o._isAMomentObject = !0, o._useUTC = o._isUTC = i, o._l = r, o._i = e, o._f = t, o._strict = n, w0(o);
 }
 function De(e, t, r, n) {
   return ZT(e, t, r, n, !1);
 }
-var HS = yt(
+var H0 = yt(
   "moment().min is deprecated, use moment.max instead. http://momentjs.com/guides/#/warnings/min-max/",
   function() {
     var e = De.apply(null, arguments);
     return this.isValid() && e.isValid() ? e < this ? this : e : Gs();
   }
-), MS = yt(
+), M0 = yt(
   "moment().max is deprecated, use moment.min instead. http://momentjs.com/guides/#/warnings/min-max/",
   function() {
     var e = De.apply(null, arguments);
@@ -13993,15 +13993,15 @@ function eE(e, t) {
     (!t[n].isValid() || t[n][e](r)) && (r = t[n]);
   return r;
 }
-function kS() {
+function k0() {
   var e = [].slice.call(arguments, 0);
   return eE("isBefore", e);
 }
-function LS() {
+function L0() {
   var e = [].slice.call(arguments, 0);
   return eE("isAfter", e);
 }
-var BS = function() {
+var B0 = function() {
   return Date.now ? Date.now() : +/* @__PURE__ */ new Date();
 }, Ri = [
   "year",
@@ -14014,7 +14014,7 @@ var BS = function() {
   "second",
   "millisecond"
 ];
-function xS(e) {
+function x0(e) {
   var t, r = !1, n, i = Ri.length;
   for (t in e)
     if (pe(e, t) && !(ke.call(Ri, t) !== -1 && (e[t] == null || !isNaN(e[t]))))
@@ -14027,15 +14027,15 @@ function xS(e) {
     }
   return !0;
 }
-function FS() {
+function F0() {
   return this._isValid;
 }
-function jS() {
+function j0() {
   return Ft(NaN);
 }
 function Bs(e) {
   var t = t_(e), r = t.year || 0, n = t.quarter || 0, i = t.month || 0, o = t.week || t.isoWeek || 0, a = t.day || 0, s = t.hour || 0, u = t.minute || 0, c = t.second || 0, _ = t.millisecond || 0;
-  this._isValid = xS(t), this._milliseconds = +_ + c * 1e3 + // 1000
+  this._isValid = x0(t), this._milliseconds = +_ + c * 1e3 + // 1000
   u * 6e4 + // 1000 * 60
   s * 1e3 * 60 * 60, this._days = +a + o * 7, this._months = +i + n * 3 + r * 12, this._data = {}, this._locale = Tr(), this._bubble();
 }
@@ -14045,7 +14045,7 @@ function va(e) {
 function Lc(e) {
   return e < 0 ? Math.round(-1 * e) * -1 : Math.round(e);
 }
-function VS(e, t, r) {
+function V0(e, t, r) {
   var n = Math.min(e.length, t.length), i = Math.abs(e.length - t.length), o = 0, a;
   for (a = 0; a < n; a++)
     (r && e[a] !== t[a] || !r && oe(e[a]) !== oe(t[a])) && o++;
@@ -14064,10 +14064,10 @@ F("ZZ", Ms);
 Ne(["Z", "ZZ"], function(e, t, r) {
   r._useUTC = !0, r._tzm = __(Ms, e);
 });
-var WS = /([\+\-]|\d\d)/gi;
+var W0 = /([\+\-]|\d\d)/gi;
 function __(e, t) {
   var r = (t || "").match(e), n, i, o;
-  return r === null ? null : (n = r[r.length - 1] || [], i = (n + "").match(WS) || ["-", 0, 0], o = +(i[1] * 60) + oe(i[2]), o === 0 ? 0 : i[0] === "+" ? o : -o);
+  return r === null ? null : (n = r[r.length - 1] || [], i = (n + "").match(W0) || ["-", 0, 0], o = +(i[1] * 60) + oe(i[2]), o === 0 ? 0 : i[0] === "+" ? o : -o);
 }
 function d_(e, t) {
   var r, n;
@@ -14078,7 +14078,7 @@ function Bc(e) {
 }
 B.updateOffset = function() {
 };
-function XS(e, t, r) {
+function X0(e, t, r) {
   var n = this._offset || 0, i;
   if (!this.isValid())
     return e != null ? this : NaN;
@@ -14097,16 +14097,16 @@ function XS(e, t, r) {
   } else
     return this._isUTC ? n : Bc(this);
 }
-function YS(e, t) {
+function Y0(e, t) {
   return e != null ? (typeof e != "string" && (e = -e), this.utcOffset(e, t), this) : -this.utcOffset();
 }
-function KS(e) {
+function K0(e) {
   return this.utcOffset(0, e);
 }
-function $S(e) {
+function $0(e) {
   return this._isUTC && (this.utcOffset(0, e), this._isUTC = !1, e && this.subtract(Bc(this), "m")), this;
 }
-function zS() {
+function z0() {
   if (this._tzm != null)
     this.utcOffset(this._tzm, !1, !0);
   else if (typeof this._i == "string") {
@@ -14115,19 +14115,19 @@ function zS() {
   }
   return this;
 }
-function qS(e) {
+function q0(e) {
   return this.isValid() ? (e = e ? De(e).utcOffset() : 0, (this.utcOffset() - e) % 60 === 0) : !1;
 }
-function JS() {
+function J0() {
   return this.utcOffset() > this.clone().month(0).utcOffset() || this.utcOffset() > this.clone().month(5).utcOffset();
 }
-function QS() {
+function Q0() {
   if (!st(this._isDSTShifted))
     return this._isDSTShifted;
   var e = {}, t;
-  return Ql(e, this), e = QT(e), e._a ? (t = e._isUTC ? Zt(e._a) : De(e._a), this._isDSTShifted = this.isValid() && VS(e._a, t.toArray()) > 0) : this._isDSTShifted = !1, this._isDSTShifted;
+  return Ql(e, this), e = QT(e), e._a ? (t = e._isUTC ? Zt(e._a) : De(e._a), this._isDSTShifted = this.isValid() && V0(e._a, t.toArray()) > 0) : this._isDSTShifted = !1, this._isDSTShifted;
 }
-function ZS() {
+function Z0() {
   return this.isValid() ? !this._isUTC : !1;
 }
 function eD() {
@@ -14165,7 +14165,7 @@ function Ft(e, t) {
   ), r = {}, r.ms = a.milliseconds, r.M = a.months), o = new Bs(r), va(e) && pe(e, "_locale") && (o._locale = e._locale), va(e) && pe(e, "_isValid") && (o._isValid = e._isValid), o;
 }
 Ft.fn = Bs.prototype;
-Ft.invalid = jS;
+Ft.invalid = j0;
 function zr(e, t) {
   var r = e && parseFloat(e.replace(",", "."));
   return (isNaN(r) ? 0 : r) * t;
@@ -14877,8 +14877,8 @@ S.isValid = MD;
 S.lang = sE;
 S.locale = aE;
 S.localeData = uE;
-S.max = MS;
-S.min = HS;
+S.max = M0;
+S.min = H0;
 S.parsingFlags = kD;
 S.set = p1;
 S.startOf = SD;
@@ -14914,21 +14914,21 @@ S.weeksInWeekYear = iG;
 S.isoWeeksInYear = tG;
 S.isoWeeksInISOWeekYear = rG;
 S.date = fE;
-S.day = S.days = eS;
-S.weekday = tS;
-S.isoWeekday = rS;
+S.day = S.days = e0;
+S.weekday = t0;
+S.isoWeekday = r0;
 S.dayOfYear = sG;
-S.hour = S.hours = cS;
+S.hour = S.hours = c0;
 S.minute = S.minutes = uG;
 S.second = S.seconds = cG;
 S.millisecond = S.milliseconds = hE;
-S.utcOffset = XS;
-S.utc = KS;
-S.local = $S;
-S.parseZone = zS;
-S.hasAlignedHourOffset = qS;
-S.isDST = JS;
-S.isLocal = ZS;
+S.utcOffset = X0;
+S.utc = K0;
+S.local = $0;
+S.parseZone = z0;
+S.hasAlignedHourOffset = q0;
+S.isDST = J0;
+S.isLocal = Z0;
 S.isUtcOffset = eD;
 S.isUtc = rE;
 S.isUTC = rE;
@@ -14948,11 +14948,11 @@ S.years = yt(
 );
 S.zone = yt(
   "moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/",
-  YS
+  Y0
 );
 S.isDSTShifted = yt(
   "isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information",
-  QS
+  Q0
 );
 function fG(e) {
   return De(e * 1e3);
@@ -14972,7 +14972,7 @@ me.preparse = pE;
 me.postformat = pE;
 me.relativeTime = _1;
 me.pastFuture = d1;
-me.set = Q0;
+me.set = QS;
 me.eras = xD;
 me.erasParse = FD;
 me.erasConvertYear = jD;
@@ -14991,11 +14991,11 @@ me.weekdays = z1;
 me.weekdaysMin = J1;
 me.weekdaysShort = q1;
 me.weekdaysParse = Z1;
-me.weekdaysRegex = nS;
-me.weekdaysShortRegex = iS;
-me.weekdaysMinRegex = oS;
-me.isPM = sS;
-me.meridiem = lS;
+me.weekdaysRegex = n0;
+me.weekdaysShortRegex = i0;
+me.weekdaysMinRegex = o0;
+me.isPM = s0;
+me.meridiem = l0;
 function ts(e, t, r, n) {
   var i = Tr(), o = Zt().set(n, t);
   return i[r](o, e);
@@ -15194,7 +15194,7 @@ function Fs() {
   return s ? (n = Ot(e / 60), i = Ot(n / 60), e %= 60, n %= 60, o = Ot(r / 12), r %= 12, a = e ? e.toFixed(3).replace(/\.?0+$/, "") : "", u = s < 0 ? "-" : "", c = pn(this._months) !== pn(s) ? "-" : "", _ = pn(this._days) !== pn(s) ? "-" : "", l = pn(this._milliseconds) !== pn(s) ? "-" : "", u + "P" + (o ? c + o + "Y" : "") + (r ? c + r + "M" : "") + (t ? _ + t + "D" : "") + (i || n || e ? "T" : "") + (i ? l + i + "H" : "") + (n ? l + n + "M" : "") + (e ? l + a + "S" : "")) : "P0D";
 }
 var le = Bs.prototype;
-le.isValid = FS;
+le.isValid = F0;
 le.abs = bG;
 le.add = RG;
 le.subtract = vG;
@@ -15243,11 +15243,11 @@ Ne("x", function(e, t, r) {
 });
 //! moment.js
 B.version = "2.29.4";
-q0(De);
+qS(De);
 B.fn = S;
-B.min = kS;
-B.max = LS;
-B.now = BS;
+B.min = k0;
+B.max = L0;
+B.now = B0;
 B.utc = Zt;
 B.unix = fG;
 B.months = pG;
@@ -15263,8 +15263,8 @@ B.isDuration = va;
 B.monthsShort = mG;
 B.weekdaysMin = OG;
 B.defineLocale = s_;
-B.updateLocale = hS;
-B.locales = pS;
+B.updateLocale = h0;
+B.locales = p0;
 B.weekdaysShort = EG;
 B.normalizeUnits = St;
 B.relativeTimeRounding = KG;
@@ -15437,7 +15437,7 @@ const JG = (e) => {
     ${({ theme: e }) => wc(e.light)}
   }
 `, oU = we(yh)`
-  ${_0(0, 6)};
+  ${_S(0, 6)};
 
   .ant-tabs-nav::before {
     border-bottom: none;
@@ -15468,7 +15468,7 @@ const JG = (e) => {
   }, []), s = async () => {
     await i.current?.close(), n.terminal.clearExecuteMessages();
   };
-  return /* @__PURE__ */ mt(T0, { onClose: a, isOpen: t, height: 300, children: [
+  return /* @__PURE__ */ mt(TS, { onClose: a, isOpen: t, height: 300, children: [
     /* @__PURE__ */ K(
       oU,
       {
@@ -15488,7 +15488,7 @@ const JG = (e) => {
 });
 class sU {
   constructor(t) {
-    Xr(this), this.state = t, this.getters = t.getters, this.tabs = new w0(t), this.editor = new iR(t), this.terminal = new qG(t);
+    Xr(this), this.state = t, this.getters = t.getters, this.tabs = new wS(t), this.editor = new iR(t), this.terminal = new qG(t);
   }
   changeTheme(t) {
     this.state.theme = t, this.state.storage.set("EDITOR_THEME", t);
@@ -15527,7 +15527,7 @@ class uU {
   }
   isAllowedToExecute() {
     const t = this.getActiveLanguage();
-    return R0.includes(t);
+    return RS.includes(t);
   }
 }
 const cU = `// Hello World! Here you can edit the code in 10 different languages. 😎
@@ -15601,7 +15601,7 @@ we(hU)`
 `;
 const mU = mr(
   ({ isDisabled: e, runCode: t, openSignIn: r }) => {
-    const n = c0();
+    const n = cS();
     return /* @__PURE__ */ mt(pU, { children: [
       /* @__PURE__ */ K(
         Nf,
@@ -18377,7 +18377,7 @@ const nw = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   height: ${Nt("100%", "42px")};
   box-sizing: border-box;
   ${_n("space-between", "center")}
-  ${l0(23)}
+  ${lS(23)}
 `, aw = we.h2`
   color: ${({ theme: e }) => e.light};
 `, sw = mr(() => {
@@ -18663,7 +18663,7 @@ Y.diffed = function(e) {
   var t = e.props, r = e.__e;
   r != null && e.type === "textarea" && "value" in t && t.value !== r.value && (r.value = t.value == null ? "" : t.value);
 };
-const Yw = cO(() => import("./editor-ef519cab.mjs").then((e) => e.e));
+const Yw = cO(() => import("./editor-c232863d.mjs").then((e) => e.e));
 export {
   di as $,
   Bl as A,
@@ -18681,13 +18681,13 @@ export {
   Xw as M,
   Uw as N,
   Mw as O,
-  T0 as P,
-  N0 as Q,
+  TS as P,
+  NS as Q,
   $A as R,
   vT as S,
   Fw as T,
   Hp as U,
-  g0 as V,
+  gS as V,
   kw as W,
   Yw as X,
   sU as Y,
@@ -18713,7 +18713,7 @@ export {
   _n as q,
   Ww as r,
   we as s,
-  I0 as t,
+  IS as t,
   zA as u,
   xw as v,
   Nt as w,
