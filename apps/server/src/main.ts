@@ -1,14 +1,11 @@
-import { HttpExceptionFilter } from '@/common/exception-filters'
-import { ValidationPipe } from '@/common/pipes/validation.pipe'
-import { corsConfig } from '@/config/cors'
-import { createSwaggerDocs } from '@/config/swagger'
 import { Logger } from '@nestjs/common'
 import { NestFactory } from '@nestjs/core'
 import { SwaggerModule } from '@nestjs/swagger'
-
-import { AppModule } from './app.module'
-
+import { corsConfig } from '@/config/cors'
+import { createSwaggerDocs } from '@/config/swagger'
 import { serverDocsPrefix, serverPort, serverPrefix } from '$/config'
+import { HttpExceptionFilter, ValidationPipe } from '$/nest-common'
+import { AppModule } from './app.module'
 
 const bootstrap = async () => {
   const app = await NestFactory.create(AppModule)

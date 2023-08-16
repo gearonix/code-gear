@@ -1,15 +1,14 @@
 {
-  "extends": "./libs/config/tsconfig/base.json",
+  "extends": "@config/tsconfig/base.json",
   "compileOnSave": false,
   "compilerOptions": {
     "rootDir": ".",
     "baseUrl": ".",
     "paths": {
-      "@code-gear/client-shared": ["libs/client-shared/src/index.ts"],
-      "@code-gear/config": ["libs/config/src/index.ts"],
-      "@code-gear/editor": ["libs/editor/src/index.ts"],
-      "@code-gear/services": ["libs/services/src/index.ts"],
+      "@code-gear/nest-common": [
+        "libs/nest-common/src/index.ts"
+      ]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "include": []
 }

@@ -9,7 +9,7 @@ interface ToPayload<A extends AnyObject> {
 
 type OperationType = 'query' | 'mutate'
 export class ApolloMiddleware {
-  public async operate<Payload extends AnyObject, Args extends AnyObject>(
+  public async request<Payload extends AnyObject, Args extends AnyObject>(
     mutation: ApolloOperation,
     args?: Args,
     type: OperationType = 'query'

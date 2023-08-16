@@ -1,22 +1,22 @@
-import { SignIn } from '@/auth/inputs/sign-in.input'
 import { Injectable } from '@nestjs/common'
-
+import { SignIn } from '@/auth/inputs/sign-in.input'
+import { User } from '$/nest-common'
 import { PrismaService } from '$/services'
 
 @Injectable()
 export class UsersRepository {
   constructor(private prisma: PrismaService) {}
 
-  public getUserByUsername(username: string) {
-    return this.prisma.users.findUnique({
+  public getUserByUsername(username: string): User {
+    return this.prisma.user.findUnique({
       where: {
         username
       }
     })
   }
 
-  public createUser(user: SignIn) {
-    return this.prisma.users.create({
+  public createUser(user: SignIn): User {
+    return this.prisma.user.create({
       data: user
     })
   }

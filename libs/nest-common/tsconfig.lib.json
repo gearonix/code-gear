@@ -1,9 +1,11 @@
 {
-  "extends": "@config/tsconfig/base.json",
+  "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "../../dist/out-tsc",
     "declaration": true,
-    "types": ["node"],
+    "types": [
+      "node"
+    ],
     "target": "es2021",
     "strictNullChecks": true,
     "noImplicitAny": true,
@@ -12,10 +14,16 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
-      "$/config": ["../config/src/index.ts"],
-      "$/nest-common": ["../nest-common/src/index.ts"]
+      "$/config": ["./../config/src/index.ts"],
+      "@/*": ["src/*"]
     }
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["jest.config.ts", "src/**/*.spec.ts", "src/**/*.test.ts"]
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "jest.config.ts",
+    "src/**/*.spec.ts",
+    "src/**/*.test.ts"
+  ]
 }

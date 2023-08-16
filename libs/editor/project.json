@@ -5,6 +5,13 @@
   "projectType": "library",
   "tags": [],
   "targets": {
+    "generate": {
+      "command": "cross-env HYGEN_TMPLS=../generator/templates hygen {args.m} {args.com} --module_name={args.n}",
+      "options": {
+        "cwd": "libs/editor",
+        "args": ["m", "com", "n"]
+      }
+    },
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],

@@ -1,10 +1,13 @@
+import {UserEntity} from '$/common-types'
+import {SignInResponse} from '$/common-types'
+import {SignInForm} from '$/common-types'
+import {AccessToken} from '$/common-types'
 import { makeAutoObservable } from 'mobx'
 
 import { AuthStore } from '@/widgets/sign-in-modal'
 import { getProfileQuery } from '@/widgets/sign-in-modal/graphql/get-profile.query'
 
 import { SignInMutation } from '../graphql/sign-in.mutation'
-import { AccessToken, SignInForm, SignInResponse, UserEntity } from '../types'
 
 import { ApolloMiddleware, LocalStorageClient } from '$/client-shared'
 
@@ -21,7 +24,7 @@ export class AuthServices {
   }
 
   async signIn(form: SignInForm): Promise<SignInResponse> {
-    const [payload] = await this.apollo.operate<AccessToken, SignInForm>(
+    const [payload] = await this.apollo.request<AccessToken, SignInForm>(
       SignInMutation,
       form,
       'mutate'
@@ -39,7 +42,7 @@ export class AuthServices {
   }
 
   async getProfile() {
-    const [payload] = await this.apollo.operate<UserEntity, void>(
+    const [payload] = await this.apollo.request<UserEntity, void>(
       getProfileQuery
     )
 

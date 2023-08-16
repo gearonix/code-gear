@@ -1,13 +1,16 @@
-import { WithUser } from '@/common/decorators'
-import { GqlAuthGuard, GqlLocalAuthGuard, JwtAuthGuard } from '@/common/guards'
 import { UseGuards } from '@nestjs/common'
 import { Args, Mutation, Query, Resolver } from '@nestjs/graphql'
-
-import { SignIn } from './inputs/sign-in.input'
-import { AuthService } from './auth.service'
-import { AccessToken, UserResponse } from './responses'
-
 import { graphqlArg } from '$/config'
+import {
+  GqlAuthGuard,
+  GqlLocalAuthGuard,
+  JwtAuthGuard,
+  User,
+  WithUser
+} from '$/nest-common'
+import { AuthService } from './auth.service'
+import { SignIn } from './inputs/sign-in.input'
+import { AccessToken, UserResponse } from './responses'
 
 @Resolver(() => UserResponse)
 export class AuthResolver {
@@ -17,7 +20,7 @@ export class AuthResolver {
   @UseGuards(GqlAuthGuard, GqlLocalAuthGuard)
   async signIn(
     @Args(graphqlArg) payload: SignIn,
-    @WithUser() user
+    @WithUser() user: User
   ): Promise<AccessToken> {
     return this.authService.generateToken(user.username)
   }

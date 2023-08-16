@@ -8,6 +8,7 @@
     "paths": {
       "@/*": ["./src/*"],
       "$/client-shared": ["../../libs/client-shared/src/index.ts"],
+      "$/common-types": ["../../libs/nest-common/src/types/common/index.ts"],
       "$/assets": ["../../libs/client-shared/src/assets/index.ts"],
       "$/styles": ["../../libs/client-shared/src/styles/index.ts"],
       "$/editor": ["../../libs/editor/src/app/index.ts"],

@@ -1,8 +1,9 @@
-import { ExecutorApiResponse } from './types'
+import { ExecutorLanguagesValues } from './types'
+import { ExecutorApiResponse } from '$/nest-common'
 
 export const isExecutorApiResponse = (
   res: unknown
-): res is ExecutorApiResponse => {
+): res is ExecutorApiResponse<ExecutorLanguagesValues> => {
   if (typeof res !== 'object' || res === null) {
     return false
   }

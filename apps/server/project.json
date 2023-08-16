@@ -33,7 +33,7 @@
       "dependsOn": ["concat-prisma-files"]
     },
     "generate-prisma-types": {
-      "command": "yarn dlx @kalissaac/prisma-typegen ./src/common/types/_prisma.ts ./prisma/schema.prisma",
+      "command": "yarn dlx @kalissaac/prisma-typegen ./../../libs/nest-common/src/types/_prisma.ts ./prisma/schema.prisma",
       "options": {
         "cwd": "apps/server"
       },

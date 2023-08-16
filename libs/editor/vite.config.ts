@@ -26,7 +26,7 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      entry: 'src/app/index.ts',
+      entry: 'src/app/index.js',
       name: 'editor',
       fileName: 'index',
       formats: ['es', 'cjs']

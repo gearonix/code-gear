@@ -1,15 +1,13 @@
-import axios from 'axios'
-import stringify from 'qs-stringify'
-
 import { HttpService } from '@nestjs/axios'
 import { Injectable, Logger } from '@nestjs/common'
-
+import axios from 'axios'
+import stringify from 'qs-stringify'
+import { compilerApiUrl } from '$/config'
+import { ExecutorApiResponse } from '$/nest-common'
 import { ExecuteCodeApiDTO } from './dto/execute-code-api.dto'
 import { FailedToFetchError } from './lib/errors'
 import { transformLanguage } from './lib/helpers/transform-language'
-import { ExecutorApiResponse } from './lib/types'
-
-import { compilerApiUrl } from '$/config'
+import { ExecutorLanguagesValues } from './lib/types'
 
 @Injectable()
 export class ExecutorApiService {
@@ -19,7 +17,7 @@ export class ExecutorApiService {
 
     try {
       const response = await this.httpService
-        .post<ExecutorApiResponse>(
+        .post<ExecutorApiResponse<ExecutorLanguagesValues>>(
           compilerApiUrl,
           stringify(transformLanguage(args)),
           {

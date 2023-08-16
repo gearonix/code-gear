@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 
 import { SignInModalTemplate } from '@/entities/sign-in-modal-template'
 import { useStore } from '@/shared/hooks'
+
 import { WrongPassword } from '@/widgets/sign-in-modal/lib/exceptions'
 import { SignInForm } from '@/widgets/sign-in-modal/types'
 
@@ -23,6 +24,7 @@ interface SignInModalProps {
 const SignInModal = observer(({ isOpen, onClose }: SignInModalProps) => {
   const auth = useStore('auth')
   const notify = useNotifications()
+
   const navigate = useNavigate()
 
   const onSubmit = async (data: SignInForm) => {
