@@ -1,7 +1,3 @@
-import {UserEntity} from '$/common-types'
-import {SignInResponse} from '$/common-types'
-import {SignInForm} from '$/common-types'
-import {AccessToken} from '$/common-types'
 import { makeAutoObservable } from 'mobx'
 
 import { AuthStore } from '@/widgets/sign-in-modal'
@@ -10,6 +6,10 @@ import { getProfileQuery } from '@/widgets/sign-in-modal/graphql/get-profile.que
 import { SignInMutation } from '../graphql/sign-in.mutation'
 
 import { ApolloMiddleware, LocalStorageClient } from '$/client-shared'
+import { UserEntity } from '$/common-types'
+import { SignInResponse } from '$/common-types'
+import { SignInForm } from '$/common-types'
+import { AccessToken } from '$/common-types'
 
 export class AuthServices {
   private state: AuthStore

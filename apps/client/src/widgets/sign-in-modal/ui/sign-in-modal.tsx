@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom'
 
 import { SignInModalTemplate } from '@/entities/sign-in-modal-template'
 import { useStore } from '@/shared/hooks'
-
 import { WrongPassword } from '@/widgets/sign-in-modal/lib/exceptions'
 import { SignInForm } from '@/widgets/sign-in-modal/types'
 

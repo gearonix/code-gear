@@ -1,14 +1,9 @@
 {
-  "extends": "@config/tsconfig/base.json",
+  "extends": "cg-config/tsconfig/base.json",
   "compileOnSave": false,
   "compilerOptions": {
     "rootDir": ".",
-    "baseUrl": ".",
-    "paths": {
-      "@code-gear/nest-common": [
-        "libs/nest-common/src/index.ts"
-      ]
-    }
+    "baseUrl": "."
   },
-  "include": []
+  "exclude": ["node_modules", "tmp"]
 }

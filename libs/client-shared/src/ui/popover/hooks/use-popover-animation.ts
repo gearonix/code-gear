@@ -25,6 +25,7 @@ export const usePopoverAnimation = (
     ({ last, velocity: [, vy], direction: [, dy], offset: [, oy], cancel }) => {
       if (oy < -70) cancel()
       if (last) {
+        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
         oy > height * 0.5 || (vy > 0.5 && dy === 1) ? close(vy) : open()
       } else api.start({ y: oy, immediate: dy === -1 })
     },

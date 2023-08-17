@@ -1,5 +1,5 @@
 {
-  "extends": "@config/tsconfig/base.json",
+  "extends": "cg-config/tsconfig/base.json",
   "files": [],
   "include": [],
   "references": [

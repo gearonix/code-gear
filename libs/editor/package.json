@@ -1,5 +1,5 @@
 {
-  "name": "@editor",
+  "name": "cg-editor",
   "version": "0.0.1",
   "main": "./index.js",
   "types": "./index.d.ts",
@@ -10,6 +10,6 @@
     }
   },
   "devDependencies": {
-    "@config": "workspace:^"
+    "cg-config": "workspace:^"
   }
 }
