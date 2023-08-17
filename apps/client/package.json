@@ -1,8 +1,8 @@
 {
-  "name": "@client",
+  "name": "cg-client",
   "version": "0.0.1",
   "packageManager": "yarn@3.6.0",
   "devDependencies": {
-    "@config": "workspace:^"
+    "cg-config": "workspace:^"
   }
 }

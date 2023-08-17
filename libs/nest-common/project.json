@@ -10,6 +10,7 @@
         "{options.outputPath}"
       ],
       "options": {
+        "skipTypeCheck": true,
         "outputPath": "dist/libs/nest-common",
         "tsConfig": "libs/nest-common/tsconfig.lib.json",
         "packageJson": "libs/nest-common/package.json",

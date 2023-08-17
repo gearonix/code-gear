@@ -1,15 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const {configure, presets} = require('eslint-kit')
-
-/**
- * Creates eslint config
- *
- * @param {string} root - define root of project (ex: __dirname)
- * @param {string} tsconfig - specify tsconfig name
- * @param {Object} rules - eslint additional rules
- * @param {Array} ignorePatterns - eslint ignorePatterns property
- * @return {Linter.Config<Linter.RulesRecord>}
- */
 
 module.exports = configure({
   mode: 'only-errors',
@@ -27,13 +16,16 @@ module.exports = configure({
       root: './'
     }),
     presets.react(),
-    presets.imports({
-      sort: {
-        newline: true
-      }
-    })
+    // eslint runs forever because of this preset
+    // ---
+    // presets.imports({
+    //   sort: {
+    //     newline: true
+    //   }
+    // })
   ],
   extend: {
+    root: true,
     ignorePatterns: ["**/*"],
     plugins: ['@nx', 'prefer-arrow'],
     rules: {

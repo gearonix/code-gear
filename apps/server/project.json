@@ -22,7 +22,7 @@
         "cwd": "apps/server",
         "envFile": ".serve.env"
       },
-      "dependsOn": ["concat-prisma-files"]
+      "dependsOn": ["prisma:generate","concat-prisma-files"]
     },
     "migrate:prod": {
       "command": "yarn dlx prisma migrate deploy",
@@ -30,7 +30,7 @@
         "cwd": "apps/server",
         "envFile": ".build.env"
       },
-      "dependsOn": ["concat-prisma-files"]
+      "dependsOn": ["prisma:generate","concat-prisma-files"]
     },
     "generate-prisma-types": {
       "command": "yarn dlx @kalissaac/prisma-typegen ./../../libs/nest-common/src/types/_prisma.ts ./prisma/schema.prisma",
@@ -53,7 +53,8 @@
         "tsConfig": "apps/server/tsconfig.app.json",
         "assets": ["apps/server/src/assets"],
         "isolatedConfig": true,
-        "webpackConfig": "apps/server/webpack.config.js"
+        "webpackConfig": "apps/server/webpack.config.js",
+        "skipTypeCheck": true
       },
       "configurations": {
         "development": {},

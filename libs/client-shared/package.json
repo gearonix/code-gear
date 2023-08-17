@@ -1,5 +1,5 @@
 {
-  "name": "@client-shared",
+  "name": "cg-client-shared",
   "version": "0.0.1",
   "main": "src/index.ts",
   "exports": {
@@ -9,6 +9,6 @@
     }
   },
   "devDependencies": {
-    "@config": "workspace:^"
+    "cg-config": "workspace:^"
   }
 }

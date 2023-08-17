@@ -1,7 +1,7 @@
 {
-  "name": "@server",
+  "name": "cg-server",
   "version": "1.0.0",
   "devDependencies": {
-    "@config": "workspace:^"
+    "cg-config": "workspace:^"
   }
 }

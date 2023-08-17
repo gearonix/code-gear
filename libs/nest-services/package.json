@@ -1,8 +1,8 @@
 {
-  "name": "@nest-services",
+  "name": "nest-services",
   "version": "1.0.0",
   "main": "./src/index.ts",
   "devDependencies": {
-    "@config": "workspace:^"
+    "cg-config": "workspace:^"
   }
 }
