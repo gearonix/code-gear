@@ -3,103 +3,30 @@
 /******/ 	var __webpack_modules__ = ([
 /* 0 */,
 /* 1 */
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.HttpExceptionFilter = void 0;
-var http_exception_filter_1 = __webpack_require__(2);
-Object.defineProperty(exports, "HttpExceptionFilter", ({ enumerable: true, get: function () { return http_exception_filter_1.HttpExceptionFilter; } }));
-
-
-/***/ }),
-/* 2 */
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.HttpExceptionFilter = void 0;
-const tslib_1 = __webpack_require__(3);
-const common_1 = __webpack_require__(4);
-let HttpExceptionFilter = exports.HttpExceptionFilter = class HttpExceptionFilter {
-    catch(exception, host) {
-        const ctx = host.switchToHttp();
-        const response = ctx.getResponse();
-        const request = ctx.getRequest();
-        const status = exception.getStatus();
-        response.status?.(status).json({
-            statusCode: status,
-            timestamp: new Date().toISOString(),
-            path: request.url,
-            message: exception.message
-        });
-    }
-};
-exports.HttpExceptionFilter = HttpExceptionFilter = tslib_1.__decorate([
-    (0, common_1.Catch)(common_1.HttpException)
-], HttpExceptionFilter);
-
-
-/***/ }),
-/* 3 */
-/***/ ((module) => {
-
-module.exports = require("tslib");
-
-/***/ }),
-/* 4 */
 /***/ ((module) => {
 
 module.exports = require("@nestjs/common");
 
 /***/ }),
-/* 5 */
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.ValidationPipe = void 0;
-const tslib_1 = __webpack_require__(3);
-const class_transformer_1 = __webpack_require__(6);
-const class_validator_1 = __webpack_require__(7);
-const common_1 = __webpack_require__(4);
-let ValidationPipe = exports.ValidationPipe = class ValidationPipe {
-    async transform(value, metadata) {
-        const validationErrors = await (0, class_validator_1.validate)((0, class_transformer_1.plainToClass)(metadata.metatype, value));
-        if (validationErrors.length > 0) {
-            const messages = validationErrors.map((err) => {
-                return `${err.property} - ${Object.values(err.constraints).join(', ')}`;
-            });
-            throw new common_1.BadRequestException(messages.join('. '));
-        }
-        return value;
-    }
-};
-exports.ValidationPipe = ValidationPipe = tslib_1.__decorate([
-    (0, common_1.Injectable)()
-], ValidationPipe);
-
-
-/***/ }),
-/* 6 */
+/* 2 */
 /***/ ((module) => {
 
-module.exports = require("class-transformer");
+module.exports = require("@nestjs/core");
 
 /***/ }),
-/* 7 */
+/* 3 */
 /***/ ((module) => {
 
-module.exports = require("class-validator");
+module.exports = require("@nestjs/swagger");
 
 /***/ }),
-/* 8 */
+/* 4 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.corsConfig = void 0;
-const config_1 = __webpack_require__(9);
+const config_1 = __webpack_require__(5);
 exports.corsConfig = {
     origin: config_1.clientUrl,
     methods: ['POST', 'PUT', 'DELETE', 'GET'],
@@ -108,18 +35,24 @@ exports.corsConfig = {
 
 
 /***/ }),
-/* 9 */
+/* 5 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const tslib_1 = __webpack_require__(3);
-tslib_1.__exportStar(__webpack_require__(10), exports);
-tslib_1.__exportStar(__webpack_require__(11), exports);
+const tslib_1 = __webpack_require__(6);
+tslib_1.__exportStar(__webpack_require__(7), exports);
+tslib_1.__exportStar(__webpack_require__(8), exports);
 
 
 /***/ }),
-/* 10 */
+/* 6 */
+/***/ ((module) => {
+
+module.exports = require("tslib");
+
+/***/ }),
+/* 7 */
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -130,7 +63,7 @@ exports.appName = 'code_gear';
 
 
 /***/ }),
-/* 11 */
+/* 8 */
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -151,14 +84,14 @@ exports.jwtSecret = process.env['JWT_SECRET'];
 
 
 /***/ }),
-/* 12 */
+/* 9 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.createSwaggerDocs = void 0;
-const swagger_1 = __webpack_require__(13);
-const config_1 = __webpack_require__(9);
+const swagger_1 = __webpack_require__(3);
+const config_1 = __webpack_require__(5);
 const createSwaggerDocs = (app) => {
     const swagger = new swagger_1.DocumentBuilder()
         .setTitle(config_1.serverAppName)
@@ -171,16 +104,56 @@ exports.createSwaggerDocs = createSwaggerDocs;
 
 
 /***/ }),
-/* 13 */
-/***/ ((module) => {
+/* 10 */
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-module.exports = require("@nestjs/swagger");
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const tslib_1 = __webpack_require__(6);
+tslib_1.__exportStar(__webpack_require__(11), exports);
+tslib_1.__exportStar(__webpack_require__(12), exports);
+tslib_1.__exportStar(__webpack_require__(15), exports);
+tslib_1.__exportStar(__webpack_require__(19), exports);
+tslib_1.__exportStar(__webpack_require__(25), exports);
+tslib_1.__exportStar(__webpack_require__(28), exports);
+
+
+/***/ }),
+/* 11 */
+/***/ ((__unused_webpack_module, exports) => {
+
+
+// AUTO GENERATED FILE BY @kalissaac/prisma-typegen
+// DO NOT EDIT
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+
+/***/ }),
+/* 12 */
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const tslib_1 = __webpack_require__(6);
+tslib_1.__exportStar(__webpack_require__(13), exports);
+tslib_1.__exportStar(__webpack_require__(14), exports);
+
+
+/***/ }),
+/* 13 */
+/***/ ((__unused_webpack_module, exports) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
 
 /***/ }),
 /* 14 */
-/***/ ((module) => {
+/***/ ((__unused_webpack_module, exports) => {
 
-module.exports = require("@nestjs/core");
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
 
 /***/ }),
 /* 15 */
@@ -188,15 +161,242 @@ module.exports = require("@nestjs/core");
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.ValidationPipe = void 0;
+var validation_pipe_1 = __webpack_require__(16);
+Object.defineProperty(exports, "ValidationPipe", ({ enumerable: true, get: function () { return validation_pipe_1.ValidationPipe; } }));
+
+
+/***/ }),
+/* 16 */
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.ValidationPipe = void 0;
+const tslib_1 = __webpack_require__(6);
+const class_transformer_1 = __webpack_require__(17);
+const class_validator_1 = __webpack_require__(18);
+const common_1 = __webpack_require__(1);
+let ValidationPipe = exports.ValidationPipe = class ValidationPipe {
+    async transform(value, metadata) {
+        const validationErrors = await (0, class_validator_1.validate)((0, class_transformer_1.plainToClass)(metadata.metatype, value));
+        if (validationErrors.length > 0) {
+            const messages = validationErrors.map((err) => {
+                return `${err.property} - ${Object.values(err.constraints).join(', ')}`;
+            });
+            throw new common_1.BadRequestException(messages.join('. '));
+        }
+        return value;
+    }
+};
+exports.ValidationPipe = ValidationPipe = tslib_1.__decorate([
+    (0, common_1.Injectable)()
+], ValidationPipe);
+
+
+/***/ }),
+/* 17 */
+/***/ ((module) => {
+
+module.exports = require("class-transformer");
+
+/***/ }),
+/* 18 */
+/***/ ((module) => {
+
+module.exports = require("class-validator");
+
+/***/ }),
+/* 19 */
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.JwtAuthGuard = exports.GqlLocalAuthGuard = exports.GqlAuthGuard = void 0;
+var gql_auth_guard_1 = __webpack_require__(20);
+Object.defineProperty(exports, "GqlAuthGuard", ({ enumerable: true, get: function () { return gql_auth_guard_1.GqlAuthGuard; } }));
+var gql_local_auth_guard_1 = __webpack_require__(23);
+Object.defineProperty(exports, "GqlLocalAuthGuard", ({ enumerable: true, get: function () { return gql_local_auth_guard_1.GqlLocalAuthGuard; } }));
+var jwt_auth_guard_1 = __webpack_require__(24);
+Object.defineProperty(exports, "JwtAuthGuard", ({ enumerable: true, get: function () { return jwt_auth_guard_1.JwtAuthGuard; } }));
+
+
+/***/ }),
+/* 20 */
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.GqlAuthGuard = void 0;
+const graphql_1 = __webpack_require__(21);
+const passport_1 = __webpack_require__(22);
+const config_1 = __webpack_require__(5);
+class GqlAuthGuard extends (0, passport_1.AuthGuard)('local') {
+    // eslint-disable-next-line @typescript-eslint/no-useless-constructor
+    constructor() {
+        super();
+    }
+    getRequest(context) {
+        const ctx = graphql_1.GqlExecutionContext.create(context);
+        const gqlReq = ctx.getContext().req;
+        gqlReq.body = ctx.getArgs()[config_1.graphqlArg];
+        return gqlReq;
+    }
+}
+exports.GqlAuthGuard = GqlAuthGuard;
+
+
+/***/ }),
+/* 21 */
+/***/ ((module) => {
+
+module.exports = require("@nestjs/graphql");
+
+/***/ }),
+/* 22 */
+/***/ ((module) => {
+
+module.exports = require("@nestjs/passport");
+
+/***/ }),
+/* 23 */
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.GqlLocalAuthGuard = void 0;
+const tslib_1 = __webpack_require__(6);
+const common_1 = __webpack_require__(1);
+const graphql_1 = __webpack_require__(21);
+const passport_1 = __webpack_require__(22);
+let GqlLocalAuthGuard = exports.GqlLocalAuthGuard = class GqlLocalAuthGuard extends (0, passport_1.AuthGuard)('local') {
+    async canActivate(context) {
+        const ctxRequest = graphql_1.GqlExecutionContext.create(context).getContext().req;
+        return Boolean(ctxRequest);
+    }
+};
+exports.GqlLocalAuthGuard = GqlLocalAuthGuard = tslib_1.__decorate([
+    (0, common_1.Injectable)()
+], GqlLocalAuthGuard);
+
+
+/***/ }),
+/* 24 */
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.JwtAuthGuard = void 0;
+const graphql_1 = __webpack_require__(21);
+const passport_1 = __webpack_require__(22);
+class JwtAuthGuard extends (0, passport_1.AuthGuard)('jwt') {
+    getRequest(context) {
+        const ctx = graphql_1.GqlExecutionContext.create(context);
+        return ctx.getContext().req;
+    }
+}
+exports.JwtAuthGuard = JwtAuthGuard;
+
+
+/***/ }),
+/* 25 */
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.WithUser = exports.StringField = void 0;
+var string_field_decorator_1 = __webpack_require__(26);
+Object.defineProperty(exports, "StringField", ({ enumerable: true, get: function () { return string_field_decorator_1.StringField; } }));
+var user_decorator_1 = __webpack_require__(27);
+Object.defineProperty(exports, "WithUser", ({ enumerable: true, get: function () { return user_decorator_1.WithUser; } }));
+
+
+/***/ }),
+/* 26 */
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.StringField = void 0;
+const class_validator_1 = __webpack_require__(18);
+const common_1 = __webpack_require__(1);
+const graphql_1 = __webpack_require__(21);
+const swagger_1 = __webpack_require__(3);
+const StringField = ({ min = 6, max = 14, example }) => {
+    return (0, common_1.applyDecorators)((0, graphql_1.Field)(), (0, class_validator_1.IsString)(), (0, class_validator_1.MinLength)(min), (0, class_validator_1.MaxLength)(max), (0, swagger_1.ApiProperty)({ example }));
+};
+exports.StringField = StringField;
+
+
+/***/ }),
+/* 27 */
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.WithUser = void 0;
+const common_1 = __webpack_require__(1);
+const graphql_1 = __webpack_require__(21);
+exports.WithUser = (0, common_1.createParamDecorator)((data, context) => {
+    const ctx = graphql_1.GqlExecutionContext.create(context);
+    return ctx.getContext().req.user;
+});
+
+
+/***/ }),
+/* 28 */
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.HttpExceptionFilter = void 0;
+var http_exception_filter_1 = __webpack_require__(29);
+Object.defineProperty(exports, "HttpExceptionFilter", ({ enumerable: true, get: function () { return http_exception_filter_1.HttpExceptionFilter; } }));
+
+
+/***/ }),
+/* 29 */
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.HttpExceptionFilter = void 0;
+const tslib_1 = __webpack_require__(6);
+const common_1 = __webpack_require__(1);
+let HttpExceptionFilter = exports.HttpExceptionFilter = class HttpExceptionFilter {
+    catch(exception, host) {
+        const ctx = host.switchToHttp();
+        const response = ctx.getResponse();
+        const request = ctx.getRequest();
+        const status = exception.getStatus();
+        response.status?.(status).json({
+            statusCode: status,
+            timestamp: new Date().toISOString(),
+            path: request.url,
+            message: exception.message
+        });
+    }
+};
+exports.HttpExceptionFilter = HttpExceptionFilter = tslib_1.__decorate([
+    (0, common_1.Catch)(common_1.HttpException)
+], HttpExceptionFilter);
+
+
+/***/ }),
+/* 30 */
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AppModule = void 0;
-const tslib_1 = __webpack_require__(3);
-const path_1 = __webpack_require__(16);
-const auth_1 = __webpack_require__(17);
-const apollo_1 = __webpack_require__(60);
-const common_1 = __webpack_require__(4);
-const config_1 = __webpack_require__(61);
-const graphql_1 = __webpack_require__(50);
-const code_executor_api_1 = __webpack_require__(62);
+const tslib_1 = __webpack_require__(6);
+const path_1 = __webpack_require__(31);
+const auth_1 = __webpack_require__(32);
+const apollo_1 = __webpack_require__(66);
+const common_1 = __webpack_require__(1);
+const config_1 = __webpack_require__(67);
+const graphql_1 = __webpack_require__(21);
+const code_executor_api_1 = __webpack_require__(68);
 let AppModule = exports.AppModule = class AppModule {
 };
 exports.AppModule = AppModule = tslib_1.__decorate([
@@ -217,38 +417,38 @@ exports.AppModule = AppModule = tslib_1.__decorate([
 
 
 /***/ }),
-/* 16 */
+/* 31 */
 /***/ ((module) => {
 
 module.exports = require("path");
 
 /***/ }),
-/* 17 */
+/* 32 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AuthModule = void 0;
-var auth_module_1 = __webpack_require__(18);
+var auth_module_1 = __webpack_require__(33);
 Object.defineProperty(exports, "AuthModule", ({ enumerable: true, get: function () { return auth_module_1.AuthModule; } }));
 
 
 /***/ }),
-/* 18 */
+/* 33 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AuthModule = void 0;
-const tslib_1 = __webpack_require__(3);
-const users_1 = __webpack_require__(19);
-const common_1 = __webpack_require__(4);
-const jwt_1 = __webpack_require__(39);
-const jwt_strategy_1 = __webpack_require__(40);
-const local_strategy_1 = __webpack_require__(43);
-const auth_resolver_1 = __webpack_require__(47);
-const auth_service_1 = __webpack_require__(45);
-const config_1 = __webpack_require__(9);
+const tslib_1 = __webpack_require__(6);
+const users_1 = __webpack_require__(34);
+const common_1 = __webpack_require__(1);
+const jwt_1 = __webpack_require__(54);
+const jwt_strategy_1 = __webpack_require__(55);
+const local_strategy_1 = __webpack_require__(57);
+const auth_resolver_1 = __webpack_require__(61);
+const auth_service_1 = __webpack_require__(59);
+const config_1 = __webpack_require__(5);
 let AuthModule = exports.AuthModule = class AuthModule {
 };
 exports.AuthModule = AuthModule = tslib_1.__decorate([
@@ -270,29 +470,29 @@ exports.AuthModule = AuthModule = tslib_1.__decorate([
 
 
 /***/ }),
-/* 19 */
+/* 34 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.UsersRepository = exports.UsersModule = void 0;
-var users_module_1 = __webpack_require__(20);
+var users_module_1 = __webpack_require__(35);
 Object.defineProperty(exports, "UsersModule", ({ enumerable: true, get: function () { return users_module_1.UsersModule; } }));
-var users_repository_1 = __webpack_require__(21);
+var users_repository_1 = __webpack_require__(36);
 Object.defineProperty(exports, "UsersRepository", ({ enumerable: true, get: function () { return users_repository_1.UsersRepository; } }));
 
 
 /***/ }),
-/* 20 */
+/* 35 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.UsersModule = void 0;
-const tslib_1 = __webpack_require__(3);
-const common_1 = __webpack_require__(4);
-const users_repository_1 = __webpack_require__(21);
-const services_1 = __webpack_require__(22);
+const tslib_1 = __webpack_require__(6);
+const common_1 = __webpack_require__(1);
+const users_repository_1 = __webpack_require__(36);
+const services_1 = __webpack_require__(37);
 let UsersModule = exports.UsersModule = class UsersModule {
 };
 exports.UsersModule = UsersModule = tslib_1.__decorate([
@@ -306,29 +506,29 @@ exports.UsersModule = UsersModule = tslib_1.__decorate([
 
 
 /***/ }),
-/* 21 */
+/* 36 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.UsersRepository = void 0;
-const tslib_1 = __webpack_require__(3);
-const common_1 = __webpack_require__(4);
-const services_1 = __webpack_require__(22);
+const tslib_1 = __webpack_require__(6);
+const common_1 = __webpack_require__(1);
+const services_1 = __webpack_require__(37);
 let UsersRepository = exports.UsersRepository = class UsersRepository {
     constructor(prisma) {
         this.prisma = prisma;
     }
     getUserByUsername(username) {
-        return this.prisma.users.findUnique({
+        return this.prisma.user.findUnique({
             where: {
                 username
             }
         });
     }
     createUser(user) {
-        return this.prisma.users.create({
+        return this.prisma.user.create({
             data: user
         });
     }
@@ -340,55 +540,55 @@ exports.UsersRepository = UsersRepository = tslib_1.__decorate([
 
 
 /***/ }),
-/* 22 */
+/* 37 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ServicesModule = exports.PrismaService = exports.PrismaModule = void 0;
-const tslib_1 = __webpack_require__(3);
-tslib_1.__exportStar(__webpack_require__(23), exports);
-var prisma_1 = __webpack_require__(34);
+const tslib_1 = __webpack_require__(6);
+tslib_1.__exportStar(__webpack_require__(38), exports);
+var prisma_1 = __webpack_require__(49);
 Object.defineProperty(exports, "PrismaModule", ({ enumerable: true, get: function () { return prisma_1.PrismaModule; } }));
 Object.defineProperty(exports, "PrismaService", ({ enumerable: true, get: function () { return prisma_1.PrismaService; } }));
-var services_module_1 = __webpack_require__(38);
+var services_module_1 = __webpack_require__(53);
 Object.defineProperty(exports, "ServicesModule", ({ enumerable: true, get: function () { return services_module_1.ServicesModule; } }));
 
 
 /***/ }),
-/* 23 */
+/* 38 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ExecutorLanguages = exports.ExecutorApiResponse = exports.isExecutorApiResponse = exports.FailedToFetchError = exports.ExecutorApiService = exports.ExecutorApiModule = exports.ExecuteCodeApiDTO = void 0;
-var execute_code_api_dto_1 = __webpack_require__(24);
+var execute_code_api_dto_1 = __webpack_require__(39);
 Object.defineProperty(exports, "ExecuteCodeApiDTO", ({ enumerable: true, get: function () { return execute_code_api_dto_1.ExecuteCodeApiDTO; } }));
-var executor_api_module_1 = __webpack_require__(26);
+var executor_api_module_1 = __webpack_require__(41);
 Object.defineProperty(exports, "ExecutorApiModule", ({ enumerable: true, get: function () { return executor_api_module_1.ExecutorApiModule; } }));
-var executor_api_service_1 = __webpack_require__(28);
+var executor_api_service_1 = __webpack_require__(43);
 Object.defineProperty(exports, "ExecutorApiService", ({ enumerable: true, get: function () { return executor_api_service_1.ExecutorApiService; } }));
-var errors_1 = __webpack_require__(31);
+var errors_1 = __webpack_require__(46);
 Object.defineProperty(exports, "FailedToFetchError", ({ enumerable: true, get: function () { return errors_1.FailedToFetchError; } }));
-var type_guards_1 = __webpack_require__(33);
+var type_guards_1 = __webpack_require__(48);
 Object.defineProperty(exports, "isExecutorApiResponse", ({ enumerable: true, get: function () { return type_guards_1.isExecutorApiResponse; } }));
-var types_1 = __webpack_require__(25);
+var types_1 = __webpack_require__(40);
 Object.defineProperty(exports, "ExecutorApiResponse", ({ enumerable: true, get: function () { return types_1.ExecutorApiResponse; } }));
 Object.defineProperty(exports, "ExecutorLanguages", ({ enumerable: true, get: function () { return types_1.ExecutorLanguages; } }));
 
 
 /***/ }),
-/* 24 */
+/* 39 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ExecuteCodeApiDTO = void 0;
-const tslib_1 = __webpack_require__(3);
-const class_validator_1 = __webpack_require__(7);
-const swagger_1 = __webpack_require__(13);
-const types_1 = __webpack_require__(25);
+const tslib_1 = __webpack_require__(6);
+const swagger_1 = __webpack_require__(3);
+const class_validator_1 = __webpack_require__(18);
+const types_1 = __webpack_require__(40);
 class ExecuteCodeApiDTO {
 }
 exports.ExecuteCodeApiDTO = ExecuteCodeApiDTO;
@@ -410,7 +610,7 @@ tslib_1.__decorate([
 
 
 /***/ }),
-/* 25 */
+/* 40 */
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -428,16 +628,16 @@ exports.ExecutorLanguages = {
 
 
 /***/ }),
-/* 26 */
+/* 41 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ExecutorApiModule = void 0;
-const tslib_1 = __webpack_require__(3);
-const axios_1 = __webpack_require__(27);
-const common_1 = __webpack_require__(4);
-const executor_api_service_1 = __webpack_require__(28);
+const tslib_1 = __webpack_require__(6);
+const axios_1 = __webpack_require__(42);
+const common_1 = __webpack_require__(1);
+const executor_api_service_1 = __webpack_require__(43);
 let ExecutorApiModule = exports.ExecutorApiModule = class ExecutorApiModule {
 };
 exports.ExecutorApiModule = ExecutorApiModule = tslib_1.__decorate([
@@ -450,27 +650,27 @@ exports.ExecutorApiModule = ExecutorApiModule = tslib_1.__decorate([
 
 
 /***/ }),
-/* 27 */
+/* 42 */
 /***/ ((module) => {
 
 module.exports = require("@nestjs/axios");
 
 /***/ }),
-/* 28 */
+/* 43 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ExecutorApiService = void 0;
-const tslib_1 = __webpack_require__(3);
-const axios_1 = tslib_1.__importDefault(__webpack_require__(29));
-const qs_stringify_1 = tslib_1.__importDefault(__webpack_require__(30));
-const axios_2 = __webpack_require__(27);
-const common_1 = __webpack_require__(4);
-const errors_1 = __webpack_require__(31);
-const transform_language_1 = __webpack_require__(32);
-const config_1 = __webpack_require__(9);
+const tslib_1 = __webpack_require__(6);
+const axios_1 = __webpack_require__(42);
+const common_1 = __webpack_require__(1);
+const axios_2 = tslib_1.__importDefault(__webpack_require__(44));
+const qs_stringify_1 = tslib_1.__importDefault(__webpack_require__(45));
+const config_1 = __webpack_require__(5);
+const errors_1 = __webpack_require__(46);
+const transform_language_1 = __webpack_require__(47);
 let ExecutorApiService = exports.ExecutorApiService = class ExecutorApiService {
     constructor(httpService) {
         this.httpService = httpService;
@@ -488,7 +688,7 @@ let ExecutorApiService = exports.ExecutorApiService = class ExecutorApiService {
             return response?.data;
         }
         catch (error) {
-            if (axios_1.default.isAxiosError(error)) {
+            if (axios_2.default.isAxiosError(error)) {
                 common_1.Logger.warn((0, errors_1.FailedToFetchError)(error.status));
             }
         }
@@ -497,24 +697,24 @@ let ExecutorApiService = exports.ExecutorApiService = class ExecutorApiService {
 };
 exports.ExecutorApiService = ExecutorApiService = tslib_1.__decorate([
     (0, common_1.Injectable)(),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof axios_2.HttpService !== "undefined" && axios_2.HttpService) === "function" ? _a : Object])
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof axios_1.HttpService !== "undefined" && axios_1.HttpService) === "function" ? _a : Object])
 ], ExecutorApiService);
 
 
 /***/ }),
-/* 29 */
+/* 44 */
 /***/ ((module) => {
 
 module.exports = require("axios");
 
 /***/ }),
-/* 30 */
+/* 45 */
 /***/ ((module) => {
 
 module.exports = require("qs-stringify");
 
 /***/ }),
-/* 31 */
+/* 46 */
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -527,13 +727,13 @@ exports.FailedToFetchError = FailedToFetchError;
 
 
 /***/ }),
-/* 32 */
+/* 47 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.transformLanguage = void 0;
-const types_1 = __webpack_require__(25);
+const types_1 = __webpack_require__(40);
 const transformLanguage = (args) => {
     return {
         ...args,
@@ -544,7 +744,7 @@ exports.transformLanguage = transformLanguage;
 
 
 /***/ }),
-/* 33 */
+/* 48 */
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -568,28 +768,28 @@ exports.isExecutorApiResponse = isExecutorApiResponse;
 
 
 /***/ }),
-/* 34 */
+/* 49 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PrismaService = exports.PrismaModule = void 0;
-var prisma_module_1 = __webpack_require__(35);
+var prisma_module_1 = __webpack_require__(50);
 Object.defineProperty(exports, "PrismaModule", ({ enumerable: true, get: function () { return prisma_module_1.PrismaModule; } }));
-var prisma_service_1 = __webpack_require__(36);
+var prisma_service_1 = __webpack_require__(51);
 Object.defineProperty(exports, "PrismaService", ({ enumerable: true, get: function () { return prisma_service_1.PrismaService; } }));
 
 
 /***/ }),
-/* 35 */
+/* 50 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PrismaModule = void 0;
-const tslib_1 = __webpack_require__(3);
-const common_1 = __webpack_require__(4);
-const prisma_service_1 = __webpack_require__(36);
+const tslib_1 = __webpack_require__(6);
+const common_1 = __webpack_require__(1);
+const prisma_service_1 = __webpack_require__(51);
 let PrismaModule = exports.PrismaModule = class PrismaModule {
 };
 exports.PrismaModule = PrismaModule = tslib_1.__decorate([
@@ -601,15 +801,15 @@ exports.PrismaModule = PrismaModule = tslib_1.__decorate([
 
 
 /***/ }),
-/* 36 */
+/* 51 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PrismaService = void 0;
-const tslib_1 = __webpack_require__(3);
-const common_1 = __webpack_require__(4);
-const client_1 = __webpack_require__(37);
+const tslib_1 = __webpack_require__(6);
+const common_1 = __webpack_require__(1);
+const client_1 = __webpack_require__(52);
 let PrismaService = exports.PrismaService = class PrismaService extends client_1.PrismaClient {
     async onModuleInit() {
         await this.$connect();
@@ -626,21 +826,21 @@ exports.PrismaService = PrismaService = tslib_1.__decorate([
 
 
 /***/ }),
-/* 37 */
+/* 52 */
 /***/ ((module) => {
 
 module.exports = require("@prisma/client");
 
 /***/ }),
-/* 38 */
+/* 53 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ServicesModule = void 0;
-const tslib_1 = __webpack_require__(3);
-const common_1 = __webpack_require__(4);
-const executor_api_1 = __webpack_require__(23);
+const tslib_1 = __webpack_require__(6);
+const common_1 = __webpack_require__(1);
+const executor_api_1 = __webpack_require__(38);
 let ServicesModule = exports.ServicesModule = class ServicesModule {
 };
 exports.ServicesModule = ServicesModule = tslib_1.__decorate([
@@ -653,25 +853,25 @@ exports.ServicesModule = ServicesModule = tslib_1.__decorate([
 
 
 /***/ }),
-/* 39 */
+/* 54 */
 /***/ ((module) => {
 
 module.exports = require("@nestjs/jwt");
 
 /***/ }),
-/* 40 */
+/* 55 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.JwtStrategy = void 0;
-const tslib_1 = __webpack_require__(3);
-const passport_jwt_1 = __webpack_require__(41);
-const users_1 = __webpack_require__(19);
-const common_1 = __webpack_require__(4);
-const passport_1 = __webpack_require__(42);
-const config_1 = __webpack_require__(9);
+const tslib_1 = __webpack_require__(6);
+const passport_jwt_1 = __webpack_require__(56);
+const users_1 = __webpack_require__(34);
+const common_1 = __webpack_require__(1);
+const passport_1 = __webpack_require__(22);
+const config_1 = __webpack_require__(5);
 let JwtStrategy = exports.JwtStrategy = class JwtStrategy extends (0, passport_1.PassportStrategy)(passport_jwt_1.Strategy) {
     constructor(usersService) {
         super({
@@ -692,30 +892,24 @@ exports.JwtStrategy = JwtStrategy = tslib_1.__decorate([
 
 
 /***/ }),
-/* 41 */
+/* 56 */
 /***/ ((module) => {
 
 module.exports = require("passport-jwt");
 
 /***/ }),
-/* 42 */
-/***/ ((module) => {
-
-module.exports = require("@nestjs/passport");
-
-/***/ }),
-/* 43 */
+/* 57 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.LocalStrategy = void 0;
-const tslib_1 = __webpack_require__(3);
-const passport_local_1 = __webpack_require__(44);
-const common_1 = __webpack_require__(4);
-const passport_1 = __webpack_require__(42);
-const auth_service_1 = __webpack_require__(45);
+const tslib_1 = __webpack_require__(6);
+const passport_local_1 = __webpack_require__(58);
+const common_1 = __webpack_require__(1);
+const passport_1 = __webpack_require__(22);
+const auth_service_1 = __webpack_require__(59);
 let LocalStrategy = exports.LocalStrategy = class LocalStrategy extends (0, passport_1.PassportStrategy)(passport_local_1.Strategy) {
     constructor(authService) {
         super({ usernameField: 'username', passwordField: 'password' });
@@ -744,24 +938,24 @@ exports.LocalStrategy = LocalStrategy = tslib_1.__decorate([
 
 
 /***/ }),
-/* 44 */
+/* 58 */
 /***/ ((module) => {
 
 module.exports = require("passport-local");
 
 /***/ }),
-/* 45 */
+/* 59 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 var _a, _b;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AuthService = void 0;
-const tslib_1 = __webpack_require__(3);
-const bcrypt = tslib_1.__importStar(__webpack_require__(46));
-const users_1 = __webpack_require__(19);
-const common_1 = __webpack_require__(4);
-const jwt_1 = __webpack_require__(39);
+const tslib_1 = __webpack_require__(6);
+const bcrypt = tslib_1.__importStar(__webpack_require__(60));
+const users_1 = __webpack_require__(34);
+const common_1 = __webpack_require__(1);
+const jwt_1 = __webpack_require__(54);
 let AuthService = exports.AuthService = class AuthService {
     constructor(jwtService, usersService) {
         this.jwtService = jwtService;
@@ -799,28 +993,27 @@ exports.AuthService = AuthService = tslib_1.__decorate([
 
 
 /***/ }),
-/* 46 */
+/* 60 */
 /***/ ((module) => {
 
 module.exports = require("bcryptjs");
 
 /***/ }),
-/* 47 */
+/* 61 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
-var _a, _b, _c, _d;
+var _a, _b, _c, _d, _e;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AuthResolver = void 0;
-const tslib_1 = __webpack_require__(3);
-const decorators_1 = __webpack_require__(48);
-const guards_1 = __webpack_require__(52);
-const common_1 = __webpack_require__(4);
-const graphql_1 = __webpack_require__(50);
-const sign_in_input_1 = __webpack_require__(56);
-const auth_service_1 = __webpack_require__(45);
-const responses_1 = __webpack_require__(57);
-const config_1 = __webpack_require__(9);
+const tslib_1 = __webpack_require__(6);
+const common_1 = __webpack_require__(1);
+const graphql_1 = __webpack_require__(21);
+const config_1 = __webpack_require__(5);
+const nest_common_1 = __webpack_require__(10);
+const auth_service_1 = __webpack_require__(59);
+const sign_in_input_1 = __webpack_require__(62);
+const responses_1 = __webpack_require__(63);
 let AuthResolver = exports.AuthResolver = class AuthResolver {
     constructor(authService) {
         this.authService = authService;
@@ -834,20 +1027,20 @@ let AuthResolver = exports.AuthResolver = class AuthResolver {
 };
 tslib_1.__decorate([
     (0, graphql_1.Mutation)(() => responses_1.AccessToken),
-    (0, common_1.UseGuards)(guards_1.GqlAuthGuard, guards_1.GqlLocalAuthGuard),
+    (0, common_1.UseGuards)(nest_common_1.GqlAuthGuard, nest_common_1.GqlLocalAuthGuard),
     tslib_1.__param(0, (0, graphql_1.Args)(config_1.graphqlArg)),
-    tslib_1.__param(1, (0, decorators_1.WithUser)()),
+    tslib_1.__param(1, (0, nest_common_1.WithUser)()),
     tslib_1.__metadata("design:type", Function),
-    tslib_1.__metadata("design:paramtypes", [typeof (_b = typeof sign_in_input_1.SignIn !== "undefined" && sign_in_input_1.SignIn) === "function" ? _b : Object, Object]),
-    tslib_1.__metadata("design:returntype", typeof (_c = typeof Promise !== "undefined" && Promise) === "function" ? _c : Object)
+    tslib_1.__metadata("design:paramtypes", [typeof (_b = typeof sign_in_input_1.SignIn !== "undefined" && sign_in_input_1.SignIn) === "function" ? _b : Object, typeof (_c = typeof nest_common_1.User !== "undefined" && nest_common_1.User) === "function" ? _c : Object]),
+    tslib_1.__metadata("design:returntype", typeof (_d = typeof Promise !== "undefined" && Promise) === "function" ? _d : Object)
 ], AuthResolver.prototype, "signIn", null);
 tslib_1.__decorate([
     (0, graphql_1.Query)(() => responses_1.UserResponse),
-    (0, common_1.UseGuards)(guards_1.JwtAuthGuard),
-    tslib_1.__param(0, (0, decorators_1.WithUser)()),
+    (0, common_1.UseGuards)(nest_common_1.JwtAuthGuard),
+    tslib_1.__param(0, (0, nest_common_1.WithUser)()),
     tslib_1.__metadata("design:type", Function),
     tslib_1.__metadata("design:paramtypes", [Object]),
-    tslib_1.__metadata("design:returntype", typeof (_d = typeof Promise !== "undefined" && Promise) === "function" ? _d : Object)
+    tslib_1.__metadata("design:returntype", typeof (_e = typeof Promise !== "undefined" && Promise) === "function" ? _e : Object)
 ], AuthResolver.prototype, "getProfile", null);
 exports.AuthResolver = AuthResolver = tslib_1.__decorate([
     (0, graphql_1.Resolver)(() => responses_1.UserResponse),
@@ -856,154 +1049,23 @@ exports.AuthResolver = AuthResolver = tslib_1.__decorate([
 
 
 /***/ }),
-/* 48 */
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.WithUser = exports.StringField = void 0;
-var string_field_decorator_1 = __webpack_require__(49);
-Object.defineProperty(exports, "StringField", ({ enumerable: true, get: function () { return string_field_decorator_1.StringField; } }));
-var user_decorator_1 = __webpack_require__(51);
-Object.defineProperty(exports, "WithUser", ({ enumerable: true, get: function () { return user_decorator_1.WithUser; } }));
-
-
-/***/ }),
-/* 49 */
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.StringField = void 0;
-const class_validator_1 = __webpack_require__(7);
-const common_1 = __webpack_require__(4);
-const graphql_1 = __webpack_require__(50);
-const swagger_1 = __webpack_require__(13);
-const StringField = ({ min = 6, max = 14, example }) => {
-    return (0, common_1.applyDecorators)((0, graphql_1.Field)(), (0, class_validator_1.IsString)(), (0, class_validator_1.MinLength)(min), (0, class_validator_1.MaxLength)(max), (0, swagger_1.ApiProperty)({ example }));
-};
-exports.StringField = StringField;
-
-
-/***/ }),
-/* 50 */
-/***/ ((module) => {
-
-module.exports = require("@nestjs/graphql");
-
-/***/ }),
-/* 51 */
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.WithUser = void 0;
-const common_1 = __webpack_require__(4);
-const graphql_1 = __webpack_require__(50);
-exports.WithUser = (0, common_1.createParamDecorator)((data, context) => {
-    const ctx = graphql_1.GqlExecutionContext.create(context);
-    return ctx.getContext().req.user;
-});
-
-
-/***/ }),
-/* 52 */
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.JwtAuthGuard = exports.GqlLocalAuthGuard = exports.GqlAuthGuard = void 0;
-var gql_auth_guard_1 = __webpack_require__(53);
-Object.defineProperty(exports, "GqlAuthGuard", ({ enumerable: true, get: function () { return gql_auth_guard_1.GqlAuthGuard; } }));
-var gql_local_auth_guard_1 = __webpack_require__(54);
-Object.defineProperty(exports, "GqlLocalAuthGuard", ({ enumerable: true, get: function () { return gql_local_auth_guard_1.GqlLocalAuthGuard; } }));
-var jwt_auth_guard_1 = __webpack_require__(55);
-Object.defineProperty(exports, "JwtAuthGuard", ({ enumerable: true, get: function () { return jwt_auth_guard_1.JwtAuthGuard; } }));
-
-
-/***/ }),
-/* 53 */
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.GqlAuthGuard = void 0;
-const graphql_1 = __webpack_require__(50);
-const passport_1 = __webpack_require__(42);
-const config_1 = __webpack_require__(9);
-class GqlAuthGuard extends (0, passport_1.AuthGuard)('local') {
-    // eslint-disable-next-line @typescript-eslint/no-useless-constructor
-    constructor() {
-        super();
-    }
-    getRequest(context) {
-        const ctx = graphql_1.GqlExecutionContext.create(context);
-        const gqlReq = ctx.getContext().req;
-        gqlReq.body = ctx.getArgs()[config_1.graphqlArg];
-        return gqlReq;
-    }
-}
-exports.GqlAuthGuard = GqlAuthGuard;
-
-
-/***/ }),
-/* 54 */
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.GqlLocalAuthGuard = void 0;
-const tslib_1 = __webpack_require__(3);
-const common_1 = __webpack_require__(4);
-const graphql_1 = __webpack_require__(50);
-const passport_1 = __webpack_require__(42);
-let GqlLocalAuthGuard = exports.GqlLocalAuthGuard = class GqlLocalAuthGuard extends (0, passport_1.AuthGuard)('local') {
-    async canActivate(context) {
-        const ctxRequest = graphql_1.GqlExecutionContext.create(context).getContext().req;
-        return Boolean(ctxRequest);
-    }
-};
-exports.GqlLocalAuthGuard = GqlLocalAuthGuard = tslib_1.__decorate([
-    (0, common_1.Injectable)()
-], GqlLocalAuthGuard);
-
-
-/***/ }),
-/* 55 */
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.JwtAuthGuard = void 0;
-const graphql_1 = __webpack_require__(50);
-const passport_1 = __webpack_require__(42);
-class JwtAuthGuard extends (0, passport_1.AuthGuard)('jwt') {
-    getRequest(context) {
-        const ctx = graphql_1.GqlExecutionContext.create(context);
-        return ctx.getContext().req;
-    }
-}
-exports.JwtAuthGuard = JwtAuthGuard;
-
-
-/***/ }),
-/* 56 */
+/* 62 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SignIn = void 0;
-const tslib_1 = __webpack_require__(3);
-const decorators_1 = __webpack_require__(48);
-const graphql_1 = __webpack_require__(50);
+const tslib_1 = __webpack_require__(6);
+const nest_common_1 = __webpack_require__(10);
+const graphql_1 = __webpack_require__(21);
 let SignIn = exports.SignIn = class SignIn {
 };
 tslib_1.__decorate([
-    (0, decorators_1.StringField)({ example: 'user123' }),
+    (0, nest_common_1.StringField)({ example: 'user123' }),
     tslib_1.__metadata("design:type", String)
 ], SignIn.prototype, "username", void 0);
 tslib_1.__decorate([
-    (0, decorators_1.StringField)({ example: 'password456' }),
+    (0, nest_common_1.StringField)({ example: 'password456' }),
     tslib_1.__metadata("design:type", String)
 ], SignIn.prototype, "password", void 0);
 exports.SignIn = SignIn = tslib_1.__decorate([
@@ -1012,28 +1074,28 @@ exports.SignIn = SignIn = tslib_1.__decorate([
 
 
 /***/ }),
-/* 57 */
+/* 63 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.UserResponse = exports.AccessToken = void 0;
-var token_response_1 = __webpack_require__(58);
+var token_response_1 = __webpack_require__(64);
 Object.defineProperty(exports, "AccessToken", ({ enumerable: true, get: function () { return token_response_1.AccessToken; } }));
-var user_response_1 = __webpack_require__(59);
+var user_response_1 = __webpack_require__(65);
 Object.defineProperty(exports, "UserResponse", ({ enumerable: true, get: function () { return user_response_1.UserResponse; } }));
 
 
 /***/ }),
-/* 58 */
+/* 64 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AccessToken = void 0;
-const tslib_1 = __webpack_require__(3);
-const graphql_1 = __webpack_require__(50);
-const swagger_1 = __webpack_require__(13);
+const tslib_1 = __webpack_require__(6);
+const graphql_1 = __webpack_require__(21);
+const swagger_1 = __webpack_require__(3);
 let AccessToken = exports.AccessToken = class AccessToken {
 };
 tslib_1.__decorate([
@@ -1047,15 +1109,15 @@ exports.AccessToken = AccessToken = tslib_1.__decorate([
 
 
 /***/ }),
-/* 59 */
+/* 65 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.UserResponse = void 0;
-const tslib_1 = __webpack_require__(3);
-const graphql_1 = __webpack_require__(50);
-const swagger_1 = __webpack_require__(13);
+const tslib_1 = __webpack_require__(6);
+const graphql_1 = __webpack_require__(21);
+const swagger_1 = __webpack_require__(3);
 let UserResponse = exports.UserResponse = class UserResponse {
 };
 tslib_1.__decorate([
@@ -1074,39 +1136,39 @@ exports.UserResponse = UserResponse = tslib_1.__decorate([
 
 
 /***/ }),
-/* 60 */
+/* 66 */
 /***/ ((module) => {
 
 module.exports = require("@nestjs/apollo");
 
 /***/ }),
-/* 61 */
+/* 67 */
 /***/ ((module) => {
 
 module.exports = require("@nestjs/config");
 
 /***/ }),
-/* 62 */
+/* 68 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.CodeExecutorModule = void 0;
-var code_executor_module_1 = __webpack_require__(63);
+var code_executor_module_1 = __webpack_require__(69);
 Object.defineProperty(exports, "CodeExecutorModule", ({ enumerable: true, get: function () { return code_executor_module_1.CodeExecutorModule; } }));
 
 
 /***/ }),
-/* 63 */
+/* 69 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.CodeExecutorModule = void 0;
-const tslib_1 = __webpack_require__(3);
-const common_1 = __webpack_require__(4);
-const code_executor_controller_1 = __webpack_require__(64);
-const services_1 = __webpack_require__(22);
+const tslib_1 = __webpack_require__(6);
+const common_1 = __webpack_require__(1);
+const code_executor_controller_1 = __webpack_require__(70);
+const services_1 = __webpack_require__(37);
 let CodeExecutorModule = exports.CodeExecutorModule = class CodeExecutorModule {
 };
 exports.CodeExecutorModule = CodeExecutorModule = tslib_1.__decorate([
@@ -1119,18 +1181,18 @@ exports.CodeExecutorModule = CodeExecutorModule = tslib_1.__decorate([
 
 
 /***/ }),
-/* 64 */
+/* 70 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 var _a, _b, _c;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.CodeExecutorController = void 0;
-const tslib_1 = __webpack_require__(3);
-const common_1 = __webpack_require__(4);
-const swagger_1 = __webpack_require__(13);
-const config_1 = __webpack_require__(9);
-const services_1 = __webpack_require__(22);
+const tslib_1 = __webpack_require__(6);
+const common_1 = __webpack_require__(1);
+const swagger_1 = __webpack_require__(3);
+const config_1 = __webpack_require__(5);
+const services_1 = __webpack_require__(37);
 let CodeExecutorController = exports.CodeExecutorController = class CodeExecutorController {
     constructor(executorService) {
         this.executorService = executorService;
@@ -1193,22 +1255,21 @@ var __webpack_exports__ = {};
 var exports = __webpack_exports__;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const exception_filters_1 = __webpack_require__(1);
-const validation_pipe_1 = __webpack_require__(5);
-const cors_1 = __webpack_require__(8);
-const swagger_1 = __webpack_require__(12);
-const common_1 = __webpack_require__(4);
-const core_1 = __webpack_require__(14);
-const swagger_2 = __webpack_require__(13);
-const app_module_1 = __webpack_require__(15);
-const config_1 = __webpack_require__(9);
+const common_1 = __webpack_require__(1);
+const core_1 = __webpack_require__(2);
+const swagger_1 = __webpack_require__(3);
+const cors_1 = __webpack_require__(4);
+const swagger_2 = __webpack_require__(9);
+const config_1 = __webpack_require__(5);
+const nest_common_1 = __webpack_require__(10);
+const app_module_1 = __webpack_require__(30);
 const bootstrap = async () => {
     const app = await core_1.NestFactory.create(app_module_1.AppModule);
     app.setGlobalPrefix(config_1.serverPrefix);
-    app.useGlobalFilters(new exception_filters_1.HttpExceptionFilter());
-    app.useGlobalPipes(new validation_pipe_1.ValidationPipe());
+    app.useGlobalFilters(new nest_common_1.HttpExceptionFilter());
+    app.useGlobalPipes(new nest_common_1.ValidationPipe());
     app.enableCors(cors_1.corsConfig);
-    swagger_2.SwaggerModule.setup(config_1.serverDocsPrefix, app, (0, swagger_1.createSwaggerDocs)(app));
+    swagger_1.SwaggerModule.setup(config_1.serverDocsPrefix, app, (0, swagger_2.createSwaggerDocs)(app));
     common_1.Logger.log(`🚀 Server is running on port ${config_1.serverPort}`);
     await app.listen(config_1.serverPort);
 };
