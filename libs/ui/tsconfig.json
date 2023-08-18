@@ -1,4 +1,3 @@
-
 {
   "extends": "cg-config/tsconfig/base.json",
   "compilerOptions": {
@@ -20,6 +19,9 @@
     },
     {
       "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "./tsconfig.storybook.json"
     }
-  ],
+  ]
 }

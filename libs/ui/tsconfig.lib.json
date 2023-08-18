@@ -8,9 +8,15 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "$/client-shared": ["../client-shared/src/index.ts"],
-      "$/styles": ["../client-shared/src/styles/index.ts"]
+      "@/*": [
+        "src/*"
+      ],
+      "$/client-shared": [
+        "../client-shared/src/index.ts"
+      ],
+      "$/styles": [
+        "../client-shared/src/styles/index.ts"
+      ]
     }
   },
   "files": [
@@ -25,7 +31,11 @@
     "**/*.spec.js",
     "**/*.test.js",
     "**/*.spec.jsx",
-    "**/*.test.jsx"
+    "**/*.test.jsx",
+    "**/*.stories.ts",
+    "**/*.stories.js",
+    "**/*.stories.jsx",
+    "**/*.stories.tsx"
   ],
   "include": [
     "**/*.js",
