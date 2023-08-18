@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { color, customScrollbar } from '@/styles'
+import { color, customScrollbar } from '$/styles'
 
 interface PopoverStylesProps {
   readonly $bottom: number

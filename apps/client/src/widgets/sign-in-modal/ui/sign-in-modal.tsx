@@ -1,13 +1,12 @@
+import { SignInForm } from '$/common-types'
+import { Modal } from '$/ui'
 import { observer } from 'mobx-react-lite'
 import { useNavigate } from 'react-router-dom'
 
 import { SignInModalTemplate } from '@/entities/sign-in-modal-template'
 import { useStore } from '@/shared/hooks'
 import { WrongPassword } from '@/widgets/sign-in-modal/lib/exceptions'
-import { SignInForm } from '@/widgets/sign-in-modal/types'
-
 import {
-  Modal,
   NotificationsProvider,
   RoutePaths,
   useFilteredEffect,

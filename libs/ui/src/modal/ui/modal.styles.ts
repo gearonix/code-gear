@@ -8,7 +8,7 @@ import {
   flex,
   shadow,
   wh
-} from '@/styles'
+} from '$/styles'
 
 export const ModalBackground = styled.div`
   ${flex('center', 'center')};
