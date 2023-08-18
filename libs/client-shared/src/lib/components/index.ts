@@ -1,5 +1,5 @@
 export {
   default as AnimationProvider,
   useAnimations
-} from '../../providers/animation-provider'
+} from '@/providers/animations/animation-provider'
 export { Display } from './Display'

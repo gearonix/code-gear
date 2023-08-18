@@ -1,7 +1,6 @@
+import { DarkThemePalette } from './themes'
 import { theme } from 'antd'
 import { ThemeConfig } from 'antd/es/config-provider'
-
-import { DarkThemePalette } from '@/app/providers/theme/config/themes'
 
 export const AntdConfig: ThemeConfig = {
   algorithm: theme.darkAlgorithm,

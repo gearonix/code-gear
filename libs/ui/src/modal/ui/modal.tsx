@@ -9,7 +9,7 @@ import { useModalTransitions } from '../hooks/use-modal-transitions'
 
 import { ModalBackground, ModalContainer, ModalStyles } from './modal.styles'
 
-type ModalProps = WithChildren<{
+export type ModalProps = WithChildren<{
   isOpen: boolean
   onClose: () => void
   width?: number

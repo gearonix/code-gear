@@ -1,10 +1,9 @@
-import { ThemeProvider } from '@/app/providers/theme'
-import { GlobalStyles } from '@/app/styles'
+import { ThemeProvider, GlobalStyles } from '$/client-shared'
+
+import 'normalize.css'
 
 import { RouterProvider } from '../providers/router'
 import { StoreProvider } from '../providers/store'
-
-import 'normalize.css'
 
 const App = () => {
   return (

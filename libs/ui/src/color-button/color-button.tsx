@@ -3,7 +3,7 @@ import { ButtonProps } from 'antd/es/button'
 
 import { WithChildren } from '$/client-shared'
 
-type ColorButtonProps = ButtonProps &
+export type ColorButtonProps = ButtonProps &
   WithChildren<{
     override: string
   }>

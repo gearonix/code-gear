@@ -1,6 +1,9 @@
-export { default as AnimationProvider } from './animation-provider'
+export { default as AnimationProvider } from './animations/animation-provider'
 export { default as ErrorBoundary } from './error-boundary/error-boundary'
 export {
   NotificationsContext,
   default as NotificationsProvider
-} from './notifications-provider'
+} from './notifications/notifications-provider'
+
+export { ThemeProvider } from './theme'
+export { GlobalStyles } from './styles'

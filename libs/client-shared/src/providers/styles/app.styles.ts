@@ -1,6 +1,6 @@
+import { customScrollbar } from '@/styles'
+import { font } from '@/styles'
 import { createGlobalStyle } from 'styled-components'
-
-import { customScrollbar, font } from '$/styles'
 
 export const GlobalStyles = createGlobalStyle`
   body {

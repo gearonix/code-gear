@@ -34,13 +34,12 @@
     "**/*.test.jsx",
     "**/*.stories.ts",
     "**/*.stories.js",
-    "**/*.stories.jsx",
-    "**/*.stories.tsx"
   ],
   "include": [
     "**/*.js",
     "**/*.jsx",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "**/*.stories.tsx"
   ]
 }
