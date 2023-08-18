@@ -3,7 +3,7 @@ import { observer } from 'mobx-react-lite'
 import { TabSizes, tabSizes } from '@/shared/consts/font-sizes'
 import { useActions, useStore } from '@/shared/hooks'
 
-import { Select } from '$/client-shared'
+import { Select } from '$/ui'
 
 const TabSizeSwitcher = observer(() => {
   const actions = useActions()

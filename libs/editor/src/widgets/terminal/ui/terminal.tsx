@@ -12,7 +12,8 @@ import { TerminalTabKeys } from '../index'
 
 import { Navigation, TerminalButtons, TerminalTitle } from './terminal.styles'
 
-import { Display, Popover } from '$/client-shared'
+import { Popover } from '$/ui'
+import { Display } from '$/client-shared'
 import { AiOutlineClose, GrClear } from '$/icons'
 
 const Terminal = observer(() => {

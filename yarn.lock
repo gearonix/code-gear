@@ -2037,7 +2037,7 @@ __metadata:
     "@nx/linter": 16.4.0
     "@nx/nest": 16.6.0
     "@nx/node": 16.4.0
-    "@nx/react": ^16.4.0
+    "@nx/react": 16.6.0
     "@nx/vite": 16.4.0
     "@nx/webpack": 16.4.0
     "@nx/workspace": 16.4.0
@@ -4243,7 +4243,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nx/react@npm:16.6.0, @nx/react@npm:^16.4.0":
+"@nx/react@npm:16.6.0":
   version: 16.6.0
   resolution: "@nx/react@npm:16.6.0"
   dependencies:
@@ -8381,6 +8381,7 @@ __metadata:
   resolution: "cg-client@workspace:apps/client"
   dependencies:
     cg-config: "workspace:^"
+    cg-ui: "workspace:^"
   languageName: unknown
   linkType: soft
 
@@ -8398,7 +8399,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"cg-generator@workspace:libs/generator":
+"cg-generator@workspace:^, cg-generator@workspace:libs/generator":
   version: 0.0.0-use.local
   resolution: "cg-generator@workspace:libs/generator"
   languageName: unknown
@@ -8409,6 +8410,15 @@ __metadata:
   resolution: "cg-server@workspace:apps/server"
   dependencies:
     cg-config: "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"cg-ui@workspace:^, cg-ui@workspace:libs/ui":
+  version: 0.0.0-use.local
+  resolution: "cg-ui@workspace:libs/ui"
+  dependencies:
+    cg-config: "workspace:^"
+    cg-generator: "workspace:^"
   languageName: unknown
   linkType: soft
 

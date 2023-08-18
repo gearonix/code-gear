@@ -9,7 +9,7 @@ import {
 } from './sign-in-modal-template.styles'
 
 import { Logo } from '$/assets'
-import { ColoredButton, ModalTitle } from '$/client-shared'
+import { ColoredButton, ModalTitle } from '$/ui'
 
 interface SignInModalTemplateProps<T> {
   onSubmit: (data: T) => void

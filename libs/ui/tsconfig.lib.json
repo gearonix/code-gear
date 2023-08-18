@@ -2,12 +2,14 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "../../dist/out-tsc",
-    "types": ["node", "vite/client"],
+    "types": [
+      "node",
+      "vite/client"
+    ],
     "baseUrl": ".",
     "paths": {
-      "$/config": ["../config/src/index.ts"],
-      "$/ui": ["../ui/src/index.ts"],
-      "@/*": ["src/*"]
+      "@/*": "src/*",
+      "$/client-shared": ["../client-shared/src/index.ts"]
     }
   },
   "files": [
@@ -24,5 +26,10 @@
     "**/*.spec.jsx",
     "**/*.test.jsx"
   ],
-  "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"]
+  "include": [
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.ts",
+    "**/*.tsx"
+  ]
 }

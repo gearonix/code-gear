@@ -5,7 +5,7 @@ import { useGetters } from '@/shared/hooks'
 
 import { useMappedLanguages } from '../hooks'
 
-import { Select } from '$/client-shared'
+import { Select } from '$/ui'
 
 const LanguageSwitcher = observer(() => {
   const languages = useMappedLanguages()

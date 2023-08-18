@@ -12,6 +12,7 @@
       "$/assets": ["../../libs/client-shared/src/assets/index.ts"],
       "$/styles": ["../../libs/client-shared/src/styles/index.ts"],
       "$/editor": ["../../libs/editor/src/app/index.ts"],
+      "$/ui": ["../../libs/ui/src/index.ts"],
       "react": ["../../node_modules/preact/compat"],
       "react-dom": ["../../node_modules/preact/compat"],
     }

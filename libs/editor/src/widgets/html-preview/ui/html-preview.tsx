@@ -12,7 +12,7 @@ import {
   PreviewWrapper
 } from './html-preview.styles'
 
-import { Popover } from '$/client-shared'
+import { Popover } from '$/ui'
 
 const HtmlPreview = () => {
   const modalsContext = useModalsContext()

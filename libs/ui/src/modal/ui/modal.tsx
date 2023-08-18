@@ -1,8 +1,8 @@
 import { MouseEvent } from 'react'
 import Scrollbar from 'react-smooth-scrollbar'
 
-import { AnimationProvider, Display, useAnimations } from '@/lib/components'
-import { WithChildren } from '@/types'
+import { AnimationProvider, Display, useAnimations } from '$/client-shared'
+import { WithChildren } from '$/client-shared'
 import { Portal } from '@reach/portal'
 
 import { useModalTransitions } from '../hooks/use-modal-transitions'

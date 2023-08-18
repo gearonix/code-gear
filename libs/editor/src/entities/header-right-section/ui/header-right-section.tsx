@@ -3,7 +3,7 @@ import { useTheme } from 'styled-components'
 
 import { RightSection } from './header-right-section.styles'
 
-import { ColoredButton } from '$/client-shared'
+import { ColoredButton } from '$/ui'
 
 interface HeaderRightSectionProps {
   runCode: () => void

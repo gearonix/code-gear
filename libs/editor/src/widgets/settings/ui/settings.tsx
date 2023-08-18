@@ -12,7 +12,7 @@ import { useColorCallback } from '../hooks'
 
 import { SettingsItem, SettingsText } from './settings.styles'
 
-import { Modal, ModalSeparator, ModalTitle } from '$/client-shared'
+import { Modal, ModalSeparator, ModalTitle } from '$/ui'
 
 const Settings = observer(() => {
   const modalsContext = useModalsContext()

@@ -1,25 +1,37 @@
 {
-  "name": "editor",
+  "name": "ui",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/editor/src",
+  "sourceRoot": "libs/ui/src",
   "projectType": "library",
   "tags": [],
   "targets": {
+    "generate": {
+      "command": "cross-env HYGEN_TMPLS=../generator/templates hygen {args.m} {args.com} --module_name={args.n}",
+      "options": {
+        "cwd": "libs/ui",
+        "args": ["m", "com", "n"]
+      }
+    },
     "lint": {
       "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["libs/editor/**/*.{ts,tsx,js,jsx}"],
+        "lintFilePatterns": [
+          "libs/ui/**/*.{ts,tsx,js,jsx}"
+        ],
         "fix": true
       }
     },
     "build": {
       "executor": "@nx/vite:build",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/libs/editor",
-        "skipTypeCheck": true
+        "outputPath": "dist/libs/ui"
       },
       "configurations": {
         "development": {
@@ -32,10 +44,12 @@
     },
     "test": {
       "executor": "@nx/vite:test",
-      "outputs": ["coverage/libs/editor"],
+      "outputs": [
+        "coverage/libs/ui"
+      ],
       "options": {
         "passWithNoTests": true,
-        "reportsDirectory": "../../coverage/libs/editor"
+        "reportsDirectory": "../../coverage/libs/ui"
       }
     }
   }

@@ -8,6 +8,7 @@
     "paths": {
       "$/client-shared": ["../client-shared/src/index.ts"],
       "$/config": ["../config/src/index.ts"],
+      "$/ui": ["../ui/src/index.ts"],
       "@/*": ["src/*"],
       "@/public/*": ["public/*"],
       "$/styles": ["../client-shared/src/styles/index.ts"],
