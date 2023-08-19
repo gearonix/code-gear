@@ -3,7 +3,7 @@ on:
   pull_request:
     branches: [ master ]
   push:
-    branches: [ develop ]
+    branches: [ ci-test ]
 permissions:
   contents: write
 jobs:
@@ -17,6 +17,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 19.x
+          cache: 'yarn'
       # Installing deps
       - name: Installing dependencies
         run: yarn install
@@ -33,6 +34,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 19.x
+          cache: 'yarn'
         # Installing deps
       - name: Installing dependencies
         run: yarn install
@@ -47,6 +49,21 @@ jobs:
           FOLDER: dist
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MESSAGE: "Build: ({sha}) {msg}"
+  build-storybook:
+    name: Creating a Production Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        # Node.js and yarn setup
+      - name: Installing Node.js 19.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 19.x
+          cache: 'yarn'
+        # Installing deps
+      - name: Installing dependencies
+        run: yarn install
+        # Main rules
       - name: Building storybook
         run: yarn dlx nx run ui:storybook:build
       - name: Pushing to build-storybook branch
