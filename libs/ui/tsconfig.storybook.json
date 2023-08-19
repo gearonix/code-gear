@@ -3,21 +3,6 @@
   "compilerOptions": {
     "emitDecoratorMetadata": true,
     "outDir": "",
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "src/*"
-      ],
-      "$/client-shared": [
-        "../client-shared/src/index.ts"
-      ],
-      "$/styles": [
-        "../client-shared/src/styles/index.ts"
-      ],
-      "$/config": [
-        "../config/src/index.ts"
-      ]
-    }
   },
   "files": [
     "../../node_modules/@nx/react/typings/styled-jsx.d.ts",

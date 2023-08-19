@@ -11,7 +11,7 @@ export type WithPreactChildren<T extends AnyObject = AnyObject> = T & {
   children: ComponentChildren
 }
 
-export type WithChildren<T extends AnyObject = AnyObject> = T & {
+export type WithChildren<T> = T & {
   children: ReactElement | ReactNode
 }
 

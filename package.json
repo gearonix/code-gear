@@ -38,7 +38,8 @@
       "commitMessage": "chore: release v${version}"
     },
     "github": {
-      "release": true
+      "release": true,
+      "assets": ["dist/*.zip"]
     },
     "npm": {
       "publish": false

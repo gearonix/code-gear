@@ -3,12 +3,12 @@ on:
   pull_request:
     branches: [ master ]
   push:
-    branches: [ ci-test ]
+    branches: [ master ]
 permissions:
   contents: write
 jobs:
   linting:
-    name: Linting project
+    name: linting project
     runs-on: ubuntu-latest
     steps:
       # Node.js and yarn setup
@@ -25,7 +25,7 @@ jobs:
       - name: Linting project
         run: yarn run lint
   building:
-    name: Creating a Production Build
+    name: creating a production build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -50,7 +50,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MESSAGE: "Build: ({sha}) {msg}"
   build-storybook:
-    name: Creating a Production Build
+    name: building storybook
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -67,8 +67,13 @@ jobs:
       - name: Building storybook
         run: yarn dlx nx run ui:storybook:build
       - name: Pushing to build-storybook branch
-        uses: JamesIves/github-pages-deploy-action@v4
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v3
         with:
-          folder: dist/storybook/ui
-          branch: storybook-build
+          target_branch: storybook-build
+          build_dir: dist/storybook/ui
+          commit_message: 'chore(deploy): storybook'
+          keep_history: false
+          jekyll: false
+        env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
