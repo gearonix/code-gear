@@ -1,19 +1,18 @@
 import { createStorybookVariant } from '$/client-shared'
 import { AnimationDecorator } from '$/client-shared'
+import { Popover, PopoverProps } from './popover'
 import type { Meta } from '@storybook/react'
-import { Modal, ModalProps } from './modal'
 
-const Story: Meta<typeof Modal> = {
-  component: Modal,
-  title: 'ui/modal',
+const Story: Meta<typeof Popover> = {
+  component: Popover,
+  title: 'ui/popover',
   decorators: [AnimationDecorator]
 }
 
-const variant = createStorybookVariant<ModalProps>({
+const variant = createStorybookVariant<PopoverProps>({
   isOpen: true,
   onClose: () => {},
-  width: 50,
-  height: 70
+  height: 200
 })
 
 export const Default = variant()

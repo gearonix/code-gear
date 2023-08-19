@@ -8,7 +8,7 @@ const project = new Project({
 })
 
 const files = project.addSourceFilesFromTsConfig(
-  '../../libs/editor/tsconfig.consts.json'
+  '../../libs/editor/tsconfig.lib.json'
 )
 
 console.log(`Success. Number of files: ${files.length}`)
