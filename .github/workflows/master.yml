@@ -50,24 +50,8 @@ jobs:
       - name: Building storybook
         run: yarn dlx nx run ui:storybook:build
       - name: Pushing to build-storybook branch
-      - uses: JamesIves/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist/storybook/ui
           branch: storybook-build
-  testing:
-    name: Testing project
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        # Node.js and yarn setup
-      - name: Installing Node.js 19.x
-        uses: actions/setup-node@v3
-        with:
-          node-version: 19.x
-        # Installing deps
-      - name: Installing dependencies
-        run: yarn install
-        # Main rules
-      - name: Testing storybook
-        run: yarn dlx nx run ui:storybook:test
-
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

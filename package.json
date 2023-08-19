@@ -23,10 +23,10 @@
     }
   },
   "scripts": {
-    "serve": "nx run-many -t=serve -p client server --parallel",
-    "build": "nx run-many -t=build -p client server --parallel",
-    "lint": "nx run-many --targets=lint --all",
-    "test": "nx run-many --targets=test --all",
+    "serve": "nx run-many -t=serve -p client server --parallel=2",
+    "build": "nx run-many -t=build -p client server --parallel=2",
+    "lint": "nx run-many --targets=lint --all --parallel=8",
+    "test": "nx run-many --targets=test --all --parallel=8",
     "dep-graph": "nx dep-graph",
     "preinstall": "node -e \"if(process.env.npm_execpath.indexOf('yarn') === -1) throw new Error('You must use Yarn to install, not NPM')\"",
     "prepare": "husky install",
@@ -160,7 +160,6 @@
     "ts-jest": "^29.1.0",
     "ts-morph": "^19.0.0",
     "ts-node": "10.9.1",
-    "tsconfig-paths-webpack-plugin": "^4.1.0",
     "typescript": "~5.1.3",
     "vite": "^4.3.9",
     "vite-plugin-dts": "~2.3.0",
