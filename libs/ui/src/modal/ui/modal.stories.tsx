@@ -17,9 +17,8 @@ const Story: Meta<typeof Modal> = {
 const variant = createStorybookVariant<typeof Modal>({
   isOpen: true,
   onClose: () => {},
-  width: 40,
-  height: 40,
-  children: <div>Hello world!</div>
+  width: 50,
+  height: 70
 })
 
 export const Default = variant()

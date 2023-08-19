@@ -1,6 +1,6 @@
 import { Select as AntdSelect } from 'antd'
 
-interface SelectProps<T> {
+export interface SelectProps<T> {
   onChange: (val: T) => void
   value: T
   options: {

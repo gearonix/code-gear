@@ -6,13 +6,18 @@ import { usePopoverAnimation } from '../hooks'
 
 import { PopoverStyles } from './popover.styles'
 
-type PopoverProps = WithChildren<{
+export type PopoverProps = WithChildren<{
   onClose: VoidFunction
   isOpen: boolean
   height: number
 }>
 
-const Popover = ({ children, onClose, isOpen, height }: PopoverProps) => {
+export const Popover = ({
+  children,
+  onClose,
+  isOpen,
+  height
+}: PopoverProps) => {
   const motion = usePopoverAnimation(onClose, height)
 
   useEffect(() => {
