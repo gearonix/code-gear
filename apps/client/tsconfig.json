@@ -1,5 +1,5 @@
 {
-  "extends": "cg-config/tsconfig/base.json",
+  "extends": "cg-config/src/tsconfig/base.json",
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",

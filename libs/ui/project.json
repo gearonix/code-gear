@@ -5,7 +5,7 @@
   "projectType": "library",
   "tags": [],
   "targets": {
-    "generate": {
+    "generate:ui": {
       "command": "cross-env HYGEN_TMPLS=../generator/templates hygen {args.m} {args.com} --module_name={args.n}",
       "options": {
         "cwd": "libs/ui",
@@ -16,7 +16,7 @@
         ]
       }
     },
-    "storybook": {
+    "storybook:serve": {
       "executor": "@nx/storybook:storybook",
       "options": {
         "port": 4400,
@@ -28,7 +28,7 @@
         }
       }
     },
-    "build-storybook": {
+    "storybook:build": {
       "executor": "@nx/storybook:build",
       "outputs": [
         "{options.outputDir}"
@@ -43,21 +43,22 @@
         }
       }
     },
-    "test-storybook": {
+    "storybook:test": {
       "executor": "nx:run-commands",
       "options": {
         "command": "test-storybook -c libs/ui/.storybook --url=http://localhost:4400"
-      }
+      },
+      "dependsOn": ["storybook:serve"]
     },
-    "static-storybook": {
+    "storybook:preview": {
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "ui:build-storybook",
+        "buildTarget": "ui:storybook:build",
         "staticFilePath": "dist/storybook/ui"
       },
       "configurations": {
         "ci": {
-          "buildTarget": "ui:build-storybook:ci"
+          "buildTarget": "ui:storybook:build:ci"
         }
       }
     },

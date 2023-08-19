@@ -9,6 +9,9 @@
       "require": "./index.js"
     }
   },
+  "dependencies": {
+    "cg-client-shared": "workspace:^"
+  },
   "devDependencies": {
     "cg-config": "workspace:^",
     "cg-generator": "workspace:^"

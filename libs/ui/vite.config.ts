@@ -27,7 +27,17 @@ export default defineConfig({
       formats: ['es', 'cjs']
     },
     rollupOptions: {
-      external: ['react', 'react-dom', 'react/jsx-runtime']
+      external: [
+        'react',
+        'react-dom',
+        'react/jsx-runtime',
+        'antd',
+        'react-router-dom',
+        'react-smooth-scrollbar',
+        'cg-client-shared',
+        'cg-config',
+        'sb-cache'
+      ]
     }
   },
 

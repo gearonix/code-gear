@@ -6,7 +6,8 @@
     "types": ["node"],
     "baseUrl": ".",
     "paths": {
-      "$/services": ["../services/src/index.ts"],
+      "$/services": ["../nest-services/src/index.ts"],
+      "$/client-shared": ["../client-shared/src/index.ts"],
       "$/server/*": ["../../apps/server/src/*"]
     }
   },

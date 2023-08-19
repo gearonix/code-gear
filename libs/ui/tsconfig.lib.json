@@ -16,6 +16,9 @@
       ],
       "$/styles": [
         "../client-shared/src/styles/index.ts"
+      ],
+      "$/config": [
+        "../config/src/index.ts"
       ]
     }
   },

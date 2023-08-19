@@ -1,24 +1,20 @@
+import { createStorybookConfig } from 'cg-config/src'
 import type { StorybookConfig } from '@storybook/react-vite'
 import { mergeConfig } from 'vite'
+import viteTsConfigPaths from 'vite-tsconfig-paths'
 
-const config: StorybookConfig = {
-  stories: ['../src/**/*.stories.@(js|jsx|ts|tsx)'],
-  addons: ['@storybook/addon-essentials', '@storybook/addon-interactions'],
-  framework: {
-    name: '@storybook/react-vite',
-    options: {
-      builder: {
-        viteConfigPath: 'libs/ui/vite.config.ts'
-      }
-    }
-  },
-  viteFinal: (config) => {
+const config: StorybookConfig = createStorybookConfig({
+  viteConfigPath: 'libs/ui/vite.config.ts',
+  viteFinal: (config: StorybookConfig): StorybookConfig => {
     return mergeConfig(config, {
       define: {
         'process.env': process.env
-      }
+      },
+      plugins: [
+        viteTsConfigPaths()
+      ]
     })
   }
-}
+})
 
 export default config
