@@ -5,5 +5,5 @@ export {
   default as NotificationsProvider
 } from './notifications/notifications-provider'
 
-export { ThemeProvider } from './theme'
+export { ThemeProvider, DarkThemePalette, AntdConfig } from './theme'
 export { GlobalStyles } from './styles'

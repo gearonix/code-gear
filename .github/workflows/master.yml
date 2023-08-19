@@ -49,8 +49,8 @@ jobs:
           FOLDER: dist
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MESSAGE: "Build: ({sha}) {msg}"
-  build-storybook:
-    name: Creating a Production Build
+  storybook:
+    name: configuring storybook
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -72,3 +72,5 @@ jobs:
           folder: dist/storybook/ui
           branch: storybook-build
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Testing storybook in production
+        run: yarn dlx nx run ui:storybook:test:production

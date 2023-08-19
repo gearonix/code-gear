@@ -38,7 +38,10 @@
       "commitMessage": "chore: release v${version}"
     },
     "github": {
-      "release": true
+      "release": true,
+      "assets": [
+        "dist/*.zip"
+      ]
     },
     "npm": {
       "publish": false
@@ -93,8 +96,10 @@
     "@nxext/preact": "^16.2.0",
     "@preact/preset-vite": "^2.5.0",
     "@release-it/conventional-changelog": "^7.0.0",
+    "@storybook/addon-coverage": "^0.0.9",
     "@storybook/addon-essentials": "^7.1.0",
     "@storybook/addon-interactions": "^7.1.0",
+    "@storybook/addon-jest": "^7.3.2",
     "@storybook/core-server": "^7.1.0",
     "@storybook/jest": "~0.1.0",
     "@storybook/react-vite": "^7.1.0",

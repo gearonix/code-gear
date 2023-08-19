@@ -68,14 +68,19 @@ export const Modal = ({
       {containerTransition((spring, item) => (
         <Display when={item}>
           <Portal>
-            <ModalBackground style={spring} onClick={onClose} as={Spring.a.div}>
+            <ModalBackground
+              style={spring}
+              onClick={onClose}
+              as={Spring.a.div}
+              data-testid="background">
               <ModalStyles
                 style={{ ...modalStyle, x, y, scale }}
                 {...bind()}
                 onClick={stopPropagation}
                 as={Spring.a.div}
                 $width={width}
-                $height={height}>
+                $height={height}
+                data-testid="modal">
                 <Scrollbar
                   damping={0.05}
                   syncCallbacks={true}

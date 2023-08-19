@@ -12,7 +12,12 @@ export const createStorybookConfig: CreateStorybookConfig = ({
   viteFinal
 }) => ({
   stories: ['../src/**/*.stories.@(js|jsx|ts|tsx)'],
-  addons: ['@storybook/addon-essentials', '@storybook/addon-interactions'],
+  addons: [
+    '@storybook/addon-essentials',
+    '@storybook/addon-interactions',
+    '@storybook/addon-jest',
+    '@storybook/addon-coverage'
+  ],
   framework: {
     name: '@storybook/react-vite',
     options: {

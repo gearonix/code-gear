@@ -5,15 +5,10 @@
   "projectType": "library",
   "tags": [],
   "targets": {
-    "generate:ui": {
-      "command": "cross-env HYGEN_TMPLS=../generator/templates hygen {args.m} {args.com} --module_name={args.n}",
+    "generate": {
+      "command": "cross-env HYGEN_TMPLS=../generator/templates hygen ui new --module_name {args.name}",
       "options": {
-        "cwd": "libs/ui",
-        "args": [
-          "m",
-          "com",
-          "n"
-        ]
+        "cwd": "libs/ui"
       }
     },
     "storybook:serve": {
@@ -43,12 +38,17 @@
         }
       }
     },
-    "storybook:test": {
+    "storybook:test:development": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "test-storybook -c libs/ui/.storybook --url=http://localhost:4400"
-      },
-      "dependsOn": ["storybook:serve"]
+        "command": "test-storybook -c libs/ui/.storybook --url=http://localhost:4400 --watch"
+      }
+    },
+    "storybook:test:production": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "test-storybook -c libs/ui/.storybook --url=https://gearonix.github.io/CodeGear"
+      }
     },
     "storybook:preview": {
       "executor": "@nx/web:file-server",

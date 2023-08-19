@@ -1,5 +1,8 @@
-import type { Meta } from '@storybook/react'
+import { TestStory } from '$/client-shared'
 import { createStorybookVariant } from '$/client-shared'
+import { expect } from '@storybook/jest'
+import type { Meta } from '@storybook/react'
+import { within } from '@storybook/testing-library'
 import { ColorButtonProps } from './color-button'
 import { default as ColorButton } from './color-button'
 
@@ -14,6 +17,15 @@ const variant = createStorybookVariant<ColorButtonProps>({
 })
 
 export const Override = variant()
+
+Override.play = async ({ canvasElement }: TestStory<typeof ColorButton>) => {
+  const canvas = within(canvasElement)
+  const target = canvas.getByTestId('color-button')
+
+  expect(target).toBeDefined()
+  expect(target.textContent).toBe('Click me!')
+  expect(target.style.backgroundColor).toBeDefined()
+}
 
 export const Primary = variant({
   type: 'primary'

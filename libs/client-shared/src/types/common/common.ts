@@ -26,3 +26,7 @@ export type ValueOf<T> = T[keyof T]
 export type Keys<T extends readonly unknown[]> = T[number]
 
 export type Hex = `#${string}`
+
+export type CustomArguments<F> = F extends (...args: infer A) => unknown
+  ? A
+  : never

@@ -15,7 +15,10 @@ const ColorButton = ({ children, override, ...props }: ColorButtonProps) => {
 
   return (
     <ConfigProvider theme={modifiedTheme}>
-      <Button {...props} style={{ minWidth: '85px' }}>
+      <Button
+        {...props}
+        style={{ minWidth: '85px' }}
+        data-testid="color-button">
         {children}
       </Button>
     </ConfigProvider>

@@ -16,7 +16,7 @@
         "cwd": "apps/server"
       }
     },
-    "migrate:dev": {
+    "migrate:development": {
       "command": "yarn dlx prisma migrate dev",
       "options": {
         "cwd": "apps/server",
@@ -24,7 +24,7 @@
       },
       "dependsOn": ["prisma:generate","concat-prisma-files"]
     },
-    "migrate:prod": {
+    "migrate:production": {
       "command": "yarn dlx prisma migrate deploy",
       "options": {
         "cwd": "apps/server",
