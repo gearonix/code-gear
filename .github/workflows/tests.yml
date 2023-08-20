@@ -1,0 +1,40 @@
+name: CodeGear CI > test
+on:
+  pull_request:
+    branches: [ master ]
+  push:
+    tags:
+      - *
+permissions:
+  contents: write
+
+jobs:
+  build-storybook:
+    uses: ./.github/workflows/build.yml
+
+  test-storybook:
+    name: testing storybook
+    needs: [build-storybook]
+    runs-on: ubuntu-latest
+    steps:
+
+      - uses: actions/checkout@v3
+      - name: Installing Node.js 19.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 19.x
+          cache: 'yarn'
+
+      - name: Testing storybook in production
+        run: yarn dlx nx run ui:storybook:test:production
+  test:
+    name: testing project
+    runs-on: ubuntu-latest
+    steps:
+
+      - uses: actions/checkout@v3
+      - name: Installing Node.js 19.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 19.x
+          cache: 'yarn'
