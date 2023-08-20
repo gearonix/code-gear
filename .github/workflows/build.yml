@@ -27,15 +27,6 @@ jobs:
       - name: Creating a Production Build
         run: yarn run build
 
-      - name: Pushing to build branch
-        uses: s0/git-publish-subdir-action@develop
-        env:
-          REPO: self
-          BRANCH: build
-          FOLDER: dist
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          MESSAGE: "Build: ({sha}) {msg}"
-
   build-storybook:
     name: Building and deploying storybook
     runs-on: ubuntu-latest
@@ -53,10 +44,3 @@ jobs:
 
       - name: Building storybook
         run: yarn dlx nx run ui:storybook:build
-
-      - name: Pushing to build-storybook branch
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: dist/storybook/ui
-          branch: storybook-build
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
