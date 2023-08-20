@@ -35,7 +35,7 @@ jobs:
           MESSAGE: "Build: ({sha}) {msg}"
 
   build-storybook:
-    name: build storybook
+    name: Building and deploying storybook
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

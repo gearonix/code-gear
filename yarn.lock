@@ -11346,11 +11346,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"cg-scripts@workspace:tools/scripts":
+  version: 0.0.0-use.local
+  resolution: "cg-scripts@workspace:tools/scripts"
+  languageName: unknown
+  linkType: soft
+
 "cg-server@workspace:apps/server":
   version: 0.0.0-use.local
   resolution: "cg-server@workspace:apps/server"
   dependencies:
     cg-config: "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"cg-tools@workspace:tools/dev":
+  version: 0.0.0-use.local
+  resolution: "cg-tools@workspace:tools/dev"
   languageName: unknown
   linkType: soft
 
