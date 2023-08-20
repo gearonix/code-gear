@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "packageManager": "yarn@3.6.0",
   "devDependencies": {
-    "cg-config": "workspace:^"
+    "cg-config": "workspace:^",
+    "cg-ui": "workspace:^"
   }
 }

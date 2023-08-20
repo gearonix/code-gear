@@ -57,7 +57,7 @@ class ee {
     return this._statuses && (t = this._statuses.includes(e.status)), this._headers && t && (t = Object.keys(this._headers).some((n) => e.headers.get(n) === this._headers[n])), t;
   }
 }
-class S {
+class x {
   /**
    * To construct a new CacheableResponsePlugin instance you must provide at
    * least one of the `config` properties.
@@ -98,7 +98,7 @@ function ne() {
     IDBCursor.prototype.continuePrimaryKey
   ]);
 }
-const F = /* @__PURE__ */ new WeakMap(), P = /* @__PURE__ */ new WeakMap(), j = /* @__PURE__ */ new WeakMap(), I = /* @__PURE__ */ new WeakMap(), x = /* @__PURE__ */ new WeakMap();
+const F = /* @__PURE__ */ new WeakMap(), P = /* @__PURE__ */ new WeakMap(), j = /* @__PURE__ */ new WeakMap(), N = /* @__PURE__ */ new WeakMap(), S = /* @__PURE__ */ new WeakMap();
 function re(s) {
   const e = new Promise((t, n) => {
     const r = () => {
@@ -113,7 +113,7 @@ function re(s) {
   return e.then((t) => {
     t instanceof IDBCursor && F.set(t, s);
   }).catch(() => {
-  }), x.set(e, s), e;
+  }), S.set(e, s), e;
 }
 function ae(s) {
   if (P.has(s))
@@ -168,12 +168,12 @@ function ce(s) {
 function f(s) {
   if (s instanceof IDBRequest)
     return re(s);
-  if (I.has(s))
-    return I.get(s);
+  if (N.has(s))
+    return N.get(s);
   const e = ce(s);
-  return e !== s && (I.set(s, e), x.set(e, s)), e;
+  return e !== s && (N.set(s, e), S.set(e, s)), e;
 }
-const O = (s) => x.get(s);
+const O = (s) => S.get(s);
 function he(s, e, { blocked: t, upgrade: n, blocking: r, terminated: a } = {}) {
   const i = indexedDB.open(s, e), o = f(i);
   return n && i.addEventListener("upgradeneeded", (c) => {
@@ -629,7 +629,7 @@ async function Ce(s, e, t, n) {
       return s.match(o, n);
   }
 }
-class Ne {
+class Ie {
   /**
    * Creates a promise and exposes its resolve and reject functions as methods.
    */
@@ -639,7 +639,7 @@ class Ne {
     });
   }
 }
-async function Ie() {
+async function Ne() {
   for (const s of V)
     await s();
 }
@@ -671,7 +671,7 @@ class Ae {
    *     {@link workbox-routing~matchCallback} (if applicable).
    */
   constructor(e, t) {
-    this._cacheKeys = {}, Object.assign(this, t), this.event = t.event, this._strategy = e, this._handlerDeferred = new Ne(), this._extendLifetimePromises = [], this._plugins = [...e.plugins], this._pluginStateMap = /* @__PURE__ */ new Map();
+    this._cacheKeys = {}, Object.assign(this, t), this.event = t.event, this._strategy = e, this._handlerDeferred = new Ie(), this._extendLifetimePromises = [], this._plugins = [...e.plugins], this._pluginStateMap = /* @__PURE__ */ new Map();
     for (const n of this._plugins)
       this._pluginStateMap.set(n, {});
     this.event.waitUntil(this._handlerDeferred.promise);
@@ -807,7 +807,7 @@ class Ae {
       await c.put(r, h ? a.clone() : a);
     } catch (u) {
       if (u instanceof Error)
-        throw u.name === "QuotaExceededError" && await Ie(), u;
+        throw u.name === "QuotaExceededError" && await Ne(), u;
     }
     for (const u of this.iterateCallbacks("cacheDidUpdate"))
       await u({
@@ -959,7 +959,7 @@ class Ae {
     return n || t && t.status !== 200 && (t = void 0), t;
   }
 }
-class N {
+class I {
   /**
    * Creates a new instance of the strategy and sets all documented option
    * properties as public instance properties.
@@ -1081,7 +1081,7 @@ class N {
       throw i;
   }
 }
-class p extends N {
+class p extends I {
   /**
    *
    * @param {Object} [options]
@@ -1636,15 +1636,15 @@ function T(s, e, t) {
     });
   return Le().registerRoute(n), n;
 }
-function Se(s, e = []) {
+function xe(s, e = []) {
   for (const t of [...s.searchParams.keys()])
     e.some((n) => n.test(t)) && s.searchParams.delete(t);
   return s;
 }
-function* xe(s, { ignoreURLParametersMatching: e = [/^utm_/, /^fbclid$/], directoryIndex: t = "index.html", cleanURLs: n = !0, urlManipulation: r } = {}) {
+function* Se(s, { ignoreURLParametersMatching: e = [/^utm_/, /^fbclid$/], directoryIndex: t = "index.html", cleanURLs: n = !0, urlManipulation: r } = {}) {
   const a = new URL(s, location.href);
   a.hash = "", yield a.href;
-  const i = Se(a, e);
+  const i = xe(a, e);
   if (yield i.href, t && i.pathname.endsWith("/")) {
     const o = new URL(i.href);
     o.pathname += t, yield o.href;
@@ -1679,7 +1679,7 @@ class ke extends E {
   constructor(e, t) {
     const n = ({ request: r }) => {
       const a = e.getURLsToCacheKeys();
-      for (const i of xe(r.url, t)) {
+      for (const i of Se(r.url, t)) {
         const o = a.get(i);
         if (o) {
           const c = e.getIntegrityForCacheKey(o);
@@ -1700,7 +1700,7 @@ function Me(s) {
 function Ge(s, e) {
   Me(s), He(e);
 }
-class Be extends N {
+class Be extends I {
   /**
    * @private
    * @param {Request|string} request A request to run this strategy for.
@@ -1734,7 +1734,7 @@ const J = {
    */
   cacheWillUpdate: async ({ response: s }) => s.status === 200 || s.status === 0 ? s : null
 };
-class $ extends N {
+class $ extends I {
   /**
    * @param {Object} [options]
    * @param {string} [options.cacheName] Cache name to store and retrieve
@@ -1828,7 +1828,7 @@ class $ extends N {
     return e && clearTimeout(e), (a || !i) && (i = await r.cacheMatch(t)), i;
   }
 }
-class Ke extends N {
+class Ke extends I {
   /**
    * @param {Object} [options]
    * @param {string} [options.cacheName] Cache name to store and retrieve
@@ -1868,7 +1868,7 @@ class Ke extends N {
     return r;
   }
 }
-Ge([{"revision":null,"url":"assets/Dracula-e98fc9aa.js"},{"revision":null,"url":"assets/Dreamweaver-15561dbd.js"},{"revision":null,"url":"assets/editor-8c6aae46.js"},{"revision":null,"url":"assets/Eiffel-64ee1523.js"},{"revision":null,"url":"assets/GitHub-06a37610.js"},{"revision":null,"url":"assets/IDLE-cb87b507.js"},{"revision":null,"url":"assets/index-5b7410b2.js"},{"revision":null,"url":"assets/index-9d9ae4af.css"},{"revision":null,"url":"assets/Monokai-65cda70f.js"},{"revision":null,"url":"assets/Nord-e5536575.js"},{"revision":null,"url":"assets/settings-f095b691.js"},{"revision":null,"url":"assets/Tomorrow-33c61db8.js"},{"revision":null,"url":"assets/Twilight-ab8a64b1.js"},{"revision":null,"url":"assets/use-gesture-react.esm-513f1bdb.js"},{"revision":null,"url":"assets/workbox-window.prod.es5-a7b12eab.js"},{"revision":"5f08678399623c3a77759cbe2e5cdf12","url":"index.html"},{"revision":"f2513dbc34ba877ca158e280672da925","url":"favicon.svg"},{"revision":"2916883dd6259679afe0d684fe5b1f3a","url":"manifest.json"},{"revision":"b058215323dce09358ec4624356fc761","url":"service-worker.js"},{"revision":"7018b9b752b4b15aedb35eee44e811b6","url":"manifest-logo/logo192.png"},{"revision":"1860ffb4107fe6ba101275eb0900e63e","url":"manifest-logo/logo512.png"},{"revision":"82472dd6a04460bf23af25a2fcbdbe95","url":"manifest.webmanifest"}]);
+Ge([{"revision":null,"url":"assets/Dracula-e98fc9aa.js"},{"revision":null,"url":"assets/Dreamweaver-15561dbd.js"},{"revision":null,"url":"assets/editor-97dc8b67.js"},{"revision":null,"url":"assets/Eiffel-64ee1523.js"},{"revision":null,"url":"assets/GitHub-06a37610.js"},{"revision":null,"url":"assets/IDLE-cb87b507.js"},{"revision":null,"url":"assets/index-9d9ae4af.css"},{"revision":null,"url":"assets/index-bf87d3fe.js"},{"revision":null,"url":"assets/Monokai-65cda70f.js"},{"revision":null,"url":"assets/Nord-e5536575.js"},{"revision":null,"url":"assets/settings-d54ef171.js"},{"revision":null,"url":"assets/Tomorrow-33c61db8.js"},{"revision":null,"url":"assets/Twilight-ab8a64b1.js"},{"revision":null,"url":"assets/use-gesture-react.esm-9258f7dd.js"},{"revision":null,"url":"assets/workbox-window.prod.es5-a7b12eab.js"},{"revision":"a0b238ff2c677676c622c90219f07597","url":"index.html"},{"revision":"f2513dbc34ba877ca158e280672da925","url":"favicon.svg"},{"revision":"2916883dd6259679afe0d684fe5b1f3a","url":"manifest.json"},{"revision":"b058215323dce09358ec4624356fc761","url":"service-worker.js"},{"revision":"7018b9b752b4b15aedb35eee44e811b6","url":"manifest-logo/logo192.png"},{"revision":"1860ffb4107fe6ba101275eb0900e63e","url":"manifest-logo/logo512.png"},{"revision":"82472dd6a04460bf23af25a2fcbdbe95","url":"manifest.webmanifest"}]);
 self.addEventListener("message", (s) => {
   s.data && s.data.type === "SKIP_WAITING" && self.skipWaiting();
 });
@@ -1877,7 +1877,7 @@ T(
   new $({
     cacheName: "pages",
     plugins: [
-      new S({
+      new x({
         statuses: [200]
       })
     ]
@@ -1901,7 +1901,7 @@ T(
   new Ke({
     cacheName: "assets",
     plugins: [
-      new S({
+      new x({
         statuses: [200]
       })
     ]
@@ -1912,7 +1912,7 @@ T(
   new Be({
     cacheName: "images",
     plugins: [
-      new S({
+      new x({
         statuses: [0, 200]
       }),
       new X({

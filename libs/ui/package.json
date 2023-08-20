@@ -1,0 +1,19 @@
+{
+  "name": "cg-ui",
+  "version": "0.0.1",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.js"
+    }
+  },
+  "dependencies": {
+    "cg-client-shared": "workspace:^"
+  },
+  "devDependencies": {
+    "cg-config": "workspace:^",
+    "cg-generator": "workspace:^"
+  }
+}
