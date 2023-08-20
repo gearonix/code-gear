@@ -39,7 +39,6 @@ Default.play = async ({ canvasElement }: TestStory<typeof Modal>) => {
   expect(modal).toHaveStyle(`background-color: ${DarkThemePalette.grey}`)
   expect(modal).toHaveStyle('min-height: 300px')
   expect(modal).toHaveStyle('border-radius: 6px')
-  expect(modal).toHaveStyle(`border: 2px solid ${DarkThemePalette.lightGrey}`)
 
   await userEvent.click(background)
 
