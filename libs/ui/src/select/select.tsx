@@ -24,6 +24,7 @@ export const Select = <T,>({
       style={{ width: 200 }}
       options={options}
       defaultValue={defaultValue}
+      data-testid="select"
     />
   )
 }

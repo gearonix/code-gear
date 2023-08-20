@@ -2,8 +2,7 @@ name: CodeGear CI
 on:
   pull_request:
     branches: [ master ]
-  push:
-    branches: [ ci-test ]
+  push: null
 permissions:
   contents: write
 jobs:

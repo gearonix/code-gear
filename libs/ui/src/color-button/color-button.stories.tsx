@@ -8,7 +8,12 @@ import { default as ColorButton } from './color-button'
 
 const Story: Meta<typeof ColorButton> = {
   component: ColorButton,
-  title: 'ui/color-button'
+  title: 'ui/color-button',
+  argTypes: {
+    onClick: {
+      action: 'clicked'
+    }
+  }
 }
 
 const variant = createStorybookVariant<ColorButtonProps>({

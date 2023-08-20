@@ -13,7 +13,8 @@
   },
   "workspaces": [
     "apps/*",
-    "libs/*"
+    "libs/*",
+    "tools/*"
   ],
   "husky": {
     "hooks": {
@@ -26,7 +27,6 @@
     "serve": "nx run-many -t=serve -p client server --parallel=2",
     "build": "nx run-many -t=build -p client server --parallel=2",
     "lint": "nx run-many --targets=lint --all --parallel=8",
-    "test": "nx run-many --targets=test --all --parallel=8",
     "dep-graph": "nx dep-graph",
     "preinstall": "node -e \"if(process.env.npm_execpath.indexOf('yarn') === -1) throw new Error('You must use Yarn to install, not NPM')\"",
     "prepare": "husky install",
@@ -96,6 +96,7 @@
     "@nxext/preact": "^16.2.0",
     "@preact/preset-vite": "^2.5.0",
     "@release-it/conventional-changelog": "^7.0.0",
+    "@storybook/addon-actions": "^7.3.2",
     "@storybook/addon-coverage": "^0.0.9",
     "@storybook/addon-essentials": "^7.1.0",
     "@storybook/addon-interactions": "^7.1.0",

@@ -29,7 +29,8 @@ export const Popover = ({
       $bottom={height}
       {...motion.bind()}
       style={motion.springs}
-      as={motion.div}>
+      as={motion.div}
+      data-testid="popover">
       {children}
     </PopoverStyles>
   )

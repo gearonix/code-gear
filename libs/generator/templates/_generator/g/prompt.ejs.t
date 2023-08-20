@@ -1,5 +1,5 @@
 ---
-to: templates/<%= generator_name %>/prompt.js
+to: templates/<%= generator_name %>/new/prompt.js
 ---
 
 module.exports = [

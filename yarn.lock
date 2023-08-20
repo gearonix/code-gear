@@ -2194,6 +2194,7 @@ __metadata:
     "@reach/portal": ^0.18.0
     "@react-spring/web": ^9.7.3
     "@release-it/conventional-changelog": ^7.0.0
+    "@storybook/addon-actions": ^7.3.2
     "@storybook/addon-coverage": ^0.0.9
     "@storybook/addon-essentials": ^7.1.0
     "@storybook/addon-interactions": ^7.1.0
@@ -6674,6 +6675,38 @@ __metadata:
     react-dom:
       optional: true
   checksum: bb76f10802a231843b96de156dbc0e7a65e5706377cd557516dc8b2baadb54626ee088edbea633f5977a47e3564996a2c880813b5a43d32e1c8c57ee206467ff
+  languageName: node
+  linkType: hard
+
+"@storybook/addon-actions@npm:^7.3.2":
+  version: 7.3.2
+  resolution: "@storybook/addon-actions@npm:7.3.2"
+  dependencies:
+    "@storybook/client-logger": 7.3.2
+    "@storybook/components": 7.3.2
+    "@storybook/core-events": 7.3.2
+    "@storybook/global": ^5.0.0
+    "@storybook/manager-api": 7.3.2
+    "@storybook/preview-api": 7.3.2
+    "@storybook/theming": 7.3.2
+    "@storybook/types": 7.3.2
+    dequal: ^2.0.2
+    lodash: ^4.17.21
+    polished: ^4.2.2
+    prop-types: ^15.7.2
+    react-inspector: ^6.0.0
+    telejson: ^7.0.3
+    ts-dedent: ^2.0.0
+    uuid: ^9.0.0
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+  peerDependenciesMeta:
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: af7588ac3f32cf93b846c2304f480f9082e796515b41798fe5cdfda3be1b1bee6fbe399c6cc51bf106c3d4b0dd5f0901feffd7777396ae034d556ba3c8329a0d
   languageName: node
   linkType: hard
 

@@ -16,7 +16,8 @@ export const createStorybookConfig: CreateStorybookConfig = ({
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
     '@storybook/addon-jest',
-    '@storybook/addon-coverage'
+    '@storybook/addon-coverage',
+    '@storybook/addon-actions'
   ],
   framework: {
     name: '@storybook/react-vite',
