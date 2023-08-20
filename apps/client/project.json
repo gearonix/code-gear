@@ -19,7 +19,8 @@
       "defaultConfiguration": "production",
       "options": {
         "outputPath": "dist/apps/client",
-        "skipTypeCheck": true
+        "skipTypeCheck": true,
+        "configFile": "apps/client/src/app/entrypoint/vite.config.ts"
       },
       "configurations": {
         "development": {

@@ -4,6 +4,7 @@
     "default": {
       "runner": "nx-cloud",
       "options": {
+        "useDaemonProcess": false,
         "cacheableOperations": [
           "build",
           "lint",

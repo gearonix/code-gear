@@ -5,7 +5,7 @@ import 'normalize.css'
 import { RouterProvider } from '../providers/router'
 import { StoreProvider } from '../providers/store'
 
-const App = () => {
+export const Root = () => {
   return (
     <StoreProvider>
       <ThemeProvider>
@@ -15,5 +15,3 @@ const App = () => {
     </StoreProvider>
   )
 }
-
-export default App
