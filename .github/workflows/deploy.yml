@@ -10,7 +10,10 @@ permissions:
 
 jobs:
   build:
-    name: Creating a Production Build
+    uses: ./.github/workflows/build.yml
+  push-build:
+    needs: [build]
+    name: Pushing workflow to build branch
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -24,9 +27,6 @@ jobs:
       - name: Installing dependencies
         run: yarn install
 
-      - name: Creating a Production Build
-        run: yarn run build
-
       - name: Pushing to build branch
         uses: s0/git-publish-subdir-action@develop
         env:
@@ -36,7 +36,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MESSAGE: "Build: ({sha}) {msg}"
 
-  build-storybook:
+  push-storybook:
+    needs: [build]
     name: Building and deploying storybook
     runs-on: ubuntu-latest
     steps:
@@ -50,9 +51,6 @@ jobs:
 
       - name: Installing dependencies
         run: yarn install
-
-      - name: Building storybook
-        run: yarn dlx nx run ui:storybook:build
 
       - name: Pushing to build-storybook branch
         uses: JamesIves/github-pages-deploy-action@v4

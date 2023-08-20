@@ -2,14 +2,13 @@ name: CodeGear CI > tests
 on:
   pull_request:
     branches: [ master ]
-  push: null
+  push: [ master ]
 permissions:
   contents: write
 
 jobs:
   build-storybook:
     uses: ./.github/workflows/build.yml
-
   test-storybook:
     name: testing storybook
     needs: [build-storybook]
@@ -22,6 +21,9 @@ jobs:
         with:
           node-version: 19.x
           cache: 'yarn'
+
+      - name: Installing dependencies
+        run: yarn install
 
       - name: Testing storybook in production
         run: yarn dlx nx run ui:storybook:test:production

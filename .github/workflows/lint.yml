@@ -2,7 +2,7 @@ name: CodeGear CI > lint
 on:
   pull_request:
     branches: [ master ]
-  push: null
+  push: [ master ]
 permissions:
   contents: write
 
