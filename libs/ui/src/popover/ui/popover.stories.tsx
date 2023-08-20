@@ -4,7 +4,6 @@ import { createStorybookVariant } from '$/client-shared'
 import { AnimationDecorator } from '$/client-shared'
 import { expect } from '@storybook/jest'
 import type { Meta } from '@storybook/react'
-import { userEvent } from '@storybook/testing-library'
 import { within } from '@storybook/testing-library'
 import { Popover, PopoverProps } from './popover'
 

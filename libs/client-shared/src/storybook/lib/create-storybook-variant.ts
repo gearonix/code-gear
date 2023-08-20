@@ -1,4 +1,3 @@
-import { StoryObj } from '@storybook/react'
 import { Decorator } from '@storybook/react'
 import { ComponentProps } from 'react'
 import { FC } from 'react'

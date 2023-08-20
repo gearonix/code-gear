@@ -1,7 +1,5 @@
-import { DarkThemePalette } from '$/client-shared'
 import { TestStory } from '$/client-shared'
 import { createStorybookVariant } from '$/client-shared'
-import { Popover } from '@/popover/ui/popover'
 import { SelectProps } from '@/select/select'
 import { Select } from '@/select/select'
 import { expect } from '@storybook/jest'
@@ -41,10 +39,6 @@ Default.play = async ({ canvasElement }: TestStory<typeof Select>) => {
   expect(select).toBeDefined()
 
   await userEvent.click(select)
-
-  // expect(select).toHaveStyle(`background-color: ${DarkThemePalette.darkBlue}`)
-  // expect(select).toHaveStyle('touch-action: none')
-  // expect(select).toHaveStyle(`border: 2px solid ${DarkThemePalette.lightGrey}`)
 }
 
 export default Story

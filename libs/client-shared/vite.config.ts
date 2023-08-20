@@ -21,7 +21,7 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      entry: 'src/index.js',
+      entry: 'src/index.ts',
       name: 'client-shared',
       fileName: 'index',
       formats: ['es', 'cjs']

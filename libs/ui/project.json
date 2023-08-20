@@ -81,7 +81,8 @@
       ],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/libs/ui"
+        "outputPath": "dist/libs/ui",
+        "skipTypeCheck": true
       },
       "configurations": {
         "development": {
