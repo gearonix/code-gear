@@ -33,7 +33,7 @@
       "dependsOn": ["prisma:generate","concat-prisma-files"]
     },
     "generate-prisma-types": {
-      "command": "yarn dlx @kalissaac/prisma-typegen ./../../libs/nest-common/src/types/_prisma.ts ./prisma/schema.prisma",
+      "command": "yarn dlx @kalissaac/prisma-typegen ./../../packages/nest-common/src/types/_prisma.ts ./prisma/schema.prisma",
       "options": {
         "cwd": "apps/server"
       },
@@ -49,7 +49,7 @@
         "progress": true,
         "outputPath": "dist/apps/server",
         "main": "apps/server/src/main.ts",
-        "buildLibsFromSource": true,
+        "buildpackagesFromSource": true,
         "tsConfig": "apps/server/tsconfig.app.json",
         "assets": ["apps/server/src/assets"],
         "isolatedConfig": true,

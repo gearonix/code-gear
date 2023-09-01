@@ -1,7 +1,7 @@
 {
   "name": "api-common",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/api/common/src",
+  "sourceRoot": "packages/api/common/src",
   "projectType": "library",
   "targets": {
     "build": {
@@ -11,12 +11,12 @@
       ],
       "options": {
         "skipTypeCheck": true,
-        "outputPath": "dist/libs/api/common",
-        "tsConfig": "libs/api/common/tsconfig.lib.json",
-        "packageJson": "libs/api/common/package.json",
-        "main": "libs/api/common/src/index.ts",
+        "outputPath": "dist/packages/api/common",
+        "tsConfig": "packages/api/common/tsconfig.lib.json",
+        "packageJson": "packages/api/common/package.json",
+        "main": "packages/api/common/src/index.ts",
         "assets": [
-          "libs/api/common/*.md"
+          "packages/api/common/*.md"
         ]
       }
     },
@@ -27,8 +27,8 @@
       ],
       "options": {
         "lintFilePatterns": [
-          "libs/api/common/**/*.ts",
-          "libs/api/common/package.json"
+          "packages/api/common/**/*.ts",
+          "packages/api/common/package.json"
         ]
       }
     },
@@ -38,7 +38,7 @@
         "{workspaceRoot}/coverage/{projectRoot}"
       ],
       "options": {
-        "jestConfig": "libs/api/common/.config/jest.ts",
+        "jestConfig": "packages/api/common/.config/jest.ts",
         "passWithNoTests": true
       },
       "configurations": {

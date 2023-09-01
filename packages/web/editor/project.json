@@ -1,7 +1,7 @@
 {
   "name": "web-editor",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/web/editor/src",
+  "sourceRoot": "packages/web/editor/src",
   "projectType": "library",
   "tags": [],
   "targets": {
@@ -12,7 +12,7 @@
       ],
       "options": {
         "lintFilePatterns": [
-          "libs/web/editor/**/*.{ts,tsx,js,jsx}"
+          "packages/web/editor/**/*.{ts,tsx,js,jsx}"
         ],
         "fix": true
       }
@@ -24,9 +24,9 @@
       ],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/libs/web/editor",
+        "outputPath": "dist/packages/web/editor",
         "skipTypeCheck": true,
-        "configFile": "libs/web/editor/.config/vite.ts"
+        "configFile": "packages/web/editor/.config/vite.ts"
       },
       "configurations": {
         "development": {
@@ -40,11 +40,11 @@
     "test": {
       "executor": "@nx/vite:test",
       "outputs": [
-        "coverage/libs/web/editor"
+        "coverage/packages/web/editor"
       ],
       "options": {
         "passWithNoTests": true,
-        "reportsDirectory": "../../../coverage/libs/web/editor"
+        "reportsDirectory": "../../../coverage/packages/web/editor"
       }
     }
   }

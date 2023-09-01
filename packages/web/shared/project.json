@@ -1,7 +1,7 @@
 {
   "name": "web-shared",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/web/shared/src",
+  "sourceRoot": "packages/web/shared/src",
   "projectType": "library",
   "tags": [],
   "targets": {
@@ -12,7 +12,7 @@
       ],
       "options": {
         "lintFilePatterns": [
-          "libs/web/shared/**/*.{ts,tsx,js,jsx}"
+          "packages/web/shared/**/*.{ts,tsx,js,jsx}"
         ]
       }
     },
@@ -23,10 +23,10 @@
       ],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/libs/web/shared",
+        "outputPath": "dist/packages/web/shared",
         "skipTypeCheck": true,
         "fix": true,
-        "configFile": "libs/web/shared/.config/vite.ts"
+        "configFile": "packages/web/shared/.config/vite.ts"
       },
       "configurations": {
         "development": {
@@ -40,11 +40,11 @@
     "test": {
       "executor": "@nx/vite:test",
       "outputs": [
-        "coverage/libs/web/shared"
+        "coverage/packages/web/shared"
       ],
       "options": {
         "passWithNoTests": true,
-        "reportsDirectory": "../../../coverage/libs/web/shared"
+        "reportsDirectory": "../../../coverage/packages/web/shared"
       }
     }
   }

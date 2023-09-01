@@ -1,21 +1,21 @@
 {
   "name": "web-ui",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/web/ui/src",
+  "sourceRoot": "packages/web/ui/src",
   "projectType": "library",
   "tags": [],
   "targets": {
     "generate": {
       "command": "cross-env HYGEN_TMPLS=../../generator/templates hygen ui new --module_name {args.name}",
       "options": {
-        "cwd": "libs/web/ui"
+        "cwd": "packages/web/ui"
       }
     },
     "storybook:serve": {
       "executor": "@nx/storybook:storybook",
       "options": {
         "port": 4400,
-        "configDir": "libs/web/ui/.config/storybook"
+        "configDir": "packages/web/ui/.config/storybook"
       },
       "configurations": {
         "ci": {
@@ -30,7 +30,7 @@
       ],
       "options": {
         "outputDir": "dist/storybook/ui",
-        "configDir": "libs/web/ui/.config/storybook"
+        "configDir": "packages/web/ui/.config/storybook"
       },
       "configurations": {
         "ci": {
@@ -41,13 +41,13 @@
     "storybook:test:development": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "test-storybook -c libs/web/ui/.storybook --url=http://localhost:4400 --watch"
+        "command": "test-storybook -c packages/web/ui/.storybook --url=http://localhost:4400 --watch"
       }
     },
     "storybook:test:production": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "test-storybook -c libs/web/ui/.storybook --url=https://gearonix.github.io/CodeGear"
+        "command": "test-storybook -c packages/web/ui/.storybook --url=https://gearonix.github.io/CodeGear"
       }
     },
     "storybook:preview": {
@@ -69,7 +69,7 @@
       ],
       "options": {
         "lintFilePatterns": [
-          "libs/web/ui/**/*.{ts,tsx,js,jsx}"
+          "packages/web/ui/**/*.{ts,tsx,js,jsx}"
         ],
         "fix": true
       }
@@ -81,9 +81,9 @@
       ],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/libs/web/ui",
+        "outputPath": "dist/packages/web/ui",
         "skipTypeCheck": true,
-        "configFile": "libs/web/ui/.config/vite.ts"
+        "configFile": "packages/web/ui/.config/vite.ts"
       },
       "configurations": {
         "development": {
@@ -97,11 +97,11 @@
     "test": {
       "executor": "@nx/vite:test",
       "outputs": [
-        "coverage/libs/web/ui"
+        "coverage/packages/web/ui"
       ],
       "options": {
         "passWithNoTests": true,
-        "reportsDirectory": "../../../coverage/libs/web/ui"
+        "reportsDirectory": "../../../coverage/packages/web/ui"
       }
     }
   }

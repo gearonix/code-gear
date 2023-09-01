@@ -13,7 +13,7 @@ export const defineAliases = (): DefineAliases => {
     // alias: {
     //   '@code-gear/client-shared': resolve(
     //     __dirname,
-    //     resolveLibs('client-shared', 'src', 'index.js')
+    //     resolvepackages('client-shared', 'src', 'index.js')
     //   )
     // }
   }

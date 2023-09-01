@@ -11324,25 +11324,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cg-api-common@workspace:libs/api/common":
+"cg-api-common@workspace:packages/api/common":
   version: 0.0.0-use.local
-  resolution: "cg-api-common@workspace:libs/api/common"
+  resolution: "cg-api-common@workspace:packages/api/common"
   dependencies:
     tslib: ^2.3.0
   languageName: unknown
   linkType: soft
 
-"cg-api-services@workspace:libs/api/services":
+"cg-api-services@workspace:packages/api/services":
   version: 0.0.0-use.local
-  resolution: "cg-api-services@workspace:libs/api/services"
+  resolution: "cg-api-services@workspace:packages/api/services"
   dependencies:
     cg-config: "workspace:^"
   languageName: unknown
   linkType: soft
 
-"cg-client-shared@workspace:^, cg-client-shared@workspace:libs/web/shared":
+"cg-client-shared@workspace:^, cg-client-shared@workspace:packages/web/shared":
   version: 0.0.0-use.local
-  resolution: "cg-client-shared@workspace:libs/web/shared"
+  resolution: "cg-client-shared@workspace:packages/web/shared"
   dependencies:
     cg-config: "workspace:^"
   languageName: unknown
@@ -11357,23 +11357,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"cg-config@workspace:^, cg-config@workspace:libs/config":
+"cg-config@workspace:^, cg-config@workspace:packages/config":
   version: 0.0.0-use.local
-  resolution: "cg-config@workspace:libs/config"
+  resolution: "cg-config@workspace:packages/config"
   languageName: unknown
   linkType: soft
 
-"cg-editor@workspace:libs/web/editor":
+"cg-editor@workspace:packages/web/editor":
   version: 0.0.0-use.local
-  resolution: "cg-editor@workspace:libs/web/editor"
+  resolution: "cg-editor@workspace:packages/web/editor"
   dependencies:
     cg-config: "workspace:^"
   languageName: unknown
   linkType: soft
 
-"cg-generator@workspace:^, cg-generator@workspace:libs/generator":
+"cg-generator@workspace:^, cg-generator@workspace:packages/generator":
   version: 0.0.0-use.local
-  resolution: "cg-generator@workspace:libs/generator"
+  resolution: "cg-generator@workspace:packages/generator"
   languageName: unknown
   linkType: soft
 
@@ -11399,9 +11399,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"cg-ui@workspace:^, cg-ui@workspace:libs/web/ui":
+"cg-ui@workspace:^, cg-ui@workspace:packages/web/ui":
   version: 0.0.0-use.local
-  resolution: "cg-ui@workspace:libs/web/ui"
+  resolution: "cg-ui@workspace:packages/web/ui"
   dependencies:
     cg-client-shared: "workspace:^"
     cg-config: "workspace:^"

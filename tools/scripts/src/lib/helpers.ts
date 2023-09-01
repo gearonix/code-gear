@@ -8,12 +8,12 @@ const runProjectFiles = async (cb: (file: SourceFile) => void) => {
     tsConfigFilePath: join(resolveRoot(), 'tsconfig.base.json')
   })
 
-  project.addSourceFilesAtPaths(`${resolveRoot()}/libs/**/*.ts`)
-  project.addSourceFilesAtPaths(`${resolveRoot()}/libs/**/*.tsx`)
-  project.addSourceFilesAtPaths(`${resolveRoot()}/libs/**/**/*.ts`)
-  project.addSourceFilesAtPaths(`${resolveRoot()}/libs/**/**/*.tsx`)
-  project.addSourceFilesAtPaths(`${resolveRoot()}/libs/**/**/**/*.ts`)
-  project.addSourceFilesAtPaths(`${resolveRoot()}/libs/**/**/**/*.tsx`)
+  project.addSourceFilesAtPaths(`${resolveRoot()}/packages/**/*.ts`)
+  project.addSourceFilesAtPaths(`${resolveRoot()}/packages/**/*.tsx`)
+  project.addSourceFilesAtPaths(`${resolveRoot()}/packages/**/**/*.ts`)
+  project.addSourceFilesAtPaths(`${resolveRoot()}/packages/**/**/*.tsx`)
+  project.addSourceFilesAtPaths(`${resolveRoot()}/packages/**/**/**/*.ts`)
+  project.addSourceFilesAtPaths(`${resolveRoot()}/packages/**/**/**/*.tsx`)
   project.addSourceFilesAtPaths(`${resolveRoot()}/apps/**/*.ts`)
   project.addSourceFilesAtPaths(`${resolveRoot()}/apps/**/*.tsx`)
 

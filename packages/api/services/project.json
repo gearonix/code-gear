@@ -1,7 +1,7 @@
 {
   "name": "api-services",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/api/services/src",
+  "sourceRoot": "packages/api/services/src",
   "projectType": "library",
   "targets": {
     "lint": {
@@ -11,7 +11,7 @@
       ],
       "options": {
         "lintFilePatterns": [
-          "libs/api/services/**/*.ts"
+          "packages/api/services/**/*.ts"
         ],
         "fix": true
       }

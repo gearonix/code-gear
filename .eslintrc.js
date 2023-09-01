@@ -1,4 +1,4 @@
-const {configure, presets} = require('eslint-kit')
+const { configure, presets } = require('eslint-kit')
 
 module.exports = configure({
   mode: 'only-errors',

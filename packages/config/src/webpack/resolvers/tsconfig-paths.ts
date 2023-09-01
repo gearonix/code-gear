@@ -18,7 +18,7 @@ export const resolveTsconfigPaths = (
 
   // config.resolve.plugins.push(
   //   new TsconfigPathsPlugin({
-  //     configFile: 'libs/config/src/tsconfig/paths/second-layer.json',
+  //     configFile: 'packages/config/src/tsconfig/paths/second-layer.json',
   //     baseUrl: '.'
   //   })
   // )

@@ -7,12 +7,12 @@
     "skipLibCheck": true,
     "paths": {
       "@/*": ["./src/*"],
-      "@code-gear/api/common": ["../../libs/api/common/src/index.ts"],
-      "@code-gear/api/services": ["../../libs/api/services/src/index.ts"],
-      "@code-gear/web/editor": ["../../libs/web/editor/src/app/index.ts"],
-      "@code-gear/web/shared": ["../../libs/web/shared/src/index.ts"],
-      "@code-gear/web/ui": ["../../libs/web/ui/src/index.ts"],
-      "@code-gear/config": ["../../libs/config/src/index.ts"],
+      "@code-gear/api/common": ["../../packages/api/common/src/index.ts"],
+      "@code-gear/api/services": ["../../packages/api/services/src/index.ts"],
+      "@code-gear/web/editor": ["../../packages/web/editor/src/app/index.ts"],
+      "@code-gear/web/shared": ["../../packages/web/shared/src/index.ts"],
+      "@code-gear/web/ui": ["../../packages/web/ui/src/index.ts"],
+      "@code-gear/config": ["../../packages/config/src/index.ts"],
       "react": ["../../node_modules/preact/compat"],
       "react-dom": ["../../node_modules/preact/compat"],
     }
@@ -24,5 +24,5 @@
     "**/*_spec.tsx",
     "public/*"
   ],
-  "include": ["**/*.ts", "**/*.tsx", "../../libs/config/src/vite"]
+  "include": ["**/*.ts", "**/*.tsx", "../../packages/config/src/vite"]
 }

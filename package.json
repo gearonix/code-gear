@@ -13,9 +13,9 @@
   },
   "workspaces": [
     "apps/*",
-    "libs/*",
-    "libs/**/*",
-    "tools/*"
+    "tools/*",
+    "packages/*",
+    "packages/**/*"
   ],
   "husky": {
     "hooks": {

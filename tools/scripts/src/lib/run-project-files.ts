@@ -8,8 +8,8 @@ const runProjectFiles = async (cb: (file: SourceFile) => void) => {
     tsConfigFilePath: join(resolveRoot(), 'tsconfig.base.json')
   })
 
-  project.addSourceFilesAtPaths('../../libs/**/*.ts')
-  project.addSourceFilesAtPaths('../../libs/**/*.tsx')
+  project.addSourceFilesAtPaths('../../packages/**/*.ts')
+  project.addSourceFilesAtPaths('../../packages/**/*.tsx')
   project.addSourceFilesAtPaths('../../apps/**/*.ts')
   project.addSourceFilesAtPaths('../../apps/**/*.tsx')
 
