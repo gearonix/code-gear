@@ -5,7 +5,7 @@
   "auhtor": "Gearonix egor.uzhanin@gmail.com",
   "repository": "git@github.com:Gearonix/CodeGear.git",
   "description": "Fast online code editor built on Preact, Nest and Nx.",
-  "packageManager": "yarn@3.6.2",
+  "packageManager": "yarn@3.6.3",
   "engines": {
     "node": ">=16.0.0",
     "yarn": ">=3.2.0",
