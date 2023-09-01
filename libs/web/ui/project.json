@@ -82,7 +82,8 @@
       "defaultConfiguration": "production",
       "options": {
         "outputPath": "dist/libs/web/ui",
-        "skipTypeCheck": true
+        "skipTypeCheck": true,
+        "configFile": "libs/web/ui/.config/vite.ts"
       },
       "configurations": {
         "development": {

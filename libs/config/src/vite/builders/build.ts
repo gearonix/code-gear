@@ -8,7 +8,7 @@ export const defineBuildOptions = (
     return {
       lib: {
         entry: 'src/index.ts',
-        name: 'client-shared',
+        name: options.projectName,
         fileName: 'index',
         formats: ['es', 'cjs']
       },

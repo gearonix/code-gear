@@ -25,7 +25,8 @@
       "options": {
         "outputPath": "dist/libs/web/shared",
         "skipTypeCheck": true,
-        "fix": true
+        "fix": true,
+        "configFile": "libs/web/shared/.config/vite.ts"
       },
       "configurations": {
         "development": {

@@ -20,7 +20,7 @@
       "options": {
         "outputPath": "dist/apps/client",
         "skipTypeCheck": true,
-        "configFile": "apps/client/src/vite.config.ts"
+        "configFile": "apps/client/.config/vite/entry.ts"
       },
       "configurations": {
         "development": {

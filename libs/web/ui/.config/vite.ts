@@ -2,13 +2,18 @@
 import { createViteConfig } from '../../../../libs/config/src/vite'
 
 import { resolve } from 'path'
-import { buildCustomPlugins } from './plugins'
+import react from '@vitejs/plugin-react'
 
 export default createViteConfig({
-  projectName: 'client',
-  projectType: 'application',
+  projectName: 'shared',
+  projectType: 'library',
   rootDir: resolve(__dirname, '..'),
-  layer: 'second',
-  external: [],
-  plugins: buildCustomPlugins()
+  layer: 'third',
+  external: [
+    'react-smooth-scrollbar',
+    'antd'
+  ],
+  plugins: [
+    react(),
+  ]
 })

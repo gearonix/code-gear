@@ -25,7 +25,8 @@
       "defaultConfiguration": "production",
       "options": {
         "outputPath": "dist/libs/web/editor",
-        "skipTypeCheck": true
+        "skipTypeCheck": true,
+        "configFile": "libs/web/editor/.config/vite.ts"
       },
       "configurations": {
         "development": {
