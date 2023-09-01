@@ -1,5 +1,4 @@
-import { TestStory } from '@code-gear/web/shared'
-import { createStorybookVariant } from '@code-gear/web/shared'
+import { TestStory, createStorybookVariant } from '@code-gear/web/shared'
 import { expect } from '@storybook/jest'
 import type { Meta } from '@storybook/react'
 import { within } from '@storybook/testing-library'

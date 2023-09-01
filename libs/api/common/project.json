@@ -38,7 +38,7 @@
         "{workspaceRoot}/coverage/{projectRoot}"
       ],
       "options": {
-        "jestConfig": "libs/api/common/jest.config.ts",
+        "jestConfig": "libs/api/common/.config/jest.ts",
         "passWithNoTests": true
       },
       "configurations": {

@@ -6,7 +6,7 @@
   "tags": [],
   "targets": {
     "generate": {
-      "command": "cross-env HYGEN_TMPLS=../generator/templates hygen ui new --module_name {args.name}",
+      "command": "cross-env HYGEN_TMPLS=../../generator/templates hygen ui new --module_name {args.name}",
       "options": {
         "cwd": "libs/web/ui"
       }

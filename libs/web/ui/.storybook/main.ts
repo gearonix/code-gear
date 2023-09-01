@@ -4,7 +4,7 @@ import { mergeConfig } from 'vite'
 import viteTsConfigPaths from 'vite-tsconfig-paths'
 
 const config: StorybookConfig = createStorybookConfig({
-  viteConfigPath: 'libs/ui/vite.config.ts',
+  viteConfigPath: 'libs/web/ui/vite.config.ts',
   viteFinal: (config: StorybookConfig): StorybookConfig => {
     return mergeConfig(config, {
       define: {

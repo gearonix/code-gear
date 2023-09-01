@@ -11,8 +11,7 @@ import {
   defineGlobals,
   defineVitest,
   preview,
-  server,
-  build
+  server
 } from './builders'
 
 export const createViteConfig = (): UserConfig => {

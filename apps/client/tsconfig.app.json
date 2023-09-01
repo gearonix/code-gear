@@ -15,7 +15,6 @@
       "@code-gear/config": ["../../libs/config/src/index.ts"],
       "react": ["../../node_modules/preact/compat"],
       "react-dom": ["../../node_modules/preact/compat"],
-
     }
   },
   "exclude": [
@@ -25,5 +24,5 @@
     "**/*_spec.tsx",
     "public/*"
   ],
-  "include": ["**/*.ts", "**/*.tsx"]
+  "include": ["**/*.ts", "**/*.tsx", "../../libs/config/src/vite"]
 }
