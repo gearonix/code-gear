@@ -2221,6 +2221,7 @@ __metadata:
     "@types/react-smooth-scrollbar": ^8.0.4
     "@types/styled-components": 5.1.26
     "@types/uuid": ^9.0.2
+    "@types/webpack": ^5.28.2
     "@types/wicg-file-system-access": ^2020.9.6
     "@typescript-eslint/eslint-plugin": ^5.58.0
     "@typescript-eslint/parser": ^5.58.0
@@ -2304,6 +2305,7 @@ __metadata:
     vite-plugin-webfont-dl: ^3.7.6
     vite-tsconfig-paths: ^4.2.0
     vitest: ^0.32.0
+    webpack: ^5.88.2
     workbox-cacheable-response: ^7.0.0
     workbox-expiration: ^7.0.0
     workbox-precaching: ^7.0.0
@@ -8996,6 +8998,17 @@ __metadata:
   dependencies:
     "@types/node": "*"
   checksum: 2a6e88a107930963ceea016dc733dc259dc52faf864933cd4d6f7fc6db7165254c10f8bfcb3b803237b2869674d988319ea4f958c0b6fd3763c5fcb9e489565a
+  languageName: node
+  linkType: hard
+
+"@types/webpack@npm:^5.28.2":
+  version: 5.28.2
+  resolution: "@types/webpack@npm:5.28.2"
+  dependencies:
+    "@types/node": "*"
+    tapable: ^2.2.0
+    webpack: ^5
+  checksum: 0b147aaaaa8992417a5ed65af83eb0df9b5247c38ab482f3c844495935a29c474cb21bc865ca36052c353034f40d14c8d232f0c831fdc1a6956baa985d7b1135
   languageName: node
   linkType: hard
 
@@ -27675,7 +27688,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webpack@npm:^5.80.0":
+"webpack@npm:^5, webpack@npm:^5.80.0, webpack@npm:^5.88.2":
   version: 5.88.2
   resolution: "webpack@npm:5.88.2"
   dependencies:
