@@ -7,7 +7,7 @@ import { ExecutorRequest, ExecutorResponse } from '../index'
 import { NotificationMessage } from '../types'
 
 import { httpService } from '$/client-shared'
-import { EndPoints } from '$/config'
+import { EndPoints } from '@code-gear/config'
 
 class ExecuteServices {
   private state: EditorStore

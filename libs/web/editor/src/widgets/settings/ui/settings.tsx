@@ -12,7 +12,7 @@ import { useColorCallback } from '../hooks'
 
 import { SettingsItem, SettingsText } from './settings.styles'
 
-import { Modal, ModalSeparator, ModalTitle } from '$/ui'
+import { Modal, ModalSeparator, ModalTitle } from '@code-gear/web/ui'
 
 const Settings = observer(() => {
   const modalsContext = useModalsContext()

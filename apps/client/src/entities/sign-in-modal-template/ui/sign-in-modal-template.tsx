@@ -9,7 +9,7 @@ import {
 } from './sign-in-modal-template.styles'
 
 import { Logo } from '$/assets'
-import { ColoredButton, ModalTitle } from '$/ui'
+import { ColoredButton, ModalTitle } from '@code-gear/web/ui'
 
 interface SignInModalTemplateProps<T> {
   onSubmit: (data: T) => void

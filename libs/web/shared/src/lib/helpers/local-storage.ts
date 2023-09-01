@@ -1,7 +1,7 @@
 import { LocalStorage, LocalStorageKeys } from '@/config/local-storage'
 import { isString } from '@/types'
 
-import { appName } from '$/config'
+import { appName } from '@code-gear/config'
 
 export class LocalStorageClient {
   isDisabled = false

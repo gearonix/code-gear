@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common'
 
 import { UsersRepository } from './users.repository'
 
-import { PrismaModule } from '$/services'
+import { PrismaModule } from '@code-gear/api/services'
 
 @Module({
   controllers: [],

@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common'
 import { SignIn } from '@/auth/inputs/sign-in.input'
 import { User } from '$/nest-common'
-import { PrismaService } from '$/services'
+import { PrismaService } from '@code-gear/api/services'
 
 @Injectable()
 export class UsersRepository {

@@ -1,4 +1,5 @@
 {
+  "extends": "cg-config/src/tsconfig/paths/third-layer.json",
   "compilerOptions": {
     "jsx": "react-jsx",
     "allowJs": false,
@@ -17,5 +18,4 @@
       "path": "./tsconfig.spec.json"
     }
   ],
-  "extends": "cg-config/src/tsconfig/base.json"
 }

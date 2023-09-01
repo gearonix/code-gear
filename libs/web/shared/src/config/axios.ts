@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-import { serverUrl } from '$/config'
+import { serverUrl } from '@code-gear/config'
 
 const axiosInstance = axios.create({
   baseURL: serverUrl,

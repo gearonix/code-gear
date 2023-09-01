@@ -3,7 +3,7 @@ import { observer } from 'mobx-react-lite'
 import { FontSizes, fontSizes } from '@/shared/consts/font-sizes'
 import { useActions, useStore } from '@/shared/hooks'
 
-import { Select } from '$/ui'
+import { Select } from '@code-gear/web/ui'
 
 const FontSizeSwitcher = observer(() => {
   const actions = useActions()

@@ -1,6 +1,6 @@
 import { UseGuards } from '@nestjs/common'
 import { Args, Mutation, Query, Resolver } from '@nestjs/graphql'
-import { graphqlArg } from '$/config'
+import { graphqlArg } from '@code-gear/config'
 import {
   GqlAuthGuard,
   GqlLocalAuthGuard,

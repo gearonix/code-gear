@@ -3,7 +3,7 @@ import { Nullable } from '@/types'
 import { ApolloClient, createHttpLink, InMemoryCache } from '@apollo/client'
 import { setContext } from '@apollo/client/link/context'
 
-import { EndPoints, serverUrl } from '$/config'
+import { EndPoints, serverUrl } from '@code-gear/config'
 
 const graphqlUri = `${serverUrl}/${EndPoints._GRAPHQL}`
 

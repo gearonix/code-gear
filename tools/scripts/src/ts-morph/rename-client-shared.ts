@@ -1,4 +1,4 @@
-import { runProjectFiles } from '../lib/helpers'
+import { runProjectFiles } from '@/lib/helpers'
 
 const isClientSharedPath = (value: string) => {
   const matcher = value.split('/')

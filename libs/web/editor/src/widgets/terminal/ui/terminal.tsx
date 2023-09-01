@@ -12,7 +12,7 @@ import { TerminalTabKeys } from '../index'
 
 import { Navigation, TerminalButtons, TerminalTitle } from './terminal.styles'
 
-import { Popover } from '$/ui'
+import { Popover } from '@code-gear/web/ui'
 import { Display } from '$/client-shared'
 import { AiOutlineClose, GrClear } from '$/icons'
 

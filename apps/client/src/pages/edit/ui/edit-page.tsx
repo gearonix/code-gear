@@ -3,7 +3,7 @@ import { Suspense } from 'react'
 import { Page } from '@/shared/lib'
 import { SignInModal } from '@/widgets/sign-in-modal'
 
-import { Editor } from '$/editor'
+import { Editor } from '@code-gear/web/editor'
 
 const EditPage = () => {
   return (

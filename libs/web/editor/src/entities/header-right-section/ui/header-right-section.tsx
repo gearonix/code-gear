@@ -3,7 +3,7 @@ import { useTheme } from 'styled-components'
 
 import { RightSection } from './header-right-section.styles'
 
-import { ColoredButton } from '$/ui'
+import { ColoredButton } from '@code-gear/web/ui'
 
 interface HeaderRightSectionProps {
   runCode: () => void

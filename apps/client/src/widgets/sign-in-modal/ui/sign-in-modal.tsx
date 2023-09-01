@@ -1,5 +1,5 @@
 import { SignInForm } from '$/common-types'
-import { Modal } from '$/ui'
+import { Modal } from '@code-gear/web/ui'
 import { observer } from 'mobx-react-lite'
 import { useNavigate } from 'react-router-dom'
 
