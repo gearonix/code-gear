@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 
 import { useActions, useStore } from '@/shared/hooks'
 
-import { useAltKeyDown } from '$/client-shared'
+import { useAltKeyDown } from '@code-gear/web/shared'
 
 const keys = [1, 2, 3, 4, 5, 6, 7, 8, 9] as const
 

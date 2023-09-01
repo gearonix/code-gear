@@ -13,8 +13,8 @@ import { TerminalTabKeys } from '../index'
 import { Navigation, TerminalButtons, TerminalTitle } from './terminal.styles'
 
 import { Popover } from '@code-gear/web/ui'
-import { Display } from '$/client-shared'
-import { AiOutlineClose, GrClear } from '$/icons'
+import { Display } from '@code-gear/web/shared'
+import { Icons } from '@code-gear/web/shared'
 
 const Terminal = observer(() => {
   const modalsContext = useModalsContext()
@@ -53,8 +53,8 @@ const Terminal = observer(() => {
       </Display>
 
       <TerminalButtons>
-        <GrClear onClick={clearTerminal} />
-        <AiOutlineClose onClick={closeTerminal} />
+        <Icons.GrClear onClick={clearTerminal} />
+        <Icons.AiOutlineClose onClick={closeTerminal} />
       </TerminalButtons>
     </Popover>
   )

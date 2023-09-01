@@ -9,7 +9,7 @@ import { TerminalActions } from '@/widgets/terminal'
 
 import EditorStore from './editor.store'
 
-import { Hex, LocalStorageClient } from '$/client-shared'
+import { Hex, LocalStorageClient } from '@code-gear/web/shared'
 
 class EditorActions {
   private state: EditorStore

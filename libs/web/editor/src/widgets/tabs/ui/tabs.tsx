@@ -10,7 +10,7 @@ import { useMappedTabs } from '../hooks/use-mapped-tabs'
 
 import { TabsStyles } from './tabs.styles'
 
-import { TargetKey } from '$/client-shared'
+import { TargetKey } from '@code-gear/web/shared'
 
 const Tabs = observer(() => {
   const { activeKey, content } = useStore()

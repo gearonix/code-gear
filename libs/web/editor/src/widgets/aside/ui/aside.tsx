@@ -7,17 +7,12 @@ import { useEditorActions } from '../hooks/use-editor-actions'
 
 import { AsideStyles, Icon } from './aside.styles'
 
-import { AnimationProvider, RoutePaths, useFullScreen } from '$/client-shared'
 import {
-  AiOutlineHtml5,
-  BsJournals,
-  BsSearch,
-  GoTerminal,
-  LuTestTube2,
-  SlInfo,
-  SlSizeFullscreen,
-  TfiSettings
-} from '$/icons'
+  AnimationProvider,
+  RoutePaths,
+  useFullScreen
+} from '@code-gear/web/shared'
+import { Icons } from '@code-gear/web/shared'
 
 const Aside = () => {
   const toggleFullscreen = useFullScreen()
@@ -38,31 +33,31 @@ const Aside = () => {
     <AsideStyles as={animatedDiv} style={spring}>
       <div>
         <Icon onClick={editorActions.find}>
-          <BsSearch />
+          <Icons.BsSearch />
         </Icon>
         <Icon onClick={editorActions.replace}>
-          <BsJournals />
+          <Icons.BsJournals />
         </Icon>
         <Icon onClick={toggleFullscreen}>
-          <SlSizeFullscreen />
+          <Icons.SlSizeFullscreen />
         </Icon>
         <Icon onClick={toggle('terminal')}>
-          <GoTerminal />
+          <Icons.GoTerminal />
         </Icon>
         <Icon onClick={toggle('test_cases')}>
-          <LuTestTube2 />
+          <Icons.LuTestTube2 />
         </Icon>
         <Icon onClick={toggleHtmlPreview}>
-          <AiOutlineHtml5 />
+          <Icons.AiOutlineHtml5 />
         </Icon>
       </div>
       <div>
         <Icon onClick={toggleSettings}>
-          <TfiSettings />
+          <Icons.TfiSettings />
         </Icon>
         <Icon>
           <Link to={RoutePaths.ABOUT}>
-            <SlInfo />
+            <Icons.SlInfo />
           </Link>
         </Icon>
       </div>

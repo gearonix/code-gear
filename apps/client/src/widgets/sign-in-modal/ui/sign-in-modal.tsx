@@ -12,7 +12,7 @@ import {
   useFilteredEffect,
   useNotifications,
   VoidFunction
-} from '$/client-shared'
+} from '@code-gear/web/shared'
 
 interface SignInModalProps {
   isOpen: boolean

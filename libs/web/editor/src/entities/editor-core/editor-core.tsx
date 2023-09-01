@@ -5,7 +5,7 @@ import { editorConfig } from '@/shared/editor-config'
 import { useGetters, useStore } from '@/shared/hooks'
 import MonacoEditor from '@monaco-editor/react'
 
-import { useAnimations, WithChildren } from '$/client-shared'
+import { useAnimations, WithChildren } from '@code-gear/web/shared'
 
 interface EditorCoreProps {
   onChange: (val: unknown) => void

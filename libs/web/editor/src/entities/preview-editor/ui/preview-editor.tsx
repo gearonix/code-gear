@@ -7,7 +7,7 @@ import MonacoEditor from '@monaco-editor/react'
 
 import { EditorContainer, EditorTitle } from './preview-editor.styles'
 
-import { isString } from '$/client-shared'
+import { isString } from '@code-gear/web/shared'
 
 interface PreviewEditorProps {
   lang: PreviewLanguages

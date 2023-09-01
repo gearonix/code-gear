@@ -1,23 +1,23 @@
 import styled from 'styled-components'
 
-import { flex, hover, wh } from '$/styles'
+import { s } from '@code-gear/web/shared'
 
 export const AsideStyles = styled.div`
   background: ${({ theme }) => theme.grey};
   border-right: 2px solid ${({ theme }) => theme.lightGrey};
   box-sizing: border-box;
-  ${wh('52px', '100%')};
-  ${flex('space-between', 'center', 'column')};
+  ${s.wh('52px', '100%')};
+  ${s.flex('space-between', 'center', 'column')};
   padding-bottom: 15px;
   z-index: 3;
 `
 
 export const Icon = styled.div`
-  ${wh('23px')}
+  ${s.wh('23px')}
   svg {
-    ${wh()}
+    ${s.wh()}
     color: ${({ theme }) => theme.secondaryGrey};
-    ${({ theme }) => hover(theme.light)}
+    ${({ theme }) => s.hover(theme.light)}
   }
   transition: transform 200ms;
   &:hover {

@@ -7,7 +7,7 @@ import { generateNewTab } from '@/widgets/tabs/lib/helpers/generate-new-tab'
 
 import { isMaxTabsLength } from '../lib'
 
-import { Nullable } from '$/client-shared'
+import { Nullable } from '@code-gear/web/shared'
 
 class TabsActions {
   private state: EditorStore

@@ -1,4 +1,4 @@
-import { ValueOf } from '$/client-shared'
+import { ValueOf } from '@code-gear/web/shared'
 
 export const languages = {
   js: 'javascript',

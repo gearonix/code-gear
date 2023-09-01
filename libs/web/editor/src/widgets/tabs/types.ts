@@ -1,6 +1,6 @@
 import { LanguagesValues } from '@/shared/consts/languages'
 
-import { Nullable } from '$/client-shared'
+import { Nullable } from '@code-gear/web/shared'
 
 export interface ContentTab {
   key: string

@@ -1,22 +1,14 @@
 import styled from 'styled-components'
 
-import {
-  absolute,
-  br,
-  color,
-  customScrollbar,
-  flex,
-  shadow,
-  wh
-} from '$/styles'
+import { s } from '@code-gear/web/shared'
 
 export const ModalBackground = styled.div`
-  ${flex('center', 'center')};
-  ${absolute({
+  ${s.flex('center', 'center')};
+  ${s.absolute({
     left: '0',
     top: '0'
   })}
-  ${wh('100vw', '100vh')};
+  ${s.wh('100vw', '100vh')};
   background: rgba(0, 0, 0, 0.44);
   z-index: 100;
 `
@@ -31,25 +23,25 @@ export const ModalStyles = styled.div<ModalStylesProps>`
   position: relative;
   width: ${({ $width }) => $width ?? 50}vw;
   height: ${({ $height }) => $height ?? 60}vh;
-  background: ${color('grey')};
-  border: 2px solid ${color('lightGrey')};
+  background: ${s.color('grey')};
+  border: 2px solid ${s.color('lightGrey')};
   min-height: 300px;
   border-radius: 6px;
   cursor: grab;
-  ${shadow};
+  ${s.shadow};
   touch-action: none;
   overflow-y: auto;
   scroll-behavior: smooth;
-  ${customScrollbar()};
+  ${s.customScrollbar()};
 `
 
 export const ModalContainer = styled.div`
   margin: 0 auto;
   margin-top: 18px;
-  ${wh('60%', '100%')}
+  ${s.wh('60%', '100%')}
   & > * {
     cursor: initial;
-    color: ${color('light')};
+    color: ${s.color('light')};
   }
 `
 
@@ -58,12 +50,12 @@ export const ModalTitle = styled.h1`
   padding-bottom: 18px;
   margin-bottom: 30px;
   font-size: ${({ theme }) => theme.fz10};
-  border-bottom: ${br} ${color('lightGrey')};
+  border-bottom: ${s.br} ${s.color('lightGrey')};
 `
 
 export const ModalSeparator = styled.div`
-  background: ${color('lightGrey')};
-  ${wh('100%', '2px')};
+  background: ${s.color('lightGrey')};
+  ${s.wh('100%', '2px')};
   margin-bottom: 30px;
   margin-top: -8px;
 `

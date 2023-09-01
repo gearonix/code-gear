@@ -1,4 +1,4 @@
-import { StringField } from '$/nest-common'
+import { StringField } from '@code-gear/api/common'
 import { InputType } from '@nestjs/graphql'
 
 @InputType()

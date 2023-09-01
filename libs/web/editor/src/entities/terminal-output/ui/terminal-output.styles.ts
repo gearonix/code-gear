@@ -1,16 +1,16 @@
 import styled from 'styled-components'
 
-import { color, customScrollbar } from '$/styles'
+import { s } from '@code-gear/web/shared'
 
 export const Output = styled.div`
-  color: ${color('light')};
+  color: ${s.color('light')};
   font-size: ${({ theme }) => theme.fz7};
   margin-top: 4px;
   font-weight: normal;
   height: 200px;
   overflow-y: auto;
   overflow-x: hidden;
-  ${customScrollbar()};
+  ${s.customScrollbar()};
 
   span:first-child {
     margin-top: 22px;
@@ -22,13 +22,13 @@ interface OutputLineProps {
 }
 
 export const OutputLine = styled.span<OutputLineProps>`
-  color: ${color('light')};
+  color: ${s.color('light')};
   display: block;
   margin-top: 17px;
   cursor: pointer;
   font-size: ${({ theme }) => theme.fz7};
   em {
-    color: ${({ $isError }) => ($isError ? 'red' : color('light'))};
+    color: ${({ $isError }) => ($isError ? 'red' : s.color('light'))};
     font-weight: bold;
     font-style: italic;
   }

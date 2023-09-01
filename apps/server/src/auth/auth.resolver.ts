@@ -7,7 +7,7 @@ import {
   JwtAuthGuard,
   User,
   WithUser
-} from '$/nest-common'
+} from '@code-gear/api/common'
 import { AuthService } from './auth.service'
 import { SignIn } from './inputs/sign-in.input'
 import { AccessToken, UserResponse } from './responses'

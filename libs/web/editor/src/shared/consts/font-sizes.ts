@@ -1,4 +1,4 @@
-import { Keys } from '$/client-shared'
+import { Keys } from '@code-gear/web/shared'
 
 export const maxTabsLength = 9 as const
 

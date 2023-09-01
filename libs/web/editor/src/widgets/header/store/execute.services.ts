@@ -6,7 +6,7 @@ import { CodeExecutionErrors } from '../errors'
 import { ExecutorRequest, ExecutorResponse } from '../index'
 import { NotificationMessage } from '../types'
 
-import { httpService } from '$/client-shared'
+import { httpService } from '@code-gear/web/shared'
 import { EndPoints } from '@code-gear/config'
 
 class ExecuteServices {

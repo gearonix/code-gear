@@ -2,11 +2,11 @@ import styled from 'styled-components'
 
 import { Icon } from '@/widgets/aside/ui/aside.styles'
 
-import { flex, wh } from '$/styles'
+import { s } from '@code-gear/web/shared'
 
 export const RightSection = styled.div`
-  ${wh('23%', '100%')};
-  ${flex('flex-start', 'center')};
+  ${s.wh('23%', '100%')};
+  ${s.flex('flex-start', 'center')};
   gap: 25px;
 `
 

@@ -1,6 +1,6 @@
 import { FileHandlerData } from '../types'
 
-import { isObject } from '$/client-shared'
+import { isObject } from '@code-gear/web/shared'
 
 export const isFileData = (value: unknown): value is FileHandlerData => {
   if (!isObject(value)) {

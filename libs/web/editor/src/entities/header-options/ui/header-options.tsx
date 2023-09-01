@@ -1,11 +1,11 @@
 import { Button } from 'antd'
 import { Link } from 'react-router-dom'
 
-import logo from '@/public/logo.svg'
+import { Assets } from '@code-gear/web/shared'
 
 import { HeaderOptionsStyles } from './header-options.styles'
 
-import { RoutePaths } from '$/client-shared'
+import { RoutePaths } from '@code-gear/web/shared'
 
 interface HeaderOptionsProps {
   openFile: () => void
@@ -23,7 +23,7 @@ const HeaderOptions = ({
   return (
     <HeaderOptionsStyles>
       <Link to={RoutePaths.MAIN}>
-        <img src={logo} alt="" />
+        <img src={Assets.svgLogo} alt="" />
       </Link>
       <Button type="dashed" size="small" onClick={openFile}>
         Open

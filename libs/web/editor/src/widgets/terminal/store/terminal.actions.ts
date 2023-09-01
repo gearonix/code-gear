@@ -4,7 +4,7 @@ import moment from 'moment'
 import { EditorGetters, EditorStore } from '@/app'
 import { ExecutorResponse } from '@/widgets/header'
 
-import { LocalStorageClient } from '$/client-shared'
+import { LocalStorageClient } from '@code-gear/web/shared'
 
 class TerminalActions {
   private state: EditorStore

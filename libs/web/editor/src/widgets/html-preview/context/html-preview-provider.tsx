@@ -4,7 +4,7 @@ import { useStorage } from '@/shared/hooks'
 
 import { PreviewState } from '../types'
 
-import { ReducerPayload, WithChildren } from '$/client-shared'
+import { ReducerPayload, WithChildren } from '@code-gear/web/shared'
 
 export const PreviewContext = createContext<ReducerPayload<PreviewState>>({})
 

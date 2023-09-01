@@ -5,7 +5,7 @@ export interface ProjectPath {
 
 export const projectPaths: ProjectPath[] = [
   {
-    target: ['$/client-shared', '$/assets', '$/styles', '$/icons'],
+    target: ['@code-gear/web/shared', '$/assets', '$/styles', '$/icons'],
     replacement: '@code-gear/web/shared'
   },
   {

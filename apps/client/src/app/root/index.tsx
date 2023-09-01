@@ -1,4 +1,4 @@
-import { ThemeProvider, GlobalStyles } from '$/client-shared'
+import { ThemeProvider, GlobalStyles } from '@code-gear/web/shared'
 
 import 'normalize.css'
 

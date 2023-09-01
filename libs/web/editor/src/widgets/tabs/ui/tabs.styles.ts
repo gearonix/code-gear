@@ -1,10 +1,10 @@
 import { Tabs as AntdTabs } from 'antd'
 import styled from 'styled-components'
 
-import { antdColor } from '$/styles'
+import { s } from '@code-gear/web/shared'
 
 export const TabsStyles = styled(AntdTabs)`
-  color: ${antdColor('secondaryGrey')};
+  color: ${s.antdColor('secondaryGrey')};
   height: 50px;
   margin: 12px;
   min-width: 300px;
@@ -12,12 +12,12 @@ export const TabsStyles = styled(AntdTabs)`
     border-bottom: none;
   }
   .ant-tabs-tab {
-    background: ${antdColor('grey')};
+    background: ${s.antdColor('grey')};
   }
   .ant-tabs-tab-active {
     background: #2e3139 !important;
   }
   .ant-tabs-tab-btn {
-    color: ${antdColor('secondaryGrey')};
+    color: ${s.antdColor('secondaryGrey')};
   }
 `

@@ -3,7 +3,7 @@ import { Typography } from 'antd'
 import { KeyBuildings as Keys } from '@/shared/consts/key-buildings'
 import { KeyBuildingStyles, SettingsText } from '@/widgets/settings'
 
-import { WithChildren } from '$/client-shared'
+import { WithChildren } from '@code-gear/web/shared'
 
 type KeyBuildingProps = WithChildren<{
   keyCode: string

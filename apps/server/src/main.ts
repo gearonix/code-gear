@@ -4,7 +4,7 @@ import { SwaggerModule } from '@nestjs/swagger'
 import { corsConfig } from '@/config/cors'
 import { createSwaggerDocs } from '@/config/swagger'
 import { serverDocsPrefix, serverPort, serverPrefix } from '@code-gear/config'
-import { HttpExceptionFilter, ValidationPipe } from '$/nest-common'
+import { HttpExceptionFilter, ValidationPipe } from '@code-gear/api/common'
 import { AppModule } from './app.module'
 
 const bootstrap = async () => {

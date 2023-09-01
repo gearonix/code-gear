@@ -9,7 +9,7 @@ import { useCustomTheme } from '../use-custom-theme/use-custom-theme'
 
 import { assertThemeObject } from './assert-theme-object'
 
-import { useBooleanState } from '$/client-shared'
+import { useBooleanState } from '@code-gear/web/shared'
 
 export const useThemeLoader = () => {
   // TODO: refactor this

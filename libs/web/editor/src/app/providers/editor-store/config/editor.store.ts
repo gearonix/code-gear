@@ -14,7 +14,7 @@ import EditorActions from './editor.actions'
 import EditorGetters from './editor.getters'
 import EditorServices from './editor.services'
 
-import { Hex, LocalStorageClient } from '$/client-shared'
+import { Hex, LocalStorageClient } from '@code-gear/web/shared'
 
 class EditorStore {
   activeKey = ''

@@ -5,11 +5,8 @@ import { getProfileQuery } from '@/widgets/sign-in-modal/graphql/get-profile.que
 
 import { SignInMutation } from '../graphql/sign-in.mutation'
 
-import { ApolloMiddleware, LocalStorageClient } from '$/client-shared'
-import { UserEntity } from '$/common-types'
-import { SignInResponse } from '$/common-types'
-import { SignInForm } from '$/common-types'
-import { AccessToken } from '$/common-types'
+import { ApolloMiddleware, LocalStorageClient } from '@code-gear/web/shared'
+import { UserEntity, SignInResponse, SignInForm, AccessToken } from '@code-gear/api/common'
 
 export class AuthServices {
   private state: AuthStore

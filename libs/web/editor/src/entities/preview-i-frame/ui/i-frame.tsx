@@ -5,7 +5,7 @@ import { usePreview } from '@/widgets/html-preview'
 
 import { createHtmlTemplate } from './../lib/create-html-template'
 
-import { useDebounce } from '$/client-shared'
+import { useDebounce } from '@code-gear/web/shared'
 
 const IFrame = () => {
   const { state } = usePreview()

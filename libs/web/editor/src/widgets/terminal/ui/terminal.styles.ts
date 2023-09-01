@@ -1,43 +1,43 @@
 import { Tabs } from 'antd'
 import styled from 'styled-components'
 
-import { absolute, antdColor, color, flex, hover, margin, wh } from '$/styles'
+import { s } from '@code-gear/web/shared'
 
 export const TerminalButtons = styled.div`
-  ${absolute({
+  ${s.absolute({
     right: '44px',
     top: '23px'
   })}
-  ${flex('flex-end')};
+  ${s.flex('flex-end')};
   gap: 23px;
-  ${wh('100px', '22px')};
+  ${s.wh('100px', '22px')};
   cursor: pointer;
   svg {
     path {
-      stroke: ${color('secondaryGrey')};
-      ${({ theme }) => hover(theme.light)};
+      stroke: ${s.color('secondaryGrey')};
+      ${({ theme }) => s.hover(theme.light)};
     }
-    ${wh('22px')}
-    color: ${color('secondaryGrey')};
-    ${({ theme }) => hover(theme.light)}
+    ${s.wh('22px')}
+    color: ${s.color('secondaryGrey')};
+    ${({ theme }) => s.hover(theme.light)}
   }
 `
 
 export const Navigation = styled(Tabs)`
-  ${margin(0, 6)};
+  ${s.margin(0, 6)};
 
   .ant-tabs-nav::before {
     border-bottom: none;
   }
   .ant-tabs-tab-active div {
-    color: ${antdColor('light')};
+    color: ${s.antdColor('light')};
   }
   .ant-tabs-tab:hover,
   .ant-tabs-tab:active {
-    color: ${color('light')};
+    color: ${s.color('light')};
   }
   .ant-tabs-ink-bar {
-    background: ${color('light')};
+    background: ${s.color('light')};
   }
   .ant-tabs-tab {
     padding: 7px 0 !important;
@@ -47,6 +47,6 @@ export const Navigation = styled(Tabs)`
 `
 
 export const TerminalTitle = styled.h3`
-  color: ${color('light')};
+  color: ${s.color('light')};
   font-size: ${({ theme }) => theme.fz7};
 `

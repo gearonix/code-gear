@@ -3,8 +3,6 @@
   "compilerOptions": {
     "paths": {
       "@/*": ["./src/*"],
-      "react": ["../../../node_modules/preact/compat"],
-      "react-dom": ["../../../node_modules/preact/compat"],
       "@code-gear/api/common": ["../../../libs/api/common/src/index.ts"],
       "@code-gear/api/services": ["../../../libs/api/services/src/index.ts"],
       "@code-gear/web/editor": ["../../../libs/web/editor/src/index.ts"],

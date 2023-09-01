@@ -1,4 +1,4 @@
-import { useAnimations } from '$/client-shared'
+import { useAnimations } from '@code-gear/web/shared'
 
 export const useAsideAnimation = () => {
   const { Spring } = useAnimations()

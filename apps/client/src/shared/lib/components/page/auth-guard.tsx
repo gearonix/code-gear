@@ -10,7 +10,7 @@ import {
   useAsyncEffect,
   useBooleanState,
   WithChildren
-} from '$/client-shared'
+} from '@code-gear/web/shared'
 
 const AuthGuard = observer(({ children }: WithChildren) => {
   const { isAuthorized, services } = useStore('auth')

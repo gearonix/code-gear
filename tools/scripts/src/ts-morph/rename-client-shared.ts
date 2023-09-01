@@ -11,7 +11,7 @@ runProjectFiles((sourceFile) => {
     const importPath = declaration.getModuleSpecifierValue()
 
     if (isClientSharedPath(importPath)) {
-      declaration.setModuleSpecifier('$/client-shared')
+      declaration.setModuleSpecifier('@code-gear/web/shared')
     }
   })
 }).then((project) => {

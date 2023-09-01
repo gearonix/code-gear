@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 
-import { AnimationProvider } from '$/client-shared'
-import { VoidFunction, WithChildren } from '$/client-shared'
+import { AnimationProvider } from '@code-gear/web/shared'
+import { VoidFunction, WithChildren } from '@code-gear/web/shared'
 import { usePopoverAnimation } from '../hooks'
 
 import { PopoverStyles } from './popover.styles'

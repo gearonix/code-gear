@@ -12,7 +12,7 @@ import { ModalsContextProvider } from './providers/modals-provider'
 import { ThemeLoader } from './providers/theme-loader'
 import { EditorStyles, EditorWrapper } from './styles/editor.styles'
 
-import { NotificationsProvider, useOverflow } from '$/client-shared'
+import { NotificationsProvider, useOverflow } from '@code-gear/web/shared'
 
 interface EditorProps {
   SignIn: () => ReactElement

@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
-import { color, wh } from '$/styles'
+import { s } from '@code-gear/web/shared'
 
 export const EditorContainer = styled.div`
-  ${wh('33%', '100%')};
+  ${s.wh('33%', '100%')};
   border-radius: 6px;
 `
 
@@ -14,7 +14,7 @@ export const EditorTitle = styled.h4`
   svg {
     margin-bottom: -3px;
   }
-  color: ${color('light')};
+  color: ${s.color('light')};
   margin: 9px 4px;
   margin-top: 5px;
   font-size: ${({ theme }) => theme.fz9};

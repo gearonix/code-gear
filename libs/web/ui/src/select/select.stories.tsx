@@ -1,5 +1,5 @@
-import { TestStory } from '$/client-shared'
-import { createStorybookVariant } from '$/client-shared'
+import { TestStory } from '@code-gear/web/shared'
+import { createStorybookVariant } from '@code-gear/web/shared'
 import { SelectProps } from '@/select/select'
 import { Select } from '@/select/select'
 import { expect } from '@storybook/jest'

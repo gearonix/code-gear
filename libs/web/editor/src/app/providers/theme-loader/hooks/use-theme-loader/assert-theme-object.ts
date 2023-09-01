@@ -2,7 +2,7 @@ import { editor } from 'monaco-editor'
 
 import EditorErrors from '@/shared/exceptions'
 
-import { isObject } from '$/client-shared'
+import { isObject } from '@code-gear/web/shared'
 
 // eslint-disable-next-line prefer-arrow/prefer-arrow-functions
 export function assertThemeObject(

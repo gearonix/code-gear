@@ -1,6 +1,6 @@
 import { ForwardedRef, useImperativeHandle } from 'react'
 
-import { useAnimations } from '$/client-shared'
+import { useAnimations } from '@code-gear/web/shared'
 
 export const useTerminalOutputAnimations = (ref: ForwardedRef<void>) => {
   const { Spring } = useAnimations()

@@ -1,6 +1,6 @@
 import { useThemeLoader } from '../hooks'
 
-import { Display, WithChildren } from '$/client-shared'
+import { Display, WithChildren } from '@code-gear/web/shared'
 
 const ThemeLoader = ({ children }: WithChildren) => {
   const isLoaded = useThemeLoader()

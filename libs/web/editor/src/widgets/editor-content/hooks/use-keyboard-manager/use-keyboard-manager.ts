@@ -5,7 +5,7 @@ import { useActions, useModalsContext, useModalToggle } from '@/shared/hooks'
 
 import { useAltNavigation, useFileService } from '../index'
 
-import { useAltKeyDown } from '$/client-shared'
+import { useAltKeyDown } from '@code-gear/web/shared'
 
 export const useKeyboardManager = () => {
   const actions = useActions()

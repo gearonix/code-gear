@@ -1,4 +1,4 @@
-import { StylesDecorator, ThemeDecorator } from '$/client-shared'
+import { StylesDecorator, ThemeDecorator } from '@code-gear/web/shared'
 import { Preview } from '@storybook/react'
 import { createPreviewDefaults } from '$/config'
 

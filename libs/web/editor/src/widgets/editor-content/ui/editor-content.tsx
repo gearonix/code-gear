@@ -17,7 +17,7 @@ import {
   TabsWrapper
 } from './editor-content.styles'
 
-import { AnimationProvider, isString, useDebounce } from '$/client-shared'
+import { AnimationProvider, isString, useDebounce } from '@code-gear/web/shared'
 
 export const EditorContent = observer(() => {
   const actions = useActions()

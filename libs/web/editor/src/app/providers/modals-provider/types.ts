@@ -2,7 +2,7 @@ import { ReactElement } from 'react'
 
 import { TerminalTabKeys } from '@/widgets/terminal'
 
-import { AnyObject, ReducerPayload } from '$/client-shared'
+import { AnyObject, ReducerPayload } from '@code-gear/web/shared'
 
 export interface ModalsState {
   isTerminalOpened: boolean

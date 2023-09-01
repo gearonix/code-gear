@@ -1,4 +1,4 @@
-import { AnyObject } from '$/client-shared'
+import { AnyObject } from '@code-gear/web/shared'
 
 export const defineGlobals = (): AnyObject => {
   return {

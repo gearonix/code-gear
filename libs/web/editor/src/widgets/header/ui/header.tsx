@@ -9,7 +9,7 @@ import { useCodeRunner, useHeaderAnimation } from '../hooks'
 
 import { FileName, HeaderStyles } from './header.styles'
 
-import { AnimationProvider } from '$/client-shared'
+import { AnimationProvider } from '@code-gear/web/shared'
 
 const Header = observer(() => {
   const getters = useGetters()
