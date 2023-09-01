@@ -1,10 +1,10 @@
-import { createStorybookConfig } from 'cg-config/src'
+import { createStorybookConfig } from 'cg-config/src/storybook'
 import type { StorybookConfig } from '@storybook/react-vite'
 import { mergeConfig } from 'vite'
 import viteTsConfigPaths from 'vite-tsconfig-paths'
 
 const config: StorybookConfig = createStorybookConfig({
-  viteConfigPath: 'libs/web/ui/vite.config.ts',
+  viteConfigPath: 'libs/web/ui/.config/vite.ts',
   viteFinal: (config: StorybookConfig): StorybookConfig => {
     return mergeConfig(config, {
       define: {

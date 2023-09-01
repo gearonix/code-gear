@@ -15,7 +15,7 @@
       "executor": "@nx/storybook:storybook",
       "options": {
         "port": 4400,
-        "configDir": "libs/web/ui/.storybook"
+        "configDir": "libs/web/ui/.config/storybook"
       },
       "configurations": {
         "ci": {
@@ -30,7 +30,7 @@
       ],
       "options": {
         "outputDir": "dist/storybook/ui",
-        "configDir": "libs/web/ui/.storybook"
+        "configDir": "libs/web/ui/.config/storybook"
       },
       "configurations": {
         "ci": {
