@@ -11309,9 +11309,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cg-client-shared@workspace:^, cg-client-shared@workspace:libs/client-shared":
+"cg-api-common@workspace:libs/api/common":
   version: 0.0.0-use.local
-  resolution: "cg-client-shared@workspace:libs/client-shared"
+  resolution: "cg-api-common@workspace:libs/api/common"
+  dependencies:
+    tslib: ^2.3.0
+  languageName: unknown
+  linkType: soft
+
+"cg-api-services@workspace:libs/api/services":
+  version: 0.0.0-use.local
+  resolution: "cg-api-services@workspace:libs/api/services"
+  dependencies:
+    cg-config: "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"cg-client-shared@workspace:^, cg-client-shared@workspace:libs/web/shared":
+  version: 0.0.0-use.local
+  resolution: "cg-client-shared@workspace:libs/web/shared"
   dependencies:
     cg-config: "workspace:^"
   languageName: unknown
@@ -11332,9 +11348,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"cg-editor@workspace:libs/editor":
+"cg-editor@workspace:libs/web/editor":
   version: 0.0.0-use.local
-  resolution: "cg-editor@workspace:libs/editor"
+  resolution: "cg-editor@workspace:libs/web/editor"
   dependencies:
     cg-config: "workspace:^"
   languageName: unknown
@@ -11366,9 +11382,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"cg-ui@workspace:^, cg-ui@workspace:libs/ui":
+"cg-ui@workspace:^, cg-ui@workspace:libs/web/ui":
   version: 0.0.0-use.local
-  resolution: "cg-ui@workspace:libs/ui"
+  resolution: "cg-ui@workspace:libs/web/ui"
   dependencies:
     cg-client-shared: "workspace:^"
     cg-config: "workspace:^"
@@ -20648,22 +20664,6 @@ __metadata:
   checksum: deac9f8d00eda7b2e5cd1b2549e26e10a0faa70adaa6fdadca701cc55f49ee9018e427f424bac0c790b7c7e2d3068db97f3093f1093975f2acb8f8818b936ed9
   languageName: node
   linkType: hard
-
-"nest-common@workspace:libs/nest-common":
-  version: 0.0.0-use.local
-  resolution: "nest-common@workspace:libs/nest-common"
-  dependencies:
-    tslib: ^2.3.0
-  languageName: unknown
-  linkType: soft
-
-"nest-services@workspace:libs/nest-services":
-  version: 0.0.0-use.local
-  resolution: "nest-services@workspace:libs/nest-services"
-  dependencies:
-    cg-config: "workspace:^"
-  languageName: unknown
-  linkType: soft
 
 "netmask@npm:^2.0.2":
   version: 2.0.2
