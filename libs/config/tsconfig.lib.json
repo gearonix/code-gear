@@ -4,12 +4,7 @@
     "outDir": "../../dist/out-tsc",
     "declaration": true,
     "types": ["node"],
-    "baseUrl": ".",
-    "paths": {
-      "$/services": ["../nest-services/src/index.ts"],
-      "$/client-shared": ["../client-shared/src/index.ts"],
-      "$/server/*": ["../../apps/server/src/*"]
-    }
+    "baseUrl": "."
   },
   "include": ["src/**/*.ts"],
   "exclude": ["jest.config.ts", "src/**/*.spec.ts", "src/**/*.test.ts"]

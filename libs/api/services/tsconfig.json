@@ -1,9 +1,11 @@
 {
-  "extends": "cg-config/src/tsconfig/paths/second-layer.json",
+  "extends": "cg-config/src/tsconfig/paths/third-layer.json",
   "compilerOptions": {
     "module": "commonjs",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "esModuleInterop": true,
+    "strictPropertyInitialization": false,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
@@ -14,6 +16,9 @@
   "references": [
     {
       "path": "./tsconfig.lib.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
     }
   ]
 }
