@@ -4,7 +4,6 @@ import react from '@vitejs/plugin-react'
 import viteTsConfigPaths from 'vite-tsconfig-paths'
 import dts from 'vite-plugin-dts'
 import * as path from 'path'
-import './.storybook/test-runner.config'
 // import './.storybook/test-runner.config'
 
 export default defineConfig({

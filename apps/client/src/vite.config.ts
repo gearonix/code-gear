@@ -1,5 +1,5 @@
 import preact from '@preact/preset-vite'
-import { createViteConfig } from 'cg-config/src/vite'
+import { createViteConfig } from '../../../libs/config/src/vite'
 import { resolve } from 'path'
 import { VitePWA } from 'vite-plugin-pwa'
 import webfontDownload from 'vite-plugin-webfont-dl'
