@@ -1,4 +1,4 @@
-import { SignInForm } from '$/common-types'
+import { SignInForm } from '@code-gear/api/common'
 import { Modal } from '@code-gear/web/ui'
 import { observer } from 'mobx-react-lite'
 import { useNavigate } from 'react-router-dom'

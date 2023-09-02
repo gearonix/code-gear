@@ -8,7 +8,7 @@ interface UserMessage {
   message: string
 }
 
-interface NotificationsPayload {
+export interface NotificationsPayload {
   open: (args: UserMessage) => void
 }
 

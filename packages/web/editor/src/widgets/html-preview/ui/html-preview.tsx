@@ -34,7 +34,6 @@ const HtmlPreview = () => {
             <PreviewEditor lang="css" />
             <PreviewEditor lang="javascript" />
           </EditorBlock>
-
           <PreviewBlock>
             <IFrame />
           </PreviewBlock>
