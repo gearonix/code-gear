@@ -10,6 +10,8 @@ type CreatePreviewDefaults = (args: PreviewDefaultsPayload) => Preview
 export const createPreviewDefaults: CreatePreviewDefaults = ({
   decorators
 }) => ({
+
+  
   parameters: {
     viewport: {
       viewports: createViewPorts()

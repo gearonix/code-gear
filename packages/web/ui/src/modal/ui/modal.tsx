@@ -1,7 +1,11 @@
 import { MouseEvent } from 'react'
 import Scrollbar from 'react-smooth-scrollbar'
 
-import { AnimationProvider, Display, useAnimations } from '@code-gear/web/shared'
+import {
+  AnimationProvider,
+  Display,
+  useAnimations
+} from '@code-gear/web/shared'
 import { WithChildren } from '@code-gear/web/shared'
 import { Portal } from '@reach/portal'
 
