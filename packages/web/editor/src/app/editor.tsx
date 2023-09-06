@@ -1,3 +1,4 @@
+import { WithChildren } from '@grnx-utils/types/src'
 import { ReactElement, Suspense } from 'react'
 
 import { Aside } from '@/widgets/aside'
@@ -18,7 +19,7 @@ interface EditorProps {
   SignIn: () => ReactElement
 }
 
-export const Editor = ({ SignIn }: EditorProps) => {
+export const Editor = ({ SignIn }: WithChildren<EditorProps>) => {
   useOverflow()
 
   return (

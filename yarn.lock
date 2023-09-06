@@ -2169,6 +2169,7 @@ __metadata:
     "@commitlint/cli": ^17.7.0
     "@commitlint/config-conventional": ^17.7.0
     "@grnx-utils/eslint": ^1.0.7
+    "@grnx-utils/types": ^0.1.1
     "@kalissaac/prisma-typegen": ^0.0.7
     "@monaco-editor/react": ^4.5.1
     "@nestjs/apollo": ^12.0.7
@@ -3163,6 +3164,28 @@ __metadata:
     eslint: ^8.46.0
     prettier: ^3.0.0
   checksum: 67520206b24f663899ecc826fab955b9feeb7c86022235c15f02eb1455a55c484d78a345a580b9e531bfa7125a8596e15ebeb36073b305f8018179a9fcebbdc5
+  languageName: node
+  linkType: hard
+
+"@grnx-utils/types@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "@grnx-utils/types@npm:0.1.1"
+  peerDependencies:
+    preact: ^10.15.1
+    preact-compat: ^3.19.0
+    react: ">=16"
+    react-dom: ">=16"
+    typescript: ~5.1.3
+  peerDependenciesMeta:
+    preact:
+      optional: true
+    preact-compat:
+      optional: true
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: dd62a32832e0fbd444562b2aff2bda0628f52320a3830f601b7f12da1d0ea589de8eae9c40334d410424f7b82fa085f5a72efa2a9934d07f1abded835a44d8ff
   languageName: node
   linkType: hard
 

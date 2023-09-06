@@ -76,6 +76,7 @@
     "@commitlint/cli": "^17.7.0",
     "@commitlint/config-conventional": "^17.7.0",
     "@grnx-utils/eslint": "^1.0.7",
+    "@grnx-utils/types": "^0.1.1",
     "@kalissaac/prisma-typegen": "^0.0.7",
     "@nestjs/schematics": "^10.0.1",
     "@nestjs/testing": "^10.0.2",
