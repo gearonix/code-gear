@@ -1,4 +1,4 @@
-import { WithChildren } from '@grnx-utils/types/src'
+import { WithChildren } from '@grnx-utils/types'
 import { ReactElement, Suspense } from 'react'
 
 import { Aside } from '@/widgets/aside'
