@@ -1,7 +1,10 @@
-import { resolveTsconfigPaths } from './resolvers'
-import { composePlugins, withNx } from '@nx/webpack'
-import { Configuration } from 'webpack'
-import { WebpackConfigOptions, BuildWebpackConfigPayload } from './types'
+import { composePlugins }            from '@nx/webpack'
+import { withNx }                    from '@nx/webpack'
+import { Configuration }             from 'webpack'
+
+import { resolveTsconfigPaths }      from './resolvers'
+import { BuildWebpackConfigPayload } from './types'
+import { WebpackConfigOptions }      from './types'
 
 /**
  * Combines your webpack config with nx modules and

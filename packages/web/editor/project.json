@@ -40,7 +40,7 @@
     "test": {
       "executor": "@nx/vite:test",
       "outputs": [
-        "coverage/packages/web/editor"
+        "{workspaceRoot}/coverage/packages/web/editor"
       ],
       "options": {
         "passWithNoTests": true,

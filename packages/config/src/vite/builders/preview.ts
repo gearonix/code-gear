@@ -1,5 +1,6 @@
+import { ServerOptions }           from 'vite'
+
 import { CreateViteConfigOptions } from '../types'
-import { ServerOptions } from 'vite'
 
 export const definePreviewOptions = (
   options: CreateViteConfigOptions

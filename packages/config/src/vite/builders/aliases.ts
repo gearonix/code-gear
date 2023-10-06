@@ -1,4 +1,5 @@
-import { AliasOptions, ResolveOptions } from 'vite'
+import { AliasOptions }   from 'vite'
+import { ResolveOptions } from 'vite'
 
 type DefineAliases = ResolveOptions & { alias: AliasOptions }
 

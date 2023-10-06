@@ -1,8 +1,9 @@
 // / <reference types="vite-plugin-pwa/client" />
-import { join } from 'path'
-import { PluginOption } from 'vite'
-import dts from 'vite-plugin-dts'
-import viteTsConfigPaths from 'vite-tsconfig-paths'
+import { join }                    from 'path'
+import { PluginOption }            from 'vite'
+import dts                         from 'vite-plugin-dts'
+import viteTsConfigPaths           from 'vite-tsconfig-paths'
+
 import { CreateViteConfigOptions } from '../types'
 
 export const definePlugins = (

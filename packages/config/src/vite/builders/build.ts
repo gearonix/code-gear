@@ -1,5 +1,6 @@
+import { BuildOptions }            from 'vite'
+
 import { CreateViteConfigOptions } from '../types'
-import { BuildOptions } from 'vite'
 
 export const defineBuildOptions = (
   options: CreateViteConfigOptions

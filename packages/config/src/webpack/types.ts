@@ -1,5 +1,6 @@
-import { ProjectLayer } from '../types'
 import { Configuration } from 'webpack'
+
+import { ProjectLayer }  from '../types'
 
 export interface BuildWebpackConfigPayload {
   rootDir: string

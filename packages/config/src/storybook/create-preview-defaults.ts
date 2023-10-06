@@ -1,4 +1,6 @@
-import { Decorator, Preview } from '@storybook/react'
+import { Decorator }       from '@storybook/react'
+import { Preview }         from '@storybook/react'
+
 import { createViewPorts } from './plugins/create-viewports'
 
 interface PreviewDefaultsPayload {
@@ -10,8 +12,6 @@ type CreatePreviewDefaults = (args: PreviewDefaultsPayload) => Preview
 export const createPreviewDefaults: CreatePreviewDefaults = ({
   decorators
 }) => ({
-
-  
   parameters: {
     viewport: {
       viewports: createViewPorts()

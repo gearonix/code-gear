@@ -1,18 +1,16 @@
 // / <reference types="vitest" />
-import { getCacheDir } from './misc'
-import { defineServerOptions } from './builders'
-import { CreateViteConfigOptions } from './types'
-import { UserConfig } from 'vite'
-import { defineConfig } from 'vite'
+import { UserConfig }              from 'vite'
+import { defineConfig }            from 'vite'
 
-import {
-  defineAliases,
-  definePlugins,
-  defineGlobals,
-  defineVitest,
-  defineBuildOptions,
-  definePreviewOptions
-} from './builders'
+import { defineServerOptions }     from './builders'
+import { defineAliases }           from './builders'
+import { defineBuildOptions }      from './builders'
+import { defineGlobals }           from './builders'
+import { definePlugins }           from './builders'
+import { definePreviewOptions }    from './builders'
+import { defineVitest }            from './builders'
+import { getCacheDir }             from './misc'
+import { CreateViteConfigOptions } from './types'
 
 export const createViteConfig = (
   options: CreateViteConfigOptions

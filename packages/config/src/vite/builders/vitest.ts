@@ -1,5 +1,6 @@
-import { resolveRootPath } from '../../lib'
-import { InlineConfig } from 'vite'
+import { InlineConfig }            from 'vite'
+
+import { resolveRootPath }         from '../../lib'
 import { CreateViteConfigOptions } from '../types'
 
 export const defineVitest = (

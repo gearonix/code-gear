@@ -97,7 +97,7 @@
     "test": {
       "executor": "@nx/vite:test",
       "outputs": [
-        "coverage/packages/web/ui"
+        "{workspaceRoot}/coverage/packages/web/ui"
       ],
       "options": {
         "passWithNoTests": true,

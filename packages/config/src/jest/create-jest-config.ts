@@ -1,5 +1,5 @@
-import { ProjectLayer } from './../types'
-import { resolveRootPath } from './../lib'
+import { resolveRootPath } from '../lib'
+import { ProjectLayer }    from '../types'
 
 interface CreateJestConfigPayload {
   layer: ProjectLayer

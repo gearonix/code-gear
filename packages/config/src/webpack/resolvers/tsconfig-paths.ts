@@ -1,7 +1,8 @@
+import { resolve }              from 'path'
+
+import * as secondLayer         from '../../tsconfig/paths/second-layer.json'
+import * as thirdLayer          from '../../tsconfig/paths/third-layer.json'
 import { WebpackConfigOptions } from '../types'
-import { resolve } from 'path'
-import secondLayer from '../../tsconfig/paths/second-layer.json'
-import thirdLayer from '../../tsconfig/paths/third-layer.json'
 
 /**
  * adds tsconfig paths depending on the layer of your library
@@ -26,11 +27,12 @@ export const resolveTsconfigPaths = (
   return {
     '@': resolve(options.rootDir, 'src'),
     ...Object.fromEntries(
-      Object.entries(tsconfig.compilerOptions.paths).map(
-        ([name, tsconfigPath]) => {
-          return [name, resolve(options.rootDir, (tsconfigPath as [string])[0])]
-        }
-      )
+      Object.entries(tsconfig.compilerOptions.paths).map(([
+        name,
+        tsconfigPath
+      ]) => {
+        return [name, resolve(options.rootDir, (tsconfigPath as [string])[0])]
+      })
     )
   }
 }
