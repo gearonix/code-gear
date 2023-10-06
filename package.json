@@ -26,7 +26,6 @@
   },
   "scripts": {
     "preinstall": "node -e \"if(process.env.npm_execpath.indexOf('yarn') === -1) throw new Error('You must use Yarn to install, not NPM')\"",
-    "dep-graph": "nx dep-graph",
     "prepare": "husky install",
     "postinstall": "rimraf node_modules/.cache",
     "release": "release-it"
@@ -164,7 +163,7 @@
     "prettier": "^3.0.0",
     "prisma": "^5.0.0",
     "release-it": "^16.1.4",
-    "rimraf": "^5.0.1",
+    "rimraf": "^5.0.5",
     "ts-jest": "^29.1.0",
     "ts-morph": "^19.0.0",
     "ts-node": "10.9.1",

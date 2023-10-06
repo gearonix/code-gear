@@ -23,4 +23,5 @@ jobs:
         run: yarn install
 
       - name: Linting project
-        run: yarn run lint
+        run: |
+          yarn dlx nx run lint

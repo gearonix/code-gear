@@ -1,0 +1,45 @@
+{
+  "name": "root",
+  "$schema": "node_modules/nx/schemas/project-schema.json",
+  "targets": {
+    "dep-graph": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "nx dep-graph"
+      }
+    },
+    "release": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "release-it"
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "nx affected --base=origin/master -t build --parallel=8 -p client server --exclude root"
+      }
+    },
+    "lint": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "nx affected --base=origin/master -t lint --parallel=8 --exclude root"
+      }
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "nx affected --base=origin/master -t test --parallel=8 --exclude root"
+      }
+    },
+    "serve": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "nx affected --base=origin/master -t serve --parallel=8 -p client server --exclude root"
+      }
+    }
+  },
+  "tags": [
+    "root"
+  ]
+}

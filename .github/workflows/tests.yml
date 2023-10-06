@@ -26,7 +26,8 @@ jobs:
         run: yarn install
 
       - name: Testing storybook in production
-        run: yarn dlx nx run ui:storybook:test:production
+        run: |
+          yarn dlx nx run ui:storybook:test:production
   test:
     name: testing project
     runs-on: ubuntu-latest

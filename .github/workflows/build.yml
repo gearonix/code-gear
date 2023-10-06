@@ -14,6 +14,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Derive appropriate SHAs for base and head for `nx affected` commands
+        uses: nrwl/nx-set-shas@v3
+        with:
+          main-branch-name: 'master'
+
+      - run: |
+          echo "BASE: ${{ env.NX_BASE }}"
+          echo "HEAD: ${{ env.NX_HEAD }}"
 
       - name: Installing Node.js 19.x
         uses: actions/setup-node@v3
@@ -22,10 +33,11 @@ jobs:
           cache: 'yarn'
 
       - name: Installing dependencies
-        run: yarn install
+        run: yarn install --frozen-lockfile
 
       - name: Creating a Production Build
-        run: yarn dlx nx run-many -t=build -p client server --parallel=8
+        run: |
+          yarn dlx nx build
 
   build-storybook:
     name: Building and deploying storybook
@@ -43,4 +55,5 @@ jobs:
         run: yarn install
 
       - name: Building storybook
-        run: yarn dlx nx run ui:storybook:build
+        run: |
+          yarn dlx nx run ui:storybook:build
