@@ -41,13 +41,13 @@
     "storybook:test:development": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "test-storybook -c packages/web/ui/.storybook --url=http://localhost:4400 --watch"
+        "command": "test-storybook -c packages/web/ui/.config/storybook --url=http://localhost:4400 --watch"
       }
     },
     "storybook:test:production": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "test-storybook -c packages/web/ui/.storybook --url=https://gearonix.github.io/CodeGear"
+        "command": "test-storybook -c packages/web/ui/.config/storybook --url=https://gearonix.github.io/code-gear"
       }
     },
     "storybook:preview": {
