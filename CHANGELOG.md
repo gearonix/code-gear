@@ -1,5 +1,58 @@
 
 
+## [1.1.1](https://github.com/Gearonix/CodeGear/compare/1.1.0...1.1.1) (2023-10-06)
+
+
+### Bug Fixes
+
+* build fixes ([d801bc2](https://github.com/Gearonix/CodeGear/commit/d801bc25158808bf02e608d5955d4febb73c9081))
+* **ci:** fixed storybook build ([af15f78](https://github.com/Gearonix/CodeGear/commit/af15f78510f0cb4d7ad21b6759250dacc297829a))
+* **ci:** fixed storybook build ([cd483f0](https://github.com/Gearonix/CodeGear/commit/cd483f032286783a539552966532acf93cb885d7))
+* **ci:** fixed storybook build ([0596c5f](https://github.com/Gearonix/CodeGear/commit/0596c5ffa7b49ef1a19f25bf4cd2837f83311904))
+* **ci:** fixed storybook build ([fd8408e](https://github.com/Gearonix/CodeGear/commit/fd8408ec663a55da8c96a5ec80b692bf4a499519))
+* **ci:** github actions ([73d5471](https://github.com/Gearonix/CodeGear/commit/73d54710b69405682ca73328d7bbc24e01845bdd))
+* **ci:** replaced npx to yarn dlx, ci fixes ([912875b](https://github.com/Gearonix/CodeGear/commit/912875b3fb4a87147da65f19cc2320cd8de39b97))
+* fixed imports, improved webpack config  aliases ([2d045d8](https://github.com/Gearonix/CodeGear/commit/2d045d8fb04905ca15a91778b1ec3f068c6ae06d))
+* fixed tsconfig paths ([8378454](https://github.com/Gearonix/CodeGear/commit/8378454a53ba60b07cfa2a08d3ebe284973bee77))
+
+
+### Configurations
+
+* added `@grnx-utils/react-hooks` library and removed existing hooks ([e999079](https://github.com/Gearonix/CodeGear/commit/e999079c3a59ff5b894300a7a037d17f7393f765))
+* added git lfs, yarn cache and linted files ([b8ce2f6](https://github.com/Gearonix/CodeGear/commit/b8ce2f6a0f7f3b2be8278dd1e04bbd4f74e13c25))
+* added prisma types generation, common types between client and server and created general tsconfig.json, generated new lib 'nest-common', moved generators ([f605d1d](https://github.com/Gearonix/CodeGear/commit/f605d1d30656bf93590862e80aba5e4bca04dd93))
+* **ci:** divided workflows ([e25c876](https://github.com/Gearonix/CodeGear/commit/e25c876f91c0de7ff57aa3b2ba24f5c976cdefd9))
+* **ci:** divided workflows ([ba93213](https://github.com/Gearonix/CodeGear/commit/ba93213eceacbc7624ac04c05dfbd6d7e3d7d8d0))
+* **ci:** fix ci ([0d88986](https://github.com/Gearonix/CodeGear/commit/0d8898636ce11e6f62afb87c5a218f2f13e9aab2))
+* **ci:** fix ci ([0ca2a51](https://github.com/Gearonix/CodeGear/commit/0ca2a51b90774865e1ad82d78946dd0c2815a816))
+* **ci:** fix ci ([b76dedc](https://github.com/Gearonix/CodeGear/commit/b76dedc97d3f9c533ba6768b4e98d42f0f8a544b))
+* **ci:** fixed linting, production build ([d1f3650](https://github.com/Gearonix/CodeGear/commit/d1f3650cc5fd9f16ab2e89feaa64de199574d0a4))
+* decomposed ui library from client-shared ([f40c70b](https://github.com/Gearonix/CodeGear/commit/f40c70b5e52a5ddd33415759142c9c9afb717c3e))
+* fatal fixes ([44a51a9](https://github.com/Gearonix/CodeGear/commit/44a51a92d676799a7becc0bc80e59e7f1d7ddacb))
+* fixes ([5e5cbf3](https://github.com/Gearonix/CodeGear/commit/5e5cbf3cc03117ca4507316287cee57b8e3ee953))
+* **global:** renamed libs folder to packages ([c7c729c](https://github.com/Gearonix/CodeGear/commit/c7c729cbd5fdb440e4b59ddcb2b5e73b5b1dc39f))
+* implemented auto-generation of prisma types ([bb9fe45](https://github.com/Gearonix/CodeGear/commit/bb9fe4514afa6d6e4acad7f703083f91818b66a8))
+* installed @grnx/eslint, updated .eslintrc.js ([338594e](https://github.com/Gearonix/CodeGear/commit/338594ed483bdd4a1090c039d4d3e731f7cd050f))
+* installed @grnx/types, replaced shared types ([e3ad30c](https://github.com/Gearonix/CodeGear/commit/e3ad30c1cdbf4967579ae28e6948dd59a018335f))
+* moved app to entrypoint folder, moved scripts ([bca080e](https://github.com/Gearonix/CodeGear/commit/bca080e5535eceffbdc86fbba7f4090c0d12b27c))
+* moved storybook config to config library ([b49a947](https://github.com/Gearonix/CodeGear/commit/b49a947a326f7f3b48ffa49cd35f99f43c448a5e))
+* **nx:** moved libraries ([6506195](https://github.com/Gearonix/CodeGear/commit/6506195e726483bea10008e7ab29ad9d5f8c0e1b))
+* reduced .git folder size ([5ee9392](https://github.com/Gearonix/CodeGear/commit/5ee9392e320822265f720ec24486c7c3d6019e47))
+* removed scripts from root package.json ([2076155](https://github.com/Gearonix/CodeGear/commit/20761550209a4f418f0c660b3892e55de2a6696d))
+* replaced imports in whole project ([a6cd0f7](https://github.com/Gearonix/CodeGear/commit/a6cd0f7f7219fe5769beb7eb3dbc549b0d117bfb))
+* **storybook:** improved global storybook decorators ([9d6e32d](https://github.com/Gearonix/CodeGear/commit/9d6e32d077a464977142d0be79d87b1af3461145))
+* **storybook:** moved config ([b1c63c2](https://github.com/Gearonix/CodeGear/commit/b1c63c20dea8c572bf900cfc85c98e2ccb9ede9a))
+* **tsconfig:** setup tsconfig paths ([568fcca](https://github.com/Gearonix/CodeGear/commit/568fccaf82b93f26f7bfcb627755a34a89208f4c))
+* **ui:** configured storybook, updated yarn to 3.6.2 ([17f0790](https://github.com/Gearonix/CodeGear/commit/17f0790cc93e0ed4fe902de8754addc5f1f86825))
+* upgrade deps ([36dc39b](https://github.com/Gearonix/CodeGear/commit/36dc39b0596d4df3c686dcdd37b4c0178096999f))
+* **vite:** decomposed and moved vite config ([b34635f](https://github.com/Gearonix/CodeGear/commit/b34635f216095810d563032eb1fc45aa2c4db863))
+* **vite:** moved vite config ([dc92850](https://github.com/Gearonix/CodeGear/commit/dc92850bb9c7dbfc38a57fe961b5f1538c5689af))
+* **vite:** moved vite configs ([4fb3637](https://github.com/Gearonix/CodeGear/commit/4fb36375ec073d6b642a1e3b1461676a07cb218c))
+* **webpack:** moved config to @code-gear/config library ([a7c0c8d](https://github.com/Gearonix/CodeGear/commit/a7c0c8d1b43f87058d38da893ddedbbba386de07))
+* **whole project:** fixed fatal yarn errors, fixed linting ([180e783](https://github.com/Gearonix/CodeGear/commit/180e7839860523a8590480253703536890352f1a))
+* **yarn:** migrated to 4.0.0 ([12c9a8f](https://github.com/Gearonix/CodeGear/commit/12c9a8f3d35466c8623516bfc9a214b11257f461))
+* **yarn:** moved to stable version 3.6.3 ([3f832ab](https://github.com/Gearonix/CodeGear/commit/3f832ab885318c559c4e008569ab1bac92509818))
+
 ## 1.1.0 (2023-08-09)
 
 
