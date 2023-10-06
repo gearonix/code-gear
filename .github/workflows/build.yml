@@ -33,13 +33,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 20.8.0
+          cache: 'yarn'
 
       - name: Cache Yarn dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v3
+        id: cache-yarn-cache
         with:
           path: |
-            ~/.cache/yarn
-            ~/.yarn/cache
             .yarn/cache
             node_modules
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/*.yarn.lock') }}
