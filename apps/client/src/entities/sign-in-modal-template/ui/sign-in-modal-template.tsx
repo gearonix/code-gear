@@ -8,8 +8,8 @@ import {
   SubmitButton
 } from './sign-in-modal-template.styles'
 
-import { Logo } from '$/assets'
-import { ColoredButton, ModalTitle } from '$/ui'
+import { Assets } from '@code-gear/web/shared'
+import { ColoredButton, ModalTitle } from '@code-gear/web/ui'
 
 interface SignInModalTemplateProps<T> {
   onSubmit: (data: T) => void
@@ -23,7 +23,7 @@ export const SignInModalTemplate = <T,>({
       name="sign-in-form"
       autoComplete="off"
       onFinish={onSubmit}>
-      <LogoWrapper src={Logo} />
+      <LogoWrapper src={Assets.logo} />
       <ModalTitle>CodeGear</ModalTitle>
 
       <Form.Item name="username" rules={getFormItemRules()}>

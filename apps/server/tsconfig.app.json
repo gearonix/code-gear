@@ -6,13 +6,7 @@
     "types": ["node"],
     "emitDecoratorMetadata": true,
     "target": "es2021",
-    "baseUrl": ".",
-    "paths": {
-      "$/config": ["../../libs/config/src/index.ts"],
-      "$/services": ["../../libs/nest-services/src/index.ts"],
-      "$/nest-common": ["../../libs/nest-common/src/index.ts"],
-      "@/*": ["src/*"]
-    }
+    "baseUrl": "."
   },
   "exclude": ["jest.config.ts", "src/**/*.spec.ts", "src/**/*.test.ts"],
   "include": ["src/**/*.ts"]

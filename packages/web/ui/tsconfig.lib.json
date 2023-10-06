@@ -1,0 +1,34 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../../dist/out-tsc",
+    "types": [
+      "node",
+      "vite/client"
+    ],
+    "baseUrl": "."
+  },
+  "files": [
+    "../../../node_modules/@nx/react/typings/cssmodule.d.ts",
+    "../../../node_modules/@nx/react/typings/image.d.ts"
+  ],
+  "exclude": [
+    "**/*.spec.ts",
+    "**/*.test.ts",
+    "**/*.spec.tsx",
+    "**/*.test.tsx",
+    "**/*.spec.js",
+    "**/*.test.js",
+    "**/*.spec.jsx",
+    "**/*.test.jsx",
+    "**/*.stories.ts",
+    "**/*.stories.js",
+  ],
+  "include": [
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.stories.tsx"
+  ]
+}

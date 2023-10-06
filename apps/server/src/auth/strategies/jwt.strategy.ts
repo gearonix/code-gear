@@ -6,7 +6,7 @@ import { PassportStrategy } from '@nestjs/passport'
 
 import { JwtTokenPayload } from '../types'
 
-import { jwtSecret } from '$/config'
+import { jwtSecret } from '@code-gear/config'
 
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy) {

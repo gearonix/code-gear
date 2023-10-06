@@ -3,8 +3,8 @@ import { NestFactory } from '@nestjs/core'
 import { SwaggerModule } from '@nestjs/swagger'
 import { corsConfig } from '@/config/cors'
 import { createSwaggerDocs } from '@/config/swagger'
-import { serverDocsPrefix, serverPort, serverPrefix } from '$/config'
-import { HttpExceptionFilter, ValidationPipe } from '$/nest-common'
+import { serverDocsPrefix, serverPort, serverPrefix } from '@code-gear/config'
+import { HttpExceptionFilter, ValidationPipe } from '@code-gear/api/common'
 import { AppModule } from './app.module'
 
 const bootstrap = async () => {

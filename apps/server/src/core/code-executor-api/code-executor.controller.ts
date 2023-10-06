@@ -1,14 +1,14 @@
 import { BadRequestException, Body, Controller, Post } from '@nestjs/common'
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger'
 
-import { EndPoints } from '$/config'
+import { EndPoints } from '@code-gear/config'
 import {
   ExecuteCodeApiDTO,
   ExecutorApiResponse,
   ExecutorApiService,
   FailedToFetchError,
   isExecutorApiResponse
-} from '$/services'
+} from '@code-gear/api/services'
 
 @ApiTags('Code executor API')
 @Controller(EndPoints.CODE_EXECUTOR_API)

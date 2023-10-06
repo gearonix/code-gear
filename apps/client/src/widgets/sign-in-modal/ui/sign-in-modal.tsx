@@ -1,5 +1,5 @@
-import { SignInForm } from '$/common-types'
-import { Modal } from '$/ui'
+import { SignInForm } from '@code-gear/api/common'
+import { Modal } from '@code-gear/web/ui'
 import { observer } from 'mobx-react-lite'
 import { useNavigate } from 'react-router-dom'
 
@@ -12,7 +12,7 @@ import {
   useFilteredEffect,
   useNotifications,
   VoidFunction
-} from '$/client-shared'
+} from '@code-gear/web/shared'
 
 interface SignInModalProps {
   isOpen: boolean

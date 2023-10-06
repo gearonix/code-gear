@@ -1,0 +1,13 @@
+{
+  "extends": [
+    "../../../.eslintrc.js"
+  ],
+  "ignorePatterns": [
+    "!**/*"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "globals": {
+    "FileSystemFileHandle": true,
+    "OpenFilePickerOptions": true
+  }
+}

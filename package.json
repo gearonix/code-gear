@@ -5,7 +5,7 @@
   "auhtor": "Gearonix egor.uzhanin@gmail.com",
   "repository": "git@github.com:Gearonix/CodeGear.git",
   "description": "Fast online code editor built on Preact, Nest and Nx.",
-  "packageManager": "yarn@3.6.2",
+  "packageManager": "yarn@3.6.3",
   "engines": {
     "node": ">=16.0.0",
     "yarn": ">=3.2.0",
@@ -13,8 +13,9 @@
   },
   "workspaces": [
     "apps/*",
-    "libs/*",
-    "tools/*"
+    "tools/*",
+    "packages/*",
+    "packages/**/*"
   ],
   "husky": {
     "hooks": {
@@ -24,11 +25,8 @@
     }
   },
   "scripts": {
-    "serve": "nx run-many -t=serve -p client server --parallel=8",
-    "build": "nx run-many -t=build -p client server --parallel=8",
-    "lint": "nx run-many --targets=lint --all --parallel=8",
-    "dep-graph": "nx dep-graph",
     "preinstall": "node -e \"if(process.env.npm_execpath.indexOf('yarn') === -1) throw new Error('You must use Yarn to install, not NPM')\"",
+    "dep-graph": "nx dep-graph",
     "prepare": "husky install",
     "postinstall": "rimraf node_modules/.cache",
     "release": "release-it"
@@ -77,6 +75,9 @@
     "@babel/preset-react": "^7.22.5",
     "@commitlint/cli": "^17.7.0",
     "@commitlint/config-conventional": "^17.7.0",
+    "@grnx-utils/eslint": "^1.3.18",
+    "@grnx-utils/react-hooks": "^0.2.0",
+    "@grnx-utils/types": "^1.0.0",
     "@kalissaac/prisma-typegen": "^0.0.7",
     "@nestjs/schematics": "^10.0.1",
     "@nestjs/testing": "^10.0.2",
@@ -123,6 +124,7 @@
     "@types/react-smooth-scrollbar": "^8.0.4",
     "@types/styled-components": "5.1.26",
     "@types/uuid": "^9.0.2",
+    "@types/webpack": "^5.28.2",
     "@types/wicg-file-system-access": "^2020.9.6",
     "@typescript-eslint/eslint-plugin": "^5.58.0",
     "@typescript-eslint/parser": "^5.58.0",
@@ -166,6 +168,8 @@
     "ts-jest": "^29.1.0",
     "ts-morph": "^19.0.0",
     "ts-node": "10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "tsconfig-paths-webpack-plugin": "^4.1.0",
     "typescript": "~5.1.3",
     "vite": "^4.3.9",
     "vite-plugin-dts": "~2.3.0",
@@ -175,6 +179,7 @@
     "vite-plugin-webfont-dl": "^3.7.6",
     "vite-tsconfig-paths": "^4.2.0",
     "vitest": "^0.32.0",
+    "webpack": "^5.88.2",
     "yarnhook": "^0.6.0"
   },
   "dependencies": {

@@ -810,6 +810,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/helper-validator-identifier@npm:^7.19.1":
+  version: 7.22.15
+  resolution: "@babel/helper-validator-identifier@npm:7.22.15"
+  checksum: eb0bee4bda664c0959924bc1ad5611eacfce806f46612202dd164fef1df8fef1a11682a1e7615288987100e9fb304982b6e2a4ff07ffe842ab8765b95ed1118c
+  languageName: node
+  linkType: hard
+
 "@babel/helper-validator-identifier@npm:^7.22.5":
   version: 7.22.5
   resolution: "@babel/helper-validator-identifier@npm:7.22.5"
@@ -2161,6 +2168,9 @@ __metadata:
     "@babel/preset-react": ^7.22.5
     "@commitlint/cli": ^17.7.0
     "@commitlint/config-conventional": ^17.7.0
+    "@grnx-utils/eslint": ^1.3.18
+    "@grnx-utils/react-hooks": ^0.2.0
+    "@grnx-utils/types": ^1.0.0
     "@kalissaac/prisma-typegen": ^0.0.7
     "@monaco-editor/react": ^4.5.1
     "@nestjs/apollo": ^12.0.7
@@ -2221,6 +2231,7 @@ __metadata:
     "@types/react-smooth-scrollbar": ^8.0.4
     "@types/styled-components": 5.1.26
     "@types/uuid": ^9.0.2
+    "@types/webpack": ^5.28.2
     "@types/wicg-file-system-access": ^2020.9.6
     "@typescript-eslint/eslint-plugin": ^5.58.0
     "@typescript-eslint/parser": ^5.58.0
@@ -2291,6 +2302,8 @@ __metadata:
     ts-jest: ^29.1.0
     ts-morph: ^19.0.0
     ts-node: 10.9.1
+    tsconfig-paths: ^4.2.0
+    tsconfig-paths-webpack-plugin: ^4.1.0
     tslib: ^2.6.0
     typescript: ~5.1.3
     uuid: ^9.0.0
@@ -2302,6 +2315,7 @@ __metadata:
     vite-plugin-webfont-dl: ^3.7.6
     vite-tsconfig-paths: ^4.2.0
     vitest: ^0.32.0
+    webpack: ^5.88.2
     workbox-cacheable-response: ^7.0.0
     workbox-expiration: ^7.0.0
     workbox-precaching: ^7.0.0
@@ -3139,6 +3153,50 @@ __metadata:
   peerDependencies:
     graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
   checksum: fa44443accd28c8cf4cb96aaaf39d144a22e8b091b13366843f4e97d19c7bfeaf609ce3c7603a4aeffe385081eaf8ea245d078633a7324c11c5ec4b2011bb76d
+  languageName: node
+  linkType: hard
+
+"@grnx-utils/eslint@npm:^1.3.18":
+  version: 1.3.18
+  resolution: "@grnx-utils/eslint@npm:1.3.18"
+  dependencies:
+    eslint-kit: 10.0.0
+  peerDependencies:
+    eslint: ^8.46.0
+    prettier: ^3.0.0
+  checksum: 8512c1ec68e25e6edfd5ebb56aac3e555a13b5a2b5f5d484c1a3b9213e267eace7f389091c8d5622879c40313c097026944d3256f8f27db766bcca59ee0a6ee9
+  languageName: node
+  linkType: hard
+
+"@grnx-utils/react-hooks@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "@grnx-utils/react-hooks@npm:0.2.0"
+  peerDependencies:
+    react: ">=16"
+    react-dom: ">=16"
+  checksum: cce50a669ef9d7cf10f08f8b718de64cf44a4939d898ca58dababb51a885b74c4e62efeec86131da7c920cf77b0cbf8b337ec865794448e58376fbb7821297f1
+  languageName: node
+  linkType: hard
+
+"@grnx-utils/types@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@grnx-utils/types@npm:1.0.0"
+  peerDependencies:
+    preact: ^10.15.1
+    preact-compat: ^3.19.0
+    react: ">=16"
+    react-dom: ">=16"
+    typescript: ~5.1.3
+  peerDependenciesMeta:
+    preact:
+      optional: true
+    preact-compat:
+      optional: true
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: 4356b7f8c16a9d6ee1d91bc802f68f9a68676bfd4c7d5a627e36c52fb3bee13aa418241141262fe24a934e720d11435d33ae343d6f4f6bbc175707e66118ba2e
   languageName: node
   linkType: hard
 
@@ -8997,6 +9055,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/webpack@npm:^5.28.2":
+  version: 5.28.2
+  resolution: "@types/webpack@npm:5.28.2"
+  dependencies:
+    "@types/node": "*"
+    tapable: ^2.2.0
+    webpack: ^5
+  checksum: 0b147aaaaa8992417a5ed65af83eb0df9b5247c38ab482f3c844495935a29c474cb21bc865ca36052c353034f40d14c8d232f0c831fdc1a6956baa985d7b1135
+  languageName: node
+  linkType: hard
+
 "@types/wicg-file-system-access@npm:^2020.9.6":
   version: 2020.9.6
   resolution: "@types/wicg-file-system-access@npm:2020.9.6"
@@ -11309,9 +11378,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cg-client-shared@workspace:^, cg-client-shared@workspace:libs/client-shared":
+"cg-api-common@workspace:packages/api/common":
   version: 0.0.0-use.local
-  resolution: "cg-client-shared@workspace:libs/client-shared"
+  resolution: "cg-api-common@workspace:packages/api/common"
+  dependencies:
+    tslib: ^2.3.0
+  languageName: unknown
+  linkType: soft
+
+"cg-api-services@workspace:packages/api/services":
+  version: 0.0.0-use.local
+  resolution: "cg-api-services@workspace:packages/api/services"
+  dependencies:
+    cg-config: "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"cg-client-shared@workspace:^, cg-client-shared@workspace:packages/web/shared":
+  version: 0.0.0-use.local
+  resolution: "cg-client-shared@workspace:packages/web/shared"
   dependencies:
     cg-config: "workspace:^"
   languageName: unknown
@@ -11326,29 +11411,31 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"cg-config@workspace:^, cg-config@workspace:libs/config":
+"cg-config@workspace:^, cg-config@workspace:packages/config":
   version: 0.0.0-use.local
-  resolution: "cg-config@workspace:libs/config"
+  resolution: "cg-config@workspace:packages/config"
   languageName: unknown
   linkType: soft
 
-"cg-editor@workspace:libs/editor":
+"cg-editor@workspace:packages/web/editor":
   version: 0.0.0-use.local
-  resolution: "cg-editor@workspace:libs/editor"
+  resolution: "cg-editor@workspace:packages/web/editor"
   dependencies:
     cg-config: "workspace:^"
   languageName: unknown
   linkType: soft
 
-"cg-generator@workspace:^, cg-generator@workspace:libs/generator":
+"cg-generator@workspace:^, cg-generator@workspace:packages/generator":
   version: 0.0.0-use.local
-  resolution: "cg-generator@workspace:libs/generator"
+  resolution: "cg-generator@workspace:packages/generator"
   languageName: unknown
   linkType: soft
 
 "cg-scripts@workspace:tools/scripts":
   version: 0.0.0-use.local
   resolution: "cg-scripts@workspace:tools/scripts"
+  dependencies:
+    cg-config: "workspace:^"
   languageName: unknown
   linkType: soft
 
@@ -11366,9 +11453,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"cg-ui@workspace:^, cg-ui@workspace:libs/ui":
+"cg-ui@workspace:^, cg-ui@workspace:packages/web/ui":
   version: 0.0.0-use.local
-  resolution: "cg-ui@workspace:libs/ui"
+  resolution: "cg-ui@workspace:packages/web/ui"
   dependencies:
     cg-client-shared: "workspace:^"
     cg-config: "workspace:^"
@@ -14340,6 +14427,41 @@ __metadata:
   languageName: node
   linkType: hard
 
+"eslint-kit@npm:10.0.0":
+  version: 10.0.0
+  resolution: "eslint-kit@npm:10.0.0"
+  dependencies:
+    "@babel/core": ^7.18.6
+    "@babel/eslint-parser": ^7.17.0
+    "@babel/preset-react": ^7.17.12
+    "@next/eslint-plugin-next": ^13.3.0
+    "@typescript-eslint/eslint-plugin": 5.62.0
+    "@typescript-eslint/parser": 5.62.0
+    babel-preset-solid: ^1.7.3
+    eslint-import-resolver-custom-alias: ^1.3.0
+    eslint-import-resolver-jsconfig: ^1.1.0
+    eslint-import-resolver-typescript: ^3.5.5
+    eslint-plugin-effector: 0.10.5
+    eslint-plugin-import: 2.27.5
+    eslint-plugin-jsx-a11y: 6.7.1
+    eslint-plugin-prettier: 5.0.0
+    eslint-plugin-react: 7.32.2
+    eslint-plugin-react-hooks: 4.6.0
+    eslint-plugin-simple-import-sort: ^10.0.0
+    eslint-plugin-solid: 0.12.1
+    eslint-plugin-sonarjs: 0.19.0
+    eslint-plugin-svelte3: ^4.0.0
+    eslint-plugin-unicorn: 47.0.0
+    eslint-plugin-vue: 9.15.1
+    semver: ^7.3.8
+    vue-eslint-parser: 9.1.1
+  peerDependencies:
+    eslint: ^8.41.0
+    prettier: ^3.0.0
+  checksum: ce91503ae3de62830473c51d7b62ba0bef7538121e1f18673304a3b88b138ac8fa2866bdf0f0486e74016f2c8f0b4c8e9fec0521e17f23510ff3b16ab02f5b52
+  languageName: node
+  linkType: hard
+
 "eslint-kit@npm:^10.0.0":
   version: 10.5.0
   resolution: "eslint-kit@npm:10.5.0"
@@ -14431,6 +14553,18 @@ __metadata:
   peerDependencies:
     eslint: ">= 3.2.1"
   checksum: 9affbcee29e030a4251c4794f7533e8e8c0e3b98ab3470a2c730ed059f733c5857a04c7ac214cc0ca7aeef1b11242e72595de7fc1f6b8b4d4578d9eca10af203
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-effector@npm:0.10.5":
+  version: 0.10.5
+  resolution: "eslint-plugin-effector@npm:0.10.5"
+  dependencies:
+    prettier: ^2.3.2
+  peerDependencies:
+    effector: "*"
+    eslint: 7 || 8
+  checksum: 2cb42e409ef3454fa31781944fabc871288891d54ac0d24f176758b7a3fec3786fc227c5095b6f8de688ec2a329ea68a3d632aa7c4f6c53e16aa9b57c221df1a
   languageName: node
   linkType: hard
 
@@ -14714,6 +14848,32 @@ __metadata:
     eslint: ">=8.0.0"
     svelte: ^3.2.0
   checksum: 5e9ddddedee44ac099290cda6e86f412c6f4f2cbdeee860eb2b617c66d3cca7699638c6191ed55c4a7651b57b8387202f62b5b0e0417219c59cdd084dcab4e07
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-unicorn@npm:47.0.0":
+  version: 47.0.0
+  resolution: "eslint-plugin-unicorn@npm:47.0.0"
+  dependencies:
+    "@babel/helper-validator-identifier": ^7.19.1
+    "@eslint-community/eslint-utils": ^4.4.0
+    ci-info: ^3.8.0
+    clean-regexp: ^1.0.0
+    esquery: ^1.5.0
+    indent-string: ^4.0.0
+    is-builtin-module: ^3.2.1
+    jsesc: ^3.0.2
+    lodash: ^4.17.21
+    pluralize: ^8.0.0
+    read-pkg-up: ^7.0.1
+    regexp-tree: ^0.1.24
+    regjsparser: ^0.10.0
+    safe-regex: ^2.1.1
+    semver: ^7.3.8
+    strip-indent: ^3.0.0
+  peerDependencies:
+    eslint: ">=8.38.0"
+  checksum: 8d93bd76d54fb44e134c6576e3bda72dbf4c9cb5bae90451ace6acf1c48e6d7329f1e36db1d19266a5da499afeff6bf0c647875d69adc92d546bcc2d8b765cca
   languageName: node
   linkType: hard
 
@@ -20649,22 +20809,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nest-common@workspace:libs/nest-common":
-  version: 0.0.0-use.local
-  resolution: "nest-common@workspace:libs/nest-common"
-  dependencies:
-    tslib: ^2.3.0
-  languageName: unknown
-  linkType: soft
-
-"nest-services@workspace:libs/nest-services":
-  version: 0.0.0-use.local
-  resolution: "nest-services@workspace:libs/nest-services"
-  dependencies:
-    cg-config: "workspace:^"
-  languageName: unknown
-  linkType: soft
-
 "netmask@npm:^2.0.2":
   version: 2.0.2
   resolution: "netmask@npm:2.0.2"
@@ -23908,7 +24052,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"regexp-tree@npm:^0.1.27":
+"regexp-tree@npm:^0.1.24, regexp-tree@npm:^0.1.27, regexp-tree@npm:~0.1.1":
   version: 0.1.27
   resolution: "regexp-tree@npm:0.1.27"
   bin:
@@ -24558,6 +24702,15 @@ __metadata:
     get-intrinsic: ^1.1.3
     is-regex: ^1.1.4
   checksum: bc566d8beb8b43c01b94e67de3f070fd2781685e835959bbbaaec91cc53381145ca91f69bd837ce6ec244817afa0a5e974fc4e40a2957f0aca68ac3add1ddd34
+  languageName: node
+  linkType: hard
+
+"safe-regex@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "safe-regex@npm:2.1.1"
+  dependencies:
+    regexp-tree: ~0.1.1
+  checksum: 5d734e2193c63ef0cb00f60c0244e0f8a30ecb31923633cd34636808d6a7c4c206d650017953ae1db8bc33967c2f06af33488dea6f038f4e38212beb7bed77b4
   languageName: node
   linkType: hard
 
@@ -26442,6 +26595,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tsconfig-paths-webpack-plugin@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "tsconfig-paths-webpack-plugin@npm:4.1.0"
+  dependencies:
+    chalk: ^4.1.0
+    enhanced-resolve: ^5.7.0
+    tsconfig-paths: ^4.1.2
+  checksum: f6e9a8a407e1a405b0f2531184296d9f033cb4fe5837282b757ab4a2f4cd82a3117e62c4b86d56c7d47749c7f1345aa438ec6417dbf64a0ec74a292fe9eae44d
+  languageName: node
+  linkType: hard
+
 "tsconfig-paths@npm:^3.14.1":
   version: 3.14.2
   resolution: "tsconfig-paths@npm:3.14.2"
@@ -26454,7 +26618,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsconfig-paths@npm:^4.0.0, tsconfig-paths@npm:^4.1.2":
+"tsconfig-paths@npm:^4.0.0, tsconfig-paths@npm:^4.1.2, tsconfig-paths@npm:^4.2.0":
   version: 4.2.0
   resolution: "tsconfig-paths@npm:4.2.0"
   dependencies:
@@ -27660,7 +27824,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webpack@npm:^5.80.0":
+"webpack@npm:^5, webpack@npm:^5.80.0, webpack@npm:^5.88.2":
   version: 5.88.2
   resolution: "webpack@npm:5.88.2"
   dependencies:

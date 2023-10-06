@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 import { Page } from '@/shared/lib'
 
-import { RoutePaths } from '$/client-shared'
+import { RoutePaths } from '@code-gear/web/shared'
 
 const Main = () => {
   return (

@@ -65,7 +65,7 @@
 * initialized preact app by using nx ([5ac13a6](https://github.com/Gearonix/CodeGear/commit/5ac13a6a179293e680caebbd039db36d1ada78e0))
 * initialized styled-components ([a26d8d2](https://github.com/Gearonix/CodeGear/commit/a26d8d2f0792153f787de84f2e745659b3c3c68e))
 * registered service worker and enabled caching by workbox and vite-plugin-pwa ([54dd54a](https://github.com/Gearonix/CodeGear/commit/54dd54aed6d2d4f5b9b4408becd571a5d409453a))
-* renamed paths from "$/shared" to "$/client-shared" by using ts-morph script ([9ae1189](https://github.com/Gearonix/CodeGear/commit/9ae11890f8c5ec4a3c6910c979c90f42587f8b3f))
+* renamed paths from "$/shared" to "@code-gear/web/shared" by using ts-morph script ([9ae1189](https://github.com/Gearonix/CodeGear/commit/9ae11890f8c5ec4a3c6910c979c90f42587f8b3f))
 * renamed services to nest-services, initialized swagger module ([56f06a9](https://github.com/Gearonix/CodeGear/commit/56f06a9e7ca9a8a765f7a2c6e95c07abddcce31d))
 * setup ts-morph ([fe1757d](https://github.com/Gearonix/CodeGear/commit/fe1757df655c3ac756703ae982efb16b951c7636))
 * solved problem this useThemeLoader.ts ([3fbe15f](https://github.com/Gearonix/CodeGear/commit/3fbe15f754e204336fa5b12f57d76ee782bb9e0f))

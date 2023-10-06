@@ -1,49 +1,6 @@
-const {configure, presets} = require('eslint-kit')
+const grnx = require('@grnx-utils/eslint')
 
-module.exports = configure({
-  mode: 'only-errors',
-  allowDebug: process.env.NODE_ENV !== 'production',
+module.exports = grnx({
   root: __dirname,
-  presets: [
-    presets.node(),
-    presets.prettier({
-      singleQuote: true,
-      trailingComma: 'none',
-      endOfLine: 'auto'
-    }),
-    presets.typescript({
-      tsconfig: 'tsconfig.base.json',
-      root: './'
-    }),
-    presets.react(),
-    // eslint runs forever because of this preset
-    // ---
-    // presets.imports({
-    //   sort: {
-    //     newline: true
-    //   }
-    // })
-  ],
-  extend: {
-    root: true,
-    ignorePatterns: ["**/*"],
-    plugins: ['@nx', 'prefer-arrow'],
-    rules: {
-      'react/react-in-jsx-scope': 'off',
-      quotes: [2, 'single', { avoidEscape: true }],
-      '@typescript-eslint/no-namespace': 'off',
-      '@typescript-eslint/member-delimiter-style': [
-        'error',
-        { multiline: { delimiter: 'none' } }
-      ],
-      'import/no-unresolved': 'off',
-      '@typescript-eslint/no-unnecessary-condition': 'off',
-      'import/extensions': 'off',
-      'react-hooks/exhaustive-deps': 'warn',
-      'react/no-array-index-key': 'warn',
-      '@typescript-eslint/no-explicit-any': 'warn',
-      'dot-notation': 'off',
-      'prefer-arrow/prefer-arrow-functions': 'error'
-    }
-  }
+  tsconfig: 'tsconfig.base.json'
 })

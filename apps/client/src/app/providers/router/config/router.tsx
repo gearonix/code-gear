@@ -6,7 +6,7 @@ import { Main } from '@/pages/main'
 import { NotFound } from '@/pages/not-found'
 import { ProfilePage } from '@/pages/profile'
 
-import { RoutePaths } from '$/client-shared'
+import { RoutePaths } from '@code-gear/web/shared'
 
 const router = createBrowserRouter([
   {

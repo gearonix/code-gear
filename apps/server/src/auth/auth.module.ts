@@ -7,7 +7,7 @@ import { LocalStrategy } from './strategies/local.strategy'
 import { AuthResolver } from './auth.resolver'
 import { AuthService } from './auth.service'
 
-import { jwtSecret } from '$/config'
+import { jwtSecret } from '@code-gear/config'
 
 @Module({
   controllers: [],

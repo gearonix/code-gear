@@ -1,0 +1,15 @@
+{
+  "name": "generator",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/generator/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "new": {
+      "command": "cross-env HYGEN_TMPLS=templates hygen _generator g --generator_name {args.name}",
+      "options": {
+        "cwd": "packages/generator"
+      }
+    }
+  }
+}
