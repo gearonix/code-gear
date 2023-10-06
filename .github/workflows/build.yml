@@ -3,9 +3,11 @@ on:
   pull_request:
     branches:
       - master
+      - ci-testing
   push:
     branches:
       - master
+      - ci-testing
   workflow_call:
 
 permissions:
@@ -16,19 +18,22 @@ jobs:
     name: Creating a Production Build
     runs-on: ubuntu-latest
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
       - name: using setup script
-        uses: ./.github/conf/setup.yml
+        uses: ./.github/actions/setup
 
       - name: Creating a Production Build
         run: yarn dlx nx run root:build
-
   build-storybook:
     name: Building and deploying storybook
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+
       - name: using setup script
-        uses: ./.github/conf/setup.yml
-      - uses: actions/checkout@v3
+        uses: ./.github/actions/setup/action.yml
 
       - name: Building storybook
         run: yarn dlx nx run ui:storybook:build

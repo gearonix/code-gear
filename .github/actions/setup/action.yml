@@ -1,0 +1,22 @@
+name: setup
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Derive appropriate SHAs for base and head for `nx affected` commands
+        uses: nrwl/nx-set-shas@v3
+        with:
+          main-branch-name: 'master'
+
+      - run: |
+          echo "BASE: ${{ env.NX_BASE }}"
+          echo "HEAD: ${{ env.NX_HEAD }}"
+
+      - name: Installing Node.js 19.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 19.x
+          cache: 'yarn'
+
+      - name: Installing dependencies
+        run: yarn install --frozen-lockfile
