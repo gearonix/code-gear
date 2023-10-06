@@ -1,8 +1,11 @@
 name: code-gear > build
 on:
   pull_request:
-    branches: [ master ]
-  push: [ master ]
+    branches:
+      - master
+  push:
+    branches:
+      - master
   workflow_call:
 
 permissions:

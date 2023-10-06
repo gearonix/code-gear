@@ -1,8 +1,11 @@
 name: code-gear > lint
 on:
   pull_request:
-    branches: [ master ]
-  push: [ master ]
+    branches:
+      - master
+  push:
+    branches:
+      - master
 permissions:
   contents: write
 
