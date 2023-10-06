@@ -2652,7 +2652,7 @@ __metadata:
     tsconfig-paths: ^4.2.0
     tsconfig-paths-webpack-plugin: ^4.1.0
     tslib: ^2.6.2
-    typescript: ^5.2.2
+    typescript: ^5.1.9
     uuid: ^9.0.1
     vite: ^4.4.11
     vite-plugin-dts: ^3.6.0
@@ -12382,8 +12382,6 @@ __metadata:
 "cg-api-common@workspace:packages/api/common":
   version: 0.0.0-use.local
   resolution: "cg-api-common@workspace:packages/api/common"
-  dependencies:
-    tslib: ^2.3.0
   languageName: unknown
   linkType: soft
 
@@ -29059,7 +29057,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^4.6.4 || ^5.0.0, typescript@npm:^5.2.2":
+"typescript@npm:^4.6.4 || ^5.0.0, typescript@npm:^5.1.9":
   version: 5.2.2
   resolution: "typescript@npm:5.2.2"
   bin:
@@ -29089,7 +29087,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.6.4 || ^5.0.0#~builtin<compat/typescript>, typescript@patch:typescript@^5.2.2#~builtin<compat/typescript>":
+"typescript@patch:typescript@^4.6.4 || ^5.0.0#~builtin<compat/typescript>, typescript@patch:typescript@^5.1.9#~builtin<compat/typescript>":
   version: 5.2.2
   resolution: "typescript@patch:typescript@npm%3A5.2.2#~builtin<compat/typescript>::version=5.2.2&hash=f3b441"
   bin:

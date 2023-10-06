@@ -14,7 +14,7 @@
           "lint",
           "test",
           "e2e",
-          "build-storybook"
+          "storybook:build"
         ],
         "accessToken": "MDYwYjBjOTMtZjZhMi00YmVkLTg2MmMtZjgwNmI0OGFiNmRkfHJlYWQtd3JpdGU="
       }
@@ -50,7 +50,7 @@
         "{workspaceRoot}/.eslintignore"
       ]
     },
-    "build-storybook": {
+    "storybook:build": {
       "inputs": [
         "default",
         "^production",

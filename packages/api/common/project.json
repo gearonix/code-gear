@@ -29,7 +29,8 @@
         "lintFilePatterns": [
           "packages/api/common/**/*.ts",
           "packages/api/common/package.json"
-        ]
+        ],
+        "fix": true
       }
     },
     "test": {

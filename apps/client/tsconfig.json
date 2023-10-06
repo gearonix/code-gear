@@ -10,7 +10,8 @@
     "jsxFactory": "h",
     "jsxFragmentFactory": "Fragment",
     "jsxImportSource": "preact",
-    "types": ["vite/client", "vitest"]
+    "types": ["vite/client", "vitest"],
+    "strictNullChecks": true
   },
   "files": [],
   "include": [],
