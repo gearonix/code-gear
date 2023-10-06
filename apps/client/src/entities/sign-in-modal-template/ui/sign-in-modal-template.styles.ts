@@ -1,7 +1,6 @@
+import { s }    from '@code-gear/web/shared'
 import { Form } from 'antd'
-import styled from 'styled-components'
-
-import { wh } from '$/styles'
+import styled   from 'styled-components'
 
 export const SignInModalStyles = styled(Form)`
   width: 84%;
@@ -19,7 +18,7 @@ export const SubmitButton = styled.button`
 `
 
 export const LogoWrapper = styled.img`
-  ${wh('68px', '92px')}
+  ${s.wh('68px', '92px')}
   margin: 10px auto;
   display: block;
 `

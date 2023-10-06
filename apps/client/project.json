@@ -3,23 +3,33 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/client/src",
   "projectType": "application",
-  "tags": [],
+  "tags": [
+    "app:client",
+    "runtime:client"
+  ],
   "targets": {
     "lint": {
       "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["apps/client/**/*.{ts,spec.ts,tsx}"],
+        "lintFilePatterns": [
+          "apps/client/**/*.{ts,spec.ts,tsx}"
+        ],
         "fix": true
       }
     },
     "build": {
       "executor": "@nx/vite:build",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "defaultConfiguration": "production",
       "options": {
         "outputPath": "dist/apps/client",
-        "skipTypeCheck": true
+        "skipTypeCheck": true,
+        "configFile": "apps/client/.config/vite/entry.ts"
       },
       "configurations": {
         "development": {
@@ -64,7 +74,9 @@
     },
     "test": {
       "executor": "@nx/vite:test",
-      "outputs": ["coverage/apps/client"],
+      "outputs": [
+        "{workspaceRoot}/coverage/apps/client"
+      ],
       "options": {
         "passWithNoTests": true,
         "reportsDirectory": "../../coverage/apps/client"

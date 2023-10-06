@@ -1,8 +1,9 @@
 {
-  "extends": "../../tsconfig.base.json",
+  "extends": "cg-config/src/tsconfig/paths/second-layer.json",
   "compilerOptions": {
     "outDir": "../dist/out-tsc/tools",
     "rootDir": ".",
+    "baseUrl": ".",
     "module": "commonjs",
     "esModuleInterop": true,
     "target": "es5",

@@ -1,0 +1,14 @@
+{
+  "extends": "./../base.json",
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"],
+      "@code-gear/api/common": ["../../packages/api/common/src/index.ts"],
+      "@code-gear/api/services": ["../../packages/api/services/src/index.ts"],
+      "@code-gear/web/editor": ["../../packages/web/editor/src/app/index.ts"],
+      "@code-gear/web/shared": ["../../packages/web/shared/src/index.ts"],
+      "@code-gear/web/ui": ["../../packages/web/ui/src/index.ts"],
+      "@code-gear/config": ["../../packages/config/src/index.ts"]
+    }
+  }
+}

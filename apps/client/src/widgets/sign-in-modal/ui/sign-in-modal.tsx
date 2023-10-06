@@ -1,18 +1,16 @@
-import { SignInForm } from '$/common-types'
-import { Modal } from '$/ui'
-import { observer } from 'mobx-react-lite'
-import { useNavigate } from 'react-router-dom'
+import { SignInForm }            from '@code-gear/api/common'
+import { NotificationsProvider } from '@code-gear/web/shared'
+import { RoutePaths }            from '@code-gear/web/shared'
+import { useFilteredEffect }     from '@code-gear/web/shared'
+import { useNotifications }      from '@code-gear/web/shared'
+import { VoidFunction }          from '@code-gear/web/shared'
+import { Modal }                 from '@code-gear/web/ui'
+import { observer }              from 'mobx-react-lite'
+import { useNavigate }           from 'react-router-dom'
 
-import { SignInModalTemplate } from '@/entities/sign-in-modal-template'
-import { useStore } from '@/shared/hooks'
-import { WrongPassword } from '@/widgets/sign-in-modal/lib/exceptions'
-import {
-  NotificationsProvider,
-  RoutePaths,
-  useFilteredEffect,
-  useNotifications,
-  VoidFunction
-} from '$/client-shared'
+import { SignInModalTemplate }   from '@/entities/sign-in-modal-template'
+import { useStore }              from '@/shared/hooks'
+import { WrongPassword }         from '@/widgets/sign-in-modal/lib/exceptions'
 
 interface SignInModalProps {
   isOpen: boolean

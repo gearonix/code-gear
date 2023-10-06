@@ -1,0 +1,7 @@
+export { defineAliases } from './aliases'
+export { defineBuildOptions } from './build'
+export { defineGlobals } from './globals'
+export { definePlugins } from './plugins'
+export { definePreviewOptions } from './preview'
+export { defineServerOptions } from './server'
+export { defineVitest } from './vitest'

@@ -1,11 +1,12 @@
-import * as bcrypt from 'bcryptjs'
+import { Injectable }      from '@nestjs/common'
+import { JwtService }      from '@nestjs/jwt'
+import * as bcrypt         from 'bcryptjs'
 
 import { UsersRepository } from '@/core/users'
-import { Injectable } from '@nestjs/common'
-import { JwtService } from '@nestjs/jwt'
 
-import { SignIn } from './inputs/sign-in.input'
-import { AccessToken, UserResponse } from './responses'
+import { SignIn }          from './inputs/sign-in.input'
+import { AccessToken }     from './responses'
+import { UserResponse }    from './responses'
 import { JwtTokenPayload } from './types'
 
 @Injectable()

@@ -7,12 +7,12 @@
     "skipLibCheck": true,
     "paths": {
       "@/*": ["./src/*"],
-      "$/client-shared": ["../../libs/client-shared/src/index.ts"],
-      "$/common-types": ["../../libs/nest-common/src/types/common/index.ts"],
-      "$/assets": ["../../libs/client-shared/src/assets/index.ts"],
-      "$/styles": ["../../libs/client-shared/src/styles/index.ts"],
-      "$/editor": ["../../libs/editor/src/app/index.ts"],
-      "$/ui": ["../../libs/ui/src/index.ts"],
+      "@code-gear/api/common": ["../../packages/api/common/src/index.ts"],
+      "@code-gear/api/services": ["../../packages/api/services/src/index.ts"],
+      "@code-gear/web/editor": ["../../packages/web/editor/src/app/index.ts"],
+      "@code-gear/web/shared": ["../../packages/web/shared/src/index.ts"],
+      "@code-gear/web/ui": ["../../packages/web/ui/src/index.ts"],
+      "@code-gear/config": ["../../packages/config/src/index.ts"],
       "react": ["../../node_modules/preact/compat"],
       "react-dom": ["../../node_modules/preact/compat"],
     }
@@ -24,5 +24,5 @@
     "**/*_spec.tsx",
     "public/*"
   ],
-  "include": ["**/*.ts", "**/*.tsx"]
+  "include": ["**/*.ts", "**/*.tsx", "../../packages/config/src/vite"]
 }

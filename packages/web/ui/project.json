@@ -1,0 +1,108 @@
+{
+  "name": "web-ui",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/web/ui/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "generate": {
+      "command": "cross-env HYGEN_TMPLS=../../generator/templates hygen ui new --module_name {args.name}",
+      "options": {
+        "cwd": "packages/web/ui"
+      }
+    },
+    "storybook:serve": {
+      "executor": "@nx/storybook:storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "packages/web/ui/.config/storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "storybook:build": {
+      "executor": "@nx/storybook:build",
+      "outputs": [
+        "{options.outputDir}"
+      ],
+      "options": {
+        "outputDir": "dist/storybook/ui",
+        "configDir": "packages/web/ui/.config/storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "storybook:test:development": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "test-storybook -c packages/web/ui/.storybook --url=http://localhost:4400 --watch"
+      }
+    },
+    "storybook:test:production": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "test-storybook -c packages/web/ui/.storybook --url=https://gearonix.github.io/CodeGear"
+      }
+    },
+    "storybook:preview": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "web-ui:storybook:build",
+        "staticFilePath": "dist/storybook/ui"
+      },
+      "configurations": {
+        "ci": {
+          "buildTarget": "web-ui:storybook:build"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "packages/web/ui/**/*.{ts,tsx,js,jsx}"
+        ],
+        "fix": true
+      }
+    },
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/packages/web/ui",
+        "skipTypeCheck": true,
+        "configFile": "packages/web/ui/.config/vite.ts"
+      },
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production"
+        }
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": [
+        "{workspaceRoot}/coverage/packages/web/ui"
+      ],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../../coverage/packages/web/ui"
+      }
+    }
+  }
+}

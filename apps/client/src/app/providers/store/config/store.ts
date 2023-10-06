@@ -1,8 +1,7 @@
+import { EditorStore }        from '@code-gear/web/editor'
 import { makeAutoObservable } from 'mobx'
 
-import { AuthStore } from '@/widgets/sign-in-modal'
-
-import { EditorStore } from '$/editor'
+import { AuthStore }          from '@/widgets/sign-in-modal'
 
 class RootStore {
   editor: EditorStore

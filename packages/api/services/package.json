@@ -1,0 +1,8 @@
+{
+  "name": "cg-api-services",
+  "version": "1.0.0",
+  "main": "./src/index.ts",
+  "devDependencies": {
+    "cg-config": "workspace:^"
+  }
+}

@@ -1,6 +1,8 @@
-import { Field, ObjectType } from '@nestjs/graphql'
+import { Field }       from '@nestjs/graphql'
+import { ObjectType }  from '@nestjs/graphql'
 import { ApiProperty } from '@nestjs/swagger'
-import { UserEntity } from '$/nest-common'
+
+import { UserEntity }  from '$/nest-common'
 
 @ObjectType()
 export class UserResponse implements UserEntity {

@@ -1,6 +1,5 @@
-import { gql } from '@apollo/react-hooks'
-
-import { ApolloOperation } from '$/client-shared'
+import { gql }             from '@apollo/react-hooks'
+import { ApolloOperation } from '@code-gear/web/shared'
 
 export const getProfileQuery: ApolloOperation = {
   gql: gql`

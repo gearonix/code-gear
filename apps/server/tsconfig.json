@@ -1,5 +1,5 @@
 {
-  "extends": "cg-config/src/tsconfig/base.json",
+  "extends": "cg-config/src/tsconfig/paths/second-layer.json",
   "files": [],
   "include": [],
   "references": [
@@ -11,6 +11,7 @@
     }
   ],
   "compilerOptions": {
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "resolveJsonModule": true
   }
 }
