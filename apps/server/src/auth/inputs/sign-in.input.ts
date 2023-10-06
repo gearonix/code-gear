@@ -1,5 +1,5 @@
 import { StringField } from '@code-gear/api/common'
-import { InputType } from '@nestjs/graphql'
+import { InputType }   from '@nestjs/graphql'
 
 @InputType()
 export class SignIn {

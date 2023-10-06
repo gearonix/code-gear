@@ -1,9 +1,9 @@
-import { Typography } from 'antd'
+import { WithChildren }         from '@code-gear/web/shared'
+import { Typography }           from 'antd'
 
 import { KeyBuildings as Keys } from '@/shared/consts/key-buildings'
-import { KeyBuildingStyles, SettingsText } from '@/widgets/settings'
-
-import { WithChildren } from '@code-gear/web/shared'
+import { KeyBuildingStyles }    from '@/widgets/settings'
+import { SettingsText }         from '@/widgets/settings'
 
 type KeyBuildingProps = WithChildren<{
   keyCode: string

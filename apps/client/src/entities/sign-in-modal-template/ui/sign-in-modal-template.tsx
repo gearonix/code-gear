@@ -1,15 +1,13 @@
-import { Form, Input } from 'antd'
+import { Assets }            from '@code-gear/web/shared'
+import { ColoredButton }     from '@code-gear/web/ui'
+import { ModalTitle }        from '@code-gear/web/ui'
+import { Form }              from 'antd'
+import { Input }             from 'antd'
 
-import { getFormItemRules } from '../lib/helpers'
-
-import {
-  LogoWrapper,
-  SignInModalStyles,
-  SubmitButton
-} from './sign-in-modal-template.styles'
-
-import { Assets } from '@code-gear/web/shared'
-import { ColoredButton, ModalTitle } from '@code-gear/web/ui'
+import { getFormItemRules }  from '../lib/helpers'
+import { LogoWrapper }       from './sign-in-modal-template.styles'
+import { SignInModalStyles } from './sign-in-modal-template.styles'
+import { SubmitButton }      from './sign-in-modal-template.styles'
 
 interface SignInModalTemplateProps<T> {
   onSubmit: (data: T) => void

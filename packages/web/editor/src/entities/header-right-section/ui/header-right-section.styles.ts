@@ -1,8 +1,7 @@
-import styled from 'styled-components'
+import { s }    from '@code-gear/web/shared'
+import styled   from 'styled-components'
 
 import { Icon } from '@/widgets/aside/ui/aside.styles'
-
-import { s } from '@code-gear/web/shared'
 
 export const RightSection = styled.div`
   ${s.wh('23%', '100%')};

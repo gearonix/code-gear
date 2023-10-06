@@ -1,5 +1,6 @@
 import { runProjectFiles } from '../../lib/helpers'
-import { projectPaths, ProjectPath } from './consts'
+import { ProjectPath }     from './consts'
+import { projectPaths }    from './consts'
 
 const renameImports = async (projectPaths: ProjectPath[]) => {
   const project = await runProjectFiles((sourceFile) => {

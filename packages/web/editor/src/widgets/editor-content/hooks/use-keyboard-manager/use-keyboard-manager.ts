@@ -1,11 +1,14 @@
-import { useCallback, useEffect } from 'react'
+import { useAltKeyDown }    from '@code-gear/web/shared'
+import { useCallback }      from 'react'
+import { useEffect }        from 'react'
 
-import { KeyBuildings } from '@/shared/consts/key-buildings'
-import { useActions, useModalsContext, useModalToggle } from '@/shared/hooks'
+import { KeyBuildings }     from '@/shared/consts/key-buildings'
+import { useActions }       from '@/shared/hooks'
+import { useModalsContext } from '@/shared/hooks'
+import { useModalToggle }   from '@/shared/hooks'
 
-import { useAltNavigation, useFileService } from '../index'
-
-import { useAltKeyDown } from '@code-gear/web/shared'
+import { useAltNavigation } from '../index'
+import { useFileService }   from '../index'
 
 export const useKeyboardManager = () => {
   const actions = useActions()

@@ -1,6 +1,7 @@
-import EditorErrors from '@/shared/exceptions'
+import { isFunction } from '@code-gear/web/shared'
+import { Nullable }   from '@code-gear/web/shared'
 
-import { isFunction, Nullable } from '@code-gear/web/shared'
+import EditorErrors   from '@/shared/exceptions'
 
 export const useFileSaver = () => {
   return async (

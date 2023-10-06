@@ -1,11 +1,16 @@
-import { Logger } from '@nestjs/common'
-import { NestFactory } from '@nestjs/core'
-import { SwaggerModule } from '@nestjs/swagger'
-import { corsConfig } from '@/config/cors'
-import { createSwaggerDocs } from '@/config/swagger'
-import { serverDocsPrefix, serverPort, serverPrefix } from '@code-gear/config'
-import { HttpExceptionFilter, ValidationPipe } from '@code-gear/api/common'
-import { AppModule } from './app.module'
+import { HttpExceptionFilter } from '@code-gear/api/common'
+import { ValidationPipe }      from '@code-gear/api/common'
+import { serverDocsPrefix }    from '@code-gear/config'
+import { serverPort }          from '@code-gear/config'
+import { serverPrefix }        from '@code-gear/config'
+import { Logger }              from '@nestjs/common'
+import { NestFactory }         from '@nestjs/core'
+import { SwaggerModule }       from '@nestjs/swagger'
+
+import { corsConfig }          from '@/config/cors'
+import { createSwaggerDocs }   from '@/config/swagger'
+
+import { AppModule }           from './app.module'
 
 const bootstrap = async () => {
   const app = await NestFactory.create(AppModule)

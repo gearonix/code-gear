@@ -1,8 +1,8 @@
-import { useEffect } from 'react'
-
-import { useActions, useStore } from '@/shared/hooks'
-
 import { useAltKeyDown } from '@code-gear/web/shared'
+import { useEffect }     from 'react'
+
+import { useActions }    from '@/shared/hooks'
+import { useStore }      from '@/shared/hooks'
 
 const keys = [1, 2, 3, 4, 5, 6, 7, 8, 9] as const
 

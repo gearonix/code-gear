@@ -1,9 +1,12 @@
-import { LocalStorageClient } from '@/lib/helpers'
-import { Nullable } from '@/types'
-import { ApolloClient, createHttpLink, InMemoryCache } from '@apollo/client'
-import { setContext } from '@apollo/client/link/context'
+import { ApolloClient }       from '@apollo/client'
+import { createHttpLink }     from '@apollo/client'
+import { InMemoryCache }      from '@apollo/client'
+import { setContext }         from '@apollo/client/link/context'
+import { EndPoints }          from '@code-gear/config'
+import { serverUrl }          from '@code-gear/config'
 
-import { EndPoints, serverUrl } from '@code-gear/config'
+import { LocalStorageClient } from '@/lib/helpers'
+import { Nullable }           from '@/types'
 
 const graphqlUri = `${serverUrl}/${EndPoints._GRAPHQL}`
 

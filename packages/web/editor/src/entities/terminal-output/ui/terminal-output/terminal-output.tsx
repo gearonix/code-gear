@@ -1,14 +1,15 @@
-import { forwardRef, useEffect, useRef } from 'react'
-import { observer } from 'mobx-react-lite'
+import { observer }                    from 'mobx-react-lite'
+import { forwardRef }                  from 'react'
+import { useEffect }                   from 'react'
+import { useRef }                      from 'react'
 
-import { useModalContextState, useStore } from '@/shared/hooks'
+import { useModalContextState }        from '@/shared/hooks'
+import { useStore }                    from '@/shared/hooks'
 
 import { useTerminalOutputAnimations } from '../../hooks'
-import {
-  BottomScroll,
-  BottomScrollHandle
-} from '../bottom-scroll/bottom-scroll'
-import { OutputLine } from '../terminal-output.styles'
+import { BottomScroll }                from '../bottom-scroll/bottom-scroll'
+import { BottomScrollHandle }          from '../bottom-scroll/bottom-scroll'
+import { OutputLine }                  from '../terminal-output.styles'
 
 export interface TerminalOutputHandle {
   close: () => Promise<void>

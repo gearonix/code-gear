@@ -1,11 +1,10 @@
-import EditorErrors from '@/shared/exceptions'
+import { Undefinable }         from '@code-gear/web/shared'
 
-import { FileHandlerData } from '../../types'
+import EditorErrors            from '@/shared/exceptions'
 
-import { filePickerOptions } from './lib/consts'
+import { FileHandlerData }     from '../../types'
+import { filePickerOptions }   from './lib/consts'
 import { getLanguageFromName } from './lib/get-language-from-name'
-
-import { Undefinable } from '@code-gear/web/shared'
 
 export const useFileHandler = () => {
   return async (): Promise<Undefinable<FileHandlerData>> => {

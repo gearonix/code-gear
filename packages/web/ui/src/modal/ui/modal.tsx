@@ -1,17 +1,15 @@
-import { MouseEvent } from 'react'
-import Scrollbar from 'react-smooth-scrollbar'
-
-import {
-  AnimationProvider,
-  Display,
-  useAnimations
-} from '@code-gear/web/shared'
-import { WithChildren } from '@code-gear/web/shared'
-import { Portal } from '@reach/portal'
+import { AnimationProvider }   from '@code-gear/web/shared'
+import { Display }             from '@code-gear/web/shared'
+import { useAnimations }       from '@code-gear/web/shared'
+import { WithChildren }        from '@code-gear/web/shared'
+import { Portal }              from '@reach/portal'
+import { MouseEvent }          from 'react'
+import Scrollbar               from 'react-smooth-scrollbar'
 
 import { useModalTransitions } from '../hooks/use-modal-transitions'
-
-import { ModalBackground, ModalContainer, ModalStyles } from './modal.styles'
+import { ModalBackground }     from './modal.styles'
+import { ModalContainer }      from './modal.styles'
+import { ModalStyles }         from './modal.styles'
 
 export type ModalProps = WithChildren<{
   isOpen: boolean

@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react'
+import { useDebounce }        from '@code-gear/web/shared'
+import { useEffect }          from 'react'
+import { useState }           from 'react'
 
-import { useStorage } from '@/shared/hooks'
-import { usePreview } from '@/widgets/html-preview'
+import { useStorage }         from '@/shared/hooks'
+import { usePreview }         from '@/widgets/html-preview'
 
-import { createHtmlTemplate } from './../lib/create-html-template'
-
-import { useDebounce } from '@code-gear/web/shared'
+import { createHtmlTemplate } from '../lib/create-html-template'
 
 const IFrame = () => {
   const { state } = usePreview()

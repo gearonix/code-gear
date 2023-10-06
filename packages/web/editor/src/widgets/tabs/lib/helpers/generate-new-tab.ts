@@ -1,7 +1,7 @@
 import { v4 as generateId } from 'uuid'
 
-import { FileHandlerData } from '@/widgets/editor-content/types'
-import { ContentTab } from '@/widgets/tabs/types'
+import { FileHandlerData }  from '@/widgets/editor-content/types'
+import { ContentTab }       from '@/widgets/tabs/types'
 
 type GenerateContentTabPayload = Partial<{
   lastNumber: number

@@ -1,6 +1,6 @@
-import { ForwardedRef, useImperativeHandle } from 'react'
-
-import { useAnimations } from '@code-gear/web/shared'
+import { useAnimations }       from '@code-gear/web/shared'
+import { ForwardedRef }        from 'react'
+import { useImperativeHandle } from 'react'
 
 export const useTerminalOutputAnimations = (ref: ForwardedRef<void>) => {
   const { Spring } = useAnimations()
@@ -27,8 +27,7 @@ export const useTerminalOutputAnimations = (ref: ForwardedRef<void>) => {
             config: Spring.config.wobbly
           })
           resolve(true)
-        }, 300)
-      )
+        }, 300))
     }
   }))
 

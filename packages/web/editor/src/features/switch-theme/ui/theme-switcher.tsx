@@ -1,9 +1,10 @@
-import { observer } from 'mobx-react-lite'
+import { Select }     from '@code-gear/web/ui'
+import { observer }   from 'mobx-react-lite'
 
-import { Themes, themes } from '@/shared/consts/themes'
-import { useActions, useStore } from '@/shared/hooks'
-
-import { Select } from '@code-gear/web/ui'
+import { Themes }     from '@/shared/consts/themes'
+import { themes }     from '@/shared/consts/themes'
+import { useActions } from '@/shared/hooks'
+import { useStore }   from '@/shared/hooks'
 
 const ThemeSwitcher = observer(() => {
   const actions = useActions()

@@ -1,5 +1,5 @@
 import { useAnimations } from '@code-gear/web/shared'
-import { VoidFunction } from '@code-gear/web/shared'
+import { VoidFunction }  from '@code-gear/web/shared'
 
 export const usePopoverAnimation = (
   closeCallback: VoidFunction,

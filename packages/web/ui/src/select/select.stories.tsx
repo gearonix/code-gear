@@ -1,10 +1,12 @@
-import { TestStory, createStorybookVariant } from '@code-gear/web/shared'
-import { SelectProps } from '@/select/select'
-import { Select } from '@/select/select'
-import { expect } from '@storybook/jest'
-import type { Meta } from '@storybook/react'
-import { userEvent } from '@storybook/testing-library'
-import { within } from '@storybook/testing-library'
+import      { createStorybookVariant } from '@code-gear/web/shared'
+import      { TestStory }              from '@code-gear/web/shared'
+import      { expect }                 from '@storybook/jest'
+import type { Meta }                   from '@storybook/react'
+import      { userEvent }              from '@storybook/testing-library'
+import      { within }                 from '@storybook/testing-library'
+
+import      { SelectProps }            from '@/select/select'
+import      { Select }                 from '@/select/select'
 
 const Story: Meta<typeof Select> = {
   component: Select,

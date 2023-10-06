@@ -1,6 +1,7 @@
-import AuthGuard from '@/shared/lib/components/page/auth-guard'
+import { ErrorBoundary } from '@code-gear/web/shared'
+import { WithChildren }  from '@code-gear/web/shared'
 
-import { ErrorBoundary, WithChildren } from '@code-gear/web/shared'
+import AuthGuard         from '@/shared/lib/components/page/auth-guard'
 
 const Page = ({ children }: WithChildren) => {
   return (

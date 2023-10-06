@@ -1,6 +1,7 @@
 import { makeAutoObservable } from 'mobx'
 
-import { EditorGetters, EditorStore } from '@/app'
+import { EditorGetters }      from '@/app'
+import { EditorStore }        from '@/app'
 
 class ContentActions {
   private state: EditorStore

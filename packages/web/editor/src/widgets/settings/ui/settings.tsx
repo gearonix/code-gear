@@ -1,18 +1,22 @@
-import { ColorPicker, Switch } from 'antd'
-import { observer } from 'mobx-react-lite'
+import { Modal }            from '@code-gear/web/ui'
+import { ModalSeparator }   from '@code-gear/web/ui'
+import { ModalTitle }       from '@code-gear/web/ui'
+import { ColorPicker }      from 'antd'
+import { Switch }           from 'antd'
+import { observer }         from 'mobx-react-lite'
 
-import { KeyBuildings } from '@/entities/key-buildings'
+import { KeyBuildings }     from '@/entities/key-buildings'
 import { LanguageSwitcher } from '@/features/language-switcher'
 import { FontSizeSwitcher } from '@/features/switch-font-size'
-import { TabSizeSwitcher } from '@/features/switch-tab-size'
-import { ThemeSwitcher } from '@/features/switch-theme'
-import { useActions, useModalsContext, useStore } from '@/shared/hooks'
+import { TabSizeSwitcher }  from '@/features/switch-tab-size'
+import { ThemeSwitcher }    from '@/features/switch-theme'
+import { useActions }       from '@/shared/hooks'
+import { useModalsContext } from '@/shared/hooks'
+import { useStore }         from '@/shared/hooks'
 
 import { useColorCallback } from '../hooks'
-
-import { SettingsItem, SettingsText } from './settings.styles'
-
-import { Modal, ModalSeparator, ModalTitle } from '@code-gear/web/ui'
+import { SettingsItem }     from './settings.styles'
+import { SettingsText }     from './settings.styles'
 
 const Settings = observer(() => {
   const modalsContext = useModalsContext()

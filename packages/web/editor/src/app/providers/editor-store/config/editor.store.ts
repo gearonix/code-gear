@@ -1,20 +1,18 @@
-import { makeAutoObservable } from 'mobx'
+import { Hex }                 from '@code-gear/web/shared'
+import { LocalStorageClient }  from '@code-gear/web/shared'
+import { makeAutoObservable }  from 'mobx'
 
-import { FontSizes, TabSizes } from '@/shared/consts/font-sizes'
-import { Themes } from '@/shared/consts/themes'
-import { ContentTab } from '@/widgets/tabs'
-import { ExecuteMessage } from '@/widgets/terminal'
+import { FontSizes }           from '@/shared/consts/font-sizes'
+import { TabSizes }            from '@/shared/consts/font-sizes'
+import { Themes }              from '@/shared/consts/themes'
+import { ContentTab }          from '@/widgets/tabs'
+import { ExecuteMessage }      from '@/widgets/terminal'
 
-import {
-  defaultCodeLang,
-  defaultCodeTemplate
-} from '../lib/default-code-template'
-
-import EditorActions from './editor.actions'
-import EditorGetters from './editor.getters'
-import EditorServices from './editor.services'
-
-import { Hex, LocalStorageClient } from '@code-gear/web/shared'
+import { defaultCodeLang }     from '../lib/default-code-template'
+import { defaultCodeTemplate } from '../lib/default-code-template'
+import EditorActions           from './editor.actions'
+import EditorGetters           from './editor.getters'
+import EditorServices          from './editor.services'
 
 class EditorStore {
   activeKey = ''

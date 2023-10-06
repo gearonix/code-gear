@@ -1,13 +1,14 @@
-import { observer } from 'mobx-react-lite'
+import { isString }         from '@code-gear/web/shared'
+import MonacoEditor         from '@monaco-editor/react'
+import { observer }         from 'mobx-react-lite'
 
-import { editorConfig } from '@/shared/editor-config'
-import { useStore } from '@/shared/hooks'
-import { PreviewLanguages, usePreview } from '@/widgets/html-preview'
-import MonacoEditor from '@monaco-editor/react'
+import { editorConfig }     from '@/shared/editor-config'
+import { useStore }         from '@/shared/hooks'
+import { PreviewLanguages } from '@/widgets/html-preview'
+import { usePreview }       from '@/widgets/html-preview'
 
-import { EditorContainer, EditorTitle } from './preview-editor.styles'
-
-import { isString } from '@code-gear/web/shared'
+import { EditorContainer }  from './preview-editor.styles'
+import { EditorTitle }      from './preview-editor.styles'
 
 interface PreviewEditorProps {
   lang: PreviewLanguages

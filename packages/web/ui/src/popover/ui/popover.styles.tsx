@@ -1,6 +1,5 @@
+import { s }  from '@code-gear/web/shared'
 import styled from 'styled-components'
-
-import { s } from '@code-gear/web/shared'
 
 interface PopoverStylesProps {
   readonly $bottom: number

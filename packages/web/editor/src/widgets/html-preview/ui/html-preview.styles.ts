@@ -1,6 +1,5 @@
+import { s }  from '@code-gear/web/shared'
 import styled from 'styled-components'
-
-import { s } from '@code-gear/web/shared'
 
 export const PreviewWrapper = styled.div`
   ${s.wh('100%', '750px')};

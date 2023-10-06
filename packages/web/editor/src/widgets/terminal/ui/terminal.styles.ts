@@ -1,7 +1,6 @@
+import { s }    from '@code-gear/web/shared'
 import { Tabs } from 'antd'
-import styled from 'styled-components'
-
-import { s } from '@code-gear/web/shared'
+import styled   from 'styled-components'
 
 export const TerminalButtons = styled.div`
   ${s.absolute({

@@ -1,18 +1,14 @@
-import { useCallback } from 'react'
+import { Popover }             from '@code-gear/web/ui'
+import { useCallback }         from 'react'
 
-import { PreviewEditor } from '@/entities/preview-editor'
-import { IFrame } from '@/entities/preview-i-frame'
-import { useModalsContext } from '@/shared/hooks'
+import { PreviewEditor }       from '@/entities/preview-editor'
+import { IFrame }              from '@/entities/preview-i-frame'
+import { useModalsContext }    from '@/shared/hooks'
 
 import { HtmlPreviewProvider } from '../context'
-
-import {
-  EditorBlock,
-  PreviewBlock,
-  PreviewWrapper
-} from './html-preview.styles'
-
-import { Popover } from '@code-gear/web/ui'
+import { EditorBlock }         from './html-preview.styles'
+import { PreviewBlock }        from './html-preview.styles'
+import { PreviewWrapper }      from './html-preview.styles'
 
 const HtmlPreview = () => {
   const modalsContext = useModalsContext()

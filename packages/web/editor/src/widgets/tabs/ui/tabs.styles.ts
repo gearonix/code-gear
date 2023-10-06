@@ -1,7 +1,6 @@
+import { s }                from '@code-gear/web/shared'
 import { Tabs as AntdTabs } from 'antd'
-import styled from 'styled-components'
-
-import { s } from '@code-gear/web/shared'
+import styled               from 'styled-components'
 
 export const TabsStyles = styled(AntdTabs)`
   color: ${s.antdColor('secondaryGrey')};

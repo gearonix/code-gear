@@ -1,20 +1,20 @@
-import { useCallback, useRef } from 'react'
-import { observer } from 'mobx-react-lite'
+import { Display }              from '@code-gear/web/shared'
+import { Icons }                from '@code-gear/web/shared'
+import { Popover }              from '@code-gear/web/ui'
+import { observer }             from 'mobx-react-lite'
+import { useCallback }          from 'react'
+import { useRef }               from 'react'
 
-import {
-  TerminalOutput,
-  TerminalOutputHandle
-} from '@/entities/terminal-output'
-import { useActions, useModalsContext } from '@/shared/hooks'
+import { TerminalOutput }       from '@/entities/terminal-output'
+import { TerminalOutputHandle } from '@/entities/terminal-output'
+import { useActions }           from '@/shared/hooks'
+import { useModalsContext }     from '@/shared/hooks'
 
-import { useTerminalTabs } from '../hooks'
-import { TerminalTabKeys } from '../index'
-
-import { Navigation, TerminalButtons, TerminalTitle } from './terminal.styles'
-
-import { Popover } from '@code-gear/web/ui'
-import { Display } from '@code-gear/web/shared'
-import { Icons } from '@code-gear/web/shared'
+import { useTerminalTabs }      from '../hooks'
+import { TerminalTabKeys }      from '../index'
+import { Navigation }           from './terminal.styles'
+import { TerminalButtons }      from './terminal.styles'
+import { TerminalTitle }        from './terminal.styles'
 
 const Terminal = observer(() => {
   const modalsContext = useModalsContext()

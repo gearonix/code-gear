@@ -1,9 +1,10 @@
-import { WithChildren } from '@/types'
 import { ConfigProvider as AntdConfigProvider } from 'antd'
 import { ThemeProvider as StyledThemeProvider } from 'styled-components'
 
-import { AntdConfig } from '../config/antd-config'
-import { DarkThemePalette } from '../config/themes'
+import { WithChildren }                         from '@/types'
+
+import { AntdConfig }                           from '../config/antd-config'
+import { DarkThemePalette }                     from '../config/themes'
 
 const ThemeProvider = ({ children }: WithChildren) => {
   return (

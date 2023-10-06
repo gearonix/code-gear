@@ -1,6 +1,7 @@
-import { DocumentBuilder, OpenAPIObject, SwaggerModule } from '@nestjs/swagger'
-
-import { serverAppName } from '@code-gear/config'
+import { serverAppName }   from '@code-gear/config'
+import { DocumentBuilder } from '@nestjs/swagger'
+import { OpenAPIObject }   from '@nestjs/swagger'
+import { SwaggerModule }   from '@nestjs/swagger'
 
 export const createSwaggerDocs = (app): OpenAPIObject => {
   const swagger = new DocumentBuilder()

@@ -1,6 +1,6 @@
-import { Decorator } from '@storybook/react'
+import { Decorator }      from '@storybook/react'
 import { ComponentProps } from 'react'
-import { FC } from 'react'
+import { FC }             from 'react'
 
 export const createStorybookVariant = <T extends FC>(
   defaultArgs: ComponentProps<T>

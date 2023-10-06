@@ -1,11 +1,9 @@
-import { makeAutoObservable } from 'mobx'
+import { makeAutoObservable }       from 'mobx'
 
-import { EditorStore } from '@/app'
-import {
-  executorAllowedLanguages,
-  LanguagesValues
-} from '@/shared/consts/languages'
-import { ContentTab } from '@/widgets/tabs'
+import { EditorStore }              from '@/app'
+import { executorAllowedLanguages } from '@/shared/consts/languages'
+import { LanguagesValues }          from '@/shared/consts/languages'
+import { ContentTab }               from '@/widgets/tabs'
 
 class EditorGetters {
   private state: EditorStore

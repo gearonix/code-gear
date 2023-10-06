@@ -1,6 +1,7 @@
-import { useThemeLoader } from '../hooks'
+import { Display }        from '@code-gear/web/shared'
+import { WithChildren }   from '@code-gear/web/shared'
 
-import { Display, WithChildren } from '@code-gear/web/shared'
+import { useThemeLoader } from '../hooks'
 
 const ThemeLoader = ({ children }: WithChildren) => {
   const isLoaded = useThemeLoader()

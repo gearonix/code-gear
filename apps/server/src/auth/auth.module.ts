@@ -1,13 +1,13 @@
-import { UsersModule } from '@/core/users'
-import { Module } from '@nestjs/common'
-import { JwtModule } from '@nestjs/jwt'
+import { jwtSecret }     from '@code-gear/config'
+import { Module }        from '@nestjs/common'
+import { JwtModule }     from '@nestjs/jwt'
 
-import { JwtStrategy } from './strategies/jwt.strategy'
+import { UsersModule }   from '@/core/users'
+
+import { AuthResolver }  from './auth.resolver'
+import { AuthService }   from './auth.service'
+import { JwtStrategy }   from './strategies/jwt.strategy'
 import { LocalStrategy } from './strategies/local.strategy'
-import { AuthResolver } from './auth.resolver'
-import { AuthService } from './auth.service'
-
-import { jwtSecret } from '@code-gear/config'
 
 @Module({
   controllers: [],

@@ -1,8 +1,12 @@
-import { createContext, ReactElement, useMemo, useReducer } from 'react'
+import { AnyObject }     from '@code-gear/web/shared'
+import { WithChildren }  from '@code-gear/web/shared'
+import { createContext } from 'react'
+import { ReactElement }  from 'react'
+import { useMemo }       from 'react'
+import { useReducer }    from 'react'
 
-import { ModalsPayload, ModalsState } from '../types'
-
-import { AnyObject, WithChildren } from '@code-gear/web/shared'
+import { ModalsPayload } from '../types'
+import { ModalsState }   from '../types'
 
 export const ModalsContext = createContext<ModalsPayload>({})
 

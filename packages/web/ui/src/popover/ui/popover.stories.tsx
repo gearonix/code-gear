@@ -1,13 +1,13 @@
-import {
-  TestStory,
-  DarkThemePalette,
-  createStorybookVariant,
-  AnimationDecorator
-} from '@code-gear/web/shared'
-import { expect } from '@storybook/jest'
-import type { Meta } from '@storybook/react'
-import { within } from '@storybook/testing-library'
-import { Popover, PopoverProps } from './popover'
+import      { AnimationDecorator }     from '@code-gear/web/shared'
+import      { createStorybookVariant } from '@code-gear/web/shared'
+import      { DarkThemePalette }       from '@code-gear/web/shared'
+import      { TestStory }              from '@code-gear/web/shared'
+import      { expect }                 from '@storybook/jest'
+import type { Meta }                   from '@storybook/react'
+import      { within }                 from '@storybook/testing-library'
+
+import      { Popover }                from './popover'
+import      { PopoverProps }           from './popover'
 
 const Story: Meta<typeof Popover> = {
   component: Popover,

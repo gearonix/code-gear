@@ -1,15 +1,16 @@
-import { makeAutoObservable } from 'mobx'
+import { Hex }                  from '@code-gear/web/shared'
+import { LocalStorageClient }   from '@code-gear/web/shared'
+import { makeAutoObservable }   from 'mobx'
 
-import { EditorGetters } from '@/app'
-import { FontSizes, TabSizes } from '@/shared/consts/font-sizes'
-import { Themes } from '@/shared/consts/themes'
+import { EditorGetters }        from '@/app'
+import { FontSizes }            from '@/shared/consts/font-sizes'
+import { TabSizes }             from '@/shared/consts/font-sizes'
+import { Themes }               from '@/shared/consts/themes'
 import { EditorContentActions } from '@/widgets/editor-content'
-import { TabsActions } from '@/widgets/tabs'
-import { TerminalActions } from '@/widgets/terminal'
+import { TabsActions }          from '@/widgets/tabs'
+import { TerminalActions }      from '@/widgets/terminal'
 
-import EditorStore from './editor.store'
-
-import { Hex, LocalStorageClient } from '@code-gear/web/shared'
+import EditorStore              from './editor.store'
 
 class EditorActions {
   private state: EditorStore

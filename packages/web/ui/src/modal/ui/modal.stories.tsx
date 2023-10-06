@@ -1,14 +1,13 @@
-import {
-  createStorybookVariant,
-  AnimationDecorator,
-  DarkThemePalette,
-  TestStory
-} from '@code-gear/web/shared'
-import { expect } from '@storybook/jest'
-import type { Meta } from '@storybook/react'
-import { userEvent } from '@storybook/testing-library'
-import { within } from '@storybook/testing-library'
-import { Modal } from './modal'
+import      { AnimationDecorator }     from '@code-gear/web/shared'
+import      { createStorybookVariant } from '@code-gear/web/shared'
+import      { DarkThemePalette }       from '@code-gear/web/shared'
+import      { TestStory }              from '@code-gear/web/shared'
+import      { expect }                 from '@storybook/jest'
+import type { Meta }                   from '@storybook/react'
+import      { userEvent }              from '@storybook/testing-library'
+import      { within }                 from '@storybook/testing-library'
+
+import      { Modal }                  from './modal'
 
 const Story: Meta<typeof Modal> = {
   component: Modal,

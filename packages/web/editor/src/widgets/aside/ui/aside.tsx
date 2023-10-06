@@ -1,18 +1,16 @@
-import { Link } from 'react-router-dom'
+import { AnimationProvider } from '@code-gear/web/shared'
+import { RoutePaths }        from '@code-gear/web/shared'
+import { useFullScreen }     from '@code-gear/web/shared'
+import { Icons }             from '@code-gear/web/shared'
+import { Link }              from 'react-router-dom'
 
-import { useModalsContext, useModalToggle } from '@/shared/hooks'
+import { useModalsContext }  from '@/shared/hooks'
+import { useModalToggle }    from '@/shared/hooks'
 
 import { useAsideAnimation } from '../hooks/use-aside-animation'
-import { useEditorActions } from '../hooks/use-editor-actions'
-
-import { AsideStyles, Icon } from './aside.styles'
-
-import {
-  AnimationProvider,
-  RoutePaths,
-  useFullScreen
-} from '@code-gear/web/shared'
-import { Icons } from '@code-gear/web/shared'
+import { useEditorActions }  from '../hooks/use-editor-actions'
+import { AsideStyles }       from './aside.styles'
+import { Icon }              from './aside.styles'
 
 const Aside = () => {
   const toggleFullscreen = useFullScreen()

@@ -1,15 +1,17 @@
-import { observer } from 'mobx-react-lite'
+import { AnimationProvider }  from '@code-gear/web/shared'
+import { observer }           from 'mobx-react-lite'
 
-import { HeaderOptions } from '@/entities/header-options'
+import { HeaderOptions }      from '@/entities/header-options'
 import { HeaderRightSection } from '@/entities/header-right-section'
-import { useActions, useGetters, useModalsContext } from '@/shared/hooks'
-import { useFileService } from '@/widgets/editor-content/hooks'
+import { useActions }         from '@/shared/hooks'
+import { useGetters }         from '@/shared/hooks'
+import { useModalsContext }   from '@/shared/hooks'
+import { useFileService }     from '@/widgets/editor-content/hooks'
 
-import { useCodeRunner, useHeaderAnimation } from '../hooks'
-
-import { FileName, HeaderStyles } from './header.styles'
-
-import { AnimationProvider } from '@code-gear/web/shared'
+import { useCodeRunner }      from '../hooks'
+import { useHeaderAnimation } from '../hooks'
+import { FileName }           from './header.styles'
+import { HeaderStyles }       from './header.styles'
 
 const Header = observer(() => {
   const getters = useGetters()

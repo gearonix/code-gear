@@ -1,7 +1,9 @@
-import { CUSTOM_THEME } from '@/shared/consts/themes'
-import { useActions, useStore } from '@/shared/hooks'
+import { Hex }          from '@code-gear/web/shared'
+import { useDebounce }  from '@code-gear/web/shared'
 
-import { Hex, useDebounce } from '@code-gear/web/shared'
+import { CUSTOM_THEME } from '@/shared/consts/themes'
+import { useActions }   from '@/shared/hooks'
+import { useStore }     from '@/shared/hooks'
 
 export const useColorCallback = (cb: (hex: Hex) => void) => {
   const { theme } = useStore()

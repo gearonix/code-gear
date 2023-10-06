@@ -1,7 +1,6 @@
+import { s }    from '@code-gear/web/shared'
 import { Form } from 'antd'
-import styled from 'styled-components'
-
-import { s } from '@code-gear/web/shared'
+import styled   from 'styled-components'
 
 export const SignInModalStyles = styled(Form)`
   width: 84%;

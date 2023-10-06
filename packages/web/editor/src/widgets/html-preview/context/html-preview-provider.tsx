@@ -1,10 +1,13 @@
-import { createContext, useContext, useMemo, useReducer } from 'react'
+import { ReducerPayload } from '@code-gear/web/shared'
+import { WithChildren }   from '@code-gear/web/shared'
+import { createContext }  from 'react'
+import { useContext }     from 'react'
+import { useMemo }        from 'react'
+import { useReducer }     from 'react'
 
-import { useStorage } from '@/shared/hooks'
+import { useStorage }     from '@/shared/hooks'
 
-import { PreviewState } from '../types'
-
-import { ReducerPayload, WithChildren } from '@code-gear/web/shared'
+import { PreviewState }   from '../types'
 
 export const PreviewContext = createContext<ReducerPayload<PreviewState>>({})
 

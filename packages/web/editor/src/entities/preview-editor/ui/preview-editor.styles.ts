@@ -1,6 +1,5 @@
+import { s }  from '@code-gear/web/shared'
 import styled from 'styled-components'
-
-import { s } from '@code-gear/web/shared'
 
 export const EditorContainer = styled.div`
   ${s.wh('33%', '100%')};

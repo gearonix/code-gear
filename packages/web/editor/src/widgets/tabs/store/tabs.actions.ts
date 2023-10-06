@@ -1,13 +1,12 @@
+import { Nullable }           from '@code-gear/web/shared'
 import { makeAutoObservable } from 'mobx'
 
-import { EditorStore } from '@/app'
-import { FileHandlerData } from '@/widgets/editor-content/types'
-import { ContentTab } from '@/widgets/tabs'
-import { generateNewTab } from '@/widgets/tabs/lib/helpers/generate-new-tab'
+import { EditorStore }        from '@/app'
+import { FileHandlerData }    from '@/widgets/editor-content/types'
+import { ContentTab }         from '@/widgets/tabs'
+import { generateNewTab }     from '@/widgets/tabs/lib/helpers/generate-new-tab'
 
-import { isMaxTabsLength } from '../lib'
-
-import { Nullable } from '@code-gear/web/shared'
+import { isMaxTabsLength }    from '../lib'
 
 class TabsActions {
   private state: EditorStore

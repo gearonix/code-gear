@@ -1,19 +1,21 @@
-import { WithChildren } from '@grnx-utils/types'
-import { ReactElement, Suspense } from 'react'
+import { NotificationsProvider } from '@code-gear/web/shared'
+import { useOverflow }           from '@code-gear/web/shared'
+import { WithChildren }          from '@grnx-utils/types'
+import { ReactElement }          from 'react'
+import { Suspense }              from 'react'
 
-import { Aside } from '@/widgets/aside'
-import { EditorContent } from '@/widgets/editor-content'
-import { Header } from '@/widgets/header'
-import { HtmlPreview } from '@/widgets/html-preview'
-import { Settings } from '@/widgets/settings'
-import { Terminal } from '@/widgets/terminal'
+import { Aside }                 from '@/widgets/aside'
+import { EditorContent }         from '@/widgets/editor-content'
+import { Header }                from '@/widgets/header'
+import { HtmlPreview }           from '@/widgets/html-preview'
+import { Settings }              from '@/widgets/settings'
+import { Terminal }              from '@/widgets/terminal'
 
-import { EditorStoreProvider } from './providers/editor-store'
+import { EditorStoreProvider }   from './providers/editor-store'
 import { ModalsContextProvider } from './providers/modals-provider'
-import { ThemeLoader } from './providers/theme-loader'
-import { EditorStyles, EditorWrapper } from './styles/editor.styles'
-
-import { NotificationsProvider, useOverflow } from '@code-gear/web/shared'
+import { ThemeLoader }           from './providers/theme-loader'
+import { EditorStyles }          from './styles/editor.styles'
+import { EditorWrapper }         from './styles/editor.styles'
 
 interface EditorProps {
   SignIn: () => ReactElement

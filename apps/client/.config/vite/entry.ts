@@ -1,7 +1,7 @@
 // It is important to specify relative paths here.
-import { createViteConfig } from '../../../../packages/config/src/vite'
+import { resolve }            from 'path'
 
-import { resolve } from 'path'
+import { createViteConfig }   from '../../../../packages/config/src/vite'
 import { buildCustomPlugins } from './plugins'
 
 export default createViteConfig({

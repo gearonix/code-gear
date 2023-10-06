@@ -1,5 +1,6 @@
-import { ExecuteCodeApiDTO } from '../../dto/execute-code-api.dto'
-import { ExecutorLanguages, ExecutorLanguagesValues } from '../types'
+import { ExecuteCodeApiDTO }       from '../../dto/execute-code-api.dto'
+import { ExecutorLanguages }       from '../types'
+import { ExecutorLanguagesValues } from '../types'
 
 type TransformLanguage = Omit<ExecuteCodeApiDTO, 'language'> & {
   language: ExecutorLanguagesValues

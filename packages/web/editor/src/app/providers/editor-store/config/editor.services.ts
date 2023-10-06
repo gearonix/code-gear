@@ -1,10 +1,10 @@
 import { makeAutoObservable } from 'mobx'
 
-import { ExecuteServices } from '@/widgets/header'
+import { ExecuteServices }    from '@/widgets/header'
 
-import EditorActions from './editor.actions'
-import EditorGetters from './editor.getters'
-import EditorStore from './editor.store'
+import EditorActions          from './editor.actions'
+import EditorGetters          from './editor.getters'
+import EditorStore            from './editor.store'
 
 class EditorServices {
   private state: EditorStore

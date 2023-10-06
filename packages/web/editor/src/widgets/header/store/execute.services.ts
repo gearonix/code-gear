@@ -1,13 +1,15 @@
-import { makeAutoObservable } from 'mobx'
+import { EndPoints }           from '@code-gear/config'
+import { httpService }         from '@code-gear/web/shared'
+import { makeAutoObservable }  from 'mobx'
 
-import { EditorActions, EditorGetters, EditorStore } from '@/app'
+import { EditorActions }       from '@/app'
+import { EditorGetters }       from '@/app'
+import { EditorStore }         from '@/app'
 
 import { CodeExecutionErrors } from '../errors'
-import { ExecutorRequest, ExecutorResponse } from '../index'
+import { ExecutorRequest }     from '../index'
+import { ExecutorResponse }    from '../index'
 import { NotificationMessage } from '../types'
-
-import { httpService } from '@code-gear/web/shared'
-import { EndPoints } from '@code-gear/config'
 
 class ExecuteServices {
   private state: EditorStore

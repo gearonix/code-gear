@@ -1,23 +1,23 @@
-import { useEffect } from 'react'
-import { observer } from 'mobx-react-lite'
+import { AnimationProvider }   from '@code-gear/web/shared'
+import { isString }            from '@code-gear/web/shared'
+import { useDebounce }         from '@code-gear/web/shared'
+import { useMonaco }           from '@monaco-editor/react'
+import { observer }            from 'mobx-react-lite'
+import { useEffect }           from 'react'
 
-import { useCustomTheme } from '@/app'
-import { EditorCore } from '@/entities/editor-core'
-import { LanguageSwitcher } from '@/features/language-switcher'
-import { ThemeSwitcher } from '@/features/switch-theme'
-import { useActions, useStorage, useStore } from '@/shared/hooks'
-import { Tabs } from '@/widgets/tabs'
-import { useMonaco } from '@monaco-editor/react'
+import { useCustomTheme }      from '@/app'
+import { EditorCore }          from '@/entities/editor-core'
+import { LanguageSwitcher }    from '@/features/language-switcher'
+import { ThemeSwitcher }       from '@/features/switch-theme'
+import { useActions }          from '@/shared/hooks'
+import { useStorage }          from '@/shared/hooks'
+import { useStore }            from '@/shared/hooks'
+import { Tabs }                from '@/widgets/tabs'
 
-import { useKeyboardManager } from '../hooks'
-
-import {
-  EditorContentStyles,
-  TabsSelects,
-  TabsWrapper
-} from './editor-content.styles'
-
-import { AnimationProvider, isString, useDebounce } from '@code-gear/web/shared'
+import { useKeyboardManager }  from '../hooks'
+import { EditorContentStyles } from './editor-content.styles'
+import { TabsSelects }         from './editor-content.styles'
+import { TabsWrapper }         from './editor-content.styles'
 
 export const EditorContent = observer(() => {
   const actions = useActions()
@@ -40,7 +40,7 @@ export const EditorContent = observer(() => {
   }
 
   useEffect(() => {
-    monaco?.editor.setTheme(theme)
+    monaco.editor.setTheme(theme)
   }, [theme])
 
   useEffect(() => {

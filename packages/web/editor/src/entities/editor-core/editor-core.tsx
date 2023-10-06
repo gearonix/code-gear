@@ -1,11 +1,12 @@
-import { toJS } from 'mobx'
-import { observer } from 'mobx-react-lite'
+import { useAnimations } from '@code-gear/web/shared'
+import { WithChildren }  from '@code-gear/web/shared'
+import MonacoEditor      from '@monaco-editor/react'
+import { toJS }          from 'mobx'
+import { observer }      from 'mobx-react-lite'
 
-import { editorConfig } from '@/shared/editor-config'
-import { useGetters, useStore } from '@/shared/hooks'
-import MonacoEditor from '@monaco-editor/react'
-
-import { useAnimations, WithChildren } from '@code-gear/web/shared'
+import { editorConfig }  from '@/shared/editor-config'
+import { useGetters }    from '@/shared/hooks'
+import { useStore }      from '@/shared/hooks'
 
 interface EditorCoreProps {
   onChange: (val: unknown) => void

@@ -1,5 +1,6 @@
-import { join } from 'path'
-import { Project, SyntaxKind } from 'ts-morph'
+import { join }       from 'path'
+import { Project }    from 'ts-morph'
+import { SyntaxKind } from 'ts-morph'
 
 const resolveRoot = () => join(__dirname, '..', '..')
 

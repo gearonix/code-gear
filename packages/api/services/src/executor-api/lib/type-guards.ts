@@ -1,5 +1,6 @@
+import { ExecutorApiResponse }     from '$/nest-common'
+
 import { ExecutorLanguagesValues } from './types'
-import { ExecutorApiResponse } from '$/nest-common'
 
 export const isExecutorApiResponse = (
   res: unknown

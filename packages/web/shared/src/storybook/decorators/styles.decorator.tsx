@@ -1,5 +1,6 @@
+import { Decorator }    from '@storybook/react'
+
 import { GlobalStyles } from '@/providers'
-import { Decorator } from '@storybook/react'
 
 export const StylesDecorator: Decorator = (story) => (
   <>

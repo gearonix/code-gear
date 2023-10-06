@@ -1,10 +1,10 @@
-import { makeAutoObservable } from 'mobx'
-import moment from 'moment'
-
-import { EditorGetters, EditorStore } from '@/app'
-import { ExecutorResponse } from '@/widgets/header'
-
 import { LocalStorageClient } from '@code-gear/web/shared'
+import { makeAutoObservable } from 'mobx'
+import moment                 from 'moment'
+
+import { EditorGetters }      from '@/app'
+import { EditorStore }        from '@/app'
+import { ExecutorResponse }   from '@/widgets/header'
 
 class TerminalActions {
   private state: EditorStore

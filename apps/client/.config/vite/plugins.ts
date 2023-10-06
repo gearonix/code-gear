@@ -1,10 +1,9 @@
+import preact           from '@preact/preset-vite'
 import { PluginOption } from 'vite'
+import { VitePWA }      from 'vite-plugin-pwa'
+import webfontDownload  from 'vite-plugin-webfont-dl'
 
-import { fonts } from './fonts'
-
-import preact from '@preact/preset-vite'
-import { VitePWA } from 'vite-plugin-pwa'
-import webfontDownload from 'vite-plugin-webfont-dl'
+import { fonts }        from './fonts'
 
 export const buildCustomPlugins = (): PluginOption[] => [
   webfontDownload(fonts),

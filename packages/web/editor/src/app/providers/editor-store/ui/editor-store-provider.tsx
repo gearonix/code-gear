@@ -1,6 +1,7 @@
-import { createContext, ReactNode } from 'react'
+import { createContext } from 'react'
+import { ReactNode }     from 'react'
 
-import EditorStore from '../config/editor.store'
+import EditorStore       from '../config/editor.store'
 
 export const EditorStoreContext = createContext<EditorStore>({} as EditorStore)
 

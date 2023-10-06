@@ -1,7 +1,7 @@
-import { Button, ConfigProvider } from 'antd'
-import { ButtonProps } from 'antd/es/button'
-
-import { WithChildren } from '@code-gear/web/shared'
+import { WithChildren }   from '@code-gear/web/shared'
+import { Button }         from 'antd'
+import { ConfigProvider } from 'antd'
+import { ButtonProps }    from 'antd/es/button'
 
 export type ColorButtonProps = ButtonProps &
   WithChildren<{

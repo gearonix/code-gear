@@ -1,7 +1,7 @@
+import { message }       from 'antd'
 import { createContext } from 'react'
-import { message } from 'antd'
 
-import { WithChildren } from '@/types'
+import { WithChildren }  from '@/types'
 
 interface UserMessage {
   type?: 'success' | 'info' | 'error'

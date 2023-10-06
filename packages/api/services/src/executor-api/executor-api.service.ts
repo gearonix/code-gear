@@ -1,12 +1,15 @@
-import { HttpService } from '@nestjs/axios'
-import { Injectable, Logger } from '@nestjs/common'
-import axios from 'axios'
-import stringify from 'qs-stringify'
-import { compilerApiUrl } from '@code-gear/config'
-import { ExecutorApiResponse } from '$/nest-common'
-import { ExecuteCodeApiDTO } from './dto/execute-code-api.dto'
-import { FailedToFetchError } from './lib/errors'
-import { transformLanguage } from './lib/helpers/transform-language'
+import { compilerApiUrl }          from '@code-gear/config'
+import { HttpService }             from '@nestjs/axios'
+import { Injectable }              from '@nestjs/common'
+import { Logger }                  from '@nestjs/common'
+import axios                       from 'axios'
+import stringify                   from 'qs-stringify'
+
+import { ExecutorApiResponse }     from '$/nest-common'
+
+import { ExecuteCodeApiDTO }       from './dto/execute-code-api.dto'
+import { FailedToFetchError }      from './lib/errors'
+import { transformLanguage }       from './lib/helpers/transform-language'
 import { ExecutorLanguagesValues } from './lib/types'
 
 @Injectable()
@@ -28,7 +31,7 @@ export class ExecutorApiService {
         )
         .toPromise()
 
-      return response?.data
+      return response.data
     } catch (error: unknown) {
       if (axios.isAxiosError(error)) {
         Logger.warn(FailedToFetchError(error.status))

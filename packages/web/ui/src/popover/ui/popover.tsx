@@ -1,10 +1,10 @@
-import { useEffect } from 'react'
+import { AnimationProvider }   from '@code-gear/web/shared'
+import { VoidFunction }        from '@code-gear/web/shared'
+import { WithChildren }        from '@code-gear/web/shared'
+import { useEffect }           from 'react'
 
-import { AnimationProvider } from '@code-gear/web/shared'
-import { VoidFunction, WithChildren } from '@code-gear/web/shared'
 import { usePopoverAnimation } from '../hooks'
-
-import { PopoverStyles } from './popover.styles'
+import { PopoverStyles }       from './popover.styles'
 
 export type PopoverProps = WithChildren<{
   onClose: VoidFunction

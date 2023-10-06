@@ -1,8 +1,6 @@
-import {
-  languages,
-  LanguagesKeys,
-  LanguagesValues
-} from '@/shared/consts/languages'
+import { languages }       from '@/shared/consts/languages'
+import { LanguagesKeys }   from '@/shared/consts/languages'
+import { LanguagesValues } from '@/shared/consts/languages'
 
 export const getLanguageFromName = (
   fileName: string

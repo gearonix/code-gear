@@ -1,9 +1,11 @@
-import { TestStory, createStorybookVariant } from '@code-gear/web/shared'
-import { expect } from '@storybook/jest'
-import type { Meta } from '@storybook/react'
-import { within } from '@storybook/testing-library'
-import { ColorButtonProps } from './color-button'
-import { default as ColorButton } from './color-button'
+import      { createStorybookVariant } from '@code-gear/web/shared'
+import      { TestStory }              from '@code-gear/web/shared'
+import      { expect }                 from '@storybook/jest'
+import type { Meta }                   from '@storybook/react'
+import      { within }                 from '@storybook/testing-library'
+
+import      { ColorButtonProps }       from './color-button'
+import      { default as ColorButton } from './color-button'
 
 const Story: Meta<typeof ColorButton> = {
   component: ColorButton,

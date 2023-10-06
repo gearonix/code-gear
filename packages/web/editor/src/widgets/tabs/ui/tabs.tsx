@@ -1,16 +1,15 @@
-import { Popconfirm } from 'antd'
-import { toJS } from 'mobx'
-import { observer } from 'mobx-react-lite'
+import { TargetKey }     from '@code-gear/web/shared'
+import { Popconfirm }    from 'antd'
+import { toJS }          from 'mobx'
+import { observer }      from 'mobx-react-lite'
 
 import { maxTabsLength } from '@/shared/consts/font-sizes'
-import { useActions, useStore } from '@/shared/hooks'
+import { useActions }    from '@/shared/hooks'
+import { useStore }      from '@/shared/hooks'
 
-import { useConfirm } from '../hooks/use-confirm'
+import { useConfirm }    from '../hooks/use-confirm'
 import { useMappedTabs } from '../hooks/use-mapped-tabs'
-
-import { TabsStyles } from './tabs.styles'
-
-import { TargetKey } from '@code-gear/web/shared'
+import { TabsStyles }    from './tabs.styles'
 
 const Tabs = observer(() => {
   const { activeKey, content } = useStore()
@@ -18,18 +17,19 @@ const Tabs = observer(() => {
   const mappedTabs = useMappedTabs(content)
   const confirm = useConfirm()
 
-  const onEdit = confirm.protect(
-    (targetKey: TargetKey, action: 'add' | 'remove') => {
-      if (action === 'add') {
-        actions.tabs.createTab()
-      } else {
-        if (content.length === 1) {
-          return
-        }
-        confirm.on(targetKey as string)
+  const onEdit = confirm.protect((
+    targetKey: TargetKey,
+    action: 'add' | 'remove'
+  ) => {
+    if (action === 'add') {
+      actions.tabs.createTab()
+    } else {
+      if (content.length === 1) {
+        return
       }
+      confirm.on(targetKey as string)
     }
-  )
+  })
 
   const onChange = confirm.protect((activeKey: string) => {
     actions.tabs.changeActiveTab(activeKey)

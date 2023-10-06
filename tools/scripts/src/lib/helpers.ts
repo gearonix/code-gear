@@ -1,5 +1,6 @@
-import { join } from 'path'
-import { Project, SourceFile } from 'ts-morph'
+import { join }       from 'path'
+import { Project }    from 'ts-morph'
+import { SourceFile } from 'ts-morph'
 
 const resolveRoot = () => join(__dirname, '..', '..', '..', '..')
 

@@ -1,11 +1,9 @@
-import { Button } from 'antd'
-import { Link } from 'react-router-dom'
-
-import { Assets } from '@code-gear/web/shared'
+import { Assets }              from '@code-gear/web/shared'
+import { RoutePaths }          from '@code-gear/web/shared'
+import { Button }              from 'antd'
+import { Link }                from 'react-router-dom'
 
 import { HeaderOptionsStyles } from './header-options.styles'
-
-import { RoutePaths } from '@code-gear/web/shared'
 
 interface HeaderOptionsProps {
   openFile: () => void

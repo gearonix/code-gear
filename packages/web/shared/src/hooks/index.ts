@@ -5,11 +5,11 @@ export { useNotifications } from './use-notifications'
  */
 
 export {
-  useDebounce,
-  useOverflow,
-  useFullScreen,
-  useAsyncEffect,
-  useFilteredEffect,
   useAltKeyDown,
-  useBooleanState
+  useAsyncEffect,
+  useBooleanState,
+  useDebounce,
+  useFilteredEffect,
+  useFullScreen,
+  useOverflow
 } from '@grnx-utils/react-hooks'

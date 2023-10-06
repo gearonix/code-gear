@@ -1,6 +1,8 @@
-import { useContext } from 'react'
+import { useContext }      from 'react'
 
-import { ModalsContext, ModalsPayload, ModalsState } from '@/app'
+import { ModalsContext }   from '@/app'
+import { ModalsPayload }   from '@/app'
+import { ModalsState }     from '@/app'
 import { TerminalTabKeys } from '@/components/../../widgets/terminal'
 
 export const useModalsContext = () => {

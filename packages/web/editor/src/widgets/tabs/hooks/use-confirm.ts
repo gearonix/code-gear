@@ -1,6 +1,6 @@
-import { useState } from 'react'
-
-import { AnyFunction, Nullable } from '@code-gear/web/shared'
+import { AnyFunction } from '@code-gear/web/shared'
+import { Nullable }    from '@code-gear/web/shared'
+import { useState }    from 'react'
 
 export const useConfirm = () => {
   const [confirmKey, setConfirmKey] = useState<Nullable<string>>(null)

@@ -3,27 +3,26 @@
  */
 
 export type {
-  Nullable,
-  Hex,
-  DeepNullable,
-  Combine,
-  Entries,
-  ObjectNullable,
-  AnyObject,
   AnyFunction,
+  AnyObject,
+  Combine,
+  CustomArguments,
+  DeepNullable,
+  Entries,
+  Hex,
   Keys,
   Mutable,
-  TargetKey,
+  Nullable,
+  ObjectNullable,
   ReplaceName,
-  VoidFunction,
   Required,
+  TargetKey,
+  Undefinable,
   ValueOf,
   Values,
-  Undefinable,
-  CustomArguments,
+  VoidFunction,
   WithChildren,
-  WithPreactChildren,
-  WithFeatures
+  WithFeatures,
+  WithPreactChildren
 } from '@grnx-utils/types'
-
-export { isFunction, isObject, isNumber, isString } from '@grnx-utils/types'
+export { isFunction, isNumber, isObject, isString } from '@grnx-utils/types'

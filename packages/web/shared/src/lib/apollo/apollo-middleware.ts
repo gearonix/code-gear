@@ -1,5 +1,7 @@
-import { apolloClient } from '@/config'
-import { AnyObject, ApolloOperation, Nullable } from '@/types'
+import { apolloClient }    from '@/config'
+import { AnyObject }       from '@/types'
+import { ApolloOperation } from '@/types'
+import { Nullable }        from '@/types'
 
 type WithTypeName<P extends AnyObject> = P & { __typename: string }
 

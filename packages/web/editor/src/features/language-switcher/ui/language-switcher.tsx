@@ -1,11 +1,10 @@
-import { observer } from 'mobx-react-lite'
+import { Select }             from '@code-gear/web/ui'
+import { observer }           from 'mobx-react-lite'
 
-import { LanguagesValues } from '@/shared/consts/languages'
-import { useGetters } from '@/shared/hooks'
+import { LanguagesValues }    from '@/shared/consts/languages'
+import { useGetters }         from '@/shared/hooks'
 
 import { useMappedLanguages } from '../hooks'
-
-import { Select } from '@code-gear/web/ui'
 
 const LanguageSwitcher = observer(() => {
   const languages = useMappedLanguages()

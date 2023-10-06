@@ -1,6 +1,5 @@
-import { useSpring } from '@react-spring/web'
-
 import { useAnimations } from '@code-gear/web/shared'
+import { useSpring }     from '@react-spring/web'
 
 export const useHeaderAnimation = () => {
   const { Spring } = useAnimations()

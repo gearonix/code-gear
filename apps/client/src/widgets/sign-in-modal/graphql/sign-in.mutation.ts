@@ -1,5 +1,4 @@
-import { gql } from '@apollo/react-hooks'
-
+import { gql }             from '@apollo/react-hooks'
 import { ApolloOperation } from '@code-gear/web/shared'
 
 export const SignInMutation: ApolloOperation = {

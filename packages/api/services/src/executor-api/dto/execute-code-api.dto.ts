@@ -1,7 +1,11 @@
-import { CodeExecutorRequest } from '@nest-common/src/types/common'
-import { ApiProperty } from '@nestjs/swagger'
-import { IsIn, IsOptional, IsString } from 'class-validator'
-import { ExecutorLanguages, ExecutorLanguagesKeys } from '../lib/types'
+import { CodeExecutorRequest }   from '@nest-common/src/types/common'
+import { ApiProperty }           from '@nestjs/swagger'
+import { IsIn }                  from 'class-validator'
+import { IsOptional }            from 'class-validator'
+import { IsString }              from 'class-validator'
+
+import { ExecutorLanguages }     from '../lib/types'
+import { ExecutorLanguagesKeys } from '../lib/types'
 
 export class ExecuteCodeApiDTO implements CodeExecutorRequest {
   @IsString()

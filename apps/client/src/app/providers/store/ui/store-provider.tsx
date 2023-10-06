@@ -1,8 +1,7 @@
-import { createContext } from 'react'
-
-import RootStore from '../config/store'
-
 import { WithPreactChildren } from '@code-gear/web/shared'
+import { createContext }      from 'react'
+
+import RootStore              from '../config/store'
 
 export const StoreContext = createContext<RootStore>({} as RootStore)
 

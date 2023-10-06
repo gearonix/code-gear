@@ -1,16 +1,14 @@
-import { useEffect } from 'react'
-import { observer } from 'mobx-react-lite'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { PrivatePaths }    from '@code-gear/web/shared'
+import { RoutePaths }      from '@code-gear/web/shared'
+import { useAsyncEffect }  from '@code-gear/web/shared'
+import { useBooleanState } from '@code-gear/web/shared'
+import { WithChildren }    from '@code-gear/web/shared'
+import { observer }        from 'mobx-react-lite'
+import { useEffect }       from 'react'
+import { useLocation }     from 'react-router-dom'
+import { useNavigate }     from 'react-router-dom'
 
-import { useStore } from '@/shared/hooks'
-
-import {
-  PrivatePaths,
-  RoutePaths,
-  useAsyncEffect,
-  useBooleanState,
-  WithChildren
-} from '@code-gear/web/shared'
+import { useStore }        from '@/shared/hooks'
 
 const AuthGuard = observer(({ children }: WithChildren) => {
   const { isAuthorized, services } = useStore('auth')
