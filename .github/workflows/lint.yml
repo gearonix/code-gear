@@ -1,4 +1,4 @@
-name: CodeGear CI > lint
+name: code-gear > lint
 on:
   pull_request:
     branches: [ master ]
@@ -11,17 +11,8 @@ jobs:
     name: Linting project
     runs-on: ubuntu-latest
     steps:
-
-      - uses: actions/checkout@v3
-      - name: Installing Node.js 19.x
-        uses: actions/setup-node@v3
-        with:
-          node-version: 19.x
-          cache: 'yarn'
-
-      - name: Installing dependencies
-        run: yarn install
+      - name: using setup script
+        uses: ./.github/conf/setup.yml
 
       - name: Linting project
-        run: |
-          yarn dlx nx run lint
+        run: yarn dlx nx run root:lint

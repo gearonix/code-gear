@@ -1,4 +1,4 @@
-name: CodeGear CI > build
+name: code-gear > build
 on:
   pull_request:
     branches: [ master ]
@@ -16,16 +16,8 @@ jobs:
     name: Pushing workflow to build branch
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Installing Node.js 19.x
-        uses: actions/setup-node@v3
-        with:
-          node-version: 19.x
-          cache: 'yarn'
-
-      - name: Installing dependencies
-        run: yarn install
+      - name: using setup script
+        uses: ./.github/conf/setup.yml
 
       - name: Pushing to build branch
         uses: s0/git-publish-subdir-action@develop
@@ -41,16 +33,8 @@ jobs:
     name: Building and deploying storybook
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Installing Node.js 19.x
-        uses: actions/setup-node@v3
-        with:
-          node-version: 19.x
-          cache: 'yarn'
-
-      - name: Installing dependencies
-        run: yarn install
+      - name: using setup script
+        uses: ./.github/conf/setup.yml
 
       - name: Pushing to build-storybook branch
         uses: JamesIves/github-pages-deploy-action@v4
