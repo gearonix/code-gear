@@ -57,7 +57,7 @@ class ee {
     return this._statuses && (t = this._statuses.includes(e.status)), this._headers && t && (t = Object.keys(this._headers).some((n) => e.headers.get(n) === this._headers[n])), t;
   }
 }
-class L {
+class x {
   /**
    * To construct a new CacheableResponsePlugin instance you must provide at
    * least one of the `config` properties.
@@ -130,7 +130,7 @@ function ae(s) {
   });
   P.set(s, e);
 }
-let x = {
+let L = {
   get(s, e, t) {
     if (s instanceof IDBTransaction) {
       if (e === "done")
@@ -150,7 +150,7 @@ let x = {
   }
 };
 function ie(s) {
-  x = s(x);
+  L = s(L);
 }
 function oe(s) {
   return s === IDBDatabase.prototype.transaction && !("objectStoreNames" in IDBTransaction.prototype) ? function(e, ...t) {
@@ -163,7 +163,7 @@ function oe(s) {
   };
 }
 function ce(s) {
-  return typeof s == "function" ? oe(s) : (s instanceof IDBTransaction && ae(s), te(s, se()) ? new Proxy(s, x) : s);
+  return typeof s == "function" ? oe(s) : (s instanceof IDBTransaction && ae(s), te(s, se()) ? new Proxy(s, L) : s);
 }
 function f(s) {
   if (s instanceof IDBRequest)
@@ -1616,7 +1616,7 @@ class Pe {
   }
 }
 let w;
-const xe = () => (w || (w = new Pe(), w.addFetchListener(), w.addCacheListener()), w);
+const Le = () => (w || (w = new Pe(), w.addFetchListener(), w.addCacheListener()), w);
 function T(s, e, t) {
   let n;
   if (typeof s == "string") {
@@ -1634,9 +1634,9 @@ function T(s, e, t) {
       funcName: "registerRoute",
       paramName: "capture"
     });
-  return xe().registerRoute(n), n;
+  return Le().registerRoute(n), n;
 }
-function Le(s, e = []) {
+function xe(s, e = []) {
   for (const t of [...s.searchParams.keys()])
     e.some((n) => n.test(t)) && s.searchParams.delete(t);
   return s;
@@ -1644,7 +1644,7 @@ function Le(s, e = []) {
 function* Se(s, { ignoreURLParametersMatching: e = [/^utm_/, /^fbclid$/], directoryIndex: t = "index.html", cleanURLs: n = !0, urlManipulation: r } = {}) {
   const a = new URL(s, location.href);
   a.hash = "", yield a.href;
-  const i = Le(a, e);
+  const i = xe(a, e);
   if (yield i.href, t && i.pathname.endsWith("/")) {
     const o = new URL(i.href);
     o.pathname += t, yield o.href;
@@ -1868,7 +1868,7 @@ class Ke extends I {
     return r;
   }
 }
-Be([{"revision":null,"url":"assets/Dracula-e98fc9aa.js"},{"revision":null,"url":"assets/Dreamweaver-15561dbd.js"},{"revision":null,"url":"assets/editor-6a0aaf12.js"},{"revision":null,"url":"assets/Eiffel-64ee1523.js"},{"revision":null,"url":"assets/GitHub-06a37610.js"},{"revision":null,"url":"assets/IDLE-cb87b507.js"},{"revision":null,"url":"assets/index-9c49d355.js"},{"revision":null,"url":"assets/index-9d9ae4af.css"},{"revision":null,"url":"assets/Monokai-65cda70f.js"},{"revision":null,"url":"assets/Nord-e5536575.js"},{"revision":null,"url":"assets/settings-b30195e9.js"},{"revision":null,"url":"assets/Tomorrow-33c61db8.js"},{"revision":null,"url":"assets/Twilight-ab8a64b1.js"},{"revision":null,"url":"assets/use-gesture-react.esm-1c41e890.js"},{"revision":"0b1fb282d59b9e640356e285d2e7f243","url":"index.html"},{"revision":"38013143dc2183340ede8bc1c5124507","url":"registerSW.js"},{"revision":"f2513dbc34ba877ca158e280672da925","url":"favicon.svg"},{"revision":"2916883dd6259679afe0d684fe5b1f3a","url":"manifest.json"},{"revision":"b058215323dce09358ec4624356fc761","url":"service-worker.js"},{"revision":"7018b9b752b4b15aedb35eee44e811b6","url":"manifest-logo/logo192.png"},{"revision":"1860ffb4107fe6ba101275eb0900e63e","url":"manifest-logo/logo512.png"},{"revision":"82472dd6a04460bf23af25a2fcbdbe95","url":"manifest.webmanifest"}]);
+Be([{"revision":null,"url":"assets/Dracula-e98fc9aa.js"},{"revision":null,"url":"assets/Dreamweaver-15561dbd.js"},{"revision":null,"url":"assets/editor-773efe57.js"},{"revision":null,"url":"assets/Eiffel-64ee1523.js"},{"revision":null,"url":"assets/GitHub-06a37610.js"},{"revision":null,"url":"assets/IDLE-cb87b507.js"},{"revision":null,"url":"assets/index-9d9ae4af.css"},{"revision":null,"url":"assets/index-f2ff74ed.js"},{"revision":null,"url":"assets/Monokai-65cda70f.js"},{"revision":null,"url":"assets/Nord-e5536575.js"},{"revision":null,"url":"assets/settings-cbaa748e.js"},{"revision":null,"url":"assets/Tomorrow-33c61db8.js"},{"revision":null,"url":"assets/Twilight-ab8a64b1.js"},{"revision":null,"url":"assets/use-gesture-react.esm-a63964fc.js"},{"revision":"3d2dd7e397fa9e79f0ba69aba033adf9","url":"index.html"},{"revision":"38013143dc2183340ede8bc1c5124507","url":"registerSW.js"},{"revision":"f2513dbc34ba877ca158e280672da925","url":"favicon.svg"},{"revision":"2916883dd6259679afe0d684fe5b1f3a","url":"manifest.json"},{"revision":"b058215323dce09358ec4624356fc761","url":"service-worker.js"},{"revision":"7018b9b752b4b15aedb35eee44e811b6","url":"manifest-logo/logo192.png"},{"revision":"1860ffb4107fe6ba101275eb0900e63e","url":"manifest-logo/logo512.png"},{"revision":"82472dd6a04460bf23af25a2fcbdbe95","url":"manifest.webmanifest"}]);
 self.addEventListener("message", (s) => {
   s.data && s.data.type === "SKIP_WAITING" && self.skipWaiting();
 });
@@ -1877,7 +1877,7 @@ T(
   new $({
     cacheName: "pages",
     plugins: [
-      new L({
+      new x({
         statuses: [200]
       })
     ]
@@ -1901,7 +1901,7 @@ T(
   new Ke({
     cacheName: "assets",
     plugins: [
-      new L({
+      new x({
         statuses: [200]
       })
     ]
@@ -1912,7 +1912,7 @@ T(
   new Ge({
     cacheName: "images",
     plugins: [
-      new L({
+      new x({
         statuses: [0, 200]
       }),
       new X({
