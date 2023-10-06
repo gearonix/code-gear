@@ -1,0 +1,20 @@
+export declare const wh: (w?: string, h?: string) => import("styled-components").RuleSet<object>;
+export declare const testBorder: import("styled-components").RuleSet<object>;
+export declare const hPadding: (size: number) => import("styled-components").RuleSet<object>;
+export declare const flex: (jc?: string, ai?: string, dir?: string) => import("styled-components").RuleSet<object>;
+export declare const hover: (color: string) => import("styled-components").RuleSet<object>;
+type Font = 'Poppins' | 'Consolas';
+export declare const font: (font: Font) => import("styled-components").RuleSet<object>;
+export declare const antdColor: (color: string) => ({ theme }: any) => string;
+export declare const customScrollbar: (elem?: string) => import("styled-components").RuleSet<object>;
+export declare const color: (color: string) => import("styled-components").RuleSet<object>;
+type AbsoluteProps = Partial<{
+    left: string;
+    top: string;
+    right: string;
+    bottom: string;
+}>;
+export declare const absolute: (props: AbsoluteProps) => import("styled-components").RuleSet<object>;
+export declare const margin: (left: number, top: number) => import("styled-components").RuleSet<object>;
+export declare const shadow: import("styled-components").RuleSet<object>;
+export {};

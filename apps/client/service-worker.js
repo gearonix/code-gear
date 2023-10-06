@@ -57,7 +57,7 @@ class ee {
     return this._statuses && (t = this._statuses.includes(e.status)), this._headers && t && (t = Object.keys(this._headers).some((n) => e.headers.get(n) === this._headers[n])), t;
   }
 }
-class x {
+class L {
   /**
    * To construct a new CacheableResponsePlugin instance you must provide at
    * least one of the `config` properties.
@@ -98,7 +98,7 @@ function ne() {
     IDBCursor.prototype.continuePrimaryKey
   ]);
 }
-const F = /* @__PURE__ */ new WeakMap(), P = /* @__PURE__ */ new WeakMap(), j = /* @__PURE__ */ new WeakMap(), N = /* @__PURE__ */ new WeakMap(), S = /* @__PURE__ */ new WeakMap();
+const F = /* @__PURE__ */ new WeakMap(), P = /* @__PURE__ */ new WeakMap(), j = /* @__PURE__ */ new WeakMap(), C = /* @__PURE__ */ new WeakMap(), S = /* @__PURE__ */ new WeakMap();
 function re(s) {
   const e = new Promise((t, n) => {
     const r = () => {
@@ -130,7 +130,7 @@ function ae(s) {
   });
   P.set(s, e);
 }
-let L = {
+let x = {
   get(s, e, t) {
     if (s instanceof IDBTransaction) {
       if (e === "done")
@@ -150,7 +150,7 @@ let L = {
   }
 };
 function ie(s) {
-  L = s(L);
+  x = s(x);
 }
 function oe(s) {
   return s === IDBDatabase.prototype.transaction && !("objectStoreNames" in IDBTransaction.prototype) ? function(e, ...t) {
@@ -163,15 +163,15 @@ function oe(s) {
   };
 }
 function ce(s) {
-  return typeof s == "function" ? oe(s) : (s instanceof IDBTransaction && ae(s), te(s, se()) ? new Proxy(s, L) : s);
+  return typeof s == "function" ? oe(s) : (s instanceof IDBTransaction && ae(s), te(s, se()) ? new Proxy(s, x) : s);
 }
 function f(s) {
   if (s instanceof IDBRequest)
     return re(s);
-  if (N.has(s))
-    return N.get(s);
+  if (C.has(s))
+    return C.get(s);
   const e = ce(s);
-  return e !== s && (N.set(s, e), S.set(e, s)), e;
+  return e !== s && (C.set(s, e), S.set(e, s)), e;
 }
 const O = (s) => S.get(s);
 function he(s, e, { blocked: t, upgrade: n, blocking: r, terminated: a } = {}) {
@@ -198,7 +198,7 @@ function le(s, { blocked: e } = {}) {
   });
 }
 const ue = ["get", "getKey", "getAll", "getAllKeys", "count"], de = ["put", "add", "delete", "clear"], A = /* @__PURE__ */ new Map();
-function G(s, e) {
+function B(s, e) {
   if (!(s instanceof IDBDatabase && !(e in s) && typeof e == "string"))
     return;
   if (A.get(e))
@@ -221,14 +221,14 @@ function G(s, e) {
 }
 ie((s) => ({
   ...s,
-  get: (e, t, n) => G(e, t) || s.get(e, t, n),
-  has: (e, t) => !!G(e, t) || s.has(e, t)
+  get: (e, t, n) => B(e, t) || s.get(e, t, n),
+  has: (e, t) => !!B(e, t) || s.has(e, t)
 }));
 try {
   self["workbox:expiration:7.0.0"] && _();
 } catch {
 }
-const fe = "workbox-expiration", g = "cache-entries", B = (s) => {
+const fe = "workbox-expiration", g = "cache-entries", G = (s) => {
   const e = new URL(s, location.href);
   return e.hash = "", e.href;
 };
@@ -270,7 +270,7 @@ class _e {
    * @private
    */
   async setTimestamp(e, t) {
-    e = B(e);
+    e = G(e);
     const n = {
       url: e,
       timestamp: t,
@@ -330,7 +330,7 @@ class _e {
    * @private
    */
   _getId(e) {
-    return this._cacheName + "|" + B(e);
+    return this._cacheName + "|" + G(e);
   }
   /**
    * Returns an open connection to the database.
@@ -419,7 +419,7 @@ const d = {
 }, U = (s) => [d.prefix, s, d.suffix].filter((e) => e && e.length > 0).join("-"), me = (s) => {
   for (const e of Object.keys(d))
     s(e);
-}, C = {
+}, N = {
   updateDetails: (s) => {
     me((e) => {
       typeof s[e] == "string" && (d[e] = s[e]);
@@ -474,7 +474,7 @@ class X {
    * @private
    */
   _getCacheExpiration(e) {
-    if (e === C.getRuntimeName())
+    if (e === N.getRuntimeName())
       throw new l("expire-custom-caches-only");
     let t = this._cacheExpirations.get(e);
     return t || (t = new pe(e, this._config), this._cacheExpirations.set(e, t)), t;
@@ -618,7 +618,7 @@ function v(s, e) {
     t.searchParams.delete(n);
   return t.href;
 }
-async function Ce(s, e, t, n) {
+async function Ne(s, e, t, n) {
   const r = v(e.url, t);
   if (e.url === r)
     return s.match(e, n);
@@ -639,7 +639,7 @@ class Ie {
     });
   }
 }
-async function Ne() {
+async function Ce() {
   for (const s of V)
     await s();
 }
@@ -794,7 +794,7 @@ class Ae {
     const a = await this._ensureResponseSafeToCache(t);
     if (!a)
       return !1;
-    const { cacheName: i, matchOptions: o } = this._strategy, c = await self.caches.open(i), h = this.hasCallback("cacheDidUpdate"), m = h ? await Ce(
+    const { cacheName: i, matchOptions: o } = this._strategy, c = await self.caches.open(i), h = this.hasCallback("cacheDidUpdate"), m = h ? await Ne(
       // TODO(philipwalton): the `__WB_REVISION__` param is a precaching
       // feature. Consider into ways to only add this behavior if using
       // precaching.
@@ -807,7 +807,7 @@ class Ae {
       await c.put(r, h ? a.clone() : a);
     } catch (u) {
       if (u instanceof Error)
-        throw u.name === "QuotaExceededError" && await Ne(), u;
+        throw u.name === "QuotaExceededError" && await Ce(), u;
     }
     for (const u of this.iterateCallbacks("cacheDidUpdate"))
       await u({
@@ -983,7 +983,7 @@ class I {
    * for any `cache.match()` or `cache.put()` calls made by this strategy.
    */
   constructor(e = {}) {
-    this.cacheName = C.getRuntimeName(e.cacheName), this.plugins = e.plugins || [], this.fetchOptions = e.fetchOptions, this.matchOptions = e.matchOptions;
+    this.cacheName = N.getRuntimeName(e.cacheName), this.plugins = e.plugins || [], this.fetchOptions = e.fetchOptions, this.matchOptions = e.matchOptions;
   }
   /**
    * Perform a request strategy and returns a `Promise` that will resolve with
@@ -1100,7 +1100,7 @@ class p extends I {
    * get the response from the network if there's a precache miss.
    */
   constructor(e = {}) {
-    e.cacheName = C.getPrecacheName(e.cacheName), super(e), this._fallbackToNetwork = e.fallbackToNetwork !== !1, this.plugins.push(p.copyRedirectedCacheableResponsesPlugin);
+    e.cacheName = N.getPrecacheName(e.cacheName), super(e), this._fallbackToNetwork = e.fallbackToNetwork !== !1, this.plugins.push(p.copyRedirectedCacheableResponsesPlugin);
   }
   /**
    * @private
@@ -1195,7 +1195,7 @@ class Ue {
    */
   constructor({ cacheName: e, plugins: t = [], fallbackToNetwork: n = !0 } = {}) {
     this._urlsToCacheKeys = /* @__PURE__ */ new Map(), this._urlsToCacheModes = /* @__PURE__ */ new Map(), this._cacheKeysToIntegrities = /* @__PURE__ */ new Map(), this._strategy = new p({
-      cacheName: C.getPrecacheName(e),
+      cacheName: N.getPrecacheName(e),
       plugins: [
         ...t,
         new Te({ precacheController: this })
@@ -1616,7 +1616,7 @@ class Pe {
   }
 }
 let w;
-const Le = () => (w || (w = new Pe(), w.addFetchListener(), w.addCacheListener()), w);
+const xe = () => (w || (w = new Pe(), w.addFetchListener(), w.addCacheListener()), w);
 function T(s, e, t) {
   let n;
   if (typeof s == "string") {
@@ -1634,9 +1634,9 @@ function T(s, e, t) {
       funcName: "registerRoute",
       paramName: "capture"
     });
-  return Le().registerRoute(n), n;
+  return xe().registerRoute(n), n;
 }
-function xe(s, e = []) {
+function Le(s, e = []) {
   for (const t of [...s.searchParams.keys()])
     e.some((n) => n.test(t)) && s.searchParams.delete(t);
   return s;
@@ -1644,7 +1644,7 @@ function xe(s, e = []) {
 function* Se(s, { ignoreURLParametersMatching: e = [/^utm_/, /^fbclid$/], directoryIndex: t = "index.html", cleanURLs: n = !0, urlManipulation: r } = {}) {
   const a = new URL(s, location.href);
   a.hash = "", yield a.href;
-  const i = xe(a, e);
+  const i = Le(a, e);
   if (yield i.href, t && i.pathname.endsWith("/")) {
     const o = new URL(i.href);
     o.pathname += t, yield o.href;
@@ -1697,10 +1697,10 @@ function He(s) {
 function Me(s) {
   q().precache(s);
 }
-function Ge(s, e) {
+function Be(s, e) {
   Me(s), He(e);
 }
-class Be extends I {
+class Ge extends I {
   /**
    * @private
    * @param {Request|string} request A request to run this strategy for.
@@ -1868,7 +1868,7 @@ class Ke extends I {
     return r;
   }
 }
-Ge([{"revision":null,"url":"assets/Dracula-e98fc9aa.js"},{"revision":null,"url":"assets/Dreamweaver-15561dbd.js"},{"revision":null,"url":"assets/editor-97dc8b67.js"},{"revision":null,"url":"assets/Eiffel-64ee1523.js"},{"revision":null,"url":"assets/GitHub-06a37610.js"},{"revision":null,"url":"assets/IDLE-cb87b507.js"},{"revision":null,"url":"assets/index-9d9ae4af.css"},{"revision":null,"url":"assets/index-bf87d3fe.js"},{"revision":null,"url":"assets/Monokai-65cda70f.js"},{"revision":null,"url":"assets/Nord-e5536575.js"},{"revision":null,"url":"assets/settings-d54ef171.js"},{"revision":null,"url":"assets/Tomorrow-33c61db8.js"},{"revision":null,"url":"assets/Twilight-ab8a64b1.js"},{"revision":null,"url":"assets/use-gesture-react.esm-9258f7dd.js"},{"revision":null,"url":"assets/workbox-window.prod.es5-a7b12eab.js"},{"revision":"a0b238ff2c677676c622c90219f07597","url":"index.html"},{"revision":"f2513dbc34ba877ca158e280672da925","url":"favicon.svg"},{"revision":"2916883dd6259679afe0d684fe5b1f3a","url":"manifest.json"},{"revision":"b058215323dce09358ec4624356fc761","url":"service-worker.js"},{"revision":"7018b9b752b4b15aedb35eee44e811b6","url":"manifest-logo/logo192.png"},{"revision":"1860ffb4107fe6ba101275eb0900e63e","url":"manifest-logo/logo512.png"},{"revision":"82472dd6a04460bf23af25a2fcbdbe95","url":"manifest.webmanifest"}]);
+Be([{"revision":null,"url":"assets/Dracula-e98fc9aa.js"},{"revision":null,"url":"assets/Dreamweaver-15561dbd.js"},{"revision":null,"url":"assets/editor-6a0aaf12.js"},{"revision":null,"url":"assets/Eiffel-64ee1523.js"},{"revision":null,"url":"assets/GitHub-06a37610.js"},{"revision":null,"url":"assets/IDLE-cb87b507.js"},{"revision":null,"url":"assets/index-9c49d355.js"},{"revision":null,"url":"assets/index-9d9ae4af.css"},{"revision":null,"url":"assets/Monokai-65cda70f.js"},{"revision":null,"url":"assets/Nord-e5536575.js"},{"revision":null,"url":"assets/settings-b30195e9.js"},{"revision":null,"url":"assets/Tomorrow-33c61db8.js"},{"revision":null,"url":"assets/Twilight-ab8a64b1.js"},{"revision":null,"url":"assets/use-gesture-react.esm-1c41e890.js"},{"revision":"0b1fb282d59b9e640356e285d2e7f243","url":"index.html"},{"revision":"38013143dc2183340ede8bc1c5124507","url":"registerSW.js"},{"revision":"f2513dbc34ba877ca158e280672da925","url":"favicon.svg"},{"revision":"2916883dd6259679afe0d684fe5b1f3a","url":"manifest.json"},{"revision":"b058215323dce09358ec4624356fc761","url":"service-worker.js"},{"revision":"7018b9b752b4b15aedb35eee44e811b6","url":"manifest-logo/logo192.png"},{"revision":"1860ffb4107fe6ba101275eb0900e63e","url":"manifest-logo/logo512.png"},{"revision":"82472dd6a04460bf23af25a2fcbdbe95","url":"manifest.webmanifest"}]);
 self.addEventListener("message", (s) => {
   s.data && s.data.type === "SKIP_WAITING" && self.skipWaiting();
 });
@@ -1877,7 +1877,7 @@ T(
   new $({
     cacheName: "pages",
     plugins: [
-      new x({
+      new L({
         statuses: [200]
       })
     ]
@@ -1901,7 +1901,7 @@ T(
   new Ke({
     cacheName: "assets",
     plugins: [
-      new x({
+      new L({
         statuses: [200]
       })
     ]
@@ -1909,10 +1909,10 @@ T(
 );
 T(
   ({ request: s }) => s.destination === "image",
-  new Be({
+  new Ge({
     cacheName: "images",
     plugins: [
-      new x({
+      new L({
         statuses: [0, 200]
       }),
       new X({
