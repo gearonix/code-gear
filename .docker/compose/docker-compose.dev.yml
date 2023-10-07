@@ -17,7 +17,7 @@ services:
 
   client:
     extends:
-      file: .docker/compose/common/preset.app.yml
+      file: .docker/compose/common/preset.app.dev.yml
       service: app
     container_name: client
     networks:
@@ -25,13 +25,10 @@ services:
     entrypoint: sh entrypoint/client.sh
     ports:
       - 3000:3000
-    volumes:
-      - ./apps/client:/opt/app/apps/client
-      - /opt/app/node_modules
 
   server:
     extends:
-      file: .docker/compose/common/preset.app.yml
+      file: .docker/compose/common/preset.app.dev.yml
       service: app
     container_name: server
     networks:
@@ -39,9 +36,6 @@ services:
     entrypoint: sh entrypoint/server.sh
     ports:
       - 6868:6868
-    volumes:
-      - ./apps/server:/opt/app/apps/server
-      - /opt/app/node_modules
     depends_on:
       - mysql
 

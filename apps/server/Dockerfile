@@ -1,5 +1,3 @@
-# This docker file is used only in development mode
-
 FROM --platform=linux/amd64 node:20.8.0-alpine as build
 WORKDIR /opt/app
 
@@ -14,20 +12,24 @@ RUN yarn install
 
 ## Copying source code ##
 
-COPY packages packages
+COPY apps/server apps/server
 
-COPY apps apps
+COPY packages packages
 
 RUN yarn install
 
 COPY nx.json project.json .serve.env ./
 
-## Copying entrypoint scripts ##
+## Building app to produciton ##
 
-COPY .docker/sh entrypoint
+RUN yarn nx run server:build
 
-RUN ls /opt/app/entrypoint -a
+## Entrypoint ##
 
-RUN chmod -R +x entrypoint
+FROM --platform=linux/amd64 node:20.8.0-alpine
+WORKDIR /opt/app
 
-RUN echo "done."
+COPY --from=build /opt/app/dist/apps/server ./dist
+COPY ./apps/client/nginx.conf /etc/nginx/conf.d/default.conf
+
+ENTRYPOINT node ./dist/main.js
