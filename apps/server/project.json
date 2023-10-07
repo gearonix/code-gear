@@ -68,13 +68,17 @@
       "options": {
         "target": "node",
         "compiler": "tsc",
-        "progress": true,
         "outputPath": "dist/apps/server",
+        "generatePackageJson": true,
         "main": "apps/server/src/main.ts",
-        "buildpackagesFromSource": true,
         "tsConfig": "apps/server/tsconfig.app.json",
         "assets": [
-          "apps/server/src/assets"
+          "apps/server/src/assets",
+          {
+            "glob": "schema.prisma",
+            "input": "apps/server/prisma",
+            "output": "prisma"
+          }
         ],
         "isolatedConfig": true,
         "webpackConfig": "apps/server/.config/webpack.ts",
@@ -83,7 +87,8 @@
       "configurations": {
         "development": {},
         "production": {}
-      }
+      },
+      "dependsOn": ["prisma:concat"]
     },
     "serve": {
       "executor": "@nx/js:node",

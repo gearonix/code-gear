@@ -29,7 +29,12 @@ RUN yarn nx run server:build
 FROM --platform=linux/amd64 node:20.8.0-alpine
 WORKDIR /opt/app
 
-COPY --from=build /opt/app/dist/apps/server ./dist
-COPY ./apps/client/nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=build /opt/app/dist/apps/server ./
 
-ENTRYPOINT node ./dist/main.js
+RUN sed -i '/workspace:/d' package.json
+
+RUN npm install --omit="dev"
+
+RUN npx prisma generate
+
+ENTRYPOINT node ./main.js

@@ -1,6 +1,10 @@
 {
   "name": "cg-server",
   "version": "1.0.0",
+  "dependencies": {
+    "cg-api-common": "workspace:^",
+    "cg-api-services": "workspace:^"
+  },
   "devDependencies": {
     "cg-config": "workspace:^"
   }
