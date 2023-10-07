@@ -14,6 +14,7 @@ services:
       - ./tools/database:/docker-entrypoint-initdb.d
     env_file:
       - .serve.env
+
 networks:
   cgnet:
     driver: bridge

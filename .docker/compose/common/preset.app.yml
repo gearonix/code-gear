@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  app:
+    build:
+      dockerfile: .docker/dockerfile/root.Dockerfile
+      context: ../../../
+    restart: always
+    env_file:
+      - ../../../.serve.env
+      - ../../../.docker.env
+    volumes:
+      - /opt/app/node_modules

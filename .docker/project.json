@@ -1,0 +1,31 @@
+{
+  "name": "docker",
+  "$schema": "node_modules/nx/schemas/project-schema.json",
+  "targets": {
+    "run:dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "docker compose -f .docker/compose/docker-compose.dev.yml --project-directory . up -d"
+      }
+    },
+    "run:prod": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "docker compose -f .docker/compose/docker-compose.prod.yml --project-directory . up -d"
+      }
+    },
+    "update:dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "docker compose -f .docker/compose/docker-compose.dev.yml --project-directory . up -d --build"
+      }
+    },
+    "update:prod": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "docker compose -f .docker/compose/docker-compose.prod.yml --project-directory . up -d --build"
+      }
+    }
+  },
+  "tags": ["docker"]
+}

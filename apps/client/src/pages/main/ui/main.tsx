@@ -7,7 +7,7 @@ const Main = () => {
   return (
     <Page>
       <div>
-        main <br />
+        maifn <br />
         <Link to={RoutePaths.EDITOR}>editor</Link>
       </div>
     </Page>

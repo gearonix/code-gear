@@ -1,0 +1,50 @@
+version: '3.9'
+
+services:
+  mysql:
+    image: mysql:latest
+    restart: always
+    container_name: db
+    networks:
+      - cgnet
+    ports:
+      - 3306:3306
+    volumes:
+      - ./data:/var/lib/mysql
+      - ./tools/database:/docker-entrypoint-initdb.d
+    env_file:
+      - .serve.env
+
+  client:
+    extends:
+      file: .docker/compose/common/preset.app.yml
+      service: app
+    container_name: client
+    networks:
+      - cgnet
+    entrypoint: sh entrypoint/client.sh
+    ports:
+      - 3000:3000
+    volumes:
+      - ./apps/client:/opt/app/apps/client
+      - /opt/app/node_modules
+
+  server:
+    extends:
+      file: .docker/compose/common/preset.app.yml
+      service: app
+    container_name: server
+    networks:
+      - cgnet
+    entrypoint: sh entrypoint/server.sh
+    ports:
+      - 6868:6868
+    volumes:
+      - ./apps/server:/opt/app/apps/server
+      - /opt/app/node_modules
+    depends_on:
+      - mysql
+
+networks:
+  cgnet:
+    driver: bridge
