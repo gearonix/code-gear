@@ -2083,6 +2083,7 @@ __metadata:
     "@nestjs/core": ^10.2.7
     "@nestjs/graphql": ^12.0.9
     "@nestjs/jwt": ^10.1.1
+    "@nestjs/microservices": ^10.2.7
     "@nestjs/passport": ^10.0.2
     "@nestjs/platform-express": ^10.2.7
     "@nestjs/schematics": ^10.0.2
@@ -2176,6 +2177,7 @@ __metadata:
     jest: ^29.7.0
     jest-environment-node: ^29.7.0
     jsdom: ^22.1.0
+    kafkajs: ^2.2.4
     lint-staged: ^14.0.1
     mobx: ^6.10.2
     mobx-react-lite: ^4.0.5
@@ -4044,6 +4046,49 @@ __metadata:
     class-validator:
       optional: true
   checksum: 1fb0dca3838d0dc23107233e95a711e251bfbef9017589d3764c955a1cf190c8372179cee70e3674807896f53a98ab2ba80cd769b4f072fadefb708be1cc911b
+  languageName: node
+  linkType: hard
+
+"@nestjs/microservices@npm:^10.2.7":
+  version: 10.2.7
+  resolution: "@nestjs/microservices@npm:10.2.7"
+  dependencies:
+    iterare: 1.2.1
+    tslib: 2.6.2
+  peerDependencies:
+    "@grpc/grpc-js": "*"
+    "@nestjs/common": ^10.0.0
+    "@nestjs/core": ^10.0.0
+    "@nestjs/websockets": ^10.0.0
+    amqp-connection-manager: "*"
+    amqplib: "*"
+    cache-manager: "*"
+    ioredis: "*"
+    kafkajs: "*"
+    mqtt: "*"
+    nats: "*"
+    reflect-metadata: ^0.1.12
+    rxjs: ^7.1.0
+  peerDependenciesMeta:
+    "@grpc/grpc-js":
+      optional: true
+    "@nestjs/websockets":
+      optional: true
+    amqp-connection-manager:
+      optional: true
+    amqplib:
+      optional: true
+    cache-manager:
+      optional: true
+    ioredis:
+      optional: true
+    kafkajs:
+      optional: true
+    mqtt:
+      optional: true
+    nats:
+      optional: true
+  checksum: 26880251904370ec8005bce6760652421cb36e5bde8becc25391ef895025cf1abe04d830b2aeaca6f2914b25ae3874530ce28bfe65db2c297c0f849a9a3b16e4
   languageName: node
   linkType: hard
 
@@ -11094,14 +11139,6 @@ __metadata:
 "cg-scripts@workspace:tools/scripts":
   version: 0.0.0-use.local
   resolution: "cg-scripts@workspace:tools/scripts"
-  dependencies:
-    cg-config: "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"cg-server@workspace:apps/server":
-  version: 0.0.0-use.local
-  resolution: "cg-server@workspace:apps/server"
   dependencies:
     cg-config: "workspace:^"
   languageName: unknown
@@ -19177,6 +19214,13 @@ __metadata:
     jwa: ^1.4.1
     safe-buffer: ^5.0.1
   checksum: f0213fe5b79344c56cd443428d8f65c16bf842dc8cb8f5aed693e1e91d79c20741663ad6eff07a6d2c433d1831acc9814e8d7bada6a0471fbb91d09ceb2bf5c2
+  languageName: node
+  linkType: hard
+
+"kafkajs@npm:^2.2.4":
+  version: 2.2.4
+  resolution: "kafkajs@npm:2.2.4"
+  checksum: 83e9e8bc50a09b142f4ff79f6a2bd88ecc21b83bcefe6621ab1716118d624886befb7371731274f67812ce35dd50b53140ff3b49a06e5d9169fe6b164d72fea5
   languageName: node
   linkType: hard
 

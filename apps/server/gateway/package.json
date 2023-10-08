@@ -1,5 +1,5 @@
 {
-  "name": "cg-server",
+  "name": "cg-server-gateway",
   "version": "1.0.0",
   "dependencies": {
     "cg-api-common": "workspace:^",

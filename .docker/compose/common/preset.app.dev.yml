@@ -6,6 +6,8 @@ services:
       dockerfile: .docker/dockerfile/root.Dockerfile
       context: ../../../
     restart: always
+    profiles:
+      - full
     env_file:
       - ../../../.serve.env
       - ../../../.docker.env

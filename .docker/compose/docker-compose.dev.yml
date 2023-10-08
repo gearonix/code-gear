@@ -13,7 +13,34 @@ services:
       - ./data:/var/lib/mysql
       - ./tools/database:/docker-entrypoint-initdb.d
     env_file:
-      - .serve.env
+      - .docker.env
+
+  zookeeper:
+    image: confluentinc/cp-zookeeper:latest
+    container_name: zookeeper
+    env_file:
+      - .docker.env
+    ports:
+      - 22181:2181
+
+  kafka:
+    image: confluentinc/cp-kafka:latest
+    depends_on:
+      - zookeeper
+    ports:
+      - 29092:29092
+    env_file:
+      - .docker.env
+
+  kafka_ui:
+    image: provectuslabs/kafka-ui:latest
+    container_name: kafka-ui
+    depends_on:
+      - kafka
+    ports:
+      - 8080:8080
+    env_file:
+      - .docker.env
 
   client:
     extends:
@@ -42,3 +69,11 @@ services:
 networks:
   cgnet:
     driver: bridge
+
+
+volumes:
+  kafkadata:
+  zookeeperdata:
+  dbdata1:
+  dbdata2:
+  dbdata3:
