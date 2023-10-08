@@ -18,7 +18,7 @@ export class CodeExecutorController {
   ) {}
 
   async onModuleInit() {
-    this.executorClient.subscribeToResponseOf('executeCode.test.e')
+    this.executorClient.subscribeToResponseOf('executeCode.test')
     await this.executorClient.connect()
   }
 
@@ -26,15 +26,12 @@ export class CodeExecutorController {
   @ApiResponse({ status: 200 })
   @Post()
   async executeCode(@Body() args: any): Promise<any> {
-    const response = await this.executorClient.send('executeCode.test.e', {
+    const response = await this.executorClient.send('executeCode.test', {
       hello: 'sdfsdf'
     })
 
     console.log(response)
 
-    // if (!isExecutorApiResponse(response)) {
-    //   throw new BadRequestException(FailedToFetchError())
-    // }
 
     return response
   }

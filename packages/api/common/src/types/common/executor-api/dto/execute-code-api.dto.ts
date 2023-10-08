@@ -1,11 +1,10 @@
-import { CodeExecutorRequest }   from '@code-gear/api/common'
+import { CodeExecutorRequest }   from '@/index'
+import { ExecutorLanguages }     from '@/index'
+import { ExecutorLanguagesKeys } from '@/index'
 import { ApiProperty }           from '@nestjs/swagger'
 import { IsIn }                  from 'class-validator'
 import { IsOptional }            from 'class-validator'
 import { IsString }              from 'class-validator'
-
-import { ExecutorLanguages }     from '../lib/types'
-import { ExecutorLanguagesKeys } from '../lib/types'
 
 export class ExecuteCodeApiDTO implements CodeExecutorRequest {
   @IsString()

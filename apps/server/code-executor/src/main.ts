@@ -3,6 +3,7 @@ import { NestFactory }         from '@nestjs/core'
 
 import { AppModule }           from './app.module'
 import { KafkaService }        from '@code-gear/api/common'
+import { RpcExceptionFilter }  from '@code-gear/api/common'
 import { Microservice }        from '@code-gear/api/common'
 
 const bootstrap = async () => {
@@ -14,9 +15,9 @@ const bootstrap = async () => {
     kafkaService.getKafkaOptions(Microservice.CODE_EXECUTOR)
   )
 
-  await app.startAllMicroservices()
+  app.useGlobalFilters(new RpcExceptionFilter())
 
-  await app.listen()
+  await app.startAllMicroservices()
 }
 
 bootstrap()
