@@ -1,13 +1,12 @@
 import { MicroserviceOptions } from '@nestjs/microservices'
 import { NestFactory }         from '@nestjs/core'
-
-import { AppModule }           from './app.module'
 import { KafkaService }        from '@code-gear/api/common'
-import { RpcExceptionFilter }  from '@code-gear/api/common'
 import { Microservice }        from '@code-gear/api/common'
+import { RpcExceptionFilter }  from '@code-gear/api/common'
+import { CodeExecutorModule }  from '@/app/code-executor.module'
 
 const bootstrap = async () => {
-  const app = await NestFactory.create(AppModule)
+  const app = await NestFactory.create(CodeExecutorModule)
 
   const kafkaService = app.get(KafkaService)
 

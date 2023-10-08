@@ -1,23 +1,18 @@
 import { compilerApiUrl }          from '@code-gear/config'
 import { HttpService }             from '@nestjs/axios'
 import { Injectable }              from '@nestjs/common'
-import { Logger }                  from '@nestjs/common'
-import axios                       from 'axios'
 import stringify                   from 'qs-stringify'
 
+import { ExecuteCodeApiDTO }       from '@code-gear/api/common'
 import { ExecutorApiResponse }     from '@code-gear/api/common'
+import { ExecutorLanguagesValues } from '@code-gear/api/common'
 
-import { ExecuteCodeApiDTO }       from './dto/execute-code-api.dto'
-import { FailedToFetchError }      from './lib/errors'
 import { transformLanguage }       from './lib/helpers/transform-language'
-import { ExecutorLanguagesValues } from './lib/types'
 
 @Injectable()
-export class ExecutorApiService {
+export class CodeExecutorService {
   constructor(private readonly httpService: HttpService) {}
   async fetchToCodeExecute(args: ExecuteCodeApiDTO) {
-    Logger.log('Request to execute custom code...')
-
     try {
       const response = await this.httpService
         .post<ExecutorApiResponse<ExecutorLanguagesValues>>(
@@ -32,11 +27,7 @@ export class ExecutorApiService {
         .toPromise()
 
       return response?.data
-    } catch (error: unknown) {
-      if (axios.isAxiosError(error)) {
-        Logger.warn(FailedToFetchError(error.status))
-      }
-    }
+    } catch (error: unknown) {}
     return null
   }
 }
