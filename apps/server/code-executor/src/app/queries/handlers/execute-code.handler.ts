@@ -5,7 +5,7 @@ import { CodeExecutorService }    from '../../code-executor.service'
 import { isExecutorApiResponse }  from '../../lib/type-guards'
 import { FailedToFetchException } from '../../exceptions'
 
-@QueryHandler(ExecuteCoditeQuery)
+@QueryHandler(ExecuteCodeQuery)
 export class ExecuteCodeHandler implements IQueryHandler<ExecuteCodeQuery> {
   constructor(private executorApiService: CodeExecutorService) {}
 
