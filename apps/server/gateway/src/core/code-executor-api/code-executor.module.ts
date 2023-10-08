@@ -1,10 +1,11 @@
-import { ExecutorApiModule }      from '@code-gear/api/services'
 import { Module }                 from '@nestjs/common'
 
 import { CodeExecutorController } from './code-executor.controller'
+import { KafkaModule }            from '@code-gear/api/common'
+import { Microservice }           from '@code-gear/api/common'
 
 @Module({
-  imports: [ExecutorApiModule],
+  imports: [KafkaModule.forRoot(Microservice.CODE_EXECUTOR)],
   controllers: [CodeExecutorController],
   providers: []
 })

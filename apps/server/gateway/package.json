@@ -2,8 +2,7 @@
   "name": "cg-server-gateway",
   "version": "1.0.0",
   "dependencies": {
-    "cg-api-common": "workspace:^",
-    "cg-api-services": "workspace:^"
+    "cg-api-common": "workspace:^"
   },
   "devDependencies": {
     "cg-config": "workspace:^"

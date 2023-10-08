@@ -1,4 +1,4 @@
-import { CodeExecutorRequest }   from '@nest-common/src/types/common'
+import { CodeExecutorRequest }   from '@code-gear/api/common'
 import { ApiProperty }           from '@nestjs/swagger'
 import { IsIn }                  from 'class-validator'
 import { IsOptional }            from 'class-validator'

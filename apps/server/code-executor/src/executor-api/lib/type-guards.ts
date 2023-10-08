@@ -1,4 +1,4 @@
-import { ExecutorApiResponse }     from '$/nest-common'
+import { ExecutorApiResponse }     from '@code-gear/api/common'
 
 import { ExecutorLanguagesValues } from './types'
 

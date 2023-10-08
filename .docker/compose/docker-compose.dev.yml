@@ -69,11 +69,3 @@ services:
 networks:
   cgnet:
     driver: bridge
-
-
-volumes:
-  kafkadata:
-  zookeeperdata:
-  dbdata1:
-  dbdata2:
-  dbdata3:

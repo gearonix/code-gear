@@ -6,7 +6,7 @@ import { registerAs }     from '@nestjs/config'
 import { Env }            from '../env.decorator'
 import { ServerConfig }   from '../types'
 
-class EnvironmentVariablesValidator {
+class ServerValidator {
   @IsNumberString()
   @IsNotEmpty()
   SERVER_PORT: string
@@ -19,7 +19,7 @@ class EnvironmentVariablesValidator {
 }
 
 export const server = registerAs<ServerConfig>('server', () => {
-  const conf = validateConfig(process.env, EnvironmentVariablesValidator)
+  const conf = validateConfig(process.env, ServerValidator)
 
   return {
     prefix: conf.SERVER_PREFIX,

@@ -1,12 +1,12 @@
-import { PrismaService } from '@code-gear/api/services'
-import { Injectable }    from '@nestjs/common'
+import { Injectable }      from '@nestjs/common'
 
-import { SignIn }        from '@/auth/inputs/sign-in.input'
-import { User }          from '$/nest-common'
+import { SignIn }          from '@/auth/inputs/sign-in.input'
+import { DatabaseService } from '@code-gear/api/common'
+import { User }            from '@code-gear/api/common'
 
 @Injectable()
 export class UsersRepository {
-  constructor(private prisma: PrismaService) {}
+  constructor(private prisma: DatabaseService) {}
 
   public getUserByUsername(username: string): User {
     return this.prisma.user.findUnique({

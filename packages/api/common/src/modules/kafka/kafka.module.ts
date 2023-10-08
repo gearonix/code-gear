@@ -6,6 +6,7 @@ import { EnvModule }          from '../env'
 import { ClientProxyFactory } from '@nestjs/microservices'
 import { Transport }          from '@nestjs/microservices'
 import { KafkaService }       from './kafka.service'
+import { Microservice }       from '@/consts'
 
 @Module({
   imports: [EnvModule],
@@ -13,22 +14,26 @@ import { KafkaService }       from './kafka.service'
   exports: [KafkaService]
 })
 export class KafkaModule {
-  static forRoot(service: string): DynamicModule {
+  static forRoot(service: Microservice): DynamicModule {
     const providers: Provider[] = [
       {
         provide: service,
         useFactory: (configService: ConfigService) => {
           const brokers = configService.get<string[]>('kafka.brokers', [])
 
+          const microserviceName = configService.getOrThrow(
+            `kafka.microservices.${service}`
+          )
+
           return ClientProxyFactory.create({
             transport: Transport.KAFKA,
             options: {
               client: {
-                clientId: service,
+                clientId: microserviceName,
                 brokers
               },
               consumer: {
-                groupId: service
+                groupId: microserviceName
               }
             }
           })

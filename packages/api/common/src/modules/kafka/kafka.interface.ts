@@ -1,5 +1,6 @@
 import { KafkaOptions } from '@nestjs/microservices'
+import { Microservice } from '../../consts'
 
 export interface GetKafkaOptions {
-  getKafkaOptions: (service: string) => KafkaOptions
+  getKafkaOptions: (service: Microservice) => KafkaOptions
 }

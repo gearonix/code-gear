@@ -5,7 +5,7 @@ import { Env }            from '../env.decorator'
 import { MiscConfig }     from '../types'
 import { NodeEnv }        from '../types'
 
-class EnvironmentVariablesValidator {
+class MiscValidator {
   @IsEnum(NodeEnv)
   NODE_ENV: NodeEnv
 
@@ -20,7 +20,7 @@ class EnvironmentVariablesValidator {
 }
 
 export const misc = registerAs<MiscConfig>('misc', () => {
-  const conf = validateConfig(process.env, EnvironmentVariablesValidator)
+  const conf = validateConfig(process.env, MiscValidator)
 
   return {
     clientUrl: conf.CLIENT_URL,

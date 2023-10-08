@@ -1,28 +1,22 @@
 import { MicroserviceOptions } from '@nestjs/microservices'
-import { Transport }           from '@nestjs/microservices'
-
-import { Logger }              from '@nestjs/common'
 import { NestFactory }         from '@nestjs/core'
 
-import { AppModule }           from './app/app.module'
+import { AppModule }           from './app.module'
+import { KafkaService }        from '@code-gear/api/common'
+import { Microservice }        from '@code-gear/api/common'
 
 const bootstrap = async () => {
   const app = await NestFactory.create(AppModule)
 
-  app.connectMicroservice<MicroserviceOptions>({
-    transport: Transport.KAFKA,
-    options: {
-      client: {
-        clientId: 'auth',
-        brokers: ['localhost:29092']
-      },
-      consumer: {
-        groupId: 'auth-consumer'
-      }
-    }
-  })
+  const kafkaService = app.get(KafkaService)
+
+  app.connectMicroservice<MicroserviceOptions>(
+    kafkaService.getKafkaOptions(Microservice.CODE_EXECUTOR)
+  )
 
   await app.startAllMicroservices()
+
+  await app.listen()
 }
 
 bootstrap()

@@ -59,7 +59,6 @@
         "main": "apps/server/gateway/src/main.ts",
         "tsConfig": "apps/server/gateway/tsconfig.app.json",
         "assets": [
-          "apps/server/gateway/src/assets",
           {
             "glob": "schema.prisma",
             "input": "apps/server/gateway/prisma",

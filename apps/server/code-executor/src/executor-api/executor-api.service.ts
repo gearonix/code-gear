@@ -5,7 +5,7 @@ import { Logger }                  from '@nestjs/common'
 import axios                       from 'axios'
 import stringify                   from 'qs-stringify'
 
-import { ExecutorApiResponse }     from '$/nest-common'
+import { ExecutorApiResponse }     from '@code-gear/api/common'
 
 import { ExecuteCodeApiDTO }       from './dto/execute-code-api.dto'
 import { FailedToFetchError }      from './lib/errors'
@@ -15,7 +15,7 @@ import { ExecutorLanguagesValues } from './lib/types'
 @Injectable()
 export class ExecutorApiService {
   constructor(private readonly httpService: HttpService) {}
-  async fetchCodeToExecute(args: ExecuteCodeApiDTO) {
+  async fetchToCodeExecute(args: ExecuteCodeApiDTO) {
     Logger.log('Request to execute custom code...')
 
     try {
@@ -31,7 +31,7 @@ export class ExecutorApiService {
         )
         .toPromise()
 
-      return response.data
+      return response?.data
     } catch (error: unknown) {
       if (axios.isAxiosError(error)) {
         Logger.warn(FailedToFetchError(error.status))
