@@ -1,6 +1,5 @@
 import { ExecutorApiResponse }     from '@code-gear/api/common'
-
-import { ExecutorLanguagesValues } from './types'
+import { ExecutorLanguagesValues } from '@code-gear/api/common'
 
 export const isExecutorApiResponse = (
   res: unknown

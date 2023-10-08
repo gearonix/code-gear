@@ -5,7 +5,7 @@ import { ExecuteCodeApiDTO }       from '@code-gear/api/common'
 import { ExecutorApiResponse }     from '@code-gear/api/common'
 import { ExecutorLanguagesValues } from '@code-gear/api/common'
 import { QueryBus }                from '@nestjs/cqrs'
-import {ExecuteCodeQuery} from "@/app/queries/impl/execute-code.query";
+import { ExecuteCodeQuery }        from '@/queries/impl/execute-code.query'
 
 @Controller()
 export class CodeExecutorConsumer {
