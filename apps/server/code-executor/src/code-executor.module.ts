@@ -1,7 +1,6 @@
 import { HttpModule }           from '@nestjs/axios'
 import { Module }               from '@nestjs/common'
 
-import { CodeExecutorService }  from './code-executor.service'
 import { CodeExecutorConsumer } from './code-executor.consumer'
 import { EnvModule }            from '@code-gear/api/common'
 import { ListenerModule }       from '@code-gear/api/common'
@@ -18,8 +17,8 @@ import { CqrsModule }           from '@nestjs/cqrs'
       isMicroservice: true
     })
   ],
-  providers: [CodeExecutorService, KafkaService, ...QueryHandlers],
+  providers: [KafkaService, ...QueryHandlers],
   controllers: [CodeExecutorConsumer],
-  exports: [CodeExecutorService]
+  exports: []
 })
 export class CodeExecutorModule {}

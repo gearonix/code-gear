@@ -1,5 +1,4 @@
 import { Controller }              from '@nestjs/common'
-import { Get }                     from '@nestjs/common'
 import { MessagePattern }          from '@nestjs/microservices'
 import { Payload }                 from '@nestjs/microservices'
 import { ExecuteCodeApiDTO }       from '@code-gear/api/contracts'
