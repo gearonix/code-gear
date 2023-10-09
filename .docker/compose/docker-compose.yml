@@ -15,6 +15,7 @@ services:
     env_file:
       - .env
       - .docker/.override.env
+
   zookeeper:
     image: confluentinc/cp-zookeeper:latest
     container_name: zookeeper
@@ -53,50 +54,28 @@ services:
       - .env
       - .docker/.override.env
 
-  client:
+  workspace:
     build:
-      dockerfile: apps/client/Dockerfile
+      dockerfile: .docker/dockerfile/dev.Dockerfile
       context: .
-    container_name: client
     restart: always
+    profiles:
+      - workspace
     env_file:
       - .env
       - .docker/.override.env
+    volumes:
+      - ./apps:/opt/app/apps
+      - ./packages:/opt/app/packages
+      - /opt/app/node_modules
+    container_name: workspace
     networks:
       - cgnet
+    entrypoint: sh entrypoint.sh
     ports:
-      - 3000:80
-
-  gateway:
-    build:
-      dockerfile: apps/server/gateway/Dockerfile
-      context: .
-    container_name: gateway
-    depends_on:
-      - kafka
-      - mysql
-    networks:
-      - cgnet
-    ports:
+      - 3000:3000
       - 6868:6868
-    restart: always
-    env_file:
-      - .env
-      - .docker/.override.env
 
-  service-code-executor:
-    build:
-      dockerfile: apps/server/service-code-executor/Dockerfile
-      context: .
-    container_name: service-code-executor
-    depends_on:
-      - kafka
-    networks:
-      - cgnet
-    restart: always
-    env_file:
-      - .env
-      - .docker/.override.env
 
 networks:
   cgnet:

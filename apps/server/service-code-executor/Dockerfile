@@ -33,8 +33,6 @@ COPY --from=build /opt/app/dist/apps/server/service-code-executor ./
 
 RUN sed -i '/workspace:/d' package.json
 
-RUN cat package.json
-
 RUN npm install --omit="dev" --force
 
 ENTRYPOINT node ./main.js

@@ -13,7 +13,8 @@ services:
       - ./data:/var/lib/mysql
       - ./tools/database:/docker-entrypoint-initdb.d
     env_file:
-      - .docker.env
+      - .env
+      - .docker/.override.env
 
   zookeeper:
     image: confluentinc/cp-zookeeper:latest
@@ -21,7 +22,8 @@ services:
     networks:
       - cgnet
     env_file:
-      - .docker.env
+      - .env
+      - .docker/.override.env
     ports:
       - 22181:2181
 
@@ -36,7 +38,8 @@ services:
     ports:
       - 29092:29092
     env_file:
-      - .docker.env
+      - .env
+      - .docker/.override.env
 
   kafka_ui:
     image: provectuslabs/kafka-ui:latest
@@ -48,18 +51,19 @@ services:
     ports:
       - 8080:8080
     env_file:
-      - .docker.env
+      - .env
+      - .docker/.override.env
 
   workspace:
     build:
-      dockerfile: .docker/dockerfile/root.Dockerfile
+      dockerfile: .docker/dockerfile/dev.Dockerfile
       context: .
     restart: always
     profiles:
       - workspace
     env_file:
-      - .serve.env
-      - .docker.env
+      - .env
+      - .docker/.override.env
     volumes:
       - ./apps:/opt/app/apps
       - ./packages:/opt/app/packages

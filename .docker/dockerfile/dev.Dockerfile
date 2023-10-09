@@ -20,7 +20,7 @@ COPY apps apps
 
 RUN yarn install
 
-COPY nx.json project.json .serve.env .docker.env ./
+COPY . .
 
 ## Copying entrypoint scripts ##
 
