@@ -1,9 +1,9 @@
 {
-  "name": "code-executor",
+  "name": "service-code-executor",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/server/code-executor/src",
+  "sourceRoot": "apps/server/service-code-executor/src",
   "projectType": "application",
-  "tags": ["runtime:code-executor"],
+  "tags": ["runtime:service-code-executor"],
   "targets": {
     "build": {
       "executor": "@nx/webpack:webpack",
@@ -12,12 +12,12 @@
       "options": {
         "target": "node",
         "compiler": "tsc",
-        "outputPath": "dist/apps/server/code-executor",
+        "outputPath": "dist/apps/server/service-code-executor",
         "generatePackageJson": true,
-        "main": "apps/server/code-executor/src/main.ts",
-        "tsConfig": "apps/server/code-executor/tsconfig.app.json",
+        "main": "apps/server/service-code-executor/src/main.ts",
+        "tsConfig": "apps/server/service-code-executor/tsconfig.app.json",
         "isolatedConfig": true,
-        "webpackConfig": "apps/server/code-executor/.config/webpack.ts",
+        "webpackConfig": "apps/server/service-code-executor/.config/webpack.ts",
         "skipTypeCheck": true
       },
       "configurations": {
@@ -29,14 +29,14 @@
       "executor": "@nx/js:node",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "code-executor:build"
+        "buildTarget": "service-code-executor:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "code-executor:build:development"
+          "buildTarget": "service-code-executor:build:development"
         },
         "production": {
-          "buildTarget": "code-executor:build:production"
+          "buildTarget": "service-code-executor:build:production"
         }
       }
     },
@@ -44,7 +44,7 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/server/code-executor/**/*.ts"],
+        "lintFilePatterns": ["apps/server/service-code-executor/**/*.ts"],
         "fix": true
       }
     },
@@ -52,7 +52,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/server/code-executor/.config/jest.ts",
+        "jestConfig": "apps/server/service-code-executor/.config/jest.ts",
         "passWithNoTests": true
       },
       "configurations": {

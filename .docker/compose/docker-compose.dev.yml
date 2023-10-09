@@ -18,6 +18,8 @@ services:
   zookeeper:
     image: confluentinc/cp-zookeeper:latest
     container_name: zookeeper
+    networks:
+      - cgnet
     env_file:
       - .docker.env
     ports:
@@ -26,6 +28,9 @@ services:
   kafka:
     image: confluentinc/cp-kafka:latest
     container_name: kafka
+    hostname: kafka
+    networks:
+      - cgnet
     depends_on:
       - zookeeper
     ports:
@@ -36,6 +41,8 @@ services:
   kafka_ui:
     image: provectuslabs/kafka-ui:latest
     container_name: kafka-ui
+    networks:
+      - cgnet
     depends_on:
       - kafka
     ports:
@@ -43,29 +50,27 @@ services:
     env_file:
       - .docker.env
 
-  client:
-    extends:
-      file: .docker/compose/common/preset.app.dev.yml
-      service: app
-    container_name: client
-    networks:
-      - cgnet
-    entrypoint: sh entrypoint/client.sh
-    ports:
-      - 3000:3000
-
-  server:
-    extends:
-      file: .docker/compose/common/preset.app.dev.yml
-      service: app
-    container_name: server
+  workspace:
+    build:
+      dockerfile: .docker/dockerfile/root.Dockerfile
+      context: .
+    restart: always
+    profiles:
+      - full
+    env_file:
+      - .serve.env
+      - .docker.env
+    volumes:
+      - ./apps:/opt/app/apps
+      - ./packages:/opt/app/packages
+      - /opt/app/node_modules
+    container_name: workspace
     networks:
       - cgnet
     entrypoint: sh entrypoint/server.sh
     ports:
+      - 3000:3000
       - 6868:6868
-    depends_on:
-      - mysql
 
 networks:
   cgnet:

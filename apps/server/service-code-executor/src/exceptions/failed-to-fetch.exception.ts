@@ -1,6 +1,5 @@
 import { RpcException } from '@nestjs/microservices'
 
-
 export class FailedToFetchException extends RpcException {
   constructor(status = 400) {
     super({

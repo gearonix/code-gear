@@ -1,8 +1,8 @@
-import { ExecutorApiResponse }     from '@code-gear/api/common'
+import { ExecutorApiResponse } from '@code-gear/api/common'
 import { ExecutorLanguagesValues } from '@code-gear/api/common'
 
 export const isExecutorApiResponse = (
-  res: unknown
+  res: unknown,
 ): res is ExecutorApiResponse<ExecutorLanguagesValues> => {
   if (typeof res !== 'object' || res === null) {
     return false

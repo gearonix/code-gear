@@ -1,6 +1,6 @@
 import { createJestConfig } from 'cg-config/src/jest'
 
 export default createJestConfig({
-  displayName: 'server-code-executor',
-  layer: 'second'
+  displayName: 'service-code-executor',
+  layer: 'second',
 })

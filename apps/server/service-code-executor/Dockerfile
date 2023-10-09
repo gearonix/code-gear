@@ -12,7 +12,7 @@ RUN yarn install
 
 ## Copying source code ##
 
-COPY apps/server/gateway apps/server/gateway
+COPY apps/server/service-code-executor apps/server/service-code-executor
 
 COPY packages packages
 
@@ -22,19 +22,17 @@ COPY nx.json project.json .serve.env ./
 
 ## Building app to produciton ##
 
-RUN yarn nx run gateway:build
+RUN yarn nx run service-code-executor:build
 
 ## Entrypoint ##
 
 FROM --platform=linux/amd64 node:20.8.0-alpine
 WORKDIR /opt/app
 
-COPY --from=build /opt/app/dist/apps/server/gateway ./
+COPY --from=build /opt/app/dist/apps/server/service-code-executor ./
 
 RUN sed -i '/workspace:/d' package.json
 
 RUN npm install --omit="dev"
-
-RUN npx prisma generate
 
 ENTRYPOINT node ./main.js

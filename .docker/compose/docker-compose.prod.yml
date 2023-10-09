@@ -16,6 +16,34 @@ services:
       - .build.env
       - .docker.env
 
+  zookeeper:
+    image: confluentinc/cp-zookeeper:latest
+    container_name: zookeeper
+    env_file:
+      - .docker.env
+    ports:
+      - 22181:2181
+
+  kafka:
+    image: confluentinc/cp-kafka:latest
+    container_name: kafka
+    depends_on:
+      - zookeeper
+    ports:
+      - 29092:29092
+    env_file:
+      - .docker.env
+
+  kafka_ui:
+    image: provectuslabs/kafka-ui:latest
+    container_name: kafka-ui
+    depends_on:
+      - kafka
+    ports:
+      - 8080:8080
+    env_file:
+      - .docker.env
+
   client:
     extends:
       file: .docker/compose/common/preset.app.prod.yml
@@ -29,18 +57,35 @@ services:
     ports:
       - 3000:80
 
-  server:
+  gateway:
     extends:
       file: .docker/compose/common/preset.app.prod.yml
       service: app
     build:
-      dockerfile: apps/server/Dockerfile
+      dockerfile: apps/server/gateway/Dockerfile
       context: .
-    container_name: server
+    container_name: gateway
+    depends_on:
+      - kafka
+      - mysql
     networks:
       - cgnet
     ports:
       - 6868:6868
+
+  service-code-executor:
+    extends:
+      file: .docker/compose/common/preset.app.prod.yml
+      service: app
+    build:
+      dockerfile: apps/server/service-code-executor/Dockerfile
+      context: .
+    container_name: service-code-executor
+    depends_on:
+      - kafka
+      - mysql
+    networks:
+      - cgnet
 
 networks:
   cgnet:

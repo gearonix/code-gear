@@ -20,14 +20,12 @@ COPY apps apps
 
 RUN yarn install
 
-COPY nx.json project.json .serve.env ./
+COPY nx.json project.json .serve.env .docker.env ./
 
 ## Copying entrypoint scripts ##
 
-COPY .docker/sh entrypoint
+COPY .docker/sh/dev entrypoint
 
-RUN ls /opt/app/entrypoint -a
-
-RUN chmod -R +x entrypoint
+RUN find entrypoint -exec chmod +x {} \;
 
 RUN echo "done."
