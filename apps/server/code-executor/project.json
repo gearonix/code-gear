@@ -3,6 +3,7 @@
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/server/code-executor/src",
   "projectType": "application",
+  "tags": ["runtime:code-executor"],
   "targets": {
     "build": {
       "executor": "@nx/webpack:webpack",
@@ -61,6 +62,5 @@
         }
       }
     }
-  },
-  "tags": []
+  }
 }

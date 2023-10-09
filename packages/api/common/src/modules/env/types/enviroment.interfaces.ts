@@ -6,6 +6,9 @@ export interface DatabaseConfig {
 
 export interface KafkaConfig {
   brokers: string[]
+  microservices: Record<string, string>
+  heartbeatInterval: number
+  sessionTimeout: number
 }
 
 export interface MiscConfig {

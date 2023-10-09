@@ -2081,7 +2081,7 @@ __metadata:
     "@nestjs/common": ^10.2.7
     "@nestjs/config": ^3.1.1
     "@nestjs/core": ^10.2.7
-    "@nestjs/cqrs": ^10.2.6
+    "@nestjs/cqrs": 10.0.1
     "@nestjs/graphql": ^12.0.9
     "@nestjs/jwt": ^10.1.1
     "@nestjs/microservices": ^10.2.7
@@ -3981,9 +3981,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nestjs/cqrs@npm:^10.2.6":
-  version: 10.2.6
-  resolution: "@nestjs/cqrs@npm:10.2.6"
+"@nestjs/cqrs@npm:10.0.1":
+  version: 10.0.1
+  resolution: "@nestjs/cqrs@npm:10.0.1"
   dependencies:
     uuid: 9.0.0
   peerDependencies:
@@ -3991,7 +3991,7 @@ __metadata:
     "@nestjs/core": ^9.0.0 || ^10.0.0
     reflect-metadata: 0.1.13
     rxjs: ^7.2.0
-  checksum: db785539832c9cb852f5cc32b266d0aa14f45c034dd00b56f2f5012c325605a3a9f4ff97066bc63c55a458b6890b4a2ae587a3c9bdc56d51224f9940b81b5bf6
+  checksum: dc0fd0cfbf71d2324bb8b27556ff320f31ec1bb262c506bd49040c0695f481f12d6300353712edd37001a6d5c0ba9512cbc464f040dc8fdd2028d3240b4c0a7d
   languageName: node
   linkType: hard
 
@@ -11103,6 +11103,16 @@ __metadata:
 "cg-api-common@workspace:packages/api/common":
   version: 0.0.0-use.local
   resolution: "cg-api-common@workspace:packages/api/common"
+  dependencies:
+    cg-config: "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"cg-api-contracts@workspace:packages/api/contracts":
+  version: 0.0.0-use.local
+  resolution: "cg-api-contracts@workspace:packages/api/contracts"
+  dependencies:
+    cg-config: "workspace:^"
   languageName: unknown
   linkType: soft
 

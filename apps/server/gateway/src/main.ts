@@ -1,4 +1,6 @@
-import { HttpExceptionFilter } from '@code-gear/api/common'
+import {HttpExceptionFilter, RpcExceptionFilter} from '@code-gear/api/common'
+import { ListenerModule }      from '@code-gear/api/common'
+import { ListenerService }     from '@code-gear/api/common'
 import { ValidationPipe }      from '@code-gear/api/common'
 import { serverDocsPrefix }    from '@code-gear/config'
 import { serverPort }          from '@code-gear/config'
@@ -16,14 +18,15 @@ const bootstrap = async () => {
   const app = await NestFactory.create(AppModule)
 
   app.setGlobalPrefix(serverPrefix)
-  app.useGlobalFilters(new HttpExceptionFilter())
+  app.useGlobalFilters(new HttpExceptionFilter(), new RpcExceptionFilter())
   app.useGlobalPipes(new ValidationPipe())
   app.enableCors(corsConfig)
 
   SwaggerModule.setup(serverDocsPrefix, app, createSwaggerDocs(app))
 
-  Logger.log(`🚀 Server is running on port ${serverPort}`)
-  await app.listen(serverPort)
+  const listener = app.get(ListenerService)
+
+  await app.listen(listener.PORT, listener.getListenerCallback())
 }
 
 bootstrap()

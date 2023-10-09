@@ -3,10 +3,11 @@ import { Module }             from '@nestjs/common'
 import { Provider }           from '@nestjs/common'
 import { ConfigService }      from '@nestjs/config'
 import { EnvModule }          from '../env'
+import { KafkaConfig }        from '../env'
 import { ClientProxyFactory } from '@nestjs/microservices'
-import { Transport }          from '@nestjs/microservices'
 import { KafkaService }       from './kafka.service'
 import { Microservice }       from '@/consts'
+import { getKafkaOptions }    from './kafka.options'
 
 @Module({
   imports: [EnvModule],
@@ -18,27 +19,12 @@ export class KafkaModule {
     const providers: Provider[] = [
       {
         provide: service,
-        useFactory: (configService: ConfigService) => {
-          const brokers = configService.get<string[]>('kafka.brokers', [])
-
-          const microserviceName = configService.getOrThrow(
-            `kafka.microservices.${service}`
+        useFactory: (kafkaService: KafkaService) => {
+          return ClientProxyFactory.create(
+            kafkaService.getKafkaOptions(service)
           )
-
-          return ClientProxyFactory.create({
-            transport: Transport.KAFKA,
-            options: {
-              client: {
-                clientId: microserviceName,
-                brokers
-              },
-              consumer: {
-                groupId: microserviceName
-              }
-            }
-          })
         },
-        inject: [ConfigService]
+        inject: [KafkaService]
       }
     ]
 

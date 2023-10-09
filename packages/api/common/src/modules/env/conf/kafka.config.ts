@@ -2,22 +2,34 @@ import { registerAs }     from '@nestjs/config'
 import { Env }            from '../env.decorator'
 import { validateConfig } from '../../../utils/validators'
 import { KafkaConfig }    from '@/modules/env/types'
+import { IsNotEmpty }     from 'class-validator'
+import { IsNumberString } from 'class-validator'
 
 class KafkaValidator {
   @Env()
-  KAFKA_BROKERS: string
+  SERVER_KAFKA_BROKERS: string
 
   @Env()
-  KAFKA_MICROSERVICE_CODE_EXECUTOR: string
+  SERVER_KAFKA_MICROSERVICE_CODE_EXECUTOR: string
+
+  @IsNumberString()
+  @IsNotEmpty()
+  SERVER_KAFKA_SESSION_TIMEOUT: string
+
+  @IsNumberString()
+  @IsNotEmpty()
+  SERVER_KAFKA_HEARTBEAT_INTERVAL: string
 }
 
-export const kafka = registerAs<KafkaConfig>('kafka', () => {
+export const kafka = registerAs<KafkaConfig>('kafka', (): KafkaConfig => {
   const conf = validateConfig(process.env, KafkaValidator)
 
   return {
-    brokers: conf.KAFKA_BROKERS.split(','),
+    brokers: conf.SERVER_KAFKA_BROKERS.split(','),
     microservices: {
-      codeExecutor: conf.KAFKA_MICROSERVICE_CODE_EXECUTOR
-    }
+      codeExecutor: conf.SERVER_KAFKA_MICROSERVICE_CODE_EXECUTOR
+    },
+    sessionTimeout: Number(conf.SERVER_KAFKA_SESSION_TIMEOUT),
+    heartbeatInterval: Number(conf.SERVER_KAFKA_HEARTBEAT_INTERVAL)
   }
 })

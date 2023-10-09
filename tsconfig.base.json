@@ -4,10 +4,10 @@
   "compilerOptions": {
     "rootDir": ".",
     "baseUrl": ".",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "paths": {
+      "@code-gear/api/contracts": ["packages/api/contracts/src/index.ts"]
+    }
   },
-  "exclude": [
-    "node_modules",
-    "tmp"
-  ]
+  "exclude": ["node_modules", "tmp"]
 }

@@ -20,16 +20,16 @@
         "command": "docker compose -f .docker/compose/docker-compose.prod.yml --project-directory . up -d"
       }
     },
-    "build:dev": {
+    "update:dev": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "docker compose -f .docker/compose/docker-compose.dev.yml --project-directory . build"
+        "command": "docker compose -f .docker/compose/docker-compose.dev.yml --project-directory . up -d --build"
       }
     },
-    "build:prod": {
+    "update:prod": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "docker compose -f .docker/compose/docker-compose.prod.yml --project-directory . build"
+        "command": "docker compose -f .docker/compose/docker-compose.dev.yml --project-directory . up -d --build"
       }
     },
     "down:dev": {

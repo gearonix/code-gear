@@ -9,15 +9,16 @@ import { AuthModule }         from '@/auth'
 
 import { CodeExecutorModule } from './core/code-executor-api'
 import { EnvModule }          from '@code-gear/api/common'
-import { Microservice }       from '@code-gear/api/common'
-import { KafkaModule }        from '@code-gear/api/common'
+import { ListenerModule }     from '@code-gear/api/common'
 
 @Module({
   imports: [
     CodeExecutorModule,
     EnvModule,
     AuthModule,
-    ConfigModule.forRoot(),
+    ListenerModule.forRoot({
+      isMicroservice: false
+    }),
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
       autoSchemaFile: join(process.cwd(), 'apps/server/gateway/src/_schema.gql')

@@ -1,3 +1,4 @@
+import { CommandHandler }         from '@nestjs/cqrs'
 import { IQueryHandler }          from '@nestjs/cqrs'
 import { QueryHandler }           from '@nestjs/cqrs'
 import { ExecuteCodeQuery }       from '../impl/execute-code.query'
