@@ -3,5 +3,5 @@
 ---
 
 ---
-    to: <!%!= module_name %>/index.ts
+    to: <!%!= module_name %>/index.ts.template.template
 ---

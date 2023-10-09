@@ -43,6 +43,12 @@
       "options": {
         "command": "yarn dlx yarn-upgrade-all"
       }
+    },
+    "gen": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "nx g cg-global-generator:{args.type} {args.name}"
+      }
     }
   },
   "tags": ["root"]

@@ -2091,12 +2091,14 @@ __metadata:
     "@nestjs/swagger": ^7.1.13
     "@nestjs/testing": ^10.2.7
     "@nx/cypress": ^16.10.0
+    "@nx/devkit": 16.10.0
     "@nx/eslint-plugin": ^16.10.0
     "@nx/jest": ^16.10.0
     "@nx/js": ^16.10.0
     "@nx/linter": ^16.10.0
     "@nx/nest": ^16.10.0
     "@nx/node": ^16.10.0
+    "@nx/plugin": ^16.10.0
     "@nx/react": ^16.10.0
     "@nx/storybook": ^16.10.0
     "@nx/vite": ^16.10.0
@@ -4350,6 +4352,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nrwl/nx-plugin@npm:16.10.0":
+  version: 16.10.0
+  resolution: "@nrwl/nx-plugin@npm:16.10.0"
+  dependencies:
+    "@nx/plugin": 16.10.0
+  checksum: 412bcd30feb26e7ace7bcc78145347d0c71bd0724aa98d4621fcd3deaa8b7055091600fe2d1c3df4b5dba198df1f31df0e860277a8a15f672eadfe7b4f1eff66
+  languageName: node
+  linkType: hard
+
 "@nrwl/react@npm:16.10.0":
   version: 16.10.0
   resolution: "@nrwl/react@npm:16.10.0"
@@ -4675,6 +4686,22 @@ __metadata:
   version: 16.10.0
   resolution: "@nx/nx-win32-x64-msvc@npm:16.10.0"
   conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@nx/plugin@npm:16.10.0, @nx/plugin@npm:^16.10.0":
+  version: 16.10.0
+  resolution: "@nx/plugin@npm:16.10.0"
+  dependencies:
+    "@nrwl/nx-plugin": 16.10.0
+    "@nx/devkit": 16.10.0
+    "@nx/jest": 16.10.0
+    "@nx/js": 16.10.0
+    "@nx/linter": 16.10.0
+    "@phenomnomnominal/tsquery": ~5.0.1
+    fs-extra: ^11.1.0
+    tslib: ^2.3.0
+  checksum: 61af16bd87517a68769661b60f5523ef5760796b2f796d85c957ea68fd4327dfd04aa57ab99f09ad88fd493107e32f41d52fd31aeb17b381fd533f6905877ebc
   languageName: node
   linkType: hard
 
@@ -11150,6 +11177,12 @@ __metadata:
 "cg-generator@workspace:^, cg-generator@workspace:packages/generator":
   version: 0.0.0-use.local
   resolution: "cg-generator@workspace:packages/generator"
+  languageName: unknown
+  linkType: soft
+
+"cg-global-generator@workspace:tools/generators":
+  version: 0.0.0-use.local
+  resolution: "cg-global-generator@workspace:tools/generators"
   languageName: unknown
   linkType: soft
 

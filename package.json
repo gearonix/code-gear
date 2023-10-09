@@ -85,6 +85,7 @@
     "@nx/linter": "^16.10.0",
     "@nx/nest": "^16.10.0",
     "@nx/node": "^16.10.0",
+    "@nx/plugin": "^16.10.0",
     "@nx/react": "^16.10.0",
     "@nx/storybook": "^16.10.0",
     "@nx/vite": "^16.10.0",
@@ -200,6 +201,7 @@
     "@nestjs/passport": "^10.0.2",
     "@nestjs/platform-express": "^10.2.7",
     "@nestjs/swagger": "^7.1.13",
+    "@nx/devkit": "16.10.0",
     "@prisma/client": "^5.4.1",
     "@reach/portal": "^0.18.0",
     "@react-spring/web": "^9.7.3",
@@ -239,5 +241,6 @@
     "workbox-routing": "^7.0.0",
     "workbox-strategies": "^7.0.0",
     "workbox-window": "^7.0.0"
-  }
+  },
+  "generators": "./generators.json"
 }

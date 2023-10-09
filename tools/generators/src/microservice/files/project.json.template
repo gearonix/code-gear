@@ -1,0 +1,67 @@
+{
+  "name": "service-<%= name %>",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/server/service-<%= name %>/src",
+  "projectType": "application",
+  "tags": ["runtime:service-<%= name %>"],
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "target": "node",
+        "compiler": "tsc",
+        "outputPath": "dist/apps/server/service-<%= name %>",
+        "generatePackageJson": true,
+        "main": "apps/server/service-<%= name %>/src/main.ts.template",
+        "tsConfig": "apps/server/service-<%= name %>/tsconfig.app.json",
+        "isolatedConfig": true,
+        "webpackConfig": "apps/server/service-<%= name %>/.config/webpack.ts.template",
+        "skipTypeCheck": true
+      },
+      "configurations": {
+        "development": {},
+        "production": {}
+      },
+      "dependsOn": []
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "service-<%= name %>:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "service-<%= name %>:build:development"
+        },
+        "production": {
+          "buildTarget": "service-<%= name %>:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/server/service-<%= name %>/**/*.ts"],
+        "fix": true
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/server/service-<%= name %>/.config/jest.ts.template",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    }
+  }
+}

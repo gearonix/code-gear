@@ -1,0 +1,9 @@
+{
+  "generators": {
+    "microservice": {
+      "factory": "./src/microservice/generator",
+      "schema": "./src/microservice/schema.json",
+      "description": "microservice generator"
+    }
+  }
+}
