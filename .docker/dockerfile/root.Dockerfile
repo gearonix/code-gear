@@ -24,8 +24,9 @@ COPY nx.json project.json .serve.env .docker.env ./
 
 ## Copying entrypoint scripts ##
 
-COPY .docker/sh/dev entrypoint
+COPY .docker/sh/entrypoint.dev.sh entrypoint.sh
 
-RUN find entrypoint -exec chmod +x {} \;
+
+RUN chmod +x entrypoint.sh;
 
 RUN echo "done."

@@ -33,7 +33,7 @@ COPY --from=build /opt/app/dist/apps/server/gateway ./
 
 RUN sed -i '/workspace:/d' package.json
 
-RUN npm install --omit="dev"
+RUN npm install --omit="dev" --force
 
 RUN npx prisma generate
 

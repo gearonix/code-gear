@@ -7,20 +7,21 @@
       "options": {
         "command": "docker compose -f .docker/compose/docker-compose.dev.yml --project-directory . up -d"
       },
-      "dependsOn": ["update:dev"],
+      "dependsOn": ["update:dev"]
     },
-    "run:dev:full": {
+    "run:dev:workspace": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "docker compose -f .docker/compose/docker-compose.dev.yml --project-directory . --profile full up -d"
+        "command": "docker compose -f .docker/compose/docker-compose.dev.yml --project-directory . --profile workspace up -d"
       },
-      "dependsOn": ["update:dev:full"]
+      "dependsOn": ["update:dev:workspace"]
     },
     "run:prod": {
       "executor": "nx:run-commands",
       "options": {
         "command": "docker compose -f .docker/compose/docker-compose.prod.yml --project-directory . up -d"
-      }
+      },
+      "dependsOn": ["update:prod"]
     },
     "update:dev": {
       "executor": "nx:run-commands",
@@ -28,16 +29,16 @@
         "command": "docker compose -f .docker/compose/docker-compose.dev.yml --project-directory . --progress plain build"
       }
     },
-    "update:dev:full": {
+    "update:dev:workspace": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "docker compose -f .docker/compose/docker-compose.dev.yml --project-directory . --profile full --progress plain build"
+        "command": "docker compose -f .docker/compose/docker-compose.dev.yml --project-directory . --profile workspace --progress plain build"
       }
     },
     "update:prod": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "docker compose -f .docker/compose/docker-compose.dev.yml --project-directory . up -d --build"
+        "command": "docker compose -f .docker/compose/docker-compose.prod.yml --project-directory . --progress plain build"
       }
     },
     "down:dev": {

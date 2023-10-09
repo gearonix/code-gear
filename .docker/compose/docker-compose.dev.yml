@@ -56,7 +56,7 @@ services:
       context: .
     restart: always
     profiles:
-      - full
+      - workspace
     env_file:
       - .serve.env
       - .docker.env
@@ -67,7 +67,7 @@ services:
     container_name: workspace
     networks:
       - cgnet
-    entrypoint: sh entrypoint/server.sh
+    entrypoint: sh entrypoint.sh
     ports:
       - 3000:3000
       - 6868:6868

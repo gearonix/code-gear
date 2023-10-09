@@ -23,7 +23,8 @@
       "configurations": {
         "development": {},
         "production": {}
-      }
+      },
+      "dependsOn": []
     },
     "serve": {
       "executor": "@nx/js:node",
