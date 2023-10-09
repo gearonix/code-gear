@@ -18,7 +18,7 @@ COPY packages packages
 
 RUN yarn install
 
-COPY nx.json project.json .serve.env ./
+COPY . .
 
 ## Building app to produciton ##
 

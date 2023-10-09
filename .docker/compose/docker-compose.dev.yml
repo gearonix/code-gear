@@ -1,59 +1,6 @@
 version: '3.9'
 
 services:
-  mysql:
-    image: mysql:latest
-    restart: always
-    container_name: db
-    networks:
-      - cgnet
-    ports:
-      - 3306:3306
-    volumes:
-      - ./data:/var/lib/mysql
-      - ./tools/database:/docker-entrypoint-initdb.d
-    env_file:
-      - .env
-      - .docker/.override.env
-
-  zookeeper:
-    image: confluentinc/cp-zookeeper:latest
-    container_name: zookeeper
-    networks:
-      - cgnet
-    env_file:
-      - .env
-      - .docker/.override.env
-    ports:
-      - 22181:2181
-
-  kafka:
-    image: confluentinc/cp-kafka:latest
-    container_name: kafka
-    hostname: kafka
-    networks:
-      - cgnet
-    depends_on:
-      - zookeeper
-    ports:
-      - 29092:29092
-    env_file:
-      - .env
-      - .docker/.override.env
-
-  kafka_ui:
-    image: provectuslabs/kafka-ui:latest
-    container_name: kafka-ui
-    networks:
-      - cgnet
-    depends_on:
-      - kafka
-    ports:
-      - 8080:8080
-    env_file:
-      - .env
-      - .docker/.override.env
-
   workspace:
     build:
       dockerfile: .docker/dockerfile/dev.Dockerfile
@@ -75,7 +22,3 @@ services:
     ports:
       - 3000:3000
       - 6868:6868
-
-networks:
-  cgnet:
-    driver: bridge

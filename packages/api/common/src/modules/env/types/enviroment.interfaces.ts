@@ -15,7 +15,6 @@ export interface MiscConfig {
   clientUrl: string
   jwtSecret: string
   codeExecutorUrl: string
-  nodeEnv: NodeEnv
 }
 
 export interface ServerConfig {

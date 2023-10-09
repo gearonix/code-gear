@@ -54,29 +54,6 @@ services:
       - .env
       - .docker/.override.env
 
-  workspace:
-    build:
-      dockerfile: .docker/dockerfile/dev.Dockerfile
-      context: .
-    restart: always
-    profiles:
-      - workspace
-    env_file:
-      - .env
-      - .docker/.override.env
-    volumes:
-      - ./apps:/opt/app/apps
-      - ./packages:/opt/app/packages
-      - /opt/app/node_modules
-    container_name: workspace
-    networks:
-      - cgnet
-    entrypoint: sh entrypoint.sh
-    ports:
-      - 3000:3000
-      - 6868:6868
-
-
 networks:
   cgnet:
     driver: bridge
