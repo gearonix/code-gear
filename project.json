@@ -44,7 +44,7 @@
         "command": "yarn dlx yarn-upgrade-all"
       }
     },
-    "gen": {
+    "create": {
       "executor": "nx:run-commands",
       "options": {
         "command": "nx g cg-global-generator:{args.type} {args.name}"

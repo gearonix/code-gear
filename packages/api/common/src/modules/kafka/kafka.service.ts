@@ -4,7 +4,6 @@ import { KafkaOptions }    from '@nestjs/microservices'
 import { Transport }       from '@nestjs/microservices'
 import { GetKafkaOptions } from '@/modules/kafka/kafka.interface'
 import { Microservice }    from '../../consts'
-import { getKafkaOptions } from './kafka.options'
 import { KafkaConfig }     from '@/modules'
 
 @Injectable()

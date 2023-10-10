@@ -10,7 +10,7 @@ export const microserviceGenerator = async (
   tree: Tree,
   options: MicroserviceGeneratorSchema
 ) => {
-  const projectRoot = `apps/server/${options.name}`
+  const projectRoot = `apps/server/service-${options.name}`
 
   addProjectConfiguration(tree, options.name, {
     root: projectRoot,

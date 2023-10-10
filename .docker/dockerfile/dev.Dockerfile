@@ -1,4 +1,9 @@
-# This docker file is used only in development mode
+#/**
+# * This docker file is used only in development mode
+# * It runs all processes, microservices and libraries
+# * in one large container so as not to take up a lot of
+# * space. Hot reload enabled.
+# */
 
 FROM --platform=linux/amd64 node:20.8.0-alpine as build
 WORKDIR /opt/app
