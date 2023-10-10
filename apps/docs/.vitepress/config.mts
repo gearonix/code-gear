@@ -12,15 +12,15 @@ export default defineConfig({
     logo: { src: '/logo.svg', width: 24, height: 24 },
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' },
+      { text: 'Guide', link: '/guide/about-project' },
       { text: 'Preview', link: '#' }
     ],
     sidebar: [
       {
-        text: 'Examples',
+        text: 'Introduction',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { base: 'guide', text: 'About Project', link: '/about-project' },
+          { base: 'guide', text: 'Getting Started', link: '/getting-started' }
         ]
       }
     ],
