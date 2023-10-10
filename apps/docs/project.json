@@ -1,7 +1,7 @@
 {
   "name": "docs",
-  "$schema": "node_modules/nx/schemas/project-schema.json",
-  "tags": ["docs"],
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "tags": ["docs", "runtime:docs"],
   "targets": {
     "serve": {
       "executor": "nx:run-commands",

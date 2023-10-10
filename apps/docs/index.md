@@ -1,25 +1,36 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
+title: CodeGear
+titleTemplate: Fast Online Code Editor
+
 hero:
-  name: "CodeGear"
-  text: "Fast online code editor built on Preact, Nest and Nx"
-  tagline: My great project tagline
+  name: CodeGear 💫
+
+  text: Fast Online Code Editor
+  tagline: Code editor written in Preact, NestJS and Nx monorepo.
   actions:
     - theme: brand
-      text: Markdown Examples
+      text: Get Started
       link: /markdown-examples
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: View on GitHub
+      link: https://github.com/Gearonix/code-gear
+  image:
+    src: /logo-large.png
+    alt: VitePress
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - icon: 🌐
+    title: Functionality
+    details: Includes the ability to run code in 10 languages, customize the theme and languages.
+  - icon: ⚡ 
+    title: Based on Websockets
+    details: Includes work in real time with other users, based on websockets (socket.io).
+  - icon: 💻
+    title: Architecture
+    details: Written using microfrontends and FSD methodology. Microservices, CQRS and DDD are used for the backend.
+  - icon: 🚄
+    title: Technologies
+    details: Includes technologies such as Nx, docker, Kafka, Cypress, Jest, Preact, Nginx, Mobx, Ansible, Kubernetes and many others!
 ---
-
