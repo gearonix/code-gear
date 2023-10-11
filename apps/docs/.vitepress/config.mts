@@ -12,15 +12,36 @@ export default defineConfig({
     logo: { src: '/logo.svg', width: 24, height: 24 },
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Guide', link: '/guide/about-project' },
+      { text: 'Docs', link: '/introduction/getting-started' },
       { text: 'Preview', link: '#' }
     ],
     sidebar: [
       {
         text: 'Introduction',
         items: [
-          { base: 'guide', text: 'About Project', link: '/about-project' },
-          { base: 'guide', text: 'Getting Started', link: '/getting-started' }
+          { base: 'introduction', text: 'About Project', link: '/about-project' },
+          { base: 'introduction', text: 'Getting Started', link: '/getting-started' }
+        ]
+      },
+      {
+        text: 'Featutes',
+        items: [
+          {
+            base: 'features', text: 'Storybook', link: '/storybook'
+          },
+          {
+            base: 'features', text: 'Code Generation', link: '/code-generation'
+          },
+          {
+            base: 'features', text: 'Custom Libraries', link: '/custom-libraries'
+          },
+          {
+            base: 'features', text: 'Precommit Hooks', link: '/precommit-hooks'
+          },
+          {
+            base: 'features', text: 'Automation', link: '/automation'
+          }
+
         ]
       }
     ],
