@@ -51,6 +51,22 @@ $ nx serve
 ```
 :::
 
+
+::: tip NOTE
+You may get this warning:
+
+```sh 
+@prisma/client did not initialize yet. Please run "prisma generate" and try to import it again
+```
+
+In this case, just run
+
+```sh
+nx prisma:init gateway
+```
+This will generate types for `prisma` and generate a schema.
+:::
+
 ### 2. Run in docker virtual environment (`development` mode)
 
 You can run the project in one large container, with docker volumes set to `apps` and `packages` to enable hot-reload.

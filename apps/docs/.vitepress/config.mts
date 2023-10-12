@@ -24,6 +24,14 @@ export default defineConfig({
         ]
       },
       {
+        text: 'Architecture',
+        items: [
+          {
+            base: 'architecture', text: 'Frontend', link: '/frontend'
+          }
+        ]
+      },
+      {
         text: 'Featutes',
         items: [
           {
@@ -39,9 +47,17 @@ export default defineConfig({
             base: 'features', text: 'Precommit Hooks', link: '/precommit-hooks'
           },
           {
-            base: 'features', text: 'Automation', link: '/automation'
-          }
-
+            base: 'features', text: 'Automation (CI/CD)', link: '/automation'
+          },
+          {
+            base: 'features', text: 'Docker', link: '/docker'
+          },
+          {
+            base: 'features', text: 'Ts-Morph', link: '/ts-morph'
+          },
+          {
+            base: 'features', text: 'Config Incapsulation', link: '/config-incapsulation'
+          },
         ]
       }
     ],

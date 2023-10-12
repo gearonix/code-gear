@@ -156,6 +156,27 @@ export const Select = <T,>(props: SelectProps<T>) => {
 
 ```
 
+You can read about generators [here](./code-generation.md)
+
+## What about decorators?
+
+I mean *storybook* decorators. They are in the `web/shared` library, 
+you can find and easily add yours if needed.
+
+```tsx
+// ~/storybook/decorators/my-decorator.ts
+
+import { Decorator }     from '@storybook/react'
+
+import { ThemeProvider } from '@/providers/theme'
+
+export const CustomThemeDecorator: Decorator = <T,>(story) => (
+  <ThemeProvider>{story<T>()}</ThemeProvider>
+)
+```
+
 ---
 
-You can read about generators [here](./code-generation.md)
+Also you can watch the current version of the storybook here:
+
+https://gearonix.github.io/code-gear

@@ -11603,6 +11603,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"cg-docs@workspace:apps/docs":
+  version: 0.0.0-use.local
+  resolution: "cg-docs@workspace:apps/docs"
+  languageName: unknown
+  linkType: soft
+
 "cg-editor@workspace:packages/web/editor":
   version: 0.0.0-use.local
   resolution: "cg-editor@workspace:packages/web/editor"
