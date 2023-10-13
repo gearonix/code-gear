@@ -3,5 +3,5 @@ const { resolve } = require('path')
 
 module.exports = buildWebpackConfig({
   rootDir: resolve(__dirname, '..'),
-  layer: 'third',
+  layer: 'third'
 })

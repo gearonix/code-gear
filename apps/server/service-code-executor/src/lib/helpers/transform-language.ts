@@ -1,5 +1,5 @@
-import { ExecuteCodeApiDTO } from '@code-gear/api/common'
-import { ExecutorLanguages } from '@code-gear/api/common'
+import { ExecuteCodeApiDTO }       from '@code-gear/api/common'
+import { ExecutorLanguages }       from '@code-gear/api/common'
 import { ExecutorLanguagesValues } from '@code-gear/api/common'
 
 type TransformLanguage = Omit<ExecuteCodeApiDTO, 'language'> & {
@@ -7,10 +7,10 @@ type TransformLanguage = Omit<ExecuteCodeApiDTO, 'language'> & {
 }
 
 export const transformLanguage = (
-  args: ExecuteCodeApiDTO,
+  args: ExecuteCodeApiDTO
 ): TransformLanguage => {
   return {
     ...args,
-    language: ExecutorLanguages[args.language],
+    language: ExecutorLanguages[args.language]
   }
 }

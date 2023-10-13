@@ -1,12 +1,12 @@
-import { Controller } from '@nestjs/common'
-import { MessagePattern } from '@nestjs/microservices'
-import { Payload } from '@nestjs/microservices'
-import { ExecuteCodeApiDTO } from '@code-gear/api/contracts'
-import { ExecutorApiResponse } from '@code-gear/api/contracts'
+import { Controller }              from '@nestjs/common'
+import { MessagePattern }          from '@nestjs/microservices'
+import { Payload }                 from '@nestjs/microservices'
+import { ExecuteCodeApiDTO }       from '@code-gear/api/contracts'
+import { ExecutorApiResponse }     from '@code-gear/api/contracts'
 import { ExecutorLanguagesValues } from '@code-gear/api/contracts'
-import { CodeExecutorTopic } from '@code-gear/api/contracts'
-import { QueryBus } from '@nestjs/cqrs'
-import { ExecuteCodeQuery } from './queries/impl'
+import { CodeExecutorTopic }       from '@code-gear/api/contracts'
+import { QueryBus }                from '@nestjs/cqrs'
+import { ExecuteCodeQuery }        from './queries/impl'
 
 @Controller()
 export class CodeExecutorConsumer {
@@ -14,7 +14,7 @@ export class CodeExecutorConsumer {
 
   @MessagePattern(CodeExecutorTopic.EXECUTE_CODE)
   async executeCode(
-    @Payload() payload: ExecuteCodeApiDTO,
+    @Payload() payload: ExecuteCodeApiDTO
   ): Promise<ExecutorApiResponse<ExecutorLanguagesValues>> {
     const command = new ExecuteCodeQuery(payload)
     return this.query.execute(command)
