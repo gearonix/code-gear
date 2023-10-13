@@ -2,7 +2,9 @@ import { h } from 'vue'
 import Theme from 'vitepress/theme'
 import            './style.css'
 
-localStorage.setItem('vitepress-theme-appearance', 'dark')
+if (typeof localStorage !== 'undefined') {
+  localStorage.setItem('vitepress-theme-appearance', 'dark')
+}
 
 export default {
   extends: Theme,

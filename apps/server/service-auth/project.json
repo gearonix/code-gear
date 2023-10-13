@@ -14,10 +14,10 @@
         "compiler": "tsc",
         "outputPath": "dist/apps/server/service-auth",
         "generatePackageJson": true,
-        "main": "apps/server/service-auth/src/main.ts.template",
+        "main": "apps/server/service-auth/src/main.ts",
         "tsConfig": "apps/server/service-auth/tsconfig.app.json",
         "isolatedConfig": true,
-        "webpackConfig": "apps/server/service-auth/.config/webpack.ts.template",
+        "webpackConfig": "apps/server/service-auth/.config/webpack.ts",
         "skipTypeCheck": true
       },
       "configurations": {
@@ -53,7 +53,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/server/service-auth/.config/jest.ts.template",
+        "jestConfig": "apps/server/service-auth/.config/jest.ts",
         "passWithNoTests": true
       },
       "configurations": {

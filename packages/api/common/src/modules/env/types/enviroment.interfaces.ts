@@ -1,5 +1,3 @@
-import { NodeEnv } from './node-env.enum'
-
 export interface DatabaseConfig {
   url: string
 }

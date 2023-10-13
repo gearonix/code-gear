@@ -14,10 +14,10 @@
         "compiler": "tsc",
         "outputPath": "dist/apps/server/service-<%= name %>",
         "generatePackageJson": true,
-        "main": "apps/server/service-<%= name %>/src/main.ts.template",
+        "main": "apps/server/service-<%= name %>/src/main.ts",
         "tsConfig": "apps/server/service-<%= name %>/tsconfig.app.json",
         "isolatedConfig": true,
-        "webpackConfig": "apps/server/service-<%= name %>/.config/webpack.ts.template",
+        "webpackConfig": "apps/server/service-<%= name %>/.config/webpack.ts",
         "skipTypeCheck": true
       },
       "configurations": {
@@ -53,7 +53,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/server/service-<%= name %>/.config/jest.ts.template",
+        "jestConfig": "apps/server/service-<%= name %>/.config/jest.ts",
         "passWithNoTests": true
       },
       "configurations": {

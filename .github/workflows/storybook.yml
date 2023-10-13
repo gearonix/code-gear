@@ -59,5 +59,8 @@ jobs:
           branch: storybook-build
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Initializing Playwright
+        run: npx playwright install
+
       - name: Testing storybook in production
         run: yarn nx run web-ui:storybook:test:production

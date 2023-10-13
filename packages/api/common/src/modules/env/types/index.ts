@@ -4,4 +4,3 @@ export {
   KafkaConfig,
   DatabaseConfig
 } from './enviroment.interfaces'
-export { NodeEnv } from './node-env.enum'

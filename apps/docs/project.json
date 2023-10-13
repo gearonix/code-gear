@@ -13,7 +13,11 @@
     "build": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "vitepress build",
+        "commands": [
+          "vitepress build",
+          "mkdir -p ../../dist/docs",
+          "mv .vitepress/dist ../../dist/docs"
+        ],
         "cwd": "apps/docs"
       }
     },
@@ -22,7 +26,8 @@
       "options": {
         "command": "vitepress preview",
         "cwd": "apps/docs"
-      }
+      },
+      "dependsOn": ["build"]
     }
   }
 }

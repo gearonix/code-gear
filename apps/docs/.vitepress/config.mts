@@ -5,6 +5,7 @@ export default defineConfig({
   description: 'Online code editor built on Preact, Nest and Nx',
   lastUpdated: true,
   cleanUrls: true,
+  ignoreDeadLinks: true,
 
   head: [['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }]],
 
