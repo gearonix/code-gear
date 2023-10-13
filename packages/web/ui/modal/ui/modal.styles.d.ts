@@ -1,4 +1,5 @@
 /// <reference types="react" />
+/// <reference types="react" />
 export declare const ModalBackground: import("styled-components").IStyledComponent<"web", {
     ref?: import("react").LegacyRef<HTMLDivElement> | undefined;
     key?: import("react").Key | null | undefined;
