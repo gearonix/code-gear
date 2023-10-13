@@ -1,0 +1,22 @@
+{
+  "name": "global-generator",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "tools/generators/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "tools/generators/**/**.ts",
+          "tools/generators/package.json",
+          "tools/generators/generators.json"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

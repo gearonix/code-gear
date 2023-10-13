@@ -1,0 +1,33 @@
+{
+  "name": "docs",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "tags": ["docs", "runtime:docs"],
+  "targets": {
+    "serve": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "vitepress dev",
+        "cwd": "apps/docs"
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "vitepress build",
+          "mkdir -p ../../dist/docs",
+          "mv .vitepress/dist ../../dist/docs"
+        ],
+        "cwd": "apps/docs"
+      }
+    },
+    "preview": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "vitepress preview",
+        "cwd": "apps/docs"
+      },
+      "dependsOn": ["build"]
+    }
+  }
+}

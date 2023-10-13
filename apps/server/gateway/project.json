@@ -1,0 +1,116 @@
+{
+  "name": "gateway",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/server/gateway/src",
+  "projectType": "application",
+  "tags": ["app:server", "runtime:server"],
+  "targets": {
+    "prisma:generate": {
+      "command": "yarn dlx prisma generate",
+      "options": {
+        "cwd": "apps/server/gateway"
+      }
+    },
+    "prisma:concat": {
+      "command": "node prisma/concat-prisma-files.js",
+      "options": {
+        "cwd": "apps/server/gateway"
+      }
+    },
+    "prisma:init": {
+      "command": "prisma -v",
+      "options": {
+        "cwd": "apps/server/gateway"
+      },
+      "dependsOn": ["prisma:concat", "prisma:generate"]
+    },
+    "prisma:migrate:development": {
+      "command": "yarn dlx prisma migrate dev",
+      "options": {
+        "cwd": "apps/server/gateway",
+        "envFile": ".serve.env"
+      },
+      "dependsOn": ["prisma:concat"]
+    },
+    "prisma:migrate:production": {
+      "command": "yarn dlx prisma migrate deploy",
+      "options": {
+        "cwd": "apps/server/gateway",
+        "envFile": ".build.env"
+      },
+      "dependsOn": ["prisma:concat"]
+    },
+    "prisma:types": {
+      "command": "yarn dlx @kalissaac/prisma-typegen ./../../../packages/api/common/src/types/_prisma.ts ./prisma/schema.prisma",
+      "options": {
+        "cwd": "apps/server/gateway"
+      },
+      "dependsOn": ["migrate:dev"]
+    },
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "target": "node",
+        "compiler": "tsc",
+        "outputPath": "dist/apps/server/gateway",
+        "generatePackageJson": true,
+        "main": "apps/server/gateway/src/main.ts",
+        "tsConfig": "apps/server/gateway/tsconfig.app.json",
+        "assets": [
+          {
+            "glob": "schema.prisma",
+            "input": "apps/server/gateway/prisma",
+            "output": "prisma"
+          }
+        ],
+        "isolatedConfig": true,
+        "webpackConfig": "apps/server/gateway/.config/webpack.ts",
+        "skipTypeCheck": true
+      },
+      "configurations": {
+        "development": {},
+        "production": {}
+      },
+      "dependsOn": ["prisma:concat"]
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "gateway:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "gateway:build:development"
+        },
+        "production": {
+          "buildTarget": "gateway:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/server/gateway/**/*.ts"],
+        "fix": true
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/server/gateway/.config/jest.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    }
+  }
+}

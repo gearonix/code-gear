@@ -1,0 +1,11 @@
+{
+  "name": "cg-service-code-executor",
+  "version": "1.0.0",
+  "dependencies": {
+    "cg-api-common": "workspace:^",
+    "cg-api-contracts": "workspace:^"
+  },
+  "devDependencies": {
+    "cg-config": "workspace:^"
+  }
+}

@@ -1,7 +1,0 @@
-{
-  "name": "cg-server",
-  "version": "1.0.0",
-  "devDependencies": {
-    "cg-config": "workspace:^"
-  }
-}

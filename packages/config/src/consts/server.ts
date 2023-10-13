@@ -18,4 +18,5 @@ export const serverDocsPrefix = 'docs'
 
 export const graphqlArg = '_graphql'
 
-export const jwtSecret = process.env.JWT_SECRET
+export const jwtSecret =
+  process.env.JWT_SECRET || 'I_WILL_REMOVE_THIS_AND_REWRITE_TO_CONFIG_SERVICE'
