@@ -61,6 +61,31 @@ export default defineConfig({
             base: 'functionality',
             text: 'GraphQL',
             link: '/graphql'
+          },
+          {
+            base: 'functionality',
+            text: 'Animations and Styles',
+            link: '/animations'
+          },
+          {
+            base: 'functionality',
+            text: 'JWT Authorization',
+            link: '/authorization'
+          },
+          {
+            base: 'functionality',
+            text: 'Frontend Business Logic',
+            link: '/frontend-business-logic'
+          },
+          {
+            base: 'functionality',
+            text: 'FileSystem Web API',
+            link: '/file-system-api'
+          },
+          {
+            base: 'functionality',
+            text: 'Throttle and Debounce',
+            link: '/throttle-and-debounce'
           }
         ]
       },
@@ -116,6 +141,16 @@ export default defineConfig({
             base: 'features',
             text: 'Validation',
             link: '/validation'
+          },
+          {
+            base: 'features',
+            text: 'PWA',
+            link: '/pwa'
+          },
+          {
+            base: 'features',
+            text: 'Other Concepts',
+            link: '/other-concepts'
           }
         ]
       }

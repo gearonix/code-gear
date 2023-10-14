@@ -14,12 +14,12 @@ zip -r _dist.zip .
 
 scp _dist.zip "$BEGET_HOST":~/"$WEBSITE_FOLDER"/public_html/code-gear/docs
 
+rm _dist.zip
+
 ssh "$BEGET_HOST" << EOF
   cd ~/$WEBSITE_FOLDER/public_html/code-gear/docs
   unzip -o _dist.zip && rm _dist.zip
 
   echo -e "[success] docs updated."
 EOF
-
-rm _dist.zip
 
