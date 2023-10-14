@@ -104,3 +104,18 @@ It is highly recommended to add the [Nx-Console](https://nx.dev/recipes/nx-conso
 scripts and is indispensable in my opinion in a monorepository.
 
 :::
+
+::: tip dos2unix
+
+[dos2unix](https://dos2unix.sourceforge.io/) 
+can be useful for file format consistency when transferring data between different operating systems.
+
+::: code-group
+
+```sh
+$ sudo pacman -Sy && sudo pacman -S dos2unix
+$ dos2unix .
+```
+
+:::
+

@@ -1,5 +1,8 @@
 # Project Overview  💫
 
+This documentation describes processes, interesting solutions that you can find in the project 
+[repository](https://github.com/Gearonix/code-gear).
+
 ## Why it is awesome?
 
 [*CodeGear*](https://github.com/Gearonix/code-gear) is an *online code editor* (like [VS Code](https://code.visualstudio.com/)) in which you

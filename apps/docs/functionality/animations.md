@@ -7,7 +7,7 @@
 - [use-gesture](https://www.npmjs.com/package/@use-gesture/react) is a library that simplifies interaction 
 with scrolling, zooming, and so on.
 
-So why not connect them?
+So why not combine them?
 
 ## Asynchronous Loading
 
