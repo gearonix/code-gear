@@ -33,7 +33,7 @@ relevant *only* for this application.
 ├─ features
 ├─ widgets
 ├─ pages
-├─ shared - !
+├─ shared - can also be in the application
 
 ```
 

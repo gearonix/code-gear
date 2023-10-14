@@ -1,4 +1,4 @@
-# Prisma ORM
+# Prisma Concepts
 
 I've been using [Prisma](https://www.prisma.io/docs/getting-started/quickstart)
 as an [ORM](https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping) and in this module I'll cover some interesting concepts I've found.

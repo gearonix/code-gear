@@ -83,6 +83,12 @@ export class KafkaModule {
   }
 }
 ```
+::: tip Did you know?
+
+You can also watch the different events at kafka via [kafka-ui](https://github.com/provectus/kafka-ui).
+To do this, you can open http://localhost:8080.
+
+:::
 
 Now, it can be connected in a single line.
 

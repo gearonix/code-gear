@@ -15,6 +15,7 @@
       "options": {
         "commands": [
           "vitepress build",
+          "rm -rf ../../dist/docs",
           "mkdir -p ../../dist/docs",
           "mv .vitepress/dist ../../dist/docs"
         ],

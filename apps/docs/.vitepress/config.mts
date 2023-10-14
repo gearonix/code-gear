@@ -13,8 +13,7 @@ export default defineConfig({
     logo: { src: '/logo.svg', width: 24, height: 24 },
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Docs', link: '/introduction/getting-started' },
-      { text: 'Preview', link: '#' }
+      { text: 'Guide', link: '/introduction/about-project' }
     ],
     sidebar: [
       {
@@ -22,7 +21,7 @@ export default defineConfig({
         items: [
           {
             base: 'introduction',
-            text: 'About Project',
+            text: 'Overview',
             link: '/about-project'
           },
           {
@@ -52,7 +51,7 @@ export default defineConfig({
         items: [
           {
             base: 'functionality',
-            text: 'Prisma ORM',
+            text: 'Prisma Concepts',
             link: '/prisma'
           },
           {
@@ -104,6 +103,16 @@ export default defineConfig({
             base: 'features',
             text: 'Config Incapsulation',
             link: '/config-incapsulation'
+          },
+          {
+            base: 'features',
+            text: 'Tests Coverage',
+            link: '/testing'
+          },
+          {
+            base: 'features',
+            text: 'Validation',
+            link: '/validation'
           }
         ]
       }

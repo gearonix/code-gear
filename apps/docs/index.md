@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /introduction/getting-started
+      link: /introduction/about-project
     - theme: alt
       text: View on GitHub
       link: https://github.com/Gearonix/code-gear
