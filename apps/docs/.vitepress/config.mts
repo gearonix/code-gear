@@ -7,7 +7,10 @@ export default defineConfig({
   cleanUrls: true,
   ignoreDeadLinks: true,
 
-  head: [['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }]],
+  base: '/code-gear/docs/',
+  outDir: '../../dist/docs',
+
+  head: [['link', { rel: 'icon', type: 'image/svg+xml', href: '/code-gear/docs/logo.svg' }]],
 
   themeConfig: {
     logo: { src: '/logo.svg', width: 24, height: 24 },
@@ -20,7 +23,7 @@ export default defineConfig({
         text: 'Introduction',
         items: [
           {
-            base: 'introduction',
+            base: '/introduction',
             text: 'Overview',
             link: '/about-project'
           },
