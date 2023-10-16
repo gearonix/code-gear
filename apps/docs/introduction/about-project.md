@@ -45,10 +45,31 @@ You can also log in and send a link to another person so that he can come in and
 In fact, the project was seen as an opportunity to try out a large number of different technologies.
 And I succeeded - I created *an environment* in which you can experiment and introduce *new technologies* and functionality.
 
+## Technology Stack
+
+#### 🌟 Frontend
+- Preact
+- MobX
+- Styled-components
+- react-spring
+- FSD + Microfrontends
+
+#### 💻 Backend
+- NestJS
+- Kafka
+- Docker
+- Microservices + CQRS
+- Prisma
+
+And, of course, [Nx](https://nx.dev/), with its configurations and a lot of binding scripts.
+
 ## Why are there so many configurations?
 
 Firstly, I am an enjoyer of *complex solutions* and large projects.
 Secondly, this was the goal of the project - to create *something unusual*, *large* and unlike ordinary pet projects. 
+
+This project is more about **how it is made** than what it can do.
+
 Something like that! 🚀 💫
 
 ---

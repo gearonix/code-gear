@@ -16,7 +16,7 @@ nx prisma:types gateway
 :::
 
 Under the hood, I use the [@kalissaac/prisma-typegen](https://www.npmjs.com/package/@kalissaac/prisma-typegen) module that allows me to do this.
-
+::: code-group
 ```ts
 // AUTO GENERATED FILE BY @kalissaac/prisma-typegen
 // DO NOT EDIT
@@ -25,6 +25,13 @@ export interface Example {
     name: string
 }
 ```
+
+```prisma [example.prisma]
+model Example {
+  name  String  @id @database.VarChar(14)
+}
+```
+:::
 
 ## Using multiple Prisma files
 
@@ -52,3 +59,17 @@ export const concatPrismaFiles = ({ config, models, dest }) => {
 }
 
 ```
+
+## Using Prisma Init
+
+To initialize a prism in a project, run. This will start type generation, 
+merge all the files into one big `schema.prisma` and of course make `npx prisma generate`
+
+::: code-group
+
+```sh [yarn]
+nx prisma:init gateway
+
+```
+
+:::

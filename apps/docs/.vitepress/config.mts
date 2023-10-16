@@ -14,7 +14,12 @@ export default defineConfig({
   base: '/code-gear/docs/',
   outDir: '../../dist/docs',
 
-  head: [['link', { rel: 'icon', type: 'image/svg+xml', href: '/code-gear/docs/logo.svg' }]],
+  head: [
+    [
+      'link',
+      { rel: 'icon', type: 'image/svg+xml', href: '/code-gear/docs/logo.svg' }
+    ]
+  ],
 
   themeConfig: {
     logo: { src: '/logo.svg', width: 24, height: 24 },
@@ -90,11 +95,6 @@ export default defineConfig({
             base: 'functionality',
             text: 'FileSystem Web API',
             link: '/file-system-api'
-          },
-          {
-            base: 'functionality',
-            text: 'Throttle and Debounce',
-            link: '/throttle-and-debounce'
           }
         ]
       },
@@ -128,11 +128,6 @@ export default defineConfig({
           },
           {
             base: 'features',
-            text: 'Docker',
-            link: '/docker'
-          },
-          {
-            base: 'features',
             text: 'Ts-Morph',
             link: '/ts-morph'
           },
@@ -155,11 +150,6 @@ export default defineConfig({
             base: 'features',
             text: 'PWA',
             link: '/pwa'
-          },
-          {
-            base: 'features',
-            text: 'Other Concepts',
-            link: '/other-concepts'
           }
         ]
       },
