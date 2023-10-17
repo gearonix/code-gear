@@ -7,8 +7,8 @@ const Main = () => {
   return (
     <Page>
       <div>
-        maifn <br />
-        <Link to={RoutePaths.EDITOR}>editor</Link>
+        Not Ready Yet.
+        <Link to={RoutePaths.EDITOR}>Link to Editor</Link>
       </div>
     </Page>
   )

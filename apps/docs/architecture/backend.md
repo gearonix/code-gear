@@ -83,6 +83,12 @@ export class KafkaModule {
   }
 }
 ```
+::: tip Did you know?
+
+You can also watch the different events at kafka via [kafka-ui](https://github.com/provectus/kafka-ui).
+To do this, you can open http://localhost:8080.
+
+:::
 
 Now, it can be connected in a single line.
 
@@ -117,13 +123,17 @@ export class ExampleController {
 
 ```
 
+## Contracts Library
+
+`@code-gear/api/contracts` - This is a library for exchanging kafka topics, 
+interfaces (`Request`, `Response`) and [DTO](https://en.wikipedia.org/wiki/Data_transfer_object).
 
 ## CQRS Pattern
 
 Using *CQRS* in a project is no different from the cqrs documentation of the NestJS module,
 which can be found [here](https://docs.nestjs.com/recipes/cqrs).
 
-You can find examples of usage in the microservice `apps/server/service-code-executor`.
+You can find examples of usage in the `code-executor` microservice.
 
 ## Gateway Pattern
 

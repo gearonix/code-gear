@@ -96,3 +96,26 @@ up much memory on your disk (`40MB`-`200MB` each container).
 
 The dev server should be running at http://localhost:3000. 
 Visit the URL in your browser to see project in action.
+
+
+::: tip Nx-Console
+
+It is highly recommended to add the [Nx-Console](https://nx.dev/recipes/nx-console) plugin to your IDE, as it greatly simplifies the management of various 
+scripts and is indispensable in my opinion in a monorepository.
+
+:::
+
+::: tip dos2unix
+
+[dos2unix](https://dos2unix.sourceforge.io/) 
+can be useful for file format consistency when transferring data between different operating systems.
+
+::: code-group
+
+```sh
+$ sudo pacman -Sy && sudo pacman -S dos2unix
+$ dos2unix .
+```
+
+:::
+

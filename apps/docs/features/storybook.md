@@ -96,6 +96,25 @@ You can see all the settings in `project.json`, it is in every application/servi
 
 :::
 
+::: warning
+
+If you get error related with [playwright](https://playwright.dev/), just initialize it.
+
+::: code-group
+```sh [pnpm]
+pnpx playwright install
+```
+
+```sh [npm]
+npx playwright install
+```
+
+:::
+
+You can see all the settings in `project.json`, it is in every application/service.
+
+:::
+
 ## Adding a new UI component
 
 To create a new component, you can use the `hygen` generator.

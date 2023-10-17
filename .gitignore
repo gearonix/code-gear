@@ -1,7 +1,8 @@
 dist
 tmp
 node_modules
-/.idea
+.idea
 local
 *.env
 data
+cache

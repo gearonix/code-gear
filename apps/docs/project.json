@@ -10,14 +10,18 @@
         "cwd": "apps/docs"
       }
     },
+    "deploy": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "bash apps/docs/scripts/deploy.sh",
+        "cwd": ""
+      },
+      "dependsOn": ["build"]
+    },
     "build": {
       "executor": "nx:run-commands",
       "options": {
-        "commands": [
-          "vitepress build",
-          "mkdir -p ../../dist/docs",
-          "mv .vitepress/dist ../../dist/docs"
-        ],
+        "command": "vitepress build",
         "cwd": "apps/docs"
       }
     },

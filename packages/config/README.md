@@ -1,3 +1,3 @@
-# config
+## config
 
-This library was generated with [Nx](https://nx.dev).
+Reusable configurations for all applications and libraries.

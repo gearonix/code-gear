@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /introduction/getting-started
+      link: /introduction/about-project
     - theme: alt
       text: View on GitHub
       link: https://github.com/Gearonix/code-gear
@@ -29,8 +29,8 @@ features:
     details: Includes work in real time with other users, based on websockets (socket.io).
   - icon: 💻
     title: Architecture
-    details: Written using microfrontends and FSD methodology. Microservices, CQRS and DDD are used for the backend.
+    details: Written using microfrontends and FSD methodology. Microservices, CQRS are used for the backend.
   - icon: 🚄
-    title: Technologies
-    details: Includes technologies such as Nx, docker, Kafka, Cypress, Jest, Preact, Nginx, Mobx, Ansible, Kubernetes and many others!
+    title: Big Monorepo
+    details: Includes technologies such as Nx, Docker, Kafka, Cypress, Jest, Preact, Nginx, Mobx and many others!
 ---
