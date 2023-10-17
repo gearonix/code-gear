@@ -2320,6 +2320,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^6.7.4
     "@typescript-eslint/parser": ^6.7.4
     "@use-gesture/react": ^10.3.0
+    "@vite-pwa/vitepress": ^0.2.3
     "@vitejs/plugin-react": ^4.1.0
     "@vitest/coverage-c8": ^0.33.0
     "@vitest/ui": ^0.34.6
@@ -9168,6 +9169,15 @@ __metadata:
   peerDependencies:
     react: ">= 16.8.0"
   checksum: d43a2296e536ea8e4885ca082b7c554eabb0e19bb7f89b5db96e0511712c849db879de64c2746c94e3c9a5032e8918c90ace67fc023c754034d75b2ea3b727c4
+  languageName: node
+  linkType: hard
+
+"@vite-pwa/vitepress@npm:^0.2.3":
+  version: 0.2.3
+  resolution: "@vite-pwa/vitepress@npm:0.2.3"
+  peerDependencies:
+    vite-plugin-pwa: ">=0.16.5 <1"
+  checksum: 9c5d9257ff246d1ca345827ce6cdac1c91cca31ce377e78c9072ecb9e0d76c2c6daf3ec4d1dac547dcf9b2d71ac7160d249ebddc14eacfb3bb6030d6799bc228
   languageName: node
   linkType: hard
 
