@@ -57,7 +57,7 @@ class ee {
     return this._statuses && (t = this._statuses.includes(e.status)), this._headers && t && (t = Object.keys(this._headers).some((n) => e.headers.get(n) === this._headers[n])), t;
   }
 }
-class x {
+class S {
   /**
    * To construct a new CacheableResponsePlugin instance you must provide at
    * least one of the `config` properties.
@@ -98,7 +98,7 @@ function ne() {
     IDBCursor.prototype.continuePrimaryKey
   ]);
 }
-const F = /* @__PURE__ */ new WeakMap(), P = /* @__PURE__ */ new WeakMap(), j = /* @__PURE__ */ new WeakMap(), C = /* @__PURE__ */ new WeakMap(), S = /* @__PURE__ */ new WeakMap();
+const F = /* @__PURE__ */ new WeakMap(), P = /* @__PURE__ */ new WeakMap(), j = /* @__PURE__ */ new WeakMap(), C = /* @__PURE__ */ new WeakMap(), x = /* @__PURE__ */ new WeakMap();
 function re(s) {
   const e = new Promise((t, n) => {
     const r = () => {
@@ -113,7 +113,7 @@ function re(s) {
   return e.then((t) => {
     t instanceof IDBCursor && F.set(t, s);
   }).catch(() => {
-  }), S.set(e, s), e;
+  }), x.set(e, s), e;
 }
 function ae(s) {
   if (P.has(s))
@@ -171,9 +171,9 @@ function f(s) {
   if (C.has(s))
     return C.get(s);
   const e = ce(s);
-  return e !== s && (C.set(s, e), S.set(e, s)), e;
+  return e !== s && (C.set(s, e), x.set(e, s)), e;
 }
-const O = (s) => S.get(s);
+const O = (s) => x.get(s);
 function he(s, e, { blocked: t, upgrade: n, blocking: r, terminated: a } = {}) {
   const i = indexedDB.open(s, e), o = f(i);
   return n && i.addEventListener("upgradeneeded", (c) => {
@@ -228,7 +228,7 @@ try {
   self["workbox:expiration:7.0.0"] && _();
 } catch {
 }
-const fe = "workbox-expiration", g = "cache-entries", G = (s) => {
+const fe = "workbox-expiration", g = "cache-entries", K = (s) => {
   const e = new URL(s, location.href);
   return e.hash = "", e.href;
 };
@@ -270,7 +270,7 @@ class _e {
    * @private
    */
   async setTimestamp(e, t) {
-    e = G(e);
+    e = K(e);
     const n = {
       url: e,
       timestamp: t,
@@ -330,7 +330,7 @@ class _e {
    * @private
    */
   _getId(e) {
-    return this._cacheName + "|" + G(e);
+    return this._cacheName + "|" + K(e);
   }
   /**
    * Returns an open connection to the database.
@@ -531,7 +531,7 @@ class X {
     this._cacheExpirations = /* @__PURE__ */ new Map();
   }
 }
-function K(s, e) {
+function G(s, e) {
   const t = e();
   return s.waitUntil(t), t;
 }
@@ -1265,7 +1265,7 @@ This is generally NOT safe. Learn more at https://bit.ly/wb-precache`;
    * @return {Promise<workbox-precaching.InstallResult>}
    */
   install(e) {
-    return K(e, async () => {
+    return G(e, async () => {
       const t = new Ee();
       this.strategy.plugins.push(t);
       for (const [a, i] of this._urlsToCacheKeys) {
@@ -1295,7 +1295,7 @@ This is generally NOT safe. Learn more at https://bit.ly/wb-precache`;
    * @return {Promise<workbox-precaching.CleanupResult>}
    */
   activate(e) {
-    return K(e, async () => {
+    return G(e, async () => {
       const t = await self.caches.open(this.strategy.cacheName), n = await t.keys(), r = new Set(this._urlsToCacheKeys.values()), a = [];
       for (const i of n)
         r.has(i.url) || (await t.delete(i), a.push(i.url));
@@ -1636,15 +1636,15 @@ function T(s, e, t) {
     });
   return Le().registerRoute(n), n;
 }
-function xe(s, e = []) {
+function Se(s, e = []) {
   for (const t of [...s.searchParams.keys()])
     e.some((n) => n.test(t)) && s.searchParams.delete(t);
   return s;
 }
-function* Se(s, { ignoreURLParametersMatching: e = [/^utm_/, /^fbclid$/], directoryIndex: t = "index.html", cleanURLs: n = !0, urlManipulation: r } = {}) {
+function* xe(s, { ignoreURLParametersMatching: e = [/^utm_/, /^fbclid$/], directoryIndex: t = "index.html", cleanURLs: n = !0, urlManipulation: r } = {}) {
   const a = new URL(s, location.href);
   a.hash = "", yield a.href;
-  const i = xe(a, e);
+  const i = Se(a, e);
   if (yield i.href, t && i.pathname.endsWith("/")) {
     const o = new URL(i.href);
     o.pathname += t, yield o.href;
@@ -1679,7 +1679,7 @@ class ke extends E {
   constructor(e, t) {
     const n = ({ request: r }) => {
       const a = e.getURLsToCacheKeys();
-      for (const i of Se(r.url, t)) {
+      for (const i of xe(r.url, t)) {
         const o = a.get(i);
         if (o) {
           const c = e.getIntegrityForCacheKey(o);
@@ -1700,7 +1700,7 @@ function Me(s) {
 function Be(s, e) {
   Me(s), He(e);
 }
-class Ge extends I {
+class Ke extends I {
   /**
    * @private
    * @param {Request|string} request A request to run this strategy for.
@@ -1828,7 +1828,7 @@ class $ extends I {
     return e && clearTimeout(e), (a || !i) && (i = await r.cacheMatch(t)), i;
   }
 }
-class Ke extends I {
+class Ge extends I {
   /**
    * @param {Object} [options]
    * @param {string} [options.cacheName] Cache name to store and retrieve
@@ -1868,7 +1868,7 @@ class Ke extends I {
     return r;
   }
 }
-Be([{"revision":null,"url":"assets/Dracula-e98fc9aa.js"},{"revision":null,"url":"assets/Dreamweaver-15561dbd.js"},{"revision":null,"url":"assets/editor-a796f661.js"},{"revision":null,"url":"assets/Eiffel-64ee1523.js"},{"revision":null,"url":"assets/GitHub-06a37610.js"},{"revision":null,"url":"assets/IDLE-cb87b507.js"},{"revision":null,"url":"assets/index-3e9d6eab.js"},{"revision":null,"url":"assets/index-9d9ae4af.css"},{"revision":null,"url":"assets/Monokai-65cda70f.js"},{"revision":null,"url":"assets/Nord-e5536575.js"},{"revision":null,"url":"assets/settings-0140e11c.js"},{"revision":null,"url":"assets/Tomorrow-33c61db8.js"},{"revision":null,"url":"assets/Twilight-ab8a64b1.js"},{"revision":null,"url":"assets/use-gesture-react.esm-35ef6cc6.js"},{"revision":"ae3ba6fe521aeec4baba341a2f013806","url":"index.html"},{"revision":"38013143dc2183340ede8bc1c5124507","url":"registerSW.js"},{"revision":"f2513dbc34ba877ca158e280672da925","url":"favicon.svg"},{"revision":"2916883dd6259679afe0d684fe5b1f3a","url":"manifest.json"},{"revision":"b058215323dce09358ec4624356fc761","url":"service-worker.js"},{"revision":"7018b9b752b4b15aedb35eee44e811b6","url":"manifest-logo/logo192.png"},{"revision":"1860ffb4107fe6ba101275eb0900e63e","url":"manifest-logo/logo512.png"},{"revision":"82472dd6a04460bf23af25a2fcbdbe95","url":"manifest.webmanifest"}]);
+Be([{"revision":null,"url":"assets/Dracula-e98fc9aa.js"},{"revision":null,"url":"assets/Dreamweaver-15561dbd.js"},{"revision":null,"url":"assets/editor-c25075b4.js"},{"revision":null,"url":"assets/Eiffel-64ee1523.js"},{"revision":null,"url":"assets/GitHub-06a37610.js"},{"revision":null,"url":"assets/IDLE-cb87b507.js"},{"revision":null,"url":"assets/index-9d9ae4af.css"},{"revision":null,"url":"assets/index-a3dcaa46.js"},{"revision":null,"url":"assets/Monokai-65cda70f.js"},{"revision":null,"url":"assets/Nord-e5536575.js"},{"revision":null,"url":"assets/settings-0949dfc0.js"},{"revision":null,"url":"assets/Tomorrow-33c61db8.js"},{"revision":null,"url":"assets/Twilight-ab8a64b1.js"},{"revision":null,"url":"assets/use-gesture-react.esm-28e7eb27.js"},{"revision":"c1faf83fd3169f7954a05c6af2d1ff22","url":"index.html"},{"revision":"38013143dc2183340ede8bc1c5124507","url":"registerSW.js"},{"revision":"f2513dbc34ba877ca158e280672da925","url":"favicon.svg"},{"revision":"2916883dd6259679afe0d684fe5b1f3a","url":"manifest.json"},{"revision":"b058215323dce09358ec4624356fc761","url":"service-worker.js"},{"revision":"7018b9b752b4b15aedb35eee44e811b6","url":"manifest-logo/logo192.png"},{"revision":"1860ffb4107fe6ba101275eb0900e63e","url":"manifest-logo/logo512.png"},{"revision":"82472dd6a04460bf23af25a2fcbdbe95","url":"manifest.webmanifest"}]);
 self.addEventListener("message", (s) => {
   s.data && s.data.type === "SKIP_WAITING" && self.skipWaiting();
 });
@@ -1877,7 +1877,7 @@ T(
   new $({
     cacheName: "pages",
     plugins: [
-      new x({
+      new S({
         statuses: [200]
       })
     ]
@@ -1898,10 +1898,10 @@ T(
 );
 T(
   ({ request: s }) => s.destination === "style" || s.destination === "script" || s.destination === "worker",
-  new Ke({
+  new Ge({
     cacheName: "assets",
     plugins: [
-      new x({
+      new S({
         statuses: [200]
       })
     ]
@@ -1909,10 +1909,10 @@ T(
 );
 T(
   ({ request: s }) => s.destination === "image",
-  new Ge({
+  new Ke({
     cacheName: "images",
     plugins: [
-      new x({
+      new S({
         statuses: [0, 200]
       }),
       new X({
