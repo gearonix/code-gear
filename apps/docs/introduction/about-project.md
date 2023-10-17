@@ -10,7 +10,7 @@ could conduct online interviews and edit code in real time with other people.
 
 ---
 
-<img src="/overview/functionality-intro.png" width="1558" height="1012" alt="Log preview"/>
+<img src="/overview/functionality-intro.png" width="1558" height="1012" alt="preview"/>
 
 ## Customization
 
@@ -26,7 +26,7 @@ You can customize the color, background, font size, tab size (default is 4 space
 You can *find*, *replace* text, create *tabs*,
 and also *run your code* (`javascript` and `python` are currently supported).
 
-<img src="/overview/functionality-html.png" width="1558" height="1012" alt="Log preview" />
+<img src="/overview/functionality-html.png" width="1558" height="1012" alt="preview" />
 
 ::: tip NOTE
 
@@ -38,7 +38,7 @@ All your changes are saved to `localStorage` automatically, so you don't have to
 
 You can also log in and send a link to another person so that he can come in and edit the code with you in *real time*.
 
-<img src="/overview/functionality-login.png" width="1558" height="1012" alt="Log preview" />
+<img src="/overview/functionality-login.png" width="1558" height="1012" alt="preview" />
 
 ## What is the essence of this project?
 
@@ -74,4 +74,4 @@ Something like that! 🚀 💫
 
 ---
 
-<img src="/overview/functionality-ending.png" width="1558" height="1012" alt="Log preview" />
+<img src="/overview/functionality-ending.png" width="1558" height="1012" alt="preview" />

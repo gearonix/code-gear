@@ -12,6 +12,9 @@ class KafkaValidator {
   @Env()
   SERVER_KAFKA_MICROSERVICE_CODE_EXECUTOR: string
 
+  @Env()
+  SERVER_KAFKA_MICROSERVICE_AUTH: string
+
   @IsNumberString()
   @IsNotEmpty()
   SERVER_KAFKA_SESSION_TIMEOUT: string
@@ -27,7 +30,8 @@ export const kafka = registerAs<KafkaConfig>('kafka', (): KafkaConfig => {
   return {
     brokers: conf.SERVER_KAFKA_BROKERS.split(','),
     microservices: {
-      codeExecutor: conf.SERVER_KAFKA_MICROSERVICE_CODE_EXECUTOR
+      codeExecutor: conf.SERVER_KAFKA_MICROSERVICE_CODE_EXECUTOR,
+      auth: conf.SERVER_KAFKA_MICROSERVICE_AUTH
     },
     sessionTimeout: Number(conf.SERVER_KAFKA_SESSION_TIMEOUT),
     heartbeatInterval: Number(conf.SERVER_KAFKA_HEARTBEAT_INTERVAL)

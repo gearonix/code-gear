@@ -1,11 +1,11 @@
 import { Injectable }      from '@nestjs/common'
 
-import { SignIn }          from '@/auth/inputs/sign-in.input'
 import { DatabaseService } from '@code-gear/api/common'
 import { User }            from '@code-gear/api/common'
+import { SignIn }          from '@code-gear/api/contracts'
 
 @Injectable()
-export class UsersRepository {
+export class AccountsRepository {
   constructor(private prisma: DatabaseService) {}
 
   public getUserByUsername(username: string): User {

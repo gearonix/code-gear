@@ -1,3 +1,4 @@
 export enum Microservice {
-  CODE_EXECUTOR = 'codeExecutor'
+  CODE_EXECUTOR = 'codeExecutor',
+  AUTH = 'auth'
 }

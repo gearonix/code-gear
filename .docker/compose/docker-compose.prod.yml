@@ -45,3 +45,17 @@ services:
     env_file:
       - .env
       - .docker/.override.env
+
+  service-auth:
+    build:
+      dockerfile: apps/server/service-auth/Dockerfile
+      context: .
+    container_name: service-auth
+    depends_on:
+      - kafka
+    networks:
+      - cgnet
+    restart: always
+    env_file:
+      - .env
+      - .docker/.override.env

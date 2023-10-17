@@ -1,5 +1,5 @@
 import { EndPoints }               from '@code-gear/config'
-import { Body }                    from '@nestjs/common'
+import {Body, OnModuleInit} from '@nestjs/common'
 import { Controller }              from '@nestjs/common'
 import { Inject }                  from '@nestjs/common'
 import { Post }                    from '@nestjs/common'
@@ -15,7 +15,7 @@ import { ExecutorLanguagesValues } from '@code-gear/api/contracts'
 
 @ApiTags('Code executor API')
 @Controller(EndPoints.CODE_EXECUTOR_API)
-export class CodeExecutorController {
+export class CodeExecutorController implements OnModuleInit {
   constructor(
     @Inject(Microservice.CODE_EXECUTOR) private executorClient: ClientKafka
   ) {}

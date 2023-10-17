@@ -16,7 +16,6 @@ export class CodeExecutorConsumer {
   async executeCode(
     @Payload() payload: ExecuteCodeApiDTO
   ): Promise<ExecutorApiResponse<ExecutorLanguagesValues>> {
-    const command = new ExecuteCodeQuery(payload)
-    return this.query.execute(command)
+    return this.query.execute(new ExecuteCodeQuery(payload))
   }
 }
