@@ -20,7 +20,7 @@ tslib_1.__exportStar(__webpack_require__(18), exports);
 tslib_1.__exportStar(__webpack_require__(30), exports);
 tslib_1.__exportStar(__webpack_require__(33), exports);
 tslib_1.__exportStar(__webpack_require__(34), exports);
-tslib_1.__exportStar(__webpack_require__(61), exports);
+tslib_1.__exportStar(__webpack_require__(64), exports);
 
 
 /***/ }),
@@ -511,6 +511,7 @@ tslib_1.__exportStar(__webpack_require__(35), exports);
 tslib_1.__exportStar(__webpack_require__(37), exports);
 tslib_1.__exportStar(__webpack_require__(52), exports);
 tslib_1.__exportStar(__webpack_require__(56), exports);
+tslib_1.__exportStar(__webpack_require__(61), exports);
 
 
 /***/ }),
@@ -809,6 +810,10 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], KafkaValidator.prototype, "SERVER_KAFKA_MICROSERVICE_CODE_EXECUTOR", void 0);
 tslib_1.__decorate([
+    (0, env_decorator_1.Env)(),
+    tslib_1.__metadata("design:type", String)
+], KafkaValidator.prototype, "SERVER_KAFKA_MICROSERVICE_AUTH", void 0);
+tslib_1.__decorate([
     (0, class_validator_2.IsNumberString)(),
     (0, class_validator_1.IsNotEmpty)(),
     tslib_1.__metadata("design:type", String)
@@ -823,7 +828,8 @@ exports.kafka = (0, config_1.registerAs)('kafka', () => {
     return {
         brokers: conf.SERVER_KAFKA_BROKERS.split(','),
         microservices: {
-            codeExecutor: conf.SERVER_KAFKA_MICROSERVICE_CODE_EXECUTOR
+            codeExecutor: conf.SERVER_KAFKA_MICROSERVICE_CODE_EXECUTOR,
+            auth: conf.SERVER_KAFKA_MICROSERVICE_AUTH
         },
         sessionTimeout: Number(conf.SERVER_KAFKA_SESSION_TIMEOUT),
         heartbeatInterval: Number(conf.SERVER_KAFKA_HEARTBEAT_INTERVAL)
@@ -1087,13 +1093,59 @@ exports.NESTJS_FREE_PORT = 0;
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.Microservice = void 0;
-var microservices_1 = __webpack_require__(62);
-Object.defineProperty(exports, "Microservice", ({ enumerable: true, get: function () { return microservices_1.Microservice; } }));
+exports.JwtModule = void 0;
+var jwt_module_1 = __webpack_require__(62);
+Object.defineProperty(exports, "JwtModule", ({ enumerable: true, get: function () { return jwt_module_1.JwtModule; } }));
 
 
 /***/ }),
 /* 62 */
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.JwtModule = void 0;
+const tslib_1 = __webpack_require__(3);
+const common_1 = __webpack_require__(6);
+const jwt_1 = __webpack_require__(63);
+const config_1 = __webpack_require__(20);
+let JwtModule = class JwtModule {
+};
+exports.JwtModule = JwtModule;
+exports.JwtModule = JwtModule = tslib_1.__decorate([
+    (0, common_1.Module)({
+        imports: [
+            jwt_1.JwtModule.register({
+                secret: config_1.jwtSecret,
+                signOptions: {
+                    expiresIn: '24h'
+                }
+            })
+        ],
+        exports: [jwt_1.JwtModule]
+    })
+], JwtModule);
+
+
+/***/ }),
+/* 63 */
+/***/ ((module) => {
+
+module.exports = require("@nestjs/jwt");
+
+/***/ }),
+/* 64 */
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.Microservice = void 0;
+var microservices_1 = __webpack_require__(65);
+Object.defineProperty(exports, "Microservice", ({ enumerable: true, get: function () { return microservices_1.Microservice; } }));
+
+
+/***/ }),
+/* 65 */
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -1102,25 +1154,26 @@ exports.Microservice = void 0;
 var Microservice;
 (function (Microservice) {
     Microservice["CODE_EXECUTOR"] = "codeExecutor";
+    Microservice["AUTH"] = "auth";
 })(Microservice || (exports.Microservice = Microservice = {}));
 
 
 /***/ }),
-/* 63 */
+/* 66 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.CodeExecutorModule = void 0;
 const tslib_1 = __webpack_require__(3);
-const axios_1 = __webpack_require__(64);
+const axios_1 = __webpack_require__(67);
 const common_1 = __webpack_require__(6);
-const code_executor_consumer_1 = __webpack_require__(65);
+const code_executor_consumer_1 = __webpack_require__(68);
 const common_2 = __webpack_require__(2);
 const common_3 = __webpack_require__(2);
 const common_4 = __webpack_require__(2);
-const handlers_1 = __webpack_require__(77);
-const cqrs_1 = __webpack_require__(74);
+const handlers_1 = __webpack_require__(86);
+const cqrs_1 = __webpack_require__(83);
 let CodeExecutorModule = class CodeExecutorModule {
 };
 exports.CodeExecutorModule = CodeExecutorModule;
@@ -1142,13 +1195,13 @@ exports.CodeExecutorModule = CodeExecutorModule = tslib_1.__decorate([
 
 
 /***/ }),
-/* 64 */
+/* 67 */
 /***/ ((module) => {
 
 module.exports = require("@nestjs/axios");
 
 /***/ }),
-/* 65 */
+/* 68 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
@@ -1159,17 +1212,16 @@ const tslib_1 = __webpack_require__(3);
 const common_1 = __webpack_require__(6);
 const microservices_1 = __webpack_require__(50);
 const microservices_2 = __webpack_require__(50);
-const contracts_1 = __webpack_require__(66);
-const contracts_2 = __webpack_require__(66);
-const cqrs_1 = __webpack_require__(74);
-const impl_1 = __webpack_require__(75);
+const contracts_1 = __webpack_require__(69);
+const contracts_2 = __webpack_require__(69);
+const cqrs_1 = __webpack_require__(83);
+const impl_1 = __webpack_require__(84);
 let CodeExecutorConsumer = class CodeExecutorConsumer {
     constructor(query) {
         this.query = query;
     }
     async executeCode(payload) {
-        const command = new impl_1.ExecuteCodeQuery(payload);
-        return this.query.execute(command);
+        return this.query.execute(new impl_1.ExecuteCodeQuery(payload));
     }
 };
 exports.CodeExecutorConsumer = CodeExecutorConsumer;
@@ -1187,30 +1239,33 @@ exports.CodeExecutorConsumer = CodeExecutorConsumer = tslib_1.__decorate([
 
 
 /***/ }),
-/* 66 */
+/* 69 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const tslib_1 = __webpack_require__(3);
-tslib_1.__exportStar(__webpack_require__(67), exports);
-tslib_1.__exportStar(__webpack_require__(69), exports);
-tslib_1.__exportStar(__webpack_require__(72), exports);
+tslib_1.__exportStar(__webpack_require__(70), exports);
+tslib_1.__exportStar(__webpack_require__(73), exports);
+tslib_1.__exportStar(__webpack_require__(76), exports);
+tslib_1.__exportStar(__webpack_require__(78), exports);
+tslib_1.__exportStar(__webpack_require__(80), exports);
 
 
 /***/ }),
-/* 67 */
+/* 70 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.CodeExecutorTopic = void 0;
+exports.AuthTopic = exports.CodeExecutorTopic = void 0;
 const tslib_1 = __webpack_require__(3);
-exports.CodeExecutorTopic = tslib_1.__importStar(__webpack_require__(68));
+exports.CodeExecutorTopic = tslib_1.__importStar(__webpack_require__(71));
+exports.AuthTopic = tslib_1.__importStar(__webpack_require__(72));
 
 
 /***/ }),
-/* 68 */
+/* 71 */
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -1220,18 +1275,29 @@ exports.EXECUTE_CODE = 'code-executor.execute-code';
 
 
 /***/ }),
-/* 69 */
+/* 72 */
+/***/ ((__unused_webpack_module, exports) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.GET_PROFILE = exports.SIGN_IN = void 0;
+exports.SIGN_IN = 'auth.sign-in';
+exports.GET_PROFILE = 'auth.get-profile';
+
+
+/***/ }),
+/* 73 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const tslib_1 = __webpack_require__(3);
-tslib_1.__exportStar(__webpack_require__(70), exports);
-tslib_1.__exportStar(__webpack_require__(71), exports);
+tslib_1.__exportStar(__webpack_require__(74), exports);
+tslib_1.__exportStar(__webpack_require__(75), exports);
 
 
 /***/ }),
-/* 70 */
+/* 74 */
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -1239,7 +1305,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 
 
 /***/ }),
-/* 71 */
+/* 75 */
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -1257,17 +1323,17 @@ exports.ExecutorLanguages = {
 
 
 /***/ }),
-/* 72 */
+/* 76 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const tslib_1 = __webpack_require__(3);
-tslib_1.__exportStar(__webpack_require__(73), exports);
+tslib_1.__exportStar(__webpack_require__(77), exports);
 
 
 /***/ }),
-/* 73 */
+/* 77 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
@@ -1279,8 +1345,8 @@ const swagger_1 = __webpack_require__(8);
 const class_validator_1 = __webpack_require__(9);
 const class_validator_2 = __webpack_require__(9);
 const class_validator_3 = __webpack_require__(9);
-const interfaces_1 = __webpack_require__(69);
-const interfaces_2 = __webpack_require__(69);
+const interfaces_1 = __webpack_require__(73);
+const interfaces_2 = __webpack_require__(73);
 class ExecuteCodeApiDTO {
 }
 exports.ExecuteCodeApiDTO = ExecuteCodeApiDTO;
@@ -1302,23 +1368,125 @@ tslib_1.__decorate([
 
 
 /***/ }),
-/* 74 */
-/***/ ((module) => {
-
-module.exports = require("@nestjs/cqrs");
-
-/***/ }),
-/* 75 */
+/* 78 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const tslib_1 = __webpack_require__(3);
-tslib_1.__exportStar(__webpack_require__(76), exports);
+tslib_1.__exportStar(__webpack_require__(79), exports);
 
 
 /***/ }),
-/* 76 */
+/* 79 */
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.SignIn = void 0;
+const tslib_1 = __webpack_require__(3);
+const common_1 = __webpack_require__(2);
+const graphql_1 = __webpack_require__(7);
+let SignIn = class SignIn {
+};
+exports.SignIn = SignIn;
+tslib_1.__decorate([
+    (0, common_1.StringField)({ example: 'user123' }),
+    tslib_1.__metadata("design:type", String)
+], SignIn.prototype, "username", void 0);
+tslib_1.__decorate([
+    (0, common_1.StringField)({ example: 'password456' }),
+    tslib_1.__metadata("design:type", String)
+], SignIn.prototype, "password", void 0);
+exports.SignIn = SignIn = tslib_1.__decorate([
+    (0, graphql_1.InputType)()
+], SignIn);
+
+
+/***/ }),
+/* 80 */
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.UserResponse = exports.AccessTokenResponse = void 0;
+var token_response_1 = __webpack_require__(81);
+Object.defineProperty(exports, "AccessTokenResponse", ({ enumerable: true, get: function () { return token_response_1.AccessTokenResponse; } }));
+var user_response_1 = __webpack_require__(82);
+Object.defineProperty(exports, "UserResponse", ({ enumerable: true, get: function () { return user_response_1.UserResponse; } }));
+
+
+/***/ }),
+/* 81 */
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.AccessTokenResponse = void 0;
+const tslib_1 = __webpack_require__(3);
+const graphql_1 = __webpack_require__(7);
+const graphql_2 = __webpack_require__(7);
+const swagger_1 = __webpack_require__(8);
+let AccessTokenResponse = class AccessTokenResponse {
+};
+exports.AccessTokenResponse = AccessTokenResponse;
+tslib_1.__decorate([
+    (0, graphql_1.Field)(),
+    (0, swagger_1.ApiProperty)({ description: 'Authorization token (jwt)' }),
+    tslib_1.__metadata("design:type", String)
+], AccessTokenResponse.prototype, "accessToken", void 0);
+exports.AccessTokenResponse = AccessTokenResponse = tslib_1.__decorate([
+    (0, graphql_2.ObjectType)()
+], AccessTokenResponse);
+
+
+/***/ }),
+/* 82 */
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.UserResponse = void 0;
+const tslib_1 = __webpack_require__(3);
+const graphql_1 = __webpack_require__(7);
+const graphql_2 = __webpack_require__(7);
+const swagger_1 = __webpack_require__(8);
+let UserResponse = class UserResponse {
+};
+exports.UserResponse = UserResponse;
+tslib_1.__decorate([
+    (0, graphql_1.Field)(),
+    (0, swagger_1.ApiProperty)({ description: 'Username (used as userId)' }),
+    tslib_1.__metadata("design:type", String)
+], UserResponse.prototype, "username", void 0);
+tslib_1.__decorate([
+    (0, graphql_1.Field)({ nullable: true }),
+    (0, swagger_1.ApiProperty)({ description: 'User avatar location' }),
+    tslib_1.__metadata("design:type", String)
+], UserResponse.prototype, "avatarUrl", void 0);
+exports.UserResponse = UserResponse = tslib_1.__decorate([
+    (0, graphql_2.ObjectType)()
+], UserResponse);
+
+
+/***/ }),
+/* 83 */
+/***/ ((module) => {
+
+module.exports = require("@nestjs/cqrs");
+
+/***/ }),
+/* 84 */
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const tslib_1 = __webpack_require__(3);
+tslib_1.__exportStar(__webpack_require__(85), exports);
+
+
+/***/ }),
+/* 85 */
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -1333,18 +1501,18 @@ exports.ExecuteCodeQuery = ExecuteCodeQuery;
 
 
 /***/ }),
-/* 77 */
+/* 86 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.QueryHandlers = void 0;
-const execute_code_handler_1 = __webpack_require__(78);
+const execute_code_handler_1 = __webpack_require__(87);
 exports.QueryHandlers = [execute_code_handler_1.ExecuteCodeHandler];
 
 
 /***/ }),
-/* 78 */
+/* 87 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
@@ -1352,14 +1520,14 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ExecuteCodeHandler = void 0;
 const tslib_1 = __webpack_require__(3);
-const cqrs_1 = __webpack_require__(74);
-const execute_code_query_1 = __webpack_require__(76);
-const type_guards_1 = __webpack_require__(79);
-const exceptions_1 = __webpack_require__(80);
+const cqrs_1 = __webpack_require__(83);
+const execute_code_query_1 = __webpack_require__(85);
+const type_guards_1 = __webpack_require__(88);
+const exceptions_1 = __webpack_require__(89);
 const config_1 = __webpack_require__(20);
-const qs_stringify_1 = tslib_1.__importDefault(__webpack_require__(82));
-const transform_language_1 = __webpack_require__(83);
-const axios_1 = __webpack_require__(64);
+const qs_stringify_1 = tslib_1.__importDefault(__webpack_require__(91));
+const transform_language_1 = __webpack_require__(92);
+const axios_1 = __webpack_require__(67);
 let ExecuteCodeHandler = class ExecuteCodeHandler {
     constructor(httpService) {
         this.httpService = httpService;
@@ -1391,7 +1559,7 @@ exports.ExecuteCodeHandler = ExecuteCodeHandler = tslib_1.__decorate([
 
 
 /***/ }),
-/* 79 */
+/* 88 */
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -1415,18 +1583,18 @@ exports.isExecutorApiResponse = isExecutorApiResponse;
 
 
 /***/ }),
-/* 80 */
+/* 89 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.FailedToFetchException = void 0;
-var failed_to_fetch_exception_1 = __webpack_require__(81);
+var failed_to_fetch_exception_1 = __webpack_require__(90);
 Object.defineProperty(exports, "FailedToFetchException", ({ enumerable: true, get: function () { return failed_to_fetch_exception_1.FailedToFetchException; } }));
 
 
 /***/ }),
-/* 81 */
+/* 90 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
@@ -1445,13 +1613,13 @@ exports.FailedToFetchException = FailedToFetchException;
 
 
 /***/ }),
-/* 82 */
+/* 91 */
 /***/ ((module) => {
 
 module.exports = require("qs-stringify");
 
 /***/ }),
-/* 83 */
+/* 92 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
@@ -1507,7 +1675,7 @@ const common_2 = __webpack_require__(2);
 const common_3 = __webpack_require__(2);
 const common_4 = __webpack_require__(2);
 const common_5 = __webpack_require__(2);
-const code_executor_module_1 = __webpack_require__(63);
+const code_executor_module_1 = __webpack_require__(66);
 const bootstrap = async () => {
     const app = await core_1.NestFactory.create(code_executor_module_1.CodeExecutorModule);
     const kafkaService = app.get(common_1.KafkaService);
